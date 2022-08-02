@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { Link } from "@/components/common/Link";
+
 import wonderLogo from "@/assets/img/wonder-logo.svg";
 
 const StyledNavbar = styled.nav`
@@ -16,10 +18,7 @@ const StyledNavbar = styled.nav`
   z-index: var(--navbar-index);
 `;
 
-const Link = styled.a<{ order?: number }>`
-  text-transform: uppercase;
-  text-decoration: none;
-  color: inherit;
+const NavLink = styled(Link)<{ order?: number }>`
   order: ${({ order }) => order ?? "initial"};
 `;
 
@@ -53,9 +52,9 @@ export const Navbar = ({}: NavbarProps) => (
     <WonderLogo src={wonderLogo} alt="Wonderland logo" />
 
     {navLinks.map((link, i) => (
-      <Link href={link.url} order={i + 1} key={link.name}>
+      <NavLink href={link.url} order={i + 1} key={link.name}>
         {link.name}
-      </Link>
+      </NavLink>
     ))}
   </StyledNavbar>
 );
