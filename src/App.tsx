@@ -1,40 +1,19 @@
-import { PageView, Navbar, PageContent } from "@/components/app";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import { PageView, Navbar } from "@/components/app";
+import { Home, Lore } from "@/pages";
 
 function App() {
   return (
     <PageView>
-      <Navbar />
+      <BrowserRouter>
+        <Navbar />
 
-      <PageContent>
-        <p>asdasasd</p>
-        <p>asdasasd</p>
-        <p>asdasasd</p>
-        <p>asdasasd</p>
-        <p>asdasasd</p>
-        <p>asdasasd</p>
-        <p>asdasasd</p>
-        <p>asdasasd</p>
-        <p>asdasasd</p>
-        <p>asdasasd</p>
-        <p>asdasasd</p>
-        <p>asdasasd</p>
-        <p>asdasasd</p>
-        <p>asdasasd</p>
-        <p>asdasasd</p>
-        <p>asdasasd</p>
-        <p>asdasasd</p>
-        <p>asdasasd</p>
-        <p>asdasasd</p>
-        <p>asdasasd</p>
-        <p>asdasasd</p>
-        <p>asdasasd</p>
-        <p>asdasasd</p>
-        <p>asdasasd</p>
-        <p>asdasasd</p>
-        <p>asdasasd</p>
-        <p>asdasasd</p>
-        <p>asdasasd</p>
-      </PageContent>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/lore" element={<Lore />} />
+        </Routes>
+      </BrowserRouter>
     </PageView>
   );
 }

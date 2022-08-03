@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const StyledPageView = styled.div`
+const StyledPageView = styled.main`
   display: flex;
   flex-direction: column;
   width: 100%;
