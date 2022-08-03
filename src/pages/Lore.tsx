@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { PageContent } from "@/components/app";
+import { Footer, PageContent } from "@/components/app";
 import { Ball, Button } from "@/components/common";
 
 const Section = styled.section`
@@ -99,25 +99,7 @@ export function Lore() {
         </article>
       </Section>
 
-      <footer>
-        <title>asd</title>
-
-        <div>
-          <span>About us</span>
-          <span>Join us</span>
-          <span>Portfolio</span>
-        </div>
-
-        <div>
-          <span>2022. DeFi Wonderland. All rights reserved</span>
-          <div className="icons">
-            <i>twitter</i>
-            <i>github</i>
-            <i>?</i>
-          </div>
-          <span>Privacy Policy</span>
-        </div>
-      </footer>
+      <Footer />
     </PageContent>
   );
 }
