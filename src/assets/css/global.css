@@ -14,7 +14,7 @@ body {
   font-weight: 400;
   line-height: 2.4rem;
   color: rgba(255, 255, 255, 0.87);
-  background-color: var(--color-background-surface-primary);
+  background-color: var(--background-surface-primary);
 }
 
 html, body {
@@ -30,6 +30,10 @@ html, body {
 
 * {
   box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
 }
 
 h1 {

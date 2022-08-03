@@ -1,16 +1,10 @@
 :root {
   /* --font-family: SharpGrotesk-10; */
 
-  --color-dark: #10152A;
-  --color-light: #FFFFFF;
 
-  --color-background-surface-primary: #0e152c;
-
-
-
-  /* --brand-golden-100: #fef5e5;
+  /* --brand-golden-100: #fef5e5; */
   --background-surface-primary: #0e152c;
-  --brand-golden-600: #e3b639;
+  /* --brand-golden-600: #e3b639;
   --brand-golden-700: #c49e31;
   --brand-golden-800: #a08128;
   --brand-golden-300: #fee1a8;
@@ -53,9 +47,9 @@
   /* --brand-pink-600: #d0518a; */
   /* --brand-pink-700: #b44678; */
   /* --brand-pink-800: #933962;
-  --brand-pink-900: #682845;
+  /* --brand-pink-900: #682845; */
   --text-light: #fff;
-  --text-soft: rgba(255, 255, 255, 0.65);
-  --label-color-dark-primary: #fff;
-  --gradient-primary: rgba(0, 0, 0, 0.2); */
+  /* --text-soft: rgba(255, 255, 255, 0.65); */
+  /* --label-color-dark-primary: #fff; */
+  /* --gradient-primary: rgba(0, 0, 0, 0.2); */
 }

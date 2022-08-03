@@ -12,7 +12,7 @@ const StyledNavbar = styled.nav`
   top: 0;
   left: 0;
   width: 100%;
-  color: var(--color-light);
+  color: var(--text-light);
   grid-gap: 6rem;
   padding: 2rem 1rem;
   user-select: none;

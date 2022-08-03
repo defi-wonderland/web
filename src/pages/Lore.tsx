@@ -1,61 +1,103 @@
+import styled from "styled-components";
+
 import { PageContent } from "@/components/app";
+import { Ball, Button } from "@/components/common";
+
+const Section = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+  &.left {
+    align-items: flex-start;
+  }
+  &.right {
+    align-items: flex-end;
+    text-align: right;
+  }
+
+  article {
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid var(--text-light);
+    padding: 1rem 0 0 1rem;
+    width: 45rem;
+    max-width: 100%;
+  }
+
+  button {
+    width: auto;
+  }
+`;
 
 export function Lore() {
   return (
     <PageContent>
-      <section className="left">
+      <Ball />
+
+      <Section className="left">
         <h1>WHO WE ARE</h1>
-        <p>
-          Lorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
-          Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem
-          ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
-          Lorem ipsumLorem ipsumLorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
-          Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsum
-        </p>
-        <span>
-          Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
-          Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
-        </span>
-        <button>Team</button>
-      </section>
+        <article>
+          <p>
+            Lorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
+            Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem
+            ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+            Lorem ipsumLorem ipsumLorem ipsum Lorem ipsum Lorem ipsum Lorem
+            ipsum Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsum
+          </p>
+          <span>
+            Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
+            Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+          </span>
+          <Button>Team</Button>
+        </article>
+      </Section>
 
-      <section className="right">
+      <Section className="right">
         <h1>OUR MISSION</h1>
-        <span>
-          Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
-          Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
-        </span>
-        <button>Portfolio</button>
-      </section>
+        <article>
+          <span>
+            Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
+            Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+          </span>
+          <Button>Portfolio</Button>
+        </article>
+      </Section>
 
-      <section className="left">
+      <Section className="left">
         <h1>OUR VALUES</h1>
-        <p>
-          Lorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
-          Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem
-          ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
-          Lorem ipsumLorem ipsumLorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
-          Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsum
-        </p>
-        <span>
-          Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
-          Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
-        </span>
-        <span>
-          Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
-        </span>
-        <button>Join us</button>
-      </section>
+        <article>
+          <p>
+            Lorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
+            Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem
+            ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+            Lorem ipsumLorem ipsumLorem ipsum Lorem ipsum Lorem ipsum Lorem
+            ipsum Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsum
+          </p>
+          <span>
+            Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
+            Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+          </span>
+          <span>
+            Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
+          </span>
+          <Button>Join us</Button>
+        </article>
+      </Section>
 
-      <section className="center">
+      <Section>
         <h1>OUR APPROACH</h1>
-        <p>
-          Lorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
-          Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem
-        </p>
-        <div className="steps"></div>
-        <button>Join us</button>
-      </section>
+        <article>
+          <p>
+            Lorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
+            Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem
+          </p>
+          <div className="steps"></div>
+          <Button>Join us</Button>
+        </article>
+      </Section>
 
       <footer>
         <title>asd</title>
