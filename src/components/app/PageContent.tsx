@@ -4,6 +4,7 @@ const StyledPageContent = styled.section`
   display: flex;
   flex-direction: column;
   width: 100%;
+  padding-bottom: 10rem;
 `;
 
 interface PageContentProps {
