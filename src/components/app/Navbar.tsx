@@ -4,7 +4,7 @@ import { Link } from "@/components/common";
 import wonderLogo from "@/assets/img/wonder-logo.svg";
 
 const StyledNavbar = styled.nav`
-  position: sticky;
+  position: fixed;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -13,6 +13,11 @@ const StyledNavbar = styled.nav`
   left: 0;
   width: 100%;
   color: var(--text-light);
+  background-image: linear-gradient(
+    to bottom,
+    var(--background-surface-primary) 25%,
+    rgba(14, 21, 44, 0) 100%
+  );
   grid-gap: 6rem;
   padding: 2rem 1rem;
   user-select: none;
@@ -34,28 +39,30 @@ const NavLink = styled(Link)<{ order?: number; disabled?: boolean }>`
 const WonderLogo = styled(Link)`
   display: flex;
   order: 3;
+  width: auto;
+  height: 4rem;
 `;
 
 const navLinks = [
-  {
-    name: "lore",
-    url: "/lore",
-  },
-  {
-    name: "team",
-    url: "/team",
-    disabled: true,
-  },
-  {
-    name: "portfolio",
-    url: "/portfolio",
-    disabled: true,
-  },
-  {
-    name: "join us",
-    url: "/joinus",
-    disabled: true,
-  },
+  // {
+  //   name: "lore",
+  //   url: "/lore",
+  // },
+  // {
+  //   name: "team",
+  //   url: "/team",
+  //   disabled: true,
+  // },
+  // {
+  //   name: "portfolio",
+  //   url: "/portfolio",
+  //   disabled: true,
+  // },
+  // {
+  //   name: "join us",
+  //   url: "/joinus",
+  //   disabled: true,
+  // },
 ];
 
 interface NavbarProps {}

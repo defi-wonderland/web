@@ -10,6 +10,7 @@ const StyledFooter = styled.footer`
   background: ${footerColor};
   border: 1px solid ${footerColor};
   border-radius: 1rem;
+  z-index: 1;
 
   h2 {
     text-align: center;

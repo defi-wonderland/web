@@ -1,7 +1,7 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 import { PageView, Navbar } from "@/components/app";
-import { Home, Lore } from "@/pages";
+import { Lore } from "@/pages";
 
 function App() {
   return (
@@ -10,8 +10,9 @@ function App() {
         <Navbar />
 
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/lore" element={<Lore />} />
+          <Route path="/" element={<Lore />} />
+          {/* <Route path="/" element={<Home />} /> */}
+          <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </BrowserRouter>
     </PageView>

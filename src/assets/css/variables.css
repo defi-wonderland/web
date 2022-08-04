@@ -1,5 +1,8 @@
 :root {
-  --ball-index: -100;
+  --ring-a-index: 1;
+  --ball-index: 0;
+  --ring-b-index: -1;
+
   --navbar-index: 1000;
 
   --page-max-width: 130rem;

@@ -1,171 +1,82 @@
 import styled from "styled-components";
 
-import { Footer, PageContent } from "@/components/app";
-import { Ball, Button } from "@/components/common";
-
-const sectionBorderOffset = "4rem";
-
-const SectionArticle = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 55rem;
-  max-width: 100%;
-
-  h1 {
-    position: relative;
-    width: 100%;
-    padding: 0 1rem;
-
-    &:after {
-      content: "";
-      height: 1px;
-      width: calc(100% + ${sectionBorderOffset});
-      position: absolute;
-      background: white;
-      bottom: 0;
-    }
-  }
-
-  div {
-    display: flex;
-    flex-direction: column;
-    padding-top: 2rem;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    width: 100%;
-    position: relative;
-
-    &:after {
-      content: "";
-      height: calc(100% + ${sectionBorderOffset});
-      width: 1px;
-      position: absolute;
-      background: white;
-      top: -${sectionBorderOffset};
-    }
-  }
-
-  button {
-    width: auto;
-  }
-`;
-
-const Section = styled.section`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-
-  &.left {
-    align-items: flex-start;
-
-    ${SectionArticle} {
-      h1 {
-        margin-left: ${sectionBorderOffset};
-
-        &:after {
-          left: -${sectionBorderOffset};
-        }
-      }
-
-      div {
-        margin-left: ${sectionBorderOffset};
-
-        &:after {
-          left: 0;
-        }
-      }
-    }
-  }
-  &.right {
-    align-items: flex-end;
-
-    ${SectionArticle} {
-      text-align: right;
-
-      h1 {
-        margin-right: ${sectionBorderOffset};
-
-        &:after {
-          right: -${sectionBorderOffset};
-        }
-      }
-
-      div {
-        margin-right: ${sectionBorderOffset};
-
-        &:after {
-          right: 0;
-        }
-      }
-    }
-  }
-
-  &.center ${SectionArticle} {
-    h1:after,
-    div:after {
-      content: none;
-    }
-  }
-`;
+import { Footer, HeroHeading, PageContent } from "@/components/app";
+import {
+  Ball,
+  Button,
+  Ring,
+  Section,
+  SectionArticle,
+} from "@/components/common";
 
 export function Lore() {
   return (
     <PageContent>
       <Ball />
 
-      <Section className="left">
-        <SectionArticle>
-          <h1>WHO WE ARE</h1>
+      <Section backgroundImage="/src/assets/img/hero/hero-bg.jpg">
+        <HeroHeading text="TO HELP THE WEB3 ECOSYSTEM THRIVE" />
+      </Section>
+
+      <Section>
+        <Ring type="1" />
+        <SectionArticle className="left">
+          <h1 className="gradient">WHO WE ARE</h1>
           <div>
             <p>
-              Lorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem
-              ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
-              Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem
-              ipsum Lorem ipsumLorem ipsumLorem ipsum Lorem ipsum Lorem ipsum
-              Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsum
+              We started as a small group of activists with diverse backgrounds.
+              Coding, Big Data, Finance and VC are our cup of tea.
             </p>
+
             <span>
-              Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
-              Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+              We met while collaborating with several DeFi protocols in the
+              early days and decided to join forces into one organization that
+              would let us scale and make a much bigger impact which would
+              become DeFi Wonderland.
             </span>
+
             <Button>Team</Button>
           </div>
         </SectionArticle>
       </Section>
 
-      <Section className="right">
-        <SectionArticle>
-          <h1>OUR MISSION</h1>
+      <Section>
+        <Ring type="2" />
+        <SectionArticle className="right">
+          <h1 className="gradient">OUR MISSION</h1>
           <div>
             <span>
-              Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
-              Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+              We currently work as an activist fund but we share the ethos of
+              the ecosystem, creating much more value than the one we take: we
+              grow projects, communities, markets in a more decentralized and
+              self-sustainable manner, only proffiting when the value we add is
+              exponentially higher than the one we’ll extract.
             </span>
+
             <Button>Portfolio</Button>
           </div>
         </SectionArticle>
       </Section>
 
-      <Section className="left">
-        <SectionArticle>
-          <h1>OUR VALUES</h1>
+      <Section>
+        <Ring type="1" />
+        <SectionArticle className="left">
+          <h1 className="gradient">OUR VALUES</h1>
           <div>
             <p>
-              Lorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem
-              ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
-              Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem
-              ipsum Lorem ipsumLorem ipsumLorem ipsum Lorem ipsum Lorem ipsum
-              Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsum
+              We're value creators, always seeking to understand the ecosystem
+              needs and interests, providing valuable propositions that address
+              them, and that's how we will remain, it's our ethos.
             </p>
+
             <span>
-              Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
-              Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+              We believe DeFi is mind boggling and will open an array of
+              possibilities all around the world, but especially for people that
+              have been left behind by the current financial system.
             </span>
-            <span>
-              Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
-            </span>
+
+            <span>We will help DeFi achieve scale through our code.</span>
+
             <Button>Join us</Button>
           </div>
         </SectionArticle>
@@ -175,12 +86,44 @@ export function Lore() {
         <SectionArticle>
           <h1>OUR APPROACH</h1>
           <div>
-            <p>
-              Lorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem
-              ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
-              Lorem
-            </p>
-            <div className="steps"></div>
+            <p>We believe there are 3 pillars for any protocol to scale:</p>
+            <div className="steps">
+              <div className="step">
+                <strong>1</strong>
+                <span>
+                  Composability, in DeFi, is the ability for applications and
+                  protocols to interact with one another in a permissionless way
+                  — meaning they are constantly talking to one another and
+                  leveraging each other’s code, and therefore each other’s
+                  utility.
+                </span>
+              </div>
+
+              <div className="step">
+                <strong>2</strong>
+                <span>
+                  Decentralization is a sliding scale and should be applied to
+                  all aspects of a blockchain application. By decentralizing the
+                  management of and access to resources in an application,
+                  greater and fairer service can be achieved.
+                </span>
+
+                <span>
+                  Decentralization typically has some tradeoffs, but ideally,
+                  the tradeoffs are worth the improved stability and service
+                  levels they produce.
+                </span>
+              </div>
+
+              <div className="step">
+                <strong>3</strong>
+                <span>
+                  Self-sustainability (or how we call it “set and forget”): A
+                  system is self-sustaining if it can maintain itself by
+                  independent effort, without any external support.
+                </span>
+              </div>
+            </div>
             <Button>Join us</Button>
           </div>
         </SectionArticle>

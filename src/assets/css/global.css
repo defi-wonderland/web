@@ -36,13 +36,13 @@ h1, h2, h3, h4, h5, h6, p {
   margin: 0;
 }
 
-h1 {
+h1.gradient {
   font-size: 5rem;
   line-height: 1.25;
   font-weight: 300;
   font-style: italic;
   letter-spacing: .1rem;
-  background: linear-gradient(to right, var(--brand-blue-bay-700), var(--brand-pink-500), var(--brand-golden-500));
+  background: linear-gradient(to right, #625cbf, #c55fa3, #fccc50);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   width: fit-content;
