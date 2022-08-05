@@ -39,7 +39,9 @@ export const HeroHeading: FC<HeroHeadingProps> = ({
 
   let size;
 
-  if (windowWidth < 1000) {
+  if (windowWidth < 500) {
+    size = (windowWidth * 120) / 1100;
+  } else if (windowWidth < 1000) {
     size = (windowWidth * 120) / 1000;
   } else if (windowWidth < 1720) {
     size = 120;
