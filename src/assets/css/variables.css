@@ -1,7 +1,9 @@
 :root {
-  --ring-a-index: 1;
-  --ball-index: 0;
-  --ring-b-index: -1;
+  --ring-a-index: 2;
+  --ball-index: 1;
+  --ring-b-index: 0;
+
+  --content-index: 10;
 
   --navbar-index: 1000;
 

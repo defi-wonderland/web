@@ -9,7 +9,7 @@ html {
 }
 
 body {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-family: var(--font-default), sans-serif;
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 2.4rem;
@@ -34,18 +34,24 @@ html, body {
 
 h1, h2, h3, h4, h5, h6, p {
   margin: 0;
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: .1rem;
 }
 
-h1.gradient {
-  font-size: 5rem;
+h1, h3, h5 {
+  font-family: var(--font-medium);
+}
+
+h2, h4, h6 {
+  font-family: var(--font-medium-l);
+}
+
+p, span, strong {
+  font-family: var(--font-default);
+  font-weight: 500;
   line-height: 1.25;
-  font-weight: 300;
-  font-style: italic;
-  letter-spacing: .1rem;
-  background: linear-gradient(to right, #625cbf, #c55fa3, #fccc50);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  width: fit-content;
+  letter-spacing: normal;
 }
 
 /* @media (prefers-color-scheme: light) {

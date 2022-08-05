@@ -52,4 +52,14 @@
   --text-soft: rgba(255, 255, 255, 0.65);
   /* --label-color-dark-primary: #fff; */
   /* --gradient-primary: rgba(0, 0, 0, 0.2); */
+
+
+
+
+
+
+  --font-display: SharpGrotesk-10;
+  --font-medium: SharpGrotesk-15;
+  --font-medium-l: SharpGrotesk-25;
+  --font-default: SFProText;
 }

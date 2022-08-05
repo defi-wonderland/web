@@ -4,24 +4,37 @@ import { Footer, HeroHeading, PageContent } from "@/components/app";
 import {
   Ball,
   Button,
+  DisplayText,
   Ring,
   Section,
   SectionArticle,
 } from "@/components/common";
+
+const HeroDivider = styled.img`
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  z-index: 0;
+`;
+
+const HeroSection = styled(Section)`
+  align-items: flex-start;
+  padding-top: 15vh;
+`;
 
 export function Lore() {
   return (
     <PageContent>
       <Ball />
 
-      <Section backgroundImage="/src/assets/img/hero/hero-bg.jpg">
+      <HeroSection backgroundImage="/src/assets/img/hero/hero-bg.jpg">
         <HeroHeading text="TO HELP THE WEB3 ECOSYSTEM THRIVE" />
-      </Section>
+        <HeroDivider src="/src/assets/img/hero/hero-bg-divider.png" />
+      </HeroSection>
 
       <Section>
-        <Ring type="1" />
         <SectionArticle className="left">
-          <h1 className="gradient">WHO WE ARE</h1>
+          <DisplayText gradient>WHO WE ARE</DisplayText>
           <div>
             <p>
               We started as a small group of activists with diverse backgrounds.
@@ -38,12 +51,15 @@ export function Lore() {
             <Button>Team</Button>
           </div>
         </SectionArticle>
+
+        <Ring type="1" />
       </Section>
 
       <Section>
         <Ring type="2" />
+
         <SectionArticle className="right">
-          <h1 className="gradient">OUR MISSION</h1>
+          <DisplayText gradient>OUR MISSION</DisplayText>
           <div>
             <span>
               We currently work as an activist fund but we share the ethos of
@@ -59,9 +75,8 @@ export function Lore() {
       </Section>
 
       <Section>
-        <Ring type="1" />
         <SectionArticle className="left">
-          <h1 className="gradient">OUR VALUES</h1>
+          <DisplayText gradient>OUR VALUES</DisplayText>
           <div>
             <p>
               We're value creators, always seeking to understand the ecosystem
@@ -80,11 +95,14 @@ export function Lore() {
             <Button>Join us</Button>
           </div>
         </SectionArticle>
+
+        <Ring type="1" />
       </Section>
 
       <Section className="center">
         <SectionArticle>
-          <h1>OUR APPROACH</h1>
+          <DisplayText gradient>OUR APPROACH</DisplayText>
+
           <div>
             <p>We believe there are 3 pillars for any protocol to scale:</p>
             <div className="steps">

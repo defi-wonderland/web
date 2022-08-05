@@ -1,12 +1,13 @@
 import { FC } from "react";
 import styled from "styled-components";
 
-const sectionBorderOffset = "4rem";
+const sectionBorderOffset = "2.5rem";
 
 export const SectionArticle = styled.div`
   display: flex;
   flex-direction: column;
-  width: 55rem;
+  width: 37.5rem;
+  z-index: var(--content-index);
 
   h1 {
     position: relative;
@@ -94,10 +95,10 @@ export const SectionArticle = styled.div`
 
 const StyledSection = styled.section<{ backgroundImage?: string }>`
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
+  position: relative;
 
   &.right {
     align-items: flex-end;

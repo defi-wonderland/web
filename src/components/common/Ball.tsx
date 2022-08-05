@@ -2,8 +2,8 @@ import { FC } from "react";
 import styled from "styled-components";
 
 const StyledBall = styled.div`
-  width: 10vw;
-  height: 10vw;
+  width: 9rem;
+  height: 9rem;
   position: fixed;
   left: 50%;
   top: 36%;
