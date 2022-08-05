@@ -4,3 +4,4 @@ export * from "./DisplayText";
 export * from "./Link";
 export * from "./Ring";
 export * from "./Section";
+export * from "./SectionArticle";

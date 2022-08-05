@@ -6,6 +6,7 @@ const StyledRing = styled.div`
   align-items: center;
   justify-content: center;
   position: relative;
+  user-select: none;
 
   img {
     width: 100%;
@@ -26,8 +27,6 @@ export interface RingProps {
   type: "1" | "2";
 }
 export const Ring: FC<RingProps> = ({ type, ...props }) => {
-  const path = "/src/assets/img/ring/";
-
   return (
     <StyledRing {...props}>
       <img src={`/src/assets/img/ring/${type}-a.png`} alt="Ring part" />

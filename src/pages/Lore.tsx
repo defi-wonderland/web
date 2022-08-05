@@ -10,6 +10,10 @@ import {
   SectionArticle,
 } from "@/components/common";
 
+const LoreSection = styled(Section)`
+  color: red;
+`;
+
 const HeroDivider = styled.img`
   position: absolute;
   width: 100%;
@@ -18,8 +22,7 @@ const HeroDivider = styled.img`
 `;
 
 const HeroSection = styled(Section)`
-  align-items: flex-start;
-  padding-top: 15vh;
+  background: red;
 `;
 
 export function Lore() {
@@ -32,7 +35,7 @@ export function Lore() {
         <HeroDivider src="/src/assets/img/hero/hero-bg-divider.png" />
       </HeroSection>
 
-      <Section>
+      <LoreSection>
         <SectionArticle className="left">
           <DisplayText gradient>WHO WE ARE</DisplayText>
           <div>
@@ -53,9 +56,9 @@ export function Lore() {
         </SectionArticle>
 
         <Ring type="1" />
-      </Section>
+      </LoreSection>
 
-      <Section>
+      <LoreSection>
         <Ring type="2" />
 
         <SectionArticle className="right">
@@ -72,9 +75,9 @@ export function Lore() {
             <Button>Portfolio</Button>
           </div>
         </SectionArticle>
-      </Section>
+      </LoreSection>
 
-      <Section>
+      <LoreSection>
         <SectionArticle className="left">
           <DisplayText gradient>OUR VALUES</DisplayText>
           <div>
@@ -97,9 +100,9 @@ export function Lore() {
         </SectionArticle>
 
         <Ring type="1" />
-      </Section>
+      </LoreSection>
 
-      <Section className="center">
+      <LoreSection className="center">
         <SectionArticle>
           <DisplayText gradient>OUR APPROACH</DisplayText>
 
@@ -145,7 +148,7 @@ export function Lore() {
             <Button>Join us</Button>
           </div>
         </SectionArticle>
-      </Section>
+      </LoreSection>
 
       <Footer />
     </PageContent>

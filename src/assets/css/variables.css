@@ -1,4 +1,5 @@
 :root {
+  /* INDEXES */
   --ring-a-index: 2;
   --ball-index: 1;
   --ring-b-index: 0;
@@ -7,5 +8,22 @@
 
   --navbar-index: 1000;
 
+  /* GLOBAL VARS */
   --page-max-width: 130rem;
+
+  --navbar-height: 10.5rem;
+
+  --page-padding: 7.5rem;
+}
+
+@media screen and (max-width: 700px) {
+  :root {
+    --page-padding: 3rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  :root {
+    --page-padding: 1rem;
+  }
 }

@@ -12,6 +12,7 @@ const StyledNavbar = styled.nav`
   top: 0;
   left: 0;
   width: 100%;
+  height: var(--navbar-height);
   color: var(--text-light);
   background-image: linear-gradient(
     to bottom,
@@ -43,7 +44,13 @@ const WonderLogo = styled(Link)`
   height: 4rem;
 `;
 
-const navLinks = [
+interface NavLink {
+  name: string;
+  url: string;
+  disabled?: boolean;
+}
+
+const navLinks: NavLink[] = [
   // {
   //   name: "lore",
   //   url: "/lore",
