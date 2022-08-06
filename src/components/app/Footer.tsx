@@ -111,7 +111,10 @@ export const Footer = ({}: FooterProps) => (
     <FooterActions>
       {/* <Link to="https://googleform" external>About us</Link> */}
       <Plus src={PlusIcon} alt="Plus icon" />
-      <Link to="https://googleform" external>
+      <Link
+        to="https://docs.google.com/forms/d/1n70jsL4sFkOwPNBTdciPqlWF2RirgQwejjztpS4-2L8/viewform"
+        external
+      >
         Join us
       </Link>
       <Plus src={PlusIcon} alt="Plus icon" />

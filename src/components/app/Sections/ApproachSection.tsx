@@ -10,14 +10,17 @@ import {
 
 const StepNumber = styled(DisplayText)`
   position: relative;
-  font-size: 8rem;
-  top: -2rem;
+  font-size: 6rem;
+  // font-size: 8rem;
+  // top: -2rem;
 `;
 
 const Step = styled.article`
   display: flex;
   align-items: flex-start;
-  width: 25rem;
+  // TODO Remove
+  justify-content: center;
+  // width: 25rem;
   text-align: left;
 
   grid-gap: 1.5rem;
@@ -33,7 +36,8 @@ const ApproachSteps = styled.article`
   justify-content: center;
   flex-wrap: wrap;
   text-align: center;
-  grid-gap: 4rem;
+  grid-gap: 6rem;
+  // grid-gap: 4rem;
   margin-top: 6.5rem;
 `;
 
@@ -62,8 +66,8 @@ export const ApproachSection: FC<ApproachSectionProps> = ({ ...props }) => {
 
         <ApproachSteps>
           <Step>
-            <StepNumber>1</StepNumber>
-            <p>
+            <StepNumber>Permissionless</StepNumber>
+            {/* <p>
               <span>
                 Composability, in DeFi, is the ability for applications and
                 protocols to interact with one another in a permissionless way —
@@ -71,12 +75,12 @@ export const ApproachSection: FC<ApproachSectionProps> = ({ ...props }) => {
                 leveraging each other’s code, and therefore each other’s
                 utility.
               </span>
-            </p>
+            </p> */}
           </Step>
 
           <Step>
-            <StepNumber>2</StepNumber>
-            <p>
+            <StepNumber>Decentralization</StepNumber>
+            {/* <p>
               <span>
                 Decentralization is a sliding scale and should be applied to all
                 aspects of a blockchain application. By decentralizing the
@@ -88,18 +92,18 @@ export const ApproachSection: FC<ApproachSectionProps> = ({ ...props }) => {
                 tradeoffs are worth the improved stability and service levels
                 they produce.
               </span>
-            </p>
+            </p> */}
           </Step>
 
           <Step>
-            <StepNumber>3</StepNumber>
-            <p>
+            <StepNumber>Open-source</StepNumber>
+            {/* <p>
               <span>
                 Self-sustainability (or how we call it “set and forget”): A
                 system is self-sustaining if it can maintain itself by
                 independent effort, without any external support.
               </span>
-            </p>
+            </p> */}
           </Step>
         </ApproachSteps>
       </ApproachArticle>

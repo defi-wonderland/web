@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 import {
   ApproachSection,
@@ -8,7 +8,7 @@ import {
 } from "@/components/app";
 import {
   Ball,
-  Button,
+  // Button,
   Ring,
   Section,
   SectionArticle,
@@ -20,8 +20,8 @@ const LoreSection = styled(Section)`
   width: calc(var(--page-max-width) + 11rem);
   grid-gap: 4.6rem;
 
-  @media screen and (max-width: 900px) {
-    flex-directon: column;
+  @media screen and (max-width: 1023px) {
+    flex-direction: column;
 
     ${LoreSectionArticle} {
       order: 1;
@@ -29,11 +29,21 @@ const LoreSection = styled(Section)`
   }
 `;
 
+const sectionMediaStyles = css`
+  @media screen and (max-width: 1023px) {
+    justify-content: center;
+  }
+`;
+
 const LeftSection = styled(LoreSection)`
   justify-content: flex-start;
+
+  ${sectionMediaStyles}
 `;
 const RightSection = styled(LoreSection)`
   justify-content: flex-end;
+
+  ${sectionMediaStyles}
 `;
 
 export function Lore() {
@@ -46,19 +56,20 @@ export function Lore() {
       <LeftSection>
         <LoreSectionArticle title="WHO WE ARE">
           <div>
-            <strong>
-              We started as a small group of activists with diverse backgrounds.
-              Coding, Big Data, Finance and VC are our cup of tea.
-            </strong>
-
             <span>
-              We met while collaborating with several DeFi protocols in the
-              early days and decided to join forces into one organization that
-              would let us scale and make a much bigger impact which would
-              become DeFi Wonderland.
+              We started as a small group of contributors with diverse
+              backgrounds in software engineering, game theory, and venture
+              capital.
             </span>
 
-            <Button>Team</Button>
+            <span>
+              We met while contributing to several DeFi protocols in their early
+              days and decided to join forces into one organization that allowed
+              us to scale faster and make a much bigger impact within the
+              ecosystem.
+            </span>
+
+            {/* <Button>Team</Button> */}
           </div>
         </LoreSectionArticle>
 
@@ -71,14 +82,28 @@ export function Lore() {
         <LoreSectionArticle title="OUR MISSION">
           <div>
             <span>
-              We currently work as an activist fund but we share the ethos of
-              the ecosystem, creating much more value than the one we take: we
-              grow projects, communities, markets in a more decentralized and
-              self-sustainable manner, only proffiting when the value we add is
-              exponentially higher than the one we’ll extract.
+              We were beginning to get very tired of sitting on the sidelines,
+              and of having nothing to do: once or twice we peeped into what
+              Paradigm was reading, but it had no pictures or conversations in
+              it,“ and what is the use of a book,” we thought, “ without
+              pictures or conversations?”
+            </span>
+            <span>
+              So we were considering in our own mind, (as well as we could, for
+              the hot day made us feel very sleepy and stupid) whether the
+              pleasure of making a daisy-chain would be worth the trouble of
+              getting up and picking the daisies, when suddenly a white rabbit
+              with pink eyes ran close by us.
+            </span>
+            <span>
+              Wonderland is an activist fund, as such, our goal is to join
+              forces with the best builders in the world to shape the future of
+              the web. We believe this future needs to be open-source,
+              permissionless, and decentralized, and we strive towards that
+              goal.
             </span>
 
-            <Button>Portfolio</Button>
+            {/* <Button>Portfolio</Button> */}
           </div>
         </LoreSectionArticle>
       </RightSection>
@@ -86,21 +111,19 @@ export function Lore() {
       <LeftSection>
         <LoreSectionArticle title="OUR VALUES">
           <div>
-            <strong>
-              We're value creators, always seeking to understand the ecosystem
-              needs and interests, providing valuable propositions that address
-              them, and that's how we will remain, it's our ethos.
-            </strong>
-
             <span>
-              We believe DeFi is mind boggling and will open an array of
-              possibilities all around the world, but especially for people that
-              have been left behind by the current financial system.
+              We believe in the ethos of the ecosystem, and our sole goal is to
+              preserve those values, we are activist investors in this
+              ecosystem.
             </span>
 
-            <span>We will help DeFi achieve scale through our code.</span>
+            <span>
+              Decentralized systems will ultimately open an array of
+              possibilities worldwide, but specifically for people that have
+              been left behind by the current financial system.
+            </span>
 
-            <Button>Join us</Button>
+            {/* <Button>Join us</Button> */}
           </div>
         </LoreSectionArticle>
 

@@ -17,8 +17,8 @@ export interface HeroSectionProps {}
 
 export const HeroSection: FC<HeroSectionProps> = ({ ...props }) => {
   return (
-    <StyledHeroSection full backgroundImage="/img/hero/hero-bg.jpg">
-      <HeroHeading text="TO HELP THE WEB3 ECOSYSTEM THRIVE" />
+    <StyledHeroSection full backgroundImage="/img/hero/hero-bg.jpg" {...props}>
+      <HeroHeading text="WE’RE ALL MAD HERE" />
       <HeroDivider src="/img/hero/hero-bg-divider.png" />
     </StyledHeroSection>
   );
