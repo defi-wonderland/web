@@ -87,7 +87,6 @@ const StyledFooter = styled.footer`
   width: 90rem;
   max-width: calc(100% - var(--page-padding));
   height: 40rem;
-  margin-top: 13rem;
   z-index: 1;
 
   @media screen and (max-width: 635px) {

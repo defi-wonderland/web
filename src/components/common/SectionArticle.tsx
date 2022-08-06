@@ -19,6 +19,7 @@ const StyledSectionArticle = styled.div<{ center?: boolean }>`
   display: flex;
   flex-direction: column;
   width: 37.5rem;
+  max-width: calc(100% - var(--page-padding));
   z-index: var(--content-index);
   color: var(--text-light);
 

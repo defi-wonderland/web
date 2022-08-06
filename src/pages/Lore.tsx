@@ -14,23 +14,30 @@ import {
   SectionArticle,
 } from "@/components/common";
 
+const sectionPadding = "3rem 0";
+
 const LoreSectionArticle = styled(SectionArticle)``;
 
 const LoreSection = styled(Section)`
-  width: calc(var(--page-max-width) + 11rem);
+  width: calc(var(--page-max-width) + 12rem);
+  max-width: 100%;
   grid-gap: 4.6rem;
 
-  @media screen and (max-width: 1023px) {
+  @media screen and (max-width: 1200px) {
     flex-direction: column;
 
     ${LoreSectionArticle} {
       order: 1;
     }
   }
+
+  @media screen and (max-width: 500px) {
+    padding: ${sectionPadding};
+  }
 `;
 
 const sectionMediaStyles = css`
-  @media screen and (max-width: 1023px) {
+  @media screen and (max-width: 1200px) {
     justify-content: center;
   }
 `;
@@ -44,6 +51,10 @@ const RightSection = styled(LoreSection)`
   justify-content: flex-end;
 
   ${sectionMediaStyles}
+`;
+
+const StyledApproachSection = styled(ApproachSection)`
+  padding: ${sectionPadding};
 `;
 
 export function Lore() {
@@ -130,7 +141,7 @@ export function Lore() {
         <Ring type="1" />
       </LeftSection>
 
-      <ApproachSection />
+      <StyledApproachSection />
 
       <Footer />
     </PageContent>
