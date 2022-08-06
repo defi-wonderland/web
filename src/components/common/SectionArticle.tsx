@@ -1,15 +1,28 @@
 import { FC } from "react";
 import styled from "styled-components";
 
+import { DisplayText } from "@/components/common";
+
 const sectionBorderOffset = "2.5rem";
 
-const StyledSectionArticle = styled.div`
+const TextContainer = styled.p`
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+`;
+
+const ArticleTitle = styled(DisplayText)``;
+
+const StyledSectionArticle = styled.div<{ center?: boolean }>`
   display: flex;
   flex-direction: column;
   width: 37.5rem;
   z-index: var(--content-index);
+  color: var(--text-light);
 
-  h1 {
+  ${ArticleTitle} {
     position: relative;
     padding: 0 1rem;
 
@@ -43,65 +56,101 @@ const StyledSectionArticle = styled.div`
     }
   }
 
-  button {
-    width: auto;
+  strong {
+    font-family: var(--font-medium-l);
+    font-size: 1.313rem;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.25;
+    letter-spacing: normal;
+    text-transform: uppercase;
   }
 
-  &.left {
-    h1 {
-      margin-left: ${sectionBorderOffset};
+  strong,
+  span {
+    margin: 0.5rem 0;
 
-      &:after {
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  button {
+    margin: 0 3.75rem;
+    margin-top: 2.75rem;
+    width: fit-content;
+  }
+
+  ${({ center }) =>
+    !center &&
+    `
+    &:first-child {
+      padding-left: ${sectionBorderOffset};
+
+      ${ArticleTitle}:after {
         left: -${sectionBorderOffset};
       }
-    }
 
-    div {
-      margin-left: ${sectionBorderOffset};
-
-      &:after {
+      div:after {
         left: 0;
       }
     }
-  }
 
-  &.right {
-    text-align: right;
+    &:last-child {
+      text-align: right;
+      padding-right: ${sectionBorderOffset};
 
-    h1 {
-      margin-right: ${sectionBorderOffset};
+      ${ArticleTitle} {
+        align-self: flex-end;
 
-      &:after {
-        right: -${sectionBorderOffset};
+        &:after {
+          right: -${sectionBorderOffset};
+        }
+      }
+
+      div {
+        align-items: flex-end;
+
+        &:after {
+          right: 0;
+        }
       }
     }
+  `}
 
-    div {
-      margin-right: ${sectionBorderOffset};
+  ${({ center }) =>
+    center &&
+    `
+    text-align: center;
+    align-items: center;
 
-      &:after {
-        right: 0;
-      }
-    }
-  }
-
-  &.center {
-    h1:after,
+    ${ArticleTitle}:after,
     div:after {
       content: none;
     }
-  }
+  `}
 `;
 
 export interface SectionArticleProps {
-  className?: any;
+  title: string;
+  center?: boolean;
   children: any;
 }
 
 export const SectionArticle: FC<SectionArticleProps> = ({
-  className,
+  title,
+  center,
   children,
   ...props
 }) => {
-  return <StyledSectionArticle {...props}>{children}</StyledSectionArticle>;
+  return (
+    <StyledSectionArticle center={center} {...props}>
+      <ArticleTitle gradient>
+        <TextContainer>{title}</TextContainer>
+      </ArticleTitle>
+
+      {children}
+    </StyledSectionArticle>
+  );
 };

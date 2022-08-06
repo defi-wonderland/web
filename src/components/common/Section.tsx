@@ -1,16 +1,18 @@
 import { FC } from "react";
 import styled from "styled-components";
 
-const StyledSection = styled.section<{ backgroundImage?: string }>`
+const StyledSection = styled.section<{
+  backgroundImage?: string;
+  full?: boolean;
+}>`
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 100%;
   height: 100vh;
   position: relative;
-
-  &.right {
-    align-items: flex-end;
-  }
 
   ${({ backgroundImage }) =>
     backgroundImage &&
@@ -24,18 +26,18 @@ const StyledSection = styled.section<{ backgroundImage?: string }>`
 
 export interface SectionProps {
   backgroundImage?: string;
-  className?: string;
+  full?: boolean;
   children?: any;
 }
 
 export const Section: FC<SectionProps> = ({
   backgroundImage,
-  className,
+  full,
   children,
   ...props
 }) => {
   return (
-    <StyledSection backgroundImage={backgroundImage} {...props}>
+    <StyledSection backgroundImage={backgroundImage} full={full} {...props}>
       {children}
     </StyledSection>
   );

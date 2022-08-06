@@ -7,8 +7,8 @@ const StyledBall = styled.div`
   position: fixed;
   left: 50%;
   top: 36%;
-  transform: translate(-50%, -30%);
-  background-image: url("/src/assets/img/ball.png");
+  transform: translate(-50%, -36%);
+  background-image: url("/img/ball.png");
   background-repeat: no-repeat;
   background-size: contain;
   z-index: var(--ball-index);

@@ -30,7 +30,7 @@ export const Link: FC<LinkProps> = ({
 }) => {
   if (external) {
     return (
-      <ExternalLink target={target || "_blank"} href={to.toString()}>
+      <ExternalLink target={target || "_blank"} href={to.toString()} {...props}>
         {children}
       </ExternalLink>
     );

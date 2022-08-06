@@ -2,33 +2,16 @@ import styled from "styled-components";
 
 import { Link } from "@/components/common";
 
-import WonderLogoIcon from "@/assets/img/wonder-logo-text.svg";
-import StarIcon from "@/assets/img/footer/star-icon.svg";
-import PlusIcon from "@/assets/img/footer/plus-icon.svg";
-import TwitterIcon from "@/assets/img/footer/twitter-icon.svg";
-import GithubIcon from "@/assets/img/footer/github-icon.svg";
-import DoorIcon from "@/assets/img/footer/door-icon.svg";
+import WonderLogoIcon from "/img/wonder-logo-text.svg";
+import StarIcon from "/img/footer/star-icon.svg";
+import PlusIcon from "/img/footer/plus-icon.svg";
+import TwitterIcon from "/img/footer/twitter-icon.svg";
+import GithubIcon from "/img/footer/github-icon.svg";
+import DoorIcon from "/img/footer/door-icon.svg";
 
 // TODO Check this color with figma
 const footerColor = "rgba(255, 255, 255, 0.1)";
 const footerPadding = "1.5rem";
-
-const StyledFooter = styled.footer`
-  display: flex;
-  flex-direction: column;
-  align-self: center;
-  padding: ${footerPadding};
-  color: var(--text-light);
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid ${footerColor};
-  border-radius: 1rem;
-  backdrop-filter: blur(24px);
-  width: 90rem;
-  max-width: calc(100% - var(--page-padding));
-  height: 40rem;
-  margin-top: 13rem;
-  z-index: 1;
-`;
 
 const Star = styled.img`
   width: 1.66rem;
@@ -79,11 +62,40 @@ const FooterSocial = styled.div`
   }
 `;
 
+const SocialIcon = styled(Link)`
+  display: flex;
+  align-items: center;
+`;
+
 const SocialIcons = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
   grid-gap: 3rem;
+`;
+
+const StyledFooter = styled.footer`
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  padding: ${footerPadding};
+  color: var(--text-light);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid ${footerColor};
+  border-radius: 1rem;
+  backdrop-filter: blur(24px);
+  width: 90rem;
+  max-width: calc(100% - var(--page-padding));
+  height: 40rem;
+  margin-top: 13rem;
+  z-index: 1;
+
+  @media screen and (max-width: 635px) {
+    ${FooterSocial} {
+      flex-direction: column;
+      grid-gap: 1rem;
+    }
+  }
 `;
 
 interface FooterProps {}
@@ -113,15 +125,15 @@ export const Footer = ({}: FooterProps) => (
       </span>
 
       <SocialIcons>
-        <Link to="https://twitter.com/defi_wonderland" external>
+        <SocialIcon to="https://twitter.com/defi_wonderland" external>
           <img src={TwitterIcon} alt="Twitter icon" />
-        </Link>
-        <Link to="https://github.com/defi-wonderland" external>
+        </SocialIcon>
+        <SocialIcon to="https://github.com/defi-wonderland" external>
           <img src={GithubIcon} alt="Github icon" />
-        </Link>
-        <Link to="https://medium.com/the-defi-wonderland" external>
+        </SocialIcon>
+        {/* <SocialIcon to="https://medium.com/the-defi-wonderland" external>
           <img src={DoorIcon} alt="Door icon" />
-        </Link>
+        </SocialIcon> */}
       </SocialIcons>
 
       <span></span>

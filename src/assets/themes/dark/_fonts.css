@@ -17,8 +17,8 @@
 }
 @font-face {
   font-family: SharpGrotesk-15;
-  src: local(SharpGrotesk-Medium15),
-    url(/src/assets/themes/dark/fonts/SharpGrotesk-Medium15.otf) format("opentype");
+  src: local(SharpGrotesk-Light15),
+    url(/src/assets/themes/dark/fonts/SharpGrotesk-Light15.otf) format("opentype");
   font-weight: 500;
   font-style: normal;
   font-stretch: normal;

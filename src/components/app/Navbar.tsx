@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 import { Link } from "@/components/common";
-import wonderLogo from "@/assets/img/wonder-logo.svg";
+import wonderLogo from "/img/wonder-logo.svg";
 
 const StyledNavbar = styled.nav`
   position: fixed;

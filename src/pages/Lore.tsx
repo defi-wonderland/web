@@ -1,28 +1,39 @@
 import styled from "styled-components";
 
-import { Footer, HeroHeading, PageContent } from "@/components/app";
+import {
+  ApproachSection,
+  Footer,
+  HeroSection,
+  PageContent,
+} from "@/components/app";
 import {
   Ball,
   Button,
-  DisplayText,
   Ring,
   Section,
   SectionArticle,
 } from "@/components/common";
 
+const LoreSectionArticle = styled(SectionArticle)``;
+
 const LoreSection = styled(Section)`
-  color: red;
+  width: calc(var(--page-max-width) + 11rem);
+  grid-gap: 4.6rem;
+
+  @media screen and (max-width: 900px) {
+    flex-directon: column;
+
+    ${LoreSectionArticle} {
+      order: 1;
+    }
+  }
 `;
 
-const HeroDivider = styled.img`
-  position: absolute;
-  width: 100%;
-  bottom: 0;
-  z-index: 0;
+const LeftSection = styled(LoreSection)`
+  justify-content: flex-start;
 `;
-
-const HeroSection = styled(Section)`
-  background: red;
+const RightSection = styled(LoreSection)`
+  justify-content: flex-end;
 `;
 
 export function Lore() {
@@ -30,19 +41,15 @@ export function Lore() {
     <PageContent>
       <Ball />
 
-      <HeroSection backgroundImage="/src/assets/img/hero/hero-bg.jpg">
-        <HeroHeading text="TO HELP THE WEB3 ECOSYSTEM THRIVE" />
-        <HeroDivider src="/src/assets/img/hero/hero-bg-divider.png" />
-      </HeroSection>
+      <HeroSection />
 
-      <LoreSection>
-        <SectionArticle className="left">
-          <DisplayText gradient>WHO WE ARE</DisplayText>
+      <LeftSection>
+        <LoreSectionArticle title="WHO WE ARE">
           <div>
-            <p>
+            <strong>
               We started as a small group of activists with diverse backgrounds.
               Coding, Big Data, Finance and VC are our cup of tea.
-            </p>
+            </strong>
 
             <span>
               We met while collaborating with several DeFi protocols in the
@@ -53,16 +60,15 @@ export function Lore() {
 
             <Button>Team</Button>
           </div>
-        </SectionArticle>
+        </LoreSectionArticle>
 
         <Ring type="1" />
-      </LoreSection>
+      </LeftSection>
 
-      <LoreSection>
+      <RightSection>
         <Ring type="2" />
 
-        <SectionArticle className="right">
-          <DisplayText gradient>OUR MISSION</DisplayText>
+        <LoreSectionArticle title="OUR MISSION">
           <div>
             <span>
               We currently work as an activist fund but we share the ethos of
@@ -74,18 +80,17 @@ export function Lore() {
 
             <Button>Portfolio</Button>
           </div>
-        </SectionArticle>
-      </LoreSection>
+        </LoreSectionArticle>
+      </RightSection>
 
-      <LoreSection>
-        <SectionArticle className="left">
-          <DisplayText gradient>OUR VALUES</DisplayText>
+      <LeftSection>
+        <LoreSectionArticle title="OUR VALUES">
           <div>
-            <p>
+            <strong>
               We're value creators, always seeking to understand the ecosystem
               needs and interests, providing valuable propositions that address
               them, and that's how we will remain, it's our ethos.
-            </p>
+            </strong>
 
             <span>
               We believe DeFi is mind boggling and will open an array of
@@ -97,58 +102,12 @@ export function Lore() {
 
             <Button>Join us</Button>
           </div>
-        </SectionArticle>
+        </LoreSectionArticle>
 
         <Ring type="1" />
-      </LoreSection>
+      </LeftSection>
 
-      <LoreSection className="center">
-        <SectionArticle>
-          <DisplayText gradient>OUR APPROACH</DisplayText>
-
-          <div>
-            <p>We believe there are 3 pillars for any protocol to scale:</p>
-            <div className="steps">
-              <div className="step">
-                <strong>1</strong>
-                <span>
-                  Composability, in DeFi, is the ability for applications and
-                  protocols to interact with one another in a permissionless way
-                  — meaning they are constantly talking to one another and
-                  leveraging each other’s code, and therefore each other’s
-                  utility.
-                </span>
-              </div>
-
-              <div className="step">
-                <strong>2</strong>
-                <span>
-                  Decentralization is a sliding scale and should be applied to
-                  all aspects of a blockchain application. By decentralizing the
-                  management of and access to resources in an application,
-                  greater and fairer service can be achieved.
-                </span>
-
-                <span>
-                  Decentralization typically has some tradeoffs, but ideally,
-                  the tradeoffs are worth the improved stability and service
-                  levels they produce.
-                </span>
-              </div>
-
-              <div className="step">
-                <strong>3</strong>
-                <span>
-                  Self-sustainability (or how we call it “set and forget”): A
-                  system is self-sustaining if it can maintain itself by
-                  independent effort, without any external support.
-                </span>
-              </div>
-            </div>
-            <Button>Join us</Button>
-          </div>
-        </SectionArticle>
-      </LoreSection>
+      <ApproachSection />
 
       <Footer />
     </PageContent>
