@@ -82,8 +82,8 @@ export function Lore() {
               We were beginning to get very tired of sitting on the sidelines,
               and of having nothing to do: once or twice we peeped into what
               Paradigm was reading, but it had no pictures or conversations in
-              it,“ and what is the use of a book,” we thought, “ without
-              pictures or conversations?”
+              it, “and what is the use of a book”, we thought, “without pictures
+              or conversations?”
             </span>
 
             <span>
