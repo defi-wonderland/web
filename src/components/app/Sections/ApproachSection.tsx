@@ -60,9 +60,7 @@ export const ApproachSection: FC<ApproachSectionProps> = ({ ...props }) => {
   return (
     <StyledApproachSection {...props}>
       <ApproachArticle title="OUR APPROACH" center>
-        <ApproachTitle>
-          We believe there are 3 pillars for any protocol to scale:
-        </ApproachTitle>
+        <ApproachTitle>We believe finance should be:</ApproachTitle>
 
         <ApproachSteps>
           <Step>

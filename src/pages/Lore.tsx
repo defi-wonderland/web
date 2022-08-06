@@ -57,6 +57,17 @@ const StyledApproachSection = styled(ApproachSection)`
   padding: ${sectionPadding};
 `;
 
+// const SectionBackground = styled.div<{ type: "1" | "2" | "3" | "4" }>`
+//   position: absolute;
+
+//   img {
+//     width: 50%;
+//     height: auto;
+//     background-image: url("/img/lore/001_grad.jpg");
+//     background-repeat: no-repeat;
+//   }
+// `;
+
 export function Lore() {
   return (
     <PageContent>
@@ -94,8 +105,9 @@ export function Lore() {
             {/* <Button>Team</Button> */}
           </div>
         </LoreSectionArticle>
-
         <Ring type="1" />
+
+        {/* <SectionBackground type="1" /> */}
       </LeftSection>
 
       <RightSection>

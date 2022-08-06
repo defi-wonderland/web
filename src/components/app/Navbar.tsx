@@ -11,7 +11,7 @@ const StyledNavbar = styled.nav`
   flex-wrap: wrap;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   height: var(--navbar-height);
   color: var(--text-light);
   background-image: linear-gradient(
