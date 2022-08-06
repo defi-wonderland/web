@@ -8,6 +8,7 @@ const StyledRing = styled.div`
   position: relative;
   user-select: none;
   width: 32rem;
+  max-width: calc(100% - var(--page-padding));
 
   img {
     width: 100%;

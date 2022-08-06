@@ -58,7 +58,7 @@ export interface ApproachSectionProps {}
 
 export const ApproachSection: FC<ApproachSectionProps> = ({ ...props }) => {
   return (
-    <StyledApproachSection>
+    <StyledApproachSection {...props}>
       <ApproachArticle title="OUR APPROACH" center>
         <ApproachTitle>
           We believe there are 3 pillars for any protocol to scale:
