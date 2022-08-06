@@ -79,7 +79,7 @@ export const ApproachSection: FC<ApproachSectionProps> = ({ ...props }) => {
           </Step>
 
           <Step>
-            <StepNumber>Decentralization</StepNumber>
+            <StepNumber>Decentralized</StepNumber>
             {/* <p>
               <span>
                 Decentralization is a sliding scale and should be applied to all
