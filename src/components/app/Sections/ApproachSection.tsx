@@ -2,10 +2,10 @@ import { FC } from "react";
 import styled from "styled-components";
 
 import {
-  Button,
   DisplayText,
   Section,
   SectionArticle,
+  SectionBackground,
 } from "@/components/common";
 
 const StepNumber = styled(DisplayText)`
@@ -59,6 +59,8 @@ export interface ApproachSectionProps {}
 export const ApproachSection: FC<ApproachSectionProps> = ({ ...props }) => {
   return (
     <StyledApproachSection {...props}>
+      <SectionBackground type="2" align="center" />
+
       <ApproachArticle title="OUR APPROACH" center>
         <ApproachTitle>We believe finance should be:</ApproachTitle>
 

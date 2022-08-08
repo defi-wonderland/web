@@ -6,6 +6,7 @@ const StyledPageContent = styled.section`
   align-items: center;
   width: 100%;
   padding-bottom: 10rem;
+  overflow: hidden;
 
   @media screen and (max-width: 500px) {
     padding-bottom: 3rem;

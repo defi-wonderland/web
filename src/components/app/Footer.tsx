@@ -87,7 +87,7 @@ const StyledFooter = styled.footer`
   width: 90rem;
   max-width: calc(100% - var(--page-padding));
   height: 40rem;
-  z-index: 1;
+  z-index: var(--content-index);
 
   @media screen and (max-width: 635px) {
     ${FooterSocial} {

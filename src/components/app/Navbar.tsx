@@ -40,8 +40,11 @@ const NavLink = styled(Link)<{ order?: number; disabled?: boolean }>`
 const WonderLogo = styled(Link)`
   display: flex;
   order: 3;
-  width: auto;
-  height: 4rem;
+  width: 4.25rem;
+
+  img {
+    width: 100%;
+  }
 `;
 
 interface NavLink {

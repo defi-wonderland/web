@@ -1,6 +1,7 @@
-import { FC, useEffect } from "react";
+import { FC, useEffect, useState } from "react";
 import styled from "styled-components";
-import useFontFaceObserver from "use-font-face-observer";
+// import useFontFaceObserver from "use-font-face-observer";
+import FontFaceObserver from "fontfaceobserver";
 
 import { DisplayText } from "@/components/common";
 
@@ -18,6 +19,7 @@ const StyledHeroHeading = styled.div`
   margin-top: var(--navbar-height);
   width: 64rem;
   max-width: calc(100% - var(--page-padding));
+  overflow: hidden;
   z-index: 1;
 
   // canvas {
@@ -57,6 +59,7 @@ export const HeroHeading: FC<HeroHeadingProps> = ({
 
     const windowWidth = (window as any).innerWidth;
     const fontFamily = "SharpGrotesk-10";
+    const [fontLoaded, setFontLoaded] = useState(false);
 
     let size;
 
@@ -88,7 +91,11 @@ export const HeroHeading: FC<HeroHeadingProps> = ({
 
     const blotterText = new Blotter(material, { texts: rawText });
     const scope = blotterText.forText(rawText);
-    const webFontsLoaded = useFontFaceObserver([{ family: fontFamily }]);
+    // const webFontsLoaded = useFontFaceObserver([{ family: fontFamily }]);
+    const font = new FontFaceObserver(fontFamily);
+    font.load().then(() => {
+      setFontLoaded(true);
+    });
 
     // NOTE We wait until the DOM is loaded
     useEffect(() => {
@@ -98,7 +105,7 @@ export const HeroHeading: FC<HeroHeadingProps> = ({
           scope.appendTo(heroHeading);
         }
       });
-    }, [webFontsLoaded]);
+    }, [fontLoaded]);
   }
 
   return (

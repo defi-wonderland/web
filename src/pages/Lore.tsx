@@ -12,6 +12,7 @@ import {
   Ring,
   Section,
   SectionArticle,
+  SectionBackground,
 } from "@/components/common";
 
 const sectionPadding = "3rem 0";
@@ -57,17 +58,6 @@ const StyledApproachSection = styled(ApproachSection)`
   padding: ${sectionPadding};
 `;
 
-// const SectionBackground = styled.div<{ type: "1" | "2" | "3" | "4" }>`
-//   position: absolute;
-
-//   img {
-//     width: 50%;
-//     height: auto;
-//     background-image: url("/img/lore/001_grad.jpg");
-//     background-repeat: no-repeat;
-//   }
-// `;
-
 export function Lore() {
   return (
     <PageContent>
@@ -107,10 +97,12 @@ export function Lore() {
         </LoreSectionArticle>
         <Ring type="1" />
 
-        {/* <SectionBackground type="1" /> */}
+        <SectionBackground type="4" align="right" />
       </LeftSection>
 
       <RightSection>
+        <SectionBackground type="1" align="left" />
+
         <Ring type="2" />
 
         <LoreSectionArticle title="OUR MISSION">
@@ -152,6 +144,8 @@ export function Lore() {
         </LoreSectionArticle>
 
         <Ring type="1" />
+
+        <SectionBackground type="2" align="right" />
       </LeftSection>
 
       <StyledApproachSection />

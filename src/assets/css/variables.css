@@ -1,8 +1,8 @@
 :root {
   /* INDEXES */
-  --ring-a-index: 2;
-  --ball-index: 1;
-  --ring-b-index: 0;
+  --ring-b-index: 5;
+  --ball-index: 6;
+  --ring-a-index: 7;
 
   --content-index: 10;
 
