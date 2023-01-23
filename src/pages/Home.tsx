@@ -1,9 +1,12 @@
-import { PageContent } from "@/components/app";
+import { Footer, Navbar, PageContent } from "~/components/app";
+import { Outlet } from "react-router-dom";
 
 export function Home() {
   return (
     <PageContent>
-      <h1>Home</h1>
+      {/* <Navbar /> */}
+      <Outlet />
+      <Footer />
     </PageContent>
   );
 }

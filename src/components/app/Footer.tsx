@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { Link } from "@/components/common";
+import { Link, SectionBackground } from "~/components/common";
 
 import WonderLogoIcon from "/img/wonder-logo-text.svg";
 import StarIcon from "/img/footer/star-icon.svg";
@@ -75,6 +75,7 @@ const SocialIcons = styled.div`
 `;
 
 const StyledFooter = styled.footer`
+  position: absolute;
   display: flex;
   flex-direction: column;
   align-self: center;
@@ -97,49 +98,75 @@ const StyledFooter = styled.footer`
   }
 `;
 
+const BackgroundImage = styled(SectionBackground)`
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+`;
+
+const BgContainer = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: -1;
+`;
+
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+`;
+
 interface FooterProps {}
 
 export const Footer = ({}: FooterProps) => (
-  <StyledFooter>
-    <FooterHeader>
-      <Star src={StarIcon} alt="Star icon" />
-      <WonderLogoText src={WonderLogoIcon} alt="Wonderland logo text" />
-      <Star src={StarIcon} alt="Star icon" />
-    </FooterHeader>
+  <Container>
+    <BgContainer>
+      <BackgroundImage type="2" align="center" />
+    </BgContainer>
+    <StyledFooter>
+      <FooterHeader>
+        <Star src={StarIcon} alt="Star icon" />
+        <WonderLogoText src={WonderLogoIcon} alt="Wonderland logo text" />
+        <Star src={StarIcon} alt="Star icon" />
+      </FooterHeader>
 
-    <FooterActions>
-      {/* <Link to="https://googleform" external>About us</Link> */}
-      <Plus src={PlusIcon} alt="Plus icon" />
-      <Link
-        to="https://docs.google.com/forms/d/1n70jsL4sFkOwPNBTdciPqlWF2RirgQwejjztpS4-2L8/viewform"
-        external
-      >
-        Join us
-      </Link>
-      <Plus src={PlusIcon} alt="Plus icon" />
-      {/* <Link to="https://googleform" external>Portfolio</Link> */}
-    </FooterActions>
+      <FooterActions>
+        {/* <Link to="https://googleform" external>About us</Link> */}
+        <Plus src={PlusIcon} alt="Plus icon" />
+        <Link
+          to="https://docs.google.com/forms/d/1n70jsL4sFkOwPNBTdciPqlWF2RirgQwejjztpS4-2L8/viewform"
+          external
+        >
+          Join us
+        </Link>
+        <Plus src={PlusIcon} alt="Plus icon" />
+        {/* <Link to="https://googleform" external>Portfolio</Link> */}
+      </FooterActions>
 
-    <FooterSocial>
-      <span>
-        <span>© 2022. DeFi Wonderland. </span>
-        <span>All Right Reserved</span>
-      </span>
+      <FooterSocial>
+        <span>
+          <span>© 2022. DeFi Wonderland. </span>
+          <span>All Right Reserved</span>
+        </span>
 
-      <SocialIcons>
-        <SocialIcon to="https://twitter.com/defi_wonderland" external>
-          <img src={TwitterIcon} alt="Twitter icon" />
-        </SocialIcon>
-        <SocialIcon to="https://github.com/defi-wonderland" external>
-          <img src={GithubIcon} alt="Github icon" />
-        </SocialIcon>
-        {/* <SocialIcon to="https://medium.com/the-defi-wonderland" external>
+        <SocialIcons>
+          <SocialIcon to="https://twitter.com/defi_wonderland" external>
+            <img src={TwitterIcon} alt="Twitter icon" />
+          </SocialIcon>
+          <SocialIcon to="https://github.com/defi-wonderland" external>
+            <img src={GithubIcon} alt="Github icon" />
+          </SocialIcon>
+          {/* <SocialIcon to="https://medium.com/the-defi-wonderland" external>
           <img src={DoorIcon} alt="Door icon" />
         </SocialIcon> */}
-      </SocialIcons>
+        </SocialIcons>
 
-      <span></span>
-      {/* <span>Privacy Policy</span> */}
-    </FooterSocial>
-  </StyledFooter>
+        <span></span>
+        {/* <span>Privacy Policy</span> */}
+      </FooterSocial>
+    </StyledFooter>
+  </Container>
 );

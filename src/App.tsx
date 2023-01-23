@@ -1,7 +1,9 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
-import { PageView, Navbar } from "@/components/app";
-import { Lore } from "@/pages";
+import { PageView, Navbar } from "~/components/app";
+import { Home, Lore } from "~/pages";
+import Team from "./pages/Team";
+import PortFolio from "./pages/Portfolio";
 
 function App() {
   return (
@@ -11,8 +13,11 @@ function App() {
 
         <Routes>
           <Route path="/" element={<Lore />} />
-          {/* <Route path="/" element={<Home />} /> */}
-          <Route path="*" element={<Navigate to="/" />} />
+          <Route path="*" element={<Home />}>
+            <Route path="lore" element={<Lore />} />
+            <Route path="team" element={<Team />} />
+            <Route path="portfolio" element={<PortFolio />} />
+          </Route>
         </Routes>
       </BrowserRouter>
     </PageView>

@@ -6,7 +6,7 @@ import {
   Section,
   SectionArticle,
   SectionBackground,
-} from "@/components/common";
+} from "~/components/common";
 
 const StepNumber = styled(DisplayText)`
   position: relative;

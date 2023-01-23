@@ -1,8 +1,8 @@
 import { FC } from "react";
 import styled from "styled-components";
 
-import { HeroHeading } from "@/components/app";
-import { Section } from "@/components/common";
+import { HeroHeading } from "~/components/app";
+import { Section } from "~/components/common";
 
 const HeroDivider = styled.img`
   position: absolute;
