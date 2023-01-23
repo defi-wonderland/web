@@ -5,7 +5,6 @@ const StyledPageContent = styled.section`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  padding-bottom: 50px;
   overflow: hidden;
 
   @media screen and (max-width: 500px) {

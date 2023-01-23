@@ -1,6 +1,7 @@
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import { PageView, Navbar } from "~/components/app";
+import { PageView } from "~/components/app";
+import { Navbar } from "./containers";
 import { Home, Lore } from "~/pages";
 import Team from "./pages/Team";
 import PortFolio from "./pages/Portfolio";

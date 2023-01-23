@@ -1,5 +1,5 @@
 html {
-  font-size: 73%;
+  font-size: 62.5%;
   color-scheme: light dark;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -17,7 +17,8 @@ body {
   background-color: var(--background-surface-primary);
 }
 
-html, body {
+html,
+body {
   margin: 0;
   width: 100%;
   height: 100%;
@@ -32,18 +33,28 @@ html, body {
   box-sizing: border-box;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   margin: 0;
   font-weight: 500;
   line-height: 1.25;
-  letter-spacing: .1rem;
+  letter-spacing: 0.1rem;
 }
 
-h1, h3, h5 {
+h1,
+h3,
+h5 {
   font-family: var(--font-medium);
 }
 
-h2, h4, h6 {
+h2,
+h4,
+h6 {
   font-family: var(--font-medium-l);
 }
 

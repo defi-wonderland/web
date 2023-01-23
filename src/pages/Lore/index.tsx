@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components";
 
-import { ApproachSection, PageContent } from "~/components/app";
+import { PageContent } from "~/components/app";
+import { ApproachSection } from "./ApproachSection";
 import {
   Ball,
   Ring,
@@ -54,7 +55,6 @@ const StyledApproachSection = styled(ApproachSection)`
 `;
 
 const SCone = styled.img`
-  /* position: absolute; */
   width: 517px;
   height: 695px;
   margin-right: 15%;
@@ -62,16 +62,15 @@ const SCone = styled.img`
 `;
 
 const STitle = styled.img`
-  /* position: absolute; */
-  width: 1121px;
-  height: 374px;
+  width: 1021px;
+  height: 344px;
 `;
 
 const HeroDivider = styled.div`
   position: absolute;
   width: 100%;
   bottom: 0;
-  z-index: 3;
+  z-index: 10;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -84,12 +83,10 @@ export function Lore() {
     <PageContent>
       <Ball />
 
-      {/* <img src={STARS} alt="starts background" /> */}
       <HeroDivider>
         <STitle src={TITLE} alt="starts background" />
       </HeroDivider>
       <SCone src={CONE} alt="starts background" />
-      {/* <HeroSection /> */}
 
       <LeftSection>
         <LoreSectionArticle title="WHO WE ARE">
@@ -175,8 +172,6 @@ export function Lore() {
       </LeftSection>
 
       <StyledApproachSection />
-
-      {/* <Footer /> */}
     </PageContent>
   );
 }

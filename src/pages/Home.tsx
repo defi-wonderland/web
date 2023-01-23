@@ -1,6 +1,6 @@
-import { Footer, Navbar, PageContent } from "~/components/app";
+import { PageContent } from "~/components/app";
 import { Outlet } from "react-router-dom";
-
+import { Footer, Navbar } from "~/containers";
 export function Home() {
   return (
     <PageContent>
