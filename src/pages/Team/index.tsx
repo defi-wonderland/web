@@ -2,7 +2,7 @@ import { WonderTeamSection } from "./TeamGrid.tsx";
 import { BackgroundImg, Container, HeroDivider, STitle } from "./Team.styles";
 import TITLE from "~/assets/team_text.png";
 
-function Team() {
+export function Team() {
   return (
     <Container>
       <HeroDivider>
@@ -13,5 +13,3 @@ function Team() {
     </Container>
   );
 }
-
-export default Team;

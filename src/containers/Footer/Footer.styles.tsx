@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { Link, SectionBackground } from "~/components/common";
+import { CONTENT_INDEX, Link, SectionBackground } from "~/components/common";
 import MISC from "~/assets/footer_vector.svg";
 
 // TODO Check this color with figma
@@ -85,7 +85,7 @@ export const StyledFooter = styled.footer`
   width: 105.1rem;
   max-width: calc(100% - var(--page-padding));
   height: 47rem;
-  z-index: var(--content-index);
+  z-index: ${CONTENT_INDEX};
 
   @media screen and (max-width: 635px) {
     ${FooterSocial} {

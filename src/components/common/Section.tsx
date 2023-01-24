@@ -1,5 +1,6 @@
 import { FC } from "react";
 import styled from "styled-components";
+import { SPACING_530 } from "./Variables";
 
 type backgroundType = "1" | "2" | "3" | "4";
 type backgroundAlignType = "left" | "center" | "right";
@@ -24,7 +25,7 @@ const StyledSectionBackground = styled.div<{
   align: backgroundAlignType;
 }>`
   position: absolute;
-  width: 53rem;
+  width: ${SPACING_530};
   z-index: 0;
   // right: -calc((100vw - var(--page-max-width)) / 4);
   // right: calc((100vw - 100%) * -1);

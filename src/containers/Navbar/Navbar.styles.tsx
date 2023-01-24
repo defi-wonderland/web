@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { Link } from "~/components/common";
+import { Link, NAVBAR_HEIGHT, NAVBAR_INDEX } from "~/components/common";
 
 export const StyledNavbar = styled.nav`
   position: fixed;
@@ -11,7 +11,7 @@ export const StyledNavbar = styled.nav`
   top: 0;
   left: 0;
   width: 100vw;
-  height: var(--navbar-height);
+  height: ${NAVBAR_HEIGHT};
   color: var(--text-light);
   background-image: linear-gradient(
     to bottom,
@@ -21,7 +21,7 @@ export const StyledNavbar = styled.nav`
   grid-gap: 4rem;
   padding: 2rem 1rem;
   user-select: none;
-  z-index: var(--navbar-index);
+  z-index: ${NAVBAR_INDEX};
 `;
 
 export const NavLink = styled(Link)<{ order?: number; disabled?: boolean }>`

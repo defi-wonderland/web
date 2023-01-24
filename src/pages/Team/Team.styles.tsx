@@ -1,6 +1,11 @@
 import styled from "styled-components";
 
-import { SectionBackground } from "~/components/common";
+import {
+  CONTENT_INDEX,
+  SectionBackground,
+  SPACING_1152,
+  SPACING_384,
+} from "~/components/common";
 
 export const Container = styled.div`
   width: 90%;
@@ -10,9 +15,9 @@ export const Container = styled.div`
 `;
 
 export const STitle = styled.img`
-  width: 1121px;
-  height: 374px;
-  z-index: 100;
+  width: ${SPACING_1152};
+  height: ${SPACING_384};
+  z-index: ${CONTENT_INDEX};
 `;
 
 export const HeroDivider = styled.div`
