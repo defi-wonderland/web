@@ -7,6 +7,7 @@ import {
   SectionArticle,
   SectionBackground,
 } from "~/components/common";
+import { SecondaryText } from "./TextSection";
 
 const StepNumber = styled(DisplayText)`
   position: relative;
@@ -31,6 +32,7 @@ const Step = styled.article`
 `;
 
 const ApproachSteps = styled.article`
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   align-items: flex-start;
@@ -38,8 +40,13 @@ const ApproachSteps = styled.article`
   flex-wrap: wrap;
   text-align: center;
   grid-gap: 6rem;
-  // grid-gap: 4rem;
   margin-top: 6.5rem;
+
+  @media screen and (max-width: 640px) {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1.2rem;
+  }
 `;
 
 const ApproachTitle = styled.strong`
@@ -52,7 +59,8 @@ const ApproachArticle = styled(SectionArticle)`
 `;
 
 const StyledApproachSection = styled(Section)`
-  width: var(--page-max-width);
+  max-width: 140rem;
+  margin-top: 4rem;
 `;
 
 export interface ApproachSectionProps {}
@@ -71,41 +79,41 @@ export const ApproachSection: FC<ApproachSectionProps> = ({ ...props }) => {
           <Step>
             <StepNumber>1</StepNumber>
             <p>
-              <span>
+              <SecondaryText>
                 Composability, in DeFi, is the ability for applications and
                 protocols to interact with one another in a permissionless way —
                 meaning they are constantly talking to one another and
                 leveraging each other’s code, and therefore each other’s
                 utility.
-              </span>
+              </SecondaryText>
             </p>
           </Step>
 
           <Step>
             <StepNumber>2</StepNumber>
             <p>
-              <span>
+              <SecondaryText>
                 Decentralization is a sliding scale and should be applied to all
                 aspects of a blockchain application. By decentralizing the
                 management of and access to resources in an application, greater
                 and fairer service can be achieved.
-              </span>
-              <span>
+              </SecondaryText>
+              <SecondaryText>
                 Decentralization typically has some tradeoffs, but ideally, the
                 tradeoffs are worth the improved stability and service levels
                 they produce.
-              </span>
+              </SecondaryText>
             </p>
           </Step>
 
           <Step>
             <StepNumber>3</StepNumber>
             <p>
-              <span>
+              <SecondaryText>
                 Self-sustainability (or how we call it “set and forget”): A
                 system is self-sustaining if it can maintain itself by
                 independent effort, without any external support.
-              </span>
+              </SecondaryText>
             </p>
           </Step>
         </ApproachSteps>

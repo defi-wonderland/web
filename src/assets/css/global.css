@@ -66,6 +66,10 @@ span {
   letter-spacing: normal;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* @media (prefers-color-scheme: light) {
   :root {
     color: #213547;

@@ -25,7 +25,7 @@ const navLinks: NavLink[] = [
   },
   {
     name: "join us",
-    url: "/joinus",
+    url: "/contact",
     disabled: false,
   },
 ];

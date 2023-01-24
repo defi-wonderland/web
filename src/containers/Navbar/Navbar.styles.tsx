@@ -18,7 +18,7 @@ export const StyledNavbar = styled.nav`
     var(--background-surface-primary) 25%,
     rgba(14, 21, 44, 0) 100%
   );
-  grid-gap: 6rem;
+  grid-gap: 4rem;
   padding: 2rem 1rem;
   user-select: none;
   z-index: var(--navbar-index);
