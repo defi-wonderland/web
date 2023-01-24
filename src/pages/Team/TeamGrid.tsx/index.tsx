@@ -14,6 +14,14 @@ export const Members = [
   { name: "test10", position: "Position", twitterHandle: "@test", link: "/" },
   { name: "test11", position: "Position", twitterHandle: "@test", link: "/" },
   { name: "test12", position: "Position", twitterHandle: "@test", link: "/" },
+  { name: "test13", position: "Position", twitterHandle: "@test", link: "/" },
+  { name: "test14", position: "Position", twitterHandle: "@test", link: "/" },
+  { name: "test15", position: "Position", twitterHandle: "@test", link: "/" },
+  { name: "test16", position: "Position", twitterHandle: "@test", link: "/" },
+  { name: "test17", position: "Position", twitterHandle: "@test", link: "/" },
+  { name: "test18", position: "Position", twitterHandle: "@test", link: "/" },
+  { name: "test19", position: "Position", twitterHandle: "@test", link: "/" },
+  { name: "test20", position: "Position", twitterHandle: "@test", link: "/" },
 ];
 
 export function WonderTeamSection() {

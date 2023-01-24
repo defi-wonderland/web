@@ -54,6 +54,7 @@ const PrimaryText = styled.p`
 
 export const SecondaryText = styled.span`
   font-size: 1.8rem;
+  padding-top: 1rem;
 `;
 
 function TextSection() {
