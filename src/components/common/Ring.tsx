@@ -16,14 +16,14 @@ const StyledRing = styled.div`
     width: 100%;
 
     &:first-child {
-      z-index: ${RING_A_INDEX};
+      z-index: ${RING_B_INDEX};
     }
 
     &:last-child {
       position: absolute;
       left: 0;
       top: 0;
-      z-index: ${RING_B_INDEX};
+      z-index: ${RING_A_INDEX};
     }
   }
 `;

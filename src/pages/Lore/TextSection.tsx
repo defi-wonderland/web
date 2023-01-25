@@ -3,6 +3,7 @@ import styled, { css } from "styled-components";
 
 import {
   Button,
+  PAGE_MAX_WIDTH,
   Ring,
   Section,
   SectionArticle,
@@ -12,7 +13,7 @@ import {
 const LoreSectionArticle = styled(SectionArticle)``;
 
 const LoreSection = styled(Section)`
-  width: calc(var(--page-max-width) + 12rem);
+  width: calc(${PAGE_MAX_WIDTH} + 13rem);
   max-width: 100%;
   grid-gap: 4.6rem;
 
