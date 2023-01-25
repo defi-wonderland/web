@@ -1,6 +1,12 @@
 import styled from "styled-components";
 
-import { CONTENT_INDEX, Link, SectionBackground } from "~/components/common";
+import {
+  CONTENT_INDEX,
+  FONT_MEDIUM,
+  FONT_MEDIUM_L,
+  Link,
+  SectionBackground,
+} from "~/components/common";
 import MISC from "~/assets/footer_vector.svg";
 
 // TODO Check this color with figma
@@ -33,7 +39,7 @@ export const FooterActions = styled.div`
   align-items: center;
   justify-content: center;
   grid-gap: 2.5rem;
-  font-family: var(--font-medium-l);
+  font-family: ${FONT_MEDIUM_L};
   font-size: 1.125rem;
   font-weight: 500;
   flex: 1;
@@ -47,7 +53,7 @@ export const FooterSocial = styled.div`
   border-top: 1px solid ${footerColor};
 
   > * {
-    font-family: var(--font-medium);
+    font-family: ${FONT_MEDIUM};
     font-size: 1.125rem;
     letter-spacing: 0.1rem;
     flex: 1;

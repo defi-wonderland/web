@@ -1,11 +1,12 @@
 import { FC } from "react";
 import styled from "styled-components";
+import { FONT_DISPLAY } from "./Variables";
 
 const StyledDisplayText = styled.h1<{
   size: DisplaySize;
   gradient?: boolean;
 }>`
-  font-family: var(--font-display);
+  font-family: ${FONT_DISPLAY};
   font-weight: 300;
   font-style: italic;
   line-height: 1.25;
