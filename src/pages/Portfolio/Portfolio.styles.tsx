@@ -8,6 +8,7 @@ import {
   SPACING_1152,
   SPACING_256,
   SPACING_384,
+  TABLET_MAX_WIDTH,
 } from "~/components/common";
 
 export const Container = styled.div`
@@ -22,6 +23,10 @@ export const STitle = styled.img`
   height: ${SPACING_384};
   z-index: ${CONTENT_INDEX};
   margin-top: 10rem;
+
+  @media screen and (max-width: ${TABLET_MAX_WIDTH}) {
+    width: 90%;
+  }
 `;
 
 export const HeroDivider = styled.div`
@@ -34,6 +39,10 @@ export const HeroDivider = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: ${SPACING_256};
+
+  @media screen and (max-width: ${TABLET_MAX_WIDTH}) {
+    margin-top: 10rem;
+  }
 `;
 
 export const BackgroundImg = styled(SectionBackground)`
@@ -43,6 +52,10 @@ export const BackgroundImg = styled(SectionBackground)`
   width: ${SPACING_1050};
   margin: 0 auto;
   z-index: -1;
+
+  @media screen and (max-width: ${TABLET_MAX_WIDTH}) {
+    width: 100%;
+  }
 `;
 
 export const Ball_1 = styled(Ball)`

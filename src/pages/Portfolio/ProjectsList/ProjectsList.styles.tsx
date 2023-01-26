@@ -4,6 +4,8 @@ import {
   FONT_SIZE_24,
   GradientTitle,
   SectionBackground,
+  SPACING_128,
+  TABLET_MAX_WIDTH,
 } from "~/components/common";
 
 export const TitleContainer = styled.div`
@@ -20,12 +22,16 @@ export const ProjectTitle = styled(GradientTitle)`
 `;
 
 export const List = styled.div`
-  margin: 10rem 0 14rem;
+  margin: 10rem 0 25rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  padding: 0 12rem;
+  padding: 0 ${SPACING_128};
+
+  @media screen and (max-width: ${TABLET_MAX_WIDTH}) {
+    padding: 0;
+  }
 `;
 
 export const ProjectContainer = styled.div`
@@ -59,7 +65,16 @@ export const SBackgroundImg = styled(SectionBackground)`
   position: absolute;
   display: flex;
   justify-content: center;
-  width: 80rem;
-  margin: 54rem auto 0;
+  width: 50%;
+  margin-top: 54rem;
+  z-index: -1;
+`;
+
+export const SBackgroundImg2 = styled(SectionBackground)`
+  right: 0%;
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  margin-top: 80rem;
   z-index: -1;
 `;

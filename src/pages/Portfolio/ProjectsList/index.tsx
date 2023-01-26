@@ -6,6 +6,7 @@ import {
   ProjectContainer,
   Divider,
   SBackgroundImg,
+  SBackgroundImg2,
 } from "./ProjectsList.styles";
 import { PROJECTS } from "~/constants/projects";
 
@@ -26,7 +27,7 @@ export function ProjectsList() {
           </>
         ))}
         <Divider />
-        <SBackgroundImg type="2" align="right" />
+        <SBackgroundImg2 type="2" align="right" />
       </List>
     </>
   );
