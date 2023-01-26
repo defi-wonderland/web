@@ -1,6 +1,46 @@
 import styled from "styled-components";
 
-import { Link, NAVBAR_HEIGHT, NAVBAR_INDEX } from "~/components/common";
+import {
+  FONT_SIZE_20,
+  Link,
+  MOBILE_MAX_WIDTH,
+  NAVBAR_HEIGHT,
+  NAVBAR_INDEX,
+} from "~/components/common";
+
+export const LogoContainer = styled.div`
+  order: 3;
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    & {
+      width: 100%;
+      padding: 0 1rem;
+      display: flex;
+      justify-content: space-between;
+      order: 1;
+    }
+  }
+`;
+
+export const MenuButton = styled.button`
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: none;
+  padding: 0;
+
+  &:hover {
+    opacity: 87%;
+  }
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    & {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+`;
 
 export const StyledNavbar = styled.nav`
   position: fixed;
@@ -10,7 +50,7 @@ export const StyledNavbar = styled.nav`
   flex-wrap: wrap;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   height: ${NAVBAR_HEIGHT};
   color: var(--text-light);
   background-image: linear-gradient(
@@ -22,6 +62,16 @@ export const StyledNavbar = styled.nav`
   padding: 2rem 1rem;
   user-select: none;
   z-index: ${NAVBAR_INDEX};
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    & {
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: start;
+      grid-gap: 2rem;
+      height: fit-content;
+    }
+  }
 `;
 
 export const NavLink = styled(Link)<{ order?: number; disabled?: boolean }>`
@@ -36,11 +86,16 @@ export const NavLink = styled(Link)<{ order?: number; disabled?: boolean }>`
     pointer-events: none;
     opacity: .6;
   `};
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    & {
+      font-size: ${FONT_SIZE_20};
+    }
+  }
 `;
 
 export const WonderLogo = styled(Link)`
   display: flex;
-  order: 3;
   width: 4.25rem;
 
   img {

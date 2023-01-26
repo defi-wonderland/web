@@ -19,7 +19,7 @@ export function WonderTeamSection() {
       </TitleContainer>
       <TeamGrid>
         {MEMBERS.map((member) => (
-          <MemberContainer key={member.twitterHandle}>
+          <MemberContainer key={member.name}>
             <div>
               <Name>{member.name}</Name>
               <Position>{member.position}</Position>

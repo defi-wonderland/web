@@ -12,9 +12,18 @@ const StyledLink = css`
 
 const ExternalLink = styled.a`
   ${StyledLink}
+
+  &:hover {
+    opacity: 87%;
+  }
 `;
+
 const StyledRouterLink = styled(RouterLink)`
   ${StyledLink}
+
+  &:hover {
+    opacity: 87%;
+  }
 `;
 
 export interface LinkProps extends RouterLinkProps {

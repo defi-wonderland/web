@@ -6,6 +6,7 @@ import {
   FONT_SIZE_24,
   GradientTitle,
   Link,
+  MOBILE_MAX_WIDTH,
 } from "~/components/common";
 
 export const TitleContainer = styled.div`
@@ -27,8 +28,17 @@ export const TeamGrid = styled.div`
   margin: 100px 0px;
 
   // TODO: improve members border
-  grid-gap: 2px;
+  grid-gap: 0.15rem;
   background-color: rgba(255, 255, 255, 0.5);
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    & {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      order: 1;
+    }
+  }
 `;
 
 export const MemberContainer = styled.div`
@@ -44,13 +54,19 @@ export const MemberContainer = styled.div`
 
   &:hover {
     background-image: radial-gradient(
-        circle at 100% 50%,
-        rgba(14, 21, 44, 0),
-        #0e152c
+        circle at 100% 0%,
+        rgba(14, 21, 44, 0) 0%,
+        rgba(14, 21, 44, 1) 85%
       ),
       url("/img/lore/002_grad.jpg");
     background-size: cover;
     background-position: bottom;
+  }
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    & {
+      height: auto;
+    }
   }
 `;
 
