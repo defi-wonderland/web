@@ -6,13 +6,13 @@ const StyledButton = styled.button`
   align-items: center;
   justify-content: center;
   border-radius: 48px;
-  padding: 0 2.5rem;
+  padding: 1.5rem 4rem;
   height: 2.5rem;
   text-transform: uppercase;
   font-family: var(--font-medium-l);
-  font-size: 0.75rem;
+  font-size: 1.2rem;
   font-weight: 500;
-  line-height: 1.33;
+  line-height: 1.6rem;
   letter-spacing: 0.2rem;
   cursor: pointer;
 

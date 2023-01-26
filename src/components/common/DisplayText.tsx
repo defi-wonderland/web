@@ -32,7 +32,7 @@ const StyledDisplayText = styled.h1<{
     `
     p {
       width: fit-content;
-      font-size: 8rem;
+      font-size: 12.8rem;
       letter-spacing: 0.4rem;
       line-height: 1;
       background: linear-gradient(to right, #625cbf, #c55fa3, #fccc50);

@@ -3,7 +3,7 @@ import styled from "styled-components";
 // import useFontFaceObserver from "use-font-face-observer";
 import FontFaceObserver from "fontfaceobserver";
 
-import { DisplayText } from "@/components/common";
+import { DisplayText } from "~/components/common";
 
 const MobileText = styled(DisplayText)`
   font-size: 10vw;

@@ -1,11 +1,11 @@
 import { FC } from "react";
 import styled from "styled-components";
 
-import { DisplayText } from "@/components/common";
+import { DisplayText } from "~/components/common";
 
 const sectionBorderOffset = "2.5rem";
 
-const TextContainer = styled.p`
+export const TextContainer = styled.p`
   color: inherit;
   font-size: inherit;
   font-family: inherit;
@@ -13,12 +13,12 @@ const TextContainer = styled.p`
   letter-spacing: inherit;
 `;
 
-const ArticleTitle = styled(DisplayText)``;
+export const ArticleTitle = styled(DisplayText)``;
 
 const StyledSectionArticle = styled.div<{ center?: boolean }>`
   display: flex;
   flex-direction: column;
-  width: 37.5rem;
+  width: 52.5rem;
   max-width: calc(100% - var(--page-padding));
   z-index: var(--content-index);
   color: var(--text-light);
