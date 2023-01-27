@@ -41,7 +41,7 @@ export const LiquidDistortion = ({
   const windowWidth = (window as any).innerWidth;
   const defaultFontSize = 140;
   if (windowWidth < 500) {
-    fontSize = 42;
+    fontSize = 44;
   } else if (windowWidth < 1100) {
     fontSize = 60;
   }

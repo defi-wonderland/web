@@ -29,7 +29,7 @@ export const Distortion = ({ text }: DistortionProps) => {
   const windowWidth = (window as any).innerWidth;
   let fontSize = 100;
   if (windowWidth < 500) {
-    fontSize = 36;
+    fontSize = 34;
   } else if (windowWidth < 1100) {
     fontSize = 70;
   }
