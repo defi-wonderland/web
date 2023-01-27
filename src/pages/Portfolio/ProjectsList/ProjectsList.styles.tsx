@@ -50,6 +50,7 @@ export const Name = styled.strong`
   text-transform: uppercase;
   opacity: 1 !important;
   z-index: 100;
+  color: white;
 
   &:hover {
     width: fit-content;
