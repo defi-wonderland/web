@@ -34,12 +34,15 @@ export const List = styled.div`
   }
 `;
 
-export const ProjectContainer = styled.div`
+export const ProjectContainer = styled.button`
+  cursor: pointer;
   height: 17rem;
   padding: 2.4rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 100%;
+  z-index: 10;
 `;
 
 export const Name = styled.strong`
@@ -48,6 +51,15 @@ export const Name = styled.strong`
   text-transform: uppercase;
   opacity: 1 !important;
   z-index: 100;
+
+  &:hover {
+    width: fit-content;
+    background: linear-gradient(to right, #625cbf, #c55fa3, #fccc50);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
 `;
 
 export const Divider = styled.canvas`

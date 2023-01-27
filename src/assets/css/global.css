@@ -86,6 +86,11 @@ a {
   text-decoration: none;
 }
 
+button {
+  background-color: transparent;
+  border: none;
+}
+
 @media screen and (max-width: 600px) {
   #hide {
     display: none;
