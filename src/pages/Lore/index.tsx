@@ -4,6 +4,7 @@ import { PageContent } from "~/components/app";
 import { ApproachSection } from "./ApproachSection";
 import {
   Ball,
+  MOBILE_MAX_WIDTH,
   SPACING_192,
   SPACING_320,
   SPACING_512,
@@ -34,6 +35,10 @@ const HeroDivider = styled.div`
   justify-content: center;
   align-items: center;
   top: ${SPACING_320};
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    top: 0rem;
+  }
 `;
 
 export function Lore() {
