@@ -67,6 +67,10 @@ export const SecondaryText = styled.span`
   font-size: 1.8rem;
 `;
 
+export const SecondaryText = styled.span`
+  font-size: 1.8rem;
+`;
+
 export interface ApproachSectionProps {}
 
 export const ApproachSection: FC<ApproachSectionProps> = ({ ...props }) => {
