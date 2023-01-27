@@ -3,7 +3,6 @@ import {
   FONT_MEDIUM_L,
   FONT_SIZE_24,
   GradientTitle,
-  SectionBackground,
   SPACING_128,
   TABLET_MAX_WIDTH,
 } from "~/components/common";
@@ -71,22 +70,4 @@ export const Divider = styled.canvas`
   );
   height: 2px;
   width: 100%;
-`;
-
-export const SBackgroundImg = styled(SectionBackground)`
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  width: 50%;
-  margin-top: 54rem;
-  z-index: -1;
-`;
-
-export const SBackgroundImg2 = styled(SectionBackground)`
-  right: 0%;
-  display: flex;
-  justify-content: center;
-  width: 50%;
-  margin-top: 80rem;
-  z-index: -1;
 `;

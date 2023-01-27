@@ -1,36 +1,31 @@
 import {
-  BackgroundImg,
   Container,
   HeroDivider,
   Ball_1,
   Ball_2,
   Ball_3,
+  BG_1,
+  BG_2,
+  BG_3,
+  BackgroundContainer,
 } from "./Portfolio.styles";
 import { ProjectsList } from "./ProjectsList";
-import { LiquidDistortion } from "~/components/common/LiquidDistorsion";
+import { Distortion } from "~/components/common/DistortionText";
 
 export function Portfolio() {
-  const volatility = 0.04;
-  const speed = 0.08;
-  const fontSize = 90;
-
   return (
     <>
-      <BackgroundImg type="2" align="center" />
+      <BackgroundContainer>
+        <BG_1 type="2" align="center" />
+        <BG_2 type="1" align="left" />
+        <BG_3 type="2" align="right" />
+      </BackgroundContainer>
       <Container>
         <HeroDivider>
-          <LiquidDistortion
+          <Distortion
             text={`TOGETHER, WE WANT TO SUSTAINBLY BUILD A MORE INCLUSIVE`}
-            fontSize={fontSize}
-            volatility={volatility}
-            speed={speed}
           />
-          <LiquidDistortion
-            text={`AND DECENTRALIZED FINANCIAL ECOSYSTEM.`}
-            fontSize={fontSize}
-            volatility={volatility}
-            speed={speed}
-          />
+          <Distortion text={`AND DECENTRALIZED FINANCIAL ECOSYSTEM.`} />
           <Ball_1 />
           <Ball_2 />
           <Ball_3 />

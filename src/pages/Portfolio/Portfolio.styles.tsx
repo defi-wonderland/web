@@ -2,11 +2,8 @@ import styled from "styled-components";
 
 import {
   Ball,
-  CONTENT_INDEX,
   SectionBackground,
-  SPACING_1152,
   SPACING_256,
-  SPACING_384,
   TABLET_MAX_WIDTH,
 } from "~/components/common";
 
@@ -15,17 +12,6 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-`;
-
-export const STitle = styled.img`
-  width: ${SPACING_1152};
-  height: ${SPACING_384};
-  z-index: ${CONTENT_INDEX};
-  margin-top: 10rem;
-
-  @media screen and (max-width: ${TABLET_MAX_WIDTH}) {
-    width: 90%;
-  }
 `;
 
 export const HeroDivider = styled.div`
@@ -41,19 +27,6 @@ export const HeroDivider = styled.div`
 
   @media screen and (max-width: ${TABLET_MAX_WIDTH}) {
     margin-top: 12rem;
-  }
-`;
-
-export const BackgroundImg = styled(SectionBackground)`
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  width: 70%;
-  margin: 0 auto;
-  z-index: -1;
-
-  @media screen and (max-width: ${TABLET_MAX_WIDTH}) {
-    width: 100%;
   }
 `;
 
@@ -83,4 +56,33 @@ export const Ball_3 = styled(Ball)`
   left: 25%;
   transform: none;
   opacity: 0.87;
+`;
+
+export const BackgroundContainer = styled.div`
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+`;
+
+export const BG_1 = styled(SectionBackground)`
+  position: relative;
+  width: 50%;
+  margin: 0 auto;
+
+  @media screen and (max-width: ${TABLET_MAX_WIDTH}) {
+    width: 100%;
+  }
+`;
+
+export const BG_2 = styled(SectionBackground)`
+  position: relative;
+  width: 50%;
+`;
+
+export const BG_3 = styled(SectionBackground)`
+  position: relative;
+  margin-left: auto;
+  width: 50%;
+  right: 0%;
 `;

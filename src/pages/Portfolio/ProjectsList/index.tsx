@@ -5,8 +5,6 @@ import {
   List,
   ProjectContainer,
   Divider,
-  SBackgroundImg,
-  SBackgroundImg2,
 } from "./ProjectsList.styles";
 import { PROJECTS } from "~/constants/projects";
 
@@ -16,7 +14,7 @@ export function ProjectsList() {
       <TitleContainer>
         <ProjectTitle title={"THINGS THAT HAPPEN"} />
       </TitleContainer>
-      <SBackgroundImg type="1" align="left" />
+
       <List>
         {PROJECTS.map((project) => (
           <>
@@ -27,7 +25,6 @@ export function ProjectsList() {
           </>
         ))}
         <Divider />
-        <SBackgroundImg2 type="2" align="right" />
       </List>
     </>
   );
