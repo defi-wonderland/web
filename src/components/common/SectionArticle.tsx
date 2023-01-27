@@ -4,10 +4,7 @@ import styled from "styled-components";
 import {
   CONTENT_INDEX,
   DisplayText,
-<<<<<<< HEAD
   FONT_MEDIUM_L,
-=======
->>>>>>> b519e39471adb86f2f00a3c5e310a6a8c7d0a04b
   FONT_SIZE_18,
   SPACING_530,
 } from "~/components/common";
@@ -68,11 +65,7 @@ const StyledSectionArticle = styled.div<{ center?: boolean }>`
   }
 
   strong {
-<<<<<<< HEAD
     font-family: ${FONT_MEDIUM_L};
-=======
-    font-family: var(--font-medium-l);
->>>>>>> b519e39471adb86f2f00a3c5e310a6a8c7d0a04b
     font-size: ${FONT_SIZE_18};
     font-weight: 500;
     font-stretch: normal;

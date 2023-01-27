@@ -95,7 +95,6 @@ export const COLOR_SUCCESS = () => "#28a745" as const;
 
 /*----------  BREAKPOINTS  ----------*/
 
-<<<<<<< HEAD
 export const MOBILE_MAX_WIDTH = "600px";
 export const TABLET_MAX_WIDTH = "1024px";
 
@@ -105,10 +104,6 @@ export const FONT_DEFAULT = "SFProText";
 export const FONT_DISPLAY = "SharpGrotesk-10";
 export const FONT_MEDIUM = "SharpGrotesk-15";
 export const FONT_MEDIUM_L = "SharpGrotesk-25";
-=======
-export const MOBILE_MAX_WIDTH = 600;
-export const TABLET_MAX_WIDTH = 1024;
->>>>>>> b519e39471adb86f2f00a3c5e310a6a8c7d0a04b
 
 /*----------  MISC  ----------*/
 

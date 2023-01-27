@@ -16,22 +16,14 @@ const StyledRing = styled.div`
     width: 100%;
 
     &:first-child {
-<<<<<<< HEAD
       z-index: ${RING_B_INDEX};
-=======
-      z-index: ${RING_A_INDEX};
->>>>>>> b519e39471adb86f2f00a3c5e310a6a8c7d0a04b
     }
 
     &:last-child {
       position: absolute;
       left: 0;
       top: 0;
-<<<<<<< HEAD
       z-index: ${RING_A_INDEX};
-=======
-      z-index: ${RING_B_INDEX};
->>>>>>> b519e39471adb86f2f00a3c5e310a6a8c7d0a04b
     }
   }
 `;
