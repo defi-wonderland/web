@@ -2,10 +2,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import { PageView } from "~/components/app";
 import { Navbar } from "./containers";
-import { Home, Lore } from "~/pages";
-import Team from "./pages/Team";
-import PortFolio from "./pages/Portfolio";
 import ScrollToTop from "./hooks/ScrollToTop";
+import { Landing, Team, Home, Lore, PortFolio } from "./pages";
 
 function App() {
   return (
@@ -14,7 +12,7 @@ function App() {
         <Navbar />
         <ScrollToTop />
         <Routes>
-          <Route path="/" element={<Lore />} />
+          <Route path="/" element={<Landing />} />
           <Route path="*" element={<Home />}>
             <Route path="lore" element={<Lore />} />
             <Route path="team" element={<Team />} />

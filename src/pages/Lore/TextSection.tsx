@@ -8,7 +8,6 @@ import {
   SectionArticle,
   SectionBackground,
 } from "~/components/common";
-const sectionPadding = "3rem 0";
 
 const LoreSectionArticle = styled(SectionArticle)``;
 
@@ -26,7 +25,7 @@ const LoreSection = styled(Section)`
   }
 
   @media screen and (max-width: 500px) {
-    padding: ${sectionPadding};
+    padding: 3rem 0;
   }
 `;
 

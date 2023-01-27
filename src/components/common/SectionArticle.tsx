@@ -1,7 +1,12 @@
 import { FC } from "react";
 import styled from "styled-components";
 
-import { DisplayText } from "~/components/common";
+import {
+  CONTENT_INDEX,
+  DisplayText,
+  FONT_SIZE_18,
+  SPACING_530,
+} from "~/components/common";
 
 const sectionBorderOffset = "2.5rem";
 
@@ -18,9 +23,9 @@ export const ArticleTitle = styled(DisplayText)``;
 const StyledSectionArticle = styled.div<{ center?: boolean }>`
   display: flex;
   flex-direction: column;
-  width: 52.5rem;
+  width: ${SPACING_530};
   max-width: calc(100% - var(--page-padding));
-  z-index: var(--content-index);
+  z-index: ${CONTENT_INDEX};
   color: var(--text-light);
 
   ${ArticleTitle} {
@@ -59,7 +64,7 @@ const StyledSectionArticle = styled.div<{ center?: boolean }>`
 
   strong {
     font-family: var(--font-medium-l);
-    font-size: 1.313rem;
+    font-size: ${FONT_SIZE_18};
     font-weight: 500;
     font-stretch: normal;
     font-style: normal;

@@ -2,7 +2,14 @@ import styled from "styled-components";
 
 import { PageContent } from "~/components/app";
 import { ApproachSection } from "./ApproachSection";
-import { Ball } from "~/components/common";
+import {
+  Ball,
+  SPACING_1050,
+  SPACING_192,
+  SPACING_320,
+  SPACING_512,
+  SPACING_700,
+} from "~/components/common";
 import TITLE from "~/assets/lore_text.png";
 import CONE from "~/assets/Cono_bola.png";
 import TextSection from "./TextSection";
@@ -12,15 +19,15 @@ const StyledApproachSection = styled(ApproachSection)`
 `;
 
 const SCone = styled.img`
-  width: 517px;
-  height: 695px;
+  width: ${SPACING_512};
+  height: ${SPACING_700};
   margin-right: 15%;
-  margin-top: 189px;
+  margin-top: ${SPACING_192};
 `;
 
 const STitle = styled.img`
-  width: 1021px;
-  height: 344px;
+  width: ${SPACING_1050};
+  height: ${SPACING_320};
 `;
 
 const HeroDivider = styled.div`
@@ -32,7 +39,7 @@ const HeroDivider = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  top: 320px;
+  top: ${SPACING_320};
 `;
 
 export function Lore() {

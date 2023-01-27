@@ -3,7 +3,7 @@ import styled from "styled-components";
 // import useFontFaceObserver from "use-font-face-observer";
 import FontFaceObserver from "fontfaceobserver";
 
-import { DisplayText } from "~/components/common";
+import { DisplayText, NAVBAR_HEIGHT } from "~/components/common";
 
 const MobileText = styled(DisplayText)`
   font-size: 10vw;
@@ -16,7 +16,7 @@ const StyledHeroHeading = styled.div`
   align-items: center;
   justify-content: center;
   align-self: start;
-  margin-top: var(--navbar-height);
+  margin-top: ${NAVBAR_HEIGHT};
   width: 64rem;
   max-width: calc(100% - var(--page-padding));
   overflow: hidden;

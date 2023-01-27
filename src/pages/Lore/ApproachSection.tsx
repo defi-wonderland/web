@@ -7,7 +7,6 @@ import {
   SectionArticle,
   SectionBackground,
 } from "~/components/common";
-import { SecondaryText } from "./TextSection";
 
 const StepNumber = styled(DisplayText)`
   position: relative;
@@ -61,6 +60,10 @@ const ApproachArticle = styled(SectionArticle)`
 const StyledApproachSection = styled(Section)`
   max-width: 140rem;
   margin-top: 4rem;
+`;
+
+export const SecondaryText = styled.span`
+  font-size: 1.8rem;
 `;
 
 export interface ApproachSectionProps {}

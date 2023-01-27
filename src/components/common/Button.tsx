@@ -1,18 +1,26 @@
 import { FC } from "react";
 import styled from "styled-components";
 
+import {
+  SPACING_12,
+  SPACING_16,
+  SPACING_24,
+  SPACING_40,
+  SPACING_48,
+} from "./Variables";
+
 const StyledButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 48px;
-  padding: 1.5rem 4rem;
-  height: 2.5rem;
+  border-radius: ${SPACING_48};
+  padding: ${SPACING_16} ${SPACING_40};
+  height: ${SPACING_24};
   text-transform: uppercase;
   font-family: var(--font-medium-l);
-  font-size: 1.2rem;
+  font-size: ${SPACING_12};
   font-weight: 500;
-  line-height: 1.6rem;
+  line-height: ${SPACING_16};
   letter-spacing: 0.2rem;
   cursor: pointer;
 
