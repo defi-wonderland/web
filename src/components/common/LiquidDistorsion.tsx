@@ -39,7 +39,7 @@ export const LiquidDistortion = ({
   const font = new FontFaceObserver("SharpGrotesk-10");
 
   const windowWidth = (window as any).innerWidth;
-  let size;
+  const defaultFontSize = 140;
   if (windowWidth < 500) {
     fontSize = 42;
   } else if (windowWidth < 1100) {
@@ -62,7 +62,7 @@ export const LiquidDistortion = ({
         <Container>
           <LiquidDistortionText
             text={text}
-            fontSize={fontSize || size}
+            fontSize={fontSize || defaultFontSize}
             speed={speed || 0.5}
             volatility={volatility || 0.02}
             fill={color || "white"}

@@ -7,14 +7,19 @@ import {
   GradientTitle,
   Link,
   MOBILE_MAX_WIDTH,
+  SPACING_320,
 } from "~/components/common";
 
 export const TitleContainer = styled.div`
-  margin-top: 175px;
+  margin-top: ${SPACING_320};
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    margin-top: 5rem;
+  }
 `;
 
 export const WonderTitle = styled(GradientTitle)`
@@ -32,12 +37,9 @@ export const TeamGrid = styled.div`
   background-color: rgba(255, 255, 255, 0.5);
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
-    & {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      order: 1;
-    }
+    display: flex;
+    flex-direction: column;
+    grid-gap: 0.1rem;
   }
 `;
 
@@ -76,6 +78,10 @@ export const Name = styled.strong`
   text-transform: uppercase;
   opacity: 1 !important;
   z-index: 100;
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    font-size: 2rem;
+  }
 `;
 
 export const Position = styled.p`
@@ -83,6 +89,10 @@ export const Position = styled.p`
   font-size: ${FONT_SIZE_18};
   color: rgba(255, 255, 255, 0.65);
   z-index: 1;
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    font-size: 1.6rem;
+  }
 `;
 
 export const SLink = styled(Link)`
@@ -90,6 +100,10 @@ export const SLink = styled(Link)`
   font-size: ${FONT_SIZE_18};
   color: rgba(255, 255, 255, 0.65);
   z-index: 100;
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    font-size: 1.6rem;
+  }
 `;
 
 export const Divider = styled.canvas`

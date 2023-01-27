@@ -1,6 +1,6 @@
 import { FC } from "react";
 import styled from "styled-components";
-import { FONT_DISPLAY } from "./Variables";
+import { FONT_DISPLAY, MOBILE_MAX_WIDTH } from "./Variables";
 
 const StyledDisplayText = styled.h1<{
   size: DisplaySize;
@@ -40,6 +40,13 @@ const StyledDisplayText = styled.h1<{
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
+
+    @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+      p {
+        font-size: 6.4rem;
+      }
+    }
+
   `}
 `;
 

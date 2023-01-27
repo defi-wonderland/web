@@ -5,8 +5,8 @@ import { ApproachSection } from "./ApproachSection";
 import {
   Ball,
   MOBILE_MAX_WIDTH,
+  SPACING_128,
   SPACING_192,
-  SPACING_320,
   SPACING_512,
   SPACING_700,
 } from "~/components/common";
@@ -22,7 +22,7 @@ const SCone = styled.img`
   width: ${SPACING_512};
   height: ${SPACING_700};
   margin-right: 15%;
-  margin-top: ${SPACING_192};
+  margin-top: ${SPACING_128};
 `;
 
 const HeroDivider = styled.div`
@@ -34,17 +34,21 @@ const HeroDivider = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  top: ${SPACING_320};
+  top: ${SPACING_192};
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     top: 0rem;
   }
 `;
 
+const SBall = styled(Ball)`
+  margin-top: -7rem;
+`;
+
 export function Lore() {
   return (
     <PageContent>
-      <Ball />
+      <SBall />
 
       <HeroDivider>
         <LiquidDistortion text={`WOND3RLAND IS NOT A PLACE,`} />

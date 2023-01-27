@@ -6,6 +6,7 @@ import {
   DisplayText,
   FONT_MEDIUM_L,
   FONT_SIZE_18,
+  MOBILE_MAX_WIDTH,
   SPACING_530,
 } from "~/components/common";
 
@@ -73,6 +74,13 @@ const StyledSectionArticle = styled.div<{ center?: boolean }>`
     line-height: 1.25;
     letter-spacing: normal;
     text-transform: uppercase;
+  }
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    strong,
+    span {
+      font-size: 1.6rem;
+    }
   }
 
   strong,
