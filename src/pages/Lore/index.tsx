@@ -4,15 +4,14 @@ import { PageContent } from "~/components/app";
 import { ApproachSection } from "./ApproachSection";
 import {
   Ball,
-  SPACING_1050,
   SPACING_192,
   SPACING_320,
   SPACING_512,
   SPACING_700,
 } from "~/components/common";
-import TITLE from "~/assets/lore_text.png";
 import CONE from "~/assets/Cono_bola.png";
 import TextSection from "./TextSection";
+import { LiquidDistortion } from "~/components/common/LiquidDistorsion";
 
 const StyledApproachSection = styled(ApproachSection)`
   padding: "3rem 0";
@@ -23,11 +22,6 @@ const SCone = styled.img`
   height: ${SPACING_700};
   margin-right: 15%;
   margin-top: ${SPACING_192};
-`;
-
-const STitle = styled.img`
-  width: ${SPACING_1050};
-  height: ${SPACING_320};
 `;
 
 const HeroDivider = styled.div`
@@ -48,7 +42,8 @@ export function Lore() {
       <Ball />
 
       <HeroDivider>
-        <STitle src={TITLE} alt="starts background" />
+        <LiquidDistortion text={`WOND3RLAND IS NOT A PLACE,`} />
+        <LiquidDistortion text={`IT'S A FEELING WITHIN, A PROCESS.`} />
       </HeroDivider>
       <SCone src={CONE} alt="starts background" />
 

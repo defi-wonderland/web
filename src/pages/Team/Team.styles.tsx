@@ -46,7 +46,7 @@ export const BackgroundImg = styled(SectionBackground)`
   position: absolute;
   display: flex;
   justify-content: center;
-  width: ${SPACING_1050};
+  width: 90%;
   margin: 13.2rem auto 0;
   z-index: -1;
 `;

@@ -1,8 +1,8 @@
 import { FC } from "react";
 import styled from "styled-components";
 
-import { HeroHeading } from "~/components/app";
 import { Section } from "~/components/common";
+import { LiquidDistortion } from "~/components/common/LiquidDistorsion";
 
 const HeroDivider = styled.img`
   position: absolute;
@@ -18,7 +18,7 @@ export interface HeroSectionProps {}
 export const HeroSection: FC<HeroSectionProps> = ({ ...props }) => {
   return (
     <StyledHeroSection full backgroundImage="/img/hero/hero-bg.jpg" {...props}>
-      <HeroHeading text="WE’RE ALL MAD HERE" />
+      <LiquidDistortion text={"TO HELP THE WEB3 ECOSYSTEM THRIVE"} />
       <HeroDivider src="/img/hero/hero-bg-divider.png" />
     </StyledHeroSection>
   );

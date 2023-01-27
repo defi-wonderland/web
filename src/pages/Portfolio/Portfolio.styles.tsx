@@ -4,7 +4,6 @@ import {
   Ball,
   CONTENT_INDEX,
   SectionBackground,
-  SPACING_1050,
   SPACING_1152,
   SPACING_256,
   SPACING_384,
@@ -41,7 +40,7 @@ export const HeroDivider = styled.div`
   margin-top: ${SPACING_256};
 
   @media screen and (max-width: ${TABLET_MAX_WIDTH}) {
-    margin-top: 10rem;
+    margin-top: 12rem;
   }
 `;
 
@@ -49,7 +48,7 @@ export const BackgroundImg = styled(SectionBackground)`
   position: absolute;
   display: flex;
   justify-content: center;
-  width: ${SPACING_1050};
+  width: 70%;
   margin: 0 auto;
   z-index: -1;
 
@@ -62,7 +61,7 @@ export const Ball_1 = styled(Ball)`
   position: absolute;
   height: 10rem;
   width: 10rem;
-  top: 54rem;
+  top: 24rem;
   left: 30%;
   transform: none;
 `;
@@ -71,7 +70,7 @@ export const Ball_2 = styled(Ball)`
   position: absolute;
   height: 7rem;
   width: 7rem;
-  top: 40rem;
+  top: 16rem;
   left: 90%;
   transform: none;
 `;
@@ -80,7 +79,7 @@ export const Ball_3 = styled(Ball)`
   position: absolute;
   height: 5rem;
   width: 5rem;
-  top: 2rem;
+  top: -10rem;
   left: 25%;
   transform: none;
   opacity: 0.87;
