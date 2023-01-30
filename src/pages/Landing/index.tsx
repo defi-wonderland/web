@@ -1,11 +1,13 @@
 import { Footer } from "~/containers";
 import { HeroSection } from "./HeroSection";
+import { ContentSection } from "./ContentSection";
 
 export function Landing() {
   return (
-    <div>
+    <>
       <HeroSection />
+      <ContentSection />
       <Footer />
-    </div>
+    </>
   );
 }

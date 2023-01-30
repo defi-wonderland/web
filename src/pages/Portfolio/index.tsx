@@ -8,9 +8,13 @@ import {
   BG_2,
   BG_3,
   BackgroundContainer,
+  TitleContainer,
+  ProjectTitle,
+  ProjectsContainer,
 } from "./Portfolio.styles";
 import { ProjectsList } from "./ProjectsList";
 import { Distortion } from "~/components/common/DistortionText";
+import { Divider } from "./ProjectsList/ProjectsList.styles";
 
 export function Portfolio() {
   return (
@@ -30,7 +34,15 @@ export function Portfolio() {
           <Ball_2 />
           <Ball_3 />
         </HeroDivider>
-        <ProjectsList />
+
+        <TitleContainer>
+          <ProjectTitle title={"THINGS THAT HAPPEN"} />
+        </TitleContainer>
+
+        <ProjectsContainer>
+          <Divider />
+          <ProjectsList />
+        </ProjectsContainer>
       </Container>
     </>
   );
