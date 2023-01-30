@@ -1,10 +1,39 @@
 import styled from "styled-components";
 
-import { Button, FONT_DISPLAY, FONT_MEDIUM_L, Link } from "~/components/common";
+import {
+  Button,
+  FONT_DISPLAY,
+  FONT_MEDIUM_L,
+  Link,
+  SectionBackground,
+  TABLET_MAX_WIDTH,
+} from "~/components/common";
 import { ProjectsList } from "~/pages/Portfolio/ProjectsList";
 import { RightCard } from "./RightCard";
 import { Team } from "./Team";
 import StarIcon from "/img/footer/star-icon.svg";
+import ConeBackground from "~/assets/landing_bg.png";
+
+export const BackgroundContainer = styled.div`
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`;
+
+export const BG_1 = styled(SectionBackground)`
+  position: relative;
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 120rem;
+
+  @media screen and (max-width: ${TABLET_MAX_WIDTH}) {
+    width: 100%;
+  }
+`;
 
 export const LandingContainer = styled.section`
   width: 100%;
@@ -40,10 +69,6 @@ export const SecondTitle = styled(Title)`
   border-left: 1px solid rgba(255, 255, 255, 0.5);
   border-top: 1px solid rgba(255, 255, 255, 0.5);
 `;
-
-export const FirstBlock = styled.div``;
-
-export const SecondBlock = styled.div``;
 
 export const Star = styled.img`
   width: 5rem;
@@ -119,48 +144,61 @@ export const GradientText = styled(DividerText)`
 
 export const TextContainer = styled.div`
   padding: 5rem 4rem;
-  padding-right: 40rem;
+  padding-right: 45rem;
 `;
 
 export const SButton = styled(Button)`
   margin: 4.5rem 10rem 5rem auto;
 `;
 
+export const Cone = styled.img`
+  position: absolute;
+  margin-top: 70rem;
+  margin-left: 25%;
+  width: 60%;
+`;
+
 export function ContentSection() {
   return (
-    <LandingContainer>
-      <Star src={StarIcon} alt="Star icon" />
-      <FirstTitle>developing for a greater good</FirstTitle>
+    <>
+      <BackgroundContainer>
+        <BG_1 type="1" align="center" />
+        <Cone src={ConeBackground} alt="cone image" />
+      </BackgroundContainer>
+      <LandingContainer>
+        <Star src={StarIcon} alt="Star icon" />
+        <FirstTitle>developing for a greater good</FirstTitle>
 
-      <FirstBlockContainer>
-        <TextContainer>
-          <GradientText>To</GradientText>
-          <GradientText>become part</GradientText>
-          <GradientText>of</GradientText>
-          <GradientText>something bigger</GradientText>
-          <GradientText>than</GradientText>
-          <GradientText>ourselves</GradientText>
-        </TextContainer>
+        <FirstBlockContainer>
+          <TextContainer>
+            <GradientText>To</GradientText>
+            <GradientText>become part</GradientText>
+            <GradientText>of</GradientText>
+            <GradientText>something bigger</GradientText>
+            <GradientText>than</GradientText>
+            <GradientText>ourselves</GradientText>
+          </TextContainer>
 
-        <RightCard />
-      </FirstBlockContainer>
+          <RightCard />
+        </FirstBlockContainer>
 
-      <Divider>
-        <DividerText>WONDERLAND IN PROGRESS...</DividerText>
-      </Divider>
+        <Divider>
+          <DividerText>WONDERLAND IN PROGRESS...</DividerText>
+        </Divider>
 
-      <SecondBlockContainer>
-        <ProjectsList />
+        <SecondBlockContainer>
+          <ProjectsList />
 
-        <SButton>
-          <Link to="/">FULL PORTFOLIO</Link>
-        </SButton>
+          <SButton>
+            <Link to="/">FULL PORTFOLIO</Link>
+          </SButton>
 
-        <Team />
-      </SecondBlockContainer>
+          <Team />
+        </SecondBlockContainer>
 
-      <Icon src={StarIcon} alt="Star icon" />
-      <SecondTitle>fix-to-earn</SecondTitle>
-    </LandingContainer>
+        <Icon src={StarIcon} alt="Star icon" />
+        <SecondTitle>fix-to-earn</SecondTitle>
+      </LandingContainer>
+    </>
   );
 }
