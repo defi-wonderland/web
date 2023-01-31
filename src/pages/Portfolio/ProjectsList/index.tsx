@@ -14,7 +14,6 @@ export function ProjectsList() {
       <TitleContainer>
         <ProjectTitle title={"THINGS THAT HAPPEN"} />
       </TitleContainer>
-
       <List>
         {PROJECTS.map((project) => (
           <>
