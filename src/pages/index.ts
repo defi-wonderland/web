@@ -1,3 +1,4 @@
+export * from "./Intro";
 export * from "./Landing";
 export * from "./Lore";
 export * from "./Portfolio";

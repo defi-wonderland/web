@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styled from "styled-components";
+import { useNavigate } from "react-router-dom";
 
 import { NAVBAR_HEIGHT, NAVBAR_INDEX, Section } from "~/components/common";
 import LogoImage from "~/assets/Logo.png";
@@ -79,6 +80,15 @@ export interface HeroSectionProps {}
 
 export function Intro({ ...props }: HeroSectionProps) {
   const [seeBackground, setSeeBackground] = useState(false);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (seeBackground) {
+      setTimeout(() => {
+        navigate("/landing");
+      }, 1000);
+    }
+  }, [seeBackground]);
 
   return (
     <>
