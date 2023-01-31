@@ -68,6 +68,8 @@ export const LiquidDistortion = ({
             fill={color || "white"}
             fontFamily={fontFamily || "SharpGrotesk-10"}
             lineHeight={1.1}
+            paddingLeft={20}
+            paddingRight={20}
           />
         </Container>
       )}

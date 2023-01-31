@@ -60,6 +60,8 @@ export const Distortion = ({ text }: DistortionProps) => {
             distortY={0.5}
             noiseAmplitude={0.02}
             noiseVolatility={5}
+            paddingLeft={20}
+            paddingRight={20}
           />
         </Container>
       )}
