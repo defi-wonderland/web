@@ -19,6 +19,7 @@ export const Container = styled.div`
 export const HeroDivider = styled.div`
   position: relative;
   width: 100%;
+  height: 22rem;
   bottom: 0;
   z-index: 3;
   display: flex;

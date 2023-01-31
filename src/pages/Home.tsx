@@ -5,10 +5,12 @@ import { Footer, Navbar } from "~/containers";
 
 export function Home() {
   return (
-    <PageContent>
+    <>
       <Navbar />
-      <Outlet />
+      <PageContent>
+        <Outlet />
+      </PageContent>
       <Footer />
-    </PageContent>
+    </>
   );
 }

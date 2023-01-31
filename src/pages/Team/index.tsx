@@ -1,10 +1,10 @@
 import { WonderTeamSection } from "./TeamGrid.tsx";
 import { BackgroundImg, Container, HeroDivider, TeamBall } from "./Team.styles";
-import { LiquidDistortion } from "~/components/common/LiquidDistorsion";
+import { AnimationIn, LiquidDistortion } from "~/components/common";
 
 export function Team() {
   return (
-    <>
+    <AnimationIn>
       <BackgroundImg type="3" align="center" />
       <Container>
         <HeroDivider>
@@ -14,6 +14,6 @@ export function Team() {
         </HeroDivider>
         <WonderTeamSection />
       </Container>
-    </>
+    </AnimationIn>
   );
 }

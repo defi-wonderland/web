@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
-// @ts-ignore
-import { LiquidDistortionText } from "react-text-fun";
+import styled from "styled-components";
 import FontFaceObserver from "fontfaceobserver";
 
-import styled from "styled-components";
+// @ts-ignore
+import { LiquidDistortionText } from "react-text-fun";
 
-export const Container = styled.div`
+const Container = styled.div`
   canvas {
     margin: 0 auto;
   }

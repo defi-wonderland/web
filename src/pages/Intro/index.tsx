@@ -3,7 +3,12 @@ import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 import { CSSTransition } from "react-transition-group";
 
-import { NAVBAR_HEIGHT, NAVBAR_INDEX, Section } from "~/components/common";
+import {
+  AnimationIn,
+  NAVBAR_HEIGHT,
+  NAVBAR_INDEX,
+  Section,
+} from "~/components/common";
 import LogoImage from "~/assets/Logo.png";
 import KEYHOLE from "~/assets/key.png";
 import VLINE from "~/assets/dotted_line.svg";
@@ -53,6 +58,8 @@ const KeyContainer = styled.div`
 
 const Text = styled.span`
   font-style: italic;
+  font-size: 1.8rem;
+  margin-top: 0.4rem;
 `;
 
 export const StyledNavbar = styled.nav`
@@ -92,7 +99,7 @@ export function Intro({ ...props }: HeroSectionProps) {
   }, [seeBackground]);
 
   return (
-    <>
+    <AnimationIn>
       <StyledNavbar>
         <Logo src={LogoImage} alt="Wonderland logo" />
       </StyledNavbar>
@@ -130,6 +137,6 @@ export function Intro({ ...props }: HeroSectionProps) {
           <HeroDivider src="/img/hero/hero-bg-divider.png" />
         </StyledHeroSection>
       </CSSTransition>
-    </>
+    </AnimationIn>
   );
 }

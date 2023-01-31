@@ -5,7 +5,7 @@ import FontFaceObserver from "fontfaceobserver";
 
 import styled from "styled-components";
 
-export const Container = styled.div`
+const Container = styled.div`
   canvas {
     margin: 0 auto;
   }
@@ -17,11 +17,11 @@ export const Container = styled.div`
   }
 `;
 
-interface DistortionProps {
+interface DistortionTextProps {
   text: string;
 }
 
-export const Distortion = ({ text }: DistortionProps) => {
+export const Distortion = ({ text }: DistortionTextProps) => {
   const [fontLoaded, setFontLoaded] = useState(false);
   const [showTitle, setShowTitle] = useState(false);
   const font = new FontFaceObserver("SharpGrotesk-10");

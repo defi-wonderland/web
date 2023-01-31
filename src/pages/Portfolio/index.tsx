@@ -15,16 +15,17 @@ import {
 import { ProjectsList } from "./ProjectsList";
 import { Distortion } from "~/components/common/DistortionText";
 import { Divider } from "./ProjectsList/ProjectsList.styles";
+import { AnimationIn } from "~/components/common";
 
 export function Portfolio() {
   return (
-    <>
-      <BackgroundContainer>
-        <BG_1 type="2" align="center" />
-        <BG_2 type="1" align="left" />
-        <BG_3 type="2" align="right" />
-      </BackgroundContainer>
+    <AnimationIn>
       <Container>
+        <BackgroundContainer>
+          <BG_1 type="2" align="center" />
+          <BG_2 type="1" align="left" />
+          <BG_3 type="2" align="right" />
+        </BackgroundContainer>
         <HeroDivider>
           <Distortion
             text={`TOGETHER, WE WANT TO SUSTAINBLY BUILD A MORE INCLUSIVE`}
@@ -44,6 +45,6 @@ export function Portfolio() {
           <ProjectsList />
         </ProjectsContainer>
       </Container>
-    </>
+    </AnimationIn>
   );
 }
