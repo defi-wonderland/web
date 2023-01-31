@@ -66,7 +66,7 @@ export const SecondTitle = styled(Title)`
 
 export const Star = styled.img`
   width: 5rem;
-  padding: 0 0.8rem;
+  padding: 0 1rem;
   grid-area: star;
   height: 100%;
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
@@ -75,7 +75,7 @@ export const Star = styled.img`
 export const Icon = styled.img`
   grid-area: icon;
   width: 5rem;
-  padding: 0 0.8rem;
+  padding: 0 1.1rem;
   height: 100%;
   border-top: 1px solid rgba(255, 255, 255, 0.5);
 `;
@@ -142,7 +142,11 @@ export const TextContainer = styled.div`
 `;
 
 export const SButton = styled(Button)`
-  margin: 4.5rem 10rem 5rem auto;
+  margin: 4.5rem 8rem 5rem auto;
+`;
+
+export const CommunityButton = styled(Button)`
+  margin: 0 8rem 0 auto;
 `;
 
 export const Cone = styled.img`

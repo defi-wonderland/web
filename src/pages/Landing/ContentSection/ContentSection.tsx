@@ -1,6 +1,7 @@
 import {
   BackgroundContainer,
   BG_1,
+  CommunityButton,
   Cone,
   Divider,
   DividerText,
@@ -19,6 +20,7 @@ import { ProjectsList } from "~/pages/Portfolio/ProjectsList";
 import { RightCard } from "./RightCard";
 import { Team } from "./TeamSection";
 import StarIcon from "/img/footer/star-icon.svg";
+import Flower from "~/assets/flower.svg";
 import ConeBackground from "~/assets/landing_bg.png";
 
 import { Link } from "~/components/common";
@@ -61,8 +63,13 @@ export function ContentSection() {
           <Team />
         </SecondBlockContainer>
 
-        <Icon src={StarIcon} alt="Star icon" />
-        <SecondTitle>fix-to-earn</SecondTitle>
+        <Icon src={Flower} alt="flower icon" />
+        <SecondTitle>
+          fix-to-earn
+          <CommunityButton>
+            <Link to="/">VIEW ALL COMMUNITY</Link>
+          </CommunityButton>
+        </SecondTitle>
       </LandingContainer>
     </>
   );
