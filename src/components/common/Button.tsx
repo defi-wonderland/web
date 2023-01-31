@@ -2,6 +2,7 @@ import { FC } from "react";
 import styled from "styled-components";
 
 import {
+  FONT_MEDIUM_L,
   SPACING_12,
   SPACING_16,
   SPACING_24,
@@ -17,7 +18,7 @@ const StyledButton = styled.button`
   padding: ${SPACING_16} ${SPACING_40};
   height: ${SPACING_24};
   text-transform: uppercase;
-  font-family: var(--font-medium-l);
+  font-family: ${FONT_MEDIUM_L};
   font-size: ${SPACING_12};
   font-weight: 500;
   line-height: ${SPACING_16};

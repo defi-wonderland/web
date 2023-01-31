@@ -98,6 +98,13 @@ export const COLOR_SUCCESS = () => "#28a745" as const;
 export const MOBILE_MAX_WIDTH = 600;
 export const TABLET_MAX_WIDTH = 1024;
 
+/*----------  FONT FAMILY  ----------*/
+
+export const FONT_DEFAULT = "SFProText";
+export const FONT_DISPLAY = "SharpGrotesk-10";
+export const FONT_MEDIUM = "SharpGrotesk-15";
+export const FONT_MEDIUM_L = "SharpGrotesk-25";
+
 /*----------  MISC  ----------*/
 
 export const BALL_INDEX = 6;
