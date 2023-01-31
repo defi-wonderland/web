@@ -1,13 +1,1 @@
-import { Footer } from "~/containers";
-import { HeroSection } from "./HeroSection";
-import { ContentSection } from "./ContentSection";
-
-export function Landing() {
-  return (
-    <>
-      <HeroSection />
-      <ContentSection />
-      <Footer />
-    </>
-  );
-}
+export * from "./Landing";
