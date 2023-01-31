@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
+import { CSSTransition } from "react-transition-group";
 
 import { NAVBAR_HEIGHT, NAVBAR_INDEX, Section } from "~/components/common";
 import LogoImage from "~/assets/Logo.png";
@@ -113,17 +114,22 @@ export function Intro({ ...props }: HeroSectionProps) {
           </IntroContainer>
         </>
       )}
-      {seeBackground && (
-        <>
-          <StyledHeroSection
-            full
-            backgroundImage="/img/hero/hero-bg.jpg"
-            {...props}
-          >
-            <HeroDivider src="/img/hero/hero-bg-divider.png" />
-          </StyledHeroSection>
-        </>
-      )}
+
+      <CSSTransition
+        in={seeBackground}
+        classNames="fade"
+        timeout={400}
+        appear
+        unmountOnExit
+      >
+        <StyledHeroSection
+          full
+          backgroundImage="/img/hero/hero-bg.jpg"
+          {...props}
+        >
+          <HeroDivider src="/img/hero/hero-bg-divider.png" />
+        </StyledHeroSection>
+      </CSSTransition>
     </>
   );
 }
