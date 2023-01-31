@@ -8,7 +8,7 @@ import {
   TitleContainer,
   WonderTitle,
 } from "./TeamGrid.styles";
-import { MEMBERS } from "./teamMembers";
+import { MEMBERS } from "~/constants/teamMembers";
 
 export function WonderTeamSection() {
   return (
