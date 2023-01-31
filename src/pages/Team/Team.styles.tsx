@@ -3,6 +3,7 @@ import styled from "styled-components";
 import {
   Ball,
   CONTENT_INDEX,
+  MOBILE_MAX_WIDTH,
   SectionBackground,
   SPACING_1050,
   SPACING_1152,
@@ -11,10 +12,17 @@ import {
 } from "~/components/common";
 
 export const Container = styled.div`
-  width: 90%;
+  max-width: 140rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    & {
+      width: 100%;
+      padding: 0 1.6rem;
+    }
+  }
 `;
 
 export const STitle = styled.img`

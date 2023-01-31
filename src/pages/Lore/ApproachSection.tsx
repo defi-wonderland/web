@@ -60,6 +60,7 @@ const ApproachArticle = styled(SectionArticle)`
 const StyledApproachSection = styled(Section)`
   max-width: 140rem;
   margin-top: 4rem;
+  margin-bottom: 7rem;
 `;
 
 export const SecondaryText = styled.span`
