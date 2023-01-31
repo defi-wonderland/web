@@ -105,13 +105,6 @@ export const FONT_DISPLAY = "SharpGrotesk-10";
 export const FONT_MEDIUM = "SharpGrotesk-15";
 export const FONT_MEDIUM_L = "SharpGrotesk-25";
 
-/*----------  FONT FAMILY  ----------*/
-
-export const FONT_DEFAULT = "SFProText";
-export const FONT_DISPLAY = "SharpGrotesk-10";
-export const FONT_MEDIUM = "SharpGrotesk-15";
-export const FONT_MEDIUM_L = "SharpGrotesk-25";
-
 /*----------  MISC  ----------*/
 
 export const BALL_INDEX = 6;
