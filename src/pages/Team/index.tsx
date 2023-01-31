@@ -8,8 +8,8 @@ export function Team() {
       <BackgroundImg type="3" align="center" />
       <Container>
         <HeroDivider>
-          <LiquidDistortion text={`WOND3RLAND IS NOT A PLACE,`} />
-          <LiquidDistortion text={`IT'S A FEELING WITHIN, A PROCESS.`} />
+          <LiquidDistortion text="WOND3RLAND IS NOT A PLACE," />
+          <LiquidDistortion text="IT'S A FEELING WITHIN, A PROCESS." />
           <TeamBall />
         </HeroDivider>
         <WonderTeamSection />

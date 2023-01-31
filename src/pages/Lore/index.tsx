@@ -51,8 +51,8 @@ export function Lore() {
       <SBall />
 
       <HeroDivider>
-        <LiquidDistortion text={`WOND3RLAND IS NOT A PLACE,`} />
-        <LiquidDistortion text={`IT'S A FEELING WITHIN, A PROCESS.`} />
+        <LiquidDistortion text="WOND3RLAND IS NOT A PLACE," />
+        <LiquidDistortion text="IT'S A FEELING WITHIN, A PROCESS." />
       </HeroDivider>
       <SCone src={CONE} alt="starts background" />
 

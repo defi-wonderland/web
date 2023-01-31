@@ -22,10 +22,8 @@ export function Portfolio() {
       </BackgroundContainer>
       <Container>
         <HeroDivider>
-          <Distortion
-            text={`TOGETHER, WE WANT TO SUSTAINBLY BUILD A MORE INCLUSIVE`}
-          />
-          <Distortion text={`AND DECENTRALIZED FINANCIAL ECOSYSTEM.`} />
+          <Distortion text="TOGETHER, WE WANT TO SUSTAINBLY BUILD A MORE INCLUSIVE" />
+          <Distortion text="AND DECENTRALIZED FINANCIAL ECOSYSTEM." />
           <Ball_1 />
           <Ball_2 />
           <Ball_3 />
