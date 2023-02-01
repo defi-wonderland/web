@@ -139,3 +139,12 @@ button {
 .gradient img {
   opacity: 1;
 }
+
+.active {
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.08) 50%
+  );
+  border-radius: 1.6rem;
+}
