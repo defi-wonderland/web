@@ -1,9 +1,8 @@
-import { useEffect, useState } from "react";
 // @ts-ignore
 import { LiquidDistortionText } from "react-text-fun";
-import FontFaceObserver from "fontfaceobserver";
-
 import styled from "styled-components";
+
+import { useFontObserver } from "~/hooks/useFontObserver";
 
 export const Container = styled.div`
   canvas {
@@ -34,9 +33,7 @@ export const LiquidDistortion = ({
   color,
   fontFamily,
 }: DistorsionProps) => {
-  const [fontLoaded, setFontLoaded] = useState(false);
-  const [showTitle, setShowTitle] = useState(false);
-  const font = new FontFaceObserver("SharpGrotesk-10");
+  const { ready } = useFontObserver();
 
   const windowWidth = (window as any).innerWidth;
   const defaultFontSize = 140;
@@ -46,19 +43,9 @@ export const LiquidDistortion = ({
     fontSize = 60;
   }
 
-  font.load().then(() => {
-    setFontLoaded(true);
-  });
-
-  useEffect(() => {
-    document.fonts.ready.then(() => {
-      setShowTitle(true);
-    });
-  }, [fontLoaded]);
-
   return (
     <>
-      {showTitle && (
+      {ready && (
         <Container>
           <LiquidDistortionText
             text={text}

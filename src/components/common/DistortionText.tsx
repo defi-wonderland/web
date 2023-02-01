@@ -1,9 +1,8 @@
-import { useEffect, useState } from "react";
 // @ts-ignore
 import { DistortionText } from "react-text-fun";
-import FontFaceObserver from "fontfaceobserver";
-
 import styled from "styled-components";
+
+import { useFontObserver } from "~/hooks/useFontObserver";
 
 export const Container = styled.div`
   canvas {
@@ -22,9 +21,7 @@ interface DistortionProps {
 }
 
 export const Distortion = ({ text }: DistortionProps) => {
-  const [fontLoaded, setFontLoaded] = useState(false);
-  const [showTitle, setShowTitle] = useState(false);
-  const font = new FontFaceObserver("SharpGrotesk-10");
+  const { ready } = useFontObserver();
 
   const windowWidth = (window as any).innerWidth;
   let fontSize = 100;
@@ -34,19 +31,9 @@ export const Distortion = ({ text }: DistortionProps) => {
     fontSize = 70;
   }
 
-  font.load().then(() => {
-    setFontLoaded(true);
-  });
-
-  useEffect(() => {
-    document.fonts.ready.then(() => {
-      setShowTitle(true);
-    });
-  }, [fontLoaded]);
-
   return (
     <>
-      {showTitle && (
+      {ready && (
         <Container>
           <DistortionText
             text={text}
