@@ -5,31 +5,26 @@ export const List = styled.div``;
 
 export const ProjectContainer = styled.button`
   cursor: pointer;
-  height: 17rem;
+  height: 15rem;
   padding: 2.4rem;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
-  z-index: 10;
 `;
 
 export const Name = styled.strong`
   font-family: ${FONT_MEDIUM_L};
   font-size: ${FONT_SIZE_24};
   text-transform: uppercase;
-  opacity: 1 !important;
-  z-index: 100;
+  z-index: -1;
   color: white;
+`;
 
-  &:hover {
-    width: fit-content;
-    background: linear-gradient(to right, #625cbf, #c55fa3, #fccc50);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    -webkit-text-fill-color: transparent;
-  }
+export const Circle = styled.img`
+  opacity: 0;
+  z-index: -1;
 `;
 
 export const Divider = styled.canvas`
