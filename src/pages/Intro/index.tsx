@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 import { CSSTransition } from "react-transition-group";
@@ -89,7 +89,6 @@ export interface HeroSectionProps {}
 export function Intro({ ...props }: HeroSectionProps) {
   const [seeBackground, setSeeBackground] = useState(false);
   const navigate = useNavigate();
-
   useEffect(() => {
     if (seeBackground) {
       setTimeout(() => {
@@ -108,13 +107,38 @@ export function Intro({ ...props }: HeroSectionProps) {
           <IntroContainer>
             <KeyContainer>
               {/* Temporary icon */}
-              <Keyhole src={KEYHOLE} alt="Wonderland logo" />
+              <Keyhole
+                src={KEYHOLE}
+                alt="keyhole"
+                onDragEnter={(e) => {
+                  e.preventDefault();
+                  // e.target.classList.add("drag-over");
+                }}
+                onDragOver={(e) => {
+                  e.preventDefault();
+                  // e.target.classList.add("drag-over");
+                }}
+                onDragLeave={(e) => {
+                  e.preventDefault();
+                  // e.target.classList.remove("drag-over");
+                }}
+                onDrop={(e) => {
+                  // e.target.classList.add("drag-done");
+                  setSeeBackground(true);
+                }}
+              />
 
-              <DottedLine src={VLINE} alt="Wonderland logo" />
+              <DottedLine src={VLINE} alt="dotted line" />
               <Key
+                onDragStart={(e: any) => {
+                  e.target.classList.add("hide");
+                }}
+                onDragEnd={(e: any) => {
+                  e.target.classList.remove("hide");
+                }}
+                draggable
                 src={INTROKEY}
-                alt="Wonderland logo"
-                onClick={() => setSeeBackground(true)}
+                alt="Key icon"
               />
               <Text>Drag to discover Wonderland</Text>
             </KeyContainer>
