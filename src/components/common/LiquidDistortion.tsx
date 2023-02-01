@@ -63,11 +63,13 @@ export const LiquidDistortion = ({
           <LiquidDistortionText
             text={text}
             fontSize={fontSize || defaultFontSize}
-            speed={speed || 0.5}
+            speed={speed || 0.1}
             volatility={volatility || 0.02}
             fill={color || "white"}
             fontFamily={fontFamily || "SharpGrotesk-10"}
             lineHeight={1.1}
+            paddingLeft={20}
+            paddingRight={20}
           />
         </Container>
       )}

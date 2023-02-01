@@ -51,7 +51,7 @@ export const Distortion = ({ text }: DistortionTextProps) => {
           <DistortionText
             text={text}
             fontSize={fontSize}
-            speed={0.7}
+            speed={0.1}
             fill={"white"}
             fontFamily={"SharpGrotesk-10"}
             lineHeight={1.1}
@@ -60,6 +60,8 @@ export const Distortion = ({ text }: DistortionTextProps) => {
             distortY={0.5}
             noiseAmplitude={0.02}
             noiseVolatility={5}
+            paddingLeft={20}
+            paddingRight={20}
           />
         </Container>
       )}
