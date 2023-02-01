@@ -124,7 +124,7 @@ export const BackgroundImage = styled(SectionBackground)`
 `;
 
 export const BgContainer = styled.div`
-  width: 100%;
+  width: 50%;
   display: flex;
   justify-content: center;
   z-index: -1;
@@ -137,6 +137,7 @@ export const Container = styled.div`
   align-items: center;
   height: auto;
   padding-bottom: 3rem;
+  position: relative;
 `;
 
 export const VectorContainer = styled.div`
