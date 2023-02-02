@@ -1,11 +1,9 @@
-import { useEffect, useState } from "react";
-// @ts-ignore
-import { DistortionText } from "react-text-fun";
-import FontFaceObserver from "fontfaceobserver";
-
 import styled from "styled-components";
+import { DistortionText } from "react-text-fun";
 
-const Container = styled.div`
+import { useFontObserver } from "~/hooks/useFontObserver";
+
+export const Container = styled.div`
   canvas {
     margin: 0 auto;
   }
@@ -17,14 +15,12 @@ const Container = styled.div`
   }
 `;
 
-interface DistortionTextProps {
+interface DistortionProps {
   text: string;
 }
 
-export const Distortion = ({ text }: DistortionTextProps) => {
-  const [fontLoaded, setFontLoaded] = useState(false);
-  const [showTitle, setShowTitle] = useState(false);
-  const font = new FontFaceObserver("SharpGrotesk-10");
+export const Distortion = ({ text }: DistortionProps) => {
+  const { ready } = useFontObserver();
 
   const windowWidth = (window as any).innerWidth;
   let fontSize = 100;
@@ -34,26 +30,16 @@ export const Distortion = ({ text }: DistortionTextProps) => {
     fontSize = 70;
   }
 
-  font.load().then(() => {
-    setFontLoaded(true);
-  });
-
-  useEffect(() => {
-    document.fonts.ready.then(() => {
-      setShowTitle(true);
-    });
-  }, [fontLoaded]);
-
   return (
     <>
-      {showTitle && (
+      {ready && (
         <Container>
           <DistortionText
             text={text}
             fontSize={fontSize}
             speed={0.1}
-            fill={"white"}
-            fontFamily={"SharpGrotesk-10"}
+            fill="white"
+            fontFamily="SharpGrotesk-10"
             lineHeight={1.1}
             rotation={45.0}
             distortX={0.2}
