@@ -14,10 +14,30 @@ import {
 import { PROJECTS } from "~/constants/projects";
 import circle from "~/assets/circle.svg";
 
+interface Project {
+  name: string;
+  description: string;
+  link: string;
+  image: string;
+}
+
 export function ProjectsList() {
   const [projectMap, setProjectMap] = useState(
     Object.fromEntries(PROJECTS.map((project) => [project.name, false]))
   );
+
+  const handleClick = (project: Project, target: Element) => {
+    if (!projectMap[project.name]) {
+      target.classList.add("active");
+      target.classList.add("gradient");
+    } else {
+      target.classList.remove("active");
+      target.classList.remove("gradient");
+    }
+
+    projectMap[project.name] = !projectMap[project.name];
+    setProjectMap({ ...projectMap });
+  };
 
   useEffect(() => {}, [projectMap]);
 
@@ -26,23 +46,15 @@ export function ProjectsList() {
       {PROJECTS.map((project) => (
         <ProjectContainer
           key={project.name}
-          onFocus={(e) => {
-            (e.currentTarget as Element).classList.add("active");
-            (e.currentTarget as Element).classList.add("gradient");
-            projectMap[project.name] = true;
-            setProjectMap({ ...projectMap });
-          }}
-          onBlur={(e) => {
-            (e.currentTarget as Element).classList.remove("active");
-            (e.currentTarget as Element).classList.remove("gradient");
-            projectMap[project.name] = false;
-            setProjectMap({ ...projectMap });
+          onClick={(e) => {
+            handleClick(project, e.currentTarget);
           }}
           onMouseEnter={(e) => {
             (e.target as Element).classList.add("gradient");
           }}
           onMouseOut={(e) => {
-            (e.target as Element).classList.remove("gradient");
+            if (!projectMap[project.name])
+              (e.target as Element).classList.remove("gradient");
           }}
         >
           <ProjectHeader>
