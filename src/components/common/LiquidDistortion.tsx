@@ -3,7 +3,7 @@ import { LiquidDistortionText } from "react-text-fun";
 
 import { useFontObserver } from "~/hooks/useFontObserver";
 
-export const Container = styled.div`
+const Container = styled.div`
   canvas {
     margin: 0 auto;
   }
