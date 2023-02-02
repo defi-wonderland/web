@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 import { CSSTransition } from "react-transition-group";
+import Draggable from "react-draggable";
 
 import {
   AnimationIn,
@@ -44,10 +45,6 @@ const DottedLine = styled.img`
   margin: 2rem;
 `;
 
-const Key = styled.img`
-  cursor: pointer;
-`;
-
 const KeyContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -84,10 +81,19 @@ export const StyledNavbar = styled.nav`
   z-index: ${NAVBAR_INDEX};
 `;
 
+const KeyBox = styled.div`
+  cursor: pointer;
+`;
+
+const Key = styled.img`
+  position: relative;
+  z-index: -1;
+`;
 export interface HeroSectionProps {}
 
 export function Intro({ ...props }: HeroSectionProps) {
   const [seeBackground, setSeeBackground] = useState(false);
+  const nodeRef = useRef(null);
   const navigate = useNavigate();
   useEffect(() => {
     if (seeBackground) {
@@ -107,39 +113,22 @@ export function Intro({ ...props }: HeroSectionProps) {
           <IntroContainer>
             <KeyContainer>
               {/* Temporary icon */}
-              <Keyhole
-                src={KEYHOLE}
-                alt="keyhole"
-                onDragEnter={(e) => {
-                  e.preventDefault();
-                  // e.target.classList.add("drag-over");
-                }}
-                onDragOver={(e) => {
-                  e.preventDefault();
-                  // e.target.classList.add("drag-over");
-                }}
-                onDragLeave={(e) => {
-                  e.preventDefault();
-                  // e.target.classList.remove("drag-over");
-                }}
-                onDrop={(e) => {
-                  // e.target.classList.add("drag-done");
-                  setSeeBackground(true);
-                }}
-              />
+              <Keyhole src={KEYHOLE} alt="keyhole" />
 
               <DottedLine src={VLINE} alt="dotted line" />
-              <Key
-                onDragStart={(e: any) => {
-                  e.target.classList.add("hide");
+              <Draggable
+                axis="y"
+                nodeRef={nodeRef}
+                onStop={(event, node) => {
+                  if (node.lastY < -250) {
+                    setSeeBackground(true);
+                  }
                 }}
-                onDragEnd={(e: any) => {
-                  e.target.classList.remove("hide");
-                }}
-                draggable
-                src={INTROKEY}
-                alt="Key icon"
-              />
+              >
+                <KeyBox ref={nodeRef}>
+                  <Key ref={nodeRef} src={INTROKEY} alt="Key icon" />
+                </KeyBox>
+              </Draggable>
               <Text>Drag to discover Wonderland</Text>
             </KeyContainer>
           </IntroContainer>
