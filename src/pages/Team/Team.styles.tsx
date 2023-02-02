@@ -18,10 +18,8 @@ export const Container = styled.div`
   justify-content: center;
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
-    & {
-      width: 100%;
-      padding: 0 1.6rem;
-    }
+    width: 100%;
+    padding: 0 1.6rem;
   }
 `;
 
@@ -46,8 +44,8 @@ export const BackgroundImg = styled(SectionBackground)`
   position: absolute;
   display: flex;
   justify-content: center;
-  width: ${SPACING_1050};
-  margin: 13.2rem auto 0;
+  width: 70%;
+  margin: 7rem auto 0;
   z-index: -1;
 `;
 

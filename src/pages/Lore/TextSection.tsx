@@ -3,6 +3,8 @@ import styled, { css } from "styled-components";
 
 import {
   Button,
+  FONT_SIZE_18,
+  MOBILE_MAX_WIDTH,
   PAGE_MAX_WIDTH,
   Ring,
   Section,
@@ -50,6 +52,10 @@ const RightSection = styled(LoreSection)`
 const PrimaryText = styled.p`
   font-size: 2rem;
   text-transform: uppercase;
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    font-size: ${FONT_SIZE_18};
+  }
 `;
 
 export const SecondaryText = styled.span`

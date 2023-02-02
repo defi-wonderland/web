@@ -3,7 +3,6 @@ import {
   FONT_MEDIUM_L,
   FONT_SIZE_24,
   GradientTitle,
-  SectionBackground,
   SPACING_128,
   TABLET_MAX_WIDTH,
 } from "~/components/common";
@@ -34,12 +33,15 @@ export const List = styled.div`
   }
 `;
 
-export const ProjectContainer = styled.div`
+export const ProjectContainer = styled.button`
+  cursor: pointer;
   height: 17rem;
   padding: 2.4rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 100%;
+  z-index: 10;
 `;
 
 export const Name = styled.strong`
@@ -48,6 +50,16 @@ export const Name = styled.strong`
   text-transform: uppercase;
   opacity: 1 !important;
   z-index: 100;
+  color: white;
+
+  &:hover {
+    width: fit-content;
+    background: linear-gradient(to right, #625cbf, #c55fa3, #fccc50);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
 `;
 
 export const Divider = styled.canvas`
@@ -59,22 +71,4 @@ export const Divider = styled.canvas`
   );
   height: 2px;
   width: 100%;
-`;
-
-export const SBackgroundImg = styled(SectionBackground)`
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  width: 50%;
-  margin-top: 54rem;
-  z-index: -1;
-`;
-
-export const SBackgroundImg2 = styled(SectionBackground)`
-  right: 0%;
-  display: flex;
-  justify-content: center;
-  width: 50%;
-  margin-top: 80rem;
-  z-index: -1;
 `;

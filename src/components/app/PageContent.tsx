@@ -9,7 +9,7 @@ const StyledPageContent = styled.section`
   overflow: hidden;
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
-    padding-bottom: 3rem;
+    padding-bottom: 6rem;
   }
 `;
 
