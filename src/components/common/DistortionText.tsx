@@ -38,8 +38,8 @@ export const Distortion = ({ text }: DistortionProps) => {
             text={text}
             fontSize={fontSize}
             speed={0.1}
-            fill={"white"}
-            fontFamily={"SharpGrotesk-10"}
+            fill="white"
+            fontFamily="SharpGrotesk-10"
             lineHeight={1.1}
             rotation={45.0}
             distortX={0.2}
