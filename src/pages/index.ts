@@ -1,3 +1,4 @@
+export * from "./Blog";
 export * from "./Landing";
 export * from "./Lore";
 export * from "./Portfolio";
