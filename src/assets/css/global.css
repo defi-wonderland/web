@@ -95,6 +95,15 @@ button {
   #hide {
     display: none;
   }
+
+  #show {
+    background-image: linear-gradient(
+      to bottom,
+      rgba(14, 21, 44, 0.85) 90%,
+      rgba(14, 21, 44, 0) 100%
+    );
+    padding-bottom: 3rem;
+  }
 }
 
 .fade-enter {
