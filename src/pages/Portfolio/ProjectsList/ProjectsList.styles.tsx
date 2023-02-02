@@ -20,6 +20,7 @@ export const ProjectHeader = styled.div`
   width: 100%;
   height: 15rem;
   padding: 2.4rem;
+  position: relative;
 `;
 
 export const Name = styled.strong`
@@ -64,4 +65,22 @@ export const ProjectImage = styled.img`
   background-color: white;
   padding: 1rem;
   margin: 1rem 5rem 5rem 5rem;
+`;
+
+export const HLine = styled.div`
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 90px;
+  height: 1px;
+  position: absolute;
+  right: 55px;
+  opacity: 0;
+`;
+
+export const VLine = styled.div`
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 1px;
+  height: 32px;
+  position: absolute;
+  right: 100px;
+  opacity: 0;
 `;

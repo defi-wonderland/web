@@ -10,6 +10,8 @@ import {
   ProjectDescription,
   ProjectImage,
   ProjectHeader,
+  HLine,
+  VLine,
 } from "./ProjectsList.styles";
 import { PROJECTS } from "~/constants/projects";
 import circle from "~/assets/circle.svg";
@@ -20,6 +22,8 @@ interface Project {
   link: string;
   image: string;
 }
+
+import styled from "styled-components";
 
 export function ProjectsList() {
   const [projectMap, setProjectMap] = useState(
@@ -60,6 +64,8 @@ export function ProjectsList() {
           <ProjectHeader>
             <Name>{project.name}</Name>
             <Circle src={circle} alt="circle icon" />
+            <HLine />
+            <VLine className={projectMap[project.name] ? "hide" : ""} />
           </ProjectHeader>
 
           <CSSTransition

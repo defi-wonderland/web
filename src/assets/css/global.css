@@ -130,7 +130,12 @@ button {
   -webkit-text-fill-color: transparent;
 }
 
-.gradient img {
+.hide {
+  display: none;
+}
+
+.gradient img,
+.gradient div {
   opacity: 1;
 }
 
