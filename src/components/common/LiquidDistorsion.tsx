@@ -1,6 +1,5 @@
-// @ts-ignore
-import { LiquidDistortionText } from "react-text-fun";
 import styled from "styled-components";
+import { LiquidDistortionText } from "react-text-fun";
 
 import { useFontObserver } from "~/hooks/useFontObserver";
 
