@@ -136,8 +136,7 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   height: auto;
-  padding-bottom: 3rem;
-  position: relative;
+  padding: 6rem 0 10rem 0;
 `;
 
 export const VectorContainer = styled.div`

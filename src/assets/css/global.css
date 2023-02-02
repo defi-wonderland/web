@@ -95,6 +95,15 @@ button {
   #hide {
     display: none;
   }
+
+  #show {
+    background-image: linear-gradient(
+      to bottom,
+      rgba(14, 21, 44, 0.85) 90%,
+      rgba(14, 21, 44, 0) 100%
+    );
+    padding-bottom: 3rem;
+  }
 }
 
 .fade-enter {
@@ -110,41 +119,4 @@ button {
 .fade-exit-active {
   opacity: 0;
   transition: opacity 400ms;
-}
-
-/* TODO: Add some target effect */
-/* .drag-over {
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
-    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
-} */
-
-.hide {
-  opacity: 0;
-}
-
-.drag-done {
-  opacity: 0;
-  transition: opacity 400ms;
-}
-
-.gradient strong {
-  width: fit-content;
-  background: linear-gradient(to right, #625cbf, #c55fa3, #fccc50);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  -webkit-text-fill-color: transparent;
-}
-
-.gradient img {
-  opacity: 1;
-}
-
-.active {
-  background: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0.08) 50%
-  );
-  border-radius: 1.6rem;
 }
