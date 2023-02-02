@@ -10,7 +10,6 @@ import {
   SPACING_512,
   SPACING_700,
   LiquidDistortion,
-  AnimationIn,
 } from "~/components/common";
 import CONE from "~/assets/Cono_bola.png";
 import TextSection from "./TextSection";
@@ -48,20 +47,18 @@ const SBall = styled(Ball)`
 
 export function Lore() {
   return (
-    <AnimationIn>
-      <PageContent>
-        <SBall />
+    <PageContent>
+      <SBall />
 
-        <HeroDivider>
-          <LiquidDistortion text="WOND3RLAND IS NOT A PLACE," />
-          <LiquidDistortion text="IT'S A FEELING WITHIN, A PROCESS." />
-        </HeroDivider>
-        <SCone src={CONE} alt="starts background" />
+      <HeroDivider>
+        <LiquidDistortion text="WOND3RLAND IS NOT A PLACE," />
+        <LiquidDistortion text="IT'S A FEELING WITHIN, A PROCESS." />
+      </HeroDivider>
+      <SCone src={CONE} alt="starts background" />
 
-        <TextSection />
+      <TextSection />
 
-        <StyledApproachSection />
-      </PageContent>
-    </AnimationIn>
+      <StyledApproachSection />
+    </PageContent>
   );
 }

@@ -15,11 +15,10 @@ import {
 import { ProjectsList } from "./ProjectsList";
 import { Distortion } from "~/components/common/DistortionText";
 import { Divider } from "./ProjectsList/ProjectsList.styles";
-import { AnimationIn } from "~/components/common";
 
 export function Portfolio() {
   return (
-    <AnimationIn>
+    <>
       <Container>
         <BackgroundContainer>
           <BG_1 type="2" align="center" />
@@ -35,7 +34,7 @@ export function Portfolio() {
         </HeroDivider>
 
         <TitleContainer>
-          <ProjectTitle title={"THINGS THAT HAPPEN"} />
+          <ProjectTitle title="THINGS THAT HAPPEN" />
         </TitleContainer>
 
         <ProjectsContainer>
@@ -43,6 +42,6 @@ export function Portfolio() {
           <ProjectsList />
         </ProjectsContainer>
       </Container>
-    </AnimationIn>
+    </>
   );
 }
