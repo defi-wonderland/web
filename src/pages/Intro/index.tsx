@@ -118,6 +118,7 @@ export function Intro({ ...props }: HeroSectionProps) {
               <DottedLine src={VLINE} alt="dotted line" />
               <Draggable
                 axis="y"
+                bounds={{ bottom: 0, top: -350 }}
                 nodeRef={nodeRef}
                 onStop={(event, node) => {
                   if (node.lastY < -250) {
