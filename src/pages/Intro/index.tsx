@@ -35,14 +35,18 @@ const IntroContainer = styled.div`
   justify-content: space-between;
 `;
 
-const Logo = styled.img``;
+const Logo = styled.img`
+  pointer-events: none;
+`;
 
 const Keyhole = styled.img`
   width: 7rem;
+  pointer-events: none;
 `;
 
 const DottedLine = styled.img`
   margin: 2rem;
+  pointer-events: none;
 `;
 
 const KeyContainer = styled.div`
@@ -57,6 +61,7 @@ const Text = styled.span`
   font-style: italic;
   font-size: 1.8rem;
   margin-top: 0.4rem;
+  user-select: none;
 `;
 
 export const StyledNavbar = styled.nav`
