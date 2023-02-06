@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import "~/assets/css/bg.sass";
+import "~/assets/css/stars.sass";
 
 const StarsContainer = styled.div`
   position: absolute;
