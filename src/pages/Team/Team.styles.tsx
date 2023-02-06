@@ -5,7 +5,6 @@ import {
   CONTENT_INDEX,
   MOBILE_MAX_WIDTH,
   SectionBackground,
-  SPACING_1050,
   SPACING_1152,
   SPACING_256,
   SPACING_384,
