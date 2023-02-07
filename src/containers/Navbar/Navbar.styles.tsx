@@ -74,17 +74,21 @@ export const StyledNavbar = styled.nav`
   }
 `;
 
-export const NavLink = styled(Link)<{ order?: number; disabled?: boolean }>`
-  text-transform: uppercase;
-  order: ${({ order }) => order ?? "initial"};
+export const NavLinkContainer = styled.div<{ order?: number }>`
   width: 120px;
-  text-align: center;
-  margin: 0 30px;
+  order: ${({ order }) => order ?? "initial"};
+  display: flex;
+  justify-content: center;
+`;
+
+export const NavLink = styled(Link)<{ disabled?: boolean }>`
+  text-transform: uppercase;
+
+  margin: 0 auto;
   ${({ disabled }) =>
     disabled &&
     `
     pointer-events: none;
-    opacity: .6;
   `};
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
