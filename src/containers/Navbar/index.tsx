@@ -51,9 +51,9 @@ export const Navbar = ({}: NavbarProps) => {
   const [navLink, setNavLink] = useState(navLinks);
 
   return (
-    <StyledNavbar>
+    <StyledNavbar id={showNavbar ? "show" : ""}>
       <LogoContainer>
-        <WonderLogo to="/">
+        <WonderLogo to="/landing">
           <img src={wonderLogo} alt="Wonderland logo" />
         </WonderLogo>
         <MenuButton onClick={() => setShowNavbar(!showNavbar)}>

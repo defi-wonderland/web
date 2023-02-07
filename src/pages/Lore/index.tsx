@@ -9,10 +9,10 @@ import {
   SPACING_192,
   SPACING_512,
   SPACING_700,
+  LiquidDistortion,
 } from "~/components/common";
 import CONE from "~/assets/Cono_bola.png";
 import TextSection from "./TextSection";
-import { LiquidDistortion } from "~/components/common/LiquidDistorsion";
 
 const StyledApproachSection = styled(ApproachSection)`
   padding: "3rem 0";

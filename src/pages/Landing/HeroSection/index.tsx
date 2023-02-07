@@ -1,8 +1,7 @@
 import { FC } from "react";
 import styled from "styled-components";
 
-import { Section } from "~/components/common";
-import { LiquidDistortion } from "~/components/common/LiquidDistorsion";
+import { Section, LiquidDistortion } from "~/components/common";
 
 const HeroDivider = styled.img`
   position: absolute;
