@@ -7,8 +7,8 @@
 
   @return unquote($value)
 
-$shadows-small:  multiple-box-shadow(1000)
-$shadows-medium: multiple-box-shadow(500)
+$shadows-small:  multiple-box-shadow(700)
+$shadows-medium: multiple-box-shadow(700)
 $shadows-big:    multiple-box-shadow(50)
     
 #stars
@@ -16,21 +16,28 @@ $shadows-big:    multiple-box-shadow(50)
   height: 0.1rem
   background: transparent
   box-shadow: $shadows-small
-  animation			: animStar 1s linear infinite
+  animation			: animStar 701ms linear infinite
+
+#stars1
+  width: 0.1rem
+  height: 0.1rem
+  background: transparent
+  box-shadow: $shadows-small
+  animation			: animStar 1091ms linear infinite
     
 #stars2
   width: 0.2rem
   height: 0.2rem
   background: transparent
   box-shadow: $shadows-medium
-  animation			: animStar 2s linear infinite
+  animation			: animStar 1213ms  linear infinite
     
 #stars3
   width: 0.3rem
   height: 0.3rem
   background: transparent
   box-shadow: $shadows-big
-  animation			: animStar2 3s linear infinite
+  animation			: animStar2 1747ms linear infinite
 
 @keyframes animStar
   0%
