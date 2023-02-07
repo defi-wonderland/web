@@ -34,6 +34,7 @@ const IntroContainer = styled.div`
   width: 100%;
   height: 100vh;
   justify-content: space-between;
+  z-index: 10;
 `;
 
 const Logo = styled.img`
