@@ -43,9 +43,9 @@ interface NavbarProps {}
 export const Navbar = ({}: NavbarProps) => {
   const [showNavbar, setShowNavbar] = useState(false);
   return (
-    <StyledNavbar>
+    <StyledNavbar id={showNavbar ? "show" : ""}>
       <LogoContainer>
-        <WonderLogo to="/">
+        <WonderLogo to="/landing">
           <img src={wonderLogo} alt="Wonderland logo" />
         </WonderLogo>
         <MenuButton onClick={() => setShowNavbar(!showNavbar)}>

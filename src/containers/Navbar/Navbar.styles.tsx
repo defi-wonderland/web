@@ -96,7 +96,7 @@ export const NavLink = styled(Link)<{ order?: number; disabled?: boolean }>`
 
 export const WonderLogo = styled(Link)`
   display: flex;
-  width: 4.25rem;
+  width: 6.4rem;
 
   img {
     width: 100%;

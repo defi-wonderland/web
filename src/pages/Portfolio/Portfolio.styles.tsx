@@ -2,7 +2,9 @@ import styled from "styled-components";
 
 import {
   Ball,
+  GradientTitle,
   SectionBackground,
+  SPACING_128,
   SPACING_256,
   TABLET_MAX_WIDTH,
 } from "~/components/common";
@@ -17,6 +19,7 @@ export const Container = styled.div`
 export const HeroDivider = styled.div`
   position: relative;
   width: 100%;
+  height: 22rem;
   bottom: 0;
   z-index: 3;
   display: flex;
@@ -85,4 +88,30 @@ export const BG_3 = styled(SectionBackground)`
   margin-left: auto;
   width: 50%;
   right: 0%;
+`;
+
+export const TitleContainer = styled.div`
+  margin-top: 24rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+export const ProjectTitle = styled(GradientTitle)`
+  word-wrap: unset;
+  width: 40rem !important;
+`;
+
+export const ProjectsContainer = styled.div`
+  margin: 10rem 0 25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  padding: 0 ${SPACING_128};
+
+  @media screen and (max-width: ${TABLET_MAX_WIDTH}) {
+    padding: 0;
+  }
 `;
