@@ -1,37 +1,7 @@
 import styled from "styled-components";
-import {
-  FONT_MEDIUM_L,
-  FONT_SIZE_24,
-  GradientTitle,
-  SPACING_128,
-  TABLET_MAX_WIDTH,
-} from "~/components/common";
+import { FONT_MEDIUM_L, FONT_SIZE_24 } from "~/components/common";
 
-export const TitleContainer = styled.div`
-  margin-top: 24rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-`;
-
-export const ProjectTitle = styled(GradientTitle)`
-  word-wrap: unset;
-  width: 40rem !important;
-`;
-
-export const List = styled.div`
-  margin: 10rem 0 25rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  padding: 0 ${SPACING_128};
-
-  @media screen and (max-width: ${TABLET_MAX_WIDTH}) {
-    padding: 0;
-  }
-`;
+export const List = styled.div``;
 
 export const ProjectContainer = styled.button`
   cursor: pointer;

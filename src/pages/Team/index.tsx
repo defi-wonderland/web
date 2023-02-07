@@ -1,7 +1,7 @@
 import { WonderTeamSection } from "./TeamGrid.tsx";
 import { BackgroundImg, Container, HeroDivider, TeamBall } from "./Team.styles";
-import { LiquidDistortion } from "~/components/common/LiquidDistorsion";
 import { StarsBackground } from "~/containers";
+import { LiquidDistortion } from "~/components/common";
 
 export function Team() {
   return (
