@@ -11,7 +11,7 @@ import {
 } from "~/components/common";
 import STAR from "~/assets/lore-stars.svg";
 
-const sectionBorderOffset = "2.5rem";
+const sectionBorderOffset = "3rem";
 
 export const TextContainer = styled.p`
   color: inherit;
@@ -40,7 +40,7 @@ const StyledSectionArticle = styled.div<{ center?: boolean }>`
     &:after {
       content: "";
       height: 1px;
-      width: calc(100% + ${sectionBorderOffset} * 2);
+      width: calc(100% + ${sectionBorderOffset} + 1.5rem);
       position: absolute;
       background: white;
       bottom: 0;
@@ -63,7 +63,7 @@ const StyledSectionArticle = styled.div<{ center?: boolean }>`
       width: 1px;
       position: absolute;
       background: white;
-      top: calc(-${sectionBorderOffset} * 2);
+      top: calc(-${sectionBorderOffset} - 1.5rem);
     }
   }
 
@@ -76,13 +76,6 @@ const StyledSectionArticle = styled.div<{ center?: boolean }>`
     line-height: 1.25;
     letter-spacing: normal;
     text-transform: uppercase;
-  }
-
-  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
-    strong,
-    span {
-      font-size: 1.6rem;
-    }
   }
 
   strong,
@@ -100,6 +93,21 @@ const StyledSectionArticle = styled.div<{ center?: boolean }>`
     width: fit-content;
   }
 
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    strong,
+    span {
+      font-size: 1.6rem;
+    }
+
+    div:after {
+      top: calc(-${sectionBorderOffset});
+    }
+
+    .bottom-star {
+      display: none;
+    }
+  }
+
   ${({ center }) =>
     !center &&
     `
@@ -107,7 +115,7 @@ const StyledSectionArticle = styled.div<{ center?: boolean }>`
       padding-left: ${sectionBorderOffset};
 
       ${ArticleTitle}:after {
-        left: calc(-${sectionBorderOffset} * 2);
+        left: calc(-${sectionBorderOffset} - 1.5rem);
       }
 
       div:after {
@@ -115,7 +123,7 @@ const StyledSectionArticle = styled.div<{ center?: boolean }>`
       }
 
       .base-star {
-        left: calc(-${sectionBorderOffset} - 2rem);
+        left: calc(-${sectionBorderOffset} - 1.5rem);
       }
 
       .mid-star {
@@ -143,8 +151,9 @@ const StyledSectionArticle = styled.div<{ center?: boolean }>`
         }
 
         .base-star {
-          width: 3rem;
-          top: 2rem;
+          width: 2.5rem;
+          left: -3rem;
+          top: 3.5rem;
         }
 
         .mid-star {
@@ -180,7 +189,7 @@ const StyledSectionArticle = styled.div<{ center?: boolean }>`
       }
 
       .base-star {
-        right: calc(-${sectionBorderOffset} - 2rem);
+        right: calc(-${sectionBorderOffset} - 1.5rem);
       }
 
       .mid-star {
@@ -205,8 +214,13 @@ const StyledSectionArticle = styled.div<{ center?: boolean }>`
         ${ArticleTitle}:after {
           width: calc(100% + ${sectionBorderOffset});
         }
-        
 
+        .base-star {
+          width: 2.5rem;
+          right: -3rem;
+          top: 3.5rem;
+        }
+        
         .mid-star {
           top: 0rem;
           width: 1.5rem;
@@ -215,6 +229,12 @@ const StyledSectionArticle = styled.div<{ center?: boolean }>`
         .last-star {
           top: 2rem;
           width: 2rem;
+        }
+
+        .bottom-star {
+          top: 31rem;
+          width: 2.5rem;
+          right: 72%;
         }
       }
     }
@@ -258,8 +278,15 @@ const StyledSectionArticle = styled.div<{ center?: boolean }>`
       }
 
       .base-star {
-        top: 12rem;
+        top: 17rem;
+        left: -1rem;
+        width: 4rem;
+      }
+
+      .last-star {
+        right: -3.5rem;
         width: 2rem;
+        top: 1.2rem;
       }
     }
   `}

@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 import {
   DisplayText,
+  MOBILE_MAX_WIDTH,
   Section,
   SectionArticle,
   SectionBackground,
@@ -41,7 +42,7 @@ const ApproachSteps = styled.article`
   grid-gap: 6rem;
   margin-top: 6.5rem;
 
-  @media screen and (max-width: 640px) {
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     display: flex;
     flex-direction: column;
     padding: 0 1.2rem;
@@ -51,6 +52,12 @@ const ApproachSteps = styled.article`
 const ApproachTitle = styled.strong`
   width: 40rem;
   margin-top: 0.5rem;
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    width: auto;
+    font-size: 2.1rem !important;
+    padding: 0 3rem;
+  }
 `;
 
 const ApproachArticle = styled(SectionArticle)`
@@ -61,6 +68,10 @@ const StyledApproachSection = styled(Section)`
   max-width: 140rem;
   margin-top: 4rem;
   margin-bottom: 7rem;
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    padding: 0 0.7rem;
+  }
 `;
 
 export const SecondaryText = styled.span`
