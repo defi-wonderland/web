@@ -119,8 +119,12 @@ export const StyledFooter = styled.footer`
 
 export const BackgroundImage = styled(SectionBackground)`
   position: relative;
-  width: 80%;
+  width: 50%;
   margin: 0 auto;
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    width: 100%;
+  }
 `;
 
 export const BgContainer = styled.div`
@@ -135,8 +139,7 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: auto;
-  padding: 6rem 0 10rem 0;
+  height: 50rem;
 `;
 
 export const VectorContainer = styled.div`
