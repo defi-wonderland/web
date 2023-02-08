@@ -14,7 +14,6 @@ interface NavLink {
   name: string;
   url: string;
   disabled?: boolean;
-  active?: boolean;
 }
 
 const navLinks: NavLink[] = [
@@ -22,25 +21,21 @@ const navLinks: NavLink[] = [
     name: "lore",
     url: "/lore",
     disabled: false,
-    active: false,
   },
   {
     name: "team",
     url: "/team",
     disabled: false,
-    active: false,
   },
   {
     name: "portfolio",
     url: "/portfolio",
     disabled: false,
-    active: false,
   },
   {
     name: "blog",
     url: "/blog",
     disabled: false,
-    active: false,
   },
 ];
 
@@ -68,7 +63,7 @@ export const Navbar = ({}: NavbarProps) => {
             to={link.url}
             key={link.name}
             disabled={link.disabled}
-            className={link.active ? "gradient" : ""}
+            className={link.disabled ? "gradient" : ""}
             onClick={() => {
               setShowNavbar(!showNavbar);
 
@@ -77,10 +72,8 @@ export const Navbar = ({}: NavbarProps) => {
                 name: link.name,
                 url: link.url,
                 disabled: false,
-                active: false,
               }));
 
-              newNavLink[i].active = true;
               newNavLink[i].disabled = true;
               setNavLink(newNavLink);
             }}
