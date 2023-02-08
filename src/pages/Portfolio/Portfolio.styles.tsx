@@ -115,3 +115,7 @@ export const ProjectsContainer = styled.div`
     padding: 0;
   }
 `;
+
+export const MobileTitleContainer = styled.div`
+  transform: rotate(3deg);
+`;

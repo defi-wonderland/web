@@ -11,6 +11,7 @@ import {
   SPACING_700,
   LiquidDistortion,
 } from "~/components/common";
+import { useWindowDimensions } from "~/hooks/windowDimensions";
 import CONE from "~/assets/Cono_bola.png";
 import TextSection from "./TextSection";
 
@@ -45,14 +46,33 @@ const SBall = styled(Ball)`
   margin-top: -7rem;
 `;
 
+const MobileTitleContainer = styled.div`
+  transform: rotate(3deg);
+`;
+
 export function Lore() {
+  const { isMobile } = useWindowDimensions();
+
   return (
     <PageContent>
       <SBall />
 
       <HeroDivider>
-        <LiquidDistortion text="WOND3RLAND IS NOT A PLACE," />
-        <LiquidDistortion text="IT'S A FEELING WITHIN, A PROCESS." />
+        {!isMobile && (
+          <>
+            <LiquidDistortion text="WOND3RLAND IS NOT A PLACE," />
+            <LiquidDistortion text="IT'S A FEELING WITHIN, A PROCESS." />
+          </>
+        )}
+
+        {isMobile && (
+          <MobileTitleContainer>
+            <LiquidDistortion text="WOND3RLAND" fontSize={65} />
+            <LiquidDistortion text="IS NOT A PLACE," fontSize={65} />
+            <LiquidDistortion text="IT'S A FEELING WITHIN," fontSize={65} />
+            <LiquidDistortion text="A PROCESS." fontSize={65} />
+          </MobileTitleContainer>
+        )}
       </HeroDivider>
       <SCone src={CONE} alt="starts background" />
 
