@@ -24,6 +24,12 @@ const SCone = styled.img`
   height: ${SPACING_700};
   margin-right: 15%;
   margin-top: ${SPACING_128};
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    width: 25.6rem;
+    height: 35rem;
+    margin-left: -25%;
+  }
 `;
 
 const HeroDivider = styled.div`
@@ -38,12 +44,17 @@ const HeroDivider = styled.div`
   top: ${SPACING_192};
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
-    top: 0rem;
+    top: -14rem;
   }
 `;
 
 const SBall = styled(Ball)`
   margin-top: -7rem;
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    width: 6rem;
+    margin-top: -14rem;
+  }
 `;
 
 const MobileTitleContainer = styled.div`
