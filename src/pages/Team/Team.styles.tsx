@@ -5,7 +5,6 @@ import {
   CONTENT_INDEX,
   MOBILE_MAX_WIDTH,
   SectionBackground,
-  SPACING_1050,
   SPACING_1152,
   SPACING_256,
   SPACING_384,
@@ -38,15 +37,25 @@ export const HeroDivider = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: ${SPACING_256};
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    margin-top: 15.5rem;
+  }
 `;
 
 export const BackgroundImg = styled(SectionBackground)`
+  opacity: 0.7;
   position: absolute;
   display: flex;
   justify-content: center;
   width: 70%;
   margin: 7rem auto 0;
   z-index: -1;
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    width: 110%;
+    margin-top: 5rem;
+  }
 `;
 
 export const TeamBall = styled(Ball)`
@@ -55,4 +64,9 @@ export const TeamBall = styled(Ball)`
   position: static;
   transform: none;
   margin: 10rem auto 0;
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    width: 6rem;
+    margin: 9rem auto 0;
+  }
 `;
