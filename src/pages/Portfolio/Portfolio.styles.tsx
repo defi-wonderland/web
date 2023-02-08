@@ -3,6 +3,7 @@ import styled from "styled-components";
 import {
   Ball,
   GradientTitle,
+  MOBILE_MAX_WIDTH,
   SectionBackground,
   SPACING_128,
   SPACING_256,
@@ -31,6 +32,10 @@ export const HeroDivider = styled.div`
   @media screen and (max-width: ${TABLET_MAX_WIDTH}) {
     margin-top: 12rem;
   }
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    margin-top: 16rem;
+  }
 `;
 
 export const Ball_1 = styled(Ball)`
@@ -40,6 +45,12 @@ export const Ball_1 = styled(Ball)`
   top: 24rem;
   left: 30%;
   transform: none;
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    width: 6rem;
+    top: 28rem;
+    left: 10%;
+  }
 `;
 
 export const Ball_2 = styled(Ball)`
@@ -49,6 +60,12 @@ export const Ball_2 = styled(Ball)`
   top: 16rem;
   left: 90%;
   transform: none;
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    transform: rotate(180deg);
+    width: 8rem;
+    top: 13rem;
+  }
 `;
 
 export const Ball_3 = styled(Ball)`
@@ -59,6 +76,13 @@ export const Ball_3 = styled(Ball)`
   left: 25%;
   transform: none;
   opacity: 0.87;
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    width: 4rem;
+    top: -6rem;
+    left: 15%;
+    opacity: 0.7;
+  }
 `;
 
 export const BackgroundContainer = styled.div`

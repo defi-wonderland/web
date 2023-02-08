@@ -39,11 +39,11 @@ export function Portfolio() {
 
           {isMobile && (
             <MobileTitleContainer>
-              <Distortion text="TOGETHER," fontSize={60} />
-              <Distortion text="WE WANT TO SUSTAINBLY" fontSize={60} />
-              <Distortion text="BUILD A MORE INCLUSIVE" fontSize={60} />
-              <Distortion text="AND DECENTRALIZED" fontSize={60} />
-              <Distortion text="FINANCIAL ECOSYSTEM" fontSize={60} />
+              <Distortion text="TOGETHER," fontSize={50} />
+              <Distortion text="WE WANT TO SUSTAINBLY" fontSize={50} />
+              <Distortion text="BUILD A MORE INCLUSIVE" fontSize={50} />
+              <Distortion text="AND DECENTRALIZED" fontSize={50} />
+              <Distortion text="FINANCIAL ECOSYSTEM" fontSize={50} />
             </MobileTitleContainer>
           )}
           <Ball_1 />
