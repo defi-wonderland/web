@@ -45,6 +45,20 @@ export const Navbar = ({}: NavbarProps) => {
   const [showNavbar, setShowNavbar] = useState(false);
   const [navLink, setNavLink] = useState(navLinks);
 
+  const handleClick = (i: number) => {
+    setShowNavbar(!showNavbar);
+
+    // reset values
+    const newNavLink = navLink.map((link) => ({
+      name: link.name,
+      url: link.url,
+      disabled: false,
+    }));
+
+    newNavLink[i].disabled = true;
+    setNavLink(newNavLink);
+  };
+
   return (
     <StyledNavbar id={showNavbar ? "show" : ""}>
       <LogoContainer>
@@ -65,17 +79,7 @@ export const Navbar = ({}: NavbarProps) => {
             disabled={link.disabled}
             className={link.disabled ? "gradient" : ""}
             onClick={() => {
-              setShowNavbar(!showNavbar);
-
-              // reset values
-              const newNavLink = navLink.map((link) => ({
-                name: link.name,
-                url: link.url,
-                disabled: false,
-              }));
-
-              newNavLink[i].disabled = true;
-              setNavLink(newNavLink);
+              handleClick(i);
             }}
           >
             {link.name}
