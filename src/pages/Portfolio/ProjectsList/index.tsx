@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { CSSTransition } from "react-transition-group";
 
 import {
@@ -23,8 +23,6 @@ interface Project {
   image: string;
 }
 
-import styled from "styled-components";
-
 export function ProjectsList() {
   const [projectMap, setProjectMap] = useState(
     Object.fromEntries(PROJECTS.map((project) => [project.name, false]))
@@ -43,8 +41,6 @@ export function ProjectsList() {
     setProjectMap({ ...projectMap });
   };
 
-  useEffect(() => {}, [projectMap]);
-
   return (
     <List>
       {PROJECTS.map((project) => (
@@ -52,13 +48,6 @@ export function ProjectsList() {
           key={project.name}
           onClick={(e) => {
             handleClick(project, e.currentTarget);
-          }}
-          onMouseEnter={(e) => {
-            (e.target as Element).classList.add("gradient");
-          }}
-          onMouseOut={(e) => {
-            if (!projectMap[project.name])
-              (e.target as Element).classList.remove("gradient");
           }}
         >
           <ProjectHeader>

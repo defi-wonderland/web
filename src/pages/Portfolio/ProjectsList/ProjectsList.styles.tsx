@@ -21,6 +21,20 @@ export const ProjectHeader = styled.div`
   height: 15rem;
   padding: 2.4rem;
   position: relative;
+
+  &:hover strong {
+    width: fit-content;
+    background: linear-gradient(to right, #625cbf, #c55fa3, #fccc50);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &:hover img,
+  &:hover div {
+    opacity: 1;
+  }
 `;
 
 export const Name = styled.strong`

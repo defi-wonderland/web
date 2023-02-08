@@ -134,11 +134,6 @@ button {
   display: none;
 }
 
-.gradient img,
-.gradient div {
-  opacity: 1;
-}
-
 .active {
   background: linear-gradient(
     to right,
@@ -146,4 +141,9 @@ button {
     rgba(255, 255, 255, 0.08) 50%
   );
   border-radius: 1.6rem;
+}
+
+.active img,
+.active div {
+  opacity: 1;
 }
