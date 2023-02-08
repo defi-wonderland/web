@@ -14,6 +14,7 @@ import LogoImage from "~/assets/Logo.png";
 import KEYHOLE from "~/assets/key.png";
 import VLINE from "~/assets/dotted_line.svg";
 import INTROKEY from "~/assets/intro_key.svg";
+import { StarsBackground } from "~/containers";
 
 const HeroDivider = styled.img`
   position: absolute;
@@ -33,6 +34,7 @@ const IntroContainer = styled.div`
   width: 100%;
   height: 100vh;
   justify-content: space-between;
+  z-index: 10;
 `;
 
 const Logo = styled.img`
@@ -110,6 +112,7 @@ export function Intro({ ...props }: HeroSectionProps) {
 
   return (
     <AnimationIn>
+      <StarsBackground />
       <StyledNavbar>
         <Logo src={LogoImage} alt="Wonderland logo" />
       </StyledNavbar>

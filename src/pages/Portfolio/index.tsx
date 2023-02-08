@@ -15,11 +15,13 @@ import {
 import { ProjectsList } from "./ProjectsList";
 import { Distortion } from "~/components/common/DistortionText";
 import { Divider } from "./ProjectsList/ProjectsList.styles";
+import { StarsBackground } from "~/containers";
 
 export function Portfolio() {
   return (
     <>
       <Container>
+        <StarsBackground />
         <BackgroundContainer>
           <BG_1 type="2" align="center" />
           <BG_2 type="1" align="left" />
