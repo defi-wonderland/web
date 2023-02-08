@@ -29,6 +29,7 @@ const SCone = styled.img`
     width: 25.6rem;
     height: 35rem;
     margin-left: -25%;
+    margin-top: 8rem;
   }
 `;
 
@@ -44,7 +45,7 @@ const HeroDivider = styled.div`
   top: ${SPACING_192};
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
-    top: -14rem;
+    top: -12rem;
   }
 `;
 
