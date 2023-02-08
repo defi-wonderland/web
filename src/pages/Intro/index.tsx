@@ -10,7 +10,7 @@ import {
   NAVBAR_INDEX,
   Section,
 } from "~/components/common";
-import LogoImage from "~/assets/Logo.png";
+import LogoImage from "~/assets/Logo.svg";
 import KEYHOLE from "~/assets/key.png";
 import VLINE from "~/assets/dotted_line.svg";
 import INTROKEY from "~/assets/intro_key.svg";
