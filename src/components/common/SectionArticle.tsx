@@ -9,6 +9,7 @@ import {
   MOBILE_MAX_WIDTH,
   SPACING_530,
 } from "~/components/common";
+import STAR from "~/assets/lore-stars.svg";
 
 const sectionBorderOffset = "2.5rem";
 
@@ -19,6 +20,7 @@ export const TextContainer = styled.p`
   font-weight: inherit;
   letter-spacing: inherit;
   display: inline;
+  position: relative;
 `;
 
 export const ArticleTitle = styled(DisplayText)``;
@@ -38,7 +40,7 @@ const StyledSectionArticle = styled.div<{ center?: boolean }>`
     &:after {
       content: "";
       height: 1px;
-      width: calc(100% + ${sectionBorderOffset});
+      width: calc(100% + ${sectionBorderOffset} * 2);
       position: absolute;
       background: white;
       bottom: 0;
@@ -61,7 +63,7 @@ const StyledSectionArticle = styled.div<{ center?: boolean }>`
       width: 1px;
       position: absolute;
       background: white;
-      top: -${sectionBorderOffset};
+      top: calc(-${sectionBorderOffset} * 2);
     }
   }
 
@@ -105,11 +107,55 @@ const StyledSectionArticle = styled.div<{ center?: boolean }>`
       padding-left: ${sectionBorderOffset};
 
       ${ArticleTitle}:after {
-        left: -${sectionBorderOffset};
+        left: calc(-${sectionBorderOffset} * 2);
       }
 
       div:after {
         left: 0;
+      }
+
+      .base-star {
+        left: calc(-${sectionBorderOffset} - 2rem);
+      }
+
+      .mid-star {
+        left: 45%;
+        width: 2rem;
+        top: 0.5rem;
+      }
+
+      .last-star {
+        left: 105%;
+        width: 3rem;
+        top: 4rem;
+      }
+
+      .bottom-star {
+       top: 45rem;
+       width: 2.5rem;
+       left: 60%;
+      }
+
+      @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+        ${ArticleTitle}:after {
+          width: calc(100% + ${sectionBorderOffset});
+          left: -${sectionBorderOffset}; 
+        }
+
+        .base-star {
+          width: 3rem;
+          top: 2rem;
+        }
+
+        .mid-star {
+          top: 0rem;
+          width: 1.5rem;
+        }
+
+        .last-star {
+          top: 2rem;
+          width: 2rem;
+        }
       }
     }
 
@@ -132,6 +178,45 @@ const StyledSectionArticle = styled.div<{ center?: boolean }>`
           right: 0;
         }
       }
+
+      .base-star {
+        right: calc(-${sectionBorderOffset} - 2rem);
+      }
+
+      .mid-star {
+        right: 45%;
+        width: 2rem;
+        top: 0.5rem;
+      }
+
+      .last-star {
+        right: 105%;
+        width: 3rem;
+        top: 4rem;
+      }
+
+      .bottom-star {
+       top: 31rem;
+       width: 2.5rem;
+       right: 72%;
+      }
+
+      @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+        ${ArticleTitle}:after {
+          width: calc(100% + ${sectionBorderOffset});
+        }
+        
+
+        .mid-star {
+          top: 0rem;
+          width: 1.5rem;
+        }
+
+        .last-star {
+          top: 2rem;
+          width: 2rem;
+        }
+      }
     }
   `}
 
@@ -145,6 +230,38 @@ const StyledSectionArticle = styled.div<{ center?: boolean }>`
     div:after {
       content: none;
     }
+
+    .base-star {
+        right: calc(-${sectionBorderOffset} - 2rem);
+    }
+
+    .mid-star {
+      right: 45%;
+      width: 2rem;
+      top: 0.5rem;
+    }
+
+    .last-star {
+      right: 105%;
+      width: 3rem;
+      top: 4rem;
+    }
+
+    .bottom-star {
+      display: none;
+    }
+
+    @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+      .mid-star {
+        top: -0.3rem;
+        width: 1.5rem;
+      }
+
+      .base-star {
+        top: 12rem;
+        width: 2rem;
+      }
+    }
   `}
 `;
 
@@ -153,6 +270,12 @@ export interface SectionArticleProps {
   center?: boolean;
   children: any;
 }
+
+const Star = styled.img.attrs({ src: STAR })`
+  position: absolute;
+  width: 3.5rem;
+  top: 8.3rem;
+`;
 
 export const SectionArticle: FC<SectionArticleProps> = ({
   title,
@@ -163,7 +286,13 @@ export const SectionArticle: FC<SectionArticleProps> = ({
   return (
     <StyledSectionArticle center={center} {...props}>
       <ArticleTitle gradient>
-        <TextContainer>{title}</TextContainer>
+        <Star className="base-star" />
+        <Star className="bottom-star" />
+        <TextContainer>
+          <Star className="mid-star" />
+          <Star className="last-star" />
+          {title}
+        </TextContainer>
       </ArticleTitle>
 
       {children}
