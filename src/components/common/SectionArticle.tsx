@@ -157,7 +157,7 @@ const StyledSectionArticle = styled.div<{ center?: boolean }>`
         }
 
         .mid-star {
-          top: -1rem;
+          top: -1.5rem;
           width: 1.5rem;
         }
 
@@ -222,7 +222,7 @@ const StyledSectionArticle = styled.div<{ center?: boolean }>`
         }
         
         .mid-star {
-          top: -1rem;
+          top: -1.5rem;
           width: 1.5rem;
         }
 
@@ -273,7 +273,7 @@ const StyledSectionArticle = styled.div<{ center?: boolean }>`
 
     @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
       .mid-star {
-        top: -1rem;
+        top: -1.5rem;
         width: 1.5rem;
       }
 
