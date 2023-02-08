@@ -53,7 +53,7 @@ export const BackgroundImg = styled(SectionBackground)`
   z-index: -1;
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
-    width: 110%;
+    width: 100%;
     margin-top: 5rem;
   }
 `;
