@@ -4,6 +4,7 @@ import {
   Button,
   FONT_DISPLAY,
   FONT_MEDIUM_L,
+  MOBILE_MAX_WIDTH,
   SectionBackground,
   TABLET_MAX_WIDTH,
 } from "~/components/common";
@@ -31,7 +32,7 @@ export const BG_1 = styled(SectionBackground)`
 
 export const LandingContainer = styled.section`
   width: 100%;
-  margin: 5rem auto 0;
+  margin: 5rem auto 10rem;
   display: grid;
   grid-template-areas:
     "star title"
@@ -40,6 +41,10 @@ export const LandingContainer = styled.section`
     "empty secondBlock"
     "icon secondTitle";
   width: auto;
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    margin-bottom: 5rem;
+  }
 `;
 
 export const Title = styled.strong`
