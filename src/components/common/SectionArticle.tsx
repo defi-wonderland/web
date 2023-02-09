@@ -11,8 +11,6 @@ import {
 } from "~/components/common";
 import STAR from "~/assets/lore-stars.svg";
 
-const sectionBorderOffset = "3rem";
-
 export const TextContainer = styled.p`
   color: inherit;
   font-size: inherit;
@@ -40,7 +38,7 @@ const StyledSectionArticle = styled.div<{ center?: boolean }>`
     &:after {
       content: "";
       height: 1px;
-      width: calc(100% + ${sectionBorderOffset} + 1.5rem);
+      width: calc(100% + 4.5rem);
       position: absolute;
       background: white;
       bottom: 0;
@@ -59,11 +57,11 @@ const StyledSectionArticle = styled.div<{ center?: boolean }>`
 
     &:after {
       content: "";
-      height: calc(100% + ${sectionBorderOffset});
+      height: calc(100% + 3rem);
       width: 1px;
       position: absolute;
       background: white;
-      top: calc(-${sectionBorderOffset} - 1.5rem);
+      top: -4.5rem;
     }
   }
 
@@ -100,7 +98,7 @@ const StyledSectionArticle = styled.div<{ center?: boolean }>`
     }
 
     div:after {
-      top: calc(-${sectionBorderOffset});
+      top: -3rem;
     }
 
     .bottom-star {
@@ -112,10 +110,10 @@ const StyledSectionArticle = styled.div<{ center?: boolean }>`
     !center &&
     `
     &:first-child {
-      padding-left: ${sectionBorderOffset};
+      padding-left: 3rem;
 
       ${ArticleTitle}:after {
-        left: calc(-${sectionBorderOffset} - 1.5rem);
+        left: -4.5rem;
       }
 
       div:after {
@@ -123,7 +121,7 @@ const StyledSectionArticle = styled.div<{ center?: boolean }>`
       }
 
       .base-star {
-        left: calc(-${sectionBorderOffset} - 1.5rem);
+        left: -4.5rem;
       }
 
       .mid-star {
@@ -146,8 +144,8 @@ const StyledSectionArticle = styled.div<{ center?: boolean }>`
 
       @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
         ${ArticleTitle}:after {
-          width: calc(100% + ${sectionBorderOffset});
-          left: -${sectionBorderOffset}; 
+          width: calc(100% + 3rem);
+          left: -3rem; 
         }
 
         .base-star {
@@ -170,13 +168,13 @@ const StyledSectionArticle = styled.div<{ center?: boolean }>`
 
     &:last-child {
       text-align: right;
-      padding-right: ${sectionBorderOffset};
+      padding-right: 3rem;
 
       ${ArticleTitle} {
         align-self: flex-end;
 
         &:after {
-          right: -${sectionBorderOffset};
+          right: -3rem;
         }
       }
 
@@ -189,7 +187,7 @@ const StyledSectionArticle = styled.div<{ center?: boolean }>`
       }
 
       .base-star {
-        right: calc(-${sectionBorderOffset} - 1.5rem);
+        right: -4.5rem;
       }
 
       .mid-star {
@@ -212,7 +210,7 @@ const StyledSectionArticle = styled.div<{ center?: boolean }>`
 
       @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
         ${ArticleTitle}:after {
-          width: calc(100% + ${sectionBorderOffset});
+          width: calc(100% + 3rem);
         }
 
         .base-star {
@@ -252,7 +250,7 @@ const StyledSectionArticle = styled.div<{ center?: boolean }>`
     }
 
     .base-star {
-        right: calc(-${sectionBorderOffset} - 2rem);
+        right: -5rem;
     }
 
     .mid-star {
