@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
-import { FONT_DISPLAY, FONT_MEDIUM_L } from "~/components/common";
+import {
+  FONT_DISPLAY,
+  FONT_MEDIUM_L,
+  MOBILE_MAX_WIDTH,
+} from "~/components/common";
 import Crown from "~/assets/crown_icon.svg";
 import Key from "~/assets/key.png";
 import ArrowLeft from "~/assets/arrow_left.svg";
@@ -28,15 +32,28 @@ export const TeamTitle = styled.h1`
   -webkit-background-clip: text;
   color: transparent;
   -webkit-text-fill-color: transparent;
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    font-size: 6.4rem;
+    padding: 1rem 5rem;
+  }
 `;
 
 export const CrownIcon = styled.img`
   margin: 0 auto;
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    width: 29rem;
+  }
 `;
 
 export const Keyhole = styled.img`
   position: absolute;
   margin: 0 auto;
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    height: 24rem;
+  }
 `;
 
 export const ButtonsContainer = styled.div`
@@ -45,6 +62,11 @@ export const ButtonsContainer = styled.div`
   display: flex;
   justify-content: space-between;
   margin: 3rem auto;
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    width: 16rem;
+    margin: 0rem auto;
+  }
 `;
 
 export const ArrowIcon = styled.img`
@@ -52,6 +74,10 @@ export const ArrowIcon = styled.img`
 
   &:hover {
     opacity: 0.8;
+  }
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    width: 6rem;
   }
 `;
 
@@ -63,6 +89,10 @@ export const NameContainer = styled.div`
   align-items: center;
   height: 55rem;
   width: 100%;
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    height: 30rem;
+  }
 `;
 
 export const Name = styled.strong`

@@ -34,7 +34,10 @@ export function ContentSection() {
       </BackgroundContainer>
       <LandingContainer>
         <Star src={StarIcon} alt="Star icon" />
-        <FirstTitle>developing for a greater good</FirstTitle>
+        <FirstTitle>
+          <Star src={StarIcon} alt="Star icon" />
+          developing for a greater good
+        </FirstTitle>
 
         <FirstBlockContainer>
           <TextContainer>
@@ -65,7 +68,10 @@ export function ContentSection() {
 
         <Icon src={Flower} alt="flower icon" />
         <SecondTitle>
-          fix-to-earn
+          <div>
+            <Icon src={Flower} alt="flower icon" />
+            fix-to-earn
+          </div>
           <CommunityButton>
             <Link to="/">VIEW ALL COMMUNITY</Link>
           </CommunityButton>
