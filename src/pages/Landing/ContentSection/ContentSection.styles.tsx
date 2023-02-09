@@ -142,7 +142,7 @@ export const FirstBlockContainer = styled.div`
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     flex-direction: column;
-    padding: 2.4rem;
+    padding: 2.4rem 1.6rem;
     border-left: none;
   }
 `;
@@ -216,6 +216,7 @@ export const GradientText = styled(DividerText)`
     width: fit-content;
     line-height: 1;
     padding: 0;
+    padding-right: 1rem;
   }
 `;
 
