@@ -45,8 +45,8 @@ export const Cone = styled.img`
 
   @media screen and (max-width: ${TABLET_MAX_WIDTH}) {
     width: 120%;
-    margin-top: 150rem;
-    margin-left: -6rem;
+    margin-top: 125rem;
+    margin-left: -3.5rem;
   }
 `;
 
@@ -169,6 +169,16 @@ export const Divider = styled.div`
     rgba(98, 92, 191, 0.15),
     rgba(14, 21, 44, 1) 95%
   );
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    background-image: linear-gradient(
+      to right,
+      rgba(14, 21, 44, 1),
+      rgba(252, 204, 80, 0.25) 30%,
+      rgba(197, 95, 163, 0.25),
+      rgba(14, 21, 44, 1) 95%
+    );
+  }
 `;
 
 export const DividerText = styled.p`
