@@ -12,7 +12,7 @@ const handleBackgroundType = (type: backgroundType) => {
     case "2":
       return "68%";
     case "3":
-      return "73%";
+      return "70%";
     case "4":
       return "71%";
     default:

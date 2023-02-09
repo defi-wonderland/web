@@ -6,7 +6,9 @@ import {
   FONT_MEDIUM_L,
   Link,
   MOBILE_MAX_WIDTH,
+  PAGE_MAX_WIDTH,
   SectionBackground,
+  TABLET_MAX_WIDTH,
 } from "~/components/common";
 import MISC from "~/assets/footer_vector.svg";
 
@@ -119,12 +121,16 @@ export const StyledFooter = styled.footer`
 
 export const BackgroundImage = styled(SectionBackground)`
   position: relative;
-  width: 80%;
+  width: 50%;
   margin: 0 auto;
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    width: 100%;
+  }
 `;
 
 export const BgContainer = styled.div`
-  width: 50%;
+  width: 80%;
   display: flex;
   justify-content: center;
   z-index: -1;
@@ -135,8 +141,11 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: auto;
-  padding: 6rem 0 10rem 0;
+  height: 60rem;
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    height: 50rem;
+  }
 `;
 
 export const VectorContainer = styled.div`
