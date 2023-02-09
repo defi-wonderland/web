@@ -88,6 +88,7 @@ export const Ball_3 = styled(Ball)`
 export const BackgroundContainer = styled.div`
   position: absolute;
   top: 0;
+  left: 0;
   z-index: -1;
   width: 100%;
 `;
@@ -104,13 +105,13 @@ export const BG_1 = styled(SectionBackground)`
 
 export const BG_2 = styled(SectionBackground)`
   position: relative;
-  width: 50%;
+  width: 38%;
 `;
 
 export const BG_3 = styled(SectionBackground)`
   position: relative;
   margin-left: auto;
-  width: 50%;
+  width: 38%;
   right: 0%;
 `;
 
