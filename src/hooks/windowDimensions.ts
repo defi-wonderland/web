@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-import { TABLET_MAX_WIDTH, MOBILE_MAX_WIDTH } from "~/components/common";
+import { MOBILE_MAX_WIDTH, TABLET_MAX_WIDTH } from "~/components/common";
 
 export interface Dimension {
   width: number;
@@ -30,12 +30,7 @@ export const useWindowDimensions = () => {
   );
 
   useEffect(() => {
-    function handleResize() {
-      setWindowDimensions(getWindowDimensions());
-    }
-
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    setWindowDimensions(getWindowDimensions());
   }, []);
 
   return windowDimensions;
