@@ -2,6 +2,7 @@ import {
   LogoContainer,
   MenuButton,
   NavLink,
+  NavLinkContainer,
   StyledNavbar,
   WonderLogo,
 } from "./Navbar.styles";
@@ -42,6 +43,22 @@ interface NavbarProps {}
 
 export const Navbar = ({}: NavbarProps) => {
   const [showNavbar, setShowNavbar] = useState(false);
+  const [navLink, setNavLink] = useState(navLinks);
+
+  const handleClick = (i: number) => {
+    setShowNavbar(!showNavbar);
+
+    // reset values
+    const newNavLink = navLink.map((link) => ({
+      name: link.name,
+      url: link.url,
+      disabled: false,
+    }));
+
+    newNavLink[i].disabled = true;
+    setNavLink(newNavLink);
+  };
+
   return (
     <StyledNavbar id={showNavbar ? "show" : ""}>
       <LogoContainer>
@@ -53,17 +70,21 @@ export const Navbar = ({}: NavbarProps) => {
         </MenuButton>
       </LogoContainer>
 
-      {navLinks.map((link, i) => (
-        <NavLink
-          id={showNavbar ? "" : "hide"}
-          to={link.url}
-          order={i + 1}
-          key={link.name}
-          disabled={link.disabled}
-          onClick={() => setShowNavbar(!showNavbar)}
-        >
-          {link.name}
-        </NavLink>
+      {navLink.map((link, i) => (
+        <NavLinkContainer order={i + 1}>
+          <NavLink
+            id={showNavbar ? "" : "hide"}
+            to={link.url}
+            key={link.name}
+            disabled={link.disabled}
+            className={link.disabled ? "gradient" : ""}
+            onClick={() => {
+              handleClick(i);
+            }}
+          >
+            {link.name}
+          </NavLink>
+        </NavLinkContainer>
       ))}
     </StyledNavbar>
   );
