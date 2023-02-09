@@ -55,7 +55,7 @@ const ApproachTitle = styled.strong`
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     width: auto;
-    font-size: 2.1rem !important;
+    font-size: 2.4rem !important;
     padding: 0 3rem;
   }
 `;
