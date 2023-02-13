@@ -57,7 +57,7 @@ export function RightCard() {
           all.
         </SecondaryText>
         <SButton>
-          <Link to="/">DISCOVER MORE</Link>
+          <Link to="/lore">DISCOVER MORE</Link>
         </SButton>
       </CardContainer>
     </>

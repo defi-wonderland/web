@@ -60,7 +60,7 @@ export function ContentSection() {
           <ProjectsList />
 
           <SButton>
-            <Link to="/">FULL PORTFOLIO</Link>
+            <Link to="/portfolio">FULL PORTFOLIO</Link>
           </SButton>
 
           <Team />
@@ -73,7 +73,7 @@ export function ContentSection() {
             fix-to-earn
           </div>
           <CommunityButton>
-            <Link to="/">VIEW ALL COMMUNITY</Link>
+            <Link to="/team">VIEW ALL COMMUNITY</Link>
           </CommunityButton>
         </SecondTitle>
       </LandingContainer>
