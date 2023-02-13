@@ -36,6 +36,10 @@ const sectionMediaStyles = css`
   @media screen and (max-width: 1200px) {
     justify-content: center;
   }
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    padding: 0 0.7rem;
+  }
 `;
 
 const LeftSection = styled(LoreSection)`
@@ -43,6 +47,7 @@ const LeftSection = styled(LoreSection)`
 
   ${sectionMediaStyles}
 `;
+
 const RightSection = styled(LoreSection)`
   justify-content: flex-end;
 

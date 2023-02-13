@@ -110,4 +110,8 @@ export const WonderLogo = styled(Link)`
   img {
     width: 100%;
   }
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    width: 5rem;
+  }
 `;
