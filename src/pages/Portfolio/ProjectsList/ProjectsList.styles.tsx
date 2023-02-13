@@ -76,18 +76,22 @@ export const Divider = styled.div`
 
 export const ProjectDescription = styled.div`
   padding: 2.4rem;
-  height: 100%;
   display: flex;
   flex-direction: row;
 
-  & p {
+  & div {
     font-family: ${FONT_MEDIUM};
     font-size: 1.8rem;
     padding-bottom: 5rem;
     color: white;
     -webkit-text-fill-color: white;
-    opacity: 0.87;
+    opacity: 1;
     text-align: start;
+  }
+
+  & div p {
+    opacity: 0.8;
+    padding-bottom: 1rem;
   }
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {

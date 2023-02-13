@@ -15,6 +15,7 @@ import {
 } from "./ProjectsList.styles";
 import { PROJECTS } from "~/constants/projects";
 import circle from "~/assets/circle.svg";
+import { Link } from "~/components/common";
 
 interface Project {
   name: string;
@@ -65,8 +66,15 @@ export function ProjectsList() {
             appear
           >
             <ProjectDescription>
-              <ProjectImage src={project.image} />
-              <p>{project.description}</p>
+              {project.image && <ProjectImage src={project.image} />}
+              <div>
+                <p>{project.description}</p>
+                {project.link && (
+                  <Link to={project.link} external>
+                    Repository
+                  </Link>
+                )}
+              </div>
             </ProjectDescription>
           </CSSTransition>
           <Divider />
