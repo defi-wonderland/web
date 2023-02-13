@@ -17,6 +17,10 @@ import VLINE from "~/assets/dotted_line.svg";
 import INTROKEY from "~/assets/intro_key.svg";
 import { StarsBackground } from "~/containers";
 
+export interface StyledContainerProps {
+  backgroundEffect: number;
+}
+
 const HeroDivider = styled.img`
   position: absolute;
   width: 100%;
@@ -54,10 +58,10 @@ const Logo = styled.img`
   }
 `;
 
-const Keyhole = styled.img`
+const Keyhole = styled.img<StyledContainerProps>`
   width: 4rem;
   pointer-events: none;
-  opacity: 1;
+  opacity: ${(props) => 1 - props.backgroundEffect / 20};
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     width: 3.5rem;
@@ -127,52 +131,50 @@ const Key = styled.img`
   }
 `;
 
-const Mask = styled.div`
+const Mask = styled.div<StyledContainerProps>`
   position: absolute;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
   z-index: -1;
+
+  background-image: radial-gradient(
+    circle at 50% 50%,
+    rgba(255, 255, 255, 0.08),
+    rgba(14, 21, 44, 1) ${(props) => props.backgroundEffect / 4 || 0}%
+  );
 `;
 
 export function Intro() {
-  const [seeBackground, setSeeBackground] = useState(false);
+  const [showBackground, setShowBackground] = useState(false);
+  const [backgroundEffect, setBackgroundEffect] = useState(0);
   const nodeRef = useRef(null);
   const navigate = useNavigate();
+
   useEffect(() => {
-    if (seeBackground) {
+    if (showBackground) {
       setTimeout(() => {
         navigate("/landing");
       }, 1000);
     }
-  }, [seeBackground]);
-
-  const [background, setBackground] = useState(0);
+  }, [showBackground]);
 
   return (
     <AnimationIn>
       <StyledNavbar>
         <Logo src={LogoImage} alt="Wonderland logo" />
       </StyledNavbar>
-      {!seeBackground && (
+      {!showBackground && (
         <>
           <IntroContainer>
             <StarsBackground />
-            <Mask
-              style={{
-                backgroundImage: `radial-gradient(
-                  circle at 50% 50%,
-                  rgba(255, 255, 255, 0.08), 
-                  rgba(14, 21, 44, 1) ${background / 100}%
-                )`,
-              }}
-            />
+            <Mask backgroundEffect={backgroundEffect} />
             <KeyContainer>
               <Keyhole
                 src={KEYHOLE}
                 alt="keyhole"
-                style={{ opacity: `${1 - background / 500}` }}
+                backgroundEffect={backgroundEffect}
               />
 
               <DottedLine src={VLINE} alt="dotted line" />
@@ -182,12 +184,11 @@ export function Intro() {
                 nodeRef={nodeRef}
                 onStop={(event, node) => {
                   if (node.lastY < -250) {
-                    setSeeBackground(true);
+                    setShowBackground(true);
                   }
                 }}
                 onDrag={(event, node) => {
-                  setBackground(-node.y * 25);
-                  console.log(background / 25);
+                  setBackgroundEffect(-node.y);
                 }}
               >
                 <KeyBox ref={nodeRef}>
@@ -201,7 +202,7 @@ export function Intro() {
       )}
 
       <CSSTransition
-        in={seeBackground}
+        in={showBackground}
         classNames="fade"
         timeout={400}
         appear
