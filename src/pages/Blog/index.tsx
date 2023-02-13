@@ -3,7 +3,11 @@ import styled from "styled-components";
 
 import { POSTS } from "~/constants/posts";
 import { Distortion } from "~/components/common/DistortionText";
-import { FONT_DEFAULT, FONT_MEDIUM } from "~/components/common";
+import {
+  FONT_DEFAULT,
+  FONT_MEDIUM,
+  MOBILE_MAX_WIDTH,
+} from "~/components/common";
 
 const Title = styled.div`
   margin-top: 12rem;
@@ -17,6 +21,10 @@ const BlogsContainer = styled.div`
   max-width: 120rem;
   justify-content: start;
   margin: 0 auto;
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    justify-content: center;
+  }
 `;
 
 const BlogPost = styled.div`
@@ -35,16 +43,25 @@ const BlogPost = styled.div`
   &:hover {
     opacity: 0.87;
   }
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    width: calc(100% - 3rem);
+    height: 36rem;
+  }
 `;
 
 const Image = styled.img`
   width: 100%;
   height: 60%;
   border-radius: 1.6rem 1.6rem 0 0;
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    height: 65%;
+  }
 `;
 
 const DetailsContainer = styled.div`
-  padding: 1rem;
+  padding: 1.2rem;
 
   h1 {
     font-family: ${FONT_DEFAULT};
