@@ -71,7 +71,7 @@ export const Navbar = ({}: NavbarProps) => {
       </LogoContainer>
 
       {navLink.map((link, i) => (
-        <NavLinkContainer order={i + 1}>
+        <NavLinkContainer order={i + 1} key={link.name + i}>
           <NavLink
             id={showNavbar ? "" : "hide"}
             to={link.url}
