@@ -1,5 +1,10 @@
 import styled from "styled-components";
-import { FONT_MEDIUM_L, FONT_SIZE_24 } from "~/components/common";
+import {
+  FONT_MEDIUM,
+  FONT_MEDIUM_L,
+  FONT_SIZE_24,
+  MOBILE_MAX_WIDTH,
+} from "~/components/common";
 
 export const List = styled.div``;
 
@@ -35,6 +40,14 @@ export const ProjectHeader = styled.div`
   &:hover div {
     opacity: 1;
   }
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    padding: 0;
+
+    & img {
+      display: none;
+    }
+  }
 `;
 
 export const Name = styled.strong`
@@ -62,14 +75,24 @@ export const Divider = styled.div`
 `;
 
 export const ProjectDescription = styled.div`
-  max-width: 75vw;
+  padding: 2.4rem;
   height: 100%;
   display: flex;
   flex-direction: row;
 
-  & span {
+  & p {
+    font-family: ${FONT_MEDIUM};
     font-size: 1.8rem;
-    padding: 1rem 2rem 5rem 0;
+    padding-bottom: 5rem;
+    color: white;
+    -webkit-text-fill-color: white;
+    opacity: 0.87;
+    text-align: start;
+  }
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    flex-direction: column;
+    padding: 0;
   }
 `;
 
@@ -78,7 +101,12 @@ export const ProjectImage = styled.img`
   height: 14rem;
   background-color: white;
   padding: 1rem;
-  margin: 1rem 5rem 5rem 5rem;
+  margin-right: 5rem;
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    margin: 0 auto;
+    margin-bottom: 2rem;
+  }
 `;
 
 export const HLine = styled.div`
@@ -88,6 +116,10 @@ export const HLine = styled.div`
   position: absolute;
   right: 55px;
   opacity: 0;
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    display: none;
+  }
 `;
 
 export const VLine = styled.div`
@@ -97,4 +129,8 @@ export const VLine = styled.div`
   position: absolute;
   right: 100px;
   opacity: 0;
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    display: none;
+  }
 `;

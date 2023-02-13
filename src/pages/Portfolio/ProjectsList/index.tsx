@@ -66,7 +66,7 @@ export function ProjectsList() {
           >
             <ProjectDescription>
               <ProjectImage src={project.image} />
-              <span>{project.description}</span>
+              <p>{project.description}</p>
             </ProjectDescription>
           </CSSTransition>
           <Divider />
