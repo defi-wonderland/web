@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 import {
   FONT_DISPLAY,
@@ -7,8 +9,7 @@ import {
 } from "~/components/common";
 import Crown from "~/assets/crown_icon.svg";
 import Key from "~/assets/key.png";
-import ArrowLeft from "~/assets/arrow_left.svg";
-import ArrowRight from "~/assets/arrow.svg";
+import { MEMBERS } from "~/constants/teamMembers";
 
 export const TeamContainer = styled.div`
   display: flex;
@@ -47,10 +48,19 @@ export const CrownIcon = styled.img`
   }
 `;
 
+export const KeyContainer = styled.div`
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3rem;
+`;
+
 export const Keyhole = styled.img`
   position: absolute;
   margin: 0 auto;
-
+  top: 1rem;
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     height: 24rem;
   }
@@ -81,14 +91,71 @@ export const ArrowIcon = styled.img`
   }
 `;
 
+export const CarouselContainer = styled(Carousel)`
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 50rem;
+  margin: 0 auto;
+
+  & .carousel-slider {
+    flex-direction: column !important;
+  }
+
+  & .control-prev {
+    height: 7.2rem !important;
+    width: 7.2rem !important;
+    top: unset !important;
+    bottom: 0rem !important;
+    left: 17rem !important;
+    background-image: url("/img/arrow_left.svg") !important;
+  }
+
+  & .control-next {
+    height: 7.2rem !important;
+    width: 7.2rem !important;
+    top: unset !important;
+    bottom: 0rem !important;
+    right: 17rem !important;
+    background-image: url("/img/arrow.svg") !important;
+  }
+
+  & .control-next::before,
+  .control-prev::before {
+    opacity: 0;
+  }
+
+  & .carousel-slider {
+    height: 56rem;
+  }
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    height: 32rem;
+    width: 32rem;
+
+    & .control-prev {
+      left: 7rem !important;
+      bottom: 10.5rem !important;
+    }
+
+    & .control-next {
+      right: 7rem !important;
+      bottom: 10.5rem !important;
+    }
+  }
+`;
+
 export const NameContainer = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 55rem;
-  width: 100%;
+  min-height: 55rem;
+  width: fit-content;
+  margin: 0 auto;
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     height: 30rem;
@@ -114,16 +181,24 @@ export function Team() {
     <TeamContainer>
       <CrownIcon src={Crown} alt="crown icon" />
       <TeamTitle>THE POWER OF THE PEOPLE</TeamTitle>
-
-      <NameContainer>
+      <KeyContainer>
         <Keyhole src={Key} alt="crown icon" />
-        <Name>MATIAS NISENSON</Name>
-        <Position>Co-Founder</Position>
-      </NameContainer>
-      <ButtonsContainer>
-        <ArrowIcon src={ArrowLeft} alt="arrow left" />
-        <ArrowIcon src={ArrowRight} alt="arrow right" />
-      </ButtonsContainer>
+        <CarouselContainer
+          showArrows={true}
+          showStatus={false}
+          showThumbs={false}
+          showIndicators={false}
+          selectedItem={0}
+          // infiniteLoop
+        >
+          {MEMBERS.map((member) => (
+            <NameContainer>
+              <Name>{member.name}</Name>
+              <Position>{member.position}</Position>
+            </NameContainer>
+          ))}
+        </CarouselContainer>
+      </KeyContainer>
     </TeamContainer>
   );
 }
