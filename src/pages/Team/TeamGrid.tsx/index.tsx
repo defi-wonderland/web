@@ -24,7 +24,9 @@ export function WonderTeamSection() {
               <Name>{member.name}</Name>
               <Position>{member.position}</Position>
             </div>
-            <SLink to={member.link}>{member.twitterHandle}</SLink>
+            <SLink to={member.link} external>
+              {member.twitterHandle}
+            </SLink>
           </MemberContainer>
         ))}
       </TeamGrid>
