@@ -14,7 +14,6 @@ import LogoImage from "~/assets/Logo.svg";
 import KEYHOLE from "~/assets/key.png";
 import VLINE from "~/assets/dotted_line.svg";
 import INTROKEY from "~/assets/intro_key.svg";
-import MASK from "~/assets/mask.svg";
 import { StarsBackground } from "~/containers";
 
 const HeroDivider = styled.img`
@@ -50,10 +49,10 @@ const Logo = styled.img`
   pointer-events: none;
 `;
 
-const Keyhole = styled.div`
-  width: 7rem;
+const Keyhole = styled.img`
+  width: 4rem;
   pointer-events: none;
-  opacity: 0;
+  opacity: 1;
 `;
 
 const DottedLine = styled.img`
@@ -114,11 +113,6 @@ const Mask = styled.div`
   width: 100vw;
   height: 100vh;
   z-index: -1;
-
-  background-image: url("/img/mask.svg");
-  background-repeat: no-repeat;
-  background-position: top;
-  background-size: 100%;
 `;
 
 export function Intro() {
@@ -137,21 +131,28 @@ export function Intro() {
 
   return (
     <AnimationIn>
-      <StarsBackground />
       <StyledNavbar>
         <Logo src={LogoImage} alt="Wonderland logo" />
       </StyledNavbar>
       {!seeBackground && (
         <>
           <IntroContainer>
+            <StarsBackground />
             <Mask
               style={{
-                backgroundSize: `${100 + background}%`,
-                backgroundPositionY: `${10 - background * 4.5}px`,
+                backgroundImage: `radial-gradient(
+                  circle at 50% 50%,
+                  rgba(255, 255, 255, 0.08), 
+                  rgba(14, 21, 44, 1) ${background / 100}%
+                )`,
               }}
             />
             <KeyContainer>
-              <Keyhole /* src={KEYHOLE} alt="keyhole" */ />
+              <Keyhole
+                src={KEYHOLE}
+                alt="keyhole"
+                style={{ opacity: `${1 - background / 500}` }}
+              />
 
               <DottedLine src={VLINE} alt="dotted line" />
               <Draggable
@@ -165,7 +166,7 @@ export function Intro() {
                 }}
                 onDrag={(event, node) => {
                   setBackground(-node.y * 25);
-                  console.log(background);
+                  console.log(background / 25);
                 }}
               >
                 <KeyBox ref={nodeRef}>
