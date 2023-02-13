@@ -6,6 +6,7 @@ import Draggable from "react-draggable";
 
 import {
   AnimationIn,
+  MOBILE_MAX_WIDTH,
   NAVBAR_HEIGHT,
   NAVBAR_INDEX,
   Section,
@@ -47,17 +48,29 @@ const IntroContainer = styled.div`
 
 const Logo = styled.img`
   pointer-events: none;
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    width: 26rem;
+  }
 `;
 
 const Keyhole = styled.img`
   width: 4rem;
   pointer-events: none;
   opacity: 1;
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    width: 3.5rem;
+  }
 `;
 
 const DottedLine = styled.img`
   margin: 2rem;
   pointer-events: none;
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    height: 15rem;
+  }
 `;
 
 const KeyContainer = styled.div`
@@ -66,6 +79,10 @@ const KeyContainer = styled.div`
   align-items: center;
   margin-top: auto;
   padding: 4rem;
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    padding: 2.4rem;
+  }
 `;
 
 const Text = styled.span`
@@ -104,6 +121,10 @@ const KeyBox = styled.div`
 const Key = styled.img`
   position: relative;
   z-index: -1;
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    width: 7rem;
+  }
 `;
 
 const Mask = styled.div`
