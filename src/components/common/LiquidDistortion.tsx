@@ -33,14 +33,7 @@ export const LiquidDistortion = ({
   fontFamily,
 }: DistorsionProps) => {
   const { ready } = useFontObserver();
-
-  const windowWidth = (window as any).innerWidth;
   const defaultFontSize = 140;
-  if (windowWidth < 500) {
-    fontSize = 44;
-  } else if (windowWidth < 1100) {
-    fontSize = 60;
-  }
 
   return (
     <>

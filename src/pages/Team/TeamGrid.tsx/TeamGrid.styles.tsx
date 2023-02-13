@@ -19,6 +19,7 @@ export const TitleContainer = styled.div`
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     margin-top: 5rem;
+    flex-direction: column;
   }
 `;
 
@@ -40,6 +41,7 @@ export const TeamGrid = styled.div`
     display: flex;
     flex-direction: column;
     grid-gap: 0.1rem;
+    margin-top: 2rem;
   }
 `;
 
@@ -114,4 +116,15 @@ export const Divider = styled.canvas`
   );
   height: 2px;
   width: 60%;
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    background: linear-gradient(
+      to bottom,
+      rgba(14, 21, 44, 0) 0,
+      rgba(255, 255, 255, 0.5) 100%
+    );
+    height: 8rem;
+    width: 2px;
+    margin-top: 3rem;
+  }
 `;

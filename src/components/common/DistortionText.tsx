@@ -17,18 +17,11 @@ export const Container = styled.div`
 
 interface DistortionProps {
   text: string;
+  fontSize?: number;
 }
 
-export const Distortion = ({ text }: DistortionProps) => {
+export const Distortion = ({ text, fontSize }: DistortionProps) => {
   const { ready } = useFontObserver();
-
-  const windowWidth = (window as any).innerWidth;
-  let fontSize = 100;
-  if (windowWidth < 500) {
-    fontSize = 34;
-  } else if (windowWidth < 1100) {
-    fontSize = 70;
-  }
 
   return (
     <>
@@ -36,7 +29,7 @@ export const Distortion = ({ text }: DistortionProps) => {
         <Container>
           <DistortionText
             text={text}
-            fontSize={fontSize}
+            fontSize={fontSize || 100}
             speed={0.1}
             fill="white"
             fontFamily="SharpGrotesk-10"

@@ -47,7 +47,12 @@ export const Navbar = ({}: NavbarProps) => {
 
   const handleClick = (i: number) => {
     setShowNavbar(!showNavbar);
+    const newNavLink = resetValues();
+    newNavLink[i].disabled = true;
+    setNavLink(newNavLink);
+  };
 
+  const resetValues = () => {
     // reset values
     const newNavLink = navLink.map((link) => ({
       name: link.name,
@@ -55,14 +60,18 @@ export const Navbar = ({}: NavbarProps) => {
       disabled: false,
     }));
 
-    newNavLink[i].disabled = true;
-    setNavLink(newNavLink);
+    return newNavLink;
   };
 
   return (
     <StyledNavbar id={showNavbar ? "show" : ""}>
       <LogoContainer>
-        <WonderLogo to="/landing">
+        <WonderLogo
+          to="/landing"
+          onClick={() => {
+            setNavLink(resetValues());
+          }}
+        >
           <img src={wonderLogo} alt="Wonderland logo" />
         </WonderLogo>
         <MenuButton onClick={() => setShowNavbar(!showNavbar)}>
