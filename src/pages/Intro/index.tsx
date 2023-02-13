@@ -14,6 +14,7 @@ import LogoImage from "~/assets/Logo.svg";
 import KEYHOLE from "~/assets/key.png";
 import VLINE from "~/assets/dotted_line.svg";
 import INTROKEY from "~/assets/intro_key.svg";
+import MASK from "~/assets/mask.svg";
 import { StarsBackground } from "~/containers";
 
 const HeroDivider = styled.img`
@@ -28,22 +29,31 @@ const StyledHeroSection = styled(Section)`
 `;
 
 const IntroContainer = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   justify-content: space-between;
-  z-index: 10;
+  z-index: 1;
+
+  background-image: url("/img/hero/hero-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 `;
 
 const Logo = styled.img`
   pointer-events: none;
 `;
 
-const Keyhole = styled.img`
+const Keyhole = styled.div`
   width: 7rem;
   pointer-events: none;
+  opacity: 0;
 `;
 
 const DottedLine = styled.img`
@@ -56,7 +66,7 @@ const KeyContainer = styled.div`
   flex-direction: column;
   align-items: center;
   margin-top: auto;
-  padding-bottom: 8rem;
+  padding: 4rem;
 `;
 
 const Text = styled.span`
@@ -96,9 +106,22 @@ const Key = styled.img`
   position: relative;
   z-index: -1;
 `;
-export interface HeroSectionProps {}
 
-export function Intro({ ...props }: HeroSectionProps) {
+const Mask = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+
+  background-image: url("/img/mask.svg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 100%;
+`;
+
+export function Intro() {
   const [seeBackground, setSeeBackground] = useState(false);
   const nodeRef = useRef(null);
   const navigate = useNavigate();
@@ -110,6 +133,8 @@ export function Intro({ ...props }: HeroSectionProps) {
     }
   }, [seeBackground]);
 
+  const [background, setBackground] = useState(0);
+
   return (
     <AnimationIn>
       <StarsBackground />
@@ -119,9 +144,14 @@ export function Intro({ ...props }: HeroSectionProps) {
       {!seeBackground && (
         <>
           <IntroContainer>
+            <Mask
+              style={{
+                backgroundSize: `${100 + background}%`,
+                backgroundPositionY: `${10 - background * 4.5}px`,
+              }}
+            />
             <KeyContainer>
-              {/* Temporary icon */}
-              <Keyhole src={KEYHOLE} alt="keyhole" />
+              <Keyhole /* src={KEYHOLE} alt="keyhole" */ />
 
               <DottedLine src={VLINE} alt="dotted line" />
               <Draggable
@@ -132,6 +162,10 @@ export function Intro({ ...props }: HeroSectionProps) {
                   if (node.lastY < -250) {
                     setSeeBackground(true);
                   }
+                }}
+                onDrag={(event, node) => {
+                  setBackground(-node.y * 25);
+                  console.log(background);
                 }}
               >
                 <KeyBox ref={nodeRef}>
@@ -151,11 +185,7 @@ export function Intro({ ...props }: HeroSectionProps) {
         appear
         unmountOnExit
       >
-        <StyledHeroSection
-          full
-          backgroundImage="/img/hero/hero-bg.jpg"
-          {...props}
-        >
+        <StyledHeroSection full backgroundImage="/img/hero/hero-bg.jpg">
           <HeroDivider src="/img/hero/hero-bg-divider.png" />
         </StyledHeroSection>
       </CSSTransition>
