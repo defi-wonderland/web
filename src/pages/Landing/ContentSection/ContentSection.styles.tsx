@@ -222,7 +222,11 @@ export const GradientText = styled(DividerText)`
 
 export const TextContainer = styled.div`
   padding: 5rem 4rem;
-  padding-right: 45rem;
+  padding-right: 35rem;
+
+  @media screen and (max-width: ${TABLET_MAX_WIDTH}) {
+    padding-right: 25rem;
+  }
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     padding: 0rem;
