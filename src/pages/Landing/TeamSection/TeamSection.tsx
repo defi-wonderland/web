@@ -17,6 +17,7 @@ import {
 import Crown from "~/assets/crown_icon.svg";
 import Key from "~/assets/key.png";
 import { MEMBERS } from "~/constants/teamMembers";
+import { StarsBackground } from "~/containers";
 
 export function Team() {
   const lastIndex = MEMBERS.length - 1;
@@ -37,60 +38,64 @@ export function Team() {
   };
 
   return (
-    <TeamContainer>
-      <CrownIcon src={Crown} alt="crown icon" />
-      <TeamTitle>THE POWER OF THE PEOPLE</TeamTitle>
-      <KeyContainer>
-        <PrevNameContainer>
-          <div>
-            <Name>
-              {MEMBERS[prevIndex == 0 ? lastIndex : prevIndex - 1].name}
-            </Name>
-            <Position>
-              {MEMBERS[prevIndex == 0 ? lastIndex : prevIndex - 1].position}
-            </Position>
-          </div>
-          <div>
-            <Name>{MEMBERS[prevIndex].name}</Name>
-            <Position>{MEMBERS[prevIndex].position}</Position>
-          </div>
-        </PrevNameContainer>
-        <NextNameContainer>
-          <div>
-            <Name>{MEMBERS[nextIndex].name}</Name>
-            <Position>{MEMBERS[nextIndex].position}</Position>
-          </div>
-          <div>
-            <Name>
-              {MEMBERS[nextIndex == lastIndex ? 0 : nextIndex + 1].name}
-            </Name>
-            <Position>
-              {MEMBERS[nextIndex == lastIndex ? 0 : nextIndex + 1].position}
-            </Position>
-          </div>
-        </NextNameContainer>
-        <Keyhole src={Key} alt="crown icon" />
-        <CarouselContainer
-          showArrows={true}
-          showStatus={false}
-          showThumbs={false}
-          showIndicators={false}
-          selectedItem={0}
-          infiniteLoop
-          onChange={(index) => {
-            console.log(index);
-            handleClick(index);
-          }}
-          width={400}
-        >
-          {MEMBERS.map((member) => (
-            <NameContainer key={member.name}>
-              <Name>{member.name}</Name>
-              <Position>{member.position}</Position>
-            </NameContainer>
-          ))}
-        </CarouselContainer>
-      </KeyContainer>
-    </TeamContainer>
+    <>
+      <StarsBackground />
+
+      <TeamContainer>
+        <CrownIcon src={Crown} alt="crown icon" />
+        <TeamTitle>THE POWER OF THE PEOPLE</TeamTitle>
+        <KeyContainer>
+          <PrevNameContainer>
+            <div>
+              <Name>
+                {MEMBERS[prevIndex == 0 ? lastIndex : prevIndex - 1].name}
+              </Name>
+              <Position>
+                {MEMBERS[prevIndex == 0 ? lastIndex : prevIndex - 1].position}
+              </Position>
+            </div>
+            <div>
+              <Name>{MEMBERS[prevIndex].name}</Name>
+              <Position>{MEMBERS[prevIndex].position}</Position>
+            </div>
+          </PrevNameContainer>
+          <NextNameContainer>
+            <div>
+              <Name>{MEMBERS[nextIndex].name}</Name>
+              <Position>{MEMBERS[nextIndex].position}</Position>
+            </div>
+            <div>
+              <Name>
+                {MEMBERS[nextIndex == lastIndex ? 0 : nextIndex + 1].name}
+              </Name>
+              <Position>
+                {MEMBERS[nextIndex == lastIndex ? 0 : nextIndex + 1].position}
+              </Position>
+            </div>
+          </NextNameContainer>
+          <Keyhole src={Key} alt="crown icon" />
+          <CarouselContainer
+            showArrows={true}
+            showStatus={false}
+            showThumbs={false}
+            showIndicators={false}
+            selectedItem={0}
+            infiniteLoop
+            onChange={(index) => {
+              console.log(index);
+              handleClick(index);
+            }}
+            width={400}
+          >
+            {MEMBERS.map((member) => (
+              <NameContainer key={member.name}>
+                <Name>{member.name}</Name>
+                <Position>{member.position}</Position>
+              </NameContainer>
+            ))}
+          </CarouselContainer>
+        </KeyContainer>
+      </TeamContainer>
+    </>
   );
 }

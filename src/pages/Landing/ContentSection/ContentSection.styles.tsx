@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 import {
   Button,
+  CONTENT_INDEX,
   FONT_DISPLAY,
   FONT_MEDIUM_L,
   MOBILE_MAX_WIDTH,
@@ -160,6 +161,7 @@ export const SecondBlockContainer = styled.div`
 
 export const Divider = styled.div`
   grid-area: landingDivider;
+  z-index: ${CONTENT_INDEX};
 
   background-image: linear-gradient(
     to right,
