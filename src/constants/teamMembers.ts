@@ -1,6 +1,5 @@
 export const MEMBERS = [
   { name: "MATI", position: "Position", twitterHandle: "@test", link: "/" },
-  { name: "test", position: "Position", twitterHandle: "@test", link: "/" },
   { name: "PAULA", position: "Position", twitterHandle: "@test", link: "/" },
   {
     name: "DR GORILLA",

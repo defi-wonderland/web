@@ -1,15 +1,11 @@
 import styled from "styled-components";
 import { Carousel } from "react-responsive-carousel";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 import {
   FONT_DISPLAY,
   FONT_MEDIUM_L,
   MOBILE_MAX_WIDTH,
 } from "~/components/common";
-import Crown from "~/assets/crown_icon.svg";
-import Key from "~/assets/key.png";
-import { MEMBERS } from "~/constants/teamMembers";
 
 export const TeamContainer = styled.div`
   display: flex;
@@ -97,7 +93,7 @@ export const CarouselContainer = styled(Carousel)`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 50rem;
+  width: 35rem;
   margin: 0 auto;
 
   & .control-arrow.control-prev {
@@ -105,7 +101,7 @@ export const CarouselContainer = styled(Carousel)`
     width: 7.2rem;
     top: unset;
     bottom: 0rem;
-    left: 17rem;
+    left: 9rem;
     background-image: url("/img/arrow_left.svg") !important;
   }
 
@@ -119,7 +115,7 @@ export const CarouselContainer = styled(Carousel)`
     width: 7.2rem;
     top: unset;
     bottom: 0rem;
-    right: 17rem;
+    right: 9rem;
     background-image: url("/img/arrow.svg") !important;
   }
 
@@ -128,7 +124,7 @@ export const CarouselContainer = styled(Carousel)`
     opacity: 0;
   }
 
-  & .carousel-slider {
+  & .carousel.carousel-slider {
     height: 56rem;
   }
 
@@ -177,29 +173,44 @@ export const Position = styled.span`
   padding: 0.8rem;
 `;
 
-export function Team() {
-  return (
-    <TeamContainer>
-      <CrownIcon src={Crown} alt="crown icon" />
-      <TeamTitle>THE POWER OF THE PEOPLE</TeamTitle>
-      <KeyContainer>
-        <Keyhole src={Key} alt="crown icon" />
-        <CarouselContainer
-          showArrows={true}
-          showStatus={false}
-          showThumbs={false}
-          showIndicators={false}
-          selectedItem={0}
-          infiniteLoop
-        >
-          {MEMBERS.map((member) => (
-            <NameContainer>
-              <Name>{member.name}</Name>
-              <Position>{member.position}</Position>
-            </NameContainer>
-          ))}
-        </CarouselContainer>
-      </KeyContainer>
-    </TeamContainer>
-  );
-}
+export const PrevNameContainer = styled(NameContainer)`
+  position: absolute;
+
+  left: 0rem;
+  opacity: 0.4;
+  transform: scale(0.8);
+  filter: blur(2px);
+
+  display: flex;
+  flex-direction: row;
+
+  & div {
+    width: 25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem;
+  }
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    top: -30%;
+    left: -6rem;
+
+    & div {
+      width: 14rem;
+    }
+
+    & div:nth-child(2) {
+      display: none;
+    }
+  }
+`;
+
+export const NextNameContainer = styled(PrevNameContainer)`
+  left: unset;
+  right: 0rem;
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    right: -6rem;
+  }
+`;

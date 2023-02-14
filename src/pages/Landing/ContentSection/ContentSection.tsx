@@ -18,7 +18,7 @@ import {
 } from "./ContentSection.styles";
 import { ProjectsList } from "~/pages/Portfolio/ProjectsList";
 import { RightCard } from "./RightCard";
-import { Team } from "./TeamSection";
+import { Team } from "../TeamSection";
 import StarIcon from "/img/footer/star-icon.svg";
 import Flower from "~/assets/flower.svg";
 import ConeBackground from "~/assets/landing_bg.png";
