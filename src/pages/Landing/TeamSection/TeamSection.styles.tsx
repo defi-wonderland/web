@@ -119,7 +119,7 @@ export const CarouselContainer = styled(Carousel)`
     height: 7.2rem;
     width: 7.2rem;
     top: unset;
-    bottom: 0rem;
+    bottom: -1.5rem;
     left: 9rem;
     background-image: url("/img/arrow_left.svg") !important;
   }
@@ -128,7 +128,7 @@ export const CarouselContainer = styled(Carousel)`
     height: 7.2rem;
     width: 7.2rem;
     top: unset;
-    bottom: 0rem;
+    bottom: -1.5rem;
     right: 9rem;
     background-image: url("/img/arrow.svg") !important;
   }
