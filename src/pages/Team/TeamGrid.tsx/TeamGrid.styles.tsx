@@ -30,12 +30,8 @@ export const WonderTitle = styled(GradientTitle)`
 
 export const TeamGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   margin: 100px 0px;
-
-  // TODO: improve members border
-  grid-gap: 0.15rem;
-  background-color: rgba(255, 255, 255, 0.5);
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     display: flex;
@@ -46,13 +42,13 @@ export const TeamGrid = styled.div`
 `;
 
 export const MemberContainer = styled.div`
-  background-color: #0e152c;
-  /* border: 1px solid rgba(255, 255, 255, 0.5); */
+  border: 1px solid rgba(255, 255, 255, 0.4);
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 20rem;
+  width: 45rem;
   padding: 2.4rem;
   cursor: pointer;
 

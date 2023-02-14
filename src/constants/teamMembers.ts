@@ -1,6 +1,7 @@
 export const MEMBERS = [
   { name: "MATI", position: "Position", twitterHandle: "@test", link: "/" },
   { name: "PAULA", position: "Position", twitterHandle: "@test", link: "/" },
+  { name: "PEPO", position: "Position", twitterHandle: "@test", link: "/" },
   {
     name: "DR GORILLA",
     position: "Position",
@@ -23,7 +24,6 @@ export const MEMBERS = [
   { name: "ASHITAKA", position: "Position", twitterHandle: "@test", link: "/" },
   { name: "GAS1CENT", position: "Position", twitterHandle: "@test", link: "/" },
   { name: "GOTZEN", position: "Position", twitterHandle: "@test", link: "/" },
-  { name: "UWUNT", position: "Position", twitterHandle: "@test", link: "/" },
   {
     name: "WEI3ERHASE",
     position: "Position",
@@ -31,7 +31,6 @@ export const MEMBERS = [
     link: "/",
   },
   { name: "PARTICLE", position: "Position", twitterHandle: "@test", link: "/" },
-  { name: "PEPO", position: "Position", twitterHandle: "@test", link: "/" },
   {
     name: "SKELETOR",
     position: "Position",
@@ -45,7 +44,7 @@ export const MEMBERS = [
     twitterHandle: "@test",
     link: "/",
   },
-  { name: "0XARDY", position: "Position", twitterHandle: "@test", link: "/" },
+  { name: "ARDY", position: "Position", twitterHandle: "@0xArdy", link: "/" },
   { name: "RBP", position: "Position", twitterHandle: "@test", link: "/" },
   { name: "JOXES", position: "Position", twitterHandle: "@test", link: "/" },
 ];

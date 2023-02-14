@@ -11,7 +11,6 @@ import {
 } from "~/components/common";
 
 export const Container = styled.div`
-  max-width: 140rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
