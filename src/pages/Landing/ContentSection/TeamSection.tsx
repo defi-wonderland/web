@@ -100,25 +100,26 @@ export const CarouselContainer = styled(Carousel)`
   width: 50rem;
   margin: 0 auto;
 
-  & .carousel-slider {
-    flex-direction: column !important;
-  }
-
-  & .control-prev {
-    height: 7.2rem !important;
-    width: 7.2rem !important;
-    top: unset !important;
-    bottom: 0rem !important;
-    left: 17rem !important;
+  & .control-arrow.control-prev {
+    height: 7.2rem;
+    width: 7.2rem;
+    top: unset;
+    bottom: 0rem;
+    left: 17rem;
     background-image: url("/img/arrow_left.svg") !important;
   }
 
-  & .control-next {
-    height: 7.2rem !important;
-    width: 7.2rem !important;
-    top: unset !important;
-    bottom: 0rem !important;
-    right: 17rem !important;
+  & .control-arrow.control-prev:hover,
+  .control-arrow.control-next:hover {
+    background-color: transparent;
+  }
+
+  & .control-arrow.control-next {
+    height: 7.2rem;
+    width: 7.2rem;
+    top: unset;
+    bottom: 0rem;
+    right: 17rem;
     background-image: url("/img/arrow.svg") !important;
   }
 
@@ -135,14 +136,14 @@ export const CarouselContainer = styled(Carousel)`
     height: 32rem;
     width: 32rem;
 
-    & .control-prev {
-      left: 7rem !important;
-      bottom: 10.5rem !important;
+    & .control-arrow.control-prev {
+      left: 7rem;
+      bottom: 10.5rem;
     }
 
-    & .control-next {
-      right: 7rem !important;
-      bottom: 10.5rem !important;
+    & .control-arrow.control-next {
+      right: 7rem;
+      bottom: 10.5rem;
     }
   }
 `;
@@ -189,7 +190,7 @@ export function Team() {
           showThumbs={false}
           showIndicators={false}
           selectedItem={0}
-          // infiniteLoop
+          infiniteLoop
         >
           {MEMBERS.map((member) => (
             <NameContainer>
