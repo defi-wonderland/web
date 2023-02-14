@@ -130,15 +130,15 @@ export const CarouselContainer = styled(Carousel)`
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     height: 32rem;
-    width: 32rem;
+    width: 25rem;
 
     & .control-arrow.control-prev {
-      left: 7rem;
+      left: 4rem;
       bottom: 10.5rem;
     }
 
     & .control-arrow.control-next {
-      right: 7rem;
+      right: 4rem;
       bottom: 10.5rem;
     }
   }
