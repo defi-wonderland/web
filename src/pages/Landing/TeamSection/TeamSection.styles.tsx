@@ -143,21 +143,18 @@ export const CarouselContainer = styled(Carousel)`
     background-color: transparent;
   }
 
-  & .carousel.carousel-slider {
-    height: 56rem;
-  }
-
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
-    height: 32rem;
+    height: 12rem;
+    margin: 10rem 0;
 
     & .control-arrow.control-prev {
-      left: 8rem;
-      bottom: 10.5rem;
+      left: 9rem;
+      bottom: -1.5rem;
     }
 
     & .control-arrow.control-next {
-      right: 8rem;
-      bottom: 10.5rem;
+      right: 9rem;
+      bottom: -1.5rem;
     }
 
     & .carousel.carousel-slider,
@@ -174,9 +171,9 @@ export const NameContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 55rem;
   width: fit-content;
   margin: 0 auto;
+  height: 55rem;
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     height: 30rem;
