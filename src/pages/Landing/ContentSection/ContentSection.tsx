@@ -22,7 +22,6 @@ import { Team } from "../TeamSection";
 import StarIcon from "/img/footer/star-icon.svg";
 import Flower from "~/assets/flower.svg";
 import ConeBackground from "~/assets/landing_bg.png";
-import { StarsBackground } from "~/containers";
 import { Link } from "~/components/common";
 
 export function ContentSection() {
@@ -32,6 +31,7 @@ export function ContentSection() {
         <BG_1 type="1" align="center" />
         <Cone src={ConeBackground} alt="cone image" />
       </BackgroundContainer>
+
       <LandingContainer>
         <Star src={StarIcon} alt="Star icon" />
         <FirstTitle>
@@ -55,7 +55,7 @@ export function ContentSection() {
         <Divider>
           <DividerText>WONDERLAND IN PROGRESS...</DividerText>
         </Divider>
-        <StarsBackground />
+
         <SecondBlockContainer>
           <ProjectsList />
 

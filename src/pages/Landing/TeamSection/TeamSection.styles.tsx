@@ -51,6 +51,7 @@ export const KeyContainer = styled.div`
   justify-content: center;
   align-items: center;
   margin-bottom: 3rem;
+  overflow: hidden;
 `;
 
 export const Keyhole = styled.img`
@@ -96,6 +97,24 @@ export const CarouselContainer = styled(Carousel)`
   width: 35rem;
   margin: 0 auto;
 
+  & .carousel.carousel-slider,
+  & .slider-wrapper.axis-horizontal {
+    overflow: unset;
+    width: 28rem;
+  }
+
+  & .slide.selected {
+    opacity: 1;
+    transform: unset;
+    filter: unset;
+  }
+
+  & .slide {
+    opacity: 0.4;
+    transform: scale(0.8);
+    filter: blur(3px);
+  }
+
   & .control-arrow.control-prev {
     height: 7.2rem;
     width: 7.2rem;
@@ -103,11 +122,6 @@ export const CarouselContainer = styled(Carousel)`
     bottom: 0rem;
     left: 9rem;
     background-image: url("/img/arrow_left.svg") !important;
-  }
-
-  & .control-arrow.control-prev:hover,
-  .control-arrow.control-next:hover {
-    background-color: transparent;
   }
 
   & .control-arrow.control-next {
@@ -124,22 +138,32 @@ export const CarouselContainer = styled(Carousel)`
     opacity: 0;
   }
 
+  & .control-arrow.control-prev:hover,
+  .control-arrow.control-next:hover {
+    background-color: transparent;
+  }
+
   & .carousel.carousel-slider {
     height: 56rem;
   }
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     height: 32rem;
-    width: 25rem;
 
     & .control-arrow.control-prev {
-      left: 4rem;
+      left: 8rem;
       bottom: 10.5rem;
     }
 
     & .control-arrow.control-next {
-      right: 4rem;
+      right: 8rem;
       bottom: 10.5rem;
+    }
+
+    & .carousel.carousel-slider,
+    & .slider-wrapper.axis-horizontal {
+      overflow: unset;
+      width: 20rem;
     }
   }
 `;
@@ -171,46 +195,4 @@ export const Position = styled.span`
   z-index: 1;
   color: rgba(255, 255, 255, 0.65);
   padding: 0.8rem;
-`;
-
-export const PrevNameContainer = styled(NameContainer)`
-  position: absolute;
-
-  left: 0rem;
-  opacity: 0.4;
-  transform: scale(0.8);
-  filter: blur(2px);
-
-  display: flex;
-  flex-direction: row;
-
-  & div {
-    width: 25rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 1rem;
-  }
-
-  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
-    top: -30%;
-    left: -6rem;
-
-    & div {
-      width: 14rem;
-    }
-
-    & div:nth-child(2) {
-      display: none;
-    }
-  }
-`;
-
-export const NextNameContainer = styled(PrevNameContainer)`
-  left: unset;
-  right: 0rem;
-
-  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
-    right: -6rem;
-  }
 `;

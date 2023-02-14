@@ -5,8 +5,8 @@ import { ContentSection } from "./ContentSection";
 export function Landing() {
   return (
     <>
-      <StarsBackground />
       <HeroSection />
+      <StarsBackground />
       <ContentSection />
     </>
   );
