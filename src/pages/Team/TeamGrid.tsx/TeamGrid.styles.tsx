@@ -104,7 +104,7 @@ export const MemberContainer = styled.div`
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     & {
-      height: auto;
+      height: 18rem;
       width: 100%;
     }
   }
@@ -163,7 +163,7 @@ export const Divider = styled.canvas`
   }
 `;
 
-export const JoinContainer = styled.div`
+export const JoinContainer = styled(Link)`
   position: relative;
   height: 20rem;
   display: flex;

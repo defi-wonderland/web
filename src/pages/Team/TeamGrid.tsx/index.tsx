@@ -38,7 +38,7 @@ export function WonderTeamSection() {
             </MemberLink>
           </MemberContainer>
         ))}
-        <JoinContainer>
+        <JoinContainer to="#" external>
           <Name className="gradient">JOIN US</Name>
           <KeyImage />
         </JoinContainer>
