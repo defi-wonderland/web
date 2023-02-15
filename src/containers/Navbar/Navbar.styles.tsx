@@ -64,13 +64,11 @@ export const StyledNavbar = styled.nav`
   z-index: ${NAVBAR_INDEX};
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
-    & {
-      flex-direction: column;
-      flex-wrap: nowrap;
-      justify-content: start;
-      grid-gap: 2rem;
-      height: fit-content;
-    }
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: start;
+    height: fit-content;
+    grid-gap: 0;
   }
 `;
 
@@ -100,9 +98,8 @@ export const NavLink = styled(Link)<{ disabled?: boolean }>`
   `};
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
-    & {
-      font-size: ${FONT_SIZE_20};
-    }
+    font-size: ${FONT_SIZE_20};
+    padding: 1rem 0;
   }
 `;
 
