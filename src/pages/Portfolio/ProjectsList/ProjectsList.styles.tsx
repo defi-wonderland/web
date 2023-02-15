@@ -43,6 +43,7 @@ export const Name = styled.strong`
   text-transform: uppercase;
   z-index: -1;
   color: white;
+  text-align: start;
 `;
 
 export const Circle = styled.img`

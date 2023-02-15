@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import {
   Button,
-  FONT_SIZE_18,
+  FONT_MEDIUM_L,
   Link,
   MOBILE_MAX_WIDTH,
 } from "~/components/common";
@@ -9,15 +9,22 @@ import {
 export const CardContainer = styled.div`
   width: 30rem;
   padding-top: 5rem;
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    width: 100%;
+    padding-top: 40rem;
+  }
 `;
 
 const PrimaryText = styled.p`
+  font-family: ${FONT_MEDIUM_L};
   font-size: 2.1rem;
   line-height: 1.3;
   padding-bottom: 1rem;
+  text-transform: uppercase;
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
-    font-size: ${FONT_SIZE_18};
+    font-size: 1.7rem;
   }
 `;
 
@@ -29,6 +36,10 @@ export const SecondaryText = styled.span`
 export const SButton = styled(Button)`
   margin-top: 4.5rem;
   margin-left: 3rem;
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    margin: 4.5rem auto 6rem;
+  }
 `;
 
 export function RightCard() {
@@ -46,7 +57,7 @@ export function RightCard() {
           all.
         </SecondaryText>
         <SButton>
-          <Link to="/">DISCOVER MORE</Link>
+          <Link to="/lore">DISCOVER MORE</Link>
         </SButton>
       </CardContainer>
     </>
