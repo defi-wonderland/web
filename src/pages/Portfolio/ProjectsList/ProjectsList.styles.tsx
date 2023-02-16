@@ -15,6 +15,7 @@ export const ProjectContainer = styled.button`
   flex-direction: column;
   align-items: center;
   width: 100%;
+  padding: 0;
 `;
 
 export const ProjectHeader = styled.div`
@@ -57,6 +58,10 @@ export const Name = styled.strong`
   z-index: -1;
   color: white;
   text-align: start;
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    padding-left: 1.6rem;
+  }
 `;
 
 export const Circle = styled.img`

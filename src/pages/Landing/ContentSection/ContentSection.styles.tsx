@@ -66,10 +66,8 @@ export const Cone = styled.img`
 
 export const LandingContainer = styled.section`
   width: 100%;
-  margin: 5rem auto 10rem;
-  padding: 5rem;
+  padding: 5rem 7.5rem 10rem 2.5rem;
   position: relative;
-  left: -2.5rem;
   display: grid;
   grid-template-areas:
     "star title"
@@ -81,8 +79,6 @@ export const LandingContainer = styled.section`
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     padding: 0;
-    margin: 0;
-    left: 0;
     display: flex;
     flex-direction: column;
   }
@@ -175,7 +171,6 @@ export const SecondBlockContainer = styled.div`
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     border-left: none;
-    padding-left: 1.6rem;
   }
 `;
 
