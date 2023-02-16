@@ -11,9 +11,10 @@ export function useFontObserver() {
   });
 
   useEffect(() => {
-    document.fonts.ready.then(() => {
-      setReady(true);
-    });
+    if (fontLoaded)
+      document.fonts.ready.then(() => {
+        setReady(true);
+      });
   }, [fontLoaded]);
 
   return { ready };
