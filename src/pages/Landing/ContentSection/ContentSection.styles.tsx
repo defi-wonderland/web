@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 import {
   Button,
+  CONTENT_INDEX,
   FONT_DISPLAY,
   FONT_MEDIUM_L,
   MOBILE_MAX_WIDTH,
@@ -160,6 +161,7 @@ export const SecondBlockContainer = styled.div`
 
 export const Divider = styled.div`
   grid-area: landingDivider;
+  z-index: ${CONTENT_INDEX};
 
   background-image: linear-gradient(
     to right,
@@ -222,7 +224,11 @@ export const GradientText = styled(DividerText)`
 
 export const TextContainer = styled.div`
   padding: 5rem 4rem;
-  padding-right: 45rem;
+  padding-right: 35rem;
+
+  @media screen and (max-width: ${TABLET_MAX_WIDTH}) {
+    padding-right: 25rem;
+  }
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     padding: 0rem;

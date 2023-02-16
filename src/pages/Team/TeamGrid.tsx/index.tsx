@@ -3,10 +3,14 @@ import {
   MemberContainer,
   Name,
   Position,
-  SLink,
+  TwitterHandle,
   TeamGrid,
   TitleContainer,
   WonderTitle,
+  MemberLink,
+  JoinContainer,
+  EyeImage,
+  KeyImage,
 } from "./TeamGrid.styles";
 import { MEMBERS } from "~/constants/teamMembers";
 
@@ -18,17 +22,26 @@ export function WonderTeamSection() {
         <Divider />
       </TitleContainer>
       <TeamGrid>
-        {MEMBERS.map((member) => (
-          <MemberContainer key={member.name}>
+        {MEMBERS.map((member, index) => (
+          <MemberContainer
+            key={member.name}
+            className={`member member-${index}`}
+          >
             <div>
               <Name>{member.name}</Name>
               <Position>{member.position}</Position>
             </div>
-            <SLink to={member.link} external>
-              {member.twitterHandle}
-            </SLink>
+            <TwitterHandle>{member.twitterHandle}</TwitterHandle>
+
+            <MemberLink to={member.link} external>
+              <EyeImage />
+            </MemberLink>
           </MemberContainer>
         ))}
+        <JoinContainer to="#" external>
+          <Name className="gradient">JOIN US</Name>
+          <KeyImage />
+        </JoinContainer>
       </TeamGrid>
     </>
   );

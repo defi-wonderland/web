@@ -7,7 +7,7 @@ import {
 } from "~/components/common";
 
 export const CardContainer = styled.div`
-  width: 30rem;
+  width: 42rem;
   padding-top: 5rem;
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
