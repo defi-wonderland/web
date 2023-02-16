@@ -21,7 +21,7 @@ export const HeroSection: FC<HeroSectionProps> = ({ ...props }) => {
     <StyledHeroSection full backgroundImage="/img/hero/hero-bg.jpg" {...props}>
       <LiquidDistortion
         text="TO HELP THE WEB3 ECOSYSTEM THRIVE"
-        fontSize={isMobile ? 50 : 100}
+        fontSize={isMobile ? 50 : 140}
       />
       <HeroDivider src="/img/hero/hero-bg-divider.png" />
     </StyledHeroSection>

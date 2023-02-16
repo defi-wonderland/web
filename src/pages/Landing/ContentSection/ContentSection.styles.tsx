@@ -17,6 +17,11 @@ export const BackgroundContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  @media screen and (max-width: ${TABLET_MAX_WIDTH}) {
+    position: relative;
+    right: -5rem;
+  }
 `;
 
 export const BG_1 = styled(SectionBackground)`
@@ -26,7 +31,22 @@ export const BG_1 = styled(SectionBackground)`
   margin-top: 120rem;
 
   @media screen and (max-width: ${TABLET_MAX_WIDTH}) {
-    width: 100%;
+    position: absolute;
+    width: 150%;
+    margin-top: 110rem;
+  }
+`;
+
+export const Cone = styled.img`
+  position: absolute;
+  margin-top: 70rem;
+  margin-left: 25%;
+  width: 90rem;
+
+  @media screen and (max-width: ${TABLET_MAX_WIDTH}) {
+    width: 120%;
+    margin-top: 125rem;
+    margin-left: -3.5rem;
   }
 `;
 
@@ -43,7 +63,9 @@ export const LandingContainer = styled.section`
   width: auto;
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
-    margin-bottom: 5rem;
+    margin: 0rem;
+    display: flex;
+    flex-direction: column;
   }
 `;
 
@@ -55,18 +77,34 @@ export const Title = styled.strong`
   align-items: center;
   height: 100%;
   padding: 1.6rem 0 1.6rem 4.4rem;
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    font-size: 1.8rem;
+  }
 `;
 
 export const FirstTitle = styled(Title)`
   grid-area: title;
   border-left: 1px solid rgba(255, 255, 255, 0.5);
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-`;
 
-export const SecondTitle = styled(Title)`
-  grid-area: secondTitle;
-  border-left: 1px solid rgba(255, 255, 255, 0.5);
-  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  & img {
+    display: none;
+  }
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    & {
+      padding: 0rem;
+      border-left: none;
+    }
+
+    & img {
+      display: block;
+      padding: 1rem;
+      margin-right: 1rem;
+      border-bottom: none;
+    }
+  }
 `;
 
 export const Star = styled.img`
@@ -75,6 +113,10 @@ export const Star = styled.img`
   grid-area: star;
   height: 100%;
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    display: none;
+  }
 `;
 
 export const Icon = styled.img`
@@ -83,6 +125,10 @@ export const Icon = styled.img`
   padding: 0 1.1rem;
   height: 100%;
   border-top: 1px solid rgba(255, 255, 255, 0.5);
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    display: none;
+  }
 `;
 
 export const FirstBlockContainer = styled.div`
@@ -93,6 +139,12 @@ export const FirstBlockContainer = styled.div`
 
   display: flex;
   flex-direction: row;
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    flex-direction: column;
+    padding: 2.4rem 1.6rem;
+    border-left: none;
+  }
 `;
 
 export const SecondBlockContainer = styled.div`
@@ -100,6 +152,10 @@ export const SecondBlockContainer = styled.div`
   height: 100%;
   border-left: 1px solid rgba(255, 255, 255, 0.5);
   grid-area: secondBlock;
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    border-left: none;
+  }
 `;
 
 export const Divider = styled.div`
@@ -113,6 +169,16 @@ export const Divider = styled.div`
     rgba(98, 92, 191, 0.15),
     rgba(14, 21, 44, 1) 95%
   );
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    background-image: linear-gradient(
+      to right,
+      rgba(14, 21, 44, 1),
+      rgba(252, 204, 80, 0.25) 30%,
+      rgba(197, 95, 163, 0.25),
+      rgba(14, 21, 44, 1) 95%
+    );
+  }
 `;
 
 export const DividerText = styled.p`
@@ -133,30 +199,85 @@ export const DividerText = styled.p`
 
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    text-align: start;
+    font-size: 6.4rem;
+    padding: 2.4rem 3rem;
+  }
 `;
 
 export const GradientText = styled(DividerText)`
   width: 50rem;
   border: none;
   text-align: left;
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    width: fit-content;
+    line-height: 1;
+    padding: 0;
+    padding-right: 1rem;
+  }
 `;
 
 export const TextContainer = styled.div`
   padding: 5rem 4rem;
   padding-right: 45rem;
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    padding: 0rem;
+  }
 `;
 
 export const SButton = styled(Button)`
   margin: 4.5rem 8rem 5rem auto;
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    margin: 6rem auto;
+  }
+`;
+
+export const SecondTitle = styled(Title)`
+  grid-area: secondTitle;
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+
+  & img {
+    display: none;
+  }
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0;
+    border-left: none;
+
+    & div {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      width: 100%;
+      justify-content: start;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    }
+
+    & img {
+      border-top: none;
+      display: block;
+      border-right: 1px solid rgba(255, 255, 255, 0.5);
+      height: 6.4rem;
+      width: 6.4rem;
+      padding: 1.8rem;
+      margin-right: 2rem;
+    }
+  }
 `;
 
 export const CommunityButton = styled(Button)`
   margin: 0 8rem 0 auto;
-`;
 
-export const Cone = styled.img`
-  position: absolute;
-  margin-top: 70rem;
-  margin-left: 25%;
-  width: 60%;
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    margin: 3rem auto;
+  }
 `;
