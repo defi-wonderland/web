@@ -9,6 +9,8 @@ import {
   MOBILE_MAX_WIDTH,
   SPACING_320,
 } from "~/components/common";
+import KEY from "~/assets/join-key.svg";
+import EYE from "~/assets/eye.svg";
 
 export const TitleContainer = styled.div`
   margin-top: ${SPACING_320};
@@ -30,29 +32,49 @@ export const WonderTitle = styled(GradientTitle)`
 
 export const TeamGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   margin: 100px 0px;
 
-  // TODO: improve members border
-  grid-gap: 0.15rem;
-  background-color: rgba(255, 255, 255, 0.5);
+  & .member {
+    border-right: 1px solid rgba(255, 255, 255, 0.4);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  }
+
+  & .member.member-2,
+  & .member.member-5,
+  & .member.member-8,
+  & .member.member-11,
+  & .member.member-14,
+  & .member.member-17 {
+    border-right: unset;
+  }
+
+  & .member.member-15,
+  & .member.member-16,
+  & .member.member-17 {
+    border-bottom: unset;
+  }
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     display: flex;
     flex-direction: column;
     grid-gap: 0.1rem;
     margin-top: 2rem;
+
+    & .member {
+      border: unset;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    }
   }
 `;
 
 export const MemberContainer = styled.div`
-  background-color: #0e152c;
-  /* border: 1px solid rgba(255, 255, 255, 0.5); */
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 20rem;
+  width: 45rem;
   padding: 2.4rem;
   cursor: pointer;
 
@@ -67,9 +89,14 @@ export const MemberContainer = styled.div`
     background-position: bottom;
   }
 
+  &:hover img {
+    opacity: 1;
+  }
+
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     & {
-      height: auto;
+      height: 18rem;
+      width: 100%;
     }
   }
 `;
@@ -79,7 +106,6 @@ export const Name = styled.strong`
   font-size: ${FONT_SIZE_24};
   text-transform: uppercase;
   opacity: 1 !important;
-  z-index: 100;
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     font-size: 2rem;
@@ -97,11 +123,10 @@ export const Position = styled.p`
   }
 `;
 
-export const SLink = styled(Link)`
+export const TwitterHandle = styled.span`
   font-family: ${FONT_MEDIUM};
   font-size: ${FONT_SIZE_18};
   color: rgba(255, 255, 255, 0.65);
-  z-index: 100;
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     font-size: 1.6rem;
@@ -127,4 +152,42 @@ export const Divider = styled.canvas`
     width: 2px;
     margin-top: 3rem;
   }
+`;
+
+export const JoinContainer = styled(Link)`
+  position: relative;
+  height: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-image: radial-gradient(
+    ellipse 50% 50%,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+
+  & p {
+    font-size: 2.4rem;
+  }
+`;
+
+export const KeyImage = styled.img.attrs({ src: KEY })`
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+`;
+
+export const EyeImage = styled(KeyImage).attrs({ src: EYE })`
+  opacity: 0;
+  bottom: 0;
+  right: 0;
+`;
+
+export const MemberLink = styled(Link)`
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 1;
 `;

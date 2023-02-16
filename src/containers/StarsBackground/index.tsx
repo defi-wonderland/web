@@ -24,7 +24,8 @@ export interface StarsContainerProps {
 }
 
 const StarsContainer = styled.div<StarsContainerProps>`
-  position: absolute;
+  position: relative;
+  width: 100%;
   top: 0;
   left: 0;
 
