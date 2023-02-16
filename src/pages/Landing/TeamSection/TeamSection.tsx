@@ -31,7 +31,6 @@ export function Team() {
             showThumbs={false}
             showIndicators={false}
             selectedItem={Math.ceil(lastIndex / 2)}
-            infiniteLoop
           >
             {MEMBERS.map((member) => (
               <NameContainer key={member.name}>
