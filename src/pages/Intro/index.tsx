@@ -12,7 +12,6 @@ import {
   Section,
 } from "~/components/common";
 import LogoImage from "~/assets/Logo.svg";
-import KEYHOLE from "~/assets/key.png";
 import VLINE from "~/assets/dotted_line.svg";
 import INTROKEY from "~/assets/intro_key.svg";
 import { StarsBackground } from "~/containers";
@@ -58,31 +57,41 @@ const Logo = styled.img`
   }
 `;
 
-const Keyhole = styled.img<StyledContainerProps>`
-  width: 4rem;
+const Keyhole = styled.div<StyledContainerProps>`
   pointer-events: none;
   opacity: ${(props) => 1 - props.backgroundEffect / 20};
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: -1rem;
+  background-image: url("/img/intro_bg.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: -1;
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
-    width: 3.5rem;
+    background-size: cover;
   }
 `;
 
 const DottedLine = styled.img`
-  margin: 2rem;
   pointer-events: none;
-
+  height: 20%;
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
-    height: 15rem;
+    height: 22%;
   }
 `;
 
 const KeyContainer = styled.div`
+  position: relative;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: auto;
-  padding: 4rem;
+  justify-content: end;
+  padding-bottom: 2.4rem;
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     padding: 2.4rem;
@@ -125,10 +134,7 @@ const KeyBox = styled.div`
 const Key = styled.img`
   position: relative;
   z-index: -1;
-
-  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
-    width: 7rem;
-  }
+  width: 7rem;
 `;
 
 const Mask = styled.div<StyledContainerProps>`
@@ -140,7 +146,7 @@ const Mask = styled.div<StyledContainerProps>`
   z-index: -1;
 
   background-image: radial-gradient(
-    circle at 50% 50%,
+    circle at 50% 55%,
     rgba(255, 255, 255, 0.08),
     rgba(14, 21, 44, 1) ${(props) => props.backgroundEffect / 4 || 0}%
   );
@@ -171,11 +177,7 @@ export function Intro() {
             <StarsBackground />
             <Mask backgroundEffect={backgroundEffect} />
             <KeyContainer>
-              <Keyhole
-                src={KEYHOLE}
-                alt="keyhole"
-                backgroundEffect={backgroundEffect}
-              />
+              <Keyhole backgroundEffect={backgroundEffect} />
 
               <DottedLine src={VLINE} alt="dotted line" />
               <Draggable
