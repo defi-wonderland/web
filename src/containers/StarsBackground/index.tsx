@@ -33,32 +33,56 @@ const StarsContainer = styled.div<StarsContainerProps>`
     width: 0.1rem;
     height: 0.1rem;
     box-shadow: ${(props) => generateStars(props.smStars)};
-    animation: animStar 701ms linear infinite;
+    animation: animStar ${getRandomInt(2000) + 1000}ms linear infinite;
     z-index: 100;
   }
 
   & .stars1 {
     width: 0.1rem;
     height: 0.1rem;
-
     box-shadow: ${(props) => generateStars(props.smStars)};
-    animation: animStar 701ms linear infinite;
+    animation: animStar ${getRandomInt(2000) + 1000}ms linear infinite;
     z-index: 100;
   }
 
   & .stars2 {
+    width: 0.1rem;
+    height: 0.1rem;
+    box-shadow: ${(props) => generateStars(props.smStars)};
+    animation: animStar ${getRandomInt(2000) + 1000}ms linear infinite;
+    z-index: 100;
+  }
+
+  & .stars3 {
+    width: 0.1rem;
+    height: 0.1rem;
+    box-shadow: ${(props) => generateStars(props.smStars)};
+    animation: animStar ${getRandomInt(2000) + 1000}ms linear infinite;
+    z-index: 100;
+  }
+
+  & .stars4 {
+    width: 0.1rem;
+    height: 0.1rem;
+
+    box-shadow: ${(props) => generateStars(props.smStars)};
+    animation: animStar ${getRandomInt(2000) + 1000}ms linear infinite;
+    z-index: 100;
+  }
+
+  & .stars5 {
     width: 0.2rem;
     height: 0.2rem;
     background: transparent;
     box-shadow: ${(props) => generateStars(props.mdStars)};
     animation: animStar 1213ms linear infinite;
   }
-  & .stars3 {
+  & .stars6 {
     width: 0.3rem;
     height: 0.3rem;
     background: transparent;
     box-shadow: ${(props) => generateStars(props.lgStars)};
-    animation: animStar2 1747ms linear infinite;
+    animation: animStar2 747ms linear infinite;
   }
 
   & div {
@@ -97,6 +121,9 @@ export function StarsBackground() {
       <div className="stars1"></div>
       <div className="stars2"></div>
       <div className="stars3"></div>
+      <div className="stars4"></div>
+      <div className="stars5"></div>
+      <div className="stars6"></div>
     </StarsContainer>
   );
 }
