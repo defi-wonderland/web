@@ -35,13 +35,7 @@ export const TeamGrid = styled.div`
   grid-template-columns: repeat(3, 1fr);
   margin: 100px 0px;
 
-  & .member-0,
-  & .member-1 {
-    border-right: 1px solid rgba(255, 255, 255, 0.4);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
-  }
-
-  & .member-2 {
+  & .member {
     border-right: 1px solid rgba(255, 255, 255, 0.4);
     border-bottom: 1px solid rgba(255, 255, 255, 0.4);
   }
@@ -53,15 +47,12 @@ export const TeamGrid = styled.div`
   & .member.member-14,
   & .member.member-17 {
     border-right: unset;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
   }
 
-  & .member {
-    border-right: 1px solid rgba(255, 255, 255, 0.4);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
-  }
-
-  @media screen and (max-width: 600px) {
+  & .member.member-15,
+  & .member.member-16,
+  & .member.member-17 {
+    border-bottom: unset;
   }
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
