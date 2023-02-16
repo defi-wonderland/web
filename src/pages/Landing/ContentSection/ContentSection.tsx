@@ -26,57 +26,54 @@ import { Link } from "~/components/common";
 
 export function ContentSection() {
   return (
-    <>
+    <LandingContainer>
       <BackgroundContainer>
         <BG_1 type="1" align="center" />
         <Cone src={ConeBackground} alt="cone image" />
       </BackgroundContainer>
-
-      <LandingContainer>
+      <Star src={StarIcon} alt="Star icon" />
+      <FirstTitle>
         <Star src={StarIcon} alt="Star icon" />
-        <FirstTitle>
-          <Star src={StarIcon} alt="Star icon" />
-          developing for a greater good
-        </FirstTitle>
+        developing for a greater good
+      </FirstTitle>
 
-        <FirstBlockContainer>
-          <TextContainer>
-            <GradientText>To</GradientText>
-            <GradientText>become part</GradientText>
-            <GradientText>of</GradientText>
-            <GradientText>something bigger</GradientText>
-            <GradientText>than</GradientText>
-            <GradientText>ourselves</GradientText>
-          </TextContainer>
+      <FirstBlockContainer>
+        <TextContainer>
+          <GradientText>To</GradientText>
+          <GradientText>become part</GradientText>
+          <GradientText>of</GradientText>
+          <GradientText>something bigger</GradientText>
+          <GradientText>than</GradientText>
+          <GradientText>ourselves</GradientText>
+        </TextContainer>
 
-          <RightCard />
-        </FirstBlockContainer>
+        <RightCard />
+      </FirstBlockContainer>
 
-        <Divider>
-          <DividerText>WONDERLAND IN PROGRESS...</DividerText>
-        </Divider>
+      <Divider>
+        <DividerText>WONDERLAND IN PROGRESS...</DividerText>
+      </Divider>
 
-        <SecondBlockContainer>
-          <ProjectsList />
+      <SecondBlockContainer>
+        <ProjectsList />
 
-          <SButton>
-            <Link to="/portfolio">FULL PORTFOLIO</Link>
-          </SButton>
+        <SButton>
+          <Link to="/portfolio">FULL PORTFOLIO</Link>
+        </SButton>
 
-          <Team />
-        </SecondBlockContainer>
+        <Team />
+      </SecondBlockContainer>
 
-        <Icon src={Flower} alt="flower icon" />
-        <SecondTitle>
-          <div>
-            <Icon src={Flower} alt="flower icon" />
-            fix-to-earn
-          </div>
-          <CommunityButton>
-            <Link to="/team">VIEW ALL COMMUNITY</Link>
-          </CommunityButton>
-        </SecondTitle>
-      </LandingContainer>
-    </>
+      <Icon src={Flower} alt="flower icon" />
+      <SecondTitle>
+        <div>
+          <Icon src={Flower} alt="flower icon" />
+          fix-to-earn
+        </div>
+        <CommunityButton>
+          <Link to="/team">VIEW ALL COMMUNITY</Link>
+        </CommunityButton>
+      </SecondTitle>
+    </LandingContainer>
   );
 }

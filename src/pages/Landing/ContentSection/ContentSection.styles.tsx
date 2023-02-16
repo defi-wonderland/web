@@ -6,6 +6,7 @@ import {
   FONT_DISPLAY,
   FONT_MEDIUM_L,
   MOBILE_MAX_WIDTH,
+  PAGE_MAX_WIDTH,
   SectionBackground,
   TABLET_MAX_WIDTH,
 } from "~/components/common";
@@ -20,7 +21,6 @@ export const BackgroundContainer = styled.div`
   justify-content: center;
 
   @media screen and (max-width: ${TABLET_MAX_WIDTH}) {
-    position: relative;
     right: -5rem;
   }
 `;
@@ -29,9 +29,18 @@ export const BG_1 = styled(SectionBackground)`
   position: relative;
   width: 50%;
   margin: 0 auto;
-  margin-top: 120rem;
+  margin-top: 20rem;
+
+  @media screen and (max-width: ${PAGE_MAX_WIDTH}) {
+    margin-top: 40rem;
+  }
 
   @media screen and (max-width: ${TABLET_MAX_WIDTH}) {
+    width: 100%;
+    margin-top: 10rem;
+  }
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     position: absolute;
     width: 150%;
     margin-top: 110rem;
@@ -40,13 +49,17 @@ export const BG_1 = styled(SectionBackground)`
 
 export const Cone = styled.img`
   position: absolute;
-  margin-top: 70rem;
   margin-left: 25%;
   width: 90rem;
 
   @media screen and (max-width: ${TABLET_MAX_WIDTH}) {
-    width: 120%;
+    margin-right: -10rem;
     margin-top: 125rem;
+  }
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    width: 120%;
+    margin-right: unset;
     margin-left: -3.5rem;
   }
 `;
@@ -54,6 +67,9 @@ export const Cone = styled.img`
 export const LandingContainer = styled.section`
   width: 100%;
   margin: 5rem auto 10rem;
+  padding: 5rem;
+  position: relative;
+  left: -2.5rem;
   display: grid;
   grid-template-areas:
     "star title"
@@ -61,10 +77,12 @@ export const LandingContainer = styled.section`
     "empty landingDivider"
     "empty secondBlock"
     "icon secondTitle";
-  width: auto;
+  grid-template-columns: 5rem auto;
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
-    margin: 0rem;
+    padding: 0;
+    margin: 0;
+    left: 0;
     display: flex;
     flex-direction: column;
   }
@@ -140,8 +158,9 @@ export const FirstBlockContainer = styled.div`
 
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 
-  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+  @media screen and (max-width: ${TABLET_MAX_WIDTH}) {
     flex-direction: column;
     padding: 2.4rem 1.6rem;
     border-left: none;
@@ -156,6 +175,7 @@ export const SecondBlockContainer = styled.div`
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     border-left: none;
+    padding-left: 1.6rem;
   }
 `;
 
@@ -224,11 +244,6 @@ export const GradientText = styled(DividerText)`
 
 export const TextContainer = styled.div`
   padding: 5rem 4rem;
-  padding-right: 35rem;
-
-  @media screen and (max-width: ${TABLET_MAX_WIDTH}) {
-    padding-right: 25rem;
-  }
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     padding: 0rem;
