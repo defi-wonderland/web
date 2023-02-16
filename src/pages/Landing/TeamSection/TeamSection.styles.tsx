@@ -1,14 +1,11 @@
 import styled from "styled-components";
+import { Carousel } from "react-responsive-carousel";
 
 import {
   FONT_DISPLAY,
   FONT_MEDIUM_L,
   MOBILE_MAX_WIDTH,
 } from "~/components/common";
-import Crown from "~/assets/crown_icon.svg";
-import Key from "~/assets/key.png";
-import ArrowLeft from "~/assets/arrow_left.svg";
-import ArrowRight from "~/assets/arrow.svg";
 
 export const TeamContainer = styled.div`
   display: flex;
@@ -47,10 +44,20 @@ export const CrownIcon = styled.img`
   }
 `;
 
+export const KeyContainer = styled.div`
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3rem;
+  overflow: hidden;
+`;
+
 export const Keyhole = styled.img`
   position: absolute;
   margin: 0 auto;
-
+  top: 1rem;
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     height: 24rem;
   }
@@ -81,14 +88,92 @@ export const ArrowIcon = styled.img`
   }
 `;
 
+export const CarouselContainer = styled(Carousel)`
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 35rem;
+  margin: 0 auto;
+
+  & .carousel.carousel-slider,
+  & .slider-wrapper.axis-horizontal {
+    overflow: unset;
+    width: 28rem;
+  }
+
+  & .slide.selected {
+    opacity: 1;
+    transform: unset;
+    filter: unset;
+  }
+
+  & .slide {
+    opacity: 0.4;
+    transform: scale(0.8);
+    filter: blur(3px);
+  }
+
+  & .control-arrow.control-prev {
+    height: 7.2rem;
+    width: 7.2rem;
+    top: unset;
+    bottom: -1.5rem;
+    left: 9rem;
+    background-image: url("/img/arrow_left.svg") !important;
+  }
+
+  & .control-arrow.control-next {
+    height: 7.2rem;
+    width: 7.2rem;
+    top: unset;
+    bottom: -1.5rem;
+    right: 9rem;
+    background-image: url("/img/arrow.svg") !important;
+  }
+
+  & .control-next::before,
+  .control-prev::before {
+    opacity: 0;
+  }
+
+  & .control-arrow.control-prev:hover,
+  .control-arrow.control-next:hover {
+    background-color: transparent;
+  }
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    height: 12rem;
+    margin: 10rem 0;
+
+    & .control-arrow.control-prev {
+      left: 9rem;
+      bottom: -1.5rem;
+    }
+
+    & .control-arrow.control-next {
+      right: 9rem;
+      bottom: -1.5rem;
+    }
+
+    & .carousel.carousel-slider,
+    & .slider-wrapper.axis-horizontal {
+      overflow: unset;
+      width: 20rem;
+    }
+  }
+`;
+
 export const NameContainer = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: fit-content;
+  margin: 0 auto;
   height: 55rem;
-  width: 100%;
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     height: 30rem;
@@ -108,22 +193,3 @@ export const Position = styled.span`
   color: rgba(255, 255, 255, 0.65);
   padding: 0.8rem;
 `;
-
-export function Team() {
-  return (
-    <TeamContainer>
-      <CrownIcon src={Crown} alt="crown icon" />
-      <TeamTitle>THE POWER OF THE PEOPLE</TeamTitle>
-
-      <NameContainer>
-        <Keyhole src={Key} alt="crown icon" />
-        <Name>MATIAS NISENSON</Name>
-        <Position>Co-Founder</Position>
-      </NameContainer>
-      <ButtonsContainer>
-        <ArrowIcon src={ArrowLeft} alt="arrow left" />
-        <ArrowIcon src={ArrowRight} alt="arrow right" />
-      </ButtonsContainer>
-    </TeamContainer>
-  );
-}

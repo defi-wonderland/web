@@ -18,11 +18,10 @@ import {
 } from "./ContentSection.styles";
 import { ProjectsList } from "~/pages/Portfolio/ProjectsList";
 import { RightCard } from "./RightCard";
-import { Team } from "./TeamSection";
+import { Team } from "../TeamSection";
 import StarIcon from "/img/footer/star-icon.svg";
 import Flower from "~/assets/flower.svg";
 import ConeBackground from "~/assets/landing_bg.png";
-
 import { Link } from "~/components/common";
 
 export function ContentSection() {
@@ -32,9 +31,13 @@ export function ContentSection() {
         <BG_1 type="1" align="center" />
         <Cone src={ConeBackground} alt="cone image" />
       </BackgroundContainer>
+
       <LandingContainer>
         <Star src={StarIcon} alt="Star icon" />
-        <FirstTitle>developing for a greater good</FirstTitle>
+        <FirstTitle>
+          <Star src={StarIcon} alt="Star icon" />
+          developing for a greater good
+        </FirstTitle>
 
         <FirstBlockContainer>
           <TextContainer>
@@ -57,7 +60,7 @@ export function ContentSection() {
           <ProjectsList />
 
           <SButton>
-            <Link to="/">FULL PORTFOLIO</Link>
+            <Link to="/portfolio">FULL PORTFOLIO</Link>
           </SButton>
 
           <Team />
@@ -65,9 +68,12 @@ export function ContentSection() {
 
         <Icon src={Flower} alt="flower icon" />
         <SecondTitle>
-          fix-to-earn
+          <div>
+            <Icon src={Flower} alt="flower icon" />
+            fix-to-earn
+          </div>
           <CommunityButton>
-            <Link to="/">VIEW ALL COMMUNITY</Link>
+            <Link to="/team">VIEW ALL COMMUNITY</Link>
           </CommunityButton>
         </SecondTitle>
       </LandingContainer>

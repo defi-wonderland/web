@@ -12,13 +12,14 @@
     "fontfaceobserver": "2.3.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-draggable": "4.4.5",
     "react-markdown": "8.0.5",
+    "react-responsive-carousel": "3.2.23",
     "react-router-dom": "6.8.0",
     "react-text-fun": "1.0.0",
+    "react-transition-group": "4.4.5",
     "rehype-katex": "6.0.2",
     "remark-math": "5.1.1",
-    "react-draggable": "4.4.5",
-    "react-transition-group": "4.4.5",
     "styled-components": "5.3.5"
   },
   "devDependencies": {

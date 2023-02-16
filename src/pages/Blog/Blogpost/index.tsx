@@ -5,25 +5,39 @@ import rehypeKatex from "rehype-katex";
 import styled from "styled-components";
 import ReactMarkdown from "react-markdown";
 
-import { FONT_DISPLAY, FONT_SIZE_40 } from "~/components/common";
+const Background = styled.div`
+  width: 100%;
+  height: 100%;
+  padding-top: 20rem;
+`;
 
 const Content = styled.div`
   max-width: 80rem;
   margin-top: 20rem;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.87) !important;
+  padding: 1.6rem 3.2rem;
+  font-size: 1.9rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue",
+    Helvetica, Roboto, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
 
   h1 {
-    font-family: ${FONT_DISPLAY};
-    font-size: ${FONT_SIZE_40};
+    font-size: 4rem;
     padding: 1rem 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   }
 
-  p {
+  p,
+  strong,
+  span,
+  li {
     padding: 0.8rem 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue",
-      Helvetica, Roboto, Arial, sans-serif, "Apple Color Emoji",
-      "Segoe UI Emoji", "Segoe UI Symbol";
     font-weight: 100;
+  }
+
+  li {
+    padding: 0.5rem 0;
   }
 
   [aria-hidden="true"] {
@@ -34,6 +48,12 @@ const Content = styled.div`
     width: 100%;
     padding: 1rem 3rem;
   }
+
+  a {
+    color: rgba(255, 255, 255, 0.87);
+    font-weight: 500;
+    text-decoration: underline;
+  }
 `;
 
 export function Blogpost() {
@@ -41,9 +61,6 @@ export function Blogpost() {
   const [blog, setBlog] = useState("");
 
   useEffect(() => {
-    // temporary fixed value:
-    const id = 1;
-
     fetch(`/archives/${id}.md`)
       .then((response) => response.text())
       .then((data) => {
@@ -53,14 +70,16 @@ export function Blogpost() {
 
   return (
     <>
-      <Content>
-        <ReactMarkdown
-          remarkPlugins={[remarkMath]}
-          rehypePlugins={[rehypeKatex]}
-        >
-          {blog}
-        </ReactMarkdown>
-      </Content>
+      <Background>
+        <Content>
+          <ReactMarkdown
+            remarkPlugins={[remarkMath]}
+            rehypePlugins={[rehypeKatex]}
+          >
+            {blog}
+          </ReactMarkdown>
+        </Content>
+      </Background>
     </>
   );
 }
