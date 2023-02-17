@@ -1,12 +1,13 @@
 import { Outlet } from "react-router-dom";
 
 import { PageContent } from "~/components/app";
-import { Footer, Navbar } from "~/containers";
+import { Footer, Navbar, StarsBackground } from "~/containers";
 
 export function Home() {
   return (
     <>
       <Navbar />
+      <StarsBackground />
       <PageContent>
         <Outlet />
       </PageContent>

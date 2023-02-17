@@ -17,7 +17,6 @@ import { ProjectsList } from "./ProjectsList";
 import { Distortion } from "~/components/common/DistortionText";
 import { Divider } from "./ProjectsList/ProjectsList.styles";
 import { useWindowDimensions } from "~/hooks/windowDimensions";
-import { StarsBackground } from "~/containers";
 
 export function Portfolio() {
   const { isMobile } = useWindowDimensions();
@@ -25,7 +24,6 @@ export function Portfolio() {
   return (
     <>
       <Container>
-        <StarsBackground />
         <BackgroundContainer>
           <BG_1 type="2" align="center" />
           <BG_2 type="1" align="left" />
