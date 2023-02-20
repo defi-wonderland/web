@@ -21,6 +21,7 @@ export interface StarsContainerProps {
   smStars: number;
   mdStars: number;
   lgStars: number;
+  zIndex?: number;
 }
 
 const StarsContainer = styled.div<StarsContainerProps>`
@@ -28,6 +29,7 @@ const StarsContainer = styled.div<StarsContainerProps>`
   width: 100%;
   top: 0;
   left: 0;
+  z-index: ${(props) => props.zIndex || 0};
 
   & .stars {
     width: 0.1rem;
@@ -114,9 +116,13 @@ const StarsContainer = styled.div<StarsContainerProps>`
   }
 `;
 
-export function StarsBackground() {
+interface BackgroundProps {
+  zIndex?: number;
+}
+
+export function StarsBackground({ zIndex }: BackgroundProps) {
   return (
-    <StarsContainer smStars={700} mdStars={700} lgStars={50}>
+    <StarsContainer smStars={700} mdStars={700} lgStars={50} zIndex={zIndex}>
       <div className="stars"></div>
       <div className="stars1"></div>
       <div className="stars2"></div>

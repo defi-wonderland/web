@@ -6,7 +6,6 @@ import {
   NAVBAR_INDEX,
   Section,
 } from "~/components/common";
-import { StarsBackground } from "~/containers";
 
 export interface StyledContainerProps {
   backgroundEffect: number;
@@ -149,11 +148,4 @@ export const Mask = styled.div<StyledContainerProps>`
 export const Mask2 = styled(Mask)<StyledContainerProps>`
   right: 0;
   left: unset;
-`;
-
-export const SBackground = styled(StarsBackground)<StyledContainerProps>`
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 100;
 `;

@@ -4,13 +4,13 @@ import { PageView } from "~/components/app";
 import ScrollToTop from "./hooks/ScrollToTop";
 import {
   Landing,
-  Intro,
   Team,
   Home,
   Lore,
   Portfolio,
   Blog,
   Blogpost,
+  IntroductionPage,
 } from "./pages";
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
       <BrowserRouter>
         <ScrollToTop />
         <Routes>
-          <Route path="/" element={<Intro />} />
+          <Route path="/" element={<IntroductionPage />} />
           <Route path="*" element={<Home />}>
             <Route path="landing" element={<Landing />} />
             <Route path="lore" element={<Lore />} />
