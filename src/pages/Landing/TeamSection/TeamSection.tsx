@@ -30,7 +30,7 @@ export function Team() {
             showStatus={false}
             showThumbs={false}
             showIndicators={false}
-            selectedItem={Math.ceil(lastIndex / 2)}
+            selectedItem={0}
           >
             {MEMBERS.map((member) => (
               <NameContainer key={member.name}>
