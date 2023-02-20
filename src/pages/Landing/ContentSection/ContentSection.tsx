@@ -4,6 +4,7 @@ import {
   CommunityButton,
   Cone,
   Divider,
+  DividerLine,
   DividerText,
   FirstBlockContainer,
   FirstTitle,
@@ -52,7 +53,9 @@ export function ContentSection() {
       </FirstBlockContainer>
 
       <Divider>
+        <DividerLine />
         <DividerText>WONDERLAND IN PROGRESS...</DividerText>
+        <DividerLine />
       </Divider>
 
       <SecondBlockContainer>

@@ -198,6 +198,17 @@ export const Divider = styled.div`
   }
 `;
 
+export const DividerLine = styled.div`
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(255, 255, 255, 0.5) 50%,
+    rgba(14, 21, 44, 0) 100%
+  );
+  height: 1px;
+  width: 100%;
+`;
+
 export const DividerText = styled.p`
   font-family: ${FONT_DISPLAY};
   font-weight: 300;
@@ -213,9 +224,6 @@ export const DividerText = styled.p`
   -webkit-background-clip: text;
   color: transparent;
   -webkit-text-fill-color: transparent;
-
-  border-top: 1px solid rgba(255, 255, 255, 0.5);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     text-align: start;
