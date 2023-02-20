@@ -50,7 +50,7 @@ export const HeroSection: FC<HeroSectionProps> = ({ ...props }) => {
       </StyledHeroSection>
 
       {isMobile && (
-        <SDistortion text="TO HELP THE WEB3 ECOSYSTEM THRIVE" fontSize={48} />
+        <SDistortion text="TO HELP THE WEB3 ECOSYSTEM THRIVE" fontSize={45} />
       )}
     </>
   );
