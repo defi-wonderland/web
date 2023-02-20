@@ -20,6 +20,7 @@ import { ProjectsList } from "~/pages/Portfolio/ProjectsList";
 import { RightCard } from "./RightCard";
 import { Team } from "../TeamSection";
 import StarIcon from "/img/footer/star-icon.svg";
+import MobileStar from "~/assets/lore-stars.svg";
 import Flower from "~/assets/flower.svg";
 import ConeBackground from "~/assets/landing_bg.png";
 import { Link } from "~/components/common";
@@ -33,7 +34,7 @@ export function ContentSection() {
       </BackgroundContainer>
       <Star src={StarIcon} alt="Star icon" />
       <FirstTitle>
-        <Star src={StarIcon} alt="Star icon" />
+        <Star src={MobileStar} alt="Star icon" />
         developing for a greater good
       </FirstTitle>
 
