@@ -38,7 +38,7 @@ export const Distortion = ({ text, fontSize }: DistortionProps) => {
             distortX={0.2}
             distortY={0.5}
             noiseAmplitude={0.02}
-            noiseVolatility={5}
+            noiseVolatility={3}
             paddingLeft={20}
             paddingRight={20}
           />
