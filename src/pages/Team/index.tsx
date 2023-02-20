@@ -1,6 +1,5 @@
 import { WonderTeamSection } from "./TeamGrid.tsx";
 import { BackgroundImg, Container, HeroDivider, TeamBall } from "./Team.styles";
-import { StarsBackground } from "~/containers";
 import { LiquidDistortion } from "~/components/common";
 import { useWindowDimensions } from "~/hooks/windowDimensions";
 
@@ -9,7 +8,6 @@ export function Team() {
 
   return (
     <>
-      <StarsBackground />
       <BackgroundImg type="3" align="center" />
       <Container>
         <HeroDivider>
