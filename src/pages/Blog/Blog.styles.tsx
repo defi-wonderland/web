@@ -45,7 +45,7 @@ export const BlogsContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  max-width: 116rem;
+  max-width: 107rem;
   justify-content: space-between;
   margin: 0 auto;
 
