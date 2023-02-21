@@ -73,7 +73,7 @@ export const Footer = ({}: FooterProps) => (
 
       <FooterSocial>
         <span>
-          <span>© 2022. DeFi Wonderland. </span>
+          <span>© 2023. Wonder LTD. </span>
           <span>All Right Reserved</span>
         </span>
 
