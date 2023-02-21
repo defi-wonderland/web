@@ -41,17 +41,16 @@ export const HeroSection: FC<HeroSectionProps> = ({ ...props }) => {
         {...props}
       >
         {!isMobile && (
-          <SDistortion
+          <Distortion
             text="TO HELP THE WEB3 ECOSYSTEM THRIVE"
             fontSize={isTablet ? 100 : 120}
           />
         )}
+        {isMobile && (
+          <SDistortion text="TO HELP THE WEB3 ECOSYSTEM THRIVE" fontSize={45} />
+        )}
         <HeroDivider src="/img/hero/hero-bg-divider.png" />
       </StyledHeroSection>
-
-      {isMobile && (
-        <SDistortion text="TO HELP THE WEB3 ECOSYSTEM THRIVE" fontSize={45} />
-      )}
     </>
   );
 };
