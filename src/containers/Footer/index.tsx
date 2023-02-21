@@ -45,7 +45,14 @@ export const Footer = ({}: FooterProps) => (
           <VectorImg />
         </VectorContainer>
 
-        <Link to="/team">About us</Link>
+        <Link
+          to="/team"
+          onClick={() => {
+            if (location.pathname === "/team") window.scrollTo(0, 0);
+          }}
+        >
+          About us
+        </Link>
         <Plus src={PlusIcon} alt="Plus icon" />
         <Link
           to="https://docs.google.com/forms/d/1n70jsL4sFkOwPNBTdciPqlWF2RirgQwejjztpS4-2L8/viewform"
@@ -54,7 +61,14 @@ export const Footer = ({}: FooterProps) => (
           Join us
         </Link>
         <Plus src={PlusIcon} alt="Plus icon" />
-        <Link to="/portfolio">Portfolio</Link>
+        <Link
+          to="/portfolio"
+          onClick={() => {
+            if (location.pathname === "/portfolio") window.scrollTo(0, 0);
+          }}
+        >
+          Portfolio
+        </Link>
       </FooterActions>
 
       <FooterSocial>
