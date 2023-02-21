@@ -34,6 +34,11 @@ export const BackgroundImage = styled(SectionBackground)`
 export const Title = styled.div`
   margin-top: 16rem;
   margin-bottom: 10rem;
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    margin-top: 10rem;
+    margin-bottom: 5rem;
+  }
 `;
 
 export const BlogsContainer = styled.div`
@@ -58,7 +63,7 @@ export const BlogsContainer = styled.div`
 `;
 
 export const BlogPost = styled.div`
-  width: 56rem;
+  width: calc(50% - 2rem);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -77,7 +82,6 @@ export const BlogPost = styled.div`
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     width: calc(100% - 3rem);
-    height: 36rem;
   }
 `;
 
@@ -110,15 +114,22 @@ export const TitleContainer = styled.div`
     font-family: ${FONT_MEDIUM_L};
     font-size: 2rem;
   }
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    padding: 1.6rem;
+  }
 `;
 
 export const DescriptionContainer = styled.div`
   padding: 4rem 4rem 0;
-  height: 12rem;
   width: 100%;
   & p {
     font-family: ${FONT_MEDIUM};
     font-size: 1.8rem;
+  }
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    padding: 2rem 2rem 0;
   }
 `;
 
@@ -129,6 +140,10 @@ export const TagsContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   font-family: ${FONT_MEDIUM};
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    padding: 1.6rem 2rem;
+  }
 `;
 
 export const Date = styled.div``;

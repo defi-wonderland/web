@@ -17,14 +17,27 @@ import {
   Image,
   Tags,
 } from "./Blog.styles";
+import { useWindowDimensions } from "~/hooks/windowDimensions";
 
 export function Blog() {
   const navigate = useNavigate();
+  const { isMobile } = useWindowDimensions();
 
   return (
     <PageContainer>
       <Title>
-        <Distortion text="News, stories and updates from Wonderland" />
+        {!isMobile && (
+          <>
+            <Distortion text="News, stories and" />
+            <Distortion text="updates from Wonderland" />
+          </>
+        )}
+        {isMobile && (
+          <>
+            <Distortion text="News, stories and" fontSize={55} />
+            <Distortion text="updates from Wonderland" fontSize={55} />
+          </>
+        )}
       </Title>
       <BgContainer>
         <BackgroundImage type="1" align="center" />
