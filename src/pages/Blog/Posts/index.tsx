@@ -12,9 +12,11 @@ export function Posts() {
   const [blog, setBlog] = useState("");
 
   useEffect(() => {
-    import(`/archives/${id}.md?raw`).then((data) => {
-      setBlog(data.default);
-    });
+    fetch(`/archives/${id}.md`)
+      .then((response) => response.text())
+      .then((data) => {
+        setBlog(data);
+      });
   }, []);
 
   return (
