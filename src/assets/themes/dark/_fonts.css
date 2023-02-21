@@ -49,6 +49,5 @@
   font-family: Inter;
   src: local(Inter),
     url(/src/assets/themes/dark/fonts/Inter.ttf) format("opentype");
-  font-weight: 500;
   font-stretch: normal;
 }

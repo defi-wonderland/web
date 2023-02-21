@@ -31,13 +31,28 @@ const Content = styled.div`
     margin-bottom: 1rem;
   }
 
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: Inter, sans-serif !important;
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+  }
+
   p,
   strong,
   span,
   li {
+    font-family: Inter, sans-serif;
     font-size: 1.4rem;
     padding: 0.8rem 0;
-    font-weight: 100;
+    font-weight: 300;
+  }
+
+  strong {
+    font-weight: 600;
   }
 
   li {
@@ -64,6 +79,9 @@ const Content = styled.div`
     border-left: 2px solid rgba(255, 255, 255, 0.87);
     padding-left: 1rem;
     font-style: italic;
+  }
+
+  blockquote p {
     font-family: Inter-italic;
   }
 
@@ -85,7 +103,6 @@ export function Blogpost() {
   }, []);
 
   useEffect(() => {
-    window.scrollTo(0, 0);
     const date = document.getElementsByClassName("date");
     if (blog && !date[0]) {
       const blogNumber = location.pathname.split("/");
