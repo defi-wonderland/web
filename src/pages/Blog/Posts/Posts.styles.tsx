@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { MOBILE_MAX_WIDTH } from "~/components/common";
 
 export const Background = styled.div`
   padding: 1rem 5rem;
@@ -6,6 +7,11 @@ export const Background = styled.div`
   margin-top: 18rem;
   background-color: rgba(10, 13, 23, 1);
   z-index: 1;
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    margin-top: unset;
+    padding: 8rem 0;
+  }
 `;
 
 export const Content = styled.div`
@@ -31,7 +37,6 @@ export const Content = styled.div`
   h6 {
     font-family: Inter, sans-serif !important;
     padding: 1rem 0;
-    margin-bottom: 1rem;
   }
 
   p,
