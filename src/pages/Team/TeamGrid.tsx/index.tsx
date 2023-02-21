@@ -38,7 +38,10 @@ export function WonderTeamSection() {
             </MemberLink>
           </MemberContainer>
         ))}
-        <JoinContainer to="#" external>
+        <JoinContainer
+          to="https://docs.google.com/forms/d/1n70jsL4sFkOwPNBTdciPqlWF2RirgQwejjztpS4-2L8/viewform"
+          external
+        >
           <Name className="gradient">JOIN US</Name>
           <KeyImage />
         </JoinContainer>
