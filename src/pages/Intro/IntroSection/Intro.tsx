@@ -31,9 +31,7 @@ export function Intro() {
 
   useEffect(() => {
     if (showBackground) {
-      setTimeout(() => {
-        navigate("/landing");
-      }, 1000);
+      navigate("/landing");
     }
   }, [showBackground]);
 
@@ -60,7 +58,7 @@ export function Intro() {
                 bounds={{ bottom: 0, top: -350 }}
                 nodeRef={nodeRef}
                 onStop={(event, node) => {
-                  if (node.lastY < -250) {
+                  if (node.lastY < -50) {
                     setShowBackground(true);
                   }
                 }}
