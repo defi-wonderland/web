@@ -18,9 +18,7 @@ const Content = styled.div`
   color: rgba(255, 255, 255, 0.87) !important;
   padding: 1.6rem 3.2rem;
   font-size: 1.9rem;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue",
-    Helvetica, Roboto, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol";
+  font-family: "Inter", sans-serif;
 
   h1 {
     font-size: 4rem;
