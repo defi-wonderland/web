@@ -11,7 +11,6 @@ export const Background = styled.div`
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     margin-top: unset;
-    padding: 8rem 0;
   }
 `;
 
@@ -20,6 +19,10 @@ export const Banner = styled.img`
   height: 30rem;
   object-fit: cover;
   object-position: center;
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    height: 20rem;
+  }
 `;
 
 export const Content = styled.div`
@@ -111,5 +114,31 @@ export const Content = styled.div`
 
   math {
     font-size: 1.8rem;
+  }
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    padding: 2rem 0 0;
+
+    h1 {
+      font-size: 3rem;
+    }
+
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      padding: 0 1.6rem;
+    }
+
+    blockquote {
+      padding-left: 1.6rem;
+    }
+
+    ul {
+      padding-right: 1.6rem;
+    }
   }
 `;

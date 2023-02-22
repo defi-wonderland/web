@@ -66,7 +66,7 @@ export function Blog() {
                   <p>{post.date}</p>
                 </Date>
                 {post.tags.map((tag) => (
-                  <Tags>
+                  <Tags key={tag}>
                     <strong>{tag}</strong>
                   </Tags>
                 ))}
