@@ -121,6 +121,12 @@ export const TitleContainer = styled.div`
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     padding: 1.6rem;
+
+    & h1 {
+      white-space: unset;
+      text-overflow: unset;
+      overflow: unset;
+    }
   }
 `;
 
