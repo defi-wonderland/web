@@ -95,5 +95,9 @@ export const Content = styled.div`
 
   math {
     font-size: 1.8rem;
+    display: none;
+  }
+  img {
+    display: none;
   }
 `;
