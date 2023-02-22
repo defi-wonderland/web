@@ -140,7 +140,7 @@ export const FlipCard = styled.button`
 
   &:active .flip-card-inner,
   &:focus .flip-card-inner {
-    transform: rotate3d(1, -1, 0, 180deg);
+    transform: rotateX(-180deg);
   }
 `;
 
@@ -193,7 +193,7 @@ export const MemberContainerBack = styled(MemberContainerFront)`
     url("/img/lore/002_grad.jpg");
   background-size: cover;
   background-position: bottom;
-  transform: rotate3d(1, -1, 0, 180deg);
+  transform: rotateX(-180deg);
 
   & img {
     opacity: 1;
