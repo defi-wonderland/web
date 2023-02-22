@@ -75,6 +75,7 @@ export const BlogPost = styled.div`
   border-radius: 1rem;
   cursor: pointer;
   transition: all 200ms linear;
+  overflow: hidden;
 
   &:hover {
     transform: scale(1.005);
@@ -88,7 +89,6 @@ export const BlogPost = styled.div`
 export const Image = styled.img`
   width: 100%;
   height: 21rem;
-  border-radius: 1rem 1rem 0 0;
   object-fit: cover;
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {

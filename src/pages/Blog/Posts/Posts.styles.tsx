@@ -3,9 +3,9 @@ import { MOBILE_MAX_WIDTH } from "~/components/common";
 
 export const Background = styled.div`
   max-width: 105rem;
-  padding: 1rem 6rem;
-  border-radius: 2rem;
-  margin-top: 18rem;
+  overflow: hidden;
+  border-radius: 1rem;
+  margin-top: 12rem;
   background-color: rgba(10, 13, 23, 1);
   z-index: 1;
 
@@ -15,8 +15,16 @@ export const Background = styled.div`
   }
 `;
 
+export const Banner = styled.img`
+  width: 100%;
+  height: 30rem;
+  object-fit: cover;
+  object-position: center;
+`;
+
 export const Content = styled.div`
   margin-top: 20rem;
+  padding: 4rem 6rem;
   margin: 0 auto;
   color: rgba(255, 255, 255, 0.87) !important;
   font-size: 1.75rem;
@@ -55,6 +63,10 @@ export const Content = styled.div`
     letter-spacing: -0.004px;
     color: #ffffffb3;
     padding: 0 2.4rem;
+  }
+
+  span {
+    padding: unset;
   }
 
   strong {

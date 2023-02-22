@@ -44,7 +44,15 @@ export function Blog() {
       </BgContainer>
       <BlogsContainer>
         {POSTS.map((post) => (
-          <BlogPost key={post.id} onClick={() => navigate(`/blog/${post.id}`)}>
+          <BlogPost
+            key={post.id}
+            onClick={() =>
+              navigate({
+                pathname: `/blog/${post.id}`,
+                search: `?${post.name}`,
+              })
+            }
+          >
             <Image src={post.image} />
             <DetailsContainer>
               <TitleContainer>
