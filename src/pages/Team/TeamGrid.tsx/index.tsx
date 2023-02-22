@@ -1,4 +1,5 @@
 import {
+  Container,
   Divider,
   MemberContainerFront,
   MemberContainerBack,
@@ -19,7 +20,7 @@ import { MEMBERS } from "~/constants/teamMembers";
 
 export function WonderTeamSection() {
   return (
-    <>
+    <Container>
       <TitleContainer>
         <WonderTitle>WONDER TEAM</WonderTitle>
         <Divider />
@@ -52,8 +53,6 @@ export function WonderTeamSection() {
                       - Addicted to scalability and conventions
                       - University dropout
                       - Spent 3 years in the military
-    
-                      Fun fact: His OCD forces him to make the dishwasher look like a Tetris game!
                     `}
                 </Position>
 
@@ -72,6 +71,6 @@ export function WonderTeamSection() {
           <KeyImage />
         </JoinContainer>
       </TeamGrid>
-    </>
+    </Container>
   );
 }

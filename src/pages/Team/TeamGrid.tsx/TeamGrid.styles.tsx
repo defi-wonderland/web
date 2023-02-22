@@ -8,19 +8,26 @@ import {
   Link,
   MOBILE_MAX_WIDTH,
   SPACING_320,
+  TABLET_MAX_WIDTH,
 } from "~/components/common";
 import KEY from "~/assets/join-key.svg";
 import EYE from "~/assets/eye.svg";
 
+export const Container = styled.div`
+  width: 100%;
+`;
+
 export const TitleContainer = styled.div`
-  margin-top: ${SPACING_320};
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  max-width: 140rem;
+  margin: ${SPACING_320} auto 0;
+  padding: 0 4rem;
 
-  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
-    margin-top: 0rem;
+  @media screen and (max-width: ${TABLET_MAX_WIDTH}) {
+    margin-top: 3rem;
     flex-direction: column;
   }
 `;
@@ -51,8 +58,10 @@ export const WonderTitle = styled.h1`
 
 export const TeamGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  margin: 100px 0px;
+  max-width: 140rem;
+  margin: 100px auto;
+  padding: 0 4rem;
+  grid-template-columns: auto auto auto;
 
   & .member {
     border-right: 1px solid rgba(255, 255, 255, 0.4);
@@ -74,14 +83,49 @@ export const TeamGrid = styled.div`
     border-bottom: unset;
   }
 
+  @media screen and (max-width: 900px) {
+    grid-template-columns: auto auto;
+
+    & .member {
+      border-right: unset;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    }
+
+    & .member.member-15,
+    & .member.member-16,
+    & .member.member-17,
+    & .member.member-18,
+    & .member.member-19 {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    }
+
+    & .member.member-0,
+    & .member.member-2,
+    & .member.member-4,
+    & .member.member-6,
+    & .member.member-8,
+    & .member.member-10,
+    & .member.member-12,
+    & .member.member-14,
+    & .member.member-16,
+    & .member.member-18,
+    & .member.member-18,
+    & .member.member-20,
+    & .member.member-22 {
+      border-right: 1px solid rgba(255, 255, 255, 0.4);
+    }
+  }
+
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     display: flex;
     flex-direction: column;
     grid-gap: 0.1rem;
     margin-top: 2rem;
+    padding: unset;
 
     & .member {
       border: unset;
+      border-right: unset !important;
       border-bottom: 1px solid rgba(255, 255, 255, 0.4);
     }
   }
@@ -112,7 +156,6 @@ export const MemberContainerFront = styled.div`
   flex-direction: column;
   justify-content: space-between;
   height: 20rem;
-  width: 45rem;
   padding: 2.4rem;
   cursor: pointer;
   -webkit-backface-visibility: hidden; /* Safari */
@@ -134,10 +177,8 @@ export const MemberContainerFront = styled.div`
   }
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
-    & {
-      height: 18rem;
-      width: 100%;
-    }
+    height: 18rem;
+    width: 100%;
   }
 `;
 
@@ -205,7 +246,7 @@ export const Divider = styled.canvas`
   height: 2px;
   width: 60%;
 
-  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+  @media screen and (max-width: ${TABLET_MAX_WIDTH}) {
     background: linear-gradient(
       to bottom,
       rgba(14, 21, 44, 0) 0,
