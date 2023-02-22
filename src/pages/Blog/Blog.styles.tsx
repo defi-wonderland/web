@@ -69,10 +69,10 @@ export const BlogPost = styled.div`
   justify-content: space-between;
   align-items: start;
   border: 1px solid rgba(255, 255, 255, 0.1);
-  background-color: rgba(255, 255, 255, 0.03);
+  background-color: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
   margin: 1rem;
-  border-radius: 1.6rem;
+  border-radius: 1rem;
   cursor: pointer;
   transition: all 200ms linear;
 
@@ -88,7 +88,7 @@ export const BlogPost = styled.div`
 export const Image = styled.img`
   width: 100%;
   height: 21rem;
-  border-radius: 1.6rem 1.6rem 0 0;
+  border-radius: 1rem 1rem 0 0;
   object-fit: cover;
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
@@ -97,6 +97,7 @@ export const Image = styled.img`
 `;
 
 export const DetailsContainer = styled.div`
+  padding: 1.5rem;
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -106,13 +107,16 @@ export const DetailsContainer = styled.div`
 `;
 
 export const TitleContainer = styled.div`
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  padding: 2rem;
-  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 1.5rem;
+  text-align: start;
 
   & h1 {
     font-family: ${FONT_MEDIUM_L};
     font-size: 2rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
   }
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
@@ -121,8 +125,9 @@ export const TitleContainer = styled.div`
 `;
 
 export const DescriptionContainer = styled.div`
-  padding: 4rem 4rem 0;
+  padding: 1.5rem 0;
   width: 100%;
+
   & p {
     font-family: ${FONT_MEDIUM};
     font-size: 1.8rem;
@@ -134,7 +139,9 @@ export const DescriptionContainer = styled.div`
 `;
 
 export const TagsContainer = styled.div`
-  padding: 2.4rem 4rem;
+  padding-top: 1.5rem;
+  color: white;
+  /* border-top: 1px solid rgba(255, 255, 255, 0.1); */
   width: 100%;
   display: flex;
   justify-content: space-between;
