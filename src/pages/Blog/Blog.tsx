@@ -28,14 +28,14 @@ export function Blog() {
       <Title>
         {!isMobile && (
           <>
-            <Distortion text="News, stories and" />
-            <Distortion text="updates from Wonderland" />
+            <Distortion text="NEWS, STORIES AND" />
+            <Distortion text="UPDATES FROM WONDERLAND" />
           </>
         )}
         {isMobile && (
           <>
-            <Distortion text="News, stories and" fontSize={55} />
-            <Distortion text="updates from Wonderland" fontSize={55} />
+            <Distortion text="NEWS, STORIES AND" fontSize={55} />
+            <Distortion text="UPDATES FROM WONDERLAND" fontSize={55} />
           </>
         )}
       </Title>
