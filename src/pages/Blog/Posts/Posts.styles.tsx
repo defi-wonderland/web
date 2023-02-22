@@ -2,7 +2,8 @@ import styled from "styled-components";
 import { MOBILE_MAX_WIDTH } from "~/components/common";
 
 export const Background = styled.div`
-  padding: 1rem 5rem;
+  max-width: 105rem;
+  padding: 1rem 6rem;
   border-radius: 2rem;
   margin-top: 18rem;
   background-color: rgba(10, 13, 23, 1);
@@ -15,19 +16,20 @@ export const Background = styled.div`
 `;
 
 export const Content = styled.div`
-  max-width: 80rem;
   margin-top: 20rem;
   margin: 0 auto;
   color: rgba(255, 255, 255, 0.87) !important;
-  padding: 1.6rem 3.2rem;
-  font-size: 1.9rem;
+  font-size: 1.75rem;
   font-family: Inter, sans-serif;
+  line-height: 1.625;
+  font-weight: 375;
 
   h1 {
     font-family: Inter, sans-serif !important;
-    padding: 1rem 0;
-    font-size: 3.6rem;
-    margin-bottom: 1rem;
+    font-size: 4.8rem;
+    font-weight: 600;
+    letter-spacing: -0.05px;
+    padding: 0 2.4rem;
   }
 
   h2,
@@ -36,7 +38,9 @@ export const Content = styled.div`
   h5,
   h6 {
     font-family: Inter, sans-serif !important;
-    padding: 1rem 0;
+    margin: 3.6rem 0 1.2rem;
+    padding: 0 2.4rem;
+    font-weight: 600;
   }
 
   p,
@@ -44,17 +48,24 @@ export const Content = styled.div`
   span,
   li {
     font-family: Inter, sans-serif;
-    font-size: 1.4rem;
-    padding: 0.8rem 0;
-    font-weight: 300;
+    line-height: 1.625;
+    font-size: 1.75rem;
+    font-weight: 375;
+    margin: 2.4rem 0;
+    letter-spacing: -0.004px;
+    color: #ffffffb3;
+    padding: 0 2.4rem;
   }
 
   strong {
-    font-weight: 600;
+    font-weight: 700;
+    padding: unset;
   }
 
   li {
-    padding: 0.5rem 0;
+    padding: unset;
+    margin: unset;
+    margin-top: 0.8rem;
   }
 
   [aria-hidden="true"] {
@@ -63,29 +74,22 @@ export const Content = styled.div`
 
   img {
     width: 100%;
-    padding: 1rem 3rem;
   }
 
   a {
     color: white;
-    opacity: 0.87;
-    font-weight: 300;
+    font-weight: 375;
     border-bottom: 1px solid rgba(255, 255, 255, 0.87);
     transition: all 200ms linear;
-
-    &:hover {
-      opacity: 1;
-    }
   }
 
   blockquote {
-    margin: 1rem 0;
-    border-left: 2px solid rgba(255, 255, 255, 0.87);
-    padding-left: 1rem;
+    margin: 1.2rem 0;
     font-style: italic;
   }
 
   blockquote p {
+    border-left: 2px solid rgba(255, 255, 255, 0.87);
     font-family: Inter-italic;
   }
 

@@ -24,6 +24,6 @@ export const POSTS = [
     date: new Date("12/26/22").toDateString().slice(4),
     tags: ["oracles"],
     image:
-      "https://price-oracle.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F5edbb63a-df4c-4410-aa33-6a93024d16e4%2Fasd.jpg?table=block&id=b50a1b47-f491-46fd-bc79-8f3cf487a3a2&spaceId=de552277-5ae2-4d88-932f-dd538421d024&width=1360&userId=&cache=v2",
+      "https://mirror-media.imgix.net/publication-images/Go3xqXtpWA1ze8b-ULayp.png?height=1440&width=2880&h=1440&w=2880&auto=compress",
   },
 ];
