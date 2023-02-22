@@ -1,6 +1,7 @@
 import {
   Divider,
-  MemberContainer,
+  MemberContainerFront,
+  MemberContainerBack,
   Name,
   Position,
   TwitterHandle,
@@ -11,6 +12,8 @@ import {
   JoinContainer,
   EyeImage,
   KeyImage,
+  FlipCard,
+  FlipCardInner,
 } from "./TeamGrid.styles";
 import { MEMBERS } from "~/constants/teamMembers";
 
@@ -18,25 +21,48 @@ export function WonderTeamSection() {
   return (
     <>
       <TitleContainer>
-        <WonderTitle title={"WONDER TEAM"} />
+        <WonderTitle>WONDER TEAM</WonderTitle>
         <Divider />
       </TitleContainer>
       <TeamGrid>
         {MEMBERS.map((member, index) => (
-          <MemberContainer
-            key={member.name}
-            className={`member member-${index}`}
-          >
-            <div>
-              <Name>{member.name}</Name>
-              <Position>{member.position}</Position>
-            </div>
-            <TwitterHandle>{member.twitterHandle}</TwitterHandle>
+          <FlipCard>
+            <FlipCardInner className="flip-card-inner">
+              <MemberContainerFront
+                key={member.name}
+                className={`member member-${index} flip-card-front`}
+              >
+                <div>
+                  <Name>{member.name}</Name>
+                  <Position>{member.position}</Position>
+                </div>
+                <TwitterHandle>{member.twitterHandle}</TwitterHandle>
 
-            <MemberLink to={member.link} external>
-              <EyeImage />
-            </MemberLink>
-          </MemberContainer>
+                <MemberLink to={member.link} external>
+                  <EyeImage />
+                </MemberLink>
+              </MemberContainerFront>
+              <MemberContainerBack
+                key={member.name}
+                className={`member member-${index} flip-card-back`}
+              >
+                <Position>
+                  {`
+                      - 10+ years in Software Development
+                      - Addicted to scalability and conventions
+                      - University dropout
+                      - Spent 3 years in the military
+    
+                      Fun fact: His OCD forces him to make the dishwasher look like a Tetris game!
+                    `}
+                </Position>
+
+                <MemberLink to={member.link} external>
+                  <EyeImage />
+                </MemberLink>
+              </MemberContainerBack>
+            </FlipCardInner>
+          </FlipCard>
         ))}
         <JoinContainer
           to="https://docs.google.com/forms/d/1n70jsL4sFkOwPNBTdciPqlWF2RirgQwejjztpS4-2L8/viewform"

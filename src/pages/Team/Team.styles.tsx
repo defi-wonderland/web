@@ -66,6 +66,6 @@ export const TeamBall = styled(Ball)`
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     width: 6rem;
-    margin: 9rem auto 0;
+    margin: 4rem auto 0;
   }
 `;

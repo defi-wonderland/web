@@ -1,10 +1,10 @@
 import styled from "styled-components";
 import {
+  FONT_DISPLAY,
   FONT_MEDIUM,
   FONT_MEDIUM_L,
   FONT_SIZE_18,
   FONT_SIZE_24,
-  GradientTitle,
   Link,
   MOBILE_MAX_WIDTH,
   SPACING_320,
@@ -20,14 +20,33 @@ export const TitleContainer = styled.div`
   align-items: center;
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
-    margin-top: 5rem;
+    margin-top: 0rem;
     flex-direction: column;
   }
 `;
 
-export const WonderTitle = styled(GradientTitle)`
+export const WonderTitle = styled.h1`
   word-wrap: unset;
-  width: 40rem !important;
+  width: 40rem;
+  font-family: ${FONT_DISPLAY};
+  font-weight: 300;
+  line-height: 1.2;
+  letter-spacing: 0.1rem;
+  font-size: 12.8rem;
+  text-transform: uppercase;
+  text-align: start;
+
+  background: linear-gradient(to right, #625cbf, #c55fa3, #fccc50);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    text-align: center;
+    font-size: 6.4rem;
+    width: auto;
+  }
 `;
 
 export const TeamGrid = styled.div`
@@ -68,7 +87,26 @@ export const TeamGrid = styled.div`
   }
 `;
 
-export const MemberContainer = styled.div`
+export const FlipCard = styled.button`
+  background-color: transparent;
+  position: relative;
+  text-align: start;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  padding: unset;
+
+  &:active .flip-card-inner,
+  &:focus .flip-card-inner {
+    transform: rotate3d(1, -1, 0, 180deg);
+  }
+`;
+
+export const FlipCardInner = styled.div`
+  position: relative;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+`;
+
+export const MemberContainerFront = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
@@ -77,6 +115,8 @@ export const MemberContainer = styled.div`
   width: 45rem;
   padding: 2.4rem;
   cursor: pointer;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
 
   &:hover {
     background-image: radial-gradient(
@@ -98,6 +138,29 @@ export const MemberContainer = styled.div`
       height: 18rem;
       width: 100%;
     }
+  }
+`;
+
+export const MemberContainerBack = styled(MemberContainerFront)`
+  position: absolute;
+  top: 0rem;
+  background-image: radial-gradient(
+      circle at 100% 0%,
+      rgba(14, 21, 44, 0) 0%,
+      rgba(14, 21, 44, 1) 85%
+    ),
+    url("/img/lore/002_grad.jpg");
+  background-size: cover;
+  background-position: bottom;
+  transform: rotate3d(1, -1, 0, 180deg);
+
+  & img {
+    opacity: 1;
+  }
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    top: 0rem;
+    width: 100%;
   }
 `;
 
