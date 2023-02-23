@@ -87,8 +87,11 @@ export const Content = styled.div`
     display: none;
   }
 
-  img {
+  p > img {
+    display: flex;
+    max-width: 72rem;
     width: 100%;
+    margin: 0 auto;
   }
 
   a {
