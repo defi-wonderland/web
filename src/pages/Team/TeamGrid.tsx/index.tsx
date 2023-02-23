@@ -5,7 +5,7 @@ import {
   MemberContainerBack,
   Name,
   Position,
-  TwitterHandle,
+  Social,
   TeamGrid,
   TitleContainer,
   WonderTitle,
@@ -15,8 +15,11 @@ import {
   KeyImage,
   FlipCard,
   FlipCardInner,
+  SImg,
 } from "./TeamGrid.styles";
 import { MEMBERS } from "~/constants/teamMembers";
+import TwitterIcon from "/img/footer/twitter-icon.svg";
+import GithubIcon from "/img/footer/github-icon.svg";
 
 export function WonderTeamSection() {
   return (
@@ -37,11 +40,17 @@ export function WonderTeamSection() {
                   <Name>{member.name}</Name>
                   <Position>{member.position}</Position>
                 </div>
-                <TwitterHandle>{member.twitterHandle}</TwitterHandle>
+                <Social>
+                  <MemberLink to={member.link} external>
+                    <SImg src={TwitterIcon} alt="twitter icon" />
+                  </MemberLink>
 
-                <MemberLink to={member.link} external>
-                  <EyeImage />
-                </MemberLink>
+                  <MemberLink to={member.link} external>
+                    <SImg src={GithubIcon} alt="github icon" />
+                  </MemberLink>
+                </Social>
+
+                <EyeImage />
               </MemberContainerFront>
               <MemberContainerBack
                 key={member.name}
@@ -56,9 +65,9 @@ export function WonderTeamSection() {
                     `}
                 </Position>
 
-                <MemberLink to={member.link} external>
+                {/* <MemberLink to={member.link} external>
                   <EyeImage />
-                </MemberLink>
+                </MemberLink> */}
               </MemberContainerBack>
             </FlipCardInner>
           </FlipCard>

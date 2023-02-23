@@ -227,16 +227,6 @@ export const Position = styled.p`
   }
 `;
 
-export const TwitterHandle = styled.span`
-  font-family: ${FONT_MEDIUM};
-  font-size: ${FONT_SIZE_18};
-  color: rgba(255, 255, 255, 0.65);
-
-  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
-    font-size: 1.6rem;
-  }
-`;
-
 export const Divider = styled.canvas`
   background: linear-gradient(
     to right,
@@ -283,15 +273,32 @@ export const KeyImage = styled.img.attrs({ src: KEY })`
   right: 2rem;
 `;
 
-export const EyeImage = styled(KeyImage).attrs({ src: EYE })`
+export const Social = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: start;
+`;
+
+export const SImg = styled.img`
+  padding: 0 0.4rem;
+  opacity: 0.8;
+`;
+
+export const EyeImage = styled(KeyImage).attrs({
+  src: EYE,
+  alt: "See description icon",
+})`
   opacity: 0;
   bottom: 0;
   right: 0;
-`;
 
-export const MemberLink = styled(Link)`
   position: absolute;
   bottom: 1rem;
   right: 1rem;
   z-index: 1;
+`;
+
+export const MemberLink = styled(Link)`
+  z-index: 1;
+  transition: all 200ms linear;
 `;
