@@ -39,7 +39,7 @@ const SBall = styled(Ball)`
   top: 21rem;
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
-    top: 22rem;
+    top: 14rem;
     width: 6rem;
   }
 `;
