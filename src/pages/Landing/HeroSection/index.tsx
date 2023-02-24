@@ -17,7 +17,7 @@ const StyledHeroSection = styled(Section)`
   & div {
     position: absolute;
     width: 100%;
-    top: 5rem;
+    top: 7rem;
     left: 0;
   }
 
@@ -26,6 +26,10 @@ const StyledHeroSection = styled(Section)`
     min-height: unset;
     height: 50rem;
     background-image: url("/img/hero/hero_mobile.png");
+
+    & div {
+      top: 5rem;
+    }
   }
 `;
 
