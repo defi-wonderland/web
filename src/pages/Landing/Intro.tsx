@@ -13,7 +13,6 @@ export interface StyledContainerProps {
 const LandingContainer = styled.div<StyledContainerProps>`
   height: ${({ showBackground }) => (showBackground ? "100%" : "98vh")};
   overflow: hidden;
-  z-index: 2;
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     height: ${({ showBackground }) => (showBackground ? "100%" : "98vh")};

@@ -20,7 +20,13 @@ export const IntroContainer = styled.div`
   width: 100%;
   height: 100%;
   justify-content: space-between;
-  z-index: 3;
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    background-image: url("/img/hero/hero-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
 `;
 
 export const Logo = styled.img`
