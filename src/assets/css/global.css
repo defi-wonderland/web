@@ -167,3 +167,9 @@ body::-webkit-scrollbar-thumb:hover {
 body::-webkit-scrollbar-thumb:active {
   background-color: #999999;
 }
+
+.hide-intro {
+  opacity: 0;
+  transition: opacity 800ms;
+  display: none;
+}
