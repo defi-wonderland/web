@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 
 import {
@@ -10,7 +11,6 @@ import {
 } from "./Navbar.styles";
 import wonderLogo from "/img/wonder-logo.svg";
 import menuIcon from "~/assets/menu_icon.svg";
-import { useState } from "react";
 
 interface NavLink {
   name: string;
@@ -48,13 +48,6 @@ export const Navbar = ({}: NavbarProps) => {
   const [navLink, setNavLink] = useState(navLinks);
   const { pathname } = useLocation();
 
-  const handleClick = (i: number) => {
-    setShowNavbar(!showNavbar);
-    const newNavLink = resetValues();
-    newNavLink[i].disabled = true;
-    setNavLink(newNavLink);
-  };
-
   const resetValues = () => {
     // reset values
     const newNavLink = navLink.map((link) => ({
@@ -65,6 +58,20 @@ export const Navbar = ({}: NavbarProps) => {
 
     return newNavLink;
   };
+
+  useEffect(() => {
+    const newNavLink = resetValues();
+    let index: number | undefined;
+
+    newNavLink.forEach((link, i) => {
+      if (link.url === pathname) {
+        index = i;
+      }
+    });
+
+    if (index !== undefined) newNavLink[index].disabled = true;
+    setNavLink(newNavLink);
+  }, [pathname]);
 
   return (
     <StyledNavbar id={showNavbar ? "show" : ""}>
@@ -90,9 +97,6 @@ export const Navbar = ({}: NavbarProps) => {
             key={link.name}
             disabled={link.disabled && !pathname.includes("/blog/")}
             className={link.disabled ? "gradient" : ""}
-            onClick={() => {
-              handleClick(i);
-            }}
           >
             {link.name}
           </NavLink>
