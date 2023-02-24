@@ -49,7 +49,7 @@ export function Blog() {
             onClick={() =>
               navigate({
                 pathname: `/blog/${post.id}`,
-                search: `?${post.name}`,
+                search: `?${post.name.toLowerCase().replaceAll(" ", "-")}`,
               })
             }
           >
