@@ -204,7 +204,8 @@ export const Name = styled.strong`
   font-family: ${FONT_MEDIUM_L};
   font-size: ${FONT_SIZE_24};
   text-transform: uppercase;
-  opacity: 1 !important;
+  opacity: 1;
+  color: white;
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     font-size: 2rem;
