@@ -12,6 +12,7 @@ import {
 } from "~/components/common";
 import KEY from "~/assets/join-key.svg";
 import EYE from "~/assets/eye.svg";
+import { MEMBERS } from "~/constants/teamMembers";
 
 export const Container = styled.div`
   width: 100%;
@@ -97,7 +98,7 @@ export const TeamGrid = styled.div`
 
     ${(props) => {
       let memberBorder = "";
-      for (let i = 0; i < 20; i++) {
+      for (let i = 0; i < MEMBERS.length; i++) {
         if (!(i % 2)) {
           memberBorder += `
             & .member.member-${i} {
