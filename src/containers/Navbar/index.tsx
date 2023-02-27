@@ -1,3 +1,5 @@
+import { useLocation } from "react-router-dom";
+
 import {
   LogoContainer,
   MenuButton,
@@ -44,6 +46,7 @@ interface NavbarProps {}
 export const Navbar = ({}: NavbarProps) => {
   const [showNavbar, setShowNavbar] = useState(false);
   const [navLink, setNavLink] = useState(navLinks);
+  const { pathname } = useLocation();
 
   const handleClick = (i: number) => {
     setShowNavbar(!showNavbar);
@@ -85,7 +88,7 @@ export const Navbar = ({}: NavbarProps) => {
             id={showNavbar ? "" : "hide"}
             to={link.url}
             key={link.name}
-            disabled={link.disabled}
+            disabled={link.disabled && !pathname.includes("/blog/")}
             className={link.disabled ? "gradient" : ""}
             onClick={() => {
               handleClick(i);
