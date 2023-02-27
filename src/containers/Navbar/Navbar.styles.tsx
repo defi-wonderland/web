@@ -6,6 +6,7 @@ import {
   MOBILE_MAX_WIDTH,
   NAVBAR_HEIGHT,
   NAVBAR_INDEX,
+  TABLET_MAX_WIDTH,
 } from "~/components/common";
 
 export const LogoContainer = styled.div`
@@ -62,6 +63,10 @@ export const StyledNavbar = styled.nav`
   padding: 2rem 1rem;
   user-select: none;
   z-index: ${NAVBAR_INDEX};
+
+  @media screen and (max-width: ${TABLET_MAX_WIDTH}) {
+    grid-gap: 1rem;
+  }
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     flex-direction: column;
