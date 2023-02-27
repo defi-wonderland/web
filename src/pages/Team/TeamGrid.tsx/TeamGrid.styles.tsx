@@ -273,6 +273,9 @@ export const Social = styled.div`
   display: flex;
   align-items: center;
   justify-content: start;
+
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
 `;
 
 export const SImg = styled.img`
