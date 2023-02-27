@@ -91,29 +91,23 @@ export const TeamGrid = styled.div`
       border-bottom: 1px solid rgba(255, 255, 255, 0.4);
     }
 
-    & .member.member-15,
-    & .member.member-16,
-    & .member.member-17,
-    & .member.member-18,
-    & .member.member-19 {
+    & .member.member-15 {
       border-bottom: 1px solid rgba(255, 255, 255, 0.4);
     }
 
-    & .member.member-0,
-    & .member.member-2,
-    & .member.member-4,
-    & .member.member-6,
-    & .member.member-8,
-    & .member.member-10,
-    & .member.member-12,
-    & .member.member-14,
-    & .member.member-16,
-    & .member.member-18,
-    & .member.member-18,
-    & .member.member-20,
-    & .member.member-22 {
-      border-right: 1px solid rgba(255, 255, 255, 0.4);
-    }
+    ${(props) => {
+      let memberBorder = "";
+      for (let i = 0; i < 20; i++) {
+        if (!(i % 2)) {
+          memberBorder += `
+            & .member.member-${i} {
+              border-right: 1px solid rgba(255, 255, 255, 0.4);
+            }
+          `;
+        }
+      }
+      return memberBorder;
+    }}
   }
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
