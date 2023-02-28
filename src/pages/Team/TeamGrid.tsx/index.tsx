@@ -41,13 +41,17 @@ export function WonderTeamSection() {
                   <Position>{member.position}</Position>
                 </div>
                 <Social>
-                  <MemberLink to={member.link} external>
-                    <SImg src={TwitterIcon} alt="twitter icon" />
-                  </MemberLink>
+                  {member.twitter && (
+                    <MemberLink to={member.twitter} external>
+                      <SImg src={TwitterIcon} alt="twitter icon" />
+                    </MemberLink>
+                  )}
 
-                  <MemberLink to={member.link} external>
-                    <SImg src={GithubIcon} alt="github icon" />
-                  </MemberLink>
+                  {member.github && (
+                    <MemberLink to={member.github} external>
+                      <SImg src={GithubIcon} alt="github icon" />
+                    </MemberLink>
+                  )}
                 </Social>
 
                 <EyeImage />
