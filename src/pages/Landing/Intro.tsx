@@ -15,7 +15,7 @@ const LandingContainer = styled.div<StyledContainerProps>`
   overflow: hidden;
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
-    height: ${({ showBackground }) => (showBackground ? "100%" : "98vh")};
+    height: ${({ showBackground }) => (showBackground ? "100%" : "60vh")};
   }
 `;
 
