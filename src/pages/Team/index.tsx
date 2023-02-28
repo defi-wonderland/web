@@ -16,7 +16,7 @@ export function Team() {
             fontSize={isMobile ? 50 : 140}
           />
           <LiquidDistortion
-            text="IT'S A FEELING WITHIN, A PROCESS."
+            text="IT'S A FEELING WITHIN, A PROCESS. TEST"
             fontSize={isMobile ? 50 : 140}
           />
           <TeamBall />
