@@ -69,31 +69,52 @@ export const TeamGrid = styled.div`
     border-bottom: 1px solid rgba(255, 255, 255, 0.4);
   }
 
-  & .member.member-2,
-  & .member.member-5,
-  & .member.member-8,
-  & .member.member-11,
-  & .member.member-14,
-  & .member.member-17 {
-    border-right: unset;
-  }
+  ${(props) => {
+    let memberBorder = "";
+    for (let i = 0; i < MEMBERS.length; i++) {
+      if (!((i + 1) % 3)) {
+        memberBorder += `
+            & .member.member-${i} {
+              border-right: unset;
+            }
+          `;
+      }
+    }
+    return memberBorder;
+  }}
 
-  & .member.member-15,
-  & .member.member-16,
-  & .member.member-17 {
-    border-bottom: unset;
-  }
+  ${(props) => {
+    switch (MEMBERS.length % 3) {
+      case 0:
+        return `
+            & .member.member-${MEMBERS.length - 3},
+            & .member.member-${MEMBERS.length - 2},
+            & .member.member-${MEMBERS.length - 1} {
+              border-bottom: unset;
+            }
+          `;
+      case 1:
+        return `
+            & .member.member-${MEMBERS.length - 1} {
+              border-bottom: unset;
+            }
+          `;
+      case 2:
+        return `
+            & .member.member-${MEMBERS.length - 2},
+            & .member.member-${MEMBERS.length - 1} {
+              border-bottom: unset;
+            }
+          `;
+    }
+  }}
 
   @media screen and (max-width: 900px) {
     grid-template-columns: auto auto;
 
     & .member {
       border-right: unset;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.4);
-    }
-
-    & .member.member-15 {
-      border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.4) !important;
     }
 
     ${(props) => {
@@ -108,6 +129,24 @@ export const TeamGrid = styled.div`
         }
       }
       return memberBorder;
+    }}
+
+    ${(props) => {
+      switch (MEMBERS.length % 2) {
+        case 0:
+          return `
+            & .member.member-${MEMBERS.length - 2},
+            & .member.member-${MEMBERS.length - 1} {
+              border-bottom: unset !important;
+            }
+          `;
+        case 1:
+          return `
+            & .member.member-${MEMBERS.length - 1} {
+              border-bottom: unset !important;
+            }
+          `;
+      }
     }}
   }
 
