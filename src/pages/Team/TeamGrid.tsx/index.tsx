@@ -57,14 +57,12 @@ export function WonderTeamSection() {
                 className={`member member-${index} flip-card-back`}
               >
                 <Position>
-                  - 10+ years in Software Development
-                  <br />
-                  - Addicted to scalability and conventions
-                  <br />
-                  - University dropout
-                  <br />
-                  - Spent 3 years in the military
-                  <br />
+                  {`
+                      - 10+ years in Software Development
+                      - Addicted to scalability and conventions
+                      - University dropout
+                      - Spent 3 years in the military
+                    `}
                 </Position>
 
                 {/* <MemberLink to={member.link} external>
