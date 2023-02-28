@@ -171,6 +171,7 @@ export const FlipCard = styled.button`
   text-align: start;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
   padding: unset;
+  width: 100%;
 
   &:active .flip-card-inner,
   &:focus .flip-card-inner {
@@ -339,4 +340,17 @@ export const EyeImage = styled(KeyImage).attrs({
 export const MemberLink = styled(Link)`
   z-index: 1;
   transition: all 200ms linear;
+`;
+
+export const MemberContainer = styled.div`
+  position: relative;
+`;
+
+export const Mask = styled.div`
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  cursor: pointer;
 `;
