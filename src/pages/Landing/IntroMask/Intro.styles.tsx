@@ -29,8 +29,9 @@ export const IntroContainer = styled.div`
   }
 `;
 
-export const Logo = styled.img`
+export const Logo = styled.img<StyledContainerProps>`
   pointer-events: none;
+  opacity: ${(props) => 1 - props.backgroundEffect * 3};
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     width: 26rem;

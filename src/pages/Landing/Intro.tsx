@@ -24,7 +24,7 @@ export function IntroductionPage() {
   return (
     <>
       <StarsBackground zIndex={showBackground ? 0 : 10} />
-      {showBackground && <Navbar />}
+      <Navbar className={`fade-enter${showBackground ? "-active" : ""}`} />
       <LandingContainer showBackground={showBackground}>
         <Landing />
       </LandingContainer>

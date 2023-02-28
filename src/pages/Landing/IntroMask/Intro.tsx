@@ -37,7 +37,11 @@ export function Intro({ showBackground, setShowBackground }: IntroProps) {
   return (
     <IntroContainer className={showBackground ? "hide-intro" : ""}>
       <StyledNavbar>
-        <Logo src={LogoImage} alt="Wonderland logo" />
+        <Logo
+          src={LogoImage}
+          alt="Wonderland logo"
+          backgroundEffect={backgroundEffect}
+        />
       </StyledNavbar>
       <KeyContainer>
         <Mask backgroundEffect={backgroundEffect} />
