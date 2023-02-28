@@ -273,14 +273,14 @@ export const Social = styled.div`
   display: flex;
   align-items: center;
   justify-content: start;
-
-  -webkit-backface-visibility: hidden; /* Safari */
-  backface-visibility: hidden;
 `;
 
 export const SImg = styled.img`
   padding: 0 0.4rem;
   opacity: 0.8;
+
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
 `;
 
 export const EyeImage = styled(KeyImage).attrs({
