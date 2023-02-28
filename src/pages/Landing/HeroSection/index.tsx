@@ -12,6 +12,8 @@ const HeroDivider = styled.img`
 `;
 
 const StyledHeroSection = styled(Section)`
+  margin-bottom: 2.8rem;
+
   & div {
     position: absolute;
     width: 100%;
@@ -20,10 +22,14 @@ const StyledHeroSection = styled(Section)`
   }
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
-    top: -2rem;
+    top: 0rem;
     min-height: unset;
     height: 50rem;
     background-image: url("/img/hero/hero_mobile.png");
+
+    & div {
+      top: 5rem;
+    }
   }
 `;
 
