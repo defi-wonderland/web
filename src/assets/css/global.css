@@ -167,3 +167,7 @@ body::-webkit-scrollbar-thumb:hover {
 body::-webkit-scrollbar-thumb:active {
   background-color: #999999;
 }
+
+img {
+  user-select: none;
+}
