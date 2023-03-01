@@ -1,5 +1,5 @@
 export * from "./Blog";
-export * from "./Blog/Blogpost";
+export * from "./Blog/Posts";
 export * from "./Intro";
 export * from "./Landing";
 export * from "./Lore";

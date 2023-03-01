@@ -9,8 +9,8 @@ import {
   Lore,
   Portfolio,
   Blog,
-  Blogpost,
   IntroductionPage,
+  Posts,
 } from "./pages";
 
 function App() {
@@ -26,7 +26,7 @@ function App() {
             <Route path="team" element={<Team />} />
             <Route path="portfolio" element={<Portfolio />} />
             <Route path="blog" element={<Blog />} />
-            <Route path="blog/:id" element={<Blogpost />} />
+            <Route path="blog/:id" element={<Posts />} />
           </Route>
         </Routes>
       </BrowserRouter>

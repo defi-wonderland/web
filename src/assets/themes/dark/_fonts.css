@@ -26,6 +26,7 @@
   font-style: normal;
   font-stretch: normal;
 }
+
 @font-face {
   font-family: SharpGrotesk-25;
   src: local(SharpGrotesk-Medium25),
@@ -33,5 +34,20 @@
       format("opentype");
   font-weight: 500;
   font-style: normal;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: Inter-italic;
+  src: local(Inter-Italic),
+    url(/src/assets/themes/dark/fonts/Inter-Italic.woff2) format("opentype");
+  font-weight: 500;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: Inter;
+  src: local(Inter),
+    url(/src/assets/themes/dark/fonts/Inter.ttf) format("opentype");
   font-stretch: normal;
 }

@@ -1,39 +1,68 @@
 import styled from "styled-components";
 import {
+  FONT_DISPLAY,
   FONT_MEDIUM,
   FONT_MEDIUM_L,
   FONT_SIZE_18,
   FONT_SIZE_24,
-  GradientTitle,
   Link,
   MOBILE_MAX_WIDTH,
   SPACING_320,
+  TABLET_MAX_WIDTH,
 } from "~/components/common";
 import KEY from "~/assets/join-key.svg";
 import EYE from "~/assets/eye.svg";
+import { MEMBERS } from "~/constants/teamMembers";
+
+export const Container = styled.div`
+  width: 100%;
+`;
 
 export const TitleContainer = styled.div`
-  margin-top: ${SPACING_320};
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  max-width: 140rem;
+  margin: ${SPACING_320} auto 0;
+  padding: 0 4rem;
 
-  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
-    margin-top: 5rem;
+  @media screen and (max-width: ${TABLET_MAX_WIDTH}) {
+    margin-top: 3rem;
     flex-direction: column;
   }
 `;
 
-export const WonderTitle = styled(GradientTitle)`
+export const WonderTitle = styled.h1`
   word-wrap: unset;
-  width: 40rem !important;
+  width: 40rem;
+  font-family: ${FONT_DISPLAY};
+  font-weight: 300;
+  line-height: 1.2;
+  letter-spacing: 0.1rem;
+  font-size: 12.8rem;
+  text-transform: uppercase;
+  text-align: start;
+
+  background: linear-gradient(to right, #625cbf, #c55fa3, #fccc50);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    text-align: center;
+    font-size: 6.4rem;
+    width: auto;
+  }
 `;
 
 export const TeamGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  margin: 100px 0px;
+  max-width: 140rem;
+  margin: 100px auto;
+  padding: 0 4rem;
+  grid-template-columns: auto auto auto;
 
   & .member {
     border-right: 1px solid rgba(255, 255, 255, 0.4);
@@ -55,28 +84,77 @@ export const TeamGrid = styled.div`
     border-bottom: unset;
   }
 
+  @media screen and (max-width: 900px) {
+    grid-template-columns: auto auto;
+
+    & .member {
+      border-right: unset;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    }
+
+    & .member.member-15 {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    }
+
+    ${(props) => {
+      let memberBorder = "";
+      for (let i = 0; i < MEMBERS.length; i++) {
+        if (!(i % 2)) {
+          memberBorder += `
+            & .member.member-${i} {
+              border-right: 1px solid rgba(255, 255, 255, 0.4);
+            }
+          `;
+        }
+      }
+      return memberBorder;
+    }}
+  }
+
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     display: flex;
     flex-direction: column;
     grid-gap: 0.1rem;
     margin-top: 2rem;
+    padding: unset;
 
     & .member {
       border: unset;
+      border-right: unset !important;
       border-bottom: 1px solid rgba(255, 255, 255, 0.4);
     }
   }
 `;
 
-export const MemberContainer = styled.div`
+export const FlipCard = styled.button`
+  background-color: transparent;
+  position: relative;
+  text-align: start;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  padding: unset;
+
+  &:active .flip-card-inner,
+  &:focus .flip-card-inner {
+    transform: rotateX(-180deg);
+  }
+`;
+
+export const FlipCardInner = styled.div`
+  position: relative;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+`;
+
+export const MemberContainerFront = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 20rem;
-  width: 45rem;
   padding: 2.4rem;
   cursor: pointer;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
 
   &:hover {
     background-image: radial-gradient(
@@ -94,10 +172,31 @@ export const MemberContainer = styled.div`
   }
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
-    & {
-      height: 18rem;
-      width: 100%;
-    }
+    height: 18rem;
+    width: 100%;
+  }
+`;
+
+export const MemberContainerBack = styled(MemberContainerFront)`
+  position: absolute;
+  top: 0rem;
+  background-image: radial-gradient(
+      circle at 100% 0%,
+      rgba(14, 21, 44, 0) 0%,
+      rgba(14, 21, 44, 1) 85%
+    ),
+    url("/img/lore/002_grad.jpg");
+  background-size: cover;
+  background-position: bottom;
+  transform: rotateX(-180deg);
+
+  & img {
+    opacity: 1;
+  }
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    top: 0rem;
+    width: 100%;
   }
 `;
 
@@ -123,16 +222,6 @@ export const Position = styled.p`
   }
 `;
 
-export const TwitterHandle = styled.span`
-  font-family: ${FONT_MEDIUM};
-  font-size: ${FONT_SIZE_18};
-  color: rgba(255, 255, 255, 0.65);
-
-  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
-    font-size: 1.6rem;
-  }
-`;
-
 export const Divider = styled.canvas`
   background: linear-gradient(
     to right,
@@ -142,7 +231,7 @@ export const Divider = styled.canvas`
   height: 2px;
   width: 60%;
 
-  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+  @media screen and (max-width: ${TABLET_MAX_WIDTH}) {
     background: linear-gradient(
       to bottom,
       rgba(14, 21, 44, 0) 0,
@@ -179,15 +268,32 @@ export const KeyImage = styled.img.attrs({ src: KEY })`
   right: 2rem;
 `;
 
-export const EyeImage = styled(KeyImage).attrs({ src: EYE })`
+export const Social = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: start;
+`;
+
+export const SImg = styled.img`
+  padding: 0 0.4rem;
+  opacity: 0.8;
+`;
+
+export const EyeImage = styled(KeyImage).attrs({
+  src: EYE,
+  alt: "See description icon",
+})`
   opacity: 0;
   bottom: 0;
   right: 0;
-`;
 
-export const MemberLink = styled(Link)`
   position: absolute;
   bottom: 1rem;
   right: 1rem;
   z-index: 1;
+`;
+
+export const MemberLink = styled(Link)`
+  z-index: 1;
+  transition: all 200ms linear;
 `;
