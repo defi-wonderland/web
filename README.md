@@ -5,7 +5,7 @@ Official website for DeFi Wonderland.
 ## Setup
 
 ```sh
-git clone git@github.com:defi-wonderland/wonderland-web-private.git
+git clone git@github.com:defi-wonderland/web.git
 cd wonderland-web-private
 yarn
 ```
