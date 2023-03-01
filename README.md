@@ -6,7 +6,7 @@
 
 DeFi Wonderland is a team of top Web3 researchers, developers, and operators who believe that the future needs to be open-source, permissionless, and decentralized.
 
-[DeFi sucks](https://defi.sucks/), but DeFi Wonderland is here to make it better.<br/><br/>
+[DeFi sucks](https://defi.sucks/), but DeFi Wonderland is here to make it better.
 
 ---
 
