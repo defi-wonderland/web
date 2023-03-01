@@ -326,6 +326,7 @@ export const Social = styled.div`
 export const SImg = styled.img`
   padding: 0 0.4rem;
   opacity: 0.8;
+  height: 2.4rem;
 
   -webkit-backface-visibility: hidden; /* Safari */
   backface-visibility: hidden;
