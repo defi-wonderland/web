@@ -3,8 +3,8 @@ import { useState } from "react";
 import {
   Container,
   Divider,
-  MemberContainerFront,
-  MemberContainerBack,
+  CardFront,
+  CardBack,
   Name,
   Position,
   Social,
@@ -20,28 +20,18 @@ import {
   SImg,
   Mask,
   MemberContainer,
+  Description,
 } from "./TeamGrid.styles";
 import { MEMBERS } from "~/constants/teamMembers";
 import TwitterIcon from "/img/footer/twitter-icon.svg";
 import GithubIcon from "/img/footer/github-icon.svg";
 
 export function WonderTeamSection() {
-  const showDescription = new Array(MEMBERS.length).fill(false);
-  const [showDesc, setShowDesc] = useState(showDescription);
-
-  const resetValues = () => {
-    const arrayCopy = [];
-    let i = -1;
-
-    while (++i < showDesc.length) {
-      arrayCopy[i] = false;
-    }
-
-    return arrayCopy;
-  };
+  const hideDescriptions = new Array(MEMBERS.length).fill(false);
+  const [showDesc, setShowDesc] = useState(hideDescriptions);
 
   const handleClick = (index: number) => {
-    const arrayCopy = resetValues();
+    const arrayCopy = hideDescriptions;
     arrayCopy[index] = true;
     setShowDesc(arrayCopy);
   };
@@ -54,15 +44,13 @@ export function WonderTeamSection() {
       </TitleContainer>
       <TeamGrid>
         {MEMBERS.map((member, index) => (
-          <MemberContainer>
+          <MemberContainer key={member.name}>
             {showDesc[index] && (
-              <Mask onClick={() => setShowDesc(resetValues())} />
+              <Mask onClick={() => setShowDesc(hideDescriptions)} />
             )}
-            <FlipCard key={member.name} onClick={() => handleClick(index)}>
+            <FlipCard onClick={() => handleClick(index)}>
               <FlipCardInner className="flip-card-inner">
-                <MemberContainerFront
-                  className={`member member-${index} flip-card-front`}
-                >
+                <CardFront className={`member member-${index} flip-card-front`}>
                   <div>
                     <Name>{member.name}</Name>
                     <Position>{member.position}</Position>
@@ -82,20 +70,16 @@ export function WonderTeamSection() {
                   </Social>
 
                   <EyeImage />
-                </MemberContainerFront>
-                <MemberContainerBack
+                </CardFront>
+
+                <CardBack
                   key={member.name}
                   className={`member member-${index} flip-card-back`}
                 >
-                  <Position>
-                    {`
-                      - 10+ years in Software Development
-                      - Addicted to scalability and conventions
-                      - University dropout
-                      - Spent 3 years in the military
-                      `}
-                  </Position>
-                </MemberContainerBack>
+                  <Description
+                    dangerouslySetInnerHTML={{ __html: member.description }}
+                  />
+                </CardBack>
               </FlipCardInner>
             </FlipCard>
           </MemberContainer>

@@ -109,7 +109,7 @@ export const TeamGrid = styled.div`
     }
   }}
 
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: ${TABLET_MAX_WIDTH}) {
     grid-template-columns: auto auto;
 
     & .member {
@@ -185,7 +185,7 @@ export const FlipCardInner = styled.div`
   transform-style: preserve-3d;
 `;
 
-export const MemberContainerFront = styled.div`
+export const CardFront = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
@@ -217,7 +217,7 @@ export const MemberContainerFront = styled.div`
   }
 `;
 
-export const MemberContainerBack = styled(MemberContainerFront)`
+export const CardBack = styled(CardFront)`
   position: absolute;
   top: 0rem;
   background-image: radial-gradient(
@@ -229,6 +229,8 @@ export const MemberContainerBack = styled(MemberContainerFront)`
   background-size: cover;
   background-position: bottom;
   transform: rotateX(-180deg);
+  width: 100%;
+  overflow: hidden;
 
   & img {
     opacity: 1;
@@ -261,6 +263,10 @@ export const Position = styled.p`
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     font-size: 1.6rem;
   }
+`;
+
+export const Description = styled(Position)`
+  font-size: 1.6rem;
 `;
 
 export const Divider = styled.canvas`
