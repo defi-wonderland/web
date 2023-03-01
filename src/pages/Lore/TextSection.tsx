@@ -18,6 +18,7 @@ const LoreSection = styled(Section)`
   width: calc(${PAGE_MAX_WIDTH} + 13rem);
   max-width: 100%;
   grid-gap: 4.6rem;
+  margin-top: 12rem;
 
   @media screen and (max-width: 1400px) {
     flex-direction: column;

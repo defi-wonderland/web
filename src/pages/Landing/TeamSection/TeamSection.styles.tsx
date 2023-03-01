@@ -121,7 +121,12 @@ export const CarouselContainer = styled(Carousel)`
     top: unset;
     bottom: -1.5rem;
     left: 9rem;
+    opacity: 1;
     background-image: url("/img/arrow_left.svg") !important;
+
+    &:hover {
+      opacity: 0.8;
+    }
   }
 
   & .control-arrow.control-next {
@@ -130,7 +135,12 @@ export const CarouselContainer = styled(Carousel)`
     top: unset;
     bottom: -1.5rem;
     right: 9rem;
+    opacity: 1;
     background-image: url("/img/arrow.svg") !important;
+
+    &:hover {
+      opacity: 0.8;
+    }
   }
 
   & .control-next::before,

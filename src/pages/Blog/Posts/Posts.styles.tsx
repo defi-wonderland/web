@@ -11,6 +11,13 @@ export const Background = styled.div`
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     margin-top: unset;
+    padding-bottom: 5rem;
+    background-color: unset;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(10, 13, 23, 1) calc(100% - 5rem),
+      rgba(10, 13, 23, 0)
+    );
   }
 `;
 
