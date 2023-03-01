@@ -1,6 +1,18 @@
-# DeFi Wonderland
+<p align="center">
+  <a href="https://defi.sucks">
+    <img width="500" src="https://raw.githubusercontent.com/defi-wonderland/brand/main/identifiers/png/identifier-negative-h.png">
+  </a>
+</p>
 
-Official website for DeFi Wonderland.
+<p align="center">
+  <img src="./public/intro.png">
+</p>
+
+DeFi Wonderland is a team of top Web3 researchers, developers, and operators who believe that the future needs to be open-source, permissionless, and decentralized.
+
+[DeFi sucks](https://defi.sucks/), but DeFi Wonderland is here to make it better.<br/><br/>
+
+---
 
 ## Setup
 
