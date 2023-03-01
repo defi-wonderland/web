@@ -9,6 +9,7 @@ import {
   SPACING_512,
   SPACING_700,
   LiquidDistortion,
+  MainTitle,
 } from "~/components/common";
 import { useWindowDimensions } from "~/hooks/windowDimensions";
 import TextSection from "./TextSection";
@@ -96,10 +97,10 @@ export function Lore() {
 
         {isMobile && (
           <MobileTitleContainer>
-            <LiquidDistortion text="WOND3RLAND" fontSize={65} />
-            <LiquidDistortion text="IS NOT A PLACE," fontSize={65} />
-            <LiquidDistortion text="IT'S A FEELING WITHIN," fontSize={65} />
-            <LiquidDistortion text="A PROCESS." fontSize={65} />
+            <MainTitle fontSize={6.5}>WOND3RLAND</MainTitle>
+            <MainTitle fontSize={6.5}>IS NOT A PLACE,</MainTitle>
+            <MainTitle fontSize={6.5}>IT'S A FEELING WITHIN,</MainTitle>
+            <MainTitle fontSize={6.5}>A PROCESS.</MainTitle>
           </MobileTitleContainer>
         )}
       </HeroDivider>

@@ -70,6 +70,7 @@ export const Navbar = ({}: NavbarProps) => {
     });
 
     if (index !== undefined) newNavLink[index].disabled = true;
+    setShowNavbar(false);
     setNavLink(newNavLink);
   }, [pathname]);
 

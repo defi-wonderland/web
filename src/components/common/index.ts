@@ -9,4 +9,5 @@ export * from "./LiquidDistortion";
 export * from "./Ring";
 export * from "./Section";
 export * from "./SectionArticle";
+export * from "./MainTitle";
 export * from "./Variables";

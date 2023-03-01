@@ -1,7 +1,12 @@
 import { FC } from "react";
 import styled from "styled-components";
 
-import { Section, Distortion, MOBILE_MAX_WIDTH } from "~/components/common";
+import {
+  Section,
+  Distortion,
+  MOBILE_MAX_WIDTH,
+  MainTitle,
+} from "~/components/common";
 import { useWindowDimensions } from "~/hooks/windowDimensions";
 
 const HeroDivider = styled.img`
@@ -28,7 +33,7 @@ const StyledHeroSection = styled(Section)`
     background-image: url("/img/hero/hero_mobile.png");
 
     & div {
-      top: 5rem;
+      top: 10rem;
     }
   }
 `;
@@ -53,7 +58,11 @@ export const HeroSection: FC<HeroSectionProps> = ({ ...props }) => {
           />
         )}
         {isMobile && (
-          <SDistortion text="TO HELP THE WEB3 ECOSYSTEM THRIVE" fontSize={45} />
+          <div>
+            <MainTitle fontSize={4.4}>
+              TO HELP THE WEB3 ECOSYSTEM THRIVE
+            </MainTitle>
+          </div>
         )}
         <HeroDivider src="/img/hero/hero-bg-divider.png" />
       </StyledHeroSection>

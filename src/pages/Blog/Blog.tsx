@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 
 import { POSTS } from "~/constants/posts";
-import { Distortion } from "~/components/common/DistortionText";
+import { Distortion, MainTitle } from "~/components/common";
 import {
   PageContainer,
   Title,
@@ -34,8 +34,8 @@ export function Blog() {
         )}
         {isMobile && (
           <>
-            <Distortion text="NEWS, STORIES AND" fontSize={55} />
-            <Distortion text="UPDATES FROM WONDERLAND" fontSize={55} />
+            <MainTitle fontSize={5.5}>NEWS, STORIES AND</MainTitle>
+            <MainTitle fontSize={5.5}>UPDATES FROM WONDERLAND</MainTitle>
           </>
         )}
       </Title>
