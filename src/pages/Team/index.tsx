@@ -28,7 +28,7 @@ export function Team() {
             <>
               <MainTitle fontSize={4.8}>WOND3RLAND IS NOT A PLACE,</MainTitle>
               <MainTitle fontSize={4.8}>
-                IT'S A FEELING WITHIN, A PROCESS.
+                IT'S A FEELING WITHIN, A PROCESS
               </MainTitle>
             </>
           )}
