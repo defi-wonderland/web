@@ -267,6 +267,7 @@ export const Position = styled.p`
 
 export const Description = styled(Position)`
   font-size: 1.6rem;
+  white-space: pre-wrap;
 `;
 
 export const Divider = styled.canvas`

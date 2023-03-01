@@ -76,9 +76,7 @@ export function WonderTeamSection() {
                   key={member.name}
                   className={`member member-${index} flip-card-back`}
                 >
-                  <Description
-                    dangerouslySetInnerHTML={{ __html: member.description }}
-                  />
+                  <Description>{member.description}</Description>
                 </CardBack>
               </FlipCardInner>
             </FlipCard>

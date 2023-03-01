@@ -5,7 +5,7 @@ export const MEMBERS = [
     twitter: "https://twitter.com/MatiasNisenson",
     github: "",
     description:
-      "- 10+ years in Software Development<br>- Addicted to scalability and conventions<br>- University dropout<br>- Spent 3 years in the military<br><br>Fun fact: His OCD forces him to make the dishwasher look like a Tetris game!",
+      "- 10+ years in Software Development\n- Addicted to scalability and conventions\n- University dropout\n- Spent 3 years in the military\n\nFun fact: His OCD forces him to make the dishwasher look like a Tetris game!",
   },
   {
     name: "BILLI",
@@ -13,7 +13,7 @@ export const MEMBERS = [
     twitter: "",
     github: "https://github.com/Billy-103",
     description:
-      "- 10+ years in Software Development<br>- Addicted to scalability and conventions<br>- University dropout<br>- Spent 3 years in the military<br><br>Fun fact: His OCD forces him to make the dishwasher look like a Tetris game!",
+      "- 10+ years in Software Development\n- Addicted to scalability and conventions\n- University dropout\n- Spent 3 years in the military\n\nFun fact: His OCD forces him to make the dishwasher look like a Tetris game!",
   },
   {
     name: "PEPO",
@@ -21,7 +21,7 @@ export const MEMBERS = [
     twitter: "https://twitter.com/0xPEPO",
     github: "https://github.com/vPEPO",
     description:
-      "- 10+ years in Software Development<br>- Addicted to scalability and conventions<br>- University dropout<br>- Spent 3 years in the military<br><br>Fun fact: His OCD forces him to make the dishwasher look like a Tetris game!",
+      "- 10+ years in Software Development\n- Addicted to scalability and conventions\n- University dropout\n- Spent 3 years in the military\n\nFun fact: His OCD forces him to make the dishwasher look like a Tetris game!",
   },
   {
     name: "AUSTRIAN",
@@ -29,7 +29,7 @@ export const MEMBERS = [
     twitter: "https://twitter.com/0xAustrian",
     github: "https://github.com/0xAustrian",
     description:
-      "- 10+ years in Software Development<br>- Addicted to scalability and conventions<br>- University dropout<br>- Spent 3 years in the military<br><br>Fun fact: His OCD forces him to make the dishwasher look like a Tetris game!",
+      "- 10+ years in Software Development\n- Addicted to scalability and conventions\n- University dropout\n- Spent 3 years in the military\n\nFun fact: His OCD forces him to make the dishwasher look like a Tetris game!",
   },
   {
     name: "DR GORILLA",
@@ -37,7 +37,7 @@ export const MEMBERS = [
     twitter: "https://twitter.com/DrGorilla_md",
     github: "https://github.com/drgorillamd",
     description:
-      "- 10+ years in Software Development<br>- Addicted to scalability and conventions<br>- University dropout<br>- Spent 3 years in the military<br><br>Fun fact: His OCD forces him to make the dishwasher look like a Tetris game!",
+      "- 10+ years in Software Development\n- Addicted to scalability and conventions\n- University dropout\n- Spent 3 years in the military\n\nFun fact: His OCD forces him to make the dishwasher look like a Tetris game!",
   },
   {
     name: "JABBERWOCK",
@@ -45,7 +45,7 @@ export const MEMBERS = [
     twitter: "https://twitter.com/0xGorillaDev",
     github: "https://github.com/0xJabberwock",
     description:
-      "- 10+ years in Software Development<br>- Addicted to scalability and conventions<br>- University dropout<br>- Spent 3 years in the military<br><br>Fun fact: His OCD forces him to make the dishwasher look like a Tetris game!",
+      "- 10+ years in Software Development\n- Addicted to scalability and conventions\n- University dropout\n- Spent 3 years in the military\n\nFun fact: His OCD forces him to make the dishwasher look like a Tetris game!",
   },
   {
     name: "NG",
@@ -53,7 +53,7 @@ export const MEMBERS = [
     twitter: "https://twitter.com/ngndev",
     github: "https://github.com/0xng",
     description:
-      "- 10+ years in Software Development<br>- Addicted to scalability and conventions<br>- University dropout<br>- Spent 3 years in the military<br><br>Fun fact: His OCD forces him to make the dishwasher look like a Tetris game!",
+      "- 10+ years in Software Development\n- Addicted to scalability and conventions\n- University dropout\n- Spent 3 years in the military\n\nFun fact: His OCD forces him to make the dishwasher look like a Tetris game!",
   },
   {
     name: "OXGORILLA",
@@ -61,7 +61,7 @@ export const MEMBERS = [
     twitter: "https://twitter.com/0xGorillaDev",
     github: "https://github.com/0xGorilla",
     description:
-      "- 10+ years in Software Development<br>- Addicted to scalability and conventions<br>- University dropout<br>- Spent 3 years in the military<br><br>Fun fact: His OCD forces him to make the dishwasher look like a Tetris game!",
+      "- 10+ years in Software Development\n- Addicted to scalability and conventions\n- University dropout\n- Spent 3 years in the military\n\nFun fact: His OCD forces him to make the dishwasher look like a Tetris game!",
   },
   {
     name: "ASHITAKA",
@@ -69,7 +69,7 @@ export const MEMBERS = [
     twitter: "https://twitter.com/0xAshitakah",
     github: "https://github.com/ashitakah",
     description:
-      "- 10+ years in Software Development<br>- Addicted to scalability and conventions<br>- University dropout<br>- Spent 3 years in the military<br><br>Fun fact: His OCD forces him to make the dishwasher look like a Tetris game!",
+      "- 10+ years in Software Development\n- Addicted to scalability and conventions\n- University dropout\n- Spent 3 years in the military\n\nFun fact: His OCD forces him to make the dishwasher look like a Tetris game!",
   },
   {
     name: "GAS1CENT",
@@ -77,7 +77,7 @@ export const MEMBERS = [
     twitter: "https://twitter.com/gas1cent",
     github: "https://github.com/gas1cent",
     description:
-      "- 10+ years in Software Development<br>- Addicted to scalability and conventions<br>- University dropout<br>- Spent 3 years in the military<br><br>Fun fact: His OCD forces him to make the dishwasher look like a Tetris game!",
+      "- 10+ years in Software Development\n- Addicted to scalability and conventions\n- University dropout\n- Spent 3 years in the military\n\nFun fact: His OCD forces him to make the dishwasher look like a Tetris game!",
   },
   {
     name: "GOTZEN",
@@ -85,7 +85,7 @@ export const MEMBERS = [
     twitter: "https://twitter.com/0xGotzen",
     github: "https://github.com/gotzenx",
     description:
-      "- 10+ years in Software Development<br>- Addicted to scalability and conventions<br>- University dropout<br>- Spent 3 years in the military<br><br>Fun fact: His OCD forces him to make the dishwasher look like a Tetris game!",
+      "- 10+ years in Software Development\n- Addicted to scalability and conventions\n- University dropout\n- Spent 3 years in the military\n\nFun fact: His OCD forces him to make the dishwasher look like a Tetris game!",
   },
   {
     name: "WEI3ERHASE",
@@ -93,7 +93,7 @@ export const MEMBERS = [
     twitter: "https://twitter.com/wei3erHase",
     github: "https://github.com/wei3erHase",
     description:
-      "- 10+ years in Software Development<br>- Addicted to scalability and conventions<br>- University dropout<br>- Spent 3 years in the military<br><br>Fun fact: His OCD forces him to make the dishwasher look like a Tetris game!",
+      "- 10+ years in Software Development\n- Addicted to scalability and conventions\n- University dropout\n- Spent 3 years in the military\n\nFun fact: His OCD forces him to make the dishwasher look like a Tetris game!",
   },
   {
     name: "PARTI",
@@ -101,7 +101,7 @@ export const MEMBERS = [
     twitter: "https://twitter.com/0xParticle",
     github: "https://github.com/0xParticle",
     description:
-      "- 10+ years in Software Development<br>- Addicted to scalability and conventions<br>- University dropout<br>- Spent 3 years in the military<br><br>Fun fact: His OCD forces him to make the dishwasher look like a Tetris game!",
+      "- 10+ years in Software Development\n- Addicted to scalability and conventions\n- University dropout\n- Spent 3 years in the military\n\nFun fact: His OCD forces him to make the dishwasher look like a Tetris game!",
   },
   {
     name: "SKELETOR",
@@ -109,7 +109,7 @@ export const MEMBERS = [
     twitter: "https://twitter.com/Skeletor_Space",
     github: "https://github.com/skeletor-spaceman",
     description:
-      "- 10+ years in Software Development<br>- Addicted to scalability and conventions<br>- University dropout<br>- Spent 3 years in the military<br><br>Fun fact: His OCD forces him to make the dishwasher look like a Tetris game!",
+      "- 10+ years in Software Development\n- Addicted to scalability and conventions\n- University dropout\n- Spent 3 years in the military\n\nFun fact: His OCD forces him to make the dishwasher look like a Tetris game!",
   },
   {
     name: "SHAITO",
@@ -117,7 +117,7 @@ export const MEMBERS = [
     twitter: "https://twitter.com/0xShaito",
     github: "https://github.com/0xShaito",
     description:
-      "- 10+ years in Software Development<br>- Addicted to scalability and conventions<br>- University dropout<br>- Spent 3 years in the military<br><br>Fun fact: His OCD forces him to make the dishwasher look like a Tetris game!",
+      "- 10+ years in Software Development\n- Addicted to scalability and conventions\n- University dropout\n- Spent 3 years in the military\n\nFun fact: His OCD forces him to make the dishwasher look like a Tetris game!",
   },
   {
     name: "TURTLEMOJI",
@@ -125,7 +125,7 @@ export const MEMBERS = [
     twitter: "",
     github: "https://github.com/turtlemoji",
     description:
-      "- 10+ years in Software Development<br>- Addicted to scalability and conventions<br>- University dropout<br>- Spent 3 years in the military<br><br>Fun fact: His OCD forces him to make the dishwasher look like a Tetris game!",
+      "- 10+ years in Software Development\n- Addicted to scalability and conventions\n- University dropout\n- Spent 3 years in the military\n\nFun fact: His OCD forces him to make the dishwasher look like a Tetris game!",
   },
   {
     name: "ARDY",
@@ -133,7 +133,7 @@ export const MEMBERS = [
     twitter: "https://twitter.com/0xArdy",
     github: "https://github.com/0xArdy",
     description:
-      "- 10+ years in Software Development<br>- Addicted to scalability and conventions<br>- University dropout<br>- Spent 3 years in the military<br><br>Fun fact: His OCD forces him to make the dishwasher look like a Tetris game!",
+      "- 10+ years in Software Development\n- Addicted to scalability and conventions\n- University dropout\n- Spent 3 years in the military\n\nFun fact: His OCD forces him to make the dishwasher look like a Tetris game!",
   },
   {
     name: "RBP",
@@ -141,7 +141,7 @@ export const MEMBERS = [
     twitter: "",
     github: "",
     description:
-      "- 10+ years in Software Development<br>- Addicted to scalability and conventions<br>- University dropout<br>- Spent 3 years in the military<br><br>Fun fact: His OCD forces him to make the dishwasher look like a Tetris game!",
+      "- 10+ years in Software Development\n- Addicted to scalability and conventions\n- University dropout\n- Spent 3 years in the military\n\nFun fact: His OCD forces him to make the dishwasher look like a Tetris game!",
   },
   {
     name: "JOXES",
@@ -149,7 +149,7 @@ export const MEMBERS = [
     twitter: "https://twitter.com/0xJoxes",
     github: "https://github.com/Joxess",
     description:
-      "- 10+ years in Software Development<br>- Addicted to scalability and conventions<br>- University dropout<br>- Spent 3 years in the military<br><br>Fun fact: His OCD forces him to make the dishwasher look like a Tetris game!",
+      "- 10+ years in Software Development\n- Addicted to scalability and conventions\n- University dropout\n- Spent 3 years in the military\n\nFun fact: His OCD forces him to make the dishwasher look like a Tetris game!",
   },
   {
     name: "RACCON",
@@ -157,7 +157,7 @@ export const MEMBERS = [
     twitter: "https://twitter.com/0xRaccoonDev",
     github: "https://github.com/0xRaccoon",
     description:
-      "- 10+ years in Software Development<br>- Addicted to scalability and conventions<br>- University dropout<br>- Spent 3 years in the military<br><br>Fun fact: His OCD forces him to make the dishwasher look like a Tetris game!",
+      "- 10+ years in Software Development\n- Addicted to scalability and conventions\n- University dropout\n- Spent 3 years in the military\n\nFun fact: His OCD forces him to make the dishwasher look like a Tetris game!",
   },
   {
     name: "MONO",
@@ -165,6 +165,6 @@ export const MEMBERS = [
     twitter: "https://twitter.com/0x_mono",
     github: "",
     description:
-      "- 10+ years in Software Development<br>- Addicted to scalability and conventions<br>- University dropout<br>- Spent 3 years in the military<br><br>Fun fact: His OCD forces him to make the dishwasher look like a Tetris game!",
+      "- 10+ years in Software Development\n- Addicted to scalability and conventions\n- University dropout\n- Spent 3 years in the military\n\nFun fact: His OCD forces him to make the dishwasher look like a Tetris game!",
   },
 ];
