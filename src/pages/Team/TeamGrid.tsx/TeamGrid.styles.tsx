@@ -231,6 +231,7 @@ export const CardBack = styled(CardFront)`
   transform: rotateX(-180deg);
   width: 100%;
   overflow: hidden;
+  padding: 1.6rem;
 
   & img {
     opacity: 1;
