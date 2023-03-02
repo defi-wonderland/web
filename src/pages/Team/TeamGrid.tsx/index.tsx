@@ -16,10 +16,10 @@ import {
   FlipCard,
   FlipCardInner,
   SImg,
-} from "./TeamGrid.styles";
-import { MEMBERS } from "~/constants/teamMembers";
-import TwitterIcon from "/img/footer/twitter-icon.svg";
-import GithubIcon from "/img/footer/github-icon.svg";
+} from './TeamGrid.styles';
+import { MEMBERS } from '~/constants/teamMembers';
+import TwitterIcon from '/img/footer/twitter-icon.svg';
+import GithubIcon from '/img/footer/github-icon.svg';
 
 export function WonderTeamSection() {
   return (
@@ -30,32 +30,26 @@ export function WonderTeamSection() {
       </TitleContainer>
       <TeamGrid>
         {MEMBERS.map((member, index) => (
-          <FlipCard>
-            <FlipCardInner className="flip-card-inner">
-              <MemberContainerFront
-                key={member.name}
-                className={`member member-${index} flip-card-front`}
-              >
+          <FlipCard key={member.name}>
+            <FlipCardInner className='flip-card-inner'>
+              <MemberContainerFront className={`member member-${index} flip-card-front`}>
                 <div>
                   <Name>{member.name}</Name>
                   <Position>{member.position}</Position>
                 </div>
                 <Social>
                   <MemberLink to={member.link} external>
-                    <SImg src={TwitterIcon} alt="twitter icon" />
+                    <SImg src={TwitterIcon} alt='twitter icon' />
                   </MemberLink>
 
                   <MemberLink to={member.link} external>
-                    <SImg src={GithubIcon} alt="github icon" />
+                    <SImg src={GithubIcon} alt='github icon' />
                   </MemberLink>
                 </Social>
 
                 <EyeImage />
               </MemberContainerFront>
-              <MemberContainerBack
-                key={member.name}
-                className={`member member-${index} flip-card-back`}
-              >
+              <MemberContainerBack className={`member member-${index} flip-card-back`}>
                 <Position>
                   {`
                       - 10+ years in Software Development
@@ -73,10 +67,10 @@ export function WonderTeamSection() {
           </FlipCard>
         ))}
         <JoinContainer
-          to="https://docs.google.com/forms/d/1n70jsL4sFkOwPNBTdciPqlWF2RirgQwejjztpS4-2L8/viewform"
+          to='https://docs.google.com/forms/d/1n70jsL4sFkOwPNBTdciPqlWF2RirgQwejjztpS4-2L8/viewform'
           external
         >
-          <Name className="gradient">JOIN US</Name>
+          <Name className='gradient'>JOIN US</Name>
           <KeyImage />
         </JoinContainer>
       </TeamGrid>

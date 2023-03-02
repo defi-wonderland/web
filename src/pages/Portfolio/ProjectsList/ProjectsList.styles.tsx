@@ -1,10 +1,5 @@
-import styled from "styled-components";
-import {
-  FONT_MEDIUM,
-  FONT_MEDIUM_L,
-  FONT_SIZE_24,
-  MOBILE_MAX_WIDTH,
-} from "~/components/common";
+import styled from 'styled-components';
+import { FONT_MEDIUM, FONT_MEDIUM_L, FONT_SIZE_24, MOBILE_MAX_WIDTH } from '~/components/common';
 
 export const List = styled.div``;
 
@@ -70,12 +65,7 @@ export const Circle = styled.img`
 `;
 
 export const Divider = styled.div`
-  background: linear-gradient(
-    to right,
-    rgba(14, 21, 44, 0) 0%,
-    rgba(255, 255, 255, 0.5) 50%,
-    rgba(14, 21, 44, 0) 100%
-  );
+  background: linear-gradient(to right, rgba(14, 21, 44, 0) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(14, 21, 44, 0) 100%);
   height: 2px;
   width: 100%;
 `;

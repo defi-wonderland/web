@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 import {
   FONT_SIZE_20,
@@ -7,7 +7,7 @@ import {
   NAVBAR_HEIGHT,
   NAVBAR_INDEX,
   TABLET_MAX_WIDTH,
-} from "~/components/common";
+} from '~/components/common';
 
 export const LogoContainer = styled.div`
   order: 3;
@@ -54,11 +54,7 @@ export const StyledNavbar = styled.nav`
   width: 100%;
   height: ${NAVBAR_HEIGHT};
   color: var(--text-light);
-  background-image: linear-gradient(
-    to bottom,
-    var(--background-surface-primary) 25%,
-    rgba(14, 21, 44, 0) 100%
-  );
+  background-image: linear-gradient(to bottom, var(--background-surface-primary) 25%, rgba(14, 21, 44, 0) 100%);
   grid-gap: 4rem;
   padding: 2rem 1rem;
   user-select: none;
@@ -79,7 +75,7 @@ export const StyledNavbar = styled.nav`
 
 export const NavLinkContainer = styled.div<{ order?: number }>`
   width: 120px;
-  order: ${({ order }) => order ?? "initial"};
+  order: ${({ order }) => order ?? 'initial'};
   display: flex;
   justify-content: center;
 `;

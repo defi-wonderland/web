@@ -1,10 +1,5 @@
-import styled from "styled-components";
-import {
-  Button,
-  FONT_MEDIUM_L,
-  Link,
-  MOBILE_MAX_WIDTH,
-} from "~/components/common";
+import styled from 'styled-components';
+import { Button, FONT_MEDIUM_L, Link, MOBILE_MAX_WIDTH } from '~/components/common';
 
 export const CardContainer = styled.div`
   width: 42rem;
@@ -47,17 +42,14 @@ export function RightCard() {
     <>
       <CardContainer>
         <PrimaryText>
-          We are DeFi Wonderland, our main goal is to make decentralized finance
-          more accessible and scalable
+          We are DeFi Wonderland, our main goal is to make decentralized finance more accessible and scalable
         </PrimaryText>
         <SecondaryText>
-          We believe we're living in the early stages of a technology revolution
-          and together we have the optimal skillset to help it grow. We know
-          many opportunities will arise on the way, and plan on leveraging them
-          all.
+          We believe we&apos;re living in the early stages of a technology revolution and together we have the optimal
+          skillset to help it grow. We know many opportunities will arise on the way, and plan on leveraging them all.
         </SecondaryText>
         <SButton>
-          <Link to="/lore">DISCOVER MORE</Link>
+          <Link to='/lore'>DISCOVER MORE</Link>
         </SButton>
       </CardContainer>
     </>

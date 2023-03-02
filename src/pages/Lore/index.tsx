@@ -1,1 +1,1 @@
-export * from "./Lore";
+export * from './Lore';

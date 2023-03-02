@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 import {
   Ball,
@@ -8,7 +8,7 @@ import {
   SPACING_1152,
   SPACING_256,
   SPACING_384,
-} from "~/components/common";
+} from '~/components/common';
 
 export const Container = styled.div`
   display: flex;

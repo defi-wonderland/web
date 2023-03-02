@@ -1,11 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import {
-  FONT_MEDIUM,
-  FONT_MEDIUM_L,
-  MOBILE_MAX_WIDTH,
-  SectionBackground,
-} from "~/components/common";
+import { FONT_MEDIUM, FONT_MEDIUM_L, MOBILE_MAX_WIDTH, SectionBackground } from '~/components/common';
 
 export const PageContainer = styled.div`
   position: relative;

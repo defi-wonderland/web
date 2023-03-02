@@ -1,8 +1,8 @@
-import { FC } from "react";
-import styled from "styled-components";
+import { FC } from 'react';
+import styled from 'styled-components';
 
-import { Section, Distortion, MOBILE_MAX_WIDTH } from "~/components/common";
-import { useWindowDimensions } from "~/hooks/windowDimensions";
+import { Section, Distortion, MOBILE_MAX_WIDTH } from '~/components/common';
+import { useWindowDimensions } from '~/hooks/windowDimensions';
 
 const HeroDivider = styled.img`
   position: absolute;
@@ -25,7 +25,7 @@ const StyledHeroSection = styled(Section)`
     top: 0rem;
     min-height: unset;
     height: 50rem;
-    background-image: url("/img/hero/hero_mobile.png");
+    background-image: url('/img/hero/hero_mobile.png');
 
     & div {
       top: 5rem;
@@ -35,27 +35,14 @@ const StyledHeroSection = styled(Section)`
 
 export const SDistortion = styled(Distortion)``;
 
-export interface HeroSectionProps {}
-
-export const HeroSection: FC<HeroSectionProps> = ({ ...props }) => {
+export const HeroSection: FC = ({ ...props }) => {
   const { isMobile, isTablet } = useWindowDimensions();
   return (
     <>
-      <StyledHeroSection
-        full
-        backgroundImage="/img/hero/hero-bg.jpg"
-        {...props}
-      >
-        {!isMobile && (
-          <Distortion
-            text="TO HELP THE WEB3 ECOSYSTEM THRIVE"
-            fontSize={isTablet ? 100 : 120}
-          />
-        )}
-        {isMobile && (
-          <SDistortion text="TO HELP THE WEB3 ECOSYSTEM THRIVE" fontSize={45} />
-        )}
-        <HeroDivider src="/img/hero/hero-bg-divider.png" />
+      <StyledHeroSection full backgroundImage='/img/hero/hero-bg.jpg' {...props}>
+        {!isMobile && <Distortion text='TO HELP THE WEB3 ECOSYSTEM THRIVE' fontSize={isTablet ? 100 : 120} />}
+        {isMobile && <SDistortion text='TO HELP THE WEB3 ECOSYSTEM THRIVE' fontSize={45} />}
+        <HeroDivider src='/img/hero/hero-bg-divider.png' />
       </StyledHeroSection>
     </>
   );

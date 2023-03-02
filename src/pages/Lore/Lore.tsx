@@ -1,23 +1,16 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import { PageContent } from "~/components/app";
-import { ApproachSection } from "./ApproachSection";
-import {
-  Ball,
-  MOBILE_MAX_WIDTH,
-  SPACING_192,
-  SPACING_512,
-  SPACING_700,
-  LiquidDistortion,
-} from "~/components/common";
-import { useWindowDimensions } from "~/hooks/windowDimensions";
-import TextSection from "./TextSection";
-import Cone from "~/assets/cone.png";
-import HoopTop from "~/assets/hoop-top.png";
-import HoopBottom from "~/assets/hoop-bottom.png";
+import { PageContent } from '~/components/app';
+import { ApproachSection } from './ApproachSection';
+import { Ball, MOBILE_MAX_WIDTH, SPACING_192, SPACING_512, SPACING_700, LiquidDistortion } from '~/components/common';
+import { useWindowDimensions } from '~/hooks/windowDimensions';
+import TextSection from './TextSection';
+import Cone from '~/assets/cone.png';
+import HoopTop from '~/assets/hoop-top.png';
+import HoopBottom from '~/assets/hoop-bottom.png';
 
 const StyledApproachSection = styled(ApproachSection)`
-  padding: "3rem 0";
+  padding: '3rem 0';
 `;
 
 const HeroDivider = styled.div`
@@ -83,31 +76,25 @@ export function Lore() {
       <HeroDivider>
         {!isMobile && (
           <>
-            <LiquidDistortion
-              text="WOND3RLAND IS NOT A PLACE,"
-              fontSize={isTablet ? 90 : undefined}
-            />
-            <LiquidDistortion
-              text="IT'S A FEELING WITHIN, A PROCESS."
-              fontSize={isTablet ? 90 : undefined}
-            />
+            <LiquidDistortion text='WOND3RLAND IS NOT A PLACE,' fontSize={isTablet ? 90 : undefined} />
+            <LiquidDistortion text="IT'S A FEELING WITHIN, A PROCESS." fontSize={isTablet ? 90 : undefined} />
           </>
         )}
 
         {isMobile && (
           <MobileTitleContainer>
-            <LiquidDistortion text="WOND3RLAND" fontSize={65} />
-            <LiquidDistortion text="IS NOT A PLACE," fontSize={65} />
+            <LiquidDistortion text='WOND3RLAND' fontSize={65} />
+            <LiquidDistortion text='IS NOT A PLACE,' fontSize={65} />
             <LiquidDistortion text="IT'S A FEELING WITHIN," fontSize={65} />
-            <LiquidDistortion text="A PROCESS." fontSize={65} />
+            <LiquidDistortion text='A PROCESS.' fontSize={65} />
           </MobileTitleContainer>
         )}
       </HeroDivider>
       <BackgroundContainer>
-        <SCone src={HoopTop} alt="starts background" />
-        <SCone src={Cone} alt="starts background" />
+        <SCone src={HoopTop} alt='starts background' />
+        <SCone src={Cone} alt='starts background' />
         <SBall />
-        <SHoop src={HoopBottom} alt="starts background" />
+        <SHoop src={HoopBottom} alt='starts background' />
       </BackgroundContainer>
 
       <TextSection />

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const getRandomInt = (max: number) => {
   return Math.floor(Math.random() * max);
@@ -10,9 +10,7 @@ const generateStars = (stars: number) => {
 
   let shadows = `${getRandomInt(width)}px ${getRandomInt(height)}px #fff`;
   for (let index = 0; index < stars; index++) {
-    shadows = `${shadows}, ${getRandomInt(width)}px ${getRandomInt(
-      height
-    )}px #fff`;
+    shadows = `${shadows}, ${getRandomInt(width)}px ${getRandomInt(height)}px #fff`;
   }
   return shadows;
 };
@@ -123,13 +121,13 @@ interface BackgroundProps {
 export function StarsBackground({ zIndex }: BackgroundProps) {
   return (
     <StarsContainer smStars={700} mdStars={700} lgStars={50} zIndex={zIndex}>
-      <div className="stars"></div>
-      <div className="stars1"></div>
-      <div className="stars2"></div>
-      <div className="stars3"></div>
-      <div className="stars4"></div>
-      <div className="stars5"></div>
-      <div className="stars6"></div>
+      <div className='stars'></div>
+      <div className='stars1'></div>
+      <div className='stars2'></div>
+      <div className='stars3'></div>
+      <div className='stars4'></div>
+      <div className='stars5'></div>
+      <div className='stars6'></div>
     </StarsContainer>
   );
 }

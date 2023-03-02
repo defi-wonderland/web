@@ -1,7 +1,7 @@
-import { FC } from "react";
-import styled from "styled-components";
+import { FC } from 'react';
+import styled from 'styled-components';
 
-import { BALL_DIAMETER, BALL_INDEX } from "./Variables";
+import { BALL_DIAMETER, BALL_INDEX } from './Variables';
 
 const StyledBall = styled.div`
   width: ${BALL_DIAMETER};
@@ -10,14 +10,12 @@ const StyledBall = styled.div`
   left: 50%;
   top: 36%;
   transform: translate(-50%, -36%);
-  background-image: url("/img/ball.png");
+  background-image: url('/img/ball.png');
   background-repeat: no-repeat;
   background-size: contain;
   z-index: ${BALL_INDEX};
 `;
 
-export interface BallProps {}
-
-export const Ball: FC<BallProps> = ({ ...props }) => {
+export const Ball: FC = ({ ...props }) => {
   return <StyledBall {...props} />;
 };

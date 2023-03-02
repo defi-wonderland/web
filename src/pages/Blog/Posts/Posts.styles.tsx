@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { MOBILE_MAX_WIDTH } from "~/components/common";
+import styled from 'styled-components';
+import { MOBILE_MAX_WIDTH } from '~/components/common';
 
 export const Background = styled.div`
   max-width: 105rem;
@@ -13,11 +13,7 @@ export const Background = styled.div`
     margin-top: unset;
     padding-bottom: 5rem;
     background-color: unset;
-    background-image: linear-gradient(
-      to bottom,
-      rgba(10, 13, 23, 1) calc(100% - 5rem),
-      rgba(10, 13, 23, 0)
-    );
+    background-image: linear-gradient(to bottom, rgba(10, 13, 23, 1) calc(100% - 5rem), rgba(10, 13, 23, 0));
   }
 `;
 
@@ -90,7 +86,7 @@ export const Content = styled.div`
     margin-top: 0.8rem;
   }
 
-  [aria-hidden="true"] {
+  [aria-hidden='true'] {
     display: none;
   }
 

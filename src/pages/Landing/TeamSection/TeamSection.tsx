@@ -1,4 +1,4 @@
-import "react-responsive-carousel/lib/styles/carousel.min.css";
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 import {
   CarouselContainer,
@@ -10,21 +10,19 @@ import {
   Position,
   TeamContainer,
   TeamTitle,
-} from "./TeamSection.styles";
-import Crown from "~/assets/crown_icon.svg";
-import Key from "~/assets/key.png";
-import { MEMBERS } from "~/constants/teamMembers";
+} from './TeamSection.styles';
+import Crown from '~/assets/crown_icon.svg';
+import Key from '~/assets/key.png';
+import { MEMBERS } from '~/constants/teamMembers';
 
 export function Team() {
-  const lastIndex = MEMBERS.length;
-
   return (
     <>
       <TeamContainer>
-        <CrownIcon src={Crown} alt="crown icon" />
+        <CrownIcon src={Crown} alt='crown icon' />
         <TeamTitle>THE POWER OF THE PEOPLE</TeamTitle>
         <KeyContainer>
-          <Keyhole src={Key} alt="crown icon" />
+          <Keyhole src={Key} alt='crown icon' />
           <CarouselContainer
             showArrows={true}
             showStatus={false}

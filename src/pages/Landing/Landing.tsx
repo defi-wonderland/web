@@ -1,5 +1,5 @@
-import { HeroSection } from "./HeroSection";
-import { ContentSection } from "./ContentSection";
+import { HeroSection } from './HeroSection';
+import { ContentSection } from './ContentSection';
 
 export function Landing() {
   return (

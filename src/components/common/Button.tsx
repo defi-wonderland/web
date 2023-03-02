@@ -1,14 +1,7 @@
-import { FC } from "react";
-import styled from "styled-components";
+import { FC } from 'react';
+import styled from 'styled-components';
 
-import {
-  FONT_MEDIUM_L,
-  SPACING_12,
-  SPACING_16,
-  SPACING_24,
-  SPACING_40,
-  SPACING_48,
-} from "./Variables";
+import { FONT_MEDIUM_L, SPACING_12, SPACING_16, SPACING_24, SPACING_40, SPACING_48 } from './Variables';
 
 const StyledButton = styled.button`
   display: flex;
