@@ -56,11 +56,11 @@ export const Keyhole = styled.img.attrs({
 
 export const DottedLine = styled.img<StyledContainerProps>`
   pointer-events: none;
-  height: 20%;
+  height: 19.5%;
 
   opacity: ${(props) => 1 - props.backgroundEffect * 10};
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
-    height: 22%;
+    height: 21%;
   }
 `;
 
@@ -75,8 +75,6 @@ export const KeyContainer = styled.div`
   padding-bottom: 2.4rem;
   z-index: 1;
   overflow: hidden;
-
-  background-color: rgba(255, 255, 255, 0.15);
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     padding: 2.4rem;
