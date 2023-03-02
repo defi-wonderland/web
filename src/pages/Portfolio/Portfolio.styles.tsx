@@ -142,5 +142,5 @@ export const ProjectsContainer = styled.div`
 `;
 
 export const MobileTitleContainer = styled.div`
-  transform: rotate(3deg);
+  transform: rotate(-3deg);
 `;

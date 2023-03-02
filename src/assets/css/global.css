@@ -22,6 +22,7 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+  overflow-y: overlay;
 }
 
 body {
@@ -166,4 +167,10 @@ body::-webkit-scrollbar-thumb:hover {
 
 body::-webkit-scrollbar-thumb:active {
   background-color: #999999;
+}
+
+.hide-intro {
+  opacity: 0;
+  transition: opacity 800ms;
+  display: none;
 }
