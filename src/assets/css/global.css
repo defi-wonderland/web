@@ -169,6 +169,10 @@ body::-webkit-scrollbar-thumb:active {
   background-color: #999999;
 }
 
+img {
+  user-select: none;
+}
+
 .hide-intro {
   opacity: 0;
   transition: opacity 800ms;
