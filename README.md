@@ -4,17 +4,25 @@
   </a>
 </p>
 
+<div align="center">
+
+**[Website](https://defi.sucks) • 
+[Twitter](https://twitter.com/DeFi_Wonderland) • 
+[Github](https://github.com/defi-wonderland)**
+
+</div>
+
+## About DeFi Wonderland
+
 DeFi Wonderland is a team of top Web3 researchers, developers, and operators who believe that the future needs to be open-source, permissionless, and decentralized.
 
-[DeFi sucks](https://defi.sucks/), but DeFi Wonderland is here to make it better.
-
----
+[DeFi sucks](https://defi.sucks/), but we are here to make it better.
 
 ## Setup
 
 ```sh
 git clone git@github.com:defi-wonderland/web.git
-cd wonderland-web-private
+cd web
 yarn
 ```
 
