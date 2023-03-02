@@ -34,10 +34,12 @@ export const BackgroundImage = styled(SectionBackground)`
 export const Title = styled.div`
   margin-top: 16rem;
   margin-bottom: 10rem;
+  height: 22rem;
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     margin-top: 10rem;
     margin-bottom: 5rem;
+    height: unset;
   }
 `;
 
@@ -104,6 +106,10 @@ export const DetailsContainer = styled.div`
   align-items: flex-start;
   height: 100%;
   width: 100%;
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    padding: 0;
+  }
 `;
 
 export const TitleContainer = styled.div`
