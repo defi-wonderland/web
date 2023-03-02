@@ -4,23 +4,11 @@ import {
   MOBILE_MAX_WIDTH,
   NAVBAR_HEIGHT,
   NAVBAR_INDEX,
-  Section,
 } from "~/components/common";
 
 export interface StyledContainerProps {
   backgroundEffect: number;
 }
-
-export const HeroDivider = styled.img`
-  position: absolute;
-  width: 100%;
-  bottom: 0;
-  z-index: 0;
-`;
-
-export const StyledHeroSection = styled(Section)`
-  align-items: flex-start;
-`;
 
 export const IntroContainer = styled.div`
   position: absolute;
@@ -33,14 +21,17 @@ export const IntroContainer = styled.div`
   height: 100%;
   justify-content: space-between;
 
-  background-image: url("/img/hero/hero-bg.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    background-image: url("/img/hero/hero-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
 `;
 
-export const Logo = styled.img`
+export const Logo = styled.img<StyledContainerProps>`
   pointer-events: none;
+  opacity: ${(props) => 1 - props.backgroundEffect * 3};
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     width: 26rem;
@@ -85,21 +76,19 @@ export const KeyContainer = styled.div`
   z-index: 1;
   overflow: hidden;
 
-  background-image: url("/img/hero/hero-bg.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background-color: rgba(255, 255, 255, 0.15);
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     padding: 2.4rem;
   }
 `;
 
-export const Text = styled.span`
+export const Text = styled.span<StyledContainerProps>`
   font-style: italic;
   font-size: 1.8rem;
   margin-top: 0.4rem;
   user-select: none;
+  opacity: ${(props) => 1 - props.backgroundEffect * 3};
 `;
 
 export const StyledNavbar = styled.nav`
@@ -124,8 +113,9 @@ export const StyledNavbar = styled.nav`
   z-index: ${NAVBAR_INDEX};
 `;
 
-export const KeyBox = styled.div`
+export const KeyBox = styled.div<StyledContainerProps>`
   cursor: pointer;
+  opacity: ${(props) => 1 - props.backgroundEffect * 3};
 `;
 
 export const Key = styled.img`

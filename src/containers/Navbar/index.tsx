@@ -41,9 +41,11 @@ const navLinks: NavLink[] = [
   },
 ];
 
-interface NavbarProps {}
+interface NavbarProps {
+  className?: string;
+}
 
-export const Navbar = ({}: NavbarProps) => {
+export const Navbar = ({ className }: NavbarProps) => {
   const [showNavbar, setShowNavbar] = useState(false);
   const [navLink, setNavLink] = useState(navLinks);
   const { pathname } = useLocation();
@@ -74,7 +76,7 @@ export const Navbar = ({}: NavbarProps) => {
   }, [pathname]);
 
   return (
-    <StyledNavbar id={showNavbar ? "show" : ""}>
+    <StyledNavbar id={showNavbar ? "show" : ""} className={className}>
       <LogoContainer>
         <WonderLogo
           to="/landing"
