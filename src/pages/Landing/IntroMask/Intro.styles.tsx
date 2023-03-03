@@ -22,7 +22,7 @@ export const IntroContainer = styled.div`
   justify-content: space-between;
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
-    background-image: url("/img/hero/hero-bg.jpg");
+    background-image: url("/img/hero/hero_mobile.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
