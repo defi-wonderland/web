@@ -25,15 +25,15 @@ export function Portfolio() {
     <>
       <Container>
         <BackgroundContainer>
-          <BG_1 type="2" align="center" />
-          <BG_2 type="1" align="left" />
-          <BG_3 type="2" align="right" />
+          <BG_1 type='2' align='center' />
+          <BG_2 type='1' align='left' />
+          <BG_3 type='2' align='right' />
         </BackgroundContainer>
         <HeroDivider>
           {!isMobile && (
             <>
-              <Distortion text="TOGETHER, WE WANT TO SUSTAINBLY BUILD A MORE INCLUSIVE" />
-              <Distortion text="AND DECENTRALIZED FINANCIAL ECOSYSTEM." />
+              <Distortion text='TOGETHER, WE WANT TO SUSTAINBLY BUILD A MORE INCLUSIVE' />
+              <Distortion text='AND DECENTRALIZED FINANCIAL ECOSYSTEM.' />
             </>
           )}
 
@@ -52,7 +52,7 @@ export function Portfolio() {
         </HeroDivider>
 
         <TitleContainer>
-          <ProjectTitle title="THINGS THAT HAPPEN" />
+          <ProjectTitle title='THINGS THAT HAPPEN' />
         </TitleContainer>
 
         <ProjectsContainer>

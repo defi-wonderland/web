@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { MOBILE_MAX_WIDTH } from "../common";
+import styled from 'styled-components';
+import { MOBILE_MAX_WIDTH } from '../common';
 
 const StyledPageContent = styled.section`
   display: flex;
@@ -18,6 +18,4 @@ interface PageContentProps {
   children: any;
 }
 
-export const PageContent = ({ children }: PageContentProps) => (
-  <StyledPageContent>{children}</StyledPageContent>
-);
+export const PageContent = ({ children }: PageContentProps) => <StyledPageContent>{children}</StyledPageContent>;

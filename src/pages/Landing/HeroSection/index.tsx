@@ -1,5 +1,5 @@
-import { FC } from "react";
-import styled from "styled-components";
+import { FC } from 'react';
+import styled from 'styled-components';
 
 import {
   Section,
@@ -30,7 +30,7 @@ const StyledHeroSection = styled(Section)`
     top: 0rem;
     min-height: unset;
     height: 50rem;
-    background-image: url("/img/hero/hero_mobile.png");
+    background-image: url('/img/hero/hero_mobile.png');
 
     & div {
       top: 10rem;
@@ -40,9 +40,7 @@ const StyledHeroSection = styled(Section)`
 
 export const SDistortion = styled(Distortion)``;
 
-export interface HeroSectionProps {}
-
-export const HeroSection: FC<HeroSectionProps> = ({ ...props }) => {
+export const HeroSection: FC = ({ ...props }) => {
   const { isMobile, isTablet } = useWindowDimensions();
   return (
     <>

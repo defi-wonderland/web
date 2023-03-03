@@ -8,7 +8,7 @@ export function Team() {
 
   return (
     <>
-      <BackgroundImg type="3" align="center" />
+      <BackgroundImg type='3' align='center' />
       <Container>
         <HeroDivider>
           {!isMobile && (

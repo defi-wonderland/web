@@ -1,7 +1,7 @@
-import { FC } from "react";
-import styled from "styled-components";
+import { FC } from 'react';
+import styled from 'styled-components';
 
-import { RING_A_INDEX, RING_B_INDEX, SPACING_320 } from "./Variables";
+import { RING_A_INDEX, RING_B_INDEX, SPACING_320 } from './Variables';
 
 const StyledRing = styled.div`
   display: flex;
@@ -29,14 +29,14 @@ const StyledRing = styled.div`
 `;
 
 export interface RingProps {
-  type: "1" | "2";
+  type: '1' | '2';
 }
 
 export const Ring: FC<RingProps> = ({ type, ...props }) => {
   return (
     <StyledRing {...props}>
-      <img src={`/img/ring/${type}-a.png`} alt="Ring part" />
-      <img src={`/img/ring/${type}-b.png`} alt="Ring part" />
+      <img src={`/img/ring/${type}-a.png`} alt='Ring part' />
+      <img src={`/img/ring/${type}-b.png`} alt='Ring part' />
     </StyledRing>
   );
 };

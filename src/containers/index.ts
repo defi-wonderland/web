@@ -1,3 +1,3 @@
-export * from "./Footer";
-export * from "./Navbar";
-export * from "./StarsBackground";
+export * from './Footer';
+export * from './Navbar';
+export * from './StarsBackground';

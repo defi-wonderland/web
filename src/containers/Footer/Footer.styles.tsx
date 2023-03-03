@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 import {
   CONTENT_INDEX,
@@ -6,15 +6,12 @@ import {
   FONT_MEDIUM_L,
   Link,
   MOBILE_MAX_WIDTH,
-  PAGE_MAX_WIDTH,
   SectionBackground,
-  TABLET_MAX_WIDTH,
-} from "~/components/common";
-import MISC from "~/assets/footer_vector.svg";
+} from '~/components/common';
+import MISC from '~/assets/footer_vector.svg';
 
-// TODO Check this color with figma
-export const footerColor = "rgba(255, 255, 255, 0.2)";
-export const footerPadding = "1.5rem";
+export const footerColor = 'rgba(255, 255, 255, 0.2)';
+export const footerPadding = '1.5rem';
 
 export const Star = styled.img`
   width: 1.66rem;

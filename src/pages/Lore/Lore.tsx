@@ -18,7 +18,7 @@ import HoopTop from "~/assets/hoop-top.png";
 import HoopBottom from "~/assets/hoop-bottom.png";
 
 const StyledApproachSection = styled(ApproachSection)`
-  padding: "3rem 0";
+  padding: '3rem 0';
 `;
 
 const HeroDivider = styled.div`
@@ -84,14 +84,8 @@ export function Lore() {
       <HeroDivider>
         {!isMobile && (
           <>
-            <LiquidDistortion
-              text="WOND3RLAND IS NOT A PLACE,"
-              fontSize={isTablet ? 90 : undefined}
-            />
-            <LiquidDistortion
-              text="IT'S A FEELING WITHIN, A PROCESS."
-              fontSize={isTablet ? 90 : undefined}
-            />
+            <LiquidDistortion text='WOND3RLAND IS NOT A PLACE,' fontSize={isTablet ? 90 : undefined} />
+            <LiquidDistortion text="IT'S A FEELING WITHIN, A PROCESS." fontSize={isTablet ? 90 : undefined} />
           </>
         )}
 
@@ -105,10 +99,10 @@ export function Lore() {
         )}
       </HeroDivider>
       <BackgroundContainer>
-        <SCone src={HoopTop} alt="starts background" />
-        <SCone src={Cone} alt="starts background" />
+        <SCone src={HoopTop} alt='starts background' />
+        <SCone src={Cone} alt='starts background' />
         <SBall />
-        <SHoop src={HoopBottom} alt="starts background" />
+        <SHoop src={HoopBottom} alt='starts background' />
       </BackgroundContainer>
 
       <TextSection />

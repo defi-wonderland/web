@@ -1,16 +1,9 @@
-import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 
-import {
-  LogoContainer,
-  MenuButton,
-  NavLink,
-  NavLinkContainer,
-  StyledNavbar,
-  WonderLogo,
-} from "./Navbar.styles";
-import wonderLogo from "/img/wonder-logo.svg";
-import menuIcon from "~/assets/menu_icon.svg";
+import { LogoContainer, MenuButton, NavLink, NavLinkContainer, StyledNavbar, WonderLogo } from './Navbar.styles';
+import wonderLogo from '/img/wonder-logo.svg';
+import menuIcon from '~/assets/menu_icon.svg';
 
 interface NavLink {
   name: string;
@@ -20,23 +13,23 @@ interface NavLink {
 
 const navLinks: NavLink[] = [
   {
-    name: "lore",
-    url: "/lore",
+    name: 'lore',
+    url: '/lore',
     disabled: false,
   },
   {
-    name: "team",
-    url: "/team",
+    name: 'team',
+    url: '/team',
     disabled: false,
   },
   {
-    name: "portfolio",
-    url: "/portfolio",
+    name: 'portfolio',
+    url: '/portfolio',
     disabled: false,
   },
   {
-    name: "blog",
-    url: "/blog",
+    name: 'blog',
+    url: '/blog',
     disabled: false,
   },
 ];
@@ -77,29 +70,29 @@ export const Navbar = ({ className }: NavbarProps) => {
   }, [pathname]);
 
   return (
-    <StyledNavbar id={showNavbar ? "show" : ""} className={className}>
+    <StyledNavbar id={showNavbar ? 'show' : ''} className={className}>
       <LogoContainer>
         <WonderLogo
-          to="/landing"
+          to='/landing'
           onClick={() => {
             setNavLink(resetValues());
           }}
         >
-          <img src={wonderLogo} alt="Wonderland logo" />
+          <img src={wonderLogo} alt='Wonderland logo' />
         </WonderLogo>
         <MenuButton onClick={() => setShowNavbar(!showNavbar)}>
-          <img src={menuIcon} alt="menu icon" id="menu-icon" />
+          <img src={menuIcon} alt='menu icon' id='menu-icon' />
         </MenuButton>
       </LogoContainer>
 
       {navLink.map((link, i) => (
         <NavLinkContainer order={i + 1} key={link.name + i}>
           <NavLink
-            id={showNavbar ? "" : "hide"}
+            id={showNavbar ? '' : 'hide'}
             to={link.url}
             key={link.name}
-            disabled={link.disabled && !pathname.includes("/blog/")}
-            className={link.disabled ? "gradient" : ""}
+            disabled={link.disabled && !pathname.includes('/blog/')}
+            className={link.disabled ? 'gradient' : ''}
           >
             {link.name}
           </NavLink>

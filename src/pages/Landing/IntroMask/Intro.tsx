@@ -1,7 +1,7 @@
-import { useEffect, useRef, useState } from "react";
-import Draggable from "react-draggable";
+import { useEffect, useRef, useState } from 'react';
+import Draggable from 'react-draggable';
 
-import { StyledNavbar } from "~/containers/Navbar/Navbar.styles";
+import { StyledNavbar } from '~/containers/Navbar/Navbar.styles';
 import {
   DottedLine,
   IntroContainer,
@@ -13,10 +13,10 @@ import {
   Mask,
   Mask2,
   Text,
-} from "./Intro.styles";
-import LogoImage from "~/assets/Logo.svg";
-import VLINE from "~/assets/dotted_line.svg";
-import INTROKEY from "~/assets/intro_key.svg";
+} from './Intro.styles';
+import LogoImage from '~/assets/Logo.svg';
+import VLINE from '~/assets/dotted_line.svg';
+import INTROKEY from '~/assets/intro_key.svg';
 
 interface IntroProps {
   showBackground: boolean;
@@ -24,11 +24,7 @@ interface IntroProps {
   onLoad: (e: any) => void;
 }
 
-export function Intro({
-  showBackground,
-  setShowBackground,
-  ...props
-}: IntroProps) {
+export function Intro({ showBackground, setShowBackground, ...props }: IntroProps) {
   const [activateDragEffect, setDragEffect] = useState(false);
   const [backgroundEffect, setBackgroundEffect] = useState(0);
   const nodeRef = useRef(null);
@@ -40,26 +36,18 @@ export function Intro({
   }, [activateDragEffect]);
 
   return (
-    <IntroContainer className={showBackground ? "hide-intro" : ""} {...props}>
+    <IntroContainer className={showBackground ? 'hide-intro' : ''} {...props}>
       <StyledNavbar>
-        <Logo
-          src={LogoImage}
-          alt="Wonderland logo"
-          backgroundEffect={backgroundEffect}
-        />
+        <Logo src={LogoImage} alt='Wonderland logo' backgroundEffect={backgroundEffect} />
       </StyledNavbar>
       <KeyContainer>
         <Mask backgroundEffect={backgroundEffect} />
         <Keyhole backgroundEffect={backgroundEffect} />
         <Mask2 backgroundEffect={backgroundEffect} />
 
-        <DottedLine
-          backgroundEffect={backgroundEffect}
-          src={VLINE}
-          alt="dotted line"
-        />
+        <DottedLine backgroundEffect={backgroundEffect} src={VLINE} alt='dotted line' />
         <Draggable
-          axis="y"
+          axis='y'
           bounds={{ bottom: 0, top: -350 }}
           nodeRef={nodeRef}
           onStop={(event, node) => {
@@ -74,12 +62,10 @@ export function Intro({
           }}
         >
           <KeyBox ref={nodeRef} backgroundEffect={backgroundEffect}>
-            <Key ref={nodeRef} src={INTROKEY} alt="Key icon" />
+            <Key ref={nodeRef} src={INTROKEY} alt='Key icon' />
           </KeyBox>
         </Draggable>
-        <Text backgroundEffect={backgroundEffect}>
-          Drag to discover Wonderland
-        </Text>
+        <Text backgroundEffect={backgroundEffect}>Drag to discover Wonderland</Text>
       </KeyContainer>
     </IntroContainer>
   );
