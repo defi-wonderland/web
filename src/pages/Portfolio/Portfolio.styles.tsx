@@ -6,7 +6,6 @@ import {
   MOBILE_MAX_WIDTH,
   SectionBackground,
   SPACING_128,
-  SPACING_256,
   TABLET_MAX_WIDTH,
 } from '~/components/common';
 
@@ -27,7 +26,7 @@ export const HeroDivider = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: ${SPACING_256};
+  margin-top: 21rem;
 
   @media screen and (max-width: ${TABLET_MAX_WIDTH}) {
     margin-top: 12rem;

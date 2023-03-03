@@ -1,13 +1,21 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-import { PageContent } from '~/components/app';
-import { ApproachSection } from './ApproachSection';
-import { Ball, MOBILE_MAX_WIDTH, SPACING_192, SPACING_512, SPACING_700, LiquidDistortion } from '~/components/common';
-import { useWindowDimensions } from '~/hooks/windowDimensions';
-import TextSection from './TextSection';
-import Cone from '~/assets/cone.png';
-import HoopTop from '~/assets/hoop-top.png';
-import HoopBottom from '~/assets/hoop-bottom.png';
+import { PageContent } from "~/components/app";
+import { ApproachSection } from "./ApproachSection";
+import {
+  Ball,
+  MOBILE_MAX_WIDTH,
+  SPACING_192,
+  SPACING_512,
+  SPACING_700,
+  LiquidDistortion,
+  MainTitle,
+} from "~/components/common";
+import { useWindowDimensions } from "~/hooks/windowDimensions";
+import TextSection from "./TextSection";
+import Cone from "~/assets/cone.png";
+import HoopTop from "~/assets/hoop-top.png";
+import HoopBottom from "~/assets/hoop-bottom.png";
 
 const StyledApproachSection = styled(ApproachSection)`
   padding: '3rem 0';
@@ -83,10 +91,10 @@ export function Lore() {
 
         {isMobile && (
           <MobileTitleContainer>
-            <LiquidDistortion text='WOND3RLAND' fontSize={65} />
-            <LiquidDistortion text='IS NOT A PLACE,' fontSize={65} />
-            <LiquidDistortion text="IT'S A FEELING WITHIN," fontSize={65} />
-            <LiquidDistortion text='A PROCESS.' fontSize={65} />
+            <MainTitle fontSize={6.5}>WOND3RLAND</MainTitle>
+            <MainTitle fontSize={6.5}>IS NOT A PLACE,</MainTitle>
+            <MainTitle fontSize={6.5}>IT'S A FEELING WITHIN,</MainTitle>
+            <MainTitle fontSize={6.5}>A PROCESS.</MainTitle>
           </MobileTitleContainer>
         )}
       </HeroDivider>

@@ -12,11 +12,11 @@ import {
   ProjectTitle,
   ProjectsContainer,
   MobileTitleContainer,
-} from './Portfolio.styles';
-import { ProjectsList } from './ProjectsList';
-import { Distortion } from '~/components/common/DistortionText';
-import { Divider } from './ProjectsList/ProjectsList.styles';
-import { useWindowDimensions } from '~/hooks/windowDimensions';
+} from "./Portfolio.styles";
+import { ProjectsList } from "./ProjectsList";
+import { Divider } from "./ProjectsList/ProjectsList.styles";
+import { useWindowDimensions } from "~/hooks/windowDimensions";
+import { MainTitle, Distortion } from "~/components/common";
 
 export function Portfolio() {
   const { isMobile } = useWindowDimensions();
@@ -39,11 +39,11 @@ export function Portfolio() {
 
           {isMobile && (
             <MobileTitleContainer>
-              <Distortion text='TOGETHER,' fontSize={50} />
-              <Distortion text='WE WANT TO SUSTAINBLY' fontSize={50} />
-              <Distortion text='BUILD A MORE INCLUSIVE' fontSize={50} />
-              <Distortion text='AND DECENTRALIZED' fontSize={50} />
-              <Distortion text='FINANCIAL ECOSYSTEM' fontSize={50} />
+              <MainTitle>TOGETHER,</MainTitle>
+              <MainTitle>WE WANT TO SUSTAINBLY</MainTitle>
+              <MainTitle>BUILD A MORE INCLUSIVE</MainTitle>
+              <MainTitle>AND DECENTRALIZED</MainTitle>
+              <MainTitle>FINANCIAL ECOSYSTEM</MainTitle>
             </MobileTitleContainer>
           )}
           <Ball_1 />

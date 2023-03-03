@@ -6,7 +6,6 @@ import {
   MOBILE_MAX_WIDTH,
   SectionBackground,
   SPACING_1152,
-  SPACING_256,
   SPACING_384,
 } from '~/components/common';
 
@@ -30,16 +29,18 @@ export const STitle = styled.img`
 
 export const HeroDivider = styled.div`
   width: 100%;
+  height: 51rem;
   bottom: 0;
   z-index: 3;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: end;
   align-items: center;
-  margin-top: ${SPACING_256};
+  margin-top: 18rem;
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     margin-top: 15.5rem;
+    height: unset;
   }
 `;
 
