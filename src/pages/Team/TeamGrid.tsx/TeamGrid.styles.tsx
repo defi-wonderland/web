@@ -69,31 +69,52 @@ export const TeamGrid = styled.div`
     border-bottom: 1px solid rgba(255, 255, 255, 0.4);
   }
 
-  & .member.member-2,
-  & .member.member-5,
-  & .member.member-8,
-  & .member.member-11,
-  & .member.member-14,
-  & .member.member-17 {
-    border-right: unset;
-  }
+  ${(props) => {
+    let memberBorder = "";
+    for (let i = 0; i < MEMBERS.length; i++) {
+      if (!((i + 1) % 3)) {
+        memberBorder += `
+            & .member.member-${i} {
+              border-right: unset;
+            }
+          `;
+      }
+    }
+    return memberBorder;
+  }}
 
-  & .member.member-15,
-  & .member.member-16,
-  & .member.member-17 {
-    border-bottom: unset;
-  }
+  ${(props) => {
+    switch (MEMBERS.length % 3) {
+      case 0:
+        return `
+            & .member.member-${MEMBERS.length - 3},
+            & .member.member-${MEMBERS.length - 2},
+            & .member.member-${MEMBERS.length - 1} {
+              border-bottom: unset;
+            }
+          `;
+      case 1:
+        return `
+            & .member.member-${MEMBERS.length - 1} {
+              border-bottom: unset;
+            }
+          `;
+      case 2:
+        return `
+            & .member.member-${MEMBERS.length - 2},
+            & .member.member-${MEMBERS.length - 1} {
+              border-bottom: unset;
+            }
+          `;
+    }
+  }}
 
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: ${TABLET_MAX_WIDTH}) {
     grid-template-columns: auto auto;
 
     & .member {
       border-right: unset;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.4);
-    }
-
-    & .member.member-15 {
-      border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.4) !important;
     }
 
     ${() => {
@@ -108,6 +129,24 @@ export const TeamGrid = styled.div`
         }
       }
       return memberBorder;
+    }}
+
+    ${(props) => {
+      switch (MEMBERS.length % 2) {
+        case 0:
+          return `
+            & .member.member-${MEMBERS.length - 2},
+            & .member.member-${MEMBERS.length - 1} {
+              border-bottom: unset !important;
+            }
+          `;
+        case 1:
+          return `
+            & .member.member-${MEMBERS.length - 1} {
+              border-bottom: unset !important;
+            }
+          `;
+      }
     }}
   }
 
@@ -132,6 +171,7 @@ export const FlipCard = styled.button`
   text-align: start;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
   padding: unset;
+  width: 100%;
 
   &:active .flip-card-inner,
   &:focus .flip-card-inner {
@@ -145,7 +185,7 @@ export const FlipCardInner = styled.div`
   transform-style: preserve-3d;
 `;
 
-export const MemberContainerFront = styled.div`
+export const CardFront = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
@@ -173,7 +213,7 @@ export const MemberContainerFront = styled.div`
   }
 `;
 
-export const MemberContainerBack = styled(MemberContainerFront)`
+export const CardBack = styled(CardFront)`
   position: absolute;
   top: 0rem;
   background-image: radial-gradient(circle at 100% 0%, rgba(14, 21, 44, 0) 0%, rgba(14, 21, 44, 1) 85%),
@@ -181,6 +221,9 @@ export const MemberContainerBack = styled(MemberContainerFront)`
   background-size: cover;
   background-position: bottom;
   transform: rotateX(-180deg);
+  width: 100%;
+  overflow: hidden;
+  padding: 1.6rem;
 
   & img {
     opacity: 1;
@@ -196,7 +239,8 @@ export const Name = styled.strong`
   font-family: ${FONT_MEDIUM_L};
   font-size: ${FONT_SIZE_24};
   text-transform: uppercase;
-  opacity: 1 !important;
+  opacity: 1;
+  color: white;
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     font-size: 2rem;
@@ -212,6 +256,11 @@ export const Position = styled.p`
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     font-size: 1.6rem;
   }
+`;
+
+export const Description = styled(Position)`
+  font-size: 1.6rem;
+  white-space: pre-wrap;
 `;
 
 export const Divider = styled.canvas`
@@ -257,6 +306,10 @@ export const Social = styled.div`
 export const SImg = styled.img`
   padding: 0 0.4rem;
   opacity: 0.8;
+  height: 2.4rem;
+
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
 `;
 
 export const EyeImage = styled(KeyImage).attrs({
@@ -276,4 +329,17 @@ export const EyeImage = styled(KeyImage).attrs({
 export const MemberLink = styled(Link)`
   z-index: 1;
   transition: all 200ms linear;
+`;
+
+export const MemberContainer = styled.div`
+  position: relative;
+`;
+
+export const Mask = styled.div`
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  cursor: pointer;
 `;

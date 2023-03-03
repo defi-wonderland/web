@@ -21,15 +21,28 @@ const LandingContainer = styled.div<StyledContainerProps>`
 
 export function IntroductionPage() {
   const [showBackground, setShowBackground] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
+
   return (
     <>
-      <StarsBackground zIndex={showBackground ? 0 : 10} />
-      <Navbar className={`fade-enter${showBackground ? '-active' : ''}`} />
-      <LandingContainer showBackground={showBackground}>
-        <Landing />
-      </LandingContainer>
-      <Intro showBackground={showBackground} setShowBackground={setShowBackground} />
-      {showBackground && <Footer />}
+      {isLoaded && (
+        <>
+          <StarsBackground zIndex={showBackground ? 0 : 10} />
+          <Navbar className={`fade-enter${showBackground ? '-active' : ''}`} />
+          <LandingContainer showBackground={showBackground}>
+            <Landing />
+          </LandingContainer>
+          {showBackground && <Footer />}
+        </>
+      )}
+      <Intro
+        onLoad={(e) => {
+          const image = (e.target as HTMLImageElement).src;
+          image.includes('key_shape') && setIsLoaded(true);
+        }}
+        showBackground={showBackground}
+        setShowBackground={setShowBackground}
+      />
     </>
   );
 }
