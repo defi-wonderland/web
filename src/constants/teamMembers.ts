@@ -60,6 +60,7 @@ export const MEMBERS = [
     position: "Position",
     twitter: "https://twitter.com/0xGorillaDev",
     github: "https://github.com/0xGorilla",
+    telegram: "https://t.me/the0xGorilla",
     description:
       "- 10+ years in Software Development\n- Addicted to scalability and conventions\n- University dropout\n- Spent 3 years in the military\n\nFun fact: His OCD forces him to make the dishwasher look like a Tetris game!",
   },
