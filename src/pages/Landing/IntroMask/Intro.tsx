@@ -21,9 +21,14 @@ import INTROKEY from "~/assets/intro_key.svg";
 interface IntroProps {
   showBackground: boolean;
   setShowBackground: (value: boolean) => void;
+  onLoad: (e: any) => void;
 }
 
-export function Intro({ showBackground, setShowBackground }: IntroProps) {
+export function Intro({
+  showBackground,
+  setShowBackground,
+  ...props
+}: IntroProps) {
   const [activateDragEffect, setDragEffect] = useState(false);
   const [backgroundEffect, setBackgroundEffect] = useState(0);
   const nodeRef = useRef(null);
@@ -35,7 +40,7 @@ export function Intro({ showBackground, setShowBackground }: IntroProps) {
   }, [activateDragEffect]);
 
   return (
-    <IntroContainer className={showBackground ? "hide-intro" : ""}>
+    <IntroContainer className={showBackground ? "hide-intro" : ""} {...props}>
       <StyledNavbar>
         <Logo
           src={LogoImage}
