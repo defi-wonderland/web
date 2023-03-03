@@ -70,7 +70,7 @@ export const TeamGrid = styled.div`
   }
 
   ${(props) => {
-    let memberBorder = "";
+    let memberBorder = '';
     for (let i = 0; i < MEMBERS.length; i++) {
       if (!((i + 1) % 3)) {
         memberBorder += `
