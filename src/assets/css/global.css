@@ -92,17 +92,6 @@ button {
   border: none;
 }
 
-@media screen and (max-width: 600px) {
-  #hide {
-    display: none;
-  }
-
-  #show {
-    background-image: linear-gradient(to bottom, rgba(14, 21, 44, 0.85) 90%, rgba(14, 21, 44, 0) 100%);
-    padding-bottom: 3rem;
-  }
-}
-
 .fade-enter {
   opacity: 0;
 }
@@ -133,7 +122,11 @@ button {
 }
 
 .active {
-  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.08) 50%);
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.08) 50%
+  );
   border-radius: 1.6rem;
 }
 
@@ -161,8 +154,31 @@ body::-webkit-scrollbar-thumb:active {
   background-color: #999999;
 }
 
+img {
+  user-select: none;
+}
+
 .hide-intro {
   opacity: 0;
   transition: opacity 800ms;
   display: none;
+}
+
+@media screen and (max-width: 600px) {
+  #hide {
+    display: none;
+  }
+
+  #show {
+    background-image: linear-gradient(
+      to bottom,
+      rgba(14, 21, 44, 0.85) 90%,
+      rgba(14, 21, 44, 0) 100%
+    );
+    padding-bottom: 3rem;
+  }
+
+  .hide-intro {
+    transition-delay: 800ms;
+  }
 }
