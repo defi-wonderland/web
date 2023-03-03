@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 import {
   Button,
@@ -9,7 +9,7 @@ import {
   PAGE_MAX_WIDTH,
   SectionBackground,
   TABLET_MAX_WIDTH,
-} from "~/components/common";
+} from '~/components/common';
 
 export const BackgroundContainer = styled.div`
   position: absolute;
@@ -70,11 +70,11 @@ export const LandingContainer = styled.section`
   position: relative;
   display: grid;
   grid-template-areas:
-    "star title"
-    "empty firstBlock"
-    "empty landingDivider"
-    "empty secondBlock"
-    "icon secondTitle";
+    'star title'
+    'empty firstBlock'
+    'empty landingDivider'
+    'empty secondBlock'
+    'icon secondTitle';
   grid-template-columns: 5rem auto;
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {

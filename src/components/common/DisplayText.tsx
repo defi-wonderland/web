@@ -1,6 +1,6 @@
-import { FC } from "react";
-import styled from "styled-components";
-import { FONT_DISPLAY, MOBILE_MAX_WIDTH } from "./Variables";
+import { FC } from 'react';
+import styled from 'styled-components';
+import { FONT_DISPLAY, MOBILE_MAX_WIDTH } from './Variables';
 
 const StyledDisplayText = styled.h1<{
   size: DisplaySize;
@@ -13,17 +13,17 @@ const StyledDisplayText = styled.h1<{
   letter-spacing: 0.1rem;
 
   ${({ size }) =>
-    size === "xl" &&
+    size === 'xl' &&
     `
     font-size: 7.5rem;
   `}
   ${({ size }) =>
-    size === "lg" &&
+    size === 'lg' &&
     `
     font-size: 6rem;
   `}
   ${({ size }) =>
-    size === "md" &&
+    size === 'md' &&
     `
     font-size: 5rem;
   `}
@@ -50,7 +50,7 @@ const StyledDisplayText = styled.h1<{
   `}
 `;
 
-type DisplaySize = "xl" | "lg" | "md";
+type DisplaySize = 'xl' | 'lg' | 'md';
 
 export interface DisplayTextProps {
   size?: DisplaySize;
@@ -58,14 +58,9 @@ export interface DisplayTextProps {
   children: any;
 }
 
-export const DisplayText: FC<DisplayTextProps> = ({
-  size,
-  gradient,
-  children,
-  ...props
-}) => {
+export const DisplayText: FC<DisplayTextProps> = ({ size, gradient, children, ...props }) => {
   return (
-    <StyledDisplayText size={size ?? "md"} gradient={gradient} {...props}>
+    <StyledDisplayText size={size ?? 'md'} gradient={gradient} {...props}>
       {children}
     </StyledDisplayText>
   );

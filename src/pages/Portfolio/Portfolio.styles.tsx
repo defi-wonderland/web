@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 import {
   Ball,
@@ -8,7 +8,7 @@ import {
   SPACING_128,
   SPACING_256,
   TABLET_MAX_WIDTH,
-} from "~/components/common";
+} from '~/components/common';
 
 export const Container = styled.div`
   width: 90%;

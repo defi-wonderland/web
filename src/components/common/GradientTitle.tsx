@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { ArticleTitle, TextContainer } from "./SectionArticle";
+import styled from 'styled-components';
+import { ArticleTitle, TextContainer } from './SectionArticle';
 
 const SContainer = styled(ArticleTitle)`
   position: relative;

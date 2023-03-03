@@ -1,5 +1,5 @@
-import { FC } from "react";
-import styled from "styled-components";
+import { FC } from 'react';
+import styled from 'styled-components';
 
 import {
   CONTENT_INDEX,
@@ -8,8 +8,8 @@ import {
   FONT_SIZE_18,
   MOBILE_MAX_WIDTH,
   SPACING_530,
-} from "~/components/common";
-import STAR from "~/assets/lore-stars.svg";
+} from '~/components/common';
+import STAR from '~/assets/lore-stars.svg';
 
 export const TextContainer = styled.p`
   color: inherit;
@@ -36,7 +36,7 @@ const StyledSectionArticle = styled.div<{ center?: boolean }>`
     padding: 0 1rem;
 
     &:after {
-      content: "";
+      content: '';
       height: 1px;
       width: calc(100% + 4.5rem);
       position: absolute;
@@ -56,7 +56,7 @@ const StyledSectionArticle = styled.div<{ center?: boolean }>`
     position: relative;
 
     &:after {
-      content: "";
+      content: '';
       height: calc(100% + 3rem);
       width: 1px;
       position: absolute;
@@ -302,20 +302,15 @@ const Star = styled.img.attrs({ src: STAR })`
   top: 8.3rem;
 `;
 
-export const SectionArticle: FC<SectionArticleProps> = ({
-  title,
-  center,
-  children,
-  ...props
-}) => {
+export const SectionArticle: FC<SectionArticleProps> = ({ title, center, children, ...props }) => {
   return (
     <StyledSectionArticle center={center} {...props}>
       <ArticleTitle gradient>
-        <Star className="base-star" />
-        <Star className="bottom-star" />
+        <Star className='base-star' />
+        <Star className='bottom-star' />
         <TextContainer>
-          <Star className="mid-star" />
-          <Star className="last-star" />
+          <Star className='mid-star' />
+          <Star className='last-star' />
           {title}
         </TextContainer>
       </ArticleTitle>

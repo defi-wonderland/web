@@ -1,11 +1,7 @@
-import styled from "styled-components";
-import { Carousel } from "react-responsive-carousel";
+import styled from 'styled-components';
+import { Carousel } from 'react-responsive-carousel';
 
-import {
-  FONT_DISPLAY,
-  FONT_MEDIUM_L,
-  MOBILE_MAX_WIDTH,
-} from "~/components/common";
+import { FONT_DISPLAY, FONT_MEDIUM_L, MOBILE_MAX_WIDTH } from '~/components/common';
 
 export const TeamContainer = styled.div`
   display: flex;
@@ -122,7 +118,7 @@ export const CarouselContainer = styled(Carousel)`
     bottom: -1.5rem;
     left: 9rem;
     opacity: 1;
-    background-image: url("/img/arrow_left.svg") !important;
+    background-image: url('/img/arrow_left.svg') !important;
 
     &:hover {
       opacity: 0.8;
@@ -136,7 +132,7 @@ export const CarouselContainer = styled(Carousel)`
     bottom: -1.5rem;
     right: 9rem;
     opacity: 1;
-    background-image: url("/img/arrow.svg") !important;
+    background-image: url('/img/arrow.svg') !important;
 
     &:hover {
       opacity: 0.8;

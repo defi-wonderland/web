@@ -1,10 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import {
-  MOBILE_MAX_WIDTH,
-  NAVBAR_HEIGHT,
-  NAVBAR_INDEX,
-} from "~/components/common";
+import { MOBILE_MAX_WIDTH, NAVBAR_HEIGHT, NAVBAR_INDEX } from '~/components/common';
 
 export interface StyledContainerProps {
   backgroundEffect: number;
@@ -22,7 +18,7 @@ export const IntroContainer = styled.div`
   justify-content: space-between;
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
-    background-image: url("/img/hero/hero-bg.jpg");
+    background-image: url('/img/hero/hero-bg.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -39,7 +35,7 @@ export const Logo = styled.img<StyledContainerProps>`
 `;
 
 export const Keyhole = styled.img.attrs({
-  src: "/img/key_shape.svg",
+  src: '/img/key_shape.svg',
 })<StyledContainerProps>`
   pointer-events: none;
   position: absolute;
@@ -100,11 +96,7 @@ export const StyledNavbar = styled.nav`
   width: 100%;
   height: ${NAVBAR_HEIGHT};
   color: var(--text-light);
-  background-image: linear-gradient(
-    to bottom,
-    var(--background-surface-primary) 25%,
-    rgba(14, 21, 44, 0) 100%
-  );
+  background-image: linear-gradient(to bottom, var(--background-surface-primary) 25%, rgba(14, 21, 44, 0) 100%);
   grid-gap: 4rem;
   padding: 2rem 1rem;
   user-select: none;
@@ -129,7 +121,7 @@ export const Mask = styled.div<StyledContainerProps>`
   width: 20%;
   top: 0;
   left: 0;
-  display: ${(props) => (props.backgroundEffect > 0.01 ? "none" : "block")};
+  display: ${(props) => (props.backgroundEffect > 0.01 ? 'none' : 'block')};
   opacity: ${(props) => 1 - props.backgroundEffect};
 `;
 

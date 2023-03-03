@@ -13,30 +13,27 @@ import {
   VectorImg,
   WonderLogoText,
   FooterSocial,
-} from "./Footer.styles";
-import WonderLogoIcon from "/img/wonder-logo-text.svg";
-import StarIcon from "/img/footer/star-icon.svg";
-import PlusIcon from "/img/footer/plus-icon.svg";
-import TwitterIcon from "/img/footer/twitter-icon.svg";
-import GithubIcon from "/img/footer/github-icon.svg";
-import DoorIcon from "/img/footer/door-icon.svg";
-import { Link } from "~/components/common";
+} from './Footer.styles';
+import WonderLogoIcon from '/img/wonder-logo-text.svg';
+import StarIcon from '/img/footer/star-icon.svg';
+import PlusIcon from '/img/footer/plus-icon.svg';
+import TwitterIcon from '/img/footer/twitter-icon.svg';
+import GithubIcon from '/img/footer/github-icon.svg';
+import { Link } from '~/components/common';
 
-interface FooterProps {}
-
-export const Footer = ({}: FooterProps) => (
+export const Footer = () => (
   <Container>
     {/* Background */}
     <BgContainer>
-      <BackgroundImage type="2" align="center" />
+      <BackgroundImage type='2' align='center' />
     </BgContainer>
 
     {/* Card */}
     <StyledFooter>
       <FooterHeader>
-        <Star src={StarIcon} alt="Star icon" />
-        <WonderLogoText src={WonderLogoIcon} alt="Wonderland logo text" />
-        <Star src={StarIcon} alt="Star icon" />
+        <Star src={StarIcon} alt='Star icon' />
+        <WonderLogoText src={WonderLogoIcon} alt='Wonderland logo text' />
+        <Star src={StarIcon} alt='Star icon' />
       </FooterHeader>
 
       <FooterActions>
@@ -46,25 +43,22 @@ export const Footer = ({}: FooterProps) => (
         </VectorContainer>
 
         <Link
-          to="/team"
+          to='/team'
           onClick={() => {
-            if (location.pathname === "/team") window.scrollTo(0, 0);
+            if (location.pathname === '/team') window.scrollTo(0, 0);
           }}
         >
           About us
         </Link>
-        <Plus src={PlusIcon} alt="Plus icon" />
-        <Link
-          to="https://docs.google.com/forms/d/1n70jsL4sFkOwPNBTdciPqlWF2RirgQwejjztpS4-2L8/viewform"
-          external
-        >
+        <Plus src={PlusIcon} alt='Plus icon' />
+        <Link to='https://docs.google.com/forms/d/1n70jsL4sFkOwPNBTdciPqlWF2RirgQwejjztpS4-2L8/viewform' external>
           Join us
         </Link>
-        <Plus src={PlusIcon} alt="Plus icon" />
+        <Plus src={PlusIcon} alt='Plus icon' />
         <Link
-          to="/portfolio"
+          to='/portfolio'
           onClick={() => {
-            if (location.pathname === "/portfolio") window.scrollTo(0, 0);
+            if (location.pathname === '/portfolio') window.scrollTo(0, 0);
           }}
         >
           Portfolio
@@ -78,11 +72,11 @@ export const Footer = ({}: FooterProps) => (
         </span>
 
         <SocialIcons>
-          <SocialIcon to="https://twitter.com/defi_wonderland" external>
-            <img src={TwitterIcon} alt="Twitter icon" />
+          <SocialIcon to='https://twitter.com/defi_wonderland' external>
+            <img src={TwitterIcon} alt='Twitter icon' />
           </SocialIcon>
-          <SocialIcon to="https://github.com/defi-wonderland" external>
-            <img src={GithubIcon} alt="Github icon" />
+          <SocialIcon to='https://github.com/defi-wonderland' external>
+            <img src={GithubIcon} alt='Github icon' />
           </SocialIcon>
           {/* <SocialIcon to="https://medium.com/the-defi-wonderland" external>
             <img src={DoorIcon} alt="Door icon" />

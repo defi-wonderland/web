@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 import {
   FONT_DISPLAY,
   FONT_MEDIUM,
@@ -9,10 +9,10 @@ import {
   MOBILE_MAX_WIDTH,
   SPACING_320,
   TABLET_MAX_WIDTH,
-} from "~/components/common";
-import KEY from "~/assets/join-key.svg";
-import EYE from "~/assets/eye.svg";
-import { MEMBERS } from "~/constants/teamMembers";
+} from '~/components/common';
+import KEY from '~/assets/join-key.svg';
+import EYE from '~/assets/eye.svg';
+import { MEMBERS } from '~/constants/teamMembers';
 
 export const Container = styled.div`
   width: 100%;
@@ -70,7 +70,7 @@ export const TeamGrid = styled.div`
   }
 
   ${(props) => {
-    let memberBorder = "";
+    let memberBorder = '';
     for (let i = 0; i < MEMBERS.length; i++) {
       if (!((i + 1) % 3)) {
         memberBorder += `
@@ -117,8 +117,8 @@ export const TeamGrid = styled.div`
       border-bottom: 1px solid rgba(255, 255, 255, 0.4) !important;
     }
 
-    ${(props) => {
-      let memberBorder = "";
+    ${() => {
+      let memberBorder = '';
       for (let i = 0; i < MEMBERS.length; i++) {
         if (!(i % 2)) {
           memberBorder += `
@@ -197,12 +197,8 @@ export const CardFront = styled.div`
   backface-visibility: hidden;
 
   &:hover {
-    background-image: radial-gradient(
-        circle at 100% 0%,
-        rgba(14, 21, 44, 0) 0%,
-        rgba(14, 21, 44, 1) 85%
-      ),
-      url("/img/lore/002_grad.jpg");
+    background-image: radial-gradient(circle at 100% 0%, rgba(14, 21, 44, 0) 0%, rgba(14, 21, 44, 1) 85%),
+      url('/img/lore/002_grad.jpg');
     background-size: cover;
     background-position: bottom;
   }
@@ -220,12 +216,8 @@ export const CardFront = styled.div`
 export const CardBack = styled(CardFront)`
   position: absolute;
   top: 0rem;
-  background-image: radial-gradient(
-      circle at 100% 0%,
-      rgba(14, 21, 44, 0) 0%,
-      rgba(14, 21, 44, 1) 85%
-    ),
-    url("/img/lore/002_grad.jpg");
+  background-image: radial-gradient(circle at 100% 0%, rgba(14, 21, 44, 0) 0%, rgba(14, 21, 44, 1) 85%),
+    url('/img/lore/002_grad.jpg');
   background-size: cover;
   background-position: bottom;
   transform: rotateX(-180deg);
@@ -272,20 +264,12 @@ export const Description = styled(Position)`
 `;
 
 export const Divider = styled.canvas`
-  background: linear-gradient(
-    to right,
-    rgba(14, 21, 44, 0) 0,
-    rgba(255, 255, 255, 0.5) 100%
-  );
+  background: linear-gradient(to right, rgba(14, 21, 44, 0) 0, rgba(255, 255, 255, 0.5) 100%);
   height: 2px;
   width: 60%;
 
   @media screen and (max-width: ${TABLET_MAX_WIDTH}) {
-    background: linear-gradient(
-      to bottom,
-      rgba(14, 21, 44, 0) 0,
-      rgba(255, 255, 255, 0.5) 100%
-    );
+    background: linear-gradient(to bottom, rgba(14, 21, 44, 0) 0, rgba(255, 255, 255, 0.5) 100%);
     height: 8rem;
     width: 2px;
     margin-top: 3rem;
@@ -300,11 +284,7 @@ export const JoinContainer = styled(Link)`
   justify-content: center;
   align-items: center;
 
-  background-image: radial-gradient(
-    ellipse 50% 50%,
-    rgba(255, 255, 255, 0.2),
-    transparent
-  );
+  background-image: radial-gradient(ellipse 50% 50%, rgba(255, 255, 255, 0.2), transparent);
 
   & p {
     font-size: 2.4rem;
@@ -334,7 +314,7 @@ export const SImg = styled.img`
 
 export const EyeImage = styled(KeyImage).attrs({
   src: EYE,
-  alt: "See description icon",
+  alt: 'See description icon',
 })`
   opacity: 0;
   bottom: 0;

@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 
-import { MOBILE_MAX_WIDTH, TABLET_MAX_WIDTH } from "~/components/common";
+import { MOBILE_MAX_WIDTH, TABLET_MAX_WIDTH } from '~/components/common';
 
 export interface Dimension {
   width: number;
@@ -25,9 +25,7 @@ function getWindowDimensions(): Dimension {
 }
 
 export const useWindowDimensions = () => {
-  const [windowDimensions, setWindowDimensions] = useState(
-    getWindowDimensions()
-  );
+  const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
 
   useEffect(() => {
     setWindowDimensions(getWindowDimensions());

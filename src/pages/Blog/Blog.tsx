@@ -1,7 +1,7 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 
-import { POSTS } from "~/constants/posts";
-import { Distortion } from "~/components/common/DistortionText";
+import { POSTS } from '~/constants/posts';
+import { Distortion } from '~/components/common/DistortionText';
 import {
   PageContainer,
   Title,
@@ -16,8 +16,8 @@ import {
   BlogsContainer,
   Image,
   Tags,
-} from "./Blog.styles";
-import { useWindowDimensions } from "~/hooks/windowDimensions";
+} from './Blog.styles';
+import { useWindowDimensions } from '~/hooks/windowDimensions';
 
 export function Blog() {
   const navigate = useNavigate();
@@ -28,19 +28,19 @@ export function Blog() {
       <Title>
         {!isMobile && (
           <>
-            <Distortion text="NEWS, STORIES AND" />
-            <Distortion text="UPDATES FROM WONDERLAND" />
+            <Distortion text='NEWS, STORIES AND' />
+            <Distortion text='UPDATES FROM WONDERLAND' />
           </>
         )}
         {isMobile && (
           <>
-            <Distortion text="NEWS, STORIES AND" fontSize={55} />
-            <Distortion text="UPDATES FROM WONDERLAND" fontSize={55} />
+            <Distortion text='NEWS, STORIES AND' fontSize={55} />
+            <Distortion text='UPDATES FROM WONDERLAND' fontSize={55} />
           </>
         )}
       </Title>
       <BgContainer>
-        <BackgroundImage type="1" align="center" />
+        <BackgroundImage type='1' align='center' />
       </BgContainer>
       <BlogsContainer>
         {POSTS.map((post) => (
@@ -49,7 +49,7 @@ export function Blog() {
             onClick={() =>
               navigate({
                 pathname: `/blog/${post.id}`,
-                search: `?${post.name.toLowerCase().replaceAll(" ", "-")}`,
+                search: `?${post.name.toLowerCase().replaceAll(' ', '-')}`,
               })
             }
           >

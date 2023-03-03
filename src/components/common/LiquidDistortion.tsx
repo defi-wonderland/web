@@ -1,7 +1,7 @@
-import styled from "styled-components";
-import { LiquidDistortionText } from "react-text-fun";
+import styled from 'styled-components';
+import { LiquidDistortionText } from 'react-text-fun';
 
-import { useFontObserver } from "~/hooks/useFontObserver";
+import { useFontObserver } from '~/hooks/useFontObserver';
 
 const Container = styled.div`
   canvas {
@@ -24,14 +24,7 @@ interface DistorsionProps {
   fontFamily?: string;
 }
 
-export const LiquidDistortion = ({
-  text,
-  fontSize,
-  speed,
-  volatility,
-  color,
-  fontFamily,
-}: DistorsionProps) => {
+export const LiquidDistortion = ({ text, fontSize, speed, volatility, color, fontFamily }: DistorsionProps) => {
   const { ready } = useFontObserver();
   const defaultFontSize = 140;
 
@@ -44,8 +37,8 @@ export const LiquidDistortion = ({
             fontSize={fontSize || defaultFontSize}
             speed={speed || 0.1}
             volatility={volatility || 0.02}
-            fill={color || "white"}
-            fontFamily={fontFamily || "SharpGrotesk-10"}
+            fill={color || 'white'}
+            fontFamily={fontFamily || 'SharpGrotesk-10'}
             lineHeight={1.1}
             paddingLeft={20}
             paddingRight={20}

@@ -1,2 +1,2 @@
-export * from "./PageContent";
-export * from "./PageView";
+export * from './PageContent';
+export * from './PageView';
