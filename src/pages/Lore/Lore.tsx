@@ -1,7 +1,7 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import { PageContent } from "~/components/app";
-import { ApproachSection } from "./ApproachSection";
+import { PageContent } from '~/components/app';
+import { ApproachSection } from './ApproachSection';
 import {
   Ball,
   MOBILE_MAX_WIDTH,
@@ -10,12 +10,12 @@ import {
   SPACING_700,
   LiquidDistortion,
   MainTitle,
-} from "~/components/common";
-import { useWindowDimensions } from "~/hooks/windowDimensions";
-import TextSection from "./TextSection";
-import Cone from "~/assets/cone.png";
-import HoopTop from "~/assets/hoop-top.png";
-import HoopBottom from "~/assets/hoop-bottom.png";
+} from '~/components/common';
+import { useWindowDimensions } from '~/hooks/windowDimensions';
+import TextSection from './TextSection';
+import Cone from '~/assets/cone.png';
+import HoopTop from '~/assets/hoop-top.png';
+import HoopBottom from '~/assets/hoop-bottom.png';
 
 const StyledApproachSection = styled(ApproachSection)`
   padding: '3rem 0';
@@ -93,7 +93,7 @@ export function Lore() {
           <MobileTitleContainer>
             <MainTitle fontSize={6.5}>WOND3RLAND</MainTitle>
             <MainTitle fontSize={6.5}>IS NOT A PLACE,</MainTitle>
-            <MainTitle fontSize={6.5}>IT'S A FEELING WITHIN,</MainTitle>
+            <MainTitle fontSize={6.5}>IT&apos;S A FEELING WITHIN,</MainTitle>
             <MainTitle fontSize={6.5}>A PROCESS.</MainTitle>
           </MobileTitleContainer>
         )}
