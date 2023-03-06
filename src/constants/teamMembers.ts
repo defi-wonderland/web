@@ -1,3 +1,5 @@
+import { calcSkeleDay } from '~/utils/misc';
+
 export const MEMBERS = [
   {
     name: 'MATI',
@@ -5,23 +7,21 @@ export const MEMBERS = [
     twitter: 'https://twitter.com/MatiasNisenson',
     github: '',
     description:
-      '- 10+ years in Software Development\n- Addicted to scalability and conventions\n- University dropout\n- Spent 3 years in the military\n\nFun fact: His OCD forces him to make the dishwasher look like a Tetris game!',
+      "- 3x Startup founder & CEO\n- Founder & GP at a $50m deep-tech VC\n\nFun fact: Used to run a tenebrio molitor farm and has become somewhat of an expert on breeding mealworms. Bet you didn't see that one coming!",
   },
   {
     name: 'BILLI',
     position: 'Position',
     twitter: '',
     github: 'https://github.com/Billy-103',
-    description:
-      '- 10+ years in Software Development\n- Addicted to scalability and conventions\n- University dropout\n- Spent 3 years in the military\n\nFun fact: His OCD forces him to make the dishwasher look like a Tetris game!',
+    description: '',
   },
   {
     name: 'PEPO',
     position: 'Position',
     twitter: 'https://twitter.com/0xPEPO',
     github: 'https://github.com/vPEPO',
-    description:
-      '- 10+ years in Software Development\n- Addicted to scalability and conventions\n- University dropout\n- Spent 3 years in the military\n\nFun fact: His OCD forces him to make the dishwasher look like a Tetris game!',
+    description: '',
   },
   {
     name: 'AUSTRIAN',
@@ -29,7 +29,7 @@ export const MEMBERS = [
     twitter: 'https://twitter.com/0xAustrian',
     github: 'https://github.com/0xAustrian',
     description:
-      '- 10+ years in Software Development\n- Addicted to scalability and conventions\n- University dropout\n- Spent 3 years in the military\n\nFun fact: His OCD forces him to make the dishwasher look like a Tetris game!',
+      "- Studied Software Developer\n- Learned Solidity because he was bored at work\n\nFun fact: 90's horror movies fan",
   },
   {
     name: 'DR GORILLA',
@@ -37,15 +37,14 @@ export const MEMBERS = [
     twitter: 'https://twitter.com/DrGorilla_md',
     github: 'https://github.com/drgorillamd',
     description:
-      '- 10+ years in Software Development\n- Addicted to scalability and conventions\n- University dropout\n- Spent 3 years in the military\n\nFun fact: His OCD forces him to make the dishwasher look like a Tetris game!',
+      "- Random diploma collector\n- Assembly fanatic (Huff is cheating)\n\nFun fact: I got 99 issues and a bitshift ain't one",
   },
   {
     name: 'JABBERWOCK',
     position: 'Position',
     twitter: 'https://twitter.com/0xGorillaDev',
     github: 'https://github.com/0xJabberwock',
-    description:
-      '- 10+ years in Software Development\n- Addicted to scalability and conventions\n- University dropout\n- Spent 3 years in the military\n\nFun fact: His OCD forces him to make the dishwasher look like a Tetris game!',
+    description: '- Recruited directly by Wonderland\n- Codes even his life\n\nFun fact: Holds a dumbbell everyday',
   },
   {
     name: 'NG',
@@ -53,16 +52,16 @@ export const MEMBERS = [
     twitter: 'https://twitter.com/ngndev',
     github: 'https://github.com/0xng',
     description:
-      '- 10+ years in Software Development\n- Addicted to scalability and conventions\n- University dropout\n- Spent 3 years in the military\n\nFun fact: His OCD forces him to make the dishwasher look like a Tetris game!',
+      '- Peaked at 5.6k MMR in Dota 2 back when top 1 had 7.5k. Things spiraled down from there\n- Reached 1800 ELO in chess.com to never play a ranked game again due to 1800 looking nicer than 1700\n\n Fun fact: Can recite words backwards fast. This is due to OCD. Help',
   },
   {
     name: 'OXGORILLA',
     position: 'Position',
     twitter: 'https://twitter.com/0xGorillaDev',
     github: 'https://github.com/0xGorilla',
-    telegram: 'https://t.me/the0xGorilla',
+    mail: '',
     description:
-      '- 10+ years in Software Development\n- Addicted to scalability and conventions\n- University dropout\n- Spent 3 years in the military\n\nFun fact: His OCD forces him to make the dishwasher look like a Tetris game!',
+      '- 10+ years in Software Development\n- Addicted to scalability and conventions\n\nFun fact: His OCD forces him to make the dishwasher look like a Tetris game!',
   },
   {
     name: 'ASHITAKA',
@@ -70,7 +69,7 @@ export const MEMBERS = [
     twitter: 'https://twitter.com/0xAshitakah',
     github: 'https://github.com/ashitakah',
     description:
-      '- 10+ years in Software Development\n- Addicted to scalability and conventions\n- University dropout\n- Spent 3 years in the military\n\nFun fact: His OCD forces him to make the dishwasher look like a Tetris game!',
+      '- Solidity dev\n- Studied Telecommunications engineering and philosophy\n\nFun fact: Pro player of magic the gathering',
   },
   {
     name: 'GAS1CENT',
@@ -78,23 +77,21 @@ export const MEMBERS = [
     twitter: 'https://twitter.com/gas1cent',
     github: 'https://github.com/gas1cent',
     description:
-      '- 10+ years in Software Development\n- Addicted to scalability and conventions\n- University dropout\n- Spent 3 years in the military\n\nFun fact: His OCD forces him to make the dishwasher look like a Tetris game!',
+      '- Watched over a thousand movies, vaguely remember 4 of them\n- A big nap2earn proponent\n\nFun fact: Jail dropout.',
   },
   {
     name: 'GOTZEN',
     position: 'Position',
     twitter: 'https://twitter.com/0xGotzen',
     github: 'https://github.com/gotzenx',
-    description:
-      '- 10+ years in Software Development\n- Addicted to scalability and conventions\n- University dropout\n- Spent 3 years in the military\n\nFun fact: His OCD forces him to make the dishwasher look like a Tetris game!',
+    description: '- Compulsive optimizer\n- Another University deserter\n\nFun fact: Really good at voice impressions',
   },
   {
     name: 'WEI3ERHASE',
     position: 'Position',
     twitter: 'https://twitter.com/wei3erHase',
     github: 'https://github.com/wei3erHase',
-    description:
-      '- 10+ years in Software Development\n- Addicted to scalability and conventions\n- University dropout\n- Spent 3 years in the military\n\nFun fact: His OCD forces him to make the dishwasher look like a Tetris game!',
+    description: '- Just a bun from Görli 🥕\n\nFun fact: afraid of bugs and owls',
   },
   {
     name: 'PARTI',
@@ -102,15 +99,14 @@ export const MEMBERS = [
     twitter: 'https://twitter.com/0xParticle',
     github: 'https://github.com/0xParticle',
     description:
-      '- 10+ years in Software Development\n- Addicted to scalability and conventions\n- University dropout\n- Spent 3 years in the military\n\nFun fact: His OCD forces him to make the dishwasher look like a Tetris game!',
+      '- Managed to get a PhD in Physics, specializing in quantum information theory. Changed particles for nodes now: "Pls parti, stop asking about the Beacon Chain\'s entropy."\n- Average chaos enjoyer. Definitely not a Furry\n\nSad fact: Die-hard Boca Juniors fan',
   },
   {
     name: 'SKELETOR',
     position: 'Position',
     twitter: 'https://twitter.com/Skeletor_Space',
     github: 'https://github.com/skeletor-spaceman',
-    description:
-      '- 10+ years in Software Development\n- Addicted to scalability and conventions\n- University dropout\n- Spent 3 years in the military\n\nFun fact: His OCD forces him to make the dishwasher look like a Tetris game!',
+    description: `- First contract deployed ${calcSkeleDay()} days ago\n- Likes breaking things\n\nFun fact: Never went to space`,
   },
   {
     name: 'SHAITO',
@@ -118,7 +114,7 @@ export const MEMBERS = [
     twitter: 'https://twitter.com/0xShaito',
     github: 'https://github.com/0xShaito',
     description:
-      '- 10+ years in Software Development\n- Addicted to scalability and conventions\n- University dropout\n- Spent 3 years in the military\n\nFun fact: His OCD forces him to make the dishwasher look like a Tetris game!',
+      '- Flying bison addicted crypto and building stuff\n- Normie dev turned Solidity enjoyor\n\nFun fact: Have been rewatching avatar the last airbender for the past 7 years',
   },
   {
     name: 'TURTLEMOJI',
@@ -126,7 +122,7 @@ export const MEMBERS = [
     twitter: '',
     github: 'https://github.com/turtlemoji',
     description:
-      '- 10+ years in Software Development\n- Addicted to scalability and conventions\n- University dropout\n- Spent 3 years in the military\n\nFun fact: His OCD forces him to make the dishwasher look like a Tetris game!',
+      "- Co-created and helped in multiple onchain and normie products/companies\n- Loves swimming, video games, anime, science and to debate anything\n\nFun fact: Doesn't have medical insurance",
   },
   {
     name: 'ARDY',
@@ -134,15 +130,14 @@ export const MEMBERS = [
     twitter: 'https://twitter.com/0xArdy',
     github: 'https://github.com/0xArdy',
     description:
-      '- 10+ years in Software Development\n- Addicted to scalability and conventions\n- University dropout\n- Spent 3 years in the military\n\nFun fact: His OCD forces him to make the dishwasher look like a Tetris game!',
+      '- Background in Engineering\n- Passionate about mathematics and philosophy\n\nFun fact: bonsaist apprentice 🌳',
   },
   {
     name: 'RBP',
     position: 'Position',
     twitter: '',
     github: '',
-    description:
-      '- 10+ years in Software Development\n- Addicted to scalability and conventions\n- University dropout\n- Spent 3 years in the military\n\nFun fact: His OCD forces him to make the dishwasher look like a Tetris game!',
+    description: '',
   },
   {
     name: 'JOXES',
@@ -150,7 +145,7 @@ export const MEMBERS = [
     twitter: 'https://twitter.com/0xJoxes',
     github: 'https://github.com/Joxess',
     description:
-      '- 10+ years in Software Development\n- Addicted to scalability and conventions\n- University dropout\n- Spent 3 years in the military\n\nFun fact: His OCD forces him to make the dishwasher look like a Tetris game!',
+      "- Background in Engineering\n- Incubated four different communities to concentrate and sophisticate knowledge on Ethereum\n\nFun fact: Yes, I enjoy life but I love to comment on DeFi and Ethereum's scaling solutions all the day",
   },
   {
     name: 'RACCON',
@@ -158,7 +153,7 @@ export const MEMBERS = [
     twitter: 'https://twitter.com/0xRaccoonDev',
     github: 'https://github.com/0xRaccoon',
     description:
-      '- 10+ years in Software Development\n- Addicted to scalability and conventions\n- University dropout\n- Spent 3 years in the military\n\nFun fact: His OCD forces him to make the dishwasher look like a Tetris game!',
+      '- Systems engineer who studied at UTN\n- Believes that adaptability is an important feature\n\nFun fact: Like to travel and do outdoor activities',
   },
   {
     name: 'MONO',
@@ -166,6 +161,6 @@ export const MEMBERS = [
     twitter: 'https://twitter.com/0x_mono',
     github: '',
     description:
-      '- 10+ years in Software Development\n- Addicted to scalability and conventions\n- University dropout\n- Spent 3 years in the military\n\nFun fact: His OCD forces him to make the dishwasher look like a Tetris game!',
+      '- IT infrastructure study\n- Defi research and scalability\n\nFun fact: In my spare time I also poke my nose into Defi',
   },
 ];
