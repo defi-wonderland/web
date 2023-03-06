@@ -13,11 +13,11 @@ import MISC from '~/assets/footer_vector.svg';
 export const footerColor = 'rgba(255, 255, 255, 0.2)';
 export const footerPadding = '1.5rem';
 
-export const Star = styled.img`
+export const Star = styled.img.attrs({ loading: 'lazy' })`
   width: 1.66rem;
 `;
 
-export const WonderLogoText = styled.img`
+export const WonderLogoText = styled.img.attrs({ loading: 'lazy' })`
   width: 16.3rem;
 `;
 
@@ -30,7 +30,7 @@ export const FooterHeader = styled.div`
   user-select: none;
 `;
 
-export const Plus = styled.img`
+export const Plus = styled.img.attrs({ loading: 'lazy' })`
   width: 1.5rem;
 `;
 
@@ -159,6 +159,8 @@ export const VectorContainer = styled.div`
 
 export const VectorImg = styled.img.attrs({
   src: MISC,
+  loading: 'lazy',
+  alt: '',
 })`
   position: relative;
   width: 220px;

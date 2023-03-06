@@ -32,7 +32,7 @@ export const TeamTitle = styled.h1`
   }
 `;
 
-export const CrownIcon = styled.img`
+export const CrownIcon = styled.img.attrs({ loading: 'lazy', alt: '' })`
   margin: 0 auto;
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
@@ -50,7 +50,7 @@ export const KeyContainer = styled.div`
   overflow: hidden;
 `;
 
-export const Keyhole = styled.img`
+export const Keyhole = styled.img.attrs({ loading: 'lazy', alt: '' })`
   position: absolute;
   margin: 0 auto;
   top: 1rem;
@@ -72,7 +72,7 @@ export const ButtonsContainer = styled.div`
   }
 `;
 
-export const ArrowIcon = styled.img`
+export const ArrowIcon = styled.img.attrs({ loading: 'lazy', alt: '' })`
   cursor: pointer;
 
   &:hover {

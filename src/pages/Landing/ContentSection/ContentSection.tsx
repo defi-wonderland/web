@@ -31,11 +31,11 @@ export function ContentSection() {
     <LandingContainer>
       <BackgroundContainer>
         <BG_1 type='1' align='center' />
-        <Cone src={ConeBackground} alt='cone image' />
+        <Cone src={ConeBackground} />
       </BackgroundContainer>
-      <Star src={StarIcon} alt='Star icon' />
+      <Star src={StarIcon} />
       <FirstTitle>
-        <Star src={MobileStar} alt='Star icon' />
+        <Star src={MobileStar} />
         developing for a greater good
       </FirstTitle>
 
@@ -68,10 +68,10 @@ export function ContentSection() {
         <Team />
       </SecondBlockContainer>
 
-      <Icon src={Flower} alt='flower icon' />
+      <Icon src={Flower} />
       <SecondTitle>
         <div>
-          <Icon src={Flower} alt='flower icon' />
+          <Icon src={Flower} />
           fix-to-earn
         </div>
         <CommunityButton>

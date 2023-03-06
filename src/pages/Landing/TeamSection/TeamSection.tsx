@@ -19,10 +19,10 @@ export function Team() {
   return (
     <>
       <TeamContainer>
-        <CrownIcon src={Crown} alt='crown icon' />
+        <CrownIcon src={Crown} />
         <TeamTitle>THE POWER OF THE PEOPLE</TeamTitle>
         <KeyContainer>
-          <Keyhole src={Key} alt='crown icon' />
+          <Keyhole src={Key} />
           <CarouselContainer
             showArrows={true}
             showStatus={false}
