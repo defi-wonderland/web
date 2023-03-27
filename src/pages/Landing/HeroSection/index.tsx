@@ -42,8 +42,12 @@ export const TitleContainer = styled.div`
   margin-top: 8rem;
 
   & video {
-    width: 90rem;
+    width: 60%;
     height: 100%;
+  }
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    margin-top: 4rem;
   }
 `;
 
