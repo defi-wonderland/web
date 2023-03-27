@@ -136,7 +136,7 @@ export const MEMBERS = [
   {
     name: 'TURTLEMOJI',
     position: 'Solidity Dev',
-    twitter: '',
+    twitter: 'https://twitter.com/turtle_moji',
     github: 'https://github.com/turtlemoji',
     description:
       "- Co-created and helped in multiple onchain and normie products/companies\n- Loves swimming, video games, anime, science and to debate anything\n\nFun fact: Doesn't have medical insurance",
