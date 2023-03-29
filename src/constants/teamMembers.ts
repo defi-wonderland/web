@@ -27,14 +27,6 @@ export const MEMBERS = [
       '- Addicted to meetings and context switching\n\nFun fact: Loves scaring buns. Have you seen one around? ',
   },
   {
-    name: 'RBP',
-    position: 'Biz Dev',
-    twitter: '',
-    github: '',
-    description:
-      '- Co-founded a VC-backed content personalization company that was acquired\n- Studied Astronomy and Economics\n\nFun fact: Competitive bicycle racer',
-  },
-  {
     name: 'SKELETOR',
     position: 'Architect',
     twitter: 'https://twitter.com/Skeletor_Space',
@@ -131,7 +123,7 @@ export const MEMBERS = [
     twitter: 'https://twitter.com/0xShaito',
     github: 'https://github.com/0xShaito',
     description:
-      '- Flying bison addicted crypto and building stuff\n- Normie dev turned Solidity enjoyor\n\nFun fact: Have been rewatching avatar the last airbender for the past 7 years',
+      '- Flying bison addicted to crypto and building stuff\n- Normie dev turned Solidity enjoyoor\n\nFun fact: Have been rewatching avatar the last airbender for the past 7 years',
   },
   {
     name: 'TURTLEMOJI',
