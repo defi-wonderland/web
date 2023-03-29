@@ -62,7 +62,7 @@ export const MEMBERS = [
     twitter: 'https://twitter.com/0xAustrian',
     github: 'https://github.com/0xAustrian',
     description:
-      "- Studied Software Developer\n- Learned Solidity because he was bored at work\n\nFun fact: 90's horror movies fan",
+      "- Studied Software Development\n- Learned Solidity because he was bored at work\n\nFun fact: 90's horror movies fan",
   },
   {
     name: 'DR GORILLA',
