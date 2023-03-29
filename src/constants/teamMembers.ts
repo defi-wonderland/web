@@ -24,7 +24,7 @@ export const MEMBERS = [
     twitter: '',
     github: 'https://github.com/Billy-103',
     description:
-      '- Addicted to meetings and context switching\n\nFun fact: Loves scaring buns. Have you seen one around? ',
+      '- Addicted to meetings and context switching\n\nFun fact: Loves scaring buns. Have you seen one around?',
   },
   {
     name: 'SKELETOR',
