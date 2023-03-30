@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 
-import { POSTS } from "~/constants/posts";
-import { Distortion, MainTitle } from "~/components/common";
+import { POSTS } from '~/constants/posts';
+import { Distortion, MainTitle } from '~/components/common';
 import {
   PageContainer,
   Title,

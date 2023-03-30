@@ -6,15 +6,15 @@
 
 <div align="center">
 
-**[Website](https://defi.sucks) • 
-[Twitter](https://twitter.com/DeFi_Wonderland) • 
+**[Website](https://defi.sucks) •
+[Twitter](https://twitter.com/DeFi_Wonderland) •
 [Github](https://github.com/defi-wonderland)**
 
 </div>
 
-## About DeFi Wonderland
+## About Wonderland
 
-DeFi Wonderland is a team of top Web3 researchers, developers, and operators who believe that the future needs to be open-source, permissionless, and decentralized.
+Wonderland is a team of top Web3 researchers, developers, and operators who believe that the future needs to be open-source, permissionless, and decentralized.
 
 [DeFi sucks](https://defi.sucks/), but we are here to make it better.
 

@@ -74,7 +74,7 @@ export interface SectionBackgroundProps {
 export const SectionBackground: FC<SectionBackgroundProps> = ({ type, align, ...props }) => {
   return (
     <StyledSectionBackground type={type} align={align} {...props}>
-      <img src={`/img/lore/00${type}_grad.jpg`} alt='' />
+      <img src={`/img/lore/00${type}_grad.jpg`} alt='' loading='lazy' />
     </StyledSectionBackground>
   );
 };

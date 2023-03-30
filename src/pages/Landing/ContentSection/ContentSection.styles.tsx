@@ -47,7 +47,7 @@ export const BG_1 = styled(SectionBackground)`
   }
 `;
 
-export const Cone = styled.img`
+export const Cone = styled.img.attrs({ loading: 'lazy', alt: '' })`
   position: absolute;
   margin-left: 25%;
   width: 90rem;
@@ -122,7 +122,7 @@ export const FirstTitle = styled(Title)`
   }
 `;
 
-export const Star = styled.img`
+export const Star = styled.img.attrs({ loading: 'lazy', alt: '' })`
   width: 5rem;
   padding: 0 1rem;
   grid-area: star;
@@ -134,7 +134,7 @@ export const Star = styled.img`
   }
 `;
 
-export const Icon = styled.img`
+export const Icon = styled.img.attrs({ loading: 'lazy', alt: '' })`
   grid-area: icon;
   width: 5rem;
   padding: 0 1.1rem;

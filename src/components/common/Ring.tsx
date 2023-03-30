@@ -35,8 +35,8 @@ export interface RingProps {
 export const Ring: FC<RingProps> = ({ type, ...props }) => {
   return (
     <StyledRing {...props}>
-      <img src={`/img/ring/${type}-a.png`} alt='Ring part' />
-      <img src={`/img/ring/${type}-b.png`} alt='Ring part' />
+      <img src={`/img/ring/${type}-a.png`} alt='' loading='lazy' />
+      <img src={`/img/ring/${type}-b.png`} alt='' />
     </StyledRing>
   );
 };

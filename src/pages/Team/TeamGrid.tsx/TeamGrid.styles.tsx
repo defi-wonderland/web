@@ -69,7 +69,7 @@ export const TeamGrid = styled.div`
     border-bottom: 1px solid rgba(255, 255, 255, 0.4);
   }
 
-  ${(props) => {
+  ${() => {
     let memberBorder = '';
     for (let i = 0; i < MEMBERS.length; i++) {
       if (!((i + 1) % 3)) {
@@ -83,7 +83,7 @@ export const TeamGrid = styled.div`
     return memberBorder;
   }}
 
-  ${(props) => {
+  ${() => {
     switch (MEMBERS.length % 3) {
       case 0:
         return `
@@ -131,7 +131,7 @@ export const TeamGrid = styled.div`
       return memberBorder;
     }}
 
-    ${(props) => {
+    ${() => {
       switch (MEMBERS.length % 2) {
         case 0:
           return `

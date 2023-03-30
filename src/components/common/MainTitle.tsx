@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import { FONT_DISPLAY } from "./Variables";
+import { FONT_DISPLAY } from './Variables';
 
 interface TitleProps {
   fontSize?: number;

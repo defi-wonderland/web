@@ -12,11 +12,11 @@ import {
   ProjectTitle,
   ProjectsContainer,
   MobileTitleContainer,
-} from "./Portfolio.styles";
-import { ProjectsList } from "./ProjectsList";
-import { Divider } from "./ProjectsList/ProjectsList.styles";
-import { useWindowDimensions } from "~/hooks/windowDimensions";
-import { MainTitle, Distortion } from "~/components/common";
+} from './Portfolio.styles';
+import { ProjectsList } from './ProjectsList';
+import { Divider } from './ProjectsList/ProjectsList.styles';
+import { useWindowDimensions } from '~/hooks/windowDimensions';
+import { MainTitle, Distortion } from '~/components/common';
 
 export function Portfolio() {
   const { isMobile } = useWindowDimensions();

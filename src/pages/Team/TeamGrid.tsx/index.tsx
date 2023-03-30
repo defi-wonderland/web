@@ -25,7 +25,6 @@ import {
 import { MEMBERS } from '~/constants/teamMembers';
 import TwitterIcon from '/img/footer/twitter-icon.svg';
 import GithubIcon from '/img/footer/github-icon.svg';
-import TelegramIcon from '/img/footer/telegram.svg';
 
 export function WonderTeamSection() {
   const hideDescriptions = new Array(MEMBERS.length).fill(false);
@@ -64,12 +63,6 @@ export function WonderTeamSection() {
                     {member.github && (
                       <MemberLink to={member.github} external>
                         <SImg src={GithubIcon} alt='github icon' />
-                      </MemberLink>
-                    )}
-
-                    {member.telegram && (
-                      <MemberLink to={member.telegram} external>
-                        <SImg src={TelegramIcon} alt='github icon' />
                       </MemberLink>
                     )}
                   </Social>
