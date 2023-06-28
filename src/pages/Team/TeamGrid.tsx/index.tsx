@@ -39,7 +39,7 @@ export function WonderTeamSection() {
   return (
     <Container>
       <TitleContainer>
-        <WonderTitle>WONDER TEAM</WonderTitle>
+        <WonderTitle>We’re all mad here</WonderTitle>
         <Divider />
       </TitleContainer>
       <TeamGrid>

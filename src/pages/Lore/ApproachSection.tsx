@@ -78,16 +78,14 @@ export const ApproachSection: FC = ({ ...props }) => {
       <SectionBackground type='2' align='center' />
 
       <ApproachArticle title='OUR APPROACH' center>
-        <ApproachTitle>WE BELIEVE THERE ARE 3 PILLARS FOR ANY PROTOCOL TO SCALE:</ApproachTitle>
+        <ApproachTitle>The three pillars we build on:</ApproachTitle>
 
         <ApproachSteps>
           <Step>
             <StepNumber>1</StepNumber>
             <p>
               <SecondaryText>
-                Composability, in DeFi, is the ability for applications and protocols to interact with one another in a
-                permissionless way — meaning they are constantly talking to one another and leveraging each other’s
-                code, and therefore each other’s utility.
+              Open-Source: We believe in transparency, accessibility, and collaboration, and this is best embodied by an open-source approach.
               </SecondaryText>
             </p>
           </Step>
@@ -96,13 +94,7 @@ export const ApproachSection: FC = ({ ...props }) => {
             <StepNumber>2</StepNumber>
             <p>
               <SecondaryText>
-                Decentralization is a sliding scale and should be applied to all aspects of a blockchain application. By
-                decentralizing the management of and access to resources in an application, greater and fairer service
-                can be achieved.
-              </SecondaryText>
-              <SecondaryText>
-                Decentralization typically has some tradeoffs, but ideally, the tradeoffs are worth the improved
-                stability and service levels they produce.
+              Decentralization: We champion a system where no single entity has control, leading to a more secure and fair environment.
               </SecondaryText>
             </p>
           </Step>
@@ -111,8 +103,7 @@ export const ApproachSection: FC = ({ ...props }) => {
             <StepNumber>3</StepNumber>
             <p>
               <SecondaryText>
-                Self-sustainability (or how we call it “set and forget”): A system is self-sustaining if it can maintain
-                itself by independent effort, without any external support.
+              Permissionless: We advocate for a world where anyone, anywhere can participate without the need for an intermediary or permission from an authority.
               </SecondaryText>
             </p>
           </Step>

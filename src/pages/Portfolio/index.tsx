@@ -52,7 +52,7 @@ export function Portfolio() {
         </HeroDivider>
 
         <TitleContainer>
-          <ProjectTitle title='THINGS THAT HAPPEN' />
+          <ProjectTitle title='What’s cooking?' />
         </TitleContainer>
 
         <ProjectsContainer>
