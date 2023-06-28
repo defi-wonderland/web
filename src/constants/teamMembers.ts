@@ -24,15 +24,7 @@ export const MEMBERS = [
     twitter: '',
     github: 'https://github.com/Billy-103',
     description:
-      '- Addicted to meetings and context switching\n\nFun fact: Loves scaring buns. Have you seen one around? ',
-  },
-  {
-    name: 'RBP',
-    position: 'Biz Dev',
-    twitter: '',
-    github: '',
-    description:
-      '- Co-founded a VC-backed content personalization company that was acquired\n- Studied Astronomy and Economics\n\nFun fact: Competitive bicycle racer',
+      '- Addicted to meetings and context switching\n\nFun fact: Loves scaring buns. Have you seen one around?',
   },
   {
     name: 'SKELETOR',
@@ -54,7 +46,7 @@ export const MEMBERS = [
     twitter: '',
     github: '',
     description:
-      '- Amateur Organizational Theorist\n- Prefers reading over any other activity\n\nFun fact: Am actually a tree on the internet.',
+      '- Amateur Organizational Theorist\n- Prefers reading over any other activity\n\nFun fact: I am actually a tree on the internet.',
   },
   {
     name: 'AUSTRIAN',
@@ -62,7 +54,7 @@ export const MEMBERS = [
     twitter: 'https://twitter.com/0xAustrian',
     github: 'https://github.com/0xAustrian',
     description:
-      "- Studied Software Developer\n- Learned Solidity because he was bored at work\n\nFun fact: 90's horror movies fan",
+      "- Studied Software Development\n- Learned Solidity because he was bored at work\n\nFun fact: 90's horror movies fan",
   },
   {
     name: 'DR GORILLA',
@@ -93,7 +85,7 @@ export const MEMBERS = [
     twitter: 'https://twitter.com/0xAshitakah',
     github: 'https://github.com/ashitakah',
     description:
-      '- Solidity dev\n- Studied Telecommunications engineering and philosophy\n\nFun fact: Pro player of magic the gathering',
+      '- Solidity dev\n- Studied Telecommunications engineering and philosophy\n\nFun fact: Pro player of Magic: The Gathering',
   },
   {
     name: 'GAS1CENT',
@@ -101,7 +93,7 @@ export const MEMBERS = [
     twitter: 'https://twitter.com/gas1cent',
     github: 'https://github.com/gas1cent',
     description:
-      '- Watched over a thousand movies, vaguely remember 4 of them\n- A big nap2earn proponent\n\nFun fact: Jail dropout.',
+      '- Watched over a thousand movies, vaguely remembers 4 of them\n- A big nap2earn proponent\n\nFun fact: Jail dropout.',
   },
   {
     name: 'GOTZEN',
@@ -131,7 +123,7 @@ export const MEMBERS = [
     twitter: 'https://twitter.com/0xShaito',
     github: 'https://github.com/0xShaito',
     description:
-      '- Flying bison addicted crypto and building stuff\n- Normie dev turned Solidity enjoyor\n\nFun fact: Have been rewatching avatar the last airbender for the past 7 years',
+      '- Flying bison addicted to crypto and building stuff\n- Normie dev turned Solidity enjoyoor\n\nFun fact: Have been rewatching avatar the last airbender for the past 7 years',
   },
   {
     name: 'TURTLEMOJI',
@@ -139,7 +131,7 @@ export const MEMBERS = [
     twitter: 'https://twitter.com/turtle_moji',
     github: 'https://github.com/turtlemoji',
     description:
-      "- Co-created and helped in multiple onchain and normie products/companies\n- Loves swimming, video games, anime, science and to debate anything\n\nFun fact: Doesn't have medical insurance",
+      "- Co-created and helped in multiple onchain and normie products/companies\n- Loves swimming, video games, anime, science, and debating anything\n\nFun fact: Doesn't have medical insurance",
   },
   {
     name: 'ARDY',
@@ -155,7 +147,7 @@ export const MEMBERS = [
     twitter: 'https://twitter.com/0xJoxes',
     github: 'https://github.com/Joxess',
     description:
-      "- Background in Engineering\n- Incubated four different communities to concentrate and sophisticate knowledge on Ethereum\n\nFun fact: Yes, I enjoy life but I love to comment on DeFi and Ethereum's scaling solutions all the day",
+      "- Background in Engineering\n- Incubated four different communities to concentrate and sophisticate knowledge on Ethereum\n\nFun fact: Yes, I enjoy life but I love to comment on DeFi and Ethereum's scaling solutions all day",
   },
   {
     name: 'RACCON',
@@ -163,7 +155,7 @@ export const MEMBERS = [
     twitter: 'https://twitter.com/0xRaccoonDev',
     github: 'https://github.com/0xRaccoon',
     description:
-      '- Systems engineer who studied at UTN\n- Believes that adaptability is an important feature\n\nFun fact: Like to travel and do outdoor activities',
+      '- Systems engineer who studied at UTN\n- Believes that adaptability is an important feature\n\nFun fact: Likes to travel and do outdoor activities',
   },
   {
     name: 'MONO',
@@ -171,13 +163,13 @@ export const MEMBERS = [
     twitter: 'https://twitter.com/0x_mono',
     github: '',
     description:
-      '- IT infrastructure study\n- Defi research and scalability\n\nFun fact: In my spare time I also poke my nose into Defi',
+      '- Studied IT infrastructure\n- Defi research and scalability\n\nFun fact: In my spare time, I also poke my nose into Defi',
   },
   {
     name: 'EXCALIBOR',
     position: 'Solidity Dev',
     twitter: '',
     github: 'https://github.com/excaliborr',
-    description: '- Decentralization maxi\n- Loves game theory\n\nFun fact: has a skydiving license',
+    description: '- Decentralization maxi\n- Loves game theory\n\nFun fact: Has a skydiving license',
   },
 ];
