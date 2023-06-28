@@ -2,20 +2,14 @@ import styled from 'styled-components';
 
 import { PageContent } from '~/components/app';
 import { ApproachSection } from './ApproachSection';
-import {
-  Ball,
-  MOBILE_MAX_WIDTH,
-  SPACING_192,
-  SPACING_512,
-  SPACING_700,
-  LiquidDistortion,
-  MainTitle,
-} from '~/components/common';
-import { useWindowDimensions } from '~/hooks/windowDimensions';
+import { Ball, MOBILE_MAX_WIDTH, SPACING_192, SPACING_512, SPACING_700 } from '~/components/common';
 import TextSection from './TextSection';
 import Cone from '~/assets/cone.png';
 import HoopTop from '~/assets/hoop-top.png';
 import HoopBottom from '~/assets/hoop-bottom.png';
+import VIDEO_CHROME from '~/assets/videos/lore.webm';
+import VIDEO_SAFARI from '~/assets/videos/lore.mp4';
+import { TitleContainer } from '../Landing/HeroSection';
 
 const StyledApproachSection = styled(ApproachSection)`
   padding: '3rem 0';
@@ -76,27 +70,22 @@ const SHoop = styled(SCone)`
   z-index: 10;
 `;
 
+const STitleContainer = styled(TitleContainer)`
+  margin-top: 0rem;
+  & video {
+    width: 60%;
+  }
+`;
 export function Lore() {
-  const { isMobile, isTablet } = useWindowDimensions();
-
   return (
     <PageContent>
       <HeroDivider>
-        {!isMobile && (
-          <>
-            <LiquidDistortion text='WOND3RLAND IS NOT A PLACE,' fontSize={isTablet ? 90 : undefined} />
-            <LiquidDistortion text="IT'S A FEELING WITHIN, A PROCESS." fontSize={isTablet ? 90 : undefined} />
-          </>
-        )}
-
-        {isMobile && (
-          <MobileTitleContainer>
-            <MainTitle fontSize={6.5}>WOND3RLAND</MainTitle>
-            <MainTitle fontSize={6.5}>IS NOT A PLACE,</MainTitle>
-            <MainTitle fontSize={6.5}>IT&apos;S A FEELING WITHIN,</MainTitle>
-            <MainTitle fontSize={6.5}>A PROCESS.</MainTitle>
-          </MobileTitleContainer>
-        )}
+        <STitleContainer>
+          <video autoPlay loop muted playsInline>
+            <source src={VIDEO_CHROME} type='video/webm' />
+            <source src={VIDEO_SAFARI} type='video/mp4; codecs="hvc1"' />
+          </video>
+        </STitleContainer>
       </HeroDivider>
       <BackgroundContainer>
         <SCone src={HoopTop} alt='starts background' />

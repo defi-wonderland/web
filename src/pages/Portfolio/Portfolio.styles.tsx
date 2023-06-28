@@ -19,7 +19,7 @@ export const Container = styled.div`
 export const HeroDivider = styled.div`
   position: relative;
   width: 100%;
-  height: 22rem;
+  height: 0rem;
   bottom: 0;
   z-index: 3;
   display: flex;
@@ -115,7 +115,7 @@ export const BG_3 = styled(SectionBackground)`
 `;
 
 export const TitleContainer = styled.div`
-  margin-top: 24rem;
+  /* margin-top: 24rem; */
   display: flex;
   flex-direction: row;
   justify-content: space-between;

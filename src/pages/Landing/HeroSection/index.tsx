@@ -1,10 +1,9 @@
 import { FC } from 'react';
 import styled from 'styled-components';
 
-import { Section, MOBILE_MAX_WIDTH, MainTitle } from '~/components/common';
-import { useWindowDimensions } from '~/hooks/windowDimensions';
-import VIDEO_CHROME from '~/assets/videos/video_chrome.webm';
-import VIDEO_SAFARI from '~/assets/videos/video_safari.mp4';
+import { Section, MOBILE_MAX_WIDTH } from '~/components/common';
+import VIDEO_CHROME from '~/assets/videos/landing.webm';
+import VIDEO_SAFARI from '~/assets/videos/landing.mp4';
 
 const HeroDivider = styled.img`
   position: absolute;
@@ -43,32 +42,30 @@ export const TitleContainer = styled.div`
 
   & video {
     max-width: 890px;
+    width: 70%;
     height: 100%;
   }
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     margin-top: 4rem;
+
+    & video {
+      width: 85%;
+    }
   }
 `;
 
 export const HeroSection: FC = ({ ...props }) => {
-  const { isMobile, isTablet } = useWindowDimensions();
   return (
     <>
       <StyledHeroSection full backgroundImage='/img/hero/hero-bg.jpg' {...props}>
-        {!isMobile && (
-          <TitleContainer>
-            <video autoPlay loop muted playsInline>
-              <source src={VIDEO_SAFARI} type='video/mp4; codecs="hvc1"' />
-              <source src={VIDEO_CHROME} type='video/webm' />
-            </video>
-          </TitleContainer>
-        )}
-        {isMobile && (
-          <div>
-            <MainTitle fontSize={4.4}>TO HELP THE WEB3 ECOSYSTEM THRIVE</MainTitle>
-          </div>
-        )}
+        <TitleContainer>
+          <video autoPlay loop muted playsInline>
+            <source src={VIDEO_CHROME} type='video/webm' />
+            <source src={VIDEO_SAFARI} type='video/mp4; codecs="hvc1"' />
+          </video>
+        </TitleContainer>
+
         <HeroDivider src='/img/hero/hero-bg-divider.png' />
       </StyledHeroSection>
     </>

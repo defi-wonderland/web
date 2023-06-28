@@ -19,6 +19,7 @@ export const TextContainer = styled.p`
   letter-spacing: inherit;
   display: inline;
   position: relative;
+  text-transform: uppercase;
 `;
 
 export const ArticleTitle = styled(DisplayText)``;
