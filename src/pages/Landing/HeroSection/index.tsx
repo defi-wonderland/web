@@ -42,7 +42,7 @@ export const TitleContainer = styled.div`
   margin-top: 8rem;
 
   & video {
-    width: 60%;
+    max-width: 890px;
     height: 100%;
   }
 
