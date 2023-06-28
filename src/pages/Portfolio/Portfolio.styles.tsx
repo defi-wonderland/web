@@ -115,11 +115,15 @@ export const BG_3 = styled(SectionBackground)`
 `;
 
 export const TitleContainer = styled.div`
-  /* margin-top: 24rem; */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+
+  @media screen and (max-width: ${TABLET_MAX_WIDTH}) {
+    margin: 0 auto;
+    margin-top: -3rem;
+  }
 `;
 
 export const ProjectTitle = styled(GradientTitle)`

@@ -30,6 +30,7 @@ export const TitleContainer = styled.div`
   @media screen and (max-width: ${TABLET_MAX_WIDTH}) {
     margin-top: 3rem;
     flex-direction: column;
+    padding: 0 2rem;
   }
 `;
 
@@ -53,6 +54,7 @@ export const WonderTitle = styled.h1`
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     text-align: center;
+    margin-top: 9rem;
     font-size: 6.4rem;
     width: auto;
   }

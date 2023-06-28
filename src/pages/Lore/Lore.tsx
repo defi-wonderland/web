@@ -73,9 +73,10 @@ const SHoop = styled(SCone)`
 const STitleContainer = styled(TitleContainer)`
   margin-top: 0rem;
   & video {
-    width: 60%;
+    width: 80%;
   }
 `;
+
 export function Lore() {
   return (
     <PageContent>
