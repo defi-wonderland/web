@@ -67,6 +67,10 @@ const PrimaryText = styled.p`
 export const SecondaryText = styled.span`
   font-size: 1.8rem;
   padding-top: 1rem;
+
+  & b {
+    font-weight: bold;
+  }
 `;
 
 function TextSection() {
@@ -75,12 +79,11 @@ function TextSection() {
       <LeftSection>
         <LoreSectionArticle title='Who we are'>
           <div>
-            <PrimaryText>
-              "'Who in the world am I?' Ah, that's the great puzzle!"
-            </PrimaryText>
+            <PrimaryText>&quot;&apos;Who in the world am I?&apos; Ah, that&apos;s the great puzzle!&quot;</PrimaryText>
 
             <SecondaryText>
-              We’re a group of developers, researchers, data scientists, investors, and executive leaders. We have something in common though, we all love building cool sh*t.
+              We’re a group of developers, researchers, data scientists, investors, and executive leaders. We have
+              something in common though, we all love building cool sh*t.
             </SecondaryText>
 
             <Link to='/team'>
@@ -101,7 +104,9 @@ function TextSection() {
         <LoreSectionArticle title='Our mission'>
           <div>
             <SecondaryText>
-            Our mission is to discover, partner, and empower innovators in the creation of open, permissionless, and decentralized financial solutions. <b>Our pledge is to stand by our partners, supporting them in every way we can.</b>
+              Our mission is to discover, partner, and empower innovators in the creation of open, permissionless, and
+              decentralized financial solutions.{' '}
+              <b>Our pledge is to stand by our partners, supporting them in every way we can.</b>
             </SecondaryText>
 
             <Link to='/portfolio'>
@@ -114,12 +119,12 @@ function TextSection() {
       <LeftSection>
         <LoreSectionArticle title='Our values'>
           <div>
-            <PrimaryText>
-              Building together
-            </PrimaryText>
+            <PrimaryText>Building together</PrimaryText>
 
             <SecondaryText>
-            We champion public good creation and believe in the invincibility of protocols backed by the right talent and incentives. We deeply believe in fostering a supportive community, where collaboration trumps competition, and building together is the norm, not the exception. 
+              We champion public good creation and believe in the invincibility of protocols backed by the right talent
+              and incentives. We deeply believe in fostering a supportive community, where collaboration trumps
+              competition, and building together is the norm, not the exception.
             </SecondaryText>
 
             <SecondaryText>Long term, long term, long term…</SecondaryText>

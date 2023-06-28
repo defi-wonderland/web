@@ -35,7 +35,8 @@ export const TitleContainer = styled.div`
 
 export const WonderTitle = styled.h1`
   word-wrap: unset;
-  width: 40rem;
+  margin-top: -12rem;
+  width: 100%;
   font-family: ${FONT_DISPLAY};
   font-weight: 300;
   line-height: 1.2;
