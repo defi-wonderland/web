@@ -41,7 +41,7 @@ export function ContentSection() {
 
       <FirstBlockContainer>
         <TextContainer>
-          <GradientText>Optimsm</GradientText>
+          <GradientText>Optimism</GradientText>
           <GradientText>Connext</GradientText>
           <GradientText>Reflexer</GradientText>
           <GradientText>Yearn</GradientText>
