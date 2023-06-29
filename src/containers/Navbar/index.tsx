@@ -28,7 +28,7 @@ const navLinks: NavLink[] = [
     disabled: false,
   },
   {
-    name: 'What’s new?',
+    name: 'blog',
     url: '/blog',
     disabled: false,
   },
