@@ -252,19 +252,23 @@ export const Name = styled.strong`
 
 export const Position = styled.p`
   font-family: ${FONT_MEDIUM};
-  font-size: ${FONT_SIZE_18};
+  font-size: 2rem;
   color: rgba(255, 255, 255, 0.65);
   z-index: 1;
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
 `;
 
 export const Description = styled(Position)`
-  font-size: 2rem;
+  font-size: 1.8rem;
   white-space: pre-wrap;
   color: rgba(255, 255, 255, 0.9);
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    font-size: 1.6rem;
+  }
 `;
 
 export const Divider = styled.canvas`

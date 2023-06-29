@@ -63,8 +63,11 @@ export const Content = styled.div`
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     .twitter-player iframe {
-      width: 100%;
+      width: 90%;
       height: 80vh;
+    }
+    .ytplayer {
+      padding: 1rem;
     }
   }
 
@@ -175,6 +178,18 @@ export const Content = styled.div`
 
     ul {
       padding-right: 1.6rem;
+    }
+
+    pre code {
+      display: inline-block;
+      padding: 1rem;
+      width: 100%;
+    }
+
+    .math,
+    .math-inline,
+    math {
+      transform: scale(0.85);
     }
   }
 `;

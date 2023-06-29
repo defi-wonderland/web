@@ -161,7 +161,7 @@ In a future post, we plan to delve into the art of crafting an efficient bait. U
 
 _Hey, see if you can spot the Low-Carb-Crusader in this video. Just a heads-up, though – viewer discretion is advised. Enjoy!_
 
-<iframe class="ytplayer" type="text/html" width="640" height="360"
+<iframe class="ytplayer" type="text/html"
   src="https://www.youtube.com/embed/MTSgMuE3Yo4"
   frameborder="0"></iframe>
 
