@@ -3,9 +3,20 @@ import { calcSkeleDay } from '~/utils/misc';
 export const MEMBERS = [
   {
     name: 'Mati',
-    position: 'CEO',
+    position: 'Co-founder & CEO',
     description:
       "- 3x Startup founder & CEO\n- Founder & GP at a $50m deep-tech VC\n\nFun fact: Used to run a tenebrio molitor farm and has become somewhat of an expert on breeding mealworms. Bet you didn't see that one coming!",
+  },
+  {
+    name: 'Pepo',
+    position: 'Co-founder & Strategist',
+    description: '- Your hot-takes friend from DeFi summer',
+  },
+  {
+    name: 'Skele',
+    position: 'Co-founder & Architect',
+    description:
+      '- First contract deployed 2049 days ago (TODO: make this dynamic)\n- Likes breaking things\n\nFun fact: Never went to space',
   },
   {
     name: 'Gorilla',
@@ -20,19 +31,8 @@ export const MEMBERS = [
       '- Addicted to meetings and context switching\n\nFun fact: Loves scaring buns. Have you seen one around?',
   },
   {
-    name: 'Pepo',
-    position: 'Analyst',
-    description: '- Your hot-takes friend from DeFi summer',
-  },
-  {
-    name: 'Skele',
-    position: 'Architect',
-    description:
-      '- First contract deployed 2049 days ago (TODO: make this dynamic)\n- Likes breaking things\n\nFun fact: Never went to space',
-  },
-  {
     name: 'Parti',
-    position: 'Research Lead',
+    position: 'Lead Researcher',
     description:
       '- Managed to get a PhD in Physics, specializing in quantum information theory.\n- Changed particles for nodes now: "Pls parti, stop asking about the Beacon Chain\'s entropy."\n- Average chaos enjoyer.\n- Definitely not a Furry.\nSad fact: Die-hard Boca Juniors fan.',
   },
@@ -50,101 +50,101 @@ export const MEMBERS = [
   },
   {
     name: 'Wei3er',
-    position: 'Solidity Dev',
+    position: 'Developer',
     description: '- Just a bun from Görli 🥕\n\nFun fact: afraid of bugs and owls',
   },
   {
     name: 'NG',
-    position: 'Solidity Dev',
+    position: 'Developer',
     description:
       '- Peaked at 5.6k MMR in Dota 2 back when top 1 had 7.5k. Things spiraled down from there.\n- Reached 1800 ELO in chess.com to never play a ranked game again due to 1800 looking nicer than 1700.\n\nFun fact: Can recite words backwards fast. This is due to OCD. Help',
   },
   {
     name: 'Gas',
-    position: 'Solidity Dev',
+    position: 'Developer',
     description:
       '- Watched over a thousand movies, vaguely remember 4 of them.\n- A big nap2earn proponent.\n\nFun fact: Jail dropout.',
   },
   {
     name: 'Doc',
-    position: 'Solidity Dev',
+    position: 'Developer',
     description:
       "- Random diploma collector.\n- Assembly fanatic (Huff is cheating).\n\nFun fact: I got 99 issues and a bitshift ain't one.",
   },
   {
     name: 'Ashi',
-    position: 'Solidity Dev',
+    position: 'Developer',
     description:
       '- Solidity dev\n- Studied Telecommunications engineering and philosophy\n\nFun fact: Pro player of magic the gathering',
   },
   {
     name: 'Jabber',
-    position: 'Solidity Dev',
+    position: 'Developer',
     description: '- Recruited directly by Wonderland\n- Codes even his life\n\nFun fact: Holds a dumbbell everyday',
   },
   {
     name: 'Shaito',
-    position: 'Solidity Dev',
+    position: 'Developer',
     description:
       '- Flying bison addicted crypto and building stuff\n- Normie dev turned Solidity enjoyor\n\nFun fact: Have been rewatching avatar the last airbender for the past 7 years',
   },
   {
     name: 'Gotzen',
-    position: 'Solidity Dev',
+    position: 'Developer',
     description:
       '- Compulsive optimizer.\n- Another University deserter.\n\nFun fact: Really good at voice impressions.',
   },
   {
     name: 'Turtle',
-    position: 'Solidity Dev',
+    position: 'Developer',
     description:
       "- Co-created and helped in multiple onchain and normie products/companies.\n- Loves swimming, video games, anime, science and to debate anything.\n\nFun fact: Doesn't have medical insurance",
   },
   {
     name: 'Raccoon',
-    position: 'Solidity Dev',
+    position: 'Developer',
     description:
       '- Systems engineer who studied at UTN.\n- Believes that adaptability is an important feature.\n\nFun fact: Like to travel and do outdoor activities.',
   },
   {
     name: 'Austrian',
-    position: 'Solidity Dev',
+    position: 'Developer',
     description:
       "- Studied Software Developer\n- Learned Solidity because he was bored at work\n\nFun fact: 90's horror movies fan",
   },
   {
     name: 'OneTony',
-    position: 'Solidity Dev',
+    position: 'Developer',
     description: 'TBD',
   },
   {
     name: 'Excalibor',
-    position: 'Solidity Dev',
+    position: 'Developer',
     description: '- Decentralization maxi\n- Loves game theory\n\nFun fact: has a skydiving license',
   },
   {
     name: 'Discotech',
-    position: 'Solidity Dev',
+    position: 'Developer',
     description: 'TBD',
   },
   {
     name: 'Ba5ed',
-    position: 'Solidity Dev',
+    position: 'Developer',
     description: 'TBD',
   },
   {
     name: 'Drispunk',
-    position: 'Solidity Dev',
+    position: 'Developer',
     description: 'TBD',
   },
   {
     name: 'Moebius',
-    position: 'Solidity Dev',
+    position: 'Developer',
     description: 'TBD',
   },
   {
     name: 'Ardy',
-    position: 'FrontEnd Dev',
+    position: 'Developer',
     description:
       '- Background in Engineering\n- Passionate about mathematics and philosophy\n\nFun fact: bonsaist apprentice 🌳',
   },
@@ -155,7 +155,7 @@ export const MEMBERS = [
   },
   {
     name: 'Shade',
-    position: 'Process Advisor',
+    position: 'Efficiency Evangelist',
     description:
       '- Amateur Organizational Theorist\n- Prefers reading over any other activity\n\nFun fact: Am actually a tree on the internet.',
   },

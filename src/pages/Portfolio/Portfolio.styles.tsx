@@ -11,6 +11,10 @@ import {
 
 export const TitleVideo = styled(TitleVideoBase)`
   margin-top: -8rem;
+
+  & video {
+    max-width: 600px;
+  }
 `;
 
 export const Container = styled.div`

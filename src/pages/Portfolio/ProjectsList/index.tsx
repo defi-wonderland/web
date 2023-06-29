@@ -8,21 +8,19 @@ import {
   Divider,
   Circle,
   ProjectDescription,
-  ProjectImage,
   ProjectHeader,
   HLine,
   VLine,
+  MemberLink,
+  SImg,
+  Social,
 } from './ProjectsList.styles';
 import circle from '~/assets/circle.svg';
-import { Link } from '~/components/common';
-
-interface Project {
-  name: string;
-  description: string;
-  link: string;
-  image: string;
-}
-
+import { Project } from '~/constants/projects';
+import TwitterIcon from '/img/footer/twitter-icon.svg';
+import GithubIcon from '/img/footer/github-icon.svg';
+import WebIcon from '/img/footer/sphere.svg';
+import DocsIcon from '/img/footer/book.svg';
 interface ProjectListProps {
   projects: Project[];
 }
@@ -61,15 +59,30 @@ export function ProjectsList({ projects }: ProjectListProps) {
 
           <CSSTransition in={projectMap[project.name]} timeout={100} classNames='fade' unmountOnExit appear>
             <ProjectDescription>
-              {project.image && <ProjectImage src={project.image} />}
-              <div>
-                <p>{project.description}</p>
-                {project.link && (
-                  <Link to={project.link} external>
-                    Repository
-                  </Link>
+              <p>{project.description}</p>
+
+              <Social>
+                {project.web && (
+                  <MemberLink to={project.web} external>
+                    <SImg src={WebIcon} alt='web page icon' />
+                  </MemberLink>
                 )}
-              </div>
+                {project.twitter && (
+                  <MemberLink to={project.twitter} external>
+                    <SImg src={TwitterIcon} alt='twitter icon' />
+                  </MemberLink>
+                )}
+                {project.github && (
+                  <MemberLink to={project.github} external>
+                    <SImg src={GithubIcon} alt='github icon' />
+                  </MemberLink>
+                )}
+                {project.docs && (
+                  <MemberLink to={project.docs} external>
+                    <SImg src={DocsIcon} alt='docs icon' />
+                  </MemberLink>
+                )}
+              </Social>
             </ProjectDescription>
           </CSSTransition>
           <Divider />

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { FONT_MEDIUM, FONT_MEDIUM_L, FONT_SIZE_24, MOBILE_MAX_WIDTH } from '~/components/common';
+import { FONT_MEDIUM, FONT_MEDIUM_L, FONT_SIZE_24, Link, MOBILE_MAX_WIDTH } from '~/components/common';
 
 export const List = styled.div``;
 
@@ -74,15 +74,18 @@ export const ProjectDescription = styled.div`
   padding: 2.4rem;
   display: flex;
   flex-direction: row;
-
+  width: 100%;
+  font-family: ${FONT_MEDIUM};
+  font-size: 2.2rem;
+  padding: 0 1.6rem 5rem;
+  color: white;
+  -webkit-text-fill-color: white;
+  opacity: 1;
+  text-align: start;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
   & div {
-    font-family: ${FONT_MEDIUM};
-    font-size: 2.2rem;
-    padding: 0 1.6rem 5rem;
-    color: white;
-    -webkit-text-fill-color: white;
-    opacity: 1;
-    text-align: start;
   }
 
   & div p {
@@ -133,4 +136,23 @@ export const VLine = styled.div`
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     display: none;
   }
+`;
+
+export const Social = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  margin-top: 2rem;
+`;
+
+export const MemberLink = styled(Link)`
+  z-index: 1;
+  transition: all 200ms linear;
+`;
+
+export const SImg = styled.img`
+  padding: 0 0.4rem;
+  opacity: 0.8;
+  height: 2.4rem;
 `;
