@@ -51,6 +51,7 @@ export const Cone = styled.img.attrs({ loading: 'lazy', alt: '' })`
   position: absolute;
   margin-left: 25%;
   width: 90rem;
+  margin-top: -16rem;
 
   @media screen and (max-width: ${TABLET_MAX_WIDTH}) {
     margin-right: -10rem;
@@ -94,7 +95,7 @@ export const Title = styled.strong`
   padding: 1.6rem 0 1.6rem 4.4rem;
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
   }
 `;
 
@@ -292,7 +293,7 @@ export const SecondTitle = styled(Title)`
       border-right: 1px solid rgba(255, 255, 255, 0.5);
       height: 6.4rem;
       width: 6.4rem;
-      padding: 1.8rem;
+      padding: 2.2rem;
       margin-right: 2rem;
     }
   }

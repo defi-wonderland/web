@@ -137,7 +137,7 @@ export const DescriptionContainer = styled.div`
 
   & p {
     font-family: ${FONT_MEDIUM};
-    font-size: 1.8rem;
+    font-size: 2.2rem;
   }
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
@@ -171,6 +171,6 @@ export const Tags = styled.div`
     text-transform: capitalize;
     margin: 0 1rem;
 
-    font-size: 1.8rem;
+    font-size: 2.2rem;
   }
 `;

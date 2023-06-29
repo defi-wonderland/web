@@ -79,7 +79,7 @@ export const KeyContainer = styled.div`
 
 export const Text = styled.span<StyledContainerProps>`
   font-style: italic;
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   margin-top: 0.4rem;
   user-select: none;
   opacity: ${(props) => 1 - props.backgroundEffect * 3};

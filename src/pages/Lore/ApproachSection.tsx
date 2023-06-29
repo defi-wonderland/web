@@ -69,7 +69,7 @@ const StyledApproachSection = styled(Section)`
 `;
 
 export const SecondaryText = styled.span`
-  font-size: 1.8rem;
+  font-size: 2.2rem;
 `;
 
 export const ApproachSection: FC = ({ ...props }) => {
@@ -85,7 +85,8 @@ export const ApproachSection: FC = ({ ...props }) => {
             <StepNumber>1</StepNumber>
             <p>
               <SecondaryText>
-              Open-Source: We believe in transparency, accessibility, and collaboration, and this is best embodied by an open-source approach.
+                Open-Source: We believe in transparency, accessibility, and collaboration, and this is best embodied by
+                an open-source approach.
               </SecondaryText>
             </p>
           </Step>
@@ -94,7 +95,8 @@ export const ApproachSection: FC = ({ ...props }) => {
             <StepNumber>2</StepNumber>
             <p>
               <SecondaryText>
-              Decentralization: We champion a system where no single entity has control, leading to a more secure and fair environment.
+                Decentralization: We champion a system where no single entity has control, leading to a more secure and
+                fair environment.
               </SecondaryText>
             </p>
           </Step>
@@ -103,7 +105,8 @@ export const ApproachSection: FC = ({ ...props }) => {
             <StepNumber>3</StepNumber>
             <p>
               <SecondaryText>
-              Permissionless: We advocate for a world where anyone, anywhere can participate without the need for an intermediary or permission from an authority.
+                Permissionless: We advocate for a world where anyone, anywhere can participate without the need for an
+                intermediary or permission from an authority.
               </SecondaryText>
             </p>
           </Step>

@@ -119,7 +119,7 @@ export const Content = styled.div`
   }
 
   math {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
   }
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {

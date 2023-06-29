@@ -194,7 +194,7 @@ export const Name = styled.strong`
 `;
 
 export const Position = styled.span`
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   z-index: 1;
   color: rgba(255, 255, 255, 0.65);
   padding: 0.8rem;
