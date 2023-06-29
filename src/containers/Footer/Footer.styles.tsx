@@ -100,8 +100,9 @@ export const SocialIcons = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  grid-gap: 3rem;
+  grid-gap: 4rem;
   z-index: 20;
+  margin-top: 2rem;
 `;
 
 export const StyledFooter = styled.footer`
