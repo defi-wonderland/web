@@ -60,6 +60,18 @@ export const Content = styled.div`
     aspect-ratio: 16 / 9;
   }
 
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    .twitter-player iframe {
+      width: 100%;
+      height: 80vh;
+    }
+
+    .ytplayer {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+    }
+  }
+
   h1 {
     font-family: SharpGrotesk-10, sans-serif !important;
     font-size: 4.8rem;
