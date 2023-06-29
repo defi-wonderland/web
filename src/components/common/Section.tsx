@@ -88,7 +88,7 @@ const StyledSection = styled.section<{
   justify-content: center;
   width: 100%;
   max-width: 100%;
-  min-height: 60vh;
+  min-height: 100vh;
   position: relative;
 
   ${({ backgroundImage }) =>
