@@ -77,7 +77,7 @@ export const ProjectDescription = styled.div`
 
   & div {
     font-family: ${FONT_MEDIUM};
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     padding: 0 1.6rem 5rem;
     color: white;
     -webkit-text-fill-color: white;

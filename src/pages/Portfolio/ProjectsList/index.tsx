@@ -13,7 +13,6 @@ import {
   HLine,
   VLine,
 } from './ProjectsList.styles';
-import { PROJECTS } from '~/constants/projects';
 import circle from '~/assets/circle.svg';
 import { Link } from '~/components/common';
 
@@ -24,8 +23,12 @@ interface Project {
   image: string;
 }
 
-export function ProjectsList() {
-  const [projectMap, setProjectMap] = useState(Object.fromEntries(PROJECTS.map((project) => [project.name, false])));
+interface ProjectListProps {
+  projects: Project[];
+}
+
+export function ProjectsList({ projects }: ProjectListProps) {
+  const [projectMap, setProjectMap] = useState(Object.fromEntries(projects.map((project) => [project.name, false])));
 
   const handleClick = (project: Project, target: Element) => {
     if (!projectMap[project.name]) {
@@ -42,7 +45,7 @@ export function ProjectsList() {
 
   return (
     <List>
-      {PROJECTS.map((project) => (
+      {projects.map((project) => (
         <ProjectContainer
           key={project.name}
           onClick={(e) => {

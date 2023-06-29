@@ -11,6 +11,7 @@ import {
 } from './Portfolio.styles';
 import { ProjectsList } from './ProjectsList';
 import { Divider } from './ProjectsList/ProjectsList.styles';
+import { PROJECTS } from '~/constants/projects';
 
 export function Portfolio() {
   return (
@@ -30,10 +31,9 @@ export function Portfolio() {
         <TitleContainer>
           <ProjectTitle title='What’s cooking?' />
         </TitleContainer>
-
         <ProjectsContainer>
           <Divider />
-          <ProjectsList />
+          <ProjectsList projects={PROJECTS} />
         </ProjectsContainer>
       </Container>
     </>
