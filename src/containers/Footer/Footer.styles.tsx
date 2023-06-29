@@ -11,18 +11,19 @@ import {
 import MISC from '~/assets/footer_vector.svg';
 
 export const footerColor = 'rgba(255, 255, 255, 0.2)';
-export const footerPadding = '1.5rem';
+export const footerPaddingRem = 1.5;
+export const footerPadding = `${footerPaddingRem}rem`;
 
 export const Star = styled.img.attrs({ loading: 'lazy' })`
   width: 3.2rem;
 `;
 
 export const WonderLogoText = styled.img.attrs({ loading: 'lazy' })`
-  width: 34.7rem;
+  height: 5rem;
 `;
 
 export const FooterHeader = styled.div`
-  height: 14.2rem;
+  padding: ${footerPaddingRem * 2}rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -97,7 +98,7 @@ export const StyledFooter = styled.footer`
   display: flex;
   flex-direction: column;
   align-self: center;
-  padding: ${footerPadding} 2rem;
+  padding: 0 2rem ${footerPadding} 2rem;
   color: var(--text-light);
   background: rgba(255, 255, 255, 0.05);
   /* border: 1px solid ${footerColor}; */
@@ -105,7 +106,6 @@ export const StyledFooter = styled.footer`
   backdrop-filter: blur(8px);
   width: 134rem;
   max-width: 100%;
-
   height: 47rem;
   z-index: ${CONTENT_INDEX};
 

@@ -35,7 +35,7 @@ export const Footer = () => (
       </FooterHeader>
 
       <FooterActions>
-        <FooterTitle>To help the web3 ecosystem thrive</FooterTitle>
+        <FooterTitle>We&apos;re all mad here</FooterTitle>
         <ButtonsContainer>
           <Link to='https://docs.google.com/forms/d/1n70jsL4sFkOwPNBTdciPqlWF2RirgQwejjztpS4-2L8/viewform' external>
             <Button>Join us</Button>
