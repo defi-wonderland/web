@@ -262,8 +262,9 @@ export const Position = styled.p`
 `;
 
 export const Description = styled(Position)`
-  font-size: 1.6rem;
+  font-size: 2rem;
   white-space: pre-wrap;
+  color: rgba(255, 255, 255, 0.9);
 `;
 
 export const Divider = styled.canvas`
