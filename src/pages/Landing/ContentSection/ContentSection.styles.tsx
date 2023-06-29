@@ -110,8 +110,8 @@ export const FirstTitle = styled(Title)`
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     & {
-      padding: 0rem;
       border-left: none;
+      padding: 1rem 0;
     }
 
     & img {
