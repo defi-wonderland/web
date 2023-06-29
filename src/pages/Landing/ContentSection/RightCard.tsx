@@ -24,7 +24,7 @@ const PrimaryText = styled.p`
 `;
 
 export const SecondaryText = styled.span`
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   line-height: 1.5;
 `;
 
@@ -41,14 +41,13 @@ export function RightCard() {
   return (
     <>
       <CardContainer>
-        <PrimaryText>
-        Our approach
-        </PrimaryText>
+        <PrimaryText>Our approach</PrimaryText>
         <SecondaryText>
-        Our commitment is to a financial future that's open, decentralized, and accessible to all. To turn this vision into reality, we partner with the best teams in the world and support them in any way we can.
+          Our commitment is to a financial future that&apos;s open, decentralized, and accessible to all. To turn this
+          vision into reality, we partner with the best teams in the world and support them in any way we can.
         </SecondaryText>
         <SButton>
-          <Link to='/lore'>DISCOVER MORE</Link>
+          <Link to='/lore'>Learn more</Link>
         </SButton>
       </CardContainer>
     </>
