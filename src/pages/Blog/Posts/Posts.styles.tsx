@@ -6,9 +6,10 @@ export const Title = styled.h1`
   margin-top: 22rem;
   font-size: 10rem;
 
-  /* @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
-    font-size: 2.2rem;
-  } */
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    margin-top: 12rem;
+    margin-bottom: 4rem;
+  }
 `;
 
 export const Date = styled.p`
@@ -64,11 +65,6 @@ export const Content = styled.div`
     .twitter-player iframe {
       width: 100%;
       height: 80vh;
-    }
-
-    .ytplayer {
-      width: 100%;
-      aspect-ratio: 16 / 9;
     }
   }
 
@@ -157,7 +153,7 @@ export const Content = styled.div`
   }
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
-    padding: 2rem 0 0;
+    padding: 2rem 1rem 0;
 
     h1 {
       font-size: 3rem;
