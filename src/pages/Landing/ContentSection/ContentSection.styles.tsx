@@ -129,6 +129,7 @@ export const Star = styled.img.attrs({ loading: 'lazy', alt: '' })`
   grid-area: star;
   height: 100%;
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  pointer-events: none;
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     display: none;

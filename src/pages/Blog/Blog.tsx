@@ -30,6 +30,7 @@ const BlogTitleContainer = styled(TitleContainer)`
 
 export const Star = styled.img.attrs({ loading: 'lazy' })`
   width: 3.2rem;
+  pointer-events: none;
 `;
 
 export function Blog() {

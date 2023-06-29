@@ -16,6 +16,7 @@ export const footerPadding = `${footerPaddingRem}rem`;
 
 export const Star = styled.img.attrs({ loading: 'lazy' })`
   width: 3.2rem;
+  pointer-events: none;
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     width: 2.4rem;
   }
