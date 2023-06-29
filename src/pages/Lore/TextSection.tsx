@@ -7,18 +7,25 @@ import {
   MOBILE_MAX_WIDTH,
   PAGE_MAX_WIDTH,
   Ring,
-  Section,
+  Section as BaseSection,
   SectionArticle,
   SectionBackground,
 } from '~/components/common';
 
 const LoreSectionArticle = styled(SectionArticle)``;
 
+const Section = styled(BaseSection)`
+  min-height: 60vh;
+  @media screen and (max-width: 665px) {
+    min-height: 80vh;
+  }
+`;
+
 const LoreSection = styled(Section)`
   width: calc(${PAGE_MAX_WIDTH} + 13rem);
   max-width: 100%;
   grid-gap: 4.6rem;
-  margin-top: 12rem;
+  margin-top: 0rem;
 
   @media screen and (max-width: 1400px) {
     flex-direction: column;
@@ -30,6 +37,7 @@ const LoreSection = styled(Section)`
 
   @media screen and (max-width: 500px) {
     padding: 3rem 0;
+    margin-top: 12rem;
   }
 `;
 
@@ -73,16 +81,23 @@ export const SecondaryText = styled.span`
   }
 `;
 
+export const FirstLoreSectionArticle = styled(LoreSectionArticle)`
+  margin-top: 24rem;
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    margin-top: 0rem;
+  }
+`;
+
 function TextSection() {
   return (
     <>
       <LeftSection>
-        <LoreSectionArticle title='Who we are'>
+        <FirstLoreSectionArticle title='Who we are'>
           <div>
             <PrimaryText>&quot;&apos;Who in the world am I?&apos; Ah, that&apos;s the great puzzle!&quot;</PrimaryText>
 
             <SecondaryText>
-              We’re a group of developers, researchers, data scientists, investors, and executive leaders. We have
+              We&apos;re a group of developers, researchers, data scientists, investors, and executive leaders. We have
               something in common though, we all love building cool sh*t.
             </SecondaryText>
 
@@ -90,7 +105,7 @@ function TextSection() {
               <Button>Meet the team</Button>
             </Link>
           </div>
-        </LoreSectionArticle>
+        </FirstLoreSectionArticle>
         <Ring type='1' />
 
         <SectionBackground type='4' align='right' />
