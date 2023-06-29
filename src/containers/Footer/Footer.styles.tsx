@@ -16,10 +16,16 @@ export const footerPadding = `${footerPaddingRem}rem`;
 
 export const Star = styled.img.attrs({ loading: 'lazy' })`
   width: 3.2rem;
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    width: 2.4rem;
+  }
 `;
 
 export const WonderLogoText = styled.img.attrs({ loading: 'lazy' })`
   height: 5rem;
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    height: 3rem;
+  }
 `;
 
 export const FooterHeader = styled.div`
@@ -30,6 +36,10 @@ export const FooterHeader = styled.div`
   padding-bottom: ${footerPadding};
   border-bottom: 1px solid ${footerColor};
   user-select: none;
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    padding-top: ${footerPaddingRem * 1.2}rem;
+    padding: ${footerPaddingRem}rem;
+  }
 `;
 
 export const Plus = styled.img.attrs({ loading: 'lazy' })`
@@ -179,6 +189,12 @@ export const FooterTitle = styled.h1`
   text-transform: uppercase;
   font-family: SharpGrotesk-10;
   font-size: 8rem;
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    font-size: 6.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
 `;
 
 export const ButtonsContainer = styled.div`

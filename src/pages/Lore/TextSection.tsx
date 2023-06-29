@@ -73,7 +73,7 @@ const PrimaryText = styled.p`
 `;
 
 export const SecondaryText = styled.span`
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   padding-top: 1rem;
 
   & b {

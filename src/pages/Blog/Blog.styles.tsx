@@ -138,6 +138,7 @@ export const TitleContainer = styled.div`
 export const DescriptionContainer = styled.div`
   width: 100%;
   margin: 1rem 0 2rem;
+  flex: 1;
 
   & p {
     font-family: ${FONT_MEDIUM};

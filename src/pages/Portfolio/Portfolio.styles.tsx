@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-
+import { TitleContainer as TitleVideoBase } from '../Landing/HeroSection';
 import {
   Ball,
   GradientTitle,
@@ -8,6 +8,10 @@ import {
   SPACING_128,
   TABLET_MAX_WIDTH,
 } from '~/components/common';
+
+export const TitleVideo = styled(TitleVideoBase)`
+  margin-top: -8rem;
+`;
 
 export const Container = styled.div`
   width: 90%;
@@ -19,7 +23,7 @@ export const Container = styled.div`
 export const HeroDivider = styled.div`
   position: relative;
   width: 100%;
-  height: 0rem;
+  height: 30rem;
   bottom: 0;
   z-index: 3;
   display: flex;
@@ -27,6 +31,7 @@ export const HeroDivider = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: 21rem;
+  margin-bottom: 15rem;
 
   @media screen and (max-width: ${TABLET_MAX_WIDTH}) {
     margin-top: 12rem;
@@ -132,7 +137,7 @@ export const ProjectTitle = styled(GradientTitle)`
 `;
 
 export const ProjectsContainer = styled.div`
-  margin: 10rem 0 25rem;
+  margin: 10rem 0 10rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
