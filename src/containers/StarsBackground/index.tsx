@@ -29,6 +29,7 @@ const StarsContainer = styled.div<StarsContainerProps>`
   top: 0;
   left: 0;
   z-index: ${(props) => props.zIndex || 0};
+  pointer-events: none;
 
   & .stars {
     width: 0.1rem;

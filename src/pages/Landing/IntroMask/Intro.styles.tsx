@@ -69,7 +69,7 @@ export const KeyContainer = styled.div`
   align-items: center;
   justify-content: end;
   padding-bottom: 2.4rem;
-  z-index: 1;
+  z-index: 9;
   overflow: hidden;
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
