@@ -14,10 +14,23 @@ import {
   BlogsContainer,
   Image,
   Tags,
+  TitleContainer as PostTitle,
 } from './Blog.styles';
-import VIDEO_CHROME from '~/assets/videos/video_chrome.webm';
-import VIDEO_SAFARI from '~/assets/videos/video_safari.mp4';
+import VIDEO_CHROME from '~/assets/videos/blog.webm';
+import VIDEO_SAFARI from '~/assets/videos/blog.mp4';
 import { TitleContainer } from '../Landing/HeroSection';
+import StarIcon from '/img/footer/star-icon.svg';
+import styled from 'styled-components';
+
+const BlogTitleContainer = styled(TitleContainer)`
+  & video {
+    max-width: 450px;
+  }
+`;
+
+export const Star = styled.img.attrs({ loading: 'lazy' })`
+  width: 3.2rem;
+`;
 
 export function Blog() {
   const navigate = useNavigate();
@@ -25,12 +38,12 @@ export function Blog() {
   return (
     <PageContainer>
       <Title>
-        <TitleContainer>
+        <BlogTitleContainer>
           <video autoPlay loop muted playsInline>
             <source src={VIDEO_CHROME} type='video/webm' />
             <source src={VIDEO_SAFARI} type='video/mp4; codecs="hvc1"' />
           </video>
-        </TitleContainer>
+        </BlogTitleContainer>
       </Title>
       <BgContainer>
         <BackgroundImage type='1' align='center' />
@@ -47,10 +60,12 @@ export function Blog() {
             }
           >
             <Image src={post.image} />
+            <PostTitle>
+              <Star src={StarIcon} alt='' />
+              <h1>{post.name}</h1>
+              <Star src={StarIcon} alt='' />
+            </PostTitle>
             <DetailsContainer>
-              <TitleContainer>
-                <h1>{post.name}</h1>
-              </TitleContainer>
               <DescriptionContainer>
                 <p>{post.description}</p>
               </DescriptionContainer>

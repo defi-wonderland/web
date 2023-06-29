@@ -42,7 +42,7 @@ export const BlogsContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  max-width: 107rem;
+  max-width: 119rem;
   justify-content: space-between;
   margin: 0 auto;
 
@@ -66,8 +66,7 @@ export const BlogPost = styled.div`
   justify-content: space-between;
   align-items: start;
   border: 1px solid rgba(255, 255, 255, 0.1);
-  background-color: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
+  background-color: #262c41;
   margin: 1rem;
   border-radius: 1rem;
   cursor: pointer;
@@ -85,7 +84,7 @@ export const BlogPost = styled.div`
 
 export const Image = styled.img`
   width: 100%;
-  height: 21rem;
+  height: 31rem;
   object-fit: cover;
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
@@ -94,7 +93,7 @@ export const Image = styled.img`
 `;
 
 export const DetailsContainer = styled.div`
-  padding: 1.5rem;
+  padding: 3.6rem;
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -111,13 +110,18 @@ export const TitleContainer = styled.div`
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   padding-bottom: 1.5rem;
   text-align: start;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem;
+  padding: 1.5rem 2rem;
+  width: 100%;
 
   & h1 {
     font-family: ${FONT_MEDIUM_L};
     font-size: 2rem;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
+    text-align: center;
   }
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
@@ -132,8 +136,8 @@ export const TitleContainer = styled.div`
 `;
 
 export const DescriptionContainer = styled.div`
-  padding: 1.5rem 0;
   width: 100%;
+  margin: 1rem 0 2rem;
 
   & p {
     font-family: ${FONT_MEDIUM};
