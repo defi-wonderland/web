@@ -88,7 +88,7 @@ const StyledSection = styled.section<{
   justify-content: center;
   width: 100%;
   max-width: 100%;
-  min-height: 100vh;
+  min-height: 60vh;
   position: relative;
 
   ${({ backgroundImage }) =>
@@ -99,6 +99,10 @@ const StyledSection = styled.section<{
     background-size: cover;
     background-position: center;
   `}
+
+  @media screen and (max-width: 665px) {
+    min-height: 80vh;
+  }
 `;
 
 export interface SectionProps {
