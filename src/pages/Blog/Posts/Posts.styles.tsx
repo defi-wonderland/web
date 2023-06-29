@@ -5,6 +5,7 @@ export const Title = styled.h1`
   font-family: SharpGrotesk-10;
   margin-top: 22rem;
   font-size: 10rem;
+  text-align: center;
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     margin-top: 12rem;
@@ -179,17 +180,25 @@ export const Content = styled.div`
     ul {
       padding-right: 1.6rem;
     }
-
-    pre code {
-      display: inline-block;
-      padding: 1rem;
-      width: 100%;
+    pre {
+      display: flex;
+      width: fit-content;
+      margin: 0 auto;
     }
 
-    .math,
-    .math-inline,
-    math {
-      transform: scale(0.85);
+    pre code {
+      width: 350px;
+      transform: scale(0.9);
+      overflow-y: hidden;
+      overflow-x: scroll;
+    }
+
+    .math {
+      display: block;
+      width: 90vw;
+      height: 100%;
+      overflow-y: hidden;
+      overflow-x: scroll;
     }
   }
 `;
