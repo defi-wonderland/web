@@ -278,6 +278,7 @@ export const SecondTitle = styled(Title)`
     gap: 2rem;
     padding: 0;
     border-left: none;
+    border: none;
 
     & div {
       display: flex;
@@ -285,7 +286,6 @@ export const SecondTitle = styled(Title)`
       align-items: center;
       width: 100%;
       justify-content: start;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.5);
     }
 
     & img {
@@ -296,6 +296,10 @@ export const SecondTitle = styled(Title)`
       width: 6.4rem;
       padding: 2.2rem;
       margin-right: 2rem;
+    }
+
+    & div img {
+      display: none;
     }
   }
 `;
