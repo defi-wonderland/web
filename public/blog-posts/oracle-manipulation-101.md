@@ -1,7 +1,3 @@
-# Oracle Manipulation 101
-
-Dec 26 2022
-
 In our [last post](https://mirror.xyz/price-oracle.eth/wf_eF-PLnaoXeHRbiZ3VJiTn0Y8hwUrvmKwCK0M4M_I), we talked about the risks of using systems with centralized incentives and the issues that structure poses. Today, we would like to discuss the dangers of using liquidity pools (Uniswap v3 in particular) as a price oracle for any DeFi system.
 
 Price manipulation is the primary concern with liquidity pool-based oracles such as Uniswap v3. With enough liquidity, anyone can manipulate any price in any market. But why would someone manipulate a market? How and when does that happen? If incentives are in place, manipulations WILL eventually occur. Despite the regulatory landscape, we even see this [behaviour](https://www.investopedia.com/terms/l/libor-scandal.asp) in Traditional Finance (TradFi).

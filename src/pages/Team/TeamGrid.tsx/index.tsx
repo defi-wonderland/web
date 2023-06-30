@@ -7,31 +7,31 @@ import {
   CardBack,
   Name,
   Position,
-  Social,
   TeamGrid,
   TitleContainer,
   WonderTitle,
-  MemberLink,
   JoinContainer,
   EyeImage,
   KeyImage,
   FlipCard,
   FlipCardInner,
-  SImg,
   Mask,
   MemberContainer,
   Description,
+  // MemberLink,
+  // Social,
+  // SImg,
 } from './TeamGrid.styles';
 import { MEMBERS } from '~/constants/teamMembers';
-import TwitterIcon from '/img/footer/twitter-icon.svg';
-import GithubIcon from '/img/footer/github-icon.svg';
+// import TwitterIcon from '/img/footer/twitter-icon.svg';
+// import GithubIcon from '/img/footer/github-icon.svg';
 
 export function WonderTeamSection() {
   const hideDescriptions = new Array(MEMBERS.length).fill(false);
   const [showDesc, setShowDesc] = useState(hideDescriptions);
 
   const handleClick = (index: number) => {
-    const arrayCopy = hideDescriptions;
+    const arrayCopy = [...hideDescriptions];
     arrayCopy[index] = true;
     setShowDesc(arrayCopy);
   };
@@ -39,21 +39,21 @@ export function WonderTeamSection() {
   return (
     <Container>
       <TitleContainer>
-        <WonderTitle>WONDER TEAM</WonderTitle>
+        <WonderTitle>We&apos;re all mad here</WonderTitle>
         <Divider />
       </TitleContainer>
       <TeamGrid>
         {MEMBERS.map((member, index) => (
           <MemberContainer key={member.name}>
             {showDesc[index] && <Mask onClick={() => setShowDesc(hideDescriptions)} />}
-            <FlipCard onClick={() => handleClick(index)}>
-              <FlipCardInner className='flip-card-inner'>
+            <FlipCard onClick={() => handleClick(index)} flipped={showDesc[index]} index={index}>
+              <FlipCardInner className={`flip-card-inner flip-card-inner-${index}`}>
                 <CardFront className={`member member-${index} flip-card-front`}>
                   <div>
                     <Name>{member.name}</Name>
                     <Position>{member.position}</Position>
                   </div>
-                  <Social>
+                  {/* <Social>
                     {member.twitter && (
                       <MemberLink to={member.twitter} external>
                         <SImg src={TwitterIcon} alt='twitter icon' />
@@ -65,9 +65,9 @@ export function WonderTeamSection() {
                         <SImg src={GithubIcon} alt='github icon' />
                       </MemberLink>
                     )}
-                  </Social>
+                  </Social> */}
 
-                  <EyeImage />
+                  <EyeImage flipped={showDesc[index]} />
                 </CardFront>
 
                 <CardBack key={member.name} className={`member member-${index} flip-card-back`}>

@@ -5,8 +5,8 @@ const getRandomInt = (max: number) => {
 };
 
 const generateStars = (stars: number) => {
-  const width = 2000;
-  const height = 4000;
+  const width = 4000;
+  const height = 2000;
 
   let shadows = `${getRandomInt(width)}px ${getRandomInt(height)}px #fff`;
   for (let index = 0; index < stars; index++) {
@@ -23,11 +23,13 @@ export interface StarsContainerProps {
 }
 
 const StarsContainer = styled.div<StarsContainerProps>`
-  position: relative;
+  position: fixed;
   width: 100%;
+  height: 100%;
   top: 0;
   left: 0;
   z-index: ${(props) => props.zIndex || 0};
+  pointer-events: none;
 
   & .stars {
     width: 0.1rem;

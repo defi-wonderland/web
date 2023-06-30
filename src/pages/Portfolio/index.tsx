@@ -1,26 +1,25 @@
 import {
   Container,
   HeroDivider,
-  Ball_1,
-  Ball_2,
-  Ball_3,
   BG_1,
   BG_2,
   BG_3,
-  BackgroundContainer,
   TitleContainer,
+  BackgroundContainer,
   ProjectTitle,
   ProjectsContainer,
-  MobileTitleContainer,
+  Ball_1,
+  Ball_2,
+  Ball_3,
+  TitleVideo,
 } from './Portfolio.styles';
 import { ProjectsList } from './ProjectsList';
 import { Divider } from './ProjectsList/ProjectsList.styles';
-import { useWindowDimensions } from '~/hooks/windowDimensions';
-import { MainTitle, Distortion } from '~/components/common';
+import { PARTNER_PROJECTS, PUBLIC_GOODS } from '~/constants/projects';
+import VIDEO_CHROME from '~/assets/videos/portfolio.webm';
+import VIDEO_SAFARI from '~/assets/videos/portfolio.mp4';
 
 export function Portfolio() {
-  const { isMobile } = useWindowDimensions();
-
   return (
     <>
       <Container>
@@ -30,34 +29,31 @@ export function Portfolio() {
           <BG_3 type='2' align='right' />
         </BackgroundContainer>
         <HeroDivider>
-          {!isMobile && (
-            <>
-              <Distortion text='TOGETHER, WE WANT TO SUSTAINBLY BUILD A MORE INCLUSIVE' />
-              <Distortion text='AND DECENTRALIZED FINANCIAL ECOSYSTEM.' />
-            </>
-          )}
-
-          {isMobile && (
-            <MobileTitleContainer>
-              <MainTitle>TOGETHER,</MainTitle>
-              <MainTitle>WE WANT TO SUSTAINBLY</MainTitle>
-              <MainTitle>BUILD A MORE INCLUSIVE</MainTitle>
-              <MainTitle>AND DECENTRALIZED</MainTitle>
-              <MainTitle>FINANCIAL ECOSYSTEM</MainTitle>
-            </MobileTitleContainer>
-          )}
+          <TitleVideo>
+            <video autoPlay loop muted playsInline>
+              <source src={VIDEO_CHROME} type='video/webm' />
+              <source src={VIDEO_SAFARI} type='video/mp4; codecs="hvc1"' />
+            </video>
+          </TitleVideo>
           <Ball_1 />
           <Ball_2 />
           <Ball_3 />
         </HeroDivider>
 
         <TitleContainer>
-          <ProjectTitle title='THINGS THAT HAPPEN' />
+          <ProjectTitle title='Partner projects' />
         </TitleContainer>
-
         <ProjectsContainer>
           <Divider />
-          <ProjectsList />
+          <ProjectsList projects={PARTNER_PROJECTS} />
+        </ProjectsContainer>
+
+        <TitleContainer>
+          <ProjectTitle title='Public goods' />
+        </TitleContainer>
+        <ProjectsContainer>
+          <Divider />
+          <ProjectsList projects={PUBLIC_GOODS} />
         </ProjectsContainer>
       </Container>
     </>

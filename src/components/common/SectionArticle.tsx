@@ -19,6 +19,7 @@ export const TextContainer = styled.p`
   letter-spacing: inherit;
   display: inline;
   position: relative;
+  text-transform: uppercase;
 `;
 
 export const ArticleTitle = styled(DisplayText)``;
@@ -300,6 +301,7 @@ const Star = styled.img.attrs({ src: STAR })`
   position: absolute;
   width: 3.5rem;
   top: 8.3rem;
+  pointer-events: none;
 `;
 
 export const SectionArticle: FC<SectionArticleProps> = ({ title, center, children, ...props }) => {

@@ -1,12 +1,35 @@
 import styled from 'styled-components';
-import { MOBILE_MAX_WIDTH } from '~/components/common';
+import { MOBILE_MAX_WIDTH, SectionBackground } from '~/components/common';
+
+export const Title = styled.h1`
+  font-family: SharpGrotesk-10;
+  margin-top: 22rem;
+  font-size: 10rem;
+  text-align: center;
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    margin-top: 12rem;
+    margin-bottom: 4rem;
+  }
+`;
+
+export const Date = styled.p`
+  margin-top: 2rem;
+  font-weight: bold !important;
+`;
+
+export const BackgroundImage = styled(SectionBackground)`
+  width: 100%;
+  max-width: 90rem;
+  z-index: -1;
+`;
 
 export const Background = styled.div`
   max-width: 105rem;
   overflow: hidden;
   border-radius: 1rem;
-  margin-top: 12rem;
-  background-color: rgba(10, 13, 23, 1);
+  margin-top: 5rem;
+  background-color: #2d3345;
   z-index: 1;
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
@@ -14,17 +37,6 @@ export const Background = styled.div`
     padding-bottom: 5rem;
     background-color: unset;
     background-image: linear-gradient(to bottom, rgba(10, 13, 23, 1) calc(100% - 5rem), rgba(10, 13, 23, 0));
-  }
-`;
-
-export const Banner = styled.img`
-  width: 100%;
-  height: 30rem;
-  object-fit: cover;
-  object-position: center;
-
-  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
-    height: 20rem;
   }
 `;
 
@@ -38,8 +50,30 @@ export const Content = styled.div`
   line-height: 1.625;
   font-weight: 375;
 
+  .twitter-player {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .ytplayer {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+  }
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    .twitter-player iframe {
+      width: 90%;
+      height: 80vh;
+    }
+    .ytplayer {
+      padding: 1rem;
+    }
+  }
+
   h1 {
-    font-family: Inter, sans-serif !important;
+    font-family: SharpGrotesk-10, sans-serif !important;
     font-size: 4.8rem;
     font-weight: 600;
     letter-spacing: -0.05px;
@@ -119,11 +153,11 @@ export const Content = styled.div`
   }
 
   math {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
   }
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
-    padding: 2rem 0 0;
+    padding: 2rem 1rem 0;
 
     h1 {
       font-size: 3rem;
@@ -145,6 +179,26 @@ export const Content = styled.div`
 
     ul {
       padding-right: 1.6rem;
+    }
+    pre {
+      display: flex;
+      width: fit-content;
+      margin: 0 auto;
+    }
+
+    pre code {
+      width: 350px;
+      transform: scale(0.9);
+      overflow-y: hidden;
+      overflow-x: scroll;
+    }
+
+    .math {
+      display: block;
+      width: 90vw;
+      height: 100%;
+      overflow-y: hidden;
+      overflow-x: scroll;
     }
   }
 `;

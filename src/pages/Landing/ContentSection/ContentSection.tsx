@@ -25,6 +25,7 @@ import MobileStar from '~/assets/lore-stars.svg';
 import Flower from '~/assets/flower.svg';
 import ConeBackground from '~/assets/landing_bg.png';
 import { Link } from '~/components/common';
+import { PARTNER_PROJECTS } from '~/constants/projects';
 
 export function ContentSection() {
   return (
@@ -36,17 +37,16 @@ export function ContentSection() {
       <Star src={StarIcon} />
       <FirstTitle>
         <Star src={MobileStar} />
-        developing for a greater good
+        It’s all about our partners…
       </FirstTitle>
 
       <FirstBlockContainer>
         <TextContainer>
-          <GradientText>To</GradientText>
-          <GradientText>become part</GradientText>
-          <GradientText>of</GradientText>
-          <GradientText>something bigger</GradientText>
-          <GradientText>than</GradientText>
-          <GradientText>ourselves</GradientText>
+          <GradientText>Optimism</GradientText>
+          <GradientText>Connext</GradientText>
+          <GradientText>Reflexer</GradientText>
+          <GradientText>Yearn</GradientText>
+          <GradientText>& many more</GradientText>
         </TextContainer>
 
         <RightCard />
@@ -54,15 +54,15 @@ export function ContentSection() {
 
       <Divider>
         <DividerLine />
-        <DividerText>WONDERLAND IN PROGRESS...</DividerText>
+        <DividerText>What’s cooking?</DividerText>
         <DividerLine />
       </Divider>
 
       <SecondBlockContainer>
-        <ProjectsList />
+        <ProjectsList projects={PARTNER_PROJECTS.slice(0, 3)} />
 
         <SButton>
-          <Link to='/portfolio'>FULL PORTFOLIO</Link>
+          <Link to='/portfolio'>Full portfolio</Link>
         </SButton>
 
         <Team />
@@ -72,10 +72,9 @@ export function ContentSection() {
       <SecondTitle>
         <div>
           <Icon src={Flower} />
-          fix-to-earn
         </div>
         <CommunityButton>
-          <Link to='/team'>VIEW ALL COMMUNITY</Link>
+          <Link to='/team'>Meet the team</Link>
         </CommunityButton>
       </SecondTitle>
     </LandingContainer>

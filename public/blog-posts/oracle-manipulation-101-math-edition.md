@@ -1,7 +1,3 @@
-# Oracle Manipulation 101 (Math edition)
-
-Dec 26 2022
-
 This article is divided into two.
 
 In the first part, we will present a quick refresher on how Uniswap works specifically tailored to the needs of computing manipulation costs. It'll explore how to move the spot price in an AMM to the desired target for Uniswap v2 and v3.

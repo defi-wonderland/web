@@ -24,7 +24,7 @@ const PrimaryText = styled.p`
 `;
 
 export const SecondaryText = styled.span`
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   line-height: 1.5;
 `;
 
@@ -41,15 +41,13 @@ export function RightCard() {
   return (
     <>
       <CardContainer>
-        <PrimaryText>
-          We are DeFi Wonderland, our main goal is to make decentralized finance more accessible and scalable
-        </PrimaryText>
+        <PrimaryText>Our approach</PrimaryText>
         <SecondaryText>
-          We believe we&apos;re living in the early stages of a technology revolution and together we have the optimal
-          skillset to help it grow. We know many opportunities will arise on the way, and plan on leveraging them all.
+          Our commitment is to a financial future that&apos;s open, decentralized, and accessible to all. To turn this
+          vision into reality, we partner with the best teams in the world and support them in any way we can.
         </SecondaryText>
         <SButton>
-          <Link to='/lore'>DISCOVER MORE</Link>
+          <Link to='/lore'>Learn more</Link>
         </SButton>
       </CardContainer>
     </>

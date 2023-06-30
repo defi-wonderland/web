@@ -11,23 +11,36 @@ import {
 import MISC from '~/assets/footer_vector.svg';
 
 export const footerColor = 'rgba(255, 255, 255, 0.2)';
-export const footerPadding = '1.5rem';
+export const footerPaddingRem = 1.5;
+export const footerPadding = `${footerPaddingRem}rem`;
 
 export const Star = styled.img.attrs({ loading: 'lazy' })`
-  width: 1.66rem;
+  width: 3.2rem;
+  pointer-events: none;
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    width: 2.4rem;
+  }
 `;
 
 export const WonderLogoText = styled.img.attrs({ loading: 'lazy' })`
-  width: 16.3rem;
+  height: 5rem;
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    height: 3rem;
+  }
 `;
 
 export const FooterHeader = styled.div`
+  padding: ${footerPaddingRem * 2}rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-bottom: ${footerPadding};
   border-bottom: 1px solid ${footerColor};
   user-select: none;
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    padding-top: ${footerPaddingRem * 1.2}rem;
+    padding: ${footerPaddingRem}rem;
+  }
 `;
 
 export const Plus = styled.img.attrs({ loading: 'lazy' })`
@@ -36,11 +49,12 @@ export const Plus = styled.img.attrs({ loading: 'lazy' })`
 
 export const FooterActions = styled.div`
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   grid-gap: 2.5rem;
   font-family: ${FONT_MEDIUM_L};
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   font-weight: 500;
   flex: 1;
 
@@ -60,7 +74,6 @@ export const FooterSocial = styled.div`
   align-items: center;
   grid-gap: 7rem;
   padding-top: 28px;
-  border-top: 1px solid ${footerColor};
 
   > * {
     font-family: ${FONT_MEDIUM};
@@ -71,6 +84,10 @@ export const FooterSocial = styled.div`
     &:last-child {
       text-align: right;
     }
+  }
+
+  & span {
+    font-size: 1.8rem;
   }
 `;
 
@@ -83,8 +100,9 @@ export const SocialIcons = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  grid-gap: 3rem;
+  grid-gap: 4rem;
   z-index: 20;
+  margin-top: 2rem;
 `;
 
 export const StyledFooter = styled.footer`
@@ -92,15 +110,14 @@ export const StyledFooter = styled.footer`
   display: flex;
   flex-direction: column;
   align-self: center;
-  padding: ${footerPadding} 2rem;
+  padding: 0 2rem ${footerPadding} 2rem;
   color: var(--text-light);
   background: rgba(255, 255, 255, 0.05);
-  border: 1px solid ${footerColor};
+  /* border: 1px solid ${footerColor}; */
   border-radius: 1rem;
-  backdrop-filter: blur(24px);
-  width: 105.1rem;
+  backdrop-filter: blur(8px);
+  width: 134rem;
   max-width: 100%;
-
   height: 47rem;
   z-index: ${CONTENT_INDEX};
 
@@ -117,20 +134,22 @@ export const StyledFooter = styled.footer`
 `;
 
 export const BackgroundImage = styled(SectionBackground)`
-  position: relative;
-  width: 50%;
-  margin: 0 auto;
-
+  position: absolute;
+  width: 120%;
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     width: 100%;
   }
 `;
 
 export const BgContainer = styled.div`
-  width: 80%;
+  width: 100%;
   display: flex;
   justify-content: center;
-  z-index: -1;
+  z-index: -120;
+  position: relative;
+  margin-top: 3rem;
+  height: 80rem;
+  overflow: hidden;
 `;
 
 export const Container = styled.div`
@@ -139,6 +158,7 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   height: 60rem;
+  margin-top: 10rem;
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     height: 50rem;
@@ -165,4 +185,21 @@ export const VectorImg = styled.img.attrs({
   position: relative;
   width: 220px;
   height: 270px;
+`;
+
+export const FooterTitle = styled.h1`
+  text-transform: uppercase;
+  font-family: SharpGrotesk-10;
+  font-size: 8rem;
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    font-size: 6.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+`;
+
+export const ButtonsContainer = styled.div`
+  display: flex;
+  flex-direction: row;
 `;

@@ -1,7 +1,3 @@
-# RIP, Oracles
-
-Dec 26 2022
-
 Oracles are a single point of failure and can make or break a DeFi protocol. They are reliable until a black swan event happens…
 
 Unfortunately, crypto is a flock of black swans, so you better be prepared.

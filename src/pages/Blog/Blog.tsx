@@ -1,7 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 
 import { POSTS } from '~/constants/posts';
-import { Distortion, MainTitle } from '~/components/common';
 import {
   PageContainer,
   Title,
@@ -11,33 +10,41 @@ import {
   DetailsContainer,
   BlogPost,
   Date,
-  TitleContainer,
   BackgroundImage,
   BlogsContainer,
   Image,
   Tags,
+  TitleContainer as PostTitle,
 } from './Blog.styles';
-import { useWindowDimensions } from '~/hooks/windowDimensions';
+import VIDEO_CHROME from '~/assets/videos/blog.webm';
+import VIDEO_SAFARI from '~/assets/videos/blog.mp4';
+import { TitleContainer } from '../Landing/HeroSection';
+import StarIcon from '/img/footer/star-icon.svg';
+import styled from 'styled-components';
+
+const BlogTitleContainer = styled(TitleContainer)`
+  & video {
+    max-width: 450px;
+  }
+`;
+
+export const Star = styled.img.attrs({ loading: 'lazy' })`
+  width: 3.2rem;
+  pointer-events: none;
+`;
 
 export function Blog() {
   const navigate = useNavigate();
-  const { isMobile } = useWindowDimensions();
 
   return (
     <PageContainer>
       <Title>
-        {!isMobile && (
-          <>
-            <Distortion text='NEWS, STORIES AND' />
-            <Distortion text='UPDATES FROM WONDERLAND' />
-          </>
-        )}
-        {isMobile && (
-          <>
-            <MainTitle fontSize={5.5}>NEWS, STORIES AND</MainTitle>
-            <MainTitle fontSize={5.5}>UPDATES FROM WONDERLAND</MainTitle>
-          </>
-        )}
+        <BlogTitleContainer>
+          <video autoPlay loop muted playsInline>
+            <source src={VIDEO_CHROME} type='video/webm' />
+            <source src={VIDEO_SAFARI} type='video/mp4; codecs="hvc1"' />
+          </video>
+        </BlogTitleContainer>
       </Title>
       <BgContainer>
         <BackgroundImage type='1' align='center' />
@@ -49,15 +56,16 @@ export function Blog() {
             onClick={() =>
               navigate({
                 pathname: `/blog/${post.id}`,
-                search: `?${post.name.toLowerCase().replaceAll(' ', '-')}`,
               })
             }
           >
             <Image src={post.image} />
+            <PostTitle>
+              <Star src={StarIcon} alt='' />
+              <h1>{post.name}</h1>
+              <Star src={StarIcon} alt='' />
+            </PostTitle>
             <DetailsContainer>
-              <TitleContainer>
-                <h1>{post.name}</h1>
-              </TitleContainer>
               <DescriptionContainer>
                 <p>{post.description}</p>
               </DescriptionContainer>

@@ -69,7 +69,7 @@ export const KeyContainer = styled.div`
   align-items: center;
   justify-content: end;
   padding-bottom: 2.4rem;
-  z-index: 1;
+  z-index: 9;
   overflow: hidden;
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
@@ -79,10 +79,15 @@ export const KeyContainer = styled.div`
 
 export const Text = styled.span<StyledContainerProps>`
   font-style: italic;
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   margin-top: 0.4rem;
   user-select: none;
   opacity: ${(props) => 1 - props.backgroundEffect * 3};
+  z-index: 100;
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    font-size: 2rem;
+  }
 `;
 
 export const StyledNavbar = styled.nav`
@@ -112,6 +117,7 @@ export const Key = styled.img`
   position: relative;
   z-index: -1;
   width: 7rem;
+  pointer-events: none;
 `;
 
 export const Mask = styled.div<StyledContainerProps>`

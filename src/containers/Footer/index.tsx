@@ -4,22 +4,20 @@ import {
   Container,
   FooterActions,
   FooterHeader,
-  Plus,
   SocialIcon,
   SocialIcons,
   Star,
   StyledFooter,
-  VectorContainer,
-  VectorImg,
   WonderLogoText,
   FooterSocial,
+  FooterTitle,
+  ButtonsContainer,
 } from './Footer.styles';
-import WonderLogoIcon from '/img/wonder-logo-text.svg';
+import WonderLogoIcon from '~/assets/Logo.png';
 import StarIcon from '/img/footer/star-icon.svg';
-import PlusIcon from '/img/footer/plus-icon.svg';
 import TwitterIcon from '/img/footer/twitter-icon.svg';
 import GithubIcon from '/img/footer/github-icon.svg';
-import { Link } from '~/components/common';
+import { Button, Link } from '~/components/common';
 
 export const Footer = () => (
   <Container>
@@ -37,38 +35,18 @@ export const Footer = () => (
       </FooterHeader>
 
       <FooterActions>
-        {/* Zigzag vector */}
-        <VectorContainer>
-          <VectorImg />
-        </VectorContainer>
-
-        <Link
-          to='/team'
-          onClick={() => {
-            if (location.pathname === '/team') window.scrollTo(0, 0);
-          }}
-        >
-          About us
-        </Link>
-        <Plus src={PlusIcon} />
-        <Link to='https://docs.google.com/forms/d/1n70jsL4sFkOwPNBTdciPqlWF2RirgQwejjztpS4-2L8/viewform' external>
-          Join us
-        </Link>
-        <Plus src={PlusIcon} />
-        <Link
-          to='/portfolio'
-          onClick={() => {
-            if (location.pathname === '/portfolio') window.scrollTo(0, 0);
-          }}
-        >
-          Portfolio
-        </Link>
+        <FooterTitle>We&apos;re all mad here</FooterTitle>
+        <ButtonsContainer>
+          <Link to='https://docs.google.com/forms/d/1n70jsL4sFkOwPNBTdciPqlWF2RirgQwejjztpS4-2L8/viewform' external>
+            <Button>Join us</Button>
+          </Link>
+        </ButtonsContainer>
       </FooterActions>
 
       <FooterSocial>
         <span>
           <span>© 2023. Wonder LTD. </span>
-          <span>All Right Reserved</span>
+          <span>All Rights Reserved</span>
         </span>
 
         <SocialIcons>

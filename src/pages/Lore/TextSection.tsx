@@ -7,18 +7,26 @@ import {
   MOBILE_MAX_WIDTH,
   PAGE_MAX_WIDTH,
   Ring,
-  Section,
+  Section as BaseSection,
   SectionArticle,
   SectionBackground,
 } from '~/components/common';
 
 const LoreSectionArticle = styled(SectionArticle)``;
 
+const Section = styled(BaseSection)`
+  min-height: 70vh;
+
+  @media screen and (max-width: 665px) {
+    min-height: 80vh;
+  }
+`;
+
 const LoreSection = styled(Section)`
   width: calc(${PAGE_MAX_WIDTH} + 13rem);
   max-width: 100%;
   grid-gap: 4.6rem;
-  margin-top: 12rem;
+  margin-top: 0rem;
 
   @media screen and (max-width: 1400px) {
     flex-direction: column;
@@ -30,6 +38,7 @@ const LoreSection = styled(Section)`
 
   @media screen and (max-width: 500px) {
     padding: 3rem 0;
+    margin-top: 12rem;
   }
 `;
 
@@ -65,31 +74,39 @@ const PrimaryText = styled.p`
 `;
 
 export const SecondaryText = styled.span`
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   padding-top: 1rem;
+
+  & b {
+    font-weight: bold;
+  }
+`;
+
+export const FirstLoreSectionArticle = styled(LoreSectionArticle)`
+  margin-top: 24rem;
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    margin-top: 0rem;
+  }
 `;
 
 function TextSection() {
   return (
     <>
       <LeftSection>
-        <LoreSectionArticle title='WHO WE ARE'>
+        <FirstLoreSectionArticle title='Who we are'>
           <div>
-            <PrimaryText>
-              We started as a small group of activists with diverse backgrounds. Coding, Big Data, Finance and VC are
-              our cup of tea.
-            </PrimaryText>
+            <PrimaryText>&quot;&apos;Who in the world am I?&apos; Ah, that&apos;s the great puzzle!&quot;</PrimaryText>
 
             <SecondaryText>
-              We met while collaborating with several DeFi protocols in the early days and decided to join forces into
-              one organization that would let us scale and make a much bigger impact which would become DeFi Wonderland.
+              We&apos;re a group of developers, researchers, data scientists, investors, and executive leaders. We have
+              something in common though, we all love building cool sh*t.
             </SecondaryText>
 
             <Link to='/team'>
-              <Button>Team</Button>
+              <Button>Meet the team</Button>
             </Link>
           </div>
-        </LoreSectionArticle>
+        </FirstLoreSectionArticle>
         <Ring type='1' />
 
         <SectionBackground type='4' align='right' />
@@ -100,12 +117,12 @@ function TextSection() {
 
         <Ring type='2' />
 
-        <LoreSectionArticle title='OUR MISSION'>
+        <LoreSectionArticle title='Our mission'>
           <div>
             <SecondaryText>
-              We currently work as an activist fund but we share the ethos of the ecosystem, creating much more value
-              than the one we take: we grow projects, communities, markets in a more decentralized and self-sustainable
-              manner, only proffiting when the value we add is exponentially higher than the one we&apos;ll extract.
+              Our mission is to discover, partner, and empower innovators in the creation of open, permissionless, and
+              decentralized financial solutions.{' '}
+              <b>Our pledge is to stand by our partners, supporting them in every way we can.</b>
             </SecondaryText>
 
             <Link to='/portfolio'>
@@ -116,19 +133,17 @@ function TextSection() {
       </RightSection>
 
       <LeftSection>
-        <LoreSectionArticle title='OUR VALUES'>
+        <LoreSectionArticle title='Our values'>
           <div>
-            <PrimaryText>
-              We&apos;re value creators, always seeking to understand the ecosystem needs and interests, providing
-              valuable propositions that address them, and that&apos;s how we will remain, it&apos;s our ethos.
-            </PrimaryText>
+            <PrimaryText>Building together</PrimaryText>
 
             <SecondaryText>
-              We believe DeFi is mind boggling and will open an array of possibilities all around the world, but
-              especially for people that have been left behind by the current financial system.
+              We champion public good creation and believe in the invincibility of protocols backed by the right talent
+              and incentives. We deeply believe in fostering a supportive community, where collaboration trumps
+              competition, and building together is the norm, not the exception.
             </SecondaryText>
 
-            <SecondaryText>We will help DeFi achieve scale through our code.</SecondaryText>
+            <SecondaryText>Long term, long term, long term…</SecondaryText>
             <Link to='/contact'>
               <Button>Join us</Button>
             </Link>

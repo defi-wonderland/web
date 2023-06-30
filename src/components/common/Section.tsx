@@ -99,6 +99,10 @@ const StyledSection = styled.section<{
     background-size: cover;
     background-position: center;
   `}
+
+  @media screen and (max-width: 665px) {
+    min-height: 80vh;
+  }
 `;
 
 export interface SectionProps {

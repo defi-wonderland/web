@@ -30,12 +30,14 @@ export const TitleContainer = styled.div`
   @media screen and (max-width: ${TABLET_MAX_WIDTH}) {
     margin-top: 3rem;
     flex-direction: column;
+    padding: 0 2rem;
   }
 `;
 
 export const WonderTitle = styled.h1`
   word-wrap: unset;
-  width: 40rem;
+  margin-top: -12rem;
+  width: 100%;
   font-family: ${FONT_DISPLAY};
   font-weight: 300;
   line-height: 1.2;
@@ -52,6 +54,7 @@ export const WonderTitle = styled.h1`
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     text-align: center;
+    margin-top: 9rem;
     font-size: 6.4rem;
     width: auto;
   }
@@ -139,6 +142,9 @@ export const TeamGrid = styled.div`
             & .member.member-${MEMBERS.length - 1} {
               border-bottom: unset !important;
             }
+            & .member.member-${MEMBERS.length - 1} {
+              border-top: 1px solid rgba(255, 255, 255, 0.4);
+            }
           `;
         case 1:
           return `
@@ -165,7 +171,7 @@ export const TeamGrid = styled.div`
   }
 `;
 
-export const FlipCard = styled.button`
+export const FlipCard = styled.button<{ flipped: boolean; index: number }>`
   background-color: transparent;
   position: relative;
   text-align: start;
@@ -173,15 +179,16 @@ export const FlipCard = styled.button`
   padding: unset;
   width: 100%;
 
-  &:active .flip-card-inner,
-  &:focus .flip-card-inner {
-    transform: rotateX(-180deg);
-  }
+  ${({ flipped, index }) => `
+    .flip-card-inner-${index} {
+    transform:  ${flipped ? 'rotateX(-180deg)' : 'unset'};
+  }`}
 `;
 
 export const FlipCardInner = styled.div`
   position: relative;
-  transition: transform 0.6s;
+  transition: transform 0.5s;
+  -webkit-transform-style: preserve-3d; /* Safari */
   transform-style: preserve-3d;
 `;
 
@@ -249,18 +256,23 @@ export const Name = styled.strong`
 
 export const Position = styled.p`
   font-family: ${FONT_MEDIUM};
-  font-size: ${FONT_SIZE_18};
+  font-size: 2rem;
   color: rgba(255, 255, 255, 0.65);
   z-index: 1;
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
 `;
 
 export const Description = styled(Position)`
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   white-space: pre-wrap;
+  color: rgba(255, 255, 255, 0.9);
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    font-size: 1.6rem;
+  }
 `;
 
 export const Divider = styled.canvas`
@@ -315,7 +327,7 @@ export const SImg = styled.img`
 export const EyeImage = styled(KeyImage).attrs({
   src: EYE,
   alt: 'See description icon',
-})`
+})<{ flipped: boolean }>`
   opacity: 0;
   bottom: 0;
   right: 0;
@@ -324,6 +336,11 @@ export const EyeImage = styled(KeyImage).attrs({
   bottom: 1rem;
   right: 1rem;
   z-index: 1;
+  display: ${({ flipped }) => (flipped ? 'none' : 'unset')};
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    opacity: 1;
+  }
 `;
 
 export const MemberLink = styled(Link)`
