@@ -142,6 +142,9 @@ export const TeamGrid = styled.div`
             & .member.member-${MEMBERS.length - 1} {
               border-bottom: unset !important;
             }
+            & .member.member-${MEMBERS.length - 1} {
+              border-top: 1px solid rgba(255, 255, 255, 0.4);
+            }
           `;
         case 1:
           return `
