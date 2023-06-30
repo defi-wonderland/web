@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 
-import { POSTS } from '~/constants/posts';
+import { posts } from '~/data/posts.json';
 import {
   PageContainer,
   Title,
@@ -50,7 +50,7 @@ export function Blog() {
         <BackgroundImage type='1' align='center' />
       </BgContainer>
       <BlogsContainer>
-        {POSTS.map((post) => (
+        {posts.map((post) => (
           <BlogPost
             key={post.id}
             onClick={() =>

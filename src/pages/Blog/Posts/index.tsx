@@ -7,7 +7,7 @@ import ReactMarkdown from 'react-markdown';
 import { CSSTransition } from 'react-transition-group';
 
 import { Background, Title, Date, Content, BackgroundImage } from './Posts.styles';
-import { POSTS } from '~/constants/posts';
+import { posts } from '~/data/posts.json';
 
 export function Posts() {
   const { id } = useParams();
@@ -19,7 +19,7 @@ export function Posts() {
     fetch(`/blog-posts/${id}.md`)
       .then((response) => response.text())
       .then((data) => {
-        const post = POSTS.filter((post) => post.id == id);
+        const post = posts.filter((post) => post.id == id);
         setName(post[0].name);
         setDate(post[0].date);
 
