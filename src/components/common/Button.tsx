@@ -105,12 +105,10 @@ export const SideLine = () => {
 
 export const Button: FC<ButtonProps> = ({ children, ...props }) => {
   return (
-    <>
-      <StyledButton {...props}>
-        <SideLine />
-        {children}
-        <SideLine />
-      </StyledButton>
-    </>
+    <StyledButton {...props}>
+      <SideLine />
+      {children}
+      <SideLine />
+    </StyledButton>
   );
 };
