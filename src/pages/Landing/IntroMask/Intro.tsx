@@ -65,7 +65,7 @@ export function Intro({ showBackground, setShowBackground, ...props }: IntroProp
             <Key ref={nodeRef} src={INTROKEY} alt='Key icon' />
           </KeyBox>
         </Draggable>
-        <Text backgroundEffect={backgroundEffect}>Drag to discover Wonderland</Text>
+        <Text backgroundEffect={backgroundEffect}>Slide the key & step into Wonderland</Text>
       </KeyContainer>
     </IntroContainer>
   );
