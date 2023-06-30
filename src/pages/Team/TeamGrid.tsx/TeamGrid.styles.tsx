@@ -171,7 +171,7 @@ export const TeamGrid = styled.div`
   }
 `;
 
-export const FlipCard = styled.button`
+export const FlipCard = styled.button<{ flipped: boolean; index: number }>`
   background-color: transparent;
   position: relative;
   text-align: start;
@@ -179,15 +179,16 @@ export const FlipCard = styled.button`
   padding: unset;
   width: 100%;
 
-  &:active .flip-card-inner,
-  &:focus .flip-card-inner {
-    transform: rotateX(-180deg);
-  }
+  ${({ flipped, index }) => `
+    .flip-card-inner-${index} {
+    transform:  ${flipped ? 'rotateX(-180deg)' : 'unset'};
+  }`}
 `;
 
 export const FlipCardInner = styled.div`
   position: relative;
-  transition: transform 0.6s;
+  transition: transform 0.5s;
+  -webkit-transform-style: preserve-3d; /* Safari */
   transform-style: preserve-3d;
 `;
 
@@ -326,7 +327,7 @@ export const SImg = styled.img`
 export const EyeImage = styled(KeyImage).attrs({
   src: EYE,
   alt: 'See description icon',
-})`
+})<{ flipped: boolean }>`
   opacity: 0;
   bottom: 0;
   right: 0;
@@ -335,6 +336,7 @@ export const EyeImage = styled(KeyImage).attrs({
   bottom: 1rem;
   right: 1rem;
   z-index: 1;
+  display: ${({ flipped }) => (flipped ? 'none' : 'unset')};
 `;
 
 export const MemberLink = styled(Link)`
