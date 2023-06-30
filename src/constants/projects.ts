@@ -9,12 +9,12 @@ export interface Project {
 
 export const PARTNER_PROJECTS: Project[] = [
   {
-    name: 'OpOO (With Optimism)',
+    name: 'OpOO (with Optimism)',
     description:
       'Modular optimistic oracle solution, built alongside Optimism. Enables secure, permissionless delivery of real-world data and attestations.',
   },
   {
-    name: 'HAI (With Reflexer)',
+    name: 'HAI (with Reflexer)',
     description: 'Fork of the RAI protocol in Optimism that supports new collaterals such as OP, LSD, and RAI.',
     github: 'https://github.com/hai-on-op',
     docs: '',
@@ -22,7 +22,7 @@ export const PARTNER_PROJECTS: Project[] = [
     web: 'https://www.letsgethai.com',
   },
   {
-    name: 'Optimistic Roots (With Connext)',
+    name: 'Optimistic Roots (with Connext)',
     description:
       'The current canonical bridge implementations are quite expensive. This project aims to reduce costs and increase transfer speeds by implementing an Optimistic approach with cross-chain Merkle root aggregations.',
     github: 'https://github.com/connext',
@@ -30,26 +30,26 @@ export const PARTNER_PROJECTS: Project[] = [
     web: 'https://www.connext.network/',
   },
   {
-    name: 'Crosschain Governance (With Connext)',
+    name: 'Crosschain Governance (with Connext)',
     description:
       "User-friendly React component library that enables users to deploy and manage their Avatar's Zodiac Connext Module and easily build the transaction data required for executing desired actions through an xcall function in Connext.",
     github: 'https://github.com/defi-wonderland/crosschain-widget',
   },
   {
-    name: 'xTokens (With Connext)',
+    name: 'xTokens (with Connext)',
     description:
       'xTokens is a standard for bridged tokens. A common interface to be used across different implementations of bridges to keep liquidity concentrated and improve user experience on-chain.',
     github: 'https://github.com/defi-wonderland/xTokens',
   },
   {
-    name: 'Amphora (With Adam Cochran)',
+    name: 'Amphora (with Adam Cochran)',
     description:
       'Amphora is a lending market, forked from Interest Protocol, that supports various types of collateral, such as single-type collateral like ETH and liquidity provider tokens from Curve, including TriCrypto2. It also provides a USDA stablecoin.',
     docs: 'https://amphora-protocol.gitbook.io/amphora-protocol/',
     twitter: 'https://twitter.com/amphoraprotocol',
   },
   {
-    name: 'Keep3r Network',
+    name: 'Keep3r Network v2',
     description:
       'Decentralized and permissionless network for projects that need external DevOps. We rebuilt the protocol from scratch, improving the code quality, gas usage, tokenomics and adding automatic credit mining.',
     github: 'https://github.com/keep3r-network/keep3r-network-v2',
@@ -82,7 +82,7 @@ export const PUBLIC_GOODS = [
     docs: 'https://smock.readthedocs.io/en/latest/',
   },
   {
-    name: 'Sidechain Oracle',
+    name: 'Sidechain Oracle (with Keep3r Network)',
     description:
       'This mechanism provides the price history of Uniswap V3 pools to chains where the pair may not be available or has insufficient liquidity. This is achieved by creating a virtual Uniswap V3 pool with bridged data from the Mainnet. The team was responsible for the architecture design, off-chain scripts, and smart contract development. The mechanism has recently been launched and is already working on Optimism and Polygon.',
     github: 'https://github.com/defi-wonderland/sidechain-oracles',

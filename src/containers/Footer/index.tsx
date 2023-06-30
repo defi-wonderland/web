@@ -46,7 +46,7 @@ export const Footer = () => (
       <FooterSocial>
         <span>
           <span>© 2023. Wonder LTD. </span>
-          <span>All Right Reserved</span>
+          <span>All Rights Reserved</span>
         </span>
 
         <SocialIcons>
