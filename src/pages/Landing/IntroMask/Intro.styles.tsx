@@ -83,6 +83,11 @@ export const Text = styled.span<StyledContainerProps>`
   margin-top: 0.4rem;
   user-select: none;
   opacity: ${(props) => 1 - props.backgroundEffect * 3};
+  z-index: 100;
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    font-size: 2rem;
+  }
 `;
 
 export const StyledNavbar = styled.nav`
