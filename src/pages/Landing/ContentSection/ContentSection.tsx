@@ -61,9 +61,9 @@ export function ContentSection() {
       <SecondBlockContainer>
         <ProjectsList projects={partner_projects.slice(0, 3)} />
 
-        <SButton>
-          <Link to='/portfolio'>Full portfolio</Link>
-        </SButton>
+        <Link to='/portfolio'>
+          <SButton>portfolio</SButton>
+        </Link>
 
         <Team />
       </SecondBlockContainer>
@@ -73,9 +73,9 @@ export function ContentSection() {
         <div>
           <Icon src={Flower} />
         </div>
-        <CommunityButton>
-          <Link to='/team'>Meet the team</Link>
-        </CommunityButton>
+        <Link to='/team'>
+          <CommunityButton>Meet the team</CommunityButton>
+        </Link>
       </SecondTitle>
     </LandingContainer>
   );
