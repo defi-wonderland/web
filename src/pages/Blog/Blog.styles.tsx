@@ -86,6 +86,7 @@ export const Image = styled.img`
   width: 100%;
   height: 31rem;
   object-fit: cover;
+  min-height: 31rem;
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     height: 65%;
