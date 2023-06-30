@@ -46,9 +46,9 @@ export function RightCard() {
           Our commitment is to a financial future that&apos;s open, decentralized, and accessible to all. To turn this
           vision into reality, we partner with the best teams in the world and support them in any way we can.
         </SecondaryText>
-        <SButton>
-          <Link to='/lore'>Learn more</Link>
-        </SButton>
+        <Link to='/lore'>
+          <SButton>Learn more</SButton>
+        </Link>
       </CardContainer>
     </>
   );
