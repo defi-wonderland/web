@@ -77,7 +77,7 @@ export const ProjectDescription = styled.div`
   width: 100%;
   font-family: ${FONT_MEDIUM};
   font-size: 2.2rem;
-  padding: 0 1.6rem 5rem;
+  padding: 0 2.4rem 5rem;
   color: white;
   -webkit-text-fill-color: white;
   opacity: 1;
@@ -95,7 +95,7 @@ export const ProjectDescription = styled.div`
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     flex-direction: column;
-    padding: 0;
+    padding: 0 1.6rem 1.6rem;
   }
 `;
 
@@ -144,11 +144,13 @@ export const Social = styled.div`
   align-items: center;
   justify-content: start;
   margin-top: 2rem;
+  margin-left: -0.5rem;
 `;
 
 export const MemberLink = styled(Link)`
   z-index: 1;
   transition: all 200ms linear;
+  margin-right: 0.8rem;
 `;
 
 export const SImg = styled.img`
