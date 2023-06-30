@@ -15,8 +15,7 @@ export const MEMBERS = [
   {
     name: 'Skeletor Spaceman',
     position: 'Co-founder & Architect',
-    description:
-      '- First contract deployed 2049 days ago (TODO: make this dynamic)\n- Likes breaking things\n\nFun fact: Never went to space',
+    description: `- First contract deployed ${calcSkeleDay()} days ago\n- Likes breaking things\n\nFun fact: Never went to space`,
   },
   {
     name: '0xGorilla',

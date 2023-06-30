@@ -46,8 +46,8 @@ export function WonderTeamSection() {
         {MEMBERS.map((member, index) => (
           <MemberContainer key={member.name}>
             {showDesc[index] && <Mask onClick={() => setShowDesc(hideDescriptions)} />}
-            <FlipCard onClick={() => handleClick(index)}>
-              <FlipCardInner className='flip-card-inner'>
+            <FlipCard onClick={() => handleClick(index)} flipped={showDesc[index]} index={index}>
+              <FlipCardInner className={`flip-card-inner flip-card-inner-${index}`}>
                 <CardFront className={`member member-${index} flip-card-front`}>
                   <div>
                     <Name>{member.name}</Name>
@@ -67,7 +67,7 @@ export function WonderTeamSection() {
                     )}
                   </Social> */}
 
-                  <EyeImage />
+                  <EyeImage flipped={showDesc[index]} />
                 </CardFront>
 
                 <CardBack key={member.name} className={`member member-${index} flip-card-back`}>
