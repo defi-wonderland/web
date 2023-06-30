@@ -337,6 +337,10 @@ export const EyeImage = styled(KeyImage).attrs({
   right: 1rem;
   z-index: 1;
   display: ${({ flipped }) => (flipped ? 'none' : 'unset')};
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    opacity: 1;
+  }
 `;
 
 export const MemberLink = styled(Link)`
