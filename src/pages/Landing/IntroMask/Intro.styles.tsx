@@ -117,6 +117,7 @@ export const Key = styled.img`
   position: relative;
   z-index: -1;
   width: 7rem;
+  pointer-events: none;
 `;
 
 export const Mask = styled.div<StyledContainerProps>`
