@@ -22,12 +22,12 @@ import {
   // Social,
   // SImg,
 } from './TeamGrid.styles';
-import { MEMBERS } from '~/constants/teamMembers';
+import { members } from '~/data/teamMembers.json';
 // import TwitterIcon from '/img/footer/twitter-icon.svg';
 // import GithubIcon from '/img/footer/github-icon.svg';
 
 export function WonderTeamSection() {
-  const hideDescriptions = new Array(MEMBERS.length).fill(false);
+  const hideDescriptions = new Array(members.length).fill(false);
   const [showDesc, setShowDesc] = useState(hideDescriptions);
 
   const handleClick = (index: number) => {
@@ -43,7 +43,7 @@ export function WonderTeamSection() {
         <Divider />
       </TitleContainer>
       <TeamGrid>
-        {MEMBERS.map((member, index) => (
+        {members.map((member, index) => (
           <MemberContainer key={member.name}>
             {showDesc[index] && <Mask onClick={() => setShowDesc(hideDescriptions)} />}
             <FlipCard onClick={() => handleClick(index)} flipped={showDesc[index]} index={index}>

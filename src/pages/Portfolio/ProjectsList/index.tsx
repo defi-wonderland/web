@@ -16,11 +16,20 @@ import {
   Social,
 } from './ProjectsList.styles';
 import circle from '~/assets/circle.svg';
-import { Project } from '~/constants/projects';
 import TwitterIcon from '/img/footer/twitter-icon.svg';
 import GithubIcon from '/img/footer/github-icon.svg';
 import WebIcon from '/img/footer/sphere.svg';
 import DocsIcon from '/img/footer/book.svg';
+
+export interface Project {
+  name: string;
+  description: string;
+  github?: string;
+  docs?: string;
+  twitter?: string;
+  web?: string;
+}
+
 interface ProjectListProps {
   projects: Project[];
 }

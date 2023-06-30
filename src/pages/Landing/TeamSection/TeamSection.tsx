@@ -13,7 +13,7 @@ import {
 } from './TeamSection.styles';
 import Crown from '~/assets/crown_icon.svg';
 import Key from '~/assets/key.png';
-import { MEMBERS } from '~/constants/teamMembers';
+import { members } from '~/data/teamMembers.json';
 
 export function Team() {
   return (
@@ -30,7 +30,7 @@ export function Team() {
             showIndicators={false}
             selectedItem={0}
           >
-            {MEMBERS.map((member) => (
+            {members.map((member) => (
               <NameContainer key={member.name}>
                 <Name>{member.name}</Name>
                 <Position>{member.position}</Position>

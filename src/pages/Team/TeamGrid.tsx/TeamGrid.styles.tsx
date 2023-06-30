@@ -3,7 +3,6 @@ import {
   FONT_DISPLAY,
   FONT_MEDIUM,
   FONT_MEDIUM_L,
-  FONT_SIZE_18,
   FONT_SIZE_24,
   Link,
   MOBILE_MAX_WIDTH,
@@ -12,7 +11,7 @@ import {
 } from '~/components/common';
 import KEY from '~/assets/join-key.svg';
 import EYE from '~/assets/eye.svg';
-import { MEMBERS } from '~/constants/teamMembers';
+import { members } from '~/data/teamMembers.json';
 
 export const Container = styled.div`
   width: 100%;
@@ -74,7 +73,7 @@ export const TeamGrid = styled.div`
 
   ${() => {
     let memberBorder = '';
-    for (let i = 0; i < MEMBERS.length; i++) {
+    for (let i = 0; i < members.length; i++) {
       if (!((i + 1) % 3)) {
         memberBorder += `
             & .member.member-${i} {
@@ -87,25 +86,25 @@ export const TeamGrid = styled.div`
   }}
 
   ${() => {
-    switch (MEMBERS.length % 3) {
+    switch (members.length % 3) {
       case 0:
         return `
-            & .member.member-${MEMBERS.length - 3},
-            & .member.member-${MEMBERS.length - 2},
-            & .member.member-${MEMBERS.length - 1} {
+            & .member.member-${members.length - 3},
+            & .member.member-${members.length - 2},
+            & .member.member-${members.length - 1} {
               border-bottom: unset;
             }
           `;
       case 1:
         return `
-            & .member.member-${MEMBERS.length - 1} {
+            & .member.member-${members.length - 1} {
               border-bottom: unset;
             }
           `;
       case 2:
         return `
-            & .member.member-${MEMBERS.length - 2},
-            & .member.member-${MEMBERS.length - 1} {
+            & .member.member-${members.length - 2},
+            & .member.member-${members.length - 1} {
               border-bottom: unset;
             }
           `;
@@ -122,7 +121,7 @@ export const TeamGrid = styled.div`
 
     ${() => {
       let memberBorder = '';
-      for (let i = 0; i < MEMBERS.length; i++) {
+      for (let i = 0; i < members.length; i++) {
         if (!(i % 2)) {
           memberBorder += `
             & .member.member-${i} {
@@ -135,20 +134,20 @@ export const TeamGrid = styled.div`
     }}
 
     ${() => {
-      switch (MEMBERS.length % 2) {
+      switch (members.length % 2) {
         case 0:
           return `
-            & .member.member-${MEMBERS.length - 2},
-            & .member.member-${MEMBERS.length - 1} {
+            & .member.member-${members.length - 2},
+            & .member.member-${members.length - 1} {
               border-bottom: unset !important;
             }
-            & .member.member-${MEMBERS.length - 1} {
+            & .member.member-${members.length - 1} {
               border-top: 1px solid rgba(255, 255, 255, 0.4);
             }
           `;
         case 1:
           return `
-            & .member.member-${MEMBERS.length - 1} {
+            & .member.member-${members.length - 1} {
               border-bottom: unset !important;
             }
           `;
