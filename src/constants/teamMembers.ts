@@ -139,7 +139,7 @@ export const MEMBERS = [
     description: 'TBD',
   },
   {
-    name: 'Drispunk',
+    name: 'Dristpunk',
     position: 'Developer',
     description: 'TBD',
   },
