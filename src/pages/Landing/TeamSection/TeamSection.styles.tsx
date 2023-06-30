@@ -189,6 +189,7 @@ export const NameContainer = styled.div`
 export const Name = styled.strong`
   font-family: ${FONT_MEDIUM_L};
   font-size: 2.4rem;
+  line-height: 1.3;
   text-transform: uppercase;
   z-index: 1;
 `;
