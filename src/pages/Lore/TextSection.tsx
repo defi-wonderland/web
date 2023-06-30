@@ -15,7 +15,8 @@ import {
 const LoreSectionArticle = styled(SectionArticle)``;
 
 const Section = styled(BaseSection)`
-  min-height: 60vh;
+  min-height: 70vh;
+
   @media screen and (max-width: 665px) {
     min-height: 80vh;
   }
