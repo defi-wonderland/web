@@ -10,7 +10,8 @@ export interface Project {
 export const PARTNER_PROJECTS: Project[] = [
   {
     name: 'OpOO (With Optimism)',
-    description: 'TODO',
+    description:
+      'Modular optimistic oracle solution, built alongside Optimism. Enables secure, permissionless delivery of real-world data and attestations.',
   },
   {
     name: 'HAI (With Reflexer)',
@@ -23,7 +24,7 @@ export const PARTNER_PROJECTS: Project[] = [
   {
     name: 'Optimistic Roots (With Connext)',
     description:
-      'Modular optimistic oracle solution, built alongside Optimism. Enables secure, permissionless delivery of real-world data and attestations.',
+      'The current canonical bridge implementations are quite expensive. This project aims to reduce costs and increase transfer speeds by implementing an Optimistic approach with cross-chain Merkle root aggregations.',
     github: 'https://github.com/connext',
     twitter: 'https://twitter.com/ConnextNetwork',
     web: 'https://www.connext.network/',
