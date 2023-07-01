@@ -11,7 +11,7 @@ import {
 } from '~/components/common';
 import KEY from '~/assets/join-key.svg';
 import EYE from '~/assets/eye.svg';
-import { members } from '~/data/teamMembers.json';
+import members from '~/data/team.json';
 
 export const Container = styled.div`
   width: 100%;

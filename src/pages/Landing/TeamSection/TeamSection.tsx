@@ -13,7 +13,7 @@ import {
 } from './TeamSection.styles';
 import Crown from '~/assets/crown_icon.svg';
 import Key from '~/assets/key.png';
-import { members } from '~/data/teamMembers.json';
+import members from '~/data/team.json';
 
 export function Team() {
   return (

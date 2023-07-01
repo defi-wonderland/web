@@ -15,7 +15,7 @@ import {
 } from './Portfolio.styles';
 import { ProjectsList } from './ProjectsList';
 import { Divider } from './ProjectsList/ProjectsList.styles';
-import { partner_projects, public_goods } from '~/data/projects.json';
+import { partnerProjects, publicGoods } from '~/data/projects.json';
 import VIDEO_CHROME from '~/assets/videos/portfolio.webm';
 import VIDEO_SAFARI from '~/assets/videos/portfolio.mp4';
 
@@ -45,7 +45,7 @@ export function Portfolio() {
         </TitleContainer>
         <ProjectsContainer>
           <Divider />
-          <ProjectsList projects={partner_projects} />
+          <ProjectsList projects={partnerProjects} />
         </ProjectsContainer>
 
         <TitleContainer>
@@ -53,7 +53,7 @@ export function Portfolio() {
         </TitleContainer>
         <ProjectsContainer>
           <Divider />
-          <ProjectsList projects={public_goods} />
+          <ProjectsList projects={publicGoods} />
         </ProjectsContainer>
       </Container>
     </>

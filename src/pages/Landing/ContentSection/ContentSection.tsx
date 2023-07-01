@@ -25,7 +25,7 @@ import MobileStar from '~/assets/lore-stars.svg';
 import Flower from '~/assets/flower.svg';
 import ConeBackground from '~/assets/landing_bg.png';
 import { Link } from '~/components/common';
-import { partner_projects } from '~/data/projects.json';
+import { partnerProjects } from '~/data/projects.json';
 
 export function ContentSection() {
   return (
@@ -59,7 +59,7 @@ export function ContentSection() {
       </Divider>
 
       <SecondBlockContainer>
-        <ProjectsList projects={partner_projects.slice(0, 3)} />
+        <ProjectsList projects={partnerProjects.slice(0, 3)} />
 
         <Link to='/portfolio'>
           <SButton>portfolio</SButton>

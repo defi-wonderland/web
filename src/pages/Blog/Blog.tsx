@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 
-import { posts } from '~/data/posts.json';
+import posts from '~/data/blog.json';
 import {
   PageContainer,
   Title,

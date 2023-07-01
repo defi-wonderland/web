@@ -22,7 +22,7 @@ import {
   // Social,
   // SImg,
 } from './TeamGrid.styles';
-import { members } from '~/data/teamMembers.json';
+import members from '~/data/team.json';
 // import TwitterIcon from '/img/footer/twitter-icon.svg';
 // import GithubIcon from '/img/footer/github-icon.svg';
 
