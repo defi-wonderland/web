@@ -23,8 +23,8 @@ const navLinks: NavLink[] = [
     disabled: false,
   },
   {
-    name: 'portfolio',
-    url: '/portfolio',
+    name: 'creations',
+    url: '/creations',
     disabled: false,
   },
   {

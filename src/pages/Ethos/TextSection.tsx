@@ -125,8 +125,8 @@ function TextSection() {
               <b>Our pledge is to stand by our partners, supporting them in every way we can.</b>
             </SecondaryText>
 
-            <Link to='/portfolio'>
-              <Button>Portfolio</Button>
+            <Link to='/creations'>
+              <Button>Creations</Button>
             </Link>
           </div>
         </LoreSectionArticle>

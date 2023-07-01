@@ -17,7 +17,7 @@ import {
   Star,
   TextContainer,
 } from './ContentSection.styles';
-import { ProjectsList } from '~/pages/Portfolio/ProjectsList';
+import { ProjectsList } from '~/pages/Creations/ProjectsList';
 import { RightCard } from './RightCard';
 import { Squad } from '../SquadSection';
 import StarIcon from '/img/footer/star-icon.svg';
@@ -61,8 +61,8 @@ export function ContentSection() {
       <SecondBlockContainer>
         <ProjectsList projects={partnerProjects.slice(0, 3)} />
 
-        <Link to='/portfolio'>
-          <SButton>portfolio</SButton>
+        <Link to='/creations'>
+          <SButton>creations</SButton>
         </Link>
 
         <Squad />
