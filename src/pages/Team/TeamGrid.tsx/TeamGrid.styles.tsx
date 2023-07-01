@@ -204,7 +204,7 @@ export const CardFront = styled.div`
 
   &:hover {
     background-image: radial-gradient(circle at 100% 0%, rgba(14, 21, 44, 0) 0%, rgba(14, 21, 44, 1) 85%),
-      url('/img/lore/002_grad.jpg');
+      url('/img/ethos/002_grad.jpg');
     background-size: cover;
     background-position: bottom;
   }
@@ -223,7 +223,7 @@ export const CardBack = styled(CardFront)`
   position: absolute;
   top: 0rem;
   background-image: radial-gradient(circle at 100% 0%, rgba(14, 21, 44, 0) 0%, rgba(14, 21, 44, 1) 85%),
-    url('/img/lore/002_grad.jpg');
+    url('/img/ethos/002_grad.jpg');
   background-size: cover;
   background-position: bottom;
   transform: rotateX(-180deg);

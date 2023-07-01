@@ -13,8 +13,8 @@ interface NavLink {
 
 const navLinks: NavLink[] = [
   {
-    name: 'lore',
-    url: '/lore',
+    name: 'ethos',
+    url: '/ethos',
     disabled: false,
   },
   {

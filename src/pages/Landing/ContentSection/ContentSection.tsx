@@ -21,7 +21,7 @@ import { ProjectsList } from '~/pages/Portfolio/ProjectsList';
 import { RightCard } from './RightCard';
 import { Team } from '../TeamSection';
 import StarIcon from '/img/footer/star-icon.svg';
-import MobileStar from '~/assets/lore-stars.svg';
+import MobileStar from '~/assets/ethos-stars.svg';
 import Flower from '~/assets/flower.svg';
 import ConeBackground from '~/assets/landing_bg.png';
 import { Link } from '~/components/common';
