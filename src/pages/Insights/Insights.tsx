@@ -15,9 +15,9 @@ import {
   Image,
   Tags,
   TitleContainer as PostTitle,
-} from './Blog.styles';
-import VIDEO_CHROME from '~/assets/videos/blog.webm';
-import VIDEO_SAFARI from '~/assets/videos/blog.mp4';
+} from './Insights.styles';
+import VIDEO_CHROME from '~/assets/videos/insights.webm';
+import VIDEO_SAFARI from '~/assets/videos/insights.mp4';
 import { TitleContainer } from '../Landing/HeroSection';
 import StarIcon from '/img/footer/star-icon.svg';
 import styled from 'styled-components';
@@ -33,7 +33,7 @@ export const Star = styled.img.attrs({ loading: 'lazy' })`
   pointer-events: none;
 `;
 
-export function Blog() {
+export function Insights() {
   const navigate = useNavigate();
 
   return (
@@ -55,7 +55,7 @@ export function Blog() {
             key={post.id}
             onClick={() =>
               navigate({
-                pathname: `/blog/${post.id}`,
+                pathname: `/insights/${post.id}`,
               })
             }
           >

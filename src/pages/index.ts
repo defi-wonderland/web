@@ -1,5 +1,5 @@
-export * from './Blog';
-export * from './Blog/Posts';
+export * from './Insights';
+export * from './Insights/Posts';
 export * from './Landing';
 export * from './Ethos';
 export * from './Creations';
