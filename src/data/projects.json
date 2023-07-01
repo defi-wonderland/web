@@ -1,5 +1,5 @@
 {
-  "partner_projects": [
+  "partnerProjects": [
     {
       "name": "OpOO (with Optimism)",
       "description": "Modular optimistic oracle solution, built alongside Optimism. Enables secure, permissionless delivery of real-world data and attestations."
@@ -48,7 +48,7 @@
       "github": "https://github.com/sudoswap/lssvm/pull/35"
     }
   ],
-  "public_goods": [
+  "publicGoods": [
     {
       "name": "Price Oracle",
       "description": "Price is a permissionless and reliable oracle solution that provides safe token price quotes by leveraging Uniswap V3 and automation. The team was responsible for the architecture and tokenomics design, UI, off-chain scripts, and smart contract development.",

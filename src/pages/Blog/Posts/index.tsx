@@ -7,7 +7,7 @@ import ReactMarkdown from 'react-markdown';
 import { CSSTransition } from 'react-transition-group';
 
 import { Background, Title, Date, Content, BackgroundImage } from './Posts.styles';
-import { posts } from '~/data/posts.json';
+import { posts } from '~/data/blog.json';
 
 export function Posts() {
   const { id } = useParams();
