@@ -18,8 +18,8 @@ const navLinks: NavLink[] = [
     disabled: false,
   },
   {
-    name: 'team',
-    url: '/team',
+    name: 'squad',
+    url: '/squad',
     disabled: false,
   },
   {

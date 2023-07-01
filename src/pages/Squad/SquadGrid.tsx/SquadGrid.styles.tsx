@@ -11,7 +11,7 @@ import {
 } from '~/components/common';
 import KEY from '~/assets/join-key.svg';
 import EYE from '~/assets/eye.svg';
-import members from '~/data/team.json';
+import members from '~/data/squad.json';
 
 export const Container = styled.div`
   width: 100%;
@@ -59,7 +59,7 @@ export const WonderTitle = styled.h1`
   }
 `;
 
-export const TeamGrid = styled.div`
+export const SquadGrid = styled.div`
   display: grid;
   max-width: 140rem;
   margin: 100px auto;

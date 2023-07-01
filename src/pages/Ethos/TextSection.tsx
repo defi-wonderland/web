@@ -102,8 +102,8 @@ function TextSection() {
               something in common though, we all love building cool sh*t.
             </SecondaryText>
 
-            <Link to='/team'>
-              <Button>Meet the team</Button>
+            <Link to='/squad'>
+              <Button>Meet the squad</Button>
             </Link>
           </div>
         </FirstLoreSectionArticle>

@@ -19,7 +19,7 @@ import {
 } from './ContentSection.styles';
 import { ProjectsList } from '~/pages/Portfolio/ProjectsList';
 import { RightCard } from './RightCard';
-import { Team } from '../TeamSection';
+import { Squad } from '../SquadSection';
 import StarIcon from '/img/footer/star-icon.svg';
 import MobileStar from '~/assets/ethos-stars.svg';
 import Flower from '~/assets/flower.svg';
@@ -65,7 +65,7 @@ export function ContentSection() {
           <SButton>portfolio</SButton>
         </Link>
 
-        <Team />
+        <Squad />
       </SecondBlockContainer>
 
       <Icon src={Flower} />
@@ -73,8 +73,8 @@ export function ContentSection() {
         <div>
           <Icon src={Flower} />
         </div>
-        <Link to='/team'>
-          <CommunityButton>Meet the team</CommunityButton>
+        <Link to='/squad'>
+          <CommunityButton>Meet the squad</CommunityButton>
         </Link>
       </SecondTitle>
     </LandingContainer>

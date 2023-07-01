@@ -7,7 +7,7 @@ import {
   CardBack,
   Name,
   Position,
-  TeamGrid,
+  SquadGrid,
   TitleContainer,
   WonderTitle,
   JoinContainer,
@@ -21,12 +21,12 @@ import {
   // MemberLink,
   // Social,
   // SImg,
-} from './TeamGrid.styles';
-import members from '~/data/team.json';
+} from './SquadGrid.styles';
+import members from '~/data/squad.json';
 // import TwitterIcon from '/img/footer/twitter-icon.svg';
 // import GithubIcon from '/img/footer/github-icon.svg';
 
-export function WonderTeamSection() {
+export function SquadSection() {
   const hideDescriptions = new Array(members.length).fill(false);
   const [showDesc, setShowDesc] = useState(hideDescriptions);
 
@@ -42,7 +42,7 @@ export function WonderTeamSection() {
         <WonderTitle>We&apos;re all mad here</WonderTitle>
         <Divider />
       </TitleContainer>
-      <TeamGrid>
+      <SquadGrid>
         {members.map((member, index) => (
           <MemberContainer key={member.name}>
             {showDesc[index] && <Mask onClick={() => setShowDesc(hideDescriptions)} />}
@@ -84,7 +84,7 @@ export function WonderTeamSection() {
           <Name className='gradient'>JOIN US</Name>
           <KeyImage />
         </JoinContainer>
-      </TeamGrid>
+      </SquadGrid>
     </Container>
   );
 }

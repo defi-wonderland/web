@@ -10,12 +10,12 @@ import {
   Position,
   TeamContainer,
   TeamTitle,
-} from './TeamSection.styles';
+} from './SquadSection.styles';
 import Crown from '~/assets/crown_icon.svg';
 import Key from '~/assets/key.png';
-import members from '~/data/team.json';
+import members from '~/data/squad.json';
 
-export function Team() {
+export function Squad() {
   return (
     <>
       <TeamContainer>
