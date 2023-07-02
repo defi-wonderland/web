@@ -1,7 +1,6 @@
 @font-face {
   font-family: SFProText;
-  src: local(SFProText-Semibold),
-    url(/src/assets/themes/dark/fonts/SFProText-Semibold.ttf) format("truetype");
+  src: local(SFProText-Semibold), url(/src/assets/themes/dark/fonts/SFProText-Semibold.ttf) format('truetype');
   font-weight: 600;
   font-style: normal;
   font-stretch: normal;
@@ -10,24 +9,37 @@
 @font-face {
   font-family: SharpGrotesk-10;
   src: local(SharpGrotesk-LightItalic10),
-    url(/src/assets/themes/dark/fonts/SharpGrotesk-LightItalic10.otf) format("opentype");
+    url(/src/assets/themes/dark/fonts/SharpGrotesk-LightItalic10.otf) format('opentype');
   font-weight: 300;
-  font-style: italic;
+  font-style: normal;
   font-stretch: normal;
 }
+
 @font-face {
   font-family: SharpGrotesk-15;
-  src: local(SharpGrotesk-Light15),
-    url(/src/assets/themes/dark/fonts/SharpGrotesk-Light15.otf) format("opentype");
+  src: local(SharpGrotesk-Light15), url(/src/assets/themes/dark/fonts/SharpGrotesk-Light15.otf) format('opentype');
   font-weight: 500;
   font-style: normal;
   font-stretch: normal;
 }
+
 @font-face {
   font-family: SharpGrotesk-25;
-  src: local(SharpGrotesk-Medium25),
-    url(/src/assets/themes/dark/fonts/SharpGrotesk-Medium25.otf) format("opentype");
+  src: local(SharpGrotesk-Medium25), url(/src/assets/themes/dark/fonts/SharpGrotesk-Medium25.otf) format('opentype');
   font-weight: 500;
   font-style: normal;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: Inter-italic;
+  src: local(Inter-Italic), url(/src/assets/themes/dark/fonts/Inter-Italic.woff2) format('opentype');
+  font-weight: 500;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: Inter;
+  src: local(Inter), url(/src/assets/themes/dark/fonts/Inter.ttf) format('opentype');
   font-stretch: normal;
 }

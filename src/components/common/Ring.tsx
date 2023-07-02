@@ -1,5 +1,7 @@
-import { FC } from "react";
-import styled from "styled-components";
+import { FC } from 'react';
+import styled from 'styled-components';
+
+import { RING_A_INDEX, RING_B_INDEX, SPACING_320 } from './Variables';
 
 const StyledRing = styled.div`
   display: flex;
@@ -7,32 +9,34 @@ const StyledRing = styled.div`
   justify-content: center;
   position: relative;
   user-select: none;
-  width: 32rem;
+  width: ${SPACING_320};
   max-width: calc(100% - var(--page-padding));
 
   img {
     width: 100%;
 
     &:first-child {
-      z-index: var(--ring-a-index);
+      z-index: ${RING_B_INDEX};
     }
 
     &:last-child {
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: var(--ring-b-index);
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: ${RING_A_INDEX};
+    }
   }
 `;
 
 export interface RingProps {
-  type: "1" | "2";
+  type: '1' | '2';
 }
+
 export const Ring: FC<RingProps> = ({ type, ...props }) => {
   return (
     <StyledRing {...props}>
-      <img src={`/img/ring/${type}-a.png`} alt="Ring part" />
-      <img src={`/img/ring/${type}-b.png`} alt="Ring part" />
+      <img src={`/img/ring/${type}-a.png`} alt='' loading='lazy' />
+      <img src={`/img/ring/${type}-b.png`} alt='' />
     </StyledRing>
   );
 };

@@ -1,0 +1,103 @@
+import { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
+
+import { LogoContainer, MenuButton, NavLink, NavLinkContainer, StyledNavbar, WonderLogo } from './Navbar.styles';
+import wonderLogo from '/img/wonder-logo.svg';
+import menuIcon from '~/assets/menu_icon.svg';
+
+interface NavLink {
+  name: string;
+  url: string;
+  disabled?: boolean;
+}
+
+const navLinks: NavLink[] = [
+  {
+    name: 'ethos',
+    url: '/ethos',
+    disabled: false,
+  },
+  {
+    name: 'squad',
+    url: '/squad',
+    disabled: false,
+  },
+  {
+    name: 'creations',
+    url: '/creations',
+    disabled: false,
+  },
+  {
+    name: 'insights',
+    url: '/insights',
+    disabled: false,
+  },
+];
+
+interface NavbarProps {
+  className?: string;
+}
+
+export const Navbar = ({ className }: NavbarProps) => {
+  const [showNavbar, setShowNavbar] = useState(false);
+  const [navLink, setNavLink] = useState(navLinks);
+  const { pathname } = useLocation();
+
+  const resetValues = () => {
+    // reset values
+    const newNavLink = navLink.map((link) => ({
+      name: link.name,
+      url: link.url,
+      disabled: false,
+    }));
+
+    return newNavLink;
+  };
+
+  useEffect(() => {
+    const newNavLink = resetValues();
+    let index: number | undefined;
+
+    newNavLink.forEach((link, i) => {
+      if (link.url === pathname) {
+        index = i;
+      }
+    });
+
+    if (index !== undefined) newNavLink[index].disabled = true;
+    setShowNavbar(false);
+    setNavLink(newNavLink);
+  }, [pathname]);
+
+  return (
+    <StyledNavbar id={showNavbar ? 'show' : ''} className={className}>
+      <LogoContainer>
+        <WonderLogo
+          to='/landing'
+          onClick={() => {
+            setNavLink(resetValues());
+          }}
+        >
+          <img src={wonderLogo} alt='Wonderland logo' />
+        </WonderLogo>
+        <MenuButton onClick={() => setShowNavbar(!showNavbar)}>
+          <img src={menuIcon} alt='menu icon' id='menu-icon' />
+        </MenuButton>
+      </LogoContainer>
+
+      {navLink.map((link, i) => (
+        <NavLinkContainer order={i + 1} key={link.name + i}>
+          <NavLink
+            id={showNavbar ? '' : 'hide'}
+            to={link.url}
+            key={link.name}
+            disabled={link.disabled && !pathname.includes('/insights/')}
+            className={link.disabled ? 'gradient' : ''}
+          >
+            {link.name}
+          </NavLink>
+        </NavLinkContainer>
+      ))}
+    </StyledNavbar>
+  );
+};
