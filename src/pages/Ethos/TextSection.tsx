@@ -1,7 +1,7 @@
-import { Link } from 'react-router-dom';
 import styled, { css } from 'styled-components';
 
 import {
+  Link,
   Button,
   FONT_SIZE_18,
   MOBILE_MAX_WIDTH,
@@ -144,7 +144,7 @@ function TextSection() {
             </SecondaryText>
 
             <SecondaryText>Long term, long term, long term…</SecondaryText>
-            <Link to='/contact'>
+            <Link to='https://docs.google.com/forms/d/1n70jsL4sFkOwPNBTdciPqlWF2RirgQwejjztpS4-2L8/viewform' external>
               <Button>Join us</Button>
             </Link>
           </div>
