@@ -7,8 +7,8 @@ import TextSection from './TextSection';
 import Cone from '~/assets/cone.png';
 import HoopTop from '~/assets/hoop-top.png';
 import HoopBottom from '~/assets/hoop-bottom.png';
-import VIDEO_CHROME from '~/assets/videos/lore.webm';
-import VIDEO_SAFARI from '~/assets/videos/lore.mp4';
+import VIDEO_CHROME from '~/assets/videos/ethos.webm';
+import VIDEO_SAFARI from '~/assets/videos/ethos.mp4';
 import { TitleContainer } from '../Landing/HeroSection';
 
 const StyledApproachSection = styled(ApproachSection)`
@@ -77,7 +77,7 @@ const STitleContainer = styled(TitleContainer)`
   }
 `;
 
-export function Lore() {
+export function Ethos() {
   return (
     <PageContent>
       <HeroDivider>

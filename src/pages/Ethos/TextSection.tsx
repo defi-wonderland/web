@@ -1,7 +1,7 @@
-import { Link } from 'react-router-dom';
 import styled, { css } from 'styled-components';
 
 import {
+  Link,
   Button,
   FONT_SIZE_18,
   MOBILE_MAX_WIDTH,
@@ -102,8 +102,8 @@ function TextSection() {
               something in common though, we all love building cool sh*t.
             </SecondaryText>
 
-            <Link to='/team'>
-              <Button>Meet the team</Button>
+            <Link to='/squad'>
+              <Button>Meet the squad</Button>
             </Link>
           </div>
         </FirstLoreSectionArticle>
@@ -125,8 +125,8 @@ function TextSection() {
               <b>Our pledge is to stand by our partners, supporting them in every way we can.</b>
             </SecondaryText>
 
-            <Link to='/portfolio'>
-              <Button>Portfolio</Button>
+            <Link to='/creations'>
+              <Button>Creations</Button>
             </Link>
           </div>
         </LoreSectionArticle>
@@ -144,7 +144,7 @@ function TextSection() {
             </SecondaryText>
 
             <SecondaryText>Long term, long term, long term…</SecondaryText>
-            <Link to='/contact'>
+            <Link to='https://docs.google.com/forms/d/1n70jsL4sFkOwPNBTdciPqlWF2RirgQwejjztpS4-2L8/viewform' external>
               <Button>Join us</Button>
             </Link>
           </div>

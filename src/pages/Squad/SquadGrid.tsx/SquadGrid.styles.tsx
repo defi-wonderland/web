@@ -11,7 +11,7 @@ import {
 } from '~/components/common';
 import KEY from '~/assets/join-key.svg';
 import EYE from '~/assets/eye.svg';
-import members from '~/data/team.json';
+import members from '~/data/squad.json';
 
 export const Container = styled.div`
   width: 100%;
@@ -59,7 +59,7 @@ export const WonderTitle = styled.h1`
   }
 `;
 
-export const TeamGrid = styled.div`
+export const SquadGrid = styled.div`
   display: grid;
   max-width: 140rem;
   margin: 100px auto;
@@ -204,7 +204,7 @@ export const CardFront = styled.div`
 
   &:hover {
     background-image: radial-gradient(circle at 100% 0%, rgba(14, 21, 44, 0) 0%, rgba(14, 21, 44, 1) 85%),
-      url('/img/lore/002_grad.jpg');
+      url('/img/ethos/002_grad.jpg');
     background-size: cover;
     background-position: bottom;
   }
@@ -223,7 +223,7 @@ export const CardBack = styled(CardFront)`
   position: absolute;
   top: 0rem;
   background-image: radial-gradient(circle at 100% 0%, rgba(14, 21, 44, 0) 0%, rgba(14, 21, 44, 1) 85%),
-    url('/img/lore/002_grad.jpg');
+    url('/img/ethos/002_grad.jpg');
   background-size: cover;
   background-position: bottom;
   transform: rotateX(-180deg);

@@ -17,11 +17,11 @@ import {
   Star,
   TextContainer,
 } from './ContentSection.styles';
-import { ProjectsList } from '~/pages/Portfolio/ProjectsList';
+import { ProjectsList } from '~/pages/Creations/ProjectsList';
 import { RightCard } from './RightCard';
-import { Team } from '../TeamSection';
+import { Squad } from '../SquadSection';
 import StarIcon from '/img/footer/star-icon.svg';
-import MobileStar from '~/assets/lore-stars.svg';
+import MobileStar from '~/assets/ethos-stars.svg';
 import Flower from '~/assets/flower.svg';
 import ConeBackground from '~/assets/landing_bg.png';
 import { Link } from '~/components/common';
@@ -61,11 +61,11 @@ export function ContentSection() {
       <SecondBlockContainer>
         <ProjectsList projects={partnerProjects.slice(0, 3)} />
 
-        <Link to='/portfolio'>
-          <SButton>portfolio</SButton>
+        <Link to='/creations'>
+          <SButton>creations</SButton>
         </Link>
 
-        <Team />
+        <Squad />
       </SecondBlockContainer>
 
       <Icon src={Flower} />
@@ -73,8 +73,8 @@ export function ContentSection() {
         <div>
           <Icon src={Flower} />
         </div>
-        <Link to='/team'>
-          <CommunityButton>Meet the team</CommunityButton>
+        <Link to='/squad'>
+          <CommunityButton>Meet the squad</CommunityButton>
         </Link>
       </SecondTitle>
     </LandingContainer>

@@ -12,14 +12,14 @@ import {
   Ball_2,
   Ball_3,
   TitleVideo,
-} from './Portfolio.styles';
+} from './Creations.styles';
 import { ProjectsList } from './ProjectsList';
 import { Divider } from './ProjectsList/ProjectsList.styles';
 import { partnerProjects, publicGoods } from '~/data/projects.json';
-import VIDEO_CHROME from '~/assets/videos/portfolio.webm';
-import VIDEO_SAFARI from '~/assets/videos/portfolio.mp4';
+import VIDEO_CHROME from '~/assets/videos/creations.webm';
+import VIDEO_SAFARI from '~/assets/videos/creations.mp4';
 
-export function Portfolio() {
+export function Creations() {
   return (
     <>
       <Container>

@@ -13,23 +13,23 @@ interface NavLink {
 
 const navLinks: NavLink[] = [
   {
-    name: 'lore',
-    url: '/lore',
+    name: 'ethos',
+    url: '/ethos',
     disabled: false,
   },
   {
-    name: 'team',
-    url: '/team',
+    name: 'squad',
+    url: '/squad',
     disabled: false,
   },
   {
-    name: 'portfolio',
-    url: '/portfolio',
+    name: 'creations',
+    url: '/creations',
     disabled: false,
   },
   {
-    name: 'blog',
-    url: '/blog',
+    name: 'insights',
+    url: '/insights',
     disabled: false,
   },
 ];
@@ -91,7 +91,7 @@ export const Navbar = ({ className }: NavbarProps) => {
             id={showNavbar ? '' : 'hide'}
             to={link.url}
             key={link.name}
-            disabled={link.disabled && !pathname.includes('/blog/')}
+            disabled={link.disabled && !pathname.includes('/insights/')}
             className={link.disabled ? 'gradient' : ''}
           >
             {link.name}

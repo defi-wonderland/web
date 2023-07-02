@@ -9,7 +9,7 @@ import {
   MOBILE_MAX_WIDTH,
   SPACING_530,
 } from '~/components/common';
-import STAR from '~/assets/lore-stars.svg';
+import STAR from '~/assets/ethos-stars.svg';
 
 export const TextContainer = styled.p`
   color: inherit;
