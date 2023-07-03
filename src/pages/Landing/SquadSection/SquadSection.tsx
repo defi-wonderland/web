@@ -31,7 +31,10 @@ export function Squad() {
             showThumbs={false}
             showIndicators={false}
             selectedItem={selectedItem}
-            onClickItem={(index: any) => {
+            onClickItem={(index: number) => {
+              setSelectedItem(index);
+            }}
+            onChange={(index: number) => {
               setSelectedItem(index);
             }}
           >

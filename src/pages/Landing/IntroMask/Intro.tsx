@@ -38,7 +38,7 @@ export function Intro({ showBackground, setShowBackground, ...props }: IntroProp
       // wait until animation is done to navigate to landing
       setTimeout(() => {
         navigate('/landing');
-      }, 1000);
+      }, 1400);
     }
   }, [activateDragEffect]);
 
