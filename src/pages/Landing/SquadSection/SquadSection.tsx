@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 import {
@@ -16,6 +17,7 @@ import Key from '~/assets/key.png';
 import members from '~/data/squad.json';
 
 export function Squad() {
+  const [selectedItem, setSelectedItem] = useState(0);
   return (
     <>
       <TeamContainer>
@@ -28,7 +30,10 @@ export function Squad() {
             showStatus={false}
             showThumbs={false}
             showIndicators={false}
-            selectedItem={0}
+            selectedItem={selectedItem}
+            onClickItem={(index: any) => {
+              setSelectedItem(index);
+            }}
           >
             {members.map((member) => (
               <NameContainer key={member.name}>
