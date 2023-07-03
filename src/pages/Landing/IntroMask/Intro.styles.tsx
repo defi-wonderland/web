@@ -14,7 +14,7 @@ export const IntroContainer = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   justify-content: space-between;
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
@@ -84,6 +84,7 @@ export const Text = styled.span<StyledContainerProps>`
   user-select: none;
   opacity: ${(props) => 1 - props.backgroundEffect * 3};
   z-index: 100;
+  text-align: center;
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     font-size: 2rem;
