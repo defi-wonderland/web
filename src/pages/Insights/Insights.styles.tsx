@@ -56,6 +56,7 @@ export const BlogsContainer = styled.div`
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     justify-content: center;
+    width: 100%;
   }
 `;
 
@@ -78,7 +79,7 @@ export const BlogPost = styled.div`
   }
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
-    width: calc(100% - 3rem);
+    width: 95vw;
   }
 `;
 
@@ -89,7 +90,8 @@ export const Image = styled.img`
   min-height: 31rem;
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
-    height: 65%;
+    min-height: unset;
+    height: 55%;
   }
 `;
 
@@ -127,11 +129,13 @@ export const TitleContainer = styled.div`
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     padding: 1.6rem;
+    gap: 1rem;
 
     & h1 {
       white-space: unset;
       text-overflow: unset;
       overflow: unset;
+      font-size: 1.8rem;
     }
   }
 `;
@@ -148,6 +152,10 @@ export const DescriptionContainer = styled.div`
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     padding: 2rem 2rem 0;
+
+    & p {
+      font-size: 1.8rem;
+    }
   }
 `;
 
@@ -163,6 +171,10 @@ export const TagsContainer = styled.div`
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     padding: 1.6rem 2rem;
+
+    & div strong {
+      font-size: 1.8rem;
+    }
   }
 `;
 

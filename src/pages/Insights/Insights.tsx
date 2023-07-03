@@ -19,12 +19,20 @@ import {
 import VIDEO_CHROME from '~/assets/videos/insights.webm';
 import VIDEO_SAFARI from '~/assets/videos/insights.mp4';
 import { TitleContainer } from '../Landing/HeroSection';
+import { MOBILE_MAX_WIDTH } from '~/components/common';
 import StarIcon from '/img/footer/star-icon.svg';
 import styled from 'styled-components';
 
 const BlogTitleContainer = styled(TitleContainer)`
   & video {
     max-width: 450px;
+  }
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    padding-top: 5rem;
+    & video {
+      max-width: 300px;
+    }
   }
 `;
 
