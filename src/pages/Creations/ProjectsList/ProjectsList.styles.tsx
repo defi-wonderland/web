@@ -53,9 +53,11 @@ export const Name = styled.strong`
   z-index: -1;
   color: white;
   text-align: start;
+  padding-right: 2rem;
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     padding-left: 1.6rem;
+    padding-right: 1rem;
   }
 `;
 
