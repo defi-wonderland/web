@@ -39,11 +39,11 @@ export function ProjectsList({ projects }: ProjectListProps) {
 
   const handleClick = (project: Project, target: Element) => {
     if (!projectMap[project.name]) {
-      target.classList.add('active');
-      target.classList.add('gradient');
+      target.parentElement?.classList.add('active');
+      target.parentElement?.classList.add('gradient');
     } else {
-      target.classList.remove('active');
-      target.classList.remove('gradient');
+      target.parentElement?.classList.remove('active');
+      target.parentElement?.classList.remove('gradient');
     }
 
     projectMap[project.name] = !projectMap[project.name];
@@ -53,13 +53,12 @@ export function ProjectsList({ projects }: ProjectListProps) {
   return (
     <List>
       {projects.map((project) => (
-        <ProjectContainer
-          key={project.name}
-          onClick={(e) => {
-            handleClick(project, e.currentTarget);
-          }}
-        >
-          <ProjectHeader>
+        <ProjectContainer key={project.name}>
+          <ProjectHeader
+            onClick={(e) => {
+              handleClick(project, e.currentTarget);
+            }}
+          >
             <Name>{project.name}</Name>
             <Circle src={circle} alt='circle icon' />
             <HLine />
