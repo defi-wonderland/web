@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route, HashRouter } from 'react-router-dom';
 
 import { PageView } from '~/components/app';
 import ScrollToTop from './hooks/ScrollToTop';
@@ -7,7 +7,7 @@ import { Landing, Squad, Home, Ethos, Creations, Insights, IntroductionPage, Pos
 function App() {
   return (
     <PageView>
-      <BrowserRouter>
+      <HashRouter>
         <ScrollToTop />
         <Routes>
           <Route path='/' element={<IntroductionPage />} />
@@ -20,7 +20,7 @@ function App() {
             <Route path='insights/:id' element={<Posts />} />
           </Route>
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </PageView>
   );
 }
