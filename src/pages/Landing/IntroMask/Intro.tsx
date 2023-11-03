@@ -29,18 +29,10 @@ export function Intro({ showBackground, setShowBackground, ...props }: IntroProp
   const [activateDragEffect, setDragEffect] = useState(false);
   const [backgroundEffect, setBackgroundEffect] = useState(0);
   const nodeRef = useRef(null);
-  const navigate = useNavigate();
 
   useEffect(() => {
-    if (activateDragEffect) {
-      setShowBackground(true);
-
-      // wait until animation is done to navigate to landing
-      setTimeout(() => {
-        navigate('/landing');
-      }, 1400);
-    }
-  }, [activateDragEffect]);
+    if (activateDragEffect) setShowBackground(true);
+  }, [activateDragEffect, setShowBackground]);
 
   return (
     <IntroContainer className={showBackground ? 'hide-intro' : ''} {...props}>
