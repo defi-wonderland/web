@@ -5,6 +5,7 @@ import { Footer, Navbar, StarsBackground } from '~/containers';
 import { Landing } from './Landing';
 import { Intro } from './IntroMask/Intro';
 import { MOBILE_MAX_WIDTH } from '~/components/common';
+import { useStateContext } from '~/hooks/useStateContext';
 
 export interface StyledContainerProps {
   showBackground: boolean;
@@ -20,19 +21,19 @@ const LandingContainer = styled.div<StyledContainerProps>`
 `;
 
 export function IntroductionPage() {
-  const [showBackground, setShowBackground] = useState(false);
+  const { isIntroLoaded, setIsIntroLoaded } = useStateContext();
   const [isLoaded, setIsLoaded] = useState(false);
 
   return (
     <>
       {isLoaded && (
         <>
-          <StarsBackground zIndex={showBackground ? 0 : 10} />
-          <Navbar className={`fade-enter${showBackground ? '-active' : ''}`} />
-          <LandingContainer showBackground={showBackground}>
+          <StarsBackground zIndex={isIntroLoaded ? 0 : 10} />
+          <Navbar className={`fade-enter${isIntroLoaded ? '-active' : ''}`} />
+          <LandingContainer showBackground={isIntroLoaded}>
             <Landing />
           </LandingContainer>
-          {showBackground && <Footer />}
+          {isIntroLoaded && <Footer />}
         </>
       )}
       <Intro
@@ -40,8 +41,8 @@ export function IntroductionPage() {
           const image = (e.target as HTMLImageElement).src;
           image.includes('key_shape') && setIsLoaded(true);
         }}
-        showBackground={showBackground}
-        setShowBackground={setShowBackground}
+        showBackground={isIntroLoaded}
+        setShowBackground={setIsIntroLoaded}
       />
     </>
   );
