@@ -55,6 +55,7 @@ export const Content = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0 3rem;
   }
 
   .ytplayer {
@@ -190,7 +191,7 @@ export const Content = styled.div`
       width: 350px;
       transform: scale(0.9);
       overflow-y: hidden;
-      overflow-x: scroll;
+      overflow-x: auto;
     }
 
     .math {
@@ -198,7 +199,7 @@ export const Content = styled.div`
       width: 90vw;
       height: 100%;
       overflow-y: hidden;
-      overflow-x: scroll;
+      overflow-x: auto;
     }
   }
 `;
