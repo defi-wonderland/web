@@ -1,4 +1,4 @@
-Authors: [Skeletor Spaceman,](https://twitter.com/Skeletor_Space) [parti](https://twitter.com/0xParticle)
+Authors: [Parti](https://twitter.com/0xParticle), [Skeletor Spaceman](https://twitter.com/Skeletor_Space)
 
 ## Goal
 
