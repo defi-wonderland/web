@@ -1,8 +1,8 @@
-# Goal
+## Goal
 
 **This report aims to improve the safety and scalability of the SAFE liveness module. We will analyze different methods for on-chain storage proof verification and discuss concrete improvements for the module.**
 
-# The Liveness problem
+## The Liveness problem
 
 Let’s first recap the problem we are trying to solve with the Liveness Module. This context will be valuable for analyzing what each verification method can provide.
 
@@ -17,7 +17,7 @@ Moreover, as web3 moves towards a multichain future, the liveness problem become
 
 We are building the Liveness Module for SAFE to make liveness more efficient and scalable.
 
-# Current design
+## Current design
 
 We have first designed a functional PoC for the Liveness Module. You can find the design details on the [grant application](https://app.charmverse.io/safe-grants-program/page-19468196994649234) and [Figma](https://www.figma.com/file/3nxKWYucaDaDsKHyTmpyjC/Safe-Liveness?type=whiteboard&node-id=0%3A1&t=QY4SHW673zDAGVGw-1). One critical design choice was introducing a **Shared Proof** mechanism. We will briefly describe next what this mechanism is about.
 
@@ -54,7 +54,7 @@ Using Ethereum as the Home chain has an additional advantage: proof verification
 
 However, we expect to enable users to set their own Home Chain eventually. This would also mean that high gas costs become a problem. Here is where this research comes into play. The report will analyze different systems that can help make this verification process more efficient and scalable.
 
-# The EVM as the verifier
+## The EVM as the verifier
 
 ![DALL·E 2023-11-01 15.08.38 - Create a dark and epic illustration featuring Alice from Alice in Wonderland and Bob, depicted as a medieval knight. In this mystical forest setting, .png](https://defi-wonderland.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F7683bccd-1174-4689-a817-b27fd9d7ef00%2F753d0eff-efac-4892-9130-b99a1ce74e7e%2FDALLE_2023-11-01_15.08.38_-_Create_a_dark_and_epic_illustration_featuring_Alice_from_Alice_in_Wonderland_and_Bob_depicted_as_a_medieval_knight._In_this_mystical_forest_setting_.png?table=block&id=b355fd22-12e6-4da6-8660-67b3fd20f428&spaceId=7683bccd-1174-4689-a817-b27fd9d7ef00&width=2000&userId=&cache=v2)
 
@@ -266,7 +266,7 @@ We might also explore options other than the storage mirror contract. An intrigu
 
 All of this sounds amazing, but it comes with a high degree of complexity. A major challenge is figuring out how to efficiently keep track of update executions. This means that the inbox contract on the Home Chain needs a way to tell the difference between different chains, which isn't easy to do in a way that can scale with the network.
 
-# Takeaways and improvements for the Module
+## Takeaways and improvements for the Module
 
 ![DALL·E 2023-11-01 15.59.36 - A high-resolution 4K image of Alice from Alice in Wonderland, placing the final piece onto her intricate clock-like machine, filled with cryptographic.png](https://defi-wonderland.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F7683bccd-1174-4689-a817-b27fd9d7ef00%2Ff8ecacf5-d864-4ed6-a959-6ed75892e15b%2FDALLE_2023-11-01_15.59.36_-_A_high-resolution_4K_image_of_Alice_from_Alice_in_Wonderland_placing_the_final_piece_onto_her_intricate_clock-like_machine_filled_with_cryptographic.png?table=block&id=af8580a2-9b39-4efd-95fe-e7094b005356&spaceId=7683bccd-1174-4689-a817-b27fd9d7ef00&width=2000&userId=&cache=v2)
 
