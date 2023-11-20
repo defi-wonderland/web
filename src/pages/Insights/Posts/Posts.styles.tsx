@@ -55,6 +55,7 @@ export const Content = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0 3rem;
   }
 
   .ytplayer {
@@ -136,6 +137,7 @@ export const Content = styled.div`
     font-weight: 375;
     border-bottom: 1px solid rgba(255, 255, 255, 0.87);
     transition: all 200ms linear;
+    cursor: pointer;
   }
 
   blockquote {
@@ -163,7 +165,6 @@ export const Content = styled.div`
       font-size: 3rem;
     }
 
-    p,
     h1,
     h2,
     h3,
@@ -190,15 +191,33 @@ export const Content = styled.div`
       width: 350px;
       transform: scale(0.9);
       overflow-y: hidden;
-      overflow-x: scroll;
+      overflow-x: auto;
     }
 
-    .math {
-      display: block;
-      width: 90vw;
+    .math .math-inline {
+      max-width: 80vw;
       height: 100%;
+      width: 100%;
       overflow-y: hidden;
-      overflow-x: scroll;
+      overflow-x: auto;
+    }
+
+    p {
+      max-width: 100vw;
+      padding: 0 1.8rem;
+    }
+
+    li {
+      max-width: 90vw;
+    }
+
+    mrow {
+      max-width: 90vw;
+      overflow-x: auto;
+    }
+
+    aside {
+      padding: 0 2.2rem;
     }
   }
 `;
