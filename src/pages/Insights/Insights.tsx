@@ -5,7 +5,7 @@ import {
   PageContainer,
   Title,
   BgContainer,
-  TagsContainer,
+  BlogFooter,
   DescriptionContainer,
   DetailsContainer,
   BlogPost,
@@ -13,8 +13,9 @@ import {
   BackgroundImage,
   BlogsContainer,
   Image,
-  Tags,
+  Tag,
   TitleContainer as PostTitle,
+  TagsContainer,
 } from './Insights.styles';
 import VIDEO_CHROME from '~/assets/videos/insights.webm';
 import VIDEO_SAFARI from '~/assets/videos/insights.mp4';
@@ -77,16 +78,18 @@ export function Insights() {
               <DescriptionContainer>
                 <p>{post.description}</p>
               </DescriptionContainer>
-              <TagsContainer>
+              <BlogFooter>
                 <Date>
                   <p>{post.date}</p>
                 </Date>
-                {post.tags.map((tag) => (
-                  <Tags key={tag}>
-                    <strong>{tag}</strong>
-                  </Tags>
-                ))}
-              </TagsContainer>
+                <TagsContainer>
+                  {post.tags.map((tag) => (
+                    <Tag key={tag}>
+                      <strong>{tag}</strong>
+                    </Tag>
+                  ))}
+                </TagsContainer>
+              </BlogFooter>
             </DetailsContainer>
           </BlogPost>
         ))}
