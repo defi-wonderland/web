@@ -57,6 +57,10 @@ export const BlogsContainer = styled.div`
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     justify-content: center;
     width: 100%;
+
+    & img {
+      max-height: 27rem;
+    }
   }
 `;
 
@@ -162,7 +166,6 @@ export const DescriptionContainer = styled.div`
 export const TagsContainer = styled.div`
   padding-top: 1.5rem;
   color: white;
-  /* border-top: 1px solid rgba(255, 255, 255, 0.1); */
   width: 100%;
   display: flex;
   justify-content: space-between;

@@ -164,7 +164,6 @@ export const Content = styled.div`
       font-size: 3rem;
     }
 
-    p,
     h1,
     h2,
     h3,
@@ -194,12 +193,30 @@ export const Content = styled.div`
       overflow-x: auto;
     }
 
-    .math {
-      display: block;
-      width: 90vw;
+    .math .math-inline {
+      max-width: 80vw;
       height: 100%;
+      width: 100%;
       overflow-y: hidden;
       overflow-x: auto;
+    }
+
+    p {
+      max-width: 100vw;
+      padding: 0 1.8rem;
+    }
+
+    li {
+      max-width: 90vw;
+    }
+
+    mrow {
+      max-width: 90vw;
+      overflow-x: auto;
+    }
+
+    aside {
+      padding: 0 2.2rem;
     }
   }
 `;

@@ -155,7 +155,7 @@ Storage proofs are only a particular use case for SNARKs, where a proof is craft
 
 There are many types of SNARK implementations, each with its corresponding costs. Some popular implementations in the EVM context are [Plonky2](https://github.com/0xPolygonZero/plonky2/blob/main/plonky2/plonky2.pdf) (which combines PLONK with FRI into a super efficient recursive SNARK) and [UltraPLONK](https://hackmd.io/Iuu9P7S5Sca0TCoYJ-sFdA) (more battle-tested, used by zkSync and Aztec, among others).
 
-I strongly recommend this resource for anyone interested in the subject: https://people.cs.georgetown.edu/jthaler/ProofsArgsAndZK.pdf
+I strongly recommend this resource for anyone interested in the subject: [Proofs, Arguments, and Zero-Knowledge](https://people.cs.georgetown.edu/jthaler/ProofsArgsAndZK.pdf)
 
 **Coprocessors**
 
