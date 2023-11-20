@@ -54,11 +54,7 @@ export function ProjectsList({ projects }: ProjectListProps) {
     <List>
       {projects.map((project) => (
         <ProjectContainer key={project.name}>
-          <ProjectHeader
-            onClick={(e) => {
-              handleClick(project, e.currentTarget);
-            }}
-          >
+          <ProjectHeader onClick={(e: React.MouseEvent<Element, MouseEvent>) => handleClick(project, e.currentTarget)}>
             <Name>{project.name}</Name>
             <Circle src={circle} alt='circle icon' />
             <HLine />
