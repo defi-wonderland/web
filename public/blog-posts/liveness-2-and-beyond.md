@@ -1,5 +1,3 @@
-# Liveness 2 and beyond
-
 # Goal
 
 **This report aims to improve the safety and scalability of the SAFE liveness module. We will analyze different methods for on-chain storage proof verification and discuss concrete improvements for the module.**
