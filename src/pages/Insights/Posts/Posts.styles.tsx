@@ -137,6 +137,7 @@ export const Content = styled.div`
     font-weight: 375;
     border-bottom: 1px solid rgba(255, 255, 255, 0.87);
     transition: all 200ms linear;
+    cursor: pointer;
   }
 
   blockquote {
