@@ -10,7 +10,7 @@ Let’s first recap the problem we are trying to solve with the Liveness Module.
 
 Unlike EOAs, smart wallets have configuration settings, which can cause synchronization problems across chains. Consequently, SAFEs on different chains function as separate contracts, even though they may share the same address and configuration parameters during deployment. This problem becomes critical when there’s a change in the owners’ list. We must tackle this issue if we want to create a chain-agnostic future.
 
-![https://defi-wonderland.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F7683bccd-1174-4689-a817-b27fd9d7ef00%2Fda7cbc59-85ab-48bb-97c5-bc043bb6fd3e%2FDALLE_2023-11-01_15.45.54_-_Create_an_epic_and_dark_illustration_featuring_Alice_from_Alice_in_Wonderland_actively_engaged_in_the_process_of_synchronizing_two_different_worlds._.png?table=block&id=29965bf6-c267-441e-bec6-41ca29641920&spaceId=7683bccd-1174-4689-a817-b27fd9d7ef00&width=2000&userId=&cache=v2](https://defi-wonderland.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F7683bccd-1174-4689-a817-b27fd9d7ef00%2Fda7cbc59-85ab-48bb-97c5-bc043bb6fd3e%2FDALLE_2023-11-01_15.45.54_-_Create_an_epic_and_dark_illustration_featuring_Alice_from_Alice_in_Wonderland_actively_engaged_in_the_process_of_synchronizing_two_different_worlds._.png?table=block&id=29965bf6-c267-441e-bec6-41ca29641920&spaceId=7683bccd-1174-4689-a817-b27fd9d7ef00&width=2000&userId=&cache=v2)
+![Create_an_epic_and_dark_illustration_featuring_Alice_from_Alice_in_Wonderland_actively_engaged_in_the_process_of_synchronizing_two_different_worlds._.png](img/blog-posts/liveness-2-and-beyond/alice-lq.jpg)
 
 Moreover, as web3 moves towards a multichain future, the liveness problem becomes increasingly more noticeable and complex.
 
@@ -34,7 +34,7 @@ The verification can be done using **Storage Proofs:**
 
 [Storage Proofs](https://www.notion.so/Storage-Proofs-8f5ad324afab4592b7f2882b8cf9a354?pvs=21)
 
-![DALL·E 2023-11-01 15.54.49 - In an epic, dark, and magical setting, Alice from Alice in Wonderland is depicted designing a complex machine. The young girl, with her long blonde ha.png](https://defi-wonderland.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F7683bccd-1174-4689-a817-b27fd9d7ef00%2F187d98c8-b4d0-4c41-9ff1-86a2d68b1baa%2FDALLE_2023-11-01_15.54.49_-_In_an_epic_dark_and_magical_setting_Alice_from_Alice_in_Wonderland_is_depicted_designing_a_complex_machine._The_young_girl_with_her_long_blonde_ha.png?table=block&id=0336ee00-46cc-4522-82d2-cdba8365d7d2&spaceId=7683bccd-1174-4689-a817-b27fd9d7ef00&width=2000&userId=&cache=v2)
+![DALL·E 2023-11-01 15.54.49 - In an epic, dark, and magical setting, Alice from Alice in Wonderland is depicted designing a complex machine. The young girl, with her long blonde ha.png](img/blog-posts/liveness-2-and-beyond/alice-repair.jpg)
 
 With the current architecture, each wallet contract has to do a separate proof for step 1, as storage root varies from safe to safe. We can, however, modify the contract architecture to make users share this verification step using a Shared Contract root.
 
@@ -58,7 +58,7 @@ However, we expect to enable users to set their own Home Chain eventually. This 
 
 ## The EVM as the verifier
 
-![DALL·E 2023-11-01 15.08.38 - Create a dark and epic illustration featuring Alice from Alice in Wonderland and Bob, depicted as a medieval knight. In this mystical forest setting, .png](https://defi-wonderland.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F7683bccd-1174-4689-a817-b27fd9d7ef00%2F753d0eff-efac-4892-9130-b99a1ce74e7e%2FDALLE_2023-11-01_15.08.38_-_Create_a_dark_and_epic_illustration_featuring_Alice_from_Alice_in_Wonderland_and_Bob_depicted_as_a_medieval_knight._In_this_mystical_forest_setting_.png?table=block&id=b355fd22-12e6-4da6-8660-67b3fd20f428&spaceId=7683bccd-1174-4689-a817-b27fd9d7ef00&width=2000&userId=&cache=v2)
+![DALL·E 2023-11-01 15.08.38 - Create a dark and epic illustration featuring Alice from Alice in Wonderland and Bob, depicted as a medieval knight. In this mystical forest setting, .png](img/blog-posts/liveness-2-and-beyond/alice-knight.jpg)
 
 Ethereum is a transparent and decentralized VM. As such, it is the ideal platform to act as a trustless verifier. If Ethereum is convinced, so should we. But what does it mean for Ethereum to be a verifier? Verification in a protocol is a series of deterministic steps conducted on a series of inputs. In particular, we can write a verification program in the bytecode of a Smart Contract.
 
@@ -77,7 +77,7 @@ To execute the whole verification, we need a reliable way to read the state root
 
 One basic method to prove the consensus of chain A in the execution layer of chain B is to run an on-chain Light Client of A in B. This is, of course, extremely expensive to run. To gain some intuition on why, consider that Ethereum consensus uses BLS signatures on a BLS12-381 curve, which are not included as a precompile in EVMs. Even if the Light Client verified the signatures of the [sync committee](https://github.com/ethereum/annotated-spec/blob/master/altair/sync-protocol.md#introduction) only, it is still prohibitory costly. Here is where zk comes into play.
 
-![DALL·E 2023-11-01 16.07.00 - In a dark and grand ancient hall, Alice, a young woman with long blonde hair and a medieval dress, stands in the center, holding a glowing orb that re.png](https://defi-wonderland.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F7683bccd-1174-4689-a817-b27fd9d7ef00%2F45816407-493a-4d1d-b7d3-2d25ef82fa77%2FDALLE_2023-11-01_16.07.00_-_In_a_dark_and_grand_ancient_hall_Alice_a_young_woman_with_long_blonde_hair_and_a_medieval_dress_stands_in_the_center_holding_a_glowing_orb_that_re.png?table=block&id=55d7f92d-7f64-4ecc-9a7a-9875d4bdea1f&spaceId=7683bccd-1174-4689-a817-b27fd9d7ef00&width=2000&userId=&cache=v2)
+![DALL·E 2023-11-01 16.07.00 - In a dark and grand ancient hall, Alice, a young woman with long blonde hair and a medieval dress, stands in the center, holding a glowing orb that re.png](img/blog-posts/liveness-2-and-beyond/alice-cult.jpg)
 
 [Succint](https://www.succinct.xyz/) developed a [contract](https://etherscan.io/address/0xaa1383ee33c81ef2274419dd5e0ea5cce4baf6cc#code) that verifies a zk-proof of consensus, where anyone can post a zkSNARK attesting that the sync committee has signed a block header. Their design also requires keeping track of the current sync committee, which is also done via a zkSNARK. The protocol is deployed on Ethereum and other chains, but the light client updates is operating [frequently only in Goerli](https://explorer.telepathy.xyz/). Each update in Ethereum costs [300k in gas](https://etherscan.io/tx/0x6d608c89eb97b249f40fc1db4306fe0b5af4d0dec3e1db1b8872b3ddf8c5af75). They enable light client proofs of Ethereum and Gnosis to Ethereum, Gnosis, Arbitrum, Avalanche, Binance, Optimism and Polygon (look [here](https://docs.telepathy.xyz/resources/contract-addresses) for the addresses).
 
@@ -115,7 +115,7 @@ As we mentioned, our goal is to prove the value of a certain storage value from 
 
 During the last few years, we have seen enormous technical advances in optimizing verification processes. The field of zk proofs has gained a lot of traction, in a big part due to their brief verification step. These proofs outsource the heavy computation to the prover to make verification as simple as possible.
 
-![DALL·E 2023-11-01 15.13.15 - In a dark and epic illustration, capture the moment where Alice from Alice in Wonderland successfully opens the ancient, magical door with her special.png](https://defi-wonderland.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F7683bccd-1174-4689-a817-b27fd9d7ef00%2Fb8eb82e9-be63-4021-8707-42564d0a8ac7%2FDALLE_2023-11-01_15.13.15_-_In_a_dark_and_epic_illustration_capture_the_moment_where_Alice_from_Alice_in_Wonderland_successfully_opens_the_ancient_magical_door_with_her_special.png?table=block&id=9cedab6a-21b6-48d1-af99-b8218a130d7f&spaceId=7683bccd-1174-4689-a817-b27fd9d7ef00&width=2000&userId=&cache=v2)
+![DALL·E 2023-11-01 15.13.15 - In a dark and epic illustration, capture the moment where Alice from Alice in Wonderland successfully opens the ancient, magical door with her special.png](img/blog-posts/liveness-2-and-beyond/alice-door.jpg)
 
 This *succinctness* is particularly appealing when dealing with the EVM, as computation requires gas. In what follows, we will describe some possible approaches to dealing with storage proofs in this context.
 
@@ -129,7 +129,7 @@ In [this blog post](https://vitalik.eth.limo/general/2023/06/20/deeperdive.html)
 
 Both zkSNARKs and KZG allow for proof aggregation, further reducing user costs.
 
-![Untitled](https://defi-wonderland.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F7683bccd-1174-4689-a817-b27fd9d7ef00%2F34ba1ee8-9a01-4863-8323-960c6232a4d2%2FUntitled.png?table=block&id=a34cf79b-b098-4630-a956-f966dd39c500&spaceId=7683bccd-1174-4689-a817-b27fd9d7ef00&width=880&userId=&cache=v2)
+![Untitled](img/blog-posts/liveness-2-and-beyond/graph-1.png)
 
 In what follows, we will focus on the existing approaches to tackle this verification step. Even though storage proofs (with or without zk) are the most secure method, we will also consider other options in our analysis. For each, we will analyze the tradeoffs, possibilities, costs and state of development.
 
@@ -145,7 +145,7 @@ From the existing protocols we mentioned, [Relic](https://docs.relicprotocol.co
 
 We will take this approach for the PoC, as it’s the most straightforward and battle-tested solution.
 
-![DALL·E 2023-11-01 14.01.20 - Create a magical interpretation of a Merkle tree intertwined with a real tree, inspired by the style of Lord of the Rings. Use a dark and epic tone to.png](https://defi-wonderland.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F7683bccd-1174-4689-a817-b27fd9d7ef00%2Fd271d2c4-9b0d-402c-86eb-7207c07282b4%2FDALLE_2023-11-01_14.01.20_-_Create_a_magical_interpretation_of_a_Merkle_tree_intertwined_with_a_real_tree_inspired_by_the_style_of_Lord_of_the_Rings._Use_a_dark_and_epic_tone_to.png?table=block&id=a5b27767-d08f-454f-8e3a-bcfcfc24df78&spaceId=7683bccd-1174-4689-a817-b27fd9d7ef00&width=2000&userId=&cache=v2)
+![DALL·E 2023-11-01 14.01.20 - Create a magical interpretation of a Merkle tree intertwined with a real tree, inspired by the style of Lord of the Rings. Use a dark and epic tone to.png](img/blog-posts/liveness-2-and-beyond/alice-tree.jpg)
 
 ### **General purpose zkProofs:** **zkSNARKs**
 
@@ -171,7 +171,7 @@ At the time of writing, they have deployed their contracts on mainnet only. A po
 
 Also, note that the current implementation consumes above [500k gas per query answer](https://etherscan.io/address/0xd617ab7f787adf64c2b5b920c251ea10cd35a952), even more than the current MPT implementations. Axiom has, of course, a lot of additional benefits, such as allowing queries to go back in time.
 
-![Gas comparison for different proofs. Image taken from [Relic’s documentation](https://docs.relicprotocol.com/overview/comparison).](https://defi-wonderland.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F7683bccd-1174-4689-a817-b27fd9d7ef00%2Fd4de05fd-0589-437d-a1a9-683aa8cc742a%2FUntitled.png?table=block&id=19f3eb78-d327-4b44-abb1-6e7722ce4759&spaceId=7683bccd-1174-4689-a817-b27fd9d7ef00&width=770&userId=&cache=v2)
+![Gas comparison for different proofs. Image taken from [Relic’s documentation](https://docs.relicprotocol.com/overview/comparison).](img/blog-posts/liveness-2-and-beyond/table-1.png)
 
 Gas comparison for different proofs. Image taken from [Relic’s documentation](https://docs.relicprotocol.com/overview/comparison).
 
@@ -201,7 +201,7 @@ Lagrange is yet to be operating, so we still have yet to determine what the gas 
 
 KZG allow the construction of efficiently updatable storage proofs.
 
-![DALL·E 2023-11-01 15.48.30 - Illustration of Alice from Alice in Wonderland, partially obscured, studying cryptography in a dark and epic style. Alice, dressed in her iconic blue .png](https://defi-wonderland.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F7683bccd-1174-4689-a817-b27fd9d7ef00%2F75c081d1-5d67-40e8-a2bd-21d279ec9981%2FDALLE_2023-11-01_15.48.30_-_Illustration_of_Alice_from_Alice_in_Wonderland_partially_obscured_studying_cryptography_in_a_dark_and_epic_style._Alice_dressed_in_her_iconic_blue_.png?table=block&id=07b19a28-3f55-43d3-930c-d9180d9ed9d1&spaceId=7683bccd-1174-4689-a817-b27fd9d7ef00&width=2000&userId=&cache=v2)
+![DALL·E 2023-11-01 15.48.30 - Illustration of Alice from Alice in Wonderland, partially obscured, studying cryptography in a dark and epic style. Alice, dressed in her iconic blue .png](img/blog-posts/liveness-2-and-beyond/alice-paper.jpg)
 
 Dankrad does a great job of summarizing KZG in [this post](https://dankradfeist.de/ethereum/2020/06/16/kate-polynomial-commitments.html). The basic intuition works as follows:
 
@@ -242,7 +242,7 @@ We will advise against this for now, even though it could reduce enormously cost
 
 ## Further Optimizations
 
-![DALL·E 2023-11-01 16.13.12 - In this dark and epic illustration, Alice from Alice in Wonderland is portrayed working intently on a complex machine. The scene is set in a medieval-.png](https://defi-wonderland.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F7683bccd-1174-4689-a817-b27fd9d7ef00%2F1cce95f5-541a-467e-aca7-358f80a15a32%2FDALLE_2023-11-01_16.13.12_-_In_this_dark_and_epic_illustration_Alice_from_Alice_in_Wonderland_is_portrayed_working_intently_on_a_complex_machine._The_scene_is_set_in_a_medieval-.png?table=block&id=b3a6cb6e-9592-4322-a354-1858c7a9409e&spaceId=7683bccd-1174-4689-a817-b27fd9d7ef00&width=2000&userId=&cache=v2)
+![DALL·E 2023-11-01 16.13.12 - In this dark and epic illustration, Alice from Alice in Wonderland is portrayed working intently on a complex machine. The scene is set in a medieval-.png](img/blog-posts/liveness-2-and-beyond/alice-machine.jpg)
 
 ### **Optimistic layer**
 
@@ -270,7 +270,7 @@ All of this sounds amazing, but it comes with a high degree of complexity. A maj
 
 ## Takeaways and improvements for the Module
 
-![DALL·E 2023-11-01 15.59.36 - A high-resolution 4K image of Alice from Alice in Wonderland, placing the final piece onto her intricate clock-like machine, filled with cryptographic.png](https://defi-wonderland.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F7683bccd-1174-4689-a817-b27fd9d7ef00%2Ff8ecacf5-d864-4ed6-a959-6ed75892e15b%2FDALLE_2023-11-01_15.59.36_-_A_high-resolution_4K_image_of_Alice_from_Alice_in_Wonderland_placing_the_final_piece_onto_her_intricate_clock-like_machine_filled_with_cryptographic.png?table=block&id=af8580a2-9b39-4efd-95fe-e7094b005356&spaceId=7683bccd-1174-4689-a817-b27fd9d7ef00&width=2000&userId=&cache=v2)
+![DALL·E 2023-11-01 15.59.36 - A high-resolution 4K image of Alice from Alice in Wonderland, placing the final piece onto her intricate clock-like machine, filled with cryptographic.png](img/blog-posts/liveness-2-and-beyond/alice-final-piece.jpg)
 
 In the above sections, we explored different cross-chain verification processes. We will now summarize the advantages and status of each for potential integration into the Liveness module.
 
@@ -315,4 +315,4 @@ For the PoC, there will be no fixed cost. We envision this to work like a gas-ma
 - Improved Shared Contract: We have explored various potential improvements to the module regarding both proof efficiency (sharding or MMR) and features (inbox contract, with cross-chain execution and even intents).
   While these modifications introduce a considerable level of complexity, we are confident that addressing these challenges is a worthwhile endeavor. We plan to continue generating ideas and discussing these topics further once we have finalized the initial proof of concept.
 
-![DALL·E 2023-11-01 16.01.43 - Alice from Alice in Wonderland stands beside her incredible clock-like machine filled with cryptographic symbols, successfully synchronizing two diffe.png](https://defi-wonderland.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F7683bccd-1174-4689-a817-b27fd9d7ef00%2Fe3885a47-2894-47ae-a285-a8005f62275d%2FDALLE_2023-11-01_16.01.43_-_Alice_from_Alice_in_Wonderland_stands_beside_her_incredible_clock-like_machine_filled_with_cryptographic_symbols_successfully_synchronizing_two_diffe.png?table=block&id=411badee-ea19-4f32-9455-388c14e11050&spaceId=7683bccd-1174-4689-a817-b27fd9d7ef00&width=2000&userId=&cache=v2)
+![DALL·E 2023-11-01 16.01.43 - Alice from Alice in Wonderland stands beside her incredible clock-like machine filled with cryptographic symbols, successfully synchronizing two diffe.png](img/blog-posts/liveness-2-and-beyond/alice-conclusion.jpg)
