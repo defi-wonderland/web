@@ -10,7 +10,7 @@ Let’s first recap the problem we are trying to solve with the Liveness Module.
 
 Unlike EOAs, smart wallets have configuration settings, which can cause synchronization problems across chains. Consequently, SAFEs on different chains function as separate contracts, even though they may share the same address and configuration parameters during deployment. This problem becomes critical when there’s a change in the owners’ list. We must tackle this issue if we want to create a chain-agnostic future.
 
-![Create_an_epic_and_dark_illustration_featuring_Alice_from_Alice_in_Wonderland_actively_engaged_in_the_process_of_synchronizing_two_different_worlds._.png](src/assets/blog-posts/liveness-2-and-beyond/alice-lq.jpg)
+![Create_an_epic_and_dark_illustration_featuring_Alice_from_Alice_in_Wonderland_actively_engaged_in_the_process_of_synchronizing_two_different_worlds._.png](img/blog-posts/liveness-2-and-beyond//alice-lq.jpg)
 
 Moreover, as web3 moves towards a multichain future, the liveness problem becomes increasingly more noticeable and complex.
 
@@ -34,7 +34,7 @@ The verification can be done using **Storage Proofs:**
 
 [Storage Proofs](https://www.notion.so/Storage-Proofs-8f5ad324afab4592b7f2882b8cf9a354?pvs=21)
 
-![DALL·E 2023-11-01 15.54.49 - In an epic, dark, and magical setting, Alice from Alice in Wonderland is depicted designing a complex machine. The young girl, with her long blonde ha.png](src/assets/blog-posts/liveness-2-and-beyond/alice-repair.jpg)
+![DALL·E 2023-11-01 15.54.49 - In an epic, dark, and magical setting, Alice from Alice in Wonderland is depicted designing a complex machine. The young girl, with her long blonde ha.png](img/blog-posts/liveness-2-and-beyond//alice-repair.jpg)
 
 With the current architecture, each wallet contract has to do a separate proof for step 1, as storage root varies from safe to safe. We can, however, modify the contract architecture to make users share this verification step using a Shared Contract root.
 
@@ -58,7 +58,7 @@ However, we expect to enable users to set their own Home Chain eventually. This 
 
 ## The EVM as the verifier
 
-![DALL·E 2023-11-01 15.08.38 - Create a dark and epic illustration featuring Alice from Alice in Wonderland and Bob, depicted as a medieval knight. In this mystical forest setting, .png](src/assets/blog-posts/liveness-2-and-beyond/alice-knight.jpg)
+![DALL·E 2023-11-01 15.08.38 - Create a dark and epic illustration featuring Alice from Alice in Wonderland and Bob, depicted as a medieval knight. In this mystical forest setting, .png](img/blog-posts/liveness-2-and-beyond//alice-knight.jpg)
 
 Ethereum is a transparent and decentralized VM. As such, it is the ideal platform to act as a trustless verifier. If Ethereum is convinced, so should we. But what does it mean for Ethereum to be a verifier? Verification in a protocol is a series of deterministic steps conducted on a series of inputs. In particular, we can write a verification program in the bytecode of a Smart Contract.
 
@@ -77,7 +77,7 @@ To execute the whole verification, we need a reliable way to read the state root
 
 One basic method to prove the consensus of chain A in the execution layer of chain B is to run an on-chain Light Client of A in B. This is, of course, extremely expensive to run. To gain some intuition on why, consider that Ethereum consensus uses BLS signatures on a BLS12-381 curve, which are not included as a precompile in EVMs. Even if the Light Client verified the signatures of the [sync committee](https://github.com/ethereum/annotated-spec/blob/master/altair/sync-protocol.md#introduction) only, it is still prohibitory costly. Here is where zk comes into play.
 
-![DALL·E 2023-11-01 16.07.00 - In a dark and grand ancient hall, Alice, a young woman with long blonde hair and a medieval dress, stands in the center, holding a glowing orb that re.png](src/assets/blog-posts/liveness-2-and-beyond/alice-cult.jpg)
+![DALL·E 2023-11-01 16.07.00 - In a dark and grand ancient hall, Alice, a young woman with long blonde hair and a medieval dress, stands in the center, holding a glowing orb that re.png](img/blog-posts/liveness-2-and-beyond//alice-cult.jpg)
 
 [Succint](https://www.succinct.xyz/) developed a [contract](https://etherscan.io/address/0xaa1383ee33c81ef2274419dd5e0ea5cce4baf6cc#code) that verifies a zk-proof of consensus, where anyone can post a zkSNARK attesting that the sync committee has signed a block header. Their design also requires keeping track of the current sync committee, which is also done via a zkSNARK. The protocol is deployed on Ethereum and other chains, but the light client updates is operating [frequently only in Goerli](https://explorer.telepathy.xyz/). Each update in Ethereum costs [300k in gas](https://etherscan.io/tx/0x6d608c89eb97b249f40fc1db4306fe0b5af4d0dec3e1db1b8872b3ddf8c5af75). They enable light client proofs of Ethereum and Gnosis to Ethereum, Gnosis, Arbitrum, Avalanche, Binance, Optimism and Polygon (look [here](https://docs.telepathy.xyz/resources/contract-addresses) for the addresses).
 
@@ -115,7 +115,7 @@ As we mentioned, our goal is to prove the value of a certain storage value from 
 
 During the last few years, we have seen enormous technical advances in optimizing verification processes. The field of zk proofs has gained a lot of traction, in a big part due to their brief verification step. These proofs outsource the heavy computation to the prover to make verification as simple as possible.
 
-![DALL·E 2023-11-01 15.13.15 - In a dark and epic illustration, capture the moment where Alice from Alice in Wonderland successfully opens the ancient, magical door with her special.png](src/assets/blog-posts/liveness-2-and-beyond/alice-door.jpg)
+![DALL·E 2023-11-01 15.13.15 - In a dark and epic illustration, capture the moment where Alice from Alice in Wonderland successfully opens the ancient, magical door with her special.png](img/blog-posts/liveness-2-and-beyond//alice-door.jpg)
 
 This *succinctness* is particularly appealing when dealing with the EVM, as computation requires gas. In what follows, we will describe some possible approaches to dealing with storage proofs in this context.
 
@@ -145,7 +145,7 @@ From the existing protocols we mentioned, [Relic](https://docs.relicprotocol.co
 
 We will take this approach for the PoC, as it’s the most straightforward and battle-tested solution.
 
-![DALL·E 2023-11-01 14.01.20 - Create a magical interpretation of a Merkle tree intertwined with a real tree, inspired by the style of Lord of the Rings. Use a dark and epic tone to.png](src/assets/blog-posts/liveness-2-and-beyond/alice-tree.jpg)
+![DALL·E 2023-11-01 14.01.20 - Create a magical interpretation of a Merkle tree intertwined with a real tree, inspired by the style of Lord of the Rings. Use a dark and epic tone to.png](img/blog-posts/liveness-2-and-beyond//alice-tree.jpg)
 
 ### **General purpose zkProofs:** **zkSNARKs**
 
@@ -201,7 +201,7 @@ Lagrange is yet to be operating, so we still have yet to determine what the gas 
 
 KZG allow the construction of efficiently updatable storage proofs.
 
-![DALL·E 2023-11-01 15.48.30 - Illustration of Alice from Alice in Wonderland, partially obscured, studying cryptography in a dark and epic style. Alice, dressed in her iconic blue .png](src/assets/blog-posts/liveness-2-and-beyond/alice-paper.jpg)
+![DALL·E 2023-11-01 15.48.30 - Illustration of Alice from Alice in Wonderland, partially obscured, studying cryptography in a dark and epic style. Alice, dressed in her iconic blue .png](img/blog-posts/liveness-2-and-beyond//alice-paper.jpg)
 
 Dankrad does a great job of summarizing KZG in [this post](https://dankradfeist.de/ethereum/2020/06/16/kate-polynomial-commitments.html). The basic intuition works as follows:
 
@@ -242,7 +242,7 @@ We will advise against this for now, even though it could reduce enormously cost
 
 ## Further Optimizations
 
-![DALL·E 2023-11-01 16.13.12 - In this dark and epic illustration, Alice from Alice in Wonderland is portrayed working intently on a complex machine. The scene is set in a medieval-.png](src/assets/blog-posts/liveness-2-and-beyond/alice-machine.jpg)
+![DALL·E 2023-11-01 16.13.12 - In this dark and epic illustration, Alice from Alice in Wonderland is portrayed working intently on a complex machine. The scene is set in a medieval-.png](img/blog-posts/liveness-2-and-beyond//alice-machine.jpg)
 
 ### **Optimistic layer**
 
@@ -270,7 +270,7 @@ All of this sounds amazing, but it comes with a high degree of complexity. A maj
 
 ## Takeaways and improvements for the Module
 
-![DALL·E 2023-11-01 15.59.36 - A high-resolution 4K image of Alice from Alice in Wonderland, placing the final piece onto her intricate clock-like machine, filled with cryptographic.png](src/assets/blog-posts/liveness-2-and-beyond/alice-final-piece.jpg)
+![DALL·E 2023-11-01 15.59.36 - A high-resolution 4K image of Alice from Alice in Wonderland, placing the final piece onto her intricate clock-like machine, filled with cryptographic.png](img/blog-posts/liveness-2-and-beyond//alice-final-piece.jpg)
 
 In the above sections, we explored different cross-chain verification processes. We will now summarize the advantages and status of each for potential integration into the Liveness module.
 
@@ -315,4 +315,4 @@ For the PoC, there will be no fixed cost. We envision this to work like a gas-ma
 - Improved Shared Contract: We have explored various potential improvements to the module regarding both proof efficiency (sharding or MMR) and features (inbox contract, with cross-chain execution and even intents).
   While these modifications introduce a considerable level of complexity, we are confident that addressing these challenges is a worthwhile endeavor. We plan to continue generating ideas and discussing these topics further once we have finalized the initial proof of concept.
 
-![DALL·E 2023-11-01 16.01.43 - Alice from Alice in Wonderland stands beside her incredible clock-like machine filled with cryptographic symbols, successfully synchronizing two diffe.png](src/assets/blog-posts/liveness-2-and-beyond/alice-conclusion.jpg)
+![DALL·E 2023-11-01 16.01.43 - Alice from Alice in Wonderland stands beside her incredible clock-like machine filled with cryptographic symbols, successfully synchronizing two diffe.png](img/blog-posts/liveness-2-and-beyond//alice-conclusion.jpg)
