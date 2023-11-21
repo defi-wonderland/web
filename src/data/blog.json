@@ -1,5 +1,13 @@
 [
   {
+    "id": "liveness-2-and-beyond",
+    "name": "Liveness 2 and beyond",
+    "description": "The current status of on-chain storage proofs",
+    "date": "11/17/23",
+    "tags": ["Cryptography", "Verification", "Cross-chain"],
+    "image": "img/blog-posts/liveness-2-and-beyond/alice-lq.jpg"
+  },
+  {
     "id": "a-mev-racing-story",
     "name": "A (MEV) racing story",
     "description": "What do we know about the dark forest 2.0?",
