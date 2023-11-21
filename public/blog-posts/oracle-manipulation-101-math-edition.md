@@ -22,7 +22,7 @@ $x*y=L^2 \hspace{1cm}(1)$
 
 where $L$ is called Liquidity. This $L$ is modified only when someone adds or removes the token balance and is constant otherwise.
 
-![https://i.imgur.com/zdwwOgV.png](https://i.imgur.com/zdwwOgV.png)
+![img/blog-posts/oracle-manipulation-101-math/1.png](img/blog-posts/oracle-manipulation-101-math/1.png)
 
 Anyone can swap token A for token B or vice versa on this pool, modifying the balances $x$ and $y$ in the pool according to $(1)$. You can visualize this behaviour in the Figure ([source](https://medium.com/block-journal/uniswap-understanding-the-decentralised-ethereum-exchange-5ee5d7878996)).
 
@@ -119,7 +119,7 @@ L_N,\quad p_N<price
 
 the terms $x_{offset}$ and $y_{offset}$ are only centring the equation in the corresponding range, as you can see in the Figure from the whitepaper:
 
-![https://i.imgur.com/HH1C8mS.png](https://i.imgur.com/HH1C8mS.png)
+![img/blog-posts/oracle-manipulation-101-math/2.png](img/blog-posts/oracle-manipulation-101-math/2.png)
 
 ### Understanding Liquidity
 
@@ -143,7 +143,7 @@ Liquidity is not straightforward to compute now, as its formula depends on the p
 
 You can find the full code implementation in [this link](https://github.com/Uniswap/v3-periphery/blob/main/contracts/libraries/LiquidityAmounts.sol#L120). You can play around with different values [here](https://colab.research.google.com/drive/1RwpF-lKq968mvsyL0jgyw9rO_cTqYxPl?usp=sharing). Also, you can find examples [here](https://github.com/atiselsts/uniswap-v3-liquidity-math) and [here](http://atiselsts.github.io/pdfs/uniswap-v3-liquidity-math.pdf).
 
-![https://i.imgur.com/v1jiDeG.png](https://i.imgur.com/v1jiDeG.png)
+![img/blog-posts/oracle-manipulation-101-math/3.jpg](img/blog-posts/oracle-manipulation-101-math/3.jpg)
 
 ### Price Manipulation
 
@@ -208,7 +208,7 @@ Uniswap knows its role as a decentralized on-chain price source and has built it
 
 $TWAP$ stands for time-weighted average price. It's a geometric average price for a pool over a fixed interval of time and is what we query from the current implementation of the Uniswap v3 Oracle library. It's also a standard trading tool, as seen in the red line in the Figure.
 
-![https://i.imgur.com/cuVdOPL.png](https://i.imgur.com/cuVdOPL.png)
+![img/blog-posts/oracle-manipulation-101-math/4.png](img/blog-posts/oracle-manipulation-101-math/4.png)
 
 > ℹ️ Given 2 numbers, $a_1$ and $a_2$:
 > Arithmetic mean: $\frac{a_1+a_2}{2}$
@@ -244,7 +244,7 @@ You can gain more by playing around at [this link](https://colab.research.google
 - Using longer TWAPs will make movements exponentially harder.
 - Moving the price over several blocks reduces the costs exponentially.
 
-![https://i.imgur.com/sTVbO3c.png](https://i.imgur.com/sTVbO3c.png)
+![img/blog-posts/oracle-manipulation-101-math/5.png](img/blog-posts/oracle-manipulation-101-math/5.png)
 
 > ℹ️ To manipulate a $TWAP$ to the desired price, an attacker needs to move the spot much more so that the average falls on target. The longer the $TWAP$ length $N$ is relative to the attack's $M$, the harder it is to manipulate. That is why longer $TWAPs$ are suggested for a safer query.
 >
@@ -262,7 +262,7 @@ We will exclude trading fees for simplicity of reading, but you can trivially ad
 
 ## Math for Attack Scheme pre PoS
 
-![https://i.imgur.com/D9UKvny.png](https://i.imgur.com/D9UKvny.png)
+![img/blog-posts/oracle-manipulation-101-math/6.png](img/blog-posts/oracle-manipulation-101-math/6.png)
 
 The regular scheme for attacking a lending market is the following:
 
@@ -306,7 +306,7 @@ $Profit = \Delta x_{out} - \Delta x_{in} = min[fP_fy(\frac{L\sqrt{P_f}-x}{L\sqrt
 
 You can play around simulating the arbitrage scenario in [this link](https://colab.research.google.com/drive/1RwpF-lKq968mvsyL0jgyw9rO_cTqYxPl?usp=sharing). You can see in the Figure below that the optimal attack in this scenario will correspond to using all capital from the manipulation to borrow up to the available reserves (no $\Delta y_{sell}$ left). It's possible to find this optimal price analytically as a function of the reserves, which LPs can use to define safe semi Full-Range positions. Notice this graph does not take TWAP into account and is only valid for markets which query the spot price.
 
-![https://i.imgur.com/MepFPt3.png](https://i.imgur.com/MepFPt3.png)
+![img/blog-posts/oracle-manipulation-101-math/7.png](img/blog-posts/oracle-manipulation-101-math/7.png)
 
 To include the $TWAP$ parameters in the analysis, we should compute the Cost of Manipulation $C_{manipulation}^*$ with the spot price added using Eq. $(3)$ while keeping the $TWAP$ price to obtain the stolen amount. We can also simulate this and check that manipulation cost increase radically to the point where single-block attacks are never profitable. Notice that the $TWAP$ is not an on-off switch and has different levels, which we can measure with the ratio $\frac{Length_{attack}}{Length_{TWAP}}\simeq \frac{M}{N}$, with $N$ the approximate number of blocks in the $TWAP$ and $M$ the number of blocks the manipulation lasted.
 
@@ -322,13 +322,13 @@ Two main factors can endanger $TWAP$-based oracle liquidity:
 
 1. Bad liquidity positions in Uniswap v3: as we mentioned, a pool is, in most cases, easier to manipulate when liquidity is concentrated rather than over the Full Range. Price manipulation costs zero over regions with no liquidity.
 
-![https://i.imgur.com/g33Ssp5.png](https://i.imgur.com/g33Ssp5.png)
+![img/blog-posts/oracle-manipulation-101-math/8.png](img/blog-posts/oracle-manipulation-101-math/8.png)
 
 1. No liquidity in secondary markets: there is no way for arbitrage to close the trade effectively. As we mentioned, the absence of arbitrage makes manipulation back to the initial price possible (the attacker recovers capital used for price manipulation). It also unlocks multi-block attacks (requires less upfront capital).
 
 Both issues are typical for small projects. This is, for instance, what happened to the stablecoin FLOAT in Rari (see the FLOAT incident in Rari [here](https://etherscan.io/address/0xa2ce300cc17601fc660bac4eeb79bdd9ae61a0e5) and [here](https://www.defilatam.com/rekt/us-1-4-m-ataque-al-pool-90-de-rari-y-una-leccion-de-oracles-en-lending-para-aprendices)): liquidity was deployed only over the 1.16-1.74 USDC per FLOAT in Uniswap, which meant that manipulation cost was zero outside this range. As there was no liquidity in secondary markets, the attacker could wait for a few blocks and significantly impact the registered $TWAP$. Then, they proceeded to empty over $1M USD from the Pool 90 Fuse for only 10k FLOAT.
 
-![https://i.imgur.com/0ggvoYl.jpg](https://i.imgur.com/0ggvoYl.jpg)
+![img/blog-posts/oracle-manipulation-101-math/9.jpg](img/blog-posts/oracle-manipulation-101-math/9.jpg)
 
 > ⚠️ These attacks are the most common for small projects. Attacks in these contexts are hard to distinguish from rug pulls. A lending market can protect itself by reverting the borrowing if the difference between $TWAP$ and spot price is large, but as time passes, the $TWAP$ will get close, and basic checks will pass. Both users and lending markets should be aware of these risks when using or listing low-liquidity tokens. PRICE will include additional methods to mitigate this risk.
 
@@ -336,7 +336,7 @@ Both issues are typical for small projects. This is, for instance, what happened
 
 After the Merge, big stakers have a [high chance](https://alrevuelta.github.io/posts/ethereum-mev-multiblock) of proposing multiple blocks in a row, which makes manipulation back to the initial price possible and significantly lowers the attack cost. It also makes TWAPs cheaper to move, as the attacker can maintain the manipulated price for longer.
 
-![https://i.imgur.com/fqvGvDd.png](https://i.imgur.com/fqvGvDd.png)
+![img/blog-posts/oracle-manipulation-101-math/10.jpg](img/blog-posts/oracle-manipulation-101-math/10.jpg)
 
 Suppose the validator has $n>2$ consecutive blocks. In that case, the attacker can manipulate over $n-1$ blocks to reduce the initial capital required. In the final block $n$, they can exercise partial manipulation back to the initial price (or near it). As we have shown in Eq. (1), the final spot price to manipulate a $TWAP$ becomes closer to the initial price as the number of proposed blocks increases ($M$ in the equation). It's straightforward to show that the attack cost decreases enormously with this parameter. When protecting an oracle, we must be ready for the worst-case scenario, i.e. the post-PoS multi-block attack.
 
@@ -364,9 +364,9 @@ You can play around with a simulation for this attack [here](https://colab.resea
 
 The equilibrium price is a function of $a_{colateral}$. The higher this capital, the lower the target $TWAP$ (but also, the less profit). For significant enough price manipulations, $a_{left}$ is sufficient to be profitable, and $a_{colateral}$ might be unnecessary. This dependence with $a_{colateral}$ complicates the use of almost Full Range positions as a more efficient alternative to Full Range positions.
 
-![https://i.imgur.com/gJmgVKc.png](https://i.imgur.com/gJmgVKc.png)
+![img/blog-posts/oracle-manipulation-101-math/11.png](img/blog-posts/oracle-manipulation-101-math/11.png)
 
-![https://i.imgur.com/pnmBvFS.png](https://i.imgur.com/pnmBvFS.png)
+![img/blog-posts/oracle-manipulation-101-math/12.png](img/blog-posts/oracle-manipulation-101-math/12.png)
 
 This scheme requires an additional up-front capital $a_{back}$ , which is trivially recovered by manipulating back, but it's also the heaviest capital. The up-front cost falls exponentially with the attack length (number of consecutive blocks to propose). The longer the $Lenght_{TWAP}$ the market uses relative to the attack length $Length_{attack}$, the more serious this capital becomes.
 

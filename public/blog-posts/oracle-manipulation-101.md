@@ -17,7 +17,7 @@ To understand the likelihood of an attack, we must compare the following:
 
 Assuming the market participants are rational and are not trying to give money away, an oracle will stay safe if the manipulation cost is higher than the profit.
 
-![https://i.imgur.com/sMMktN2.png](https://i.imgur.com/sMMktN2.png)
+![img/blog-posts/oracle-manipulation-101/quote.jpg](img/blog-posts/oracle-manipulation-101/quote.jpg)
 
 ## 1. Cost of Manipulation
 
@@ -38,7 +38,7 @@ $P_f \simeq \sqrt[M]{\frac{TWAP^N}{P_i^{(N-M)}}} \hspace{1cm}(1)$
 
 Where $P_i$ is the initial price of the pool, $N$ is the approximated number of blocks of the TWAP duration, and $M$ is the number of blocks covered by the attack.
 
-![https://i.imgur.com/sTVbO3c.png](https://i.imgur.com/sTVbO3c.png)
+![img/blog-posts/oracle-manipulation-101/graph-1.jpg](img/blog-posts/oracle-manipulation-101/graph-1.jpg)
 
 ## 2. Profit from Manipulation
 
@@ -64,7 +64,7 @@ The core idea behind this attack is that borrowing and defaulting are equivalent
 
 It's an arbitrage among markets with different math.
 
-![https://i.imgur.com/JSih1Zo.png](https://i.imgur.com/JSih1Zo.png)
+![img/blog-posts/oracle-manipulation-101/meme.jpg](img/blog-posts/oracle-manipulation-101/meme.jpg)
 
 The stolen amount from the lending market attack after manipulating the spot price to $P_f$ to move the $TWAP$ to $TWAP_{final}$ is
 
@@ -74,7 +74,7 @@ The stolen amount must be distinguished from the net Profit, as the manipulation
 
 ## Attack Scheme pre PoS
 
-![https://i.imgur.com/D9UKvny.png](https://i.imgur.com/D9UKvny.png)
+![img/blog-posts/oracle-manipulation-101/football.jpg](img/blog-posts/oracle-manipulation-101/football.jpg)
 
 The regular scheme for attacking a lending market is via the following steps:
 
@@ -103,13 +103,13 @@ Two main factors can endanger $TWAP$-based oracle liquidity:
 
 1. Bad liquidity positions in Uniswap v3: as we mentioned, a pool is, in most cases, easier to manipulate when liquidity is concentrated rather than over the Full Range. Price manipulation costs zero over regions with no liquidity.
 
-![https://i.imgur.com/g33Ssp5.png](https://i.imgur.com/g33Ssp5.png)
+![img/blog-posts/oracle-manipulation-101/lp.jpg](img/blog-posts/oracle-manipulation-101/lp.jpg)
 
 1. No liquidity in secondary markets: there is no way for arbitrage to close the trade effectively. As we mentioned, the absence of arbitrage makes manipulation back to the initial price possible (the attacker recovers capital used for price manipulation). It also unlocks multi-block attacks (requires less upfront capital).
 
 This is, for instance, what happened to the stablecoin FLOAT in Rari (see the FLOAT incident in Rari [here](https://etherscan.io/address/0xa2ce300cc17601fc660bac4eeb79bdd9ae61a0e5) and [here](https://www.defilatam.com/rekt/us-1-4-m-ataque-al-pool-90-de-rari-y-una-leccion-de-oracles-en-lending-para-aprendices)): liquidity was deployed only over the 1.16-1.74 USDC per FLOAT in Uniswap, which meant that manipulation cost was zero outside this range. As there was no liquidity in secondary markets, the attacker could wait for a few blocks and significantly impact the registered $TWAP$. Then, they proceeded to empty over $1M USD from the Pool 90 Fuse for only 10k FLOAT.
 
-![https://i.imgur.com/0ggvoYl.jpg](https://i.imgur.com/0ggvoYl.jpg)
+![img/blog-posts/oracle-manipulation-101/float-rari.jpg](img/blog-posts/oracle-manipulation-101/float-rari.jpg)
 
 > ⚠️ These attacks are the most common for small projects.
 >
@@ -121,7 +121,7 @@ This is, for instance, what happened to the stablecoin FLOAT in Rari (see the FL
 
 After the Merge, big stakers have a [high chance](https://alrevuelta.github.io/posts/ethereum-mev-multiblock) of proposing multiple blocks in a row, which makes manipulation back to the initial price possible and significantly lowers the attack cost. It also makes TWAPs cheaper to move, as the attacker can maintain the manipulated price for longer.
 
-![https://i.imgur.com/fqvGvDd.png](https://i.imgur.com/fqvGvDd.png)
+![img/blog-posts/oracle-manipulation-101/pos.jpg](img/blog-posts/oracle-manipulation-101/pos.jpg)
 
 Suppose the validator has $n>2$ consecutive blocks. In that case, the attacker can manipulate over $n-1$ blocks to reduce the initial capital required. In the final block $n$, they can exercise partial manipulation back to the initial price (or near it). As we have shown in Eq. (1), the final spot price to manipulate a $TWAP$ becomes closer to the initial price as the number of proposed blocks increases ($M$ in the equation). It's straightforward to show that the attack cost decreases enormously with this parameter. When protecting an oracle, we must be ready for the worst-case scenario, i.e. the post-PoS multi-block attack.
 
@@ -141,7 +141,7 @@ An attacker could also manipulate the TWAP without getting arbitraged if they pr
 
 > ⚠️ The [Math article](https://www.notion.so/Oracle-Manipulation-101-Math-edition-e9ceba0198dc4cc384bb7de919806a9c) shows that this attack can easily reach profitability, even after considering the $TWAP$. Increasing the $TWAP$ parameters will require the attacker to have a more significant up-front capital (redeemable after the attack). The absence of arbitrage in this scenario makes everything smoother from the attacker's perspective.
 
-![https://i.imgur.com/gJmgVKc.png](https://i.imgur.com/gJmgVKc.png)
+![img/blog-posts/oracle-manipulation-101/graph-2.jpg](img/blog-posts/oracle-manipulation-101/graph-2.jpg)
 
 > ⚡ So, we are in danger once again…
 >
