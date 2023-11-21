@@ -21,7 +21,7 @@
     "description": "What does a Uniswap v3 oracle manipulation look like?",
     "date": "12/26/22",
     "tags": ["Price", "Oracles", "Uniswap V3"],
-    "image": "https://price-oracle.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F9297e650-550e-4395-97f6-84ea64d688fd%2Fimage.jpeg?table=block&id=cbcea67b-7796-4969-9543-7907d3b1b4ba&spaceId=de552277-5ae2-4d88-932f-dd538421d024&width=2000&userId=&cache=v2"
+    "image": "img/blog-posts/oracle-manipulation-101/cover.jpg"
   },
   {
     "id": "oracle-manipulation-101-math-edition",
