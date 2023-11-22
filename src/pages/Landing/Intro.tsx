@@ -26,12 +26,6 @@ export function IntroductionPage() {
 
   return (
     <>
-      <DocumentHead
-        name='Wonderland'
-        description='Wonderland is the largest core development group in Web3. We partner up with the best protocols in the world, including, among others: Optimism, Connext, and Reflexer.'
-        image={`share.jpg`}
-      />
-
       {isLoaded && (
         <>
           <StarsBackground zIndex={isIntroLoaded ? 0 : 10} />
