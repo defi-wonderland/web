@@ -7,22 +7,30 @@ import ReactMarkdown from 'react-markdown';
 import { CSSTransition } from 'react-transition-group';
 
 import { Background, Title, Date, Content, BackgroundImage } from './Posts.styles';
+import { DocumentHead } from '~/components/common';
 import posts from '~/data/blog.json';
+
+interface BlogData {
+  id: string;
+  name: string;
+  description: string;
+  date: string;
+  tags: string[];
+  image: string;
+}
 
 export function Posts() {
   const { id } = useParams();
   const [blog, setBlog] = useState('');
-  const [name, setName] = useState('');
-  const [date, setDate] = useState('');
+  const [blogData, setBlogData] = useState<BlogData>();
 
   useEffect(() => {
     fetch(`/blog-posts/${id}.md`)
       .then((response) => response.text())
       .then((data) => {
         const post = posts.filter((post) => post.id == id);
-        setName(post[0].name);
-        setDate(post[0].date);
 
+        setBlogData(post[0]);
         setBlog(data);
       });
   }, []);
@@ -30,11 +38,13 @@ export function Posts() {
   return (
     <CSSTransition in={!!blog} classNames='fade' timeout={200} appear unmountOnExit>
       <>
-        <Title>{name}</Title>
+        <DocumentHead name={blogData?.name} description={blogData?.description} />
+
+        <Title>{blogData?.name}</Title>
         <BackgroundImage type='3' align='center' />
         <Background>
           <Content>
-            <Date>{date}</Date>
+            <Date>{blogData?.date}</Date>
             <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex, rehypeRaw]}>
               {blog}
             </ReactMarkdown>

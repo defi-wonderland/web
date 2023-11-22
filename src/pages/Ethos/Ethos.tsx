@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import { PageContent } from '~/components/app';
 import { ApproachSection } from './ApproachSection';
-import { Ball, MOBILE_MAX_WIDTH, SPACING_192, SPACING_512, SPACING_700 } from '~/components/common';
+import { Ball, DocumentHead, MOBILE_MAX_WIDTH, SPACING_192, SPACING_512, SPACING_700 } from '~/components/common';
 import TextSection from './TextSection';
 import Cone from '~/assets/cone.png';
 import HoopTop from '~/assets/hoop-top.png';
@@ -37,10 +37,6 @@ const SBall = styled(Ball)`
     top: 14rem;
     width: 6rem;
   }
-`;
-
-const MobileTitleContainer = styled.div`
-  transform: rotate(3deg);
 `;
 
 const BackgroundContainer = styled.div`
@@ -80,6 +76,8 @@ const STitleContainer = styled(TitleContainer)`
 export function Ethos() {
   return (
     <PageContent>
+      <DocumentHead name='Ethos' />
+
       <HeroDivider>
         <STitleContainer>
           <video autoPlay loop muted playsInline>

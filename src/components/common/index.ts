@@ -2,6 +2,7 @@ export * from './AnimationIn';
 export * from './Ball';
 export * from './Button';
 export * from './DisplayText';
+export * from './DocumentHead';
 export * from './GradientTitle';
 export * from './Link';
 export * from './Ring';

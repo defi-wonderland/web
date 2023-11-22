@@ -20,7 +20,7 @@ import {
 import VIDEO_CHROME from '~/assets/videos/insights.webm';
 import VIDEO_SAFARI from '~/assets/videos/insights.mp4';
 import { TitleContainer } from '../Landing/HeroSection';
-import { MOBILE_MAX_WIDTH } from '~/components/common';
+import { DocumentHead, MOBILE_MAX_WIDTH } from '~/components/common';
 import StarIcon from '/img/footer/star-icon.svg';
 import styled from 'styled-components';
 
@@ -47,6 +47,8 @@ export function Insights() {
 
   return (
     <PageContainer>
+      <DocumentHead name='Insights' />
+
       <Title>
         <BlogTitleContainer>
           <video autoPlay loop muted playsInline>

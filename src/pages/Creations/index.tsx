@@ -18,10 +18,13 @@ import { Divider } from './ProjectsList/ProjectsList.styles';
 import { partnerProjects, publicGoods } from '~/data/projects.json';
 import VIDEO_CHROME from '~/assets/videos/creations.webm';
 import VIDEO_SAFARI from '~/assets/videos/creations.mp4';
+import { DocumentHead } from '~/components/common';
 
 export function Creations() {
   return (
     <>
+      <DocumentHead name='Creations' />
+
       <Container>
         <BackgroundContainer>
           <BG_1 type='2' align='center' />
