@@ -129,7 +129,7 @@ In [this blog post](https://vitalik.eth.limo/general/2023/06/20/deeperdive.html)
 
 Both zkSNARKs and KZG allow for proof aggregation, further reducing user costs.
 
-![Untitled](img/blog-posts/liveness-2-and-beyond/graph-1.png)
+![Untitled](img/blog-posts/liveness-2-and-beyond/graph-1.jpg)
 
 In what follows, we will focus on the existing approaches to tackle this verification step. Even though storage proofs (with or without zk) are the most secure method, we will also consider other options in our analysis. For each, we will analyze the tradeoffs, possibilities, costs and state of development.
 
@@ -171,7 +171,7 @@ At the time of writing, they have deployed their contracts on mainnet only. A po
 
 Also, note that the current implementation consumes above [500k gas per query answer](https://etherscan.io/address/0xd617ab7f787adf64c2b5b920c251ea10cd35a952), even more than the current MPT implementations. Axiom has, of course, a lot of additional benefits, such as allowing queries to go back in time.
 
-![Gas comparison for different proofs. Image taken from [Relic’s documentation](https://docs.relicprotocol.com/overview/comparison).](img/blog-posts/liveness-2-and-beyond/table-1.png)
+![Gas comparison for different proofs. Image taken from [Relic’s documentation](https://docs.relicprotocol.com/overview/comparison).](img/blog-posts/liveness-2-and-beyond/table-1.jpg)
 
 Gas comparison for different proofs. Image taken from [Relic’s documentation](https://docs.relicprotocol.com/overview/comparison).
 
