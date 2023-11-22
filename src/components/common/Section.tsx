@@ -27,8 +27,6 @@ const StyledSectionBackground = styled.div<{
   position: absolute;
   width: ${SPACING_530};
   z-index: 0;
-  // right: -calc((100vw - var(--page-max-width)) / 4);
-  // right: calc((100vw - 100%) * -1);
 
   ${({ align }) =>
     align === 'left' &&
