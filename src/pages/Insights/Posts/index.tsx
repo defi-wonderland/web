@@ -38,7 +38,11 @@ export function Posts() {
   return (
     <CSSTransition in={!!blog} classNames='fade' timeout={200} appear unmountOnExit>
       <>
-        <DocumentHead name={blogData?.name} description={blogData?.description} />
+        <DocumentHead
+          name={blogData?.name}
+          description={blogData?.description}
+          image={`blog-posts/${blogData?.id}/cover.jpg`}
+        />
 
         <Title>{blogData?.name}</Title>
         <BackgroundImage type='3' align='center' />
