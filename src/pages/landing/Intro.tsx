@@ -25,7 +25,7 @@ export default function IntroductionPage() {
   }, [client]);
 
   useEffect(() => {
-    const showBackground = localStorage.getItem('introLoaded') || '';
+    const showBackground = sessionStorage.getItem('introLoaded') || '';
     if (showBackground === 'true') {
       setIsIntroLoaded(true);
     }

@@ -5,7 +5,7 @@ import rehypeKatex from 'rehype-katex';
 import rehypeRaw from 'rehype-raw';
 import ReactMarkdown from 'react-markdown';
 import { CSSTransition } from 'react-transition-group';
-import type { InferGetStaticPropsType, GetStaticPaths } from 'next';
+import type { InferGetStaticPropsType } from 'next';
 
 import posts from '~/data/blog.json';
 import { MOBILE_MAX_WIDTH, SectionBackground } from '~/components/common';
@@ -30,35 +30,29 @@ export const getStaticProps = async (context: { params: { post: string } }) => {
 };
 
 export default function Posts({ path }: InferGetStaticPropsType<typeof getStaticProps>) {
-  const [blog, setBlog] = useState('');
-  const [name, setName] = useState('');
-  const [date, setDate] = useState('');
   const id = path;
+  const postData = posts.filter((post) => post.id === path)[0];
 
-  const title = posts.filter((post) => post.id === path)[0]?.name;
+  const [blog, setBlog] = useState('');
 
   useEffect(() => {
     fetch(`/blog-posts/${id}.md`)
       .then((response) => response.text())
       .then((data) => {
-        const post = posts.filter((post) => post.id == id);
-        setName(post[0].name);
-        setDate(post[0].date);
-
         setBlog(data);
       });
   }, []);
 
   return (
     <>
-      <Meatadata title={title} image={`/img/blog-posts/${id}/cover.jpg`} />
+      <Meatadata title={postData?.name} image={`/img/blog-posts/${id}/cover.jpg`} description={postData?.description} />
       <CSSTransition in={!!blog} classNames='fade' timeout={200} appear unmountOnExit>
         <>
-          <Title>{name}</Title>
+          <Title>{postData?.name}</Title>
           <BackgroundImage type='3' align='center' />
           <Background>
             <Content>
-              <Date>{date}</Date>
+              <Date>{postData?.date}</Date>
               <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex, rehypeRaw]}>
                 {blog}
               </ReactMarkdown>

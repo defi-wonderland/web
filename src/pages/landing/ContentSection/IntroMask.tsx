@@ -21,7 +21,7 @@ export default function Intro({ showBackground, setShowBackground, ...props }: I
 
   useEffect(() => {
     if (activateDragEffect) {
-      localStorage.setItem('introLoaded', 'true');
+      sessionStorage.setItem('introLoaded', 'true');
       setShowBackground(true);
     }
   }, [activateDragEffect, setShowBackground]);

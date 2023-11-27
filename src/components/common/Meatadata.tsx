@@ -11,10 +11,11 @@ const Meatadata = ({ title, description, image }: MetadataProps) => {
     : 'Wonderland is the largest core development group in Web3. We partner up with the best protocols in the world, including, among others: Optimism, Connext, and Reflexer.';
 
   const imageText = image ? image : 'share.jpg';
+
   return (
     <Head>
       <title>{`${title} - Wonderland`}</title>
-      <link rel='icon' type='image/svg+xml' href='favicon.svg' />
+      <link rel='icon' type='image/svg+xml' href='./favicon.svg' />
       <meta name='description' content={descriptionText} />
       <meta name='author' content='Wonderland' />
       <meta
