@@ -2,7 +2,6 @@
 import withVideos from 'next-videos';
 
 const nextConfig = {
-  swcMinify: true,
   compiler: {
     styledComponents: { ssr: true },
   },
