@@ -14,7 +14,7 @@ His vehicle is now a mangled wreck, and he is trapped inside, immobile. The spec
 
 You feel the crushing weight of your mortality bearing down on you. He was a racer, just like you. An individual who existed solely for the thrill of the competition. Yet, that very thrill has brought about his demise.
 
-![](img/blog-posts/a-mev-racing-story/route.jpg)
+![](../img/blog-posts/a-mev-racing-story/route.jpg)
 
 The Merge event in Ethereum has unleashed a host of dangers in the [Ethereum Dark Forest](https://www.paradigm.xyz/2020/08/ethereum-is-a-dark-forest). These beasts now roam the woods, waiting for unsuspecting victims to fall into their trap. The [recent attack](https://twitter.com/samczsun/status/1642848556590723075) on MEV bots was likely just the first of many such events, and we can expect more to come.
 
@@ -32,7 +32,7 @@ To understand what led to the current situation, it is essential to comprehend t
 
 In summary, PBS distinguishes the two roles responsible for generating new blocks in the blockchain network: the Proposer and the Builder. One noteworthy aspect of this separation is the ability of validators to use Blind blocks. This technique enables validators to sign a block's header without viewing its contents, making the signature valid for the entire block once it is revealed. The [Flashbots MEV-Boost](https://ethresear.ch/t/mev-boost-merge-ready-flashbots-architecture/11177?u=benjaminion) design leverages this technique to provide a fair and efficient way for miners to extract value from the mempool.
 
-![](img/blog-posts/a-mev-racing-story/graph-1.jpg)
+![](../img/blog-posts/a-mev-racing-story/graph-1.jpg)
 
 _How was the proposer able to view the content of the block if Flashbots relay uses Blind blocks?_
 
@@ -72,7 +72,7 @@ Although the recent patches have reduced the risk of attacks, it has not entirel
    4. If attester majority is reached for the first block from the proposer, all transactions from the Flashbots block will be vulnerable for replaying, since they are not part of the chain.
    5. The proposer modifies the Flashbots block, extracts value, and proposes the modified block on his consecutive slot.
 
-![](img/blog-posts/a-mev-racing-story/meme.jpg)
+![](../img/blog-posts/a-mev-racing-story/meme.jpg)
 
 The chances of a malicious validator winning a race in the same block are “““low”””. However, multiblock attacks are a **very real and serious concern**. Validators from large validator pools, such as Coinbase, Binance, Lido, and Rocketpool, hold a significant portion of the validator power. There is a [high probability](https://alrevuelta.github.io/posts/ethereum-mev-multiblock) that stakers will propose multiple blocks in a row, and coordination among validators is also possible if the potential reward is significant. This was also one of the main reasons we built [PRICE](https://oracles.rip), an oracle that is able to detect and correct [TWAP multiblock manipulations](https://www.notion.so/Oracle-Manipulation-101-cbcea67b7796496995437907d3b1b4ba?pvs=21).
 
@@ -102,7 +102,7 @@ Suppose the attacker paid an average price of **`pi`** (price of STG/WETH) for t
 
 [Amount in and out (bot) and reserves post swap (bot)](https://etherscan.io/tx/0xd2edf726fd3a7f179c1a93343e5c0c6ed13417837deb6fc61601d1ce9380e8dc#eventlog):
 
-![](img/blog-posts/a-mev-racing-story/amount.jpg)
+![](../img/blog-posts/a-mev-racing-story/amount.jpg)
 
 We assume the pool was initially on equilibrium. If not, the attacker can profit even further. This means `pi=p0`. Notice `p0=ypre/xpre` (where `xpre` are the `reserve0` before the victim’s swap and `ypre` are the `reserve1` before the victim’s swap). We want to know now how much must the attacker input in order to bring the pool back to the initial price `pi`. The attacker will input STG (x) and output WETH (y) in the back-run transaction. Let’s use the constant product formula and find how much should the attacker input to bring the pool back to the initial price `pi`:
 
@@ -136,7 +136,7 @@ def attack(x,y,xpre,ypre):
 
 The ideal parameters for the STG/WETH pool attack would have been to input approximately 4.53 STG and output around 2454.10 WETH, resulting in a profit of around 2454.09 WETH or around 4.7M USD at the current value. However, the attacker's actual input was larger and their return was slightly smaller due to fees. It is possible that the attacker had prepared this attack beforehand, as the difference between the ideal and actual parameters is small.
 
-![](img/blog-posts/a-mev-racing-story/amount-2.jpg)
+![](../img/blog-posts/a-mev-racing-story/amount-2.jpg)
 
 You can play around and change the variables in the following colab file:
 
