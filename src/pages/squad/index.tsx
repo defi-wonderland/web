@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import SquadSection from './SquadSection';
 
 import {
   Ball,
@@ -9,6 +8,7 @@ import {
   SPACING_1152,
   SPACING_384,
 } from '~/components/common';
+import SquadSection from './SquadSection';
 import Meatadata from '~/components/common/Meatadata';
 
 const Squad = () => {

@@ -10,24 +10,6 @@ import { TitleContainer } from '../landing/HeroSection';
 import StarIcon from '~/public/img/footer/star-icon.svg';
 import Meatadata from '~/components/common/Meatadata';
 
-const BlogTitleContainer = styled(TitleContainer)`
-  & video {
-    max-width: 450px;
-  }
-
-  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
-    padding-top: 5rem;
-    & video {
-      max-width: 300px;
-    }
-  }
-`;
-
-export const Star = styled.img.attrs({ loading: 'lazy' })`
-  width: 3.2rem;
-  pointer-events: none;
-`;
-
 export default function Insights() {
   const router = useRouter();
 
@@ -79,6 +61,24 @@ export default function Insights() {
     </>
   );
 }
+
+const BlogTitleContainer = styled(TitleContainer)`
+  & video {
+    max-width: 450px;
+  }
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    padding-top: 5rem;
+    & video {
+      max-width: 300px;
+    }
+  }
+`;
+
+const Star = styled.img.attrs({ loading: 'lazy' })`
+  width: 3.2rem;
+  pointer-events: none;
+`;
 
 const PageContainer = styled.div`
   position: relative;

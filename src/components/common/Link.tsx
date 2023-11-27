@@ -1,5 +1,4 @@
 import { FC } from 'react';
-// import { Link as RouterLink, LinkProps as RouterLinkProps } from 'react-router-dom';
 import styled, { css } from 'styled-components';
 import Link from 'next/link';
 

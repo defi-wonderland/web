@@ -10,16 +10,16 @@ import {
   SectionBackground,
   TABLET_MAX_WIDTH,
 } from '~/components/common';
-
+import { SLink } from '~/components/common';
+import ProjectsList from '~/pages/creations/ProjectsList';
 import RightCard from './RightCard';
 import Squad from './SquadSection';
+
+import { partnerProjects } from '~/data/projects.json';
 import StarIcon from '~/public/img/footer/star-icon.svg';
+import ConeBackground from '~/assets/landing_bg.png';
 import MobileStar from '~/assets/ethos-stars.svg';
 import Flower from '~/assets/flower.svg';
-import ConeBackground from '~/assets/landing_bg.png';
-import { SLink } from '~/components/common';
-import { partnerProjects } from '~/data/projects.json';
-import ProjectsList from '~/pages/creations/ProjectsList';
 
 export default function LandingContent() {
   const projectList = partnerProjects ? partnerProjects.slice(0, 3) : [];

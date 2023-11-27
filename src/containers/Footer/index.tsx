@@ -13,7 +13,7 @@ import {
   FooterTitle,
   ButtonsContainer,
 } from './Footer.styles';
-import WonderLogoIcon from '~/assets/Logo.png'; //'~/assets/Logo.png';
+import WonderLogoIcon from '~/assets/Logo.png';
 import StarIcon from '~/public/img/footer/star-icon.svg';
 import TwitterIcon from '~/public/img/footer/twitter-icon.svg';
 import GithubIcon from '~/public/img/footer/github-icon.svg';

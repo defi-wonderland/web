@@ -1,7 +1,5 @@
-'use client';
-
 import styled from 'styled-components';
-import { TitleContainer as TitleVideoBase } from '../landing/HeroSection';
+
 import {
   Ball,
   GradientTitle,
@@ -10,8 +8,8 @@ import {
   SPACING_128,
   TABLET_MAX_WIDTH,
 } from '~/components/common';
-
 import ProjectsList from './ProjectsList';
+import { TitleContainer as TitleVideoBase } from '~/pages/landing/HeroSection';
 import { partnerProjects, publicGoods } from '~/data/projects.json';
 import VIDEO_CHROME from '~/assets/videos/creations.webm';
 import VIDEO_SAFARI from '~/assets/videos/creations.mp4';

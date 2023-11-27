@@ -1,12 +1,11 @@
 import '../app/globals.css';
 
 import { AppProps } from 'next/app';
+import styled from 'styled-components';
 
 import StarsBackground from '~/containers/StarsBackground';
 import Navbar from '~/containers/Navbar';
 import Footer from '~/containers/Footer';
-
-import styled from 'styled-components';
 import { MOBILE_MAX_WIDTH } from '~/components/common';
 import StyledPageView from '~/components/common/StyledPageView';
 

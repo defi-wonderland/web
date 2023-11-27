@@ -13,8 +13,8 @@ import {
   TABLET_MAX_WIDTH,
 } from '~/components/common';
 import KEY from '~/assets/join-key.svg';
-import EYE from '~/assets/eye.svg';
 import members from '~/data/squad.json';
+// import EYE from '~/assets/eye.svg';
 
 export default function SquadSection() {
   const hideDescriptions = new Array(members.length).fill(false);
