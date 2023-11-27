@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 
 const getRandomInt = (max: number) => {
@@ -16,10 +17,10 @@ const generateStars = (stars: number) => {
 };
 
 export interface StarsContainerProps {
-  smStars: number;
-  mdStars: number;
-  lgStars: number;
-  zIndex?: number;
+  smstars: number;
+  mdstars: number;
+  lgstars: number;
+  zindex?: number;
 }
 
 const StarsContainer = styled.div<StarsContainerProps>`
@@ -28,13 +29,13 @@ const StarsContainer = styled.div<StarsContainerProps>`
   height: 100%;
   top: 0;
   left: 0;
-  z-index: ${(props) => props.zIndex || 0};
+  z-index: ${(props) => props.zindex || 0};
   pointer-events: none;
 
   & .stars {
     width: 0.1rem;
     height: 0.1rem;
-    box-shadow: ${(props) => generateStars(props.smStars)};
+    box-shadow: ${(props) => generateStars(props.smstars)};
     animation: animStar ${getRandomInt(2000) + 1000}ms linear infinite;
     z-index: 100;
   }
@@ -42,7 +43,7 @@ const StarsContainer = styled.div<StarsContainerProps>`
   & .stars1 {
     width: 0.1rem;
     height: 0.1rem;
-    box-shadow: ${(props) => generateStars(props.smStars)};
+    box-shadow: ${(props) => generateStars(props.smstars)};
     animation: animStar ${getRandomInt(2000) + 1000}ms linear infinite;
     z-index: 100;
   }
@@ -50,7 +51,7 @@ const StarsContainer = styled.div<StarsContainerProps>`
   & .stars2 {
     width: 0.1rem;
     height: 0.1rem;
-    box-shadow: ${(props) => generateStars(props.smStars)};
+    box-shadow: ${(props) => generateStars(props.smstars)};
     animation: animStar ${getRandomInt(2000) + 1000}ms linear infinite;
     z-index: 100;
   }
@@ -58,7 +59,7 @@ const StarsContainer = styled.div<StarsContainerProps>`
   & .stars3 {
     width: 0.1rem;
     height: 0.1rem;
-    box-shadow: ${(props) => generateStars(props.smStars)};
+    box-shadow: ${(props) => generateStars(props.smstars)};
     animation: animStar ${getRandomInt(2000) + 1000}ms linear infinite;
     z-index: 100;
   }
@@ -67,7 +68,7 @@ const StarsContainer = styled.div<StarsContainerProps>`
     width: 0.1rem;
     height: 0.1rem;
 
-    box-shadow: ${(props) => generateStars(props.smStars)};
+    box-shadow: ${(props) => generateStars(props.smstars)};
     animation: animStar ${getRandomInt(2000) + 1000}ms linear infinite;
     z-index: 100;
   }
@@ -76,14 +77,14 @@ const StarsContainer = styled.div<StarsContainerProps>`
     width: 0.2rem;
     height: 0.2rem;
     background: transparent;
-    box-shadow: ${(props) => generateStars(props.mdStars)};
+    box-shadow: ${(props) => generateStars(props.mdstars)};
     animation: animStar 1213ms linear infinite;
   }
   & .stars6 {
     width: 0.3rem;
     height: 0.3rem;
     background: transparent;
-    box-shadow: ${(props) => generateStars(props.lgStars)};
+    box-shadow: ${(props) => generateStars(props.lgstars)};
     animation: animStar2 747ms linear infinite;
   }
 
@@ -120,16 +121,28 @@ interface BackgroundProps {
   zIndex?: number;
 }
 
-export function StarsBackground({ zIndex }: BackgroundProps) {
+export default function StarsBackground({ zIndex }: BackgroundProps) {
+  const [showBackground, setShowBackground] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setShowBackground(true);
+    });
+  }, []);
+
   return (
-    <StarsContainer smStars={700} mdStars={700} lgStars={50} zIndex={zIndex}>
-      <div className='stars'></div>
-      <div className='stars1'></div>
-      <div className='stars2'></div>
-      <div className='stars3'></div>
-      <div className='stars4'></div>
-      <div className='stars5'></div>
-      <div className='stars6'></div>
-    </StarsContainer>
+    <>
+      {showBackground && (
+        <StarsContainer smstars={700} mdstars={700} lgstars={50} zindex={zIndex}>
+          <div className='stars'></div>
+          <div className='stars1'></div>
+          <div className='stars2'></div>
+          <div className='stars3'></div>
+          <div className='stars4'></div>
+          <div className='stars5'></div>
+          <div className='stars6'></div>
+        </StarsContainer>
+      )}
+    </>
   );
 }

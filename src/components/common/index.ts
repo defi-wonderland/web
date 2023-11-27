@@ -7,5 +7,6 @@ export * from './Link';
 export * from './Ring';
 export * from './Section';
 export * from './SectionArticle';
+export * from './StyledPageView';
 export * from './MainTitle';
 export * from './Variables';

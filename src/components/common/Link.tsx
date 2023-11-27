@@ -1,6 +1,7 @@
 import { FC } from 'react';
-import { Link as RouterLink, LinkProps as RouterLinkProps } from 'react-router-dom';
+// import { Link as RouterLink, LinkProps as RouterLinkProps } from 'react-router-dom';
 import styled, { css } from 'styled-components';
+import Link from 'next/link';
 
 const StyledLink = css`
   text-decoration: none;
@@ -15,7 +16,7 @@ const ExternalLink = styled.a`
   }
 `;
 
-const StyledRouterLink = styled(RouterLink)`
+const StyledRouterLink = styled(Link)`
   ${StyledLink}
 
   &:hover {
@@ -23,21 +24,25 @@ const StyledRouterLink = styled(RouterLink)`
   }
 `;
 
-export interface LinkProps extends RouterLinkProps {
+export interface LinkProps {
   external?: boolean;
+  to: string;
+  target?: string;
+  children: React.ReactNode;
+  className?: string;
 }
 
-export const Link: FC<LinkProps> = ({ to, target, external, children, ...props }) => {
+export const SLink: FC<LinkProps> = ({ to, target, external, children, className, ...props }) => {
   if (external) {
     return (
-      <ExternalLink target={target || '_blank'} href={to.toString()} {...props}>
+      <ExternalLink className={className} target={target || '_blank'} href={to.toString()} {...props}>
         {children}
       </ExternalLink>
     );
   }
 
   return (
-    <StyledRouterLink to={to} {...props}>
+    <StyledRouterLink href={to} className={className} {...props}>
       {children}
     </StyledRouterLink>
   );

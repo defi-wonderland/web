@@ -4,7 +4,7 @@ import {
   CONTENT_INDEX,
   FONT_MEDIUM,
   FONT_MEDIUM_L,
-  Link,
+  SLink,
   MOBILE_MAX_WIDTH,
   SectionBackground,
 } from '~/components/common';
@@ -91,7 +91,7 @@ export const FooterSocial = styled.div`
   }
 `;
 
-export const SocialIcon = styled(Link)`
+export const SocialIcon = styled(SLink)`
   display: flex;
   align-items: center;
 `;
@@ -178,7 +178,7 @@ export const VectorContainer = styled.div`
 `;
 
 export const VectorImg = styled.img.attrs({
-  src: MISC,
+  src: MISC.src,
   loading: 'lazy',
   alt: '',
 })`

@@ -31,7 +31,7 @@ jobs:
         run: yarn run build
         id: build
         env:
-          VITE_RPC_URL: ${{ secrets.VITE_RPC_URL }}
+          NEXT_PUBLIC_RPC_URL: ${{ secrets.NEXT_PUBLIC_RPC_URL }}
 
       - uses: amondnet/vercel-action@v25
         id: vercel-deployment

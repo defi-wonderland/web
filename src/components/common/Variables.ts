@@ -3,95 +3,95 @@
 =============================================*/
 
 /*----------  SPACING  ----------*/
-export const SPACING_1152 = () => '115.2rem' as const;
+export const SPACING_1152 = '115.2rem';
 
-export const SPACING_1050 = () => '105rem' as const;
+export const SPACING_1050 = '105rem';
 
-export const SPACING_832 = () => '83.2rem' as const;
+export const SPACING_832 = '83.2rem';
 
-export const SPACING_768 = () => '76.8rem' as const;
+export const SPACING_768 = '76.8rem';
 
-export const SPACING_700 = () => '70rem' as const;
+export const SPACING_700 = '70rem';
 
-export const SPACING_640 = () => '64rem' as const;
+export const SPACING_640 = '64rem';
 
-export const SPACING_530 = () => '53rem' as const;
+export const SPACING_530 = '53rem';
 
-export const SPACING_512 = () => '51.2rem' as const;
+export const SPACING_512 = '51.2rem';
 
-export const SPACING_384 = () => '38.4rem' as const;
+export const SPACING_384 = '38.4rem';
 
-export const SPACING_320 = () => '32rem' as const;
+export const SPACING_320 = '32rem';
 
-export const SPACING_256 = () => '25.6rem' as const;
+export const SPACING_256 = '25.6rem';
 
-export const SPACING_224 = () => '22.4rem' as const;
+export const SPACING_224 = '22.4rem';
 
-export const SPACING_200 = () => '20.0rem' as const;
+export const SPACING_200 = '20.0rem';
 
-export const SPACING_192 = () => '19.2rem' as const;
+export const SPACING_192 = '19.2rem';
 
-export const SPACING_180 = () => '18.0rem' as const;
+export const SPACING_180 = '18.0rem';
 
-export const SPACING_156 = () => '15.6rem' as const;
+export const SPACING_156 = '15.6rem';
 
-export const SPACING_128 = () => '12.8rem' as const;
+export const SPACING_128 = '12.8rem';
 
-export const SPACING_108 = () => '10.8rem' as const;
+export const SPACING_108 = '10.8rem';
 
-export const SPACING_96 = () => '9.6rem' as const;
+export const SPACING_96 = '9.6rem';
 
-export const SPACING_64 = () => '6.4rem' as const;
+export const SPACING_64 = '6.4rem';
 
-export const SPACING_48 = () => '4.8rem' as const;
+export const SPACING_48 = '4.8rem';
 
-export const SPACING_40 = () => '4rem' as const;
+export const SPACING_40 = '4rem';
 
-export const SPACING_32 = () => '3.2rem' as const;
+export const SPACING_32 = '3.2rem';
 
-export const SPACING_28 = () => '2.8rem' as const;
+export const SPACING_28 = '2.8rem';
 
-export const SPACING_24 = () => '2.4rem' as const;
+export const SPACING_24 = '2.4rem';
 
-export const SPACING_16 = () => '1.6rem' as const;
+export const SPACING_16 = '1.6rem';
 
-export const SPACING_12 = () => '1.2rem' as const;
+export const SPACING_12 = '1.2rem';
 
-export const SPACING_8 = () => '0.8rem' as const;
+export const SPACING_8 = '0.8rem';
 
-export const SPACING_4 = () => '0.4rem' as const;
+export const SPACING_4 = '0.4rem';
 
 /*----------  OPACITY  ----------*/
 
-export const OPACITY_HIGH_EMPHASIS = () => '0.87' as const;
+export const OPACITY_HIGH_EMPHASIS = '0.87';
 
-export const OPACITY_MEDIUM_EMPHASIS = () => '0.60' as const;
+export const OPACITY_MEDIUM_EMPHASIS = '0.60';
 
-export const OPACITY_DISABLED = () => '0.38' as const;
+export const OPACITY_DISABLED = '0.38';
 
 /*----------  FONT SIZES  ----------*/
 
-export const FONT_SIZE_384 = () => '3.84rem' as const;
+export const FONT_SIZE_384 = '3.84rem';
 
-export const FONT_SIZE_40 = () => '4rem' as const;
+export const FONT_SIZE_40 = '4rem';
 
-export const FONT_SIZE_32 = () => '3.2rem' as const;
+export const FONT_SIZE_32 = '3.2rem';
 
-export const FONT_SIZE_24 = () => '2.4rem' as const;
+export const FONT_SIZE_24 = '2.4rem';
 
-export const FONT_SIZE_20 = () => '2rem' as const;
+export const FONT_SIZE_20 = '2rem';
 
-export const FONT_SIZE_18 = () => '1.8rem' as const;
+export const FONT_SIZE_18 = '1.8rem';
 
-export const FONT_SIZE_16 = () => '1.6rem' as const;
+export const FONT_SIZE_16 = '1.6rem';
 
-export const FONT_SIZE_12 = () => '1.2rem' as const;
+export const FONT_SIZE_12 = '1.2rem';
 
 /*----------  COLORS  ----------*/
 
-export const COLOR_DANGER = () => '#dc3545' as const;
+export const COLOR_DANGER = '#dc3545';
 
-export const COLOR_SUCCESS = () => '#28a745' as const;
+export const COLOR_SUCCESS = '#28a745';
 
 /*----------  BREAKPOINTS  ----------*/
 

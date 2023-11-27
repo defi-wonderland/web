@@ -4,9 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview",
+    "dev": "next dev",
+    "build": "next build",
+    "preview": "next start",
     "lint": "npx eslint ./src/",
     "lint:fix": "npm run lint -- --fix",
     "prettier": "npx prettier src --check",
@@ -15,20 +15,23 @@
   },
   "dependencies": {
     "fontfaceobserver": "2.3.0",
+    "next": "14.0.3",
+    "next-videos": "1.4.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-draggable": "4.4.5",
-    "react-markdown": "8.0.5",
+    "react-markdown": "9.0.1",
     "react-responsive-carousel": "3.2.23",
     "react-router-dom": "6.8.0",
     "react-transition-group": "4.4.5",
-    "rehype-katex": "6.0.2",
-    "rehype-raw": "6.1.1",
-    "remark-math": "5.1.1",
+    "rehype-katex": "7.0.0",
+    "rehype-raw": "7.0.0",
+    "remark-math": "6.0.0",
     "styled-components": "6.1.1"
   },
   "devDependencies": {
     "@types/fontfaceobserver": "2.1.0",
+    "@types/node": "20.9.5",
     "@types/react": "18.0.15",
     "@types/react-dom": "18.0.6",
     "@types/react-router-dom": "5.3.3",
@@ -36,7 +39,7 @@
     "@types/styled-components": "5.1.25",
     "@typescript-eslint/eslint-plugin": "5.48.1",
     "@typescript-eslint/parser": "5.48.1",
-    "@vitejs/plugin-react": "2.0.0",
+    "babel-plugin-styled-components": "2.1.4",
     "eslint": "8.26.0",
     "eslint-config-prettier": "8.5.0",
     "eslint-plugin-import": "2.26.0",
@@ -45,8 +48,6 @@
     "eslint-plugin-react": "7.32.0",
     "eslint-plugin-react-hooks": "4.6.0",
     "prettier": "2.8.4",
-    "typescript": "4.6.4",
-    "vite": "3.0.0",
-    "vite-tsconfig-paths": "3.5.0"
+    "typescript": "4.6.4"
   }
 }

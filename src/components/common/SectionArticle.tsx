@@ -1,14 +1,8 @@
 import { FC } from 'react';
 import styled from 'styled-components';
 
-import {
-  CONTENT_INDEX,
-  DisplayText,
-  FONT_MEDIUM_L,
-  FONT_SIZE_18,
-  MOBILE_MAX_WIDTH,
-  SPACING_530,
-} from '~/components/common';
+import { CONTENT_INDEX, FONT_MEDIUM_L, FONT_SIZE_18, MOBILE_MAX_WIDTH, SPACING_530 } from './Variables';
+import { DisplayText } from './DisplayText';
 import STAR from '~/assets/ethos-stars.svg';
 
 export const TextContainer = styled.p`
@@ -297,7 +291,7 @@ export interface SectionArticleProps {
   children: any;
 }
 
-const Star = styled.img.attrs({ src: STAR })`
+const Star = styled.img.attrs({ src: STAR.src })`
   position: absolute;
   width: 3.5rem;
   top: 8.3rem;
