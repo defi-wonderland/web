@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "preview": "next start",
+    "start": "next start",
     "lint": "npx eslint ./src/",
     "lint:fix": "npm run lint -- --fix",
     "prettier": "npx prettier src --check",
