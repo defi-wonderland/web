@@ -117,15 +117,11 @@ export const StyledFooter = styled.footer`
   border-radius: 1rem;
   backdrop-filter: blur(8px);
   width: 134rem;
-  max-width: 100%;
+  max-width: calc(100% - 3.2rem);
   height: 47rem;
   z-index: ${CONTENT_INDEX};
 
   @media screen and (max-width: 635px) {
-    & {
-      max-width: calc(100% - 3.2rem);
-    }
-
     ${FooterSocial} {
       flex-direction: column;
       grid-gap: 1rem;
