@@ -5,7 +5,7 @@
     "description": "The current status of on-chain storage proofs",
     "date": "11/17/23",
     "tags": ["Cryptography", "Verification", "Cross-chain"],
-    "image": "img/blog-posts/liveness-2-and-beyond/alice-lq.jpg"
+    "image": "/img/blog-posts/liveness-2-and-beyond/cover.jpg"
   },
   {
     "id": "a-mev-racing-story",
@@ -13,7 +13,7 @@
     "description": "What do we know about the dark forest 2.0?",
     "date": "05/04/23",
     "tags": ["MEV", "Flashbots"],
-    "image": "img/blog-posts/a-mev-racing-story/cover.jpg"
+    "image": "/img/blog-posts/a-mev-racing-story/cover.jpg"
   },
   {
     "id": "oracle-manipulation-101",
@@ -21,7 +21,7 @@
     "description": "What does a Uniswap v3 oracle manipulation look like?",
     "date": "12/26/22",
     "tags": ["Price", "Oracles", "Uniswap V3"],
-    "image": "img/blog-posts/oracle-manipulation-101/cover.jpg"
+    "image": "/img/blog-posts/oracle-manipulation-101/cover.jpg"
   },
   {
     "id": "oracle-manipulation-101-math-edition",
@@ -29,7 +29,7 @@
     "description": "What does a Uniswap v3 oracle manipulation look like?",
     "date": "12/26/22",
     "tags": ["Price", "Oracles", "Uniswap V3", "Math"],
-    "image": "img/blog-posts/oracle-manipulation-101-math/cover.jpg"
+    "image": "/img/blog-posts/oracle-manipulation-101-math/cover.jpg"
   },
   {
     "id": "rip-oracles",
@@ -37,6 +37,6 @@
     "description": "Status quo: Current hazards and how to solve them",
     "date": "12/26/22",
     "tags": ["Price", "Oracles"],
-    "image": "img/blog-posts/rip-oracles/cover.jpg"
+    "image": "/img/blog-posts/rip-oracles/cover.jpg"
   }
 ]
