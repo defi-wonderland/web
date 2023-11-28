@@ -1,14 +1,14 @@
 import styled from 'styled-components';
 import { useRouter } from 'next/navigation';
 
-import { FONT_MEDIUM, FONT_MEDIUM_L, MOBILE_MAX_WIDTH, SectionBackground } from '~/components/common';
+import { FONT_MEDIUM, FONT_MEDIUM_L, MOBILE_MAX_WIDTH, SectionBackground } from '~/components';
 
 import posts from '~/data/blog.json';
 import VIDEO_CHROME from '~/assets/videos/insights.webm';
 import VIDEO_SAFARI from '~/assets/videos/insights.mp4';
 import { TitleContainer } from '../landing/HeroSection';
 import StarIcon from '~/public/img/footer/star-icon.svg';
-import Meatadata from '~/components/common/Meatadata';
+import Meatadata from '~/components/Meatadata';
 
 export default function Insights() {
   const router = useRouter();

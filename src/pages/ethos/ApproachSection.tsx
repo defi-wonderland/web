@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import styled from 'styled-components';
 
-import { DisplayText, MOBILE_MAX_WIDTH, Section, SectionArticle, SectionBackground } from '~/components/common';
+import { DisplayText, MOBILE_MAX_WIDTH, Section, SectionArticle, SectionBackground } from '~/components';
 
 const StepNumber = styled(DisplayText)`
   position: relative;

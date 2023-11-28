@@ -8,8 +8,8 @@ import { CSSTransition } from 'react-transition-group';
 import type { InferGetStaticPropsType } from 'next';
 
 import posts from '~/data/blog.json';
-import { MOBILE_MAX_WIDTH, SectionBackground } from '~/components/common';
-import Meatadata from '~/components/common/Meatadata';
+import { MOBILE_MAX_WIDTH, SectionBackground } from '~/components';
+import Meatadata from '~/components/Meatadata';
 
 const paths = posts.map((post) => ({
   params: {
@@ -41,7 +41,7 @@ export default function Posts({ path }: InferGetStaticPropsType<typeof getStatic
       .then((data) => {
         setBlog(data);
       });
-  }, []);
+  }, [id]);
 
   return (
     <>

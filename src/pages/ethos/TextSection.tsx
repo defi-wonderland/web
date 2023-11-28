@@ -10,7 +10,7 @@ import {
   Section as BaseSection,
   SectionArticle,
   SectionBackground,
-} from '~/components/common';
+} from '~/components';
 
 const LoreSectionArticle = styled(SectionArticle)``;
 

@@ -1,19 +1,12 @@
 import styled from 'styled-components';
 
-import {
-  Ball,
-  GradientTitle,
-  MOBILE_MAX_WIDTH,
-  SectionBackground,
-  SPACING_128,
-  TABLET_MAX_WIDTH,
-} from '~/components/common';
+import { Ball, GradientTitle, MOBILE_MAX_WIDTH, SectionBackground, SPACING_128, TABLET_MAX_WIDTH } from '~/components';
 import ProjectsList from './ProjectsList';
 import { TitleContainer as TitleVideoBase } from '~/pages/landing/HeroSection';
 import { partnerProjects, publicGoods } from '~/data/projects.json';
 import VIDEO_CHROME from '~/assets/videos/creations.webm';
 import VIDEO_SAFARI from '~/assets/videos/creations.mp4';
-import Meatadata from '~/components/common/Meatadata';
+import Meatadata from '~/components/Meatadata';
 
 export default function Creations() {
   return (
@@ -205,8 +198,4 @@ const ProjectsContainer = styled.div`
   @media screen and (max-width: ${TABLET_MAX_WIDTH}) {
     padding: 0;
   }
-`;
-
-const MobileTitleContainer = styled.div`
-  transform: rotate(-3deg);
 `;

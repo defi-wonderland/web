@@ -1,15 +1,8 @@
 import styled from 'styled-components';
 
-import {
-  Ball,
-  CONTENT_INDEX,
-  MOBILE_MAX_WIDTH,
-  SectionBackground,
-  SPACING_1152,
-  SPACING_384,
-} from '~/components/common';
+import { Ball, CONTENT_INDEX, MOBILE_MAX_WIDTH, SectionBackground, SPACING_1152, SPACING_384 } from '~/components';
 import SquadSection from './SquadSection';
-import Meatadata from '~/components/common/Meatadata';
+import Meatadata from '~/components/Meatadata';
 
 const Squad = () => {
   return (

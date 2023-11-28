@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import Draggable from 'react-draggable';
 import styled from 'styled-components';
 
-import { MOBILE_MAX_WIDTH, NAVBAR_HEIGHT, NAVBAR_INDEX } from '~/components/common';
+import { MOBILE_MAX_WIDTH, NAVBAR_HEIGHT, NAVBAR_INDEX } from '~/components';
 
 import LogoImage from '~/assets/Logo.svg';
 import VLINE from '~/assets/dotted_line.svg';

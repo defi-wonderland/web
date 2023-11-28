@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import styled from 'styled-components';
 
-import { Section, MOBILE_MAX_WIDTH } from '~/components/common';
+import { Section, MOBILE_MAX_WIDTH } from '~/components';
 import VIDEO_CHROME from '~/assets/videos/landing.webm';
 import VIDEO_SAFARI from '~/assets/videos/landing.mp4';
 

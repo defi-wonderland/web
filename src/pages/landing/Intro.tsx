@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
-import Landing from './index';
+import Landing from '~/pages/landing';
 import Footer from '~/containers/Footer';
 import StarsBackground from '~/containers/StarsBackground';
 import Navbar from '~/containers/Navbar';
 import Intro from './ContentSection/IntroMask';
-import StyledPageView from '~/components/common/StyledPageView';
+import StyledPageView from '~/components/StyledPageView';
 
 const LandingContainer = styled.div`
   overflow: hidden;

@@ -1,20 +1,72 @@
 import styled from 'styled-components';
 
+import WonderLogoIcon from '~/assets/Logo.png';
+import StarIcon from '~/public/img/footer/star-icon.svg';
+import TwitterIcon from '~/public/img/footer/twitter-icon.svg';
+import GithubIcon from '~/public/img/footer/github-icon.svg';
 import {
+  Button,
   CONTENT_INDEX,
   FONT_MEDIUM,
   FONT_MEDIUM_L,
   SLink,
   MOBILE_MAX_WIDTH,
   SectionBackground,
-} from '~/components/common';
-import MISC from '~/assets/footer_vector.svg';
+} from '~/components';
 
-export const footerColor = 'rgba(255, 255, 255, 0.2)';
-export const footerPaddingRem = 1.5;
-export const footerPadding = `${footerPaddingRem}rem`;
+const Footer = () => (
+  <Container>
+    {/* Background */}
+    <BgContainer>
+      <BackgroundImage type='2' align='center' />
+    </BgContainer>
 
-export const Star = styled.img.attrs({ loading: 'lazy' })`
+    {/* Card */}
+    <StyledFooter>
+      <FooterHeader>
+        <Star src={StarIcon.src} alt='' />
+        <WonderLogoText src={WonderLogoIcon.src} alt='Wonderland logo text' />
+        <Star src={StarIcon.src} alt='' />
+      </FooterHeader>
+
+      <FooterActions>
+        <FooterTitle>We&apos;re all mad here</FooterTitle>
+        <ButtonsContainer>
+          <SLink to='https://docs.google.com/forms/d/1n70jsL4sFkOwPNBTdciPqlWF2RirgQwejjztpS4-2L8/viewform' external>
+            <Button>Join us</Button>
+          </SLink>
+        </ButtonsContainer>
+      </FooterActions>
+
+      <FooterSocial>
+        <span>
+          <span>© 2023. Wonder LTD. </span>
+          <span>All Rights Reserved</span>
+        </span>
+
+        <SocialIcons>
+          <SocialIcon to='https://twitter.com/defi_wonderland' external>
+            <img src={TwitterIcon.src} alt='Twitter icon' loading='lazy' />
+          </SocialIcon>
+          <SocialIcon to='https://github.com/defi-wonderland' external>
+            <img src={GithubIcon.src} alt='Github icon' loading='lazy' />
+          </SocialIcon>
+        </SocialIcons>
+
+        <span></span>
+        {/* <span>Privacy Policy</span> */}
+      </FooterSocial>
+    </StyledFooter>
+  </Container>
+);
+
+export default Footer;
+
+const footerColor = 'rgba(255, 255, 255, 0.2)';
+const footerPaddingRem = 1.5;
+const footerPadding = `${footerPaddingRem}rem`;
+
+const Star = styled.img.attrs({ loading: 'lazy' })`
   width: 3.2rem;
   pointer-events: none;
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
@@ -22,14 +74,14 @@ export const Star = styled.img.attrs({ loading: 'lazy' })`
   }
 `;
 
-export const WonderLogoText = styled.img.attrs({ loading: 'lazy' })`
+const WonderLogoText = styled.img.attrs({ loading: 'lazy' })`
   height: 5rem;
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     height: 3rem;
   }
 `;
 
-export const FooterHeader = styled.div`
+const FooterHeader = styled.div`
   padding: ${footerPaddingRem * 2}rem;
   display: flex;
   align-items: center;
@@ -43,11 +95,7 @@ export const FooterHeader = styled.div`
   }
 `;
 
-export const Plus = styled.img.attrs({ loading: 'lazy' })`
-  width: 1.5rem;
-`;
-
-export const FooterActions = styled.div`
+const FooterActions = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -69,7 +117,7 @@ export const FooterActions = styled.div`
   }
 `;
 
-export const FooterSocial = styled.div`
+const FooterSocial = styled.div`
   display: flex;
   align-items: center;
   grid-gap: 7rem;
@@ -91,12 +139,12 @@ export const FooterSocial = styled.div`
   }
 `;
 
-export const SocialIcon = styled(SLink)`
+const SocialIcon = styled(SLink)`
   display: flex;
   align-items: center;
 `;
 
-export const SocialIcons = styled.div`
+const SocialIcons = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -105,7 +153,7 @@ export const SocialIcons = styled.div`
   margin-top: 2rem;
 `;
 
-export const StyledFooter = styled.footer`
+const StyledFooter = styled.footer`
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -129,7 +177,7 @@ export const StyledFooter = styled.footer`
   }
 `;
 
-export const BackgroundImage = styled(SectionBackground)`
+const BackgroundImage = styled(SectionBackground)`
   position: absolute;
   width: 120%;
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
@@ -137,7 +185,7 @@ export const BackgroundImage = styled(SectionBackground)`
   }
 `;
 
-export const BgContainer = styled.div`
+const BgContainer = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
@@ -148,7 +196,7 @@ export const BgContainer = styled.div`
   overflow: hidden;
 `;
 
-export const Container = styled.div`
+const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -161,29 +209,7 @@ export const Container = styled.div`
   }
 `;
 
-export const VectorContainer = styled.div`
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  z-index: -1;
-`;
-
-export const VectorImg = styled.img.attrs({
-  src: MISC.src,
-  loading: 'lazy',
-  alt: '',
-})`
-  position: relative;
-  width: 220px;
-  height: 270px;
-`;
-
-export const FooterTitle = styled.h1`
+const FooterTitle = styled.h1`
   text-transform: uppercase;
   font-family: SharpGrotesk-10;
   font-size: 8rem;
@@ -195,7 +221,7 @@ export const FooterTitle = styled.h1`
   }
 `;
 
-export const ButtonsContainer = styled.div`
+const ButtonsContainer = styled.div`
   display: flex;
   flex-direction: row;
 `;

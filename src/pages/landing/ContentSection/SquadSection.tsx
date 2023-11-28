@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import styled from 'styled-components';
 
-import { FONT_DISPLAY, FONT_MEDIUM_L, MOBILE_MAX_WIDTH } from '~/components/common';
+import { FONT_DISPLAY, FONT_MEDIUM_L, MOBILE_MAX_WIDTH } from '~/components';
 
 import Crown from '~/assets/crown_icon.svg';
 import Key from '~/assets/key.png';
@@ -98,31 +98,6 @@ const Keyhole = styled.img.attrs({ loading: 'lazy', alt: '' })`
   top: 1rem;
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     height: 24rem;
-  }
-`;
-
-const ButtonsContainer = styled.div`
-  width: 19rem;
-  height: 7.2rem;
-  display: flex;
-  justify-content: space-between;
-  margin: 3rem auto;
-
-  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
-    width: 16rem;
-    margin: 0rem auto;
-  }
-`;
-
-const ArrowIcon = styled.img.attrs({ loading: 'lazy', alt: '' })`
-  cursor: pointer;
-
-  &:hover {
-    opacity: 0.8;
-  }
-
-  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
-    width: 6rem;
   }
 `;
 

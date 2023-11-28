@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Button, FONT_MEDIUM_L, SLink, MOBILE_MAX_WIDTH } from '~/components/common';
+import { Button, FONT_MEDIUM_L, SLink, MOBILE_MAX_WIDTH } from '~/components';
 
 export const CardContainer = styled.div`
   width: 42rem;

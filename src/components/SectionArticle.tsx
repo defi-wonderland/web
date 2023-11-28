@@ -1,9 +1,40 @@
-import { FC } from 'react';
 import styled from 'styled-components';
 
 import { CONTENT_INDEX, FONT_MEDIUM_L, FONT_SIZE_18, MOBILE_MAX_WIDTH, SPACING_530 } from './Variables';
 import { DisplayText } from './DisplayText';
+
 import STAR from '~/assets/ethos-stars.svg';
+
+export interface SectionArticleProps {
+  title: string;
+  center?: boolean;
+  children: any;
+}
+
+const Star = styled.img.attrs({ src: STAR.src })`
+  position: absolute;
+  width: 3.5rem;
+  top: 8.3rem;
+  pointer-events: none;
+`;
+
+export const SectionArticle = ({ title, center, children, ...props }: SectionArticleProps) => {
+  return (
+    <StyledSectionArticle center={center} {...props}>
+      <ArticleTitle gradient>
+        <Star className='base-star' />
+        <Star className='bottom-star' />
+        <TextContainer>
+          <Star className='mid-star' />
+          <Star className='last-star' />
+          {title}
+        </TextContainer>
+      </ArticleTitle>
+
+      {children}
+    </StyledSectionArticle>
+  );
+};
 
 export const TextContainer = styled.p`
   color: inherit;
@@ -284,34 +315,3 @@ const StyledSectionArticle = styled.div<{ center?: boolean }>`
     }
   `}
 `;
-
-export interface SectionArticleProps {
-  title: string;
-  center?: boolean;
-  children: any;
-}
-
-const Star = styled.img.attrs({ src: STAR.src })`
-  position: absolute;
-  width: 3.5rem;
-  top: 8.3rem;
-  pointer-events: none;
-`;
-
-export const SectionArticle: FC<SectionArticleProps> = ({ title, center, children, ...props }) => {
-  return (
-    <StyledSectionArticle center={center} {...props}>
-      <ArticleTitle gradient>
-        <Star className='base-star' />
-        <Star className='bottom-star' />
-        <TextContainer>
-          <Star className='mid-star' />
-          <Star className='last-star' />
-          {title}
-        </TextContainer>
-      </ArticleTitle>
-
-      {children}
-    </StyledSectionArticle>
-  );
-};

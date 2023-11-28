@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { MOBILE_MAX_WIDTH } from '../common';
+import { MOBILE_MAX_WIDTH } from '~/components';
 
 const StyledPageContent = styled.section`
   display: flex;

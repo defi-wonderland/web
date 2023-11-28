@@ -1,4 +1,4 @@
-import '../app/globals.css';
+import '~/app/globals.css';
 
 import { AppProps } from 'next/app';
 import styled from 'styled-components';
@@ -6,14 +6,16 @@ import styled from 'styled-components';
 import StarsBackground from '~/containers/StarsBackground';
 import Navbar from '~/containers/Navbar';
 import Footer from '~/containers/Footer';
-import { MOBILE_MAX_WIDTH } from '~/components/common';
-import StyledPageView from '~/components/common/StyledPageView';
+import { MOBILE_MAX_WIDTH } from '~/components';
+import StyledPageView from '~/components/StyledPageView';
+import { useRouter } from 'next/router';
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
+  const router = useRouter();
   return (
     <StyledPageView>
       <StarsBackground />
-      <Navbar />
+      <Navbar pathname={router.pathname} />
       <StyledPageContent>
         <Component {...pageProps}></Component>
       </StyledPageContent>

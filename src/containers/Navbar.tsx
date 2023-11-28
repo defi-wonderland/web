@@ -4,17 +4,11 @@ import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import styled from 'styled-components';
 
-import {
-  FONT_SIZE_20,
-  SLink,
-  MOBILE_MAX_WIDTH,
-  NAVBAR_HEIGHT,
-  NAVBAR_INDEX,
-  TABLET_MAX_WIDTH,
-} from '~/components/common';
+import { FONT_SIZE_20, SLink, MOBILE_MAX_WIDTH, NAVBAR_HEIGHT, NAVBAR_INDEX, TABLET_MAX_WIDTH } from '~/components';
 
 import wonderLogo from '~/public/img/wonder-logo.svg';
 import menuIcon from '~/assets/menu_icon.svg';
+
 interface NavLink {
   name: string;
   url: string;
@@ -46,12 +40,12 @@ const navLinks: NavLink[] = [
 
 interface NavbarProps {
   className?: string;
+  pathname?: string;
 }
 
-const Navbar = ({ className }: NavbarProps) => {
+const Navbar = ({ className, pathname }: NavbarProps) => {
   const [showNavbar, setShowNavbar] = useState(false);
   const [navLink, setNavLink] = useState(navLinks);
-  const location = typeof window !== 'undefined' ? window.location : undefined;
 
   const resetValues = () => {
     // reset values
@@ -65,12 +59,12 @@ const Navbar = ({ className }: NavbarProps) => {
   };
 
   useEffect(() => {
-    if (location) {
+    if (pathname) {
       const newNavLink = resetValues();
       let index: number | undefined;
 
       newNavLink.forEach((link, i) => {
-        if (link.url === location.pathname) {
+        if (link.url === pathname) {
           index = i;
         }
       });
@@ -79,7 +73,8 @@ const Navbar = ({ className }: NavbarProps) => {
       setShowNavbar(false);
       setNavLink(newNavLink);
     }
-  }, [location]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [pathname]);
 
   return (
     <StyledNavbar id={showNavbar ? 'show' : ''} className={className}>
@@ -101,7 +96,7 @@ const Navbar = ({ className }: NavbarProps) => {
           <NavLink
             to={link.url}
             key={link.name}
-            disabled={link.disabled && !location?.pathname.includes('/insights/')}
+            disabled={link.disabled && pathname?.includes('/insights/')}
             className={link.disabled ? 'gradient' : ''}
           >
             <div id={showNavbar ? '' : 'hide'}>{link.name}</div>

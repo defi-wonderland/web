@@ -9,8 +9,8 @@ import {
   PAGE_MAX_WIDTH,
   SectionBackground,
   TABLET_MAX_WIDTH,
-} from '~/components/common';
-import { SLink } from '~/components/common';
+} from '~/components';
+import { SLink } from '~/components';
 import ProjectsList from '~/pages/creations/ProjectsList';
 import RightCard from './RightCard';
 import Squad from './SquadSection';

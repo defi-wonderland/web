@@ -11,7 +11,7 @@ import {
   MOBILE_MAX_WIDTH,
   SPACING_320,
   TABLET_MAX_WIDTH,
-} from '~/components/common';
+} from '~/components';
 import KEY from '~/assets/join-key.svg';
 import members from '~/data/squad.json';
 // import EYE from '~/assets/eye.svg';

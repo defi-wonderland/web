@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { CSSTransition } from 'react-transition-group';
 import styled from 'styled-components';
 
-import { FONT_MEDIUM, FONT_MEDIUM_L, FONT_SIZE_24, SLink, MOBILE_MAX_WIDTH } from '~/components/common';
+import { FONT_MEDIUM, FONT_MEDIUM_L, FONT_SIZE_24, SLink, MOBILE_MAX_WIDTH } from '~/components';
 import circle from '~/assets/circle.svg';
 import TwitterIcon from '~/public/img/footer/twitter-icon.svg';
 import GithubIcon from '~/public/img/footer/github-icon.svg';
