@@ -44,7 +44,11 @@ export default function SquadSection() {
                     <Position>{member.position}</Position>
                   </NameContainer>
 
-                  {member.image && <SImg src={member.image} alt='twitter icon' />}
+                  {member.image && (
+                    <ImageContainer>
+                      <SImg src={member.image} alt='twitter icon' />
+                    </ImageContainer>
+                  )}
                 </CardFront>
 
                 <CardBack key={member.name} className={`member member-${index} flip-card-back`}>
@@ -121,7 +125,7 @@ const SquadGrid = styled.div`
   max-width: 140rem;
   margin: 100px auto;
   padding: 0 4rem;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 33% 33% 33%;
 
   & .member {
     border-right: 1px solid rgba(255, 255, 255, 0.4);
@@ -169,7 +173,7 @@ const SquadGrid = styled.div`
   }}
 
   @media screen and (max-width: ${TABLET_MAX_WIDTH}) {
-    grid-template-columns: auto auto;
+    grid-template-columns: 50% 50%;
 
     & .member {
       border-right: unset;
@@ -363,58 +367,40 @@ const KeyImage = styled.img.attrs({ src: KEY.src })`
   right: 2rem;
 `;
 
-const Social = styled.div`
+const ImageContainer = styled.div`
   display: flex;
-  align-items: center;
-  justify-content: start;
-`;
-
-const SImg = styled(Image).attrs({
-  height: '160',
-  width: '160',
-})`
+  align-items: end;
+  justify-content: flex-end;
   height: 16rem;
-  width: 16rem;
+  width: 50%;
   position: absolute;
   bottom: 0;
   right: 0;
 
-  -webkit-backface-visibility: hidden; /* Safari */
-  backface-visibility: hidden;
+  img {
+    width: auto !important;
+    position: relative !important;
+  }
 
   @media screen and (max-width: ${TABLET_MAX_WIDTH}) {
-    height: 12rem;
-    width: 12rem;
+    height: calc(100% - 8rem);
+    width: auto;
   }
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
-    height: 10rem;
-    width: 10rem;
+    height: calc(100% - 4.8rem);
+    width: auto;
   }
 `;
 
-// const EyeImage = styled(KeyImage).attrs({
-//   src: EYE.src,
-//   alt: "See description icon",
-// })<{ flipped: boolean }>`
-//   opacity: 0;
-//   bottom: 0;
-//   right: 0;
+const SImg = styled(Image).attrs({
+  fill: true,
+})`
+  object-fit: contain;
+  position: relative;
 
-//   position: absolute;
-//   bottom: 1rem;
-//   right: 1rem;
-//   z-index: 1;
-//   display: ${({ flipped }) => (flipped ? "none" : "unset")};
-
-//   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
-//     opacity: 1;
-//   }
-// `;
-
-// const MemberLink = styled(SLink)`
-//   z-index: 1;
-//   transition: all 200ms linear;
-// `;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+`;
 
 const MemberContainer = styled.div`
   position: relative;
