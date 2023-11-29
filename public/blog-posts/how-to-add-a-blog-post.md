@@ -30,7 +30,7 @@ Ensure correct image paths in your Markdown file. Example:
 
 Add post metadata to `./src/data/blog.json` following this format:
 
-```json
+```js
 {
   "id": "a-mev-racing-story",
   "name": "A (MEV) Racing Story",
