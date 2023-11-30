@@ -31,6 +31,11 @@ export default function IntroductionPage() {
     }
   }, []);
 
+  const handleOnLoad = (e: { target: HTMLImageElement }) => {
+    const image = (e.target as HTMLImageElement).src;
+    image.includes('key_shape') && setIsLoaded(true);
+  };
+
   return (
     <>
       {showIntro && (
@@ -45,14 +50,7 @@ export default function IntroductionPage() {
               {isIntroLoaded && <Footer />}
             </>
           )}
-          <Intro
-            onLoad={(e) => {
-              const image = (e.target as HTMLImageElement).src;
-              image.includes('key_shape') && setIsLoaded(true);
-            }}
-            showBackground={isIntroLoaded}
-            setShowBackground={setIsIntroLoaded}
-          />
+          <Intro onLoad={handleOnLoad} showBackground={isIntroLoaded} setShowBackground={setIsIntroLoaded} />
         </StyledPageView>
       )}
     </>
