@@ -192,7 +192,7 @@ const TitleContainer = styled.div`
 
 const ProjectTitle = styled(GradientTitle)`
   word-wrap: unset;
-  width: 40rem !important;
+  width: 40rem;
 `;
 
 const ProjectsContainer = styled.div`
