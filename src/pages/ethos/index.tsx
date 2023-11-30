@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import { Ball, MOBILE_MAX_WIDTH, SPACING_192, SPACING_512, SPACING_700 } from '~/components';
 import { PageContent } from '~/containers/PageContent';
-import Meatadata from '~/components/Meatadata';
+import CustomHead from '~/components/CustomHead';
 import ApproachSection from './ApproachSection';
 import TextSection from './TextSection';
 
@@ -16,7 +16,7 @@ import { TitleContainer } from '../landing/HeroSection';
 export default function Ethos() {
   return (
     <>
-      <Meatadata title='Ethos' />
+      <CustomHead title='Ethos' />
       <PageContent>
         <HeroDivider>
           <STitleContainer>

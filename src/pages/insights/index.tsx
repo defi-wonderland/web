@@ -8,14 +8,14 @@ import VIDEO_CHROME from '~/assets/videos/insights.webm';
 import VIDEO_SAFARI from '~/assets/videos/insights.mp4';
 import { TitleContainer } from '../landing/HeroSection';
 import StarIcon from '~/public/img/footer/star-icon.svg';
-import Meatadata from '~/components/Meatadata';
+import CustomHead from '~/components/CustomHead';
 
 export default function Insights() {
   const router = useRouter();
 
   return (
     <>
-      <Meatadata title='Insights' />
+      <CustomHead title='Insights' />
       <PageContainer>
         <Title>
           <BlogTitleContainer>

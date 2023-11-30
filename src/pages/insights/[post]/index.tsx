@@ -9,7 +9,7 @@ import type { InferGetStaticPropsType } from 'next';
 
 import posts from '~/data/blog.json';
 import { MOBILE_MAX_WIDTH, SectionBackground } from '~/components';
-import Meatadata from '~/components/Meatadata';
+import CustomHead from '~/components/CustomHead';
 
 const paths = posts.map((post) => ({
   params: {
@@ -45,7 +45,11 @@ export default function Posts({ path }: InferGetStaticPropsType<typeof getStatic
 
   return (
     <>
-      <Meatadata title={postData?.name} image={`/img/blog-posts/${id}/cover.jpg`} description={postData?.description} />
+      <CustomHead
+        title={postData?.name}
+        image={`/img/blog-posts/${id}/cover.jpg`}
+        description={postData?.description}
+      />
       <CSSTransition in={!!blog} classNames='fade' timeout={200} appear unmountOnExit>
         <>
           <Title>{postData?.name}</Title>

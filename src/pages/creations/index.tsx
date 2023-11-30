@@ -1,17 +1,25 @@
 import styled from 'styled-components';
 
-import { Ball, GradientTitle, MOBILE_MAX_WIDTH, SectionBackground, SPACING_128, TABLET_MAX_WIDTH } from '~/components';
+import {
+  Ball,
+  CONTENT_INDEX,
+  GradientTitle,
+  MOBILE_MAX_WIDTH,
+  SectionBackground,
+  SPACING_128,
+  TABLET_MAX_WIDTH,
+} from '~/components';
 import ProjectsList from './ProjectsList';
 import { TitleContainer as TitleVideoBase } from '~/pages/landing/HeroSection';
 import { partnerProjects, publicGoods } from '~/data/projects.json';
 import VIDEO_CHROME from '~/assets/videos/creations.webm';
 import VIDEO_SAFARI from '~/assets/videos/creations.mp4';
-import Meatadata from '~/components/Meatadata';
+import CustomHead from '~/components/CustomHead';
 
 export default function Creations() {
   return (
     <>
-      <Meatadata title='Creations' />
+      <CustomHead title='Creations' />
       <Container>
         <BackgroundContainer>
           <BG_1 type='2' align='center' />
@@ -76,7 +84,7 @@ const HeroDivider = styled.div`
   width: 100%;
   height: 30rem;
   bottom: 0;
-  z-index: 3;
+  z-index: ${CONTENT_INDEX};
   display: flex;
   flex-direction: column;
   justify-content: center;
