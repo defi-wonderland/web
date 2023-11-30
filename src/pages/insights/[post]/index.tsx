@@ -8,8 +8,8 @@ import { CSSTransition } from 'react-transition-group';
 import type { InferGetStaticPropsType } from 'next';
 
 import posts from '~/data/blog.json';
-import { MOBILE_MAX_WIDTH, SectionBackground } from '~/components';
 import CustomHead from '~/components/CustomHead';
+import { MOBILE_MAX_WIDTH, SectionBackground } from '~/components';
 
 const paths = posts.map((post) => ({
   params: {

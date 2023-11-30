@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 import { Ball, CONTENT_INDEX, MOBILE_MAX_WIDTH, SectionBackground, SPACING_1152, SPACING_384 } from '~/components';
-import SquadSection from './SquadSection';
 import CustomHead from '~/components/CustomHead';
+import SquadSection from './SquadSection';
 
 const Squad = () => {
   return (

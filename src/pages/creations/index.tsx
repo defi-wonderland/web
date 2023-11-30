@@ -11,11 +11,11 @@ import {
   TABLET_MAX_WIDTH,
 } from '~/components';
 import ProjectsList from './ProjectsList';
+import CustomHead from '~/components/CustomHead';
 import { TitleContainer as TitleVideoBase } from '~/pages/landing/HeroSection';
 import { partnerProjects, publicGoods } from '~/data/projects.json';
 import VIDEO_CHROME from '~/assets/videos/creations.webm';
 import VIDEO_SAFARI from '~/assets/videos/creations.mp4';
-import CustomHead from '~/components/CustomHead';
 
 export default function Creations() {
   return (
