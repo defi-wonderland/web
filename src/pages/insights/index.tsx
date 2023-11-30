@@ -25,26 +25,32 @@ export default function Insights() {
             </video>
           </BlogTitleContainer>
         </Title>
+
         <BgContainer>
           <BackgroundImage type='1' align='center' />
         </BgContainer>
+
         <BlogsContainer>
           {posts.map((post) => (
             <BlogPost key={post.id} onClick={() => router.push(`/insights/${post.id}`)}>
               <Image src={post.image} alt='' />
+
               <PostTitle>
                 <Star src={StarIcon.src} alt='' />
                 <h1>{post.name}</h1>
                 <Star src={StarIcon.src} alt='' />
               </PostTitle>
+
               <DetailsContainer>
                 <DescriptionContainer>
                   <p>{post.description}</p>
                 </DescriptionContainer>
+
                 <BlogFooter>
                   <Date>
                     <p>{post.date}</p>
                   </Date>
+
                   <TagsContainer>
                     {post.tags.map((tag) => (
                       <Tag key={tag}>
