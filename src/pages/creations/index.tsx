@@ -1,17 +1,26 @@
 import styled from 'styled-components';
 
-import { Ball, GradientTitle, MOBILE_MAX_WIDTH, SectionBackground, SPACING_128, TABLET_MAX_WIDTH } from '~/components';
+import {
+  AnimatedTitle,
+  Ball,
+  CONTENT_INDEX,
+  GradientTitle,
+  MOBILE_MAX_WIDTH,
+  SectionBackground,
+  SPACING_128,
+  TABLET_MAX_WIDTH,
+} from '~/components';
 import ProjectsList from './ProjectsList';
+import CustomHead from '~/components/CustomHead';
 import { TitleContainer as TitleVideoBase } from '~/pages/landing/HeroSection';
 import { partnerProjects, publicGoods } from '~/data/projects.json';
 import VIDEO_CHROME from '~/assets/videos/creations.webm';
 import VIDEO_SAFARI from '~/assets/videos/creations.mp4';
-import Meatadata from '~/components/Meatadata';
 
 export default function Creations() {
   return (
     <>
-      <Meatadata title='Creations' />
+      <CustomHead title='Creations' />
       <Container>
         <BackgroundContainer>
           <BG_1 type='2' align='center' />
@@ -20,10 +29,7 @@ export default function Creations() {
         </BackgroundContainer>
         <HeroDivider>
           <TitleVideo>
-            <video autoPlay loop muted playsInline>
-              <source src={VIDEO_CHROME} type='video/webm' />
-              <source src={VIDEO_SAFARI} type='video/mp4; codecs="hvc1"' />
-            </video>
+            <AnimatedTitle chromeSrc={VIDEO_CHROME} safariSrc={VIDEO_SAFARI} />
           </TitleVideo>
           <Ball_1 />
           <Ball_2 />
@@ -76,7 +82,7 @@ const HeroDivider = styled.div`
   width: 100%;
   height: 30rem;
   bottom: 0;
-  z-index: 3;
+  z-index: ${CONTENT_INDEX};
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -184,7 +190,7 @@ const TitleContainer = styled.div`
 
 const ProjectTitle = styled(GradientTitle)`
   word-wrap: unset;
-  width: 40rem !important;
+  width: 40rem;
 `;
 
 const ProjectsContainer = styled.div`

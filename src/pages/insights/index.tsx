@@ -1,50 +1,57 @@
 import styled from 'styled-components';
 import { useRouter } from 'next/navigation';
 
-import { FONT_MEDIUM, FONT_MEDIUM_L, MOBILE_MAX_WIDTH, SectionBackground } from '~/components';
+import { AnimatedTitle, FONT_MEDIUM, FONT_MEDIUM_L, MOBILE_MAX_WIDTH, SectionBackground } from '~/components';
+import CustomHead from '~/components/CustomHead';
 
 import posts from '~/data/blog.json';
 import VIDEO_CHROME from '~/assets/videos/insights.webm';
 import VIDEO_SAFARI from '~/assets/videos/insights.mp4';
 import { TitleContainer } from '../landing/HeroSection';
 import StarIcon from '~/public/img/footer/star-icon.svg';
-import Meatadata from '~/components/Meatadata';
 
 export default function Insights() {
   const router = useRouter();
 
+  const handleOnClick = (id: string) => {
+    router.push(`/insights/${id}`);
+  };
+
   return (
     <>
-      <Meatadata title='Insights' />
+      <CustomHead title='Insights' />
       <PageContainer>
         <Title>
           <BlogTitleContainer>
-            <video autoPlay loop muted playsInline>
-              <source src={VIDEO_CHROME} type='video/webm' />
-              <source src={VIDEO_SAFARI} type='video/mp4; codecs="hvc1"' />
-            </video>
+            <AnimatedTitle chromeSrc={VIDEO_CHROME} safariSrc={VIDEO_SAFARI} />
           </BlogTitleContainer>
         </Title>
+
         <BgContainer>
           <BackgroundImage type='1' align='center' />
         </BgContainer>
+
         <BlogsContainer>
           {posts.map((post) => (
-            <BlogPost key={post.id} onClick={() => router.push(`/insights/${post.id}`)}>
+            <BlogPost key={post.id} onClick={() => handleOnClick(post.id)}>
               <Image src={post.image} alt='' />
+
               <PostTitle>
                 <Star src={StarIcon.src} alt='' />
                 <h1>{post.name}</h1>
                 <Star src={StarIcon.src} alt='' />
               </PostTitle>
+
               <DetailsContainer>
                 <DescriptionContainer>
                   <p>{post.description}</p>
                 </DescriptionContainer>
+
                 <BlogFooter>
                   <Date>
                     <p>{post.date}</p>
                   </Date>
+
                   <TagsContainer>
                     {post.tags.map((tag) => (
                       <Tag key={tag}>
