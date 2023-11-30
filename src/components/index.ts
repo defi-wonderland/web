@@ -1,3 +1,4 @@
+export * from './AnimatedTitle';
 export * from './AnimationIn';
 export * from './Ball';
 export * from './Button';

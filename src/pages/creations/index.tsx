@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 import {
+  AnimatedTitle,
   Ball,
   CONTENT_INDEX,
   GradientTitle,
@@ -28,10 +29,7 @@ export default function Creations() {
         </BackgroundContainer>
         <HeroDivider>
           <TitleVideo>
-            <video autoPlay loop muted playsInline>
-              <source src={VIDEO_CHROME} type='video/webm' />
-              <source src={VIDEO_SAFARI} type='video/mp4; codecs="hvc1"' />
-            </video>
+            <AnimatedTitle chromeSrc={VIDEO_CHROME} safariSrc={VIDEO_SAFARI} />
           </TitleVideo>
           <Ball_1 />
           <Ball_2 />

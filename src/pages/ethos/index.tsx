@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { Ball, MOBILE_MAX_WIDTH, SPACING_192, SPACING_512, SPACING_700 } from '~/components';
+import { AnimatedTitle, Ball, MOBILE_MAX_WIDTH, SPACING_192, SPACING_512, SPACING_700 } from '~/components';
 import { PageContent } from '~/containers/PageContent';
 import CustomHead from '~/components/CustomHead';
 import ApproachSection from './ApproachSection';
@@ -20,12 +20,10 @@ export default function Ethos() {
       <PageContent>
         <HeroDivider>
           <STitleContainer>
-            <video autoPlay loop muted playsInline>
-              <source src={VIDEO_CHROME} type='video/webm' />
-              <source src={VIDEO_SAFARI} type='video/mp4; codecs="hvc1"' />
-            </video>
+            <AnimatedTitle chromeSrc={VIDEO_CHROME} safariSrc={VIDEO_SAFARI} />
           </STitleContainer>
         </HeroDivider>
+
         <BackgroundContainer>
           <SCone src={HoopTop.src} alt='starts background' />
           <SCone src={Cone.src} alt='starts background' />

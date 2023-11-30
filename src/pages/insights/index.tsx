@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { useRouter } from 'next/navigation';
 
-import { FONT_MEDIUM, FONT_MEDIUM_L, MOBILE_MAX_WIDTH, SectionBackground } from '~/components';
+import { AnimatedTitle, FONT_MEDIUM, FONT_MEDIUM_L, MOBILE_MAX_WIDTH, SectionBackground } from '~/components';
 
 import posts from '~/data/blog.json';
 import VIDEO_CHROME from '~/assets/videos/insights.webm';
@@ -13,16 +13,17 @@ import CustomHead from '~/components/CustomHead';
 export default function Insights() {
   const router = useRouter();
 
+  const handleOnClick = (id: string) => {
+    router.push(`/insights/${id}`);
+  };
+
   return (
     <>
       <CustomHead title='Insights' />
       <PageContainer>
         <Title>
           <BlogTitleContainer>
-            <video autoPlay loop muted playsInline>
-              <source src={VIDEO_CHROME} type='video/webm' />
-              <source src={VIDEO_SAFARI} type='video/mp4; codecs="hvc1"' />
-            </video>
+            <AnimatedTitle chromeSrc={VIDEO_CHROME} safariSrc={VIDEO_SAFARI} />
           </BlogTitleContainer>
         </Title>
 
@@ -32,7 +33,7 @@ export default function Insights() {
 
         <BlogsContainer>
           {posts.map((post) => (
-            <BlogPost key={post.id} onClick={() => router.push(`/insights/${post.id}`)}>
+            <BlogPost key={post.id} onClick={() => handleOnClick(post.id)}>
               <Image src={post.image} alt='' />
 
               <PostTitle>
