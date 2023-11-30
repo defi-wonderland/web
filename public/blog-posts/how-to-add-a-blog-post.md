@@ -46,7 +46,10 @@ Add post metadata to `./src/data/blog.json` following this format:
 
 - **Image Optimization:**
 
-  - Use tools like [Squoosh](https://squoosh.app/) or [TinyPNG](https://tinypng.com/) to reduce image size.
+  - Use tools like [Squoosh](https://squoosh.app/) or [TinyPNG](https://tinypng.com/) to reduce image size with the following recommended settings:
+    - Reduce Palette.
+    - Use MozJPEG with 70-75% quality.
+    - Reduce size to max of 1600px.
   - Aim for images under 300kB for optimal performance.
 
 - **Image Formats:**
