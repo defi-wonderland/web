@@ -1,3 +1,4 @@
+import React from 'react';
 import styled from 'styled-components';
 import { useRouter } from 'next/navigation';
 
@@ -33,35 +34,39 @@ export default function Insights() {
 
         <BlogsContainer>
           {posts.map((post) => (
-            <BlogPost key={post.id} onClick={() => handleOnClick(post.id)}>
-              <Image src={post.image} alt='' />
+            <React.Fragment key={post.id}>
+              {post.public && (
+                <BlogPost onClick={() => handleOnClick(post.id)}>
+                  <Image src={post.image} alt='' />
 
-              <PostTitle>
-                <Star src={StarIcon.src} alt='' />
-                <h1>{post.name}</h1>
-                <Star src={StarIcon.src} alt='' />
-              </PostTitle>
+                  <PostTitle>
+                    <Star src={StarIcon.src} alt='' />
+                    <h1>{post.name}</h1>
+                    <Star src={StarIcon.src} alt='' />
+                  </PostTitle>
 
-              <DetailsContainer>
-                <DescriptionContainer>
-                  <p>{post.description}</p>
-                </DescriptionContainer>
+                  <DetailsContainer>
+                    <DescriptionContainer>
+                      <p>{post.description}</p>
+                    </DescriptionContainer>
 
-                <BlogFooter>
-                  <Date>
-                    <p>{post.date}</p>
-                  </Date>
+                    <BlogFooter>
+                      <Date>
+                        <p>{post.date}</p>
+                      </Date>
 
-                  <TagsContainer>
-                    {post.tags.map((tag) => (
-                      <Tag key={tag}>
-                        <strong>{tag}</strong>
-                      </Tag>
-                    ))}
-                  </TagsContainer>
-                </BlogFooter>
-              </DetailsContainer>
-            </BlogPost>
+                      <TagsContainer>
+                        {post.tags.map((tag) => (
+                          <Tag key={tag}>
+                            <strong>{tag}</strong>
+                          </Tag>
+                        ))}
+                      </TagsContainer>
+                    </BlogFooter>
+                  </DetailsContainer>
+                </BlogPost>
+              )}
+            </React.Fragment>
           ))}
         </BlogsContainer>
       </PageContainer>
@@ -276,6 +281,26 @@ const TagsContainer = styled.div`
   flex-direction: row;
   overflow-x: auto;
   overflow-y: hidden;
+
+  &::-webkit-scrollbar {
+    height: 5px;
+    width: 5px;
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #373737;
+    border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: #b3b3b3;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+  }
+
+  &::-webkit-scrollbar-thumb:active {
+    background-color: #999999;
+  }
 `;
 
 const Tag = styled.div`
