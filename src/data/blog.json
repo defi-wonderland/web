@@ -1,5 +1,13 @@
 [
   {
+    "id": "current-state-of-storage-proofs",
+    "name": "The current state of storage proofs",
+    "description": "The current status of on-chain storage proofs",
+    "date": "12/05/23",
+    "tags": ["Cryptography", "Verification", "Cross-chain"],
+    "image": "/img/blog-posts/liveness-2-and-beyond/cover.jpg"
+  },
+  {
     "id": "liveness-2-and-beyond",
     "name": "Liveness 2 and beyond",
     "description": "The current status of on-chain storage proofs",
