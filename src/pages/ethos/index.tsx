@@ -1,6 +1,14 @@
 import styled from 'styled-components';
 
-import { AnimatedTitle, Ball, MOBILE_MAX_WIDTH, SPACING_192, SPACING_512, SPACING_700 } from '~/components';
+import {
+  AnimatedTitle,
+  Ball,
+  ContentContainer,
+  MOBILE_MAX_WIDTH,
+  SPACING_192,
+  SPACING_512,
+  SPACING_700,
+} from '~/components';
 import { PageContent } from '~/containers/PageContent';
 import CustomHead from '~/components/CustomHead';
 import ApproachSection from './ApproachSection';
@@ -17,24 +25,27 @@ export default function Ethos() {
   return (
     <>
       <CustomHead title='Ethos' />
-      <PageContent>
-        <HeroDivider>
-          <STitleContainer>
-            <AnimatedTitle chromeSrc={VIDEO_CHROME} safariSrc={VIDEO_SAFARI} />
-          </STitleContainer>
-        </HeroDivider>
 
-        <BackgroundContainer>
-          <SCone src={HoopTop.src} alt='starts background' />
-          <SCone src={Cone.src} alt='starts background' />
-          <SBall />
-          <SHoop src={HoopBottom.src} alt='starts background' />
-        </BackgroundContainer>
+      <ContentContainer>
+        <PageContent>
+          <HeroDivider>
+            <STitleContainer>
+              <AnimatedTitle chromeSrc={VIDEO_CHROME} safariSrc={VIDEO_SAFARI} />
+            </STitleContainer>
+          </HeroDivider>
 
-        <TextSection />
+          <BackgroundContainer>
+            <SCone src={HoopTop.src} alt='starts background' />
+            <SCone src={Cone.src} alt='starts background' />
+            <SBall />
+            <SHoop src={HoopBottom.src} alt='starts background' />
+          </BackgroundContainer>
 
-        <StyledApproachSection />
-      </PageContent>
+          <TextSection />
+
+          <StyledApproachSection />
+        </PageContent>
+      </ContentContainer>
     </>
   );
 }

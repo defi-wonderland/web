@@ -1,6 +1,14 @@
 import styled from 'styled-components';
 
-import { Ball, CONTENT_INDEX, MOBILE_MAX_WIDTH, SectionBackground, SPACING_1152, SPACING_384 } from '~/components';
+import {
+  Ball,
+  CONTENT_INDEX,
+  ContentContainer,
+  MOBILE_MAX_WIDTH,
+  SectionBackground,
+  SPACING_1152,
+  SPACING_384,
+} from '~/components';
 import CustomHead from '~/components/CustomHead';
 import SquadSection from './SquadSection';
 
@@ -8,10 +16,13 @@ const Squad = () => {
   return (
     <>
       <CustomHead title='Squad' />
-      <BackgroundImg type='3' align='center' />
-      <Container>
-        <SquadSection />
-      </Container>
+
+      <ContentContainer>
+        <BackgroundImg type='3' align='center' />
+        <Container>
+          <SquadSection />
+        </Container>
+      </ContentContainer>
     </>
   );
 };

@@ -4,6 +4,7 @@ import {
   AnimatedTitle,
   Ball,
   CONTENT_INDEX,
+  ContentContainer,
   GradientTitle,
   MOBILE_MAX_WIDTH,
   SectionBackground,
@@ -21,37 +22,40 @@ export default function Creations() {
   return (
     <>
       <CustomHead title='Creations' />
-      <Container>
-        <BackgroundContainer>
-          <BG_1 type='2' align='center' />
-          <BG_2 type='1' align='left' />
-          <BG_3 type='2' align='right' />
-        </BackgroundContainer>
-        <HeroDivider>
-          <TitleVideo>
-            <AnimatedTitle chromeSrc={VIDEO_CHROME} safariSrc={VIDEO_SAFARI} />
-          </TitleVideo>
-          <Ball_1 />
-          <Ball_2 />
-          <Ball_3 />
-        </HeroDivider>
 
-        <TitleContainer>
-          <ProjectTitle title='Partner projects' />
-        </TitleContainer>
-        <ProjectsContainer>
-          <Divider />
-          <ProjectsList projects={partnerProjects} />
-        </ProjectsContainer>
+      <ContentContainer>
+        <Container>
+          <BackgroundContainer>
+            <BG_1 type='2' align='center' />
+            <BG_2 type='1' align='left' />
+            <BG_3 type='2' align='right' />
+          </BackgroundContainer>
+          <HeroDivider>
+            <TitleVideo>
+              <AnimatedTitle chromeSrc={VIDEO_CHROME} safariSrc={VIDEO_SAFARI} />
+            </TitleVideo>
+            <Ball_1 />
+            <Ball_2 />
+            <Ball_3 />
+          </HeroDivider>
 
-        <TitleContainer>
-          <ProjectTitle title='Public goods' />
-        </TitleContainer>
-        <ProjectsContainer>
-          <Divider />
-          <ProjectsList projects={publicGoods} />
-        </ProjectsContainer>
-      </Container>
+          <TitleContainer>
+            <ProjectTitle title='Partner projects' />
+          </TitleContainer>
+          <ProjectsContainer>
+            <Divider />
+            <ProjectsList projects={partnerProjects} />
+          </ProjectsContainer>
+
+          <TitleContainer>
+            <ProjectTitle title='Public goods' />
+          </TitleContainer>
+          <ProjectsContainer>
+            <Divider />
+            <ProjectsList projects={publicGoods} />
+          </ProjectsContainer>
+        </Container>
+      </ContentContainer>
     </>
   );
 }

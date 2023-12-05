@@ -1,13 +1,17 @@
 import HeroSection from './HeroSection';
 import LandingContent from './ContentSection';
 import CustomHead from '~/components/CustomHead';
+import { ContentContainer } from '~/components';
 
 export default function Landing() {
   return (
     <>
       <CustomHead title='Home' />
-      <HeroSection />
-      <LandingContent />
+
+      <ContentContainer>
+        <HeroSection />
+        <LandingContent />
+      </ContentContainer>
     </>
   );
 }

@@ -1,6 +1,5 @@
 import '~/app/globals.css';
 
-import { useEffect, useState } from 'react';
 import { AppProps } from 'next/app';
 import styled from 'styled-components';
 
@@ -13,24 +12,15 @@ import { useRouter } from 'next/router';
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   const router = useRouter();
-  const [showContent, setShowContent] = useState(false);
-
-  useEffect(() => {
-    setShowContent(true);
-  }, []);
 
   return (
     <StyledPageView>
-      {showContent && (
-        <>
-          <StarsBackground />
-          <Navbar pathname={router.pathname} />
-          <StyledPageContent>
-            <Component {...pageProps}></Component>
-          </StyledPageContent>
-          <Footer />
-        </>
-      )}
+      <StarsBackground />
+      <Navbar pathname={router.pathname} />
+      <StyledPageContent>
+        <Component {...pageProps}></Component>
+      </StyledPageContent>
+      <Footer />
     </StyledPageView>
   );
 };

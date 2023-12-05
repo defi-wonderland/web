@@ -2,7 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 import { useRouter } from 'next/navigation';
 
-import { AnimatedTitle, FONT_MEDIUM, FONT_MEDIUM_L, MOBILE_MAX_WIDTH, SectionBackground } from '~/components';
+import {
+  AnimatedTitle,
+  ContentContainer,
+  FONT_MEDIUM,
+  FONT_MEDIUM_L,
+  MOBILE_MAX_WIDTH,
+  SectionBackground,
+} from '~/components';
 import CustomHead from '~/components/CustomHead';
 
 import posts from '~/data/blog.json';
@@ -21,55 +28,58 @@ export default function Insights() {
   return (
     <>
       <CustomHead title='Insights' />
-      <PageContainer>
-        <Title>
-          <BlogTitleContainer>
-            <AnimatedTitle chromeSrc={VIDEO_CHROME} safariSrc={VIDEO_SAFARI} />
-          </BlogTitleContainer>
-        </Title>
 
-        <BgContainer>
-          <BackgroundImage type='1' align='center' />
-        </BgContainer>
+      <ContentContainer>
+        <PageContainer>
+          <Title>
+            <BlogTitleContainer>
+              <AnimatedTitle chromeSrc={VIDEO_CHROME} safariSrc={VIDEO_SAFARI} />
+            </BlogTitleContainer>
+          </Title>
 
-        <BlogsContainer>
-          {posts.map((post) => (
-            <React.Fragment key={post.id}>
-              {post.public && (
-                <BlogPost onClick={() => handleOnClick(post.id)}>
-                  <Image src={post.image} alt='' />
+          <BgContainer>
+            <BackgroundImage type='1' align='center' />
+          </BgContainer>
 
-                  <PostTitle>
-                    <Star src={StarIcon.src} alt='' />
-                    <h1>{post.name}</h1>
-                    <Star src={StarIcon.src} alt='' />
-                  </PostTitle>
+          <BlogsContainer>
+            {posts.map((post) => (
+              <React.Fragment key={post.id}>
+                {post.public && (
+                  <BlogPost onClick={() => handleOnClick(post.id)}>
+                    <Image src={post.image} alt='' />
 
-                  <DetailsContainer>
-                    <DescriptionContainer>
-                      <p>{post.description}</p>
-                    </DescriptionContainer>
+                    <PostTitle>
+                      <Star src={StarIcon.src} alt='' />
+                      <h1>{post.name}</h1>
+                      <Star src={StarIcon.src} alt='' />
+                    </PostTitle>
 
-                    <BlogFooter>
-                      <Date>
-                        <p>{post.date}</p>
-                      </Date>
+                    <DetailsContainer>
+                      <DescriptionContainer>
+                        <p>{post.description}</p>
+                      </DescriptionContainer>
 
-                      <TagsContainer>
-                        {post.tags.map((tag) => (
-                          <Tag key={tag}>
-                            <strong>{tag}</strong>
-                          </Tag>
-                        ))}
-                      </TagsContainer>
-                    </BlogFooter>
-                  </DetailsContainer>
-                </BlogPost>
-              )}
-            </React.Fragment>
-          ))}
-        </BlogsContainer>
-      </PageContainer>
+                      <BlogFooter>
+                        <Date>
+                          <p>{post.date}</p>
+                        </Date>
+
+                        <TagsContainer>
+                          {post.tags.map((tag) => (
+                            <Tag key={tag}>
+                              <strong>{tag}</strong>
+                            </Tag>
+                          ))}
+                        </TagsContainer>
+                      </BlogFooter>
+                    </DetailsContainer>
+                  </BlogPost>
+                )}
+              </React.Fragment>
+            ))}
+          </BlogsContainer>
+        </PageContainer>
+      </ContentContainer>
     </>
   );
 }
