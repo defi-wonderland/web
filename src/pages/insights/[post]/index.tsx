@@ -45,11 +45,7 @@ export default function Posts({ path }: InferGetStaticPropsType<typeof getStatic
 
   return (
     <>
-      <CustomHead
-        title={postData?.name}
-        image={`/img/blog-posts/${id}/cover.jpg`}
-        description={postData?.description}
-      />
+      <CustomHead title={postData?.name} image={postData?.image} description={postData?.description} />
 
       <ContentContainer>
         <CSSTransition in={!!blog} classNames='fade' timeout={200} appear unmountOnExit>
