@@ -38,7 +38,11 @@ The app should be live at [http://localhost:5173/](http://localhost:5173/)
 
 ```
 yarn build
-yarn preview
+yarn start
 ```
 
 The app should be live at [http://localhost:4173/](http://localhost:4173/)
+
+## Blog Management
+
+If you want to add a blog post, see [this guide](./public/blog-posts/how-to-add-a-blog-post.md).

@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import Draggable from 'react-draggable';
+import Draggable, { DraggableData, DraggableEvent } from 'react-draggable';
 import styled from 'styled-components';
 
 import { MOBILE_MAX_WIDTH, NAVBAR_HEIGHT, NAVBAR_INDEX } from '~/components';
@@ -26,36 +26,43 @@ export default function Intro({ showBackground, setShowBackground, ...props }: I
     }
   }, [activateDragEffect, setShowBackground]);
 
+  const handleOnStop = (_event: DraggableEvent, node: DraggableData) => {
+    if (node.lastY < -50) {
+      setTimeout(() => {
+        setDragEffect(true);
+      }, 100);
+    }
+  };
+
+  const handleOnDrag = (_event: DraggableEvent, node: DraggableData) => {
+    setBackgroundEffect(-node.y / 350);
+  };
+
   return (
     <IntroContainer className={showBackground ? 'hide-intro' : ''} {...props}>
       <StyledNavbar>
         <Logo src={LogoImage.src} alt='Wonderland logo' backgroundEffect={backgroundEffect} />
       </StyledNavbar>
+
       <KeyContainer>
         <Mask backgroundEffect={backgroundEffect} />
         <Keyhole backgroundEffect={backgroundEffect} />
         <Mask2 backgroundEffect={backgroundEffect} />
 
         <DottedLine backgroundEffect={backgroundEffect} src={VLINE.src} alt='dotted line' />
+
         <Draggable
           axis='y'
           bounds={{ bottom: 0, top: -350 }}
           nodeRef={nodeRef}
-          onStop={(event, node) => {
-            if (node.lastY < -50) {
-              setTimeout(() => {
-                setDragEffect(true);
-              }, 100);
-            }
-          }}
-          onDrag={(event, node) => {
-            setBackgroundEffect(-node.y / 350);
-          }}
+          onStop={handleOnStop}
+          onDrag={handleOnDrag}
         >
           <KeyBox ref={nodeRef} backgroundEffect={backgroundEffect}>
             <Key ref={nodeRef} src={INTROKEY.src} alt='Key icon' />
           </KeyBox>
         </Draggable>
+
         <Text backgroundEffect={backgroundEffect}>Slide the key & step into Wonderland</Text>
       </KeyContainer>
     </IntroContainer>

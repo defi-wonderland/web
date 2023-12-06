@@ -1,13 +1,17 @@
 import HeroSection from './HeroSection';
 import LandingContent from './ContentSection';
-import Meatadata from '~/components/Meatadata';
+import CustomHead from '~/components/CustomHead';
+import { ContentContainer } from '~/components';
 
 export default function Landing() {
   return (
     <>
-      <Meatadata title='Home' />
-      <HeroSection />
-      <LandingContent />
+      <CustomHead title='Home' />
+
+      <ContentContainer>
+        <HeroSection />
+        <LandingContent />
+      </ContentContainer>
     </>
   );
 }

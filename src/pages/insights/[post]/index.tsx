@@ -8,8 +8,8 @@ import { CSSTransition } from 'react-transition-group';
 import type { InferGetStaticPropsType } from 'next';
 
 import posts from '~/data/blog.json';
-import { MOBILE_MAX_WIDTH, SectionBackground } from '~/components';
-import Meatadata from '~/components/Meatadata';
+import CustomHead from '~/components/CustomHead';
+import { ContentContainer, MOBILE_MAX_WIDTH, SectionBackground } from '~/components';
 
 const paths = posts.map((post) => ({
   params: {
@@ -45,21 +45,28 @@ export default function Posts({ path }: InferGetStaticPropsType<typeof getStatic
 
   return (
     <>
-      <Meatadata title={postData?.name} image={`/img/blog-posts/${id}/cover.jpg`} description={postData?.description} />
-      <CSSTransition in={!!blog} classNames='fade' timeout={200} appear unmountOnExit>
-        <>
-          <Title>{postData?.name}</Title>
-          <BackgroundImage type='3' align='center' />
-          <Background>
-            <Content>
-              <Date>{postData?.date}</Date>
-              <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex, rehypeRaw]}>
-                {blog}
-              </ReactMarkdown>
-            </Content>
-          </Background>
-        </>
-      </CSSTransition>
+      <CustomHead
+        title={postData?.name}
+        image={`/img/blog-posts/${id}/cover.jpg`}
+        description={postData?.description}
+      />
+
+      <ContentContainer>
+        <CSSTransition in={!!blog} classNames='fade' timeout={200} appear unmountOnExit>
+          <>
+            <Title>{postData?.name}</Title>
+            <BackgroundImage type='3' align='center' />
+            <Background>
+              <Content>
+                <Date>{postData?.date}</Date>
+                <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex, rehypeRaw]}>
+                  {blog}
+                </ReactMarkdown>
+              </Content>
+            </Background>
+          </>
+        </CSSTransition>
+      </ContentContainer>
     </>
   );
 }

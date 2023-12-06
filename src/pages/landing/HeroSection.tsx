@@ -1,19 +1,15 @@
-import { FC } from 'react';
 import styled from 'styled-components';
 
-import { Section, MOBILE_MAX_WIDTH } from '~/components';
+import { Section, MOBILE_MAX_WIDTH, AnimatedTitle } from '~/components';
 import VIDEO_CHROME from '~/assets/videos/landing.webm';
 import VIDEO_SAFARI from '~/assets/videos/landing.mp4';
 
-const HeroSection: FC = ({ ...props }) => {
+const HeroSection = ({ ...props }) => {
   return (
     <>
       <StyledHeroSection full backgroundImage='/img/hero/hero-bg.jpg' {...props}>
         <TitleContainer>
-          <video autoPlay loop muted playsInline>
-            <source src={VIDEO_CHROME} type='video/webm' />
-            <source src={VIDEO_SAFARI} type='video/mp4; codecs="hvc1"' />
-          </video>
+          <AnimatedTitle chromeSrc={VIDEO_CHROME} safariSrc={VIDEO_SAFARI} />
         </TitleContainer>
 
         <HeroDivider src='/img/hero/hero-bg-divider.png' />

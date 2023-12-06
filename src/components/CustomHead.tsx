@@ -5,7 +5,8 @@ interface MetadataProps {
   description?: string;
   image?: string;
 }
-const Meatadata = ({ title, description, image }: MetadataProps) => {
+
+const CustomHead = ({ title, description, image }: MetadataProps) => {
   const descriptionText = description
     ? description
     : 'Wonderland is the largest core development group in Web3. We partner up with the best protocols in the world, including, among others: Optimism, Connext, and Reflexer.';
@@ -32,4 +33,4 @@ const Meatadata = ({ title, description, image }: MetadataProps) => {
   );
 };
 
-export default Meatadata;
+export default CustomHead;

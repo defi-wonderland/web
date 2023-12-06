@@ -1,51 +1,61 @@
 import styled from 'styled-components';
 
-import { Ball, GradientTitle, MOBILE_MAX_WIDTH, SectionBackground, SPACING_128, TABLET_MAX_WIDTH } from '~/components';
+import {
+  AnimatedTitle,
+  Ball,
+  CONTENT_INDEX,
+  ContentContainer,
+  GradientTitle,
+  MOBILE_MAX_WIDTH,
+  SectionBackground,
+  SPACING_128,
+  TABLET_MAX_WIDTH,
+} from '~/components';
 import ProjectsList from './ProjectsList';
+import CustomHead from '~/components/CustomHead';
 import { TitleContainer as TitleVideoBase } from '~/pages/landing/HeroSection';
 import { partnerProjects, publicGoods } from '~/data/projects.json';
 import VIDEO_CHROME from '~/assets/videos/creations.webm';
 import VIDEO_SAFARI from '~/assets/videos/creations.mp4';
-import Meatadata from '~/components/Meatadata';
 
 export default function Creations() {
   return (
     <>
-      <Meatadata title='Creations' />
-      <Container>
-        <BackgroundContainer>
-          <BG_1 type='2' align='center' />
-          <BG_2 type='1' align='left' />
-          <BG_3 type='2' align='right' />
-        </BackgroundContainer>
-        <HeroDivider>
-          <TitleVideo>
-            <video autoPlay loop muted playsInline>
-              <source src={VIDEO_CHROME} type='video/webm' />
-              <source src={VIDEO_SAFARI} type='video/mp4; codecs="hvc1"' />
-            </video>
-          </TitleVideo>
-          <Ball_1 />
-          <Ball_2 />
-          <Ball_3 />
-        </HeroDivider>
+      <CustomHead title='Creations' />
 
-        <TitleContainer>
-          <ProjectTitle title='Partner projects' />
-        </TitleContainer>
-        <ProjectsContainer>
-          <Divider />
-          <ProjectsList projects={partnerProjects} />
-        </ProjectsContainer>
+      <ContentContainer>
+        <Container>
+          <BackgroundContainer>
+            <BG_1 type='2' align='center' />
+            <BG_2 type='1' align='left' />
+            <BG_3 type='2' align='right' />
+          </BackgroundContainer>
+          <HeroDivider>
+            <TitleVideo>
+              <AnimatedTitle chromeSrc={VIDEO_CHROME} safariSrc={VIDEO_SAFARI} />
+            </TitleVideo>
+            <Ball_1 />
+            <Ball_2 />
+            <Ball_3 />
+          </HeroDivider>
 
-        <TitleContainer>
-          <ProjectTitle title='Public goods' />
-        </TitleContainer>
-        <ProjectsContainer>
-          <Divider />
-          <ProjectsList projects={publicGoods} />
-        </ProjectsContainer>
-      </Container>
+          <TitleContainer>
+            <ProjectTitle title='Partner projects' />
+          </TitleContainer>
+          <ProjectsContainer>
+            <Divider />
+            <ProjectsList projects={partnerProjects} />
+          </ProjectsContainer>
+
+          <TitleContainer>
+            <ProjectTitle title='Public goods' />
+          </TitleContainer>
+          <ProjectsContainer>
+            <Divider />
+            <ProjectsList projects={publicGoods} />
+          </ProjectsContainer>
+        </Container>
+      </ContentContainer>
     </>
   );
 }
@@ -76,7 +86,7 @@ const HeroDivider = styled.div`
   width: 100%;
   height: 30rem;
   bottom: 0;
-  z-index: 3;
+  z-index: ${CONTENT_INDEX};
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -184,7 +194,7 @@ const TitleContainer = styled.div`
 
 const ProjectTitle = styled(GradientTitle)`
   word-wrap: unset;
-  width: 40rem !important;
+  width: 40rem;
 `;
 
 const ProjectsContainer = styled.div`

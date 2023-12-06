@@ -4,7 +4,15 @@ import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import styled from 'styled-components';
 
-import { FONT_SIZE_20, SLink, MOBILE_MAX_WIDTH, NAVBAR_HEIGHT, NAVBAR_INDEX, TABLET_MAX_WIDTH } from '~/components';
+import {
+  FONT_SIZE_20,
+  SLink,
+  MOBILE_MAX_WIDTH,
+  NAVBAR_HEIGHT,
+  NAVBAR_INDEX,
+  TABLET_MAX_WIDTH,
+  ContentContainer,
+} from '~/components';
 
 import wonderLogo from '~/public/img/wonder-logo.svg';
 import menuIcon from '~/assets/menu_icon.svg';
@@ -77,33 +85,35 @@ const Navbar = ({ className, pathname }: NavbarProps) => {
   }, [pathname]);
 
   return (
-    <StyledNavbar id={showNavbar ? 'show' : ''} className={className}>
-      <LogoContainer
-        onClick={() => {
-          setNavLink(resetValues());
-        }}
-      >
-        <WonderLogo to='/landing'>
-          <Image src={wonderLogo.src} alt='Wonderland logo' width='64' height='64' />
-        </WonderLogo>
-        <MenuButton onClick={() => setShowNavbar(!showNavbar)}>
-          <Image src={menuIcon.src} alt='menu icon' id='menu-icon' width='32' height='32' />
-        </MenuButton>
-      </LogoContainer>
+    <ContentContainer>
+      <StyledNavbar id={showNavbar ? 'show' : ''} className={className}>
+        <LogoContainer
+          onClick={() => {
+            setNavLink(resetValues());
+          }}
+        >
+          <WonderLogo to='/landing'>
+            <Image src={wonderLogo.src} alt='Wonderland logo' width='64' height='64' />
+          </WonderLogo>
+          <MenuButton onClick={() => setShowNavbar(!showNavbar)}>
+            <Image src={menuIcon.src} alt='menu icon' id='menu-icon' width='32' height='32' />
+          </MenuButton>
+        </LogoContainer>
 
-      {navLink.map((link, i) => (
-        <NavLinkContainer order={i + 1} key={link.name + i}>
-          <NavLink
-            to={link.url}
-            key={link.name}
-            disabled={link.disabled && pathname?.includes('/insights/')}
-            className={link.disabled ? 'gradient' : ''}
-          >
-            <div id={showNavbar ? '' : 'hide'}>{link.name}</div>
-          </NavLink>
-        </NavLinkContainer>
-      ))}
-    </StyledNavbar>
+        {navLink.map((link, i) => (
+          <NavLinkContainer order={i + 1} key={link.name + i}>
+            <NavLink
+              to={link.url}
+              key={link.name}
+              disabled={link.disabled && pathname?.includes('/insights/')}
+              className={link.disabled ? 'gradient' : ''}
+            >
+              <div id={showNavbar ? '' : 'hide'}>{link.name}</div>
+            </NavLink>
+          </NavLinkContainer>
+        ))}
+      </StyledNavbar>
+    </ContentContainer>
   );
 };
 

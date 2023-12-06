@@ -1,8 +1,16 @@
 import styled from 'styled-components';
 
-import { Ball, MOBILE_MAX_WIDTH, SPACING_192, SPACING_512, SPACING_700 } from '~/components';
+import {
+  AnimatedTitle,
+  Ball,
+  ContentContainer,
+  MOBILE_MAX_WIDTH,
+  SPACING_192,
+  SPACING_512,
+  SPACING_700,
+} from '~/components';
 import { PageContent } from '~/containers/PageContent';
-import Meatadata from '~/components/Meatadata';
+import CustomHead from '~/components/CustomHead';
 import ApproachSection from './ApproachSection';
 import TextSection from './TextSection';
 
@@ -16,27 +24,28 @@ import { TitleContainer } from '../landing/HeroSection';
 export default function Ethos() {
   return (
     <>
-      <Meatadata title='Ethos' />
-      <PageContent>
-        <HeroDivider>
-          <STitleContainer>
-            <video autoPlay loop muted playsInline>
-              <source src={VIDEO_CHROME} type='video/webm' />
-              <source src={VIDEO_SAFARI} type='video/mp4; codecs="hvc1"' />
-            </video>
-          </STitleContainer>
-        </HeroDivider>
-        <BackgroundContainer>
-          <SCone src={HoopTop.src} alt='starts background' />
-          <SCone src={Cone.src} alt='starts background' />
-          <SBall />
-          <SHoop src={HoopBottom.src} alt='starts background' />
-        </BackgroundContainer>
+      <CustomHead title='Ethos' />
 
-        <TextSection />
+      <ContentContainer>
+        <PageContent>
+          <HeroDivider>
+            <STitleContainer>
+              <AnimatedTitle chromeSrc={VIDEO_CHROME} safariSrc={VIDEO_SAFARI} />
+            </STitleContainer>
+          </HeroDivider>
 
-        <StyledApproachSection />
-      </PageContent>
+          <BackgroundContainer>
+            <SCone src={HoopTop.src} alt='starts background' />
+            <SCone src={Cone.src} alt='starts background' />
+            <SBall />
+            <SHoop src={HoopBottom.src} alt='starts background' />
+          </BackgroundContainer>
+
+          <TextSection />
+
+          <StyledApproachSection />
+        </PageContent>
+      </ContentContainer>
     </>
   );
 }
