@@ -12,6 +12,7 @@ import { useRouter } from 'next/router';
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   const router = useRouter();
+
   return (
     <StyledPageView>
       <StarsBackground />

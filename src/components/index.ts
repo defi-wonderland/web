@@ -2,6 +2,7 @@ export * from './AnimatedTitle';
 export * from './AnimationIn';
 export * from './Ball';
 export * from './Button';
+export * from './ContentContainer';
 export * from './DisplayText';
 export * from './GradientTitle';
 export * from './Link';
