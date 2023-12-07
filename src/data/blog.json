@@ -1,5 +1,14 @@
 [
   {
+    "id": "a-zero-day-exploit-in-geb",
+    "public": true,
+    "name": "Long live RAI",
+    "description": "SOLVED: a zero-day exploit in GEB codebase",
+    "date": "12/07/23",
+    "tags": ["Security", "Whitehack"],
+    "image": "/img/blog-posts/a-zero-day-exploit-in-geb/cover.jpg"
+  },
+  {
     "id": "current-state-of-storage-proofs",
     "public": true,
     "name": "The current state of storage proofs",
