@@ -16,7 +16,7 @@ const CustomHead = ({ title, description, image }: MetadataProps) => {
   return (
     <Head>
       <title>{`${title} - Wonderland`}</title>
-      <link rel='icon' type='image/svg+xml' href='./favicon.svg' />
+      <link rel='icon' href='/favicon.ico' type='image/x-icon' sizes='48x48' />
       <meta name='description' content={descriptionText} />
       <meta name='author' content='Wonderland' />
       <meta
