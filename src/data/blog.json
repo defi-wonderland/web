@@ -1,12 +1,12 @@
 [
   {
-    "id": "current-state-of-storage-proofs",
+    "id": "a-zero-day-exploit-in-geb",
     "public": true,
-    "name": "The current state of storage proofs",
-    "description": "The current status of on-chain storage proofs",
-    "date": "12/05/23",
-    "tags": ["Cryptography", "Verification", "Cross-chain"],
-    "image": "/img/blog-posts/liveness-2-and-beyond/cover.jpg"
+    "name": "Long live RAI",
+    "description": "SOLVED: a zero-day exploit in GEB codebase",
+    "date": "12/08/23",
+    "tags": ["Security", "Whitehack"],
+    "image": "/img/blog-posts/a-zero-day-exploit-in-geb/cover.jpg"
   },
   {
     "id": "liveness-2-and-beyond",
