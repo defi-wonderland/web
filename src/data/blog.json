@@ -4,7 +4,7 @@
     "public": true,
     "name": "Long live RAI",
     "description": "SOLVED: a zero-day exploit in GEB codebase",
-    "date": "12/07/23",
+    "date": "12/08/23",
     "tags": ["Security", "Whitehack"],
     "image": "/img/blog-posts/a-zero-day-exploit-in-geb/cover.jpg"
   },
