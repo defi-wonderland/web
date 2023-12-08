@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Image from 'next/image';
 
 import { CONTENT_INDEX, FONT_MEDIUM_L, FONT_SIZE_18, MOBILE_MAX_WIDTH, SPACING_530 } from './Variables';
 import { DisplayText } from './DisplayText';
@@ -11,7 +12,7 @@ export interface SectionArticleProps {
   children: any;
 }
 
-const Star = styled.img.attrs({ src: STAR.src })`
+const Star = styled(Image)`
   position: absolute;
   width: 3.5rem;
   top: 8.3rem;
@@ -22,11 +23,11 @@ export const SectionArticle = ({ title, center, children, ...props }: SectionArt
   return (
     <StyledSectionArticle center={center} {...props}>
       <ArticleTitle gradient>
-        <Star className='base-star' />
-        <Star className='bottom-star' />
+        <Star className='base-star' width={35} height={35} alt='' src={STAR.src} />
+        <Star className='bottom-star' width={35} height={35} alt='' src={STAR.src} />
         <TextContainer>
-          <Star className='mid-star' />
-          <Star className='last-star' />
+          <Star className='mid-star' width={35} height={35} alt='' src={STAR.src} />
+          <Star className='last-star' width={35} height={35} alt='' src={STAR.src} />
           {title}
         </TextContainer>
       </ArticleTitle>

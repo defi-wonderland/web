@@ -1,14 +1,13 @@
-import { useEffect, useState } from 'react';
+import { AnimationIn } from './AnimationIn';
+import StyledPageView from './StyledPageView';
 
 interface Props {
   children: React.ReactNode;
 }
 export const ContentContainer = ({ children }: Props) => {
-  const [showContent, setShowContent] = useState(false);
-
-  useEffect(() => {
-    setShowContent(true);
-  }, []);
-
-  return <>{showContent && children}</>;
+  return (
+    <AnimationIn>
+      <StyledPageView>{children}</StyledPageView>
+    </AnimationIn>
+  );
 };

@@ -3,7 +3,7 @@ import withVideos from 'next-videos';
 
 const nextConfig = {
   compiler: {
-    styledComponents: { ssr: true },
+    styledComponents: true,
   },
 };
 

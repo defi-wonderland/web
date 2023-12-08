@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import styled from 'styled-components';
 import { SPACING_530 } from './Variables';
+import Image from 'next/image';
 
 type backgroundType = '1' | '2' | '3' | '4';
 type backgroundAlignType = 'left' | 'center' | 'right';
@@ -72,7 +73,7 @@ export interface SectionBackgroundProps {
 export const SectionBackground: FC<SectionBackgroundProps> = ({ type, align, ...props }) => {
   return (
     <StyledSectionBackground type={type} align={align} {...props}>
-      <img src={`/img/ethos/00${type}_grad.jpg`} alt='' loading='lazy' />
+      <Image src={`/img/ethos/00${type}_grad.jpg`} width={500} height={500} alt='' loading='lazy' />
     </StyledSectionBackground>
   );
 };
