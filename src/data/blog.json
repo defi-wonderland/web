@@ -1,5 +1,14 @@
 [
   {
+    "id": "current-state-of-storage-proofs",
+    "public": false,
+    "name": "The current state of storage proofs",
+    "description": "The current status of on-chain storage proofs",
+    "date": "12/05/23",
+    "tags": ["Cryptography", "Verification", "Cross-chain"],
+    "image": "/img/blog-posts/liveness-2-and-beyond/cover.jpg"
+  },
+  {
     "id": "a-zero-day-exploit-in-geb",
     "public": true,
     "name": "Long live RAI",
@@ -7,15 +16,6 @@
     "date": "12/08/23",
     "tags": ["Security", "Whitehack"],
     "image": "/img/blog-posts/a-zero-day-exploit-in-geb/cover.jpg"
-  },
-  {
-    "id": "current-state-of-storage-proofs",
-    "public": true,
-    "name": "The current state of storage proofs",
-    "description": "The current status of on-chain storage proofs",
-    "date": "12/05/23",
-    "tags": ["Cryptography", "Verification", "Cross-chain"],
-    "image": "/img/blog-posts/liveness-2-and-beyond/cover.jpg"
   },
   {
     "id": "liveness-2-and-beyond",
