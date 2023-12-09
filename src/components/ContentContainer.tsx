@@ -11,9 +11,5 @@ export const ContentContainer = ({ children }: Props) => {
     setIsMounted(true);
   }, []);
 
-  return (
-    <StyledPageView className={isMounted ? 'content-visible fade-in' : 'content-hidden fade-in'}>
-      {children}
-    </StyledPageView>
-  );
+  return <StyledPageView className={`fade-in ${!isMounted && 'content-hidden'}`}>{children}</StyledPageView>;
 };
