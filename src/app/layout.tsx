@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   keywords: 'Wonderland, Defi, decentralized finance, activist fund, ethereum, solidity, devs',
   robots: 'index, follow',
   openGraph: {
-    images: './share.jpg',
+    images: 'https://defi.sucks/share.jpg',
     url: 'https://defi.sucks',
     type: 'website',
     title: 'Wonderland',
