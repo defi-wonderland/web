@@ -8,7 +8,7 @@ import type { InferGetStaticPropsType } from 'next';
 
 import posts from '~/data/blog.json';
 import CustomHead from '~/components/CustomHead';
-import { MOBILE_MAX_WIDTH, SectionBackground } from '~/components';
+import { ContentContainer, MOBILE_MAX_WIDTH, SectionBackground } from '~/components';
 import { PageContent } from '~/containers/PageContent';
 
 const paths = posts.map((post) => ({
@@ -51,18 +51,20 @@ export default function Posts({ path, blog }: InferGetStaticPropsType<typeof get
     <>
       <CustomHead title={postData?.name} image={postData?.image} description={postData?.description} />
 
-      <PageContent>
-        <Title>{postData?.name}</Title>
-        <BackgroundImage type='3' align='center' />
-        <Background>
-          <Content>
-            <Date>{postData?.date}</Date>
-            <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex, rehypeRaw]}>
-              {post}
-            </ReactMarkdown>
-          </Content>
-        </Background>
-      </PageContent>
+      <ContentContainer>
+        <PageContent>
+          <Title>{postData?.name}</Title>
+          <BackgroundImage type='3' align='center' />
+          <Background>
+            <Content>
+              <Date>{postData?.date}</Date>
+              <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex, rehypeRaw]}>
+                {post}
+              </ReactMarkdown>
+            </Content>
+          </Background>
+        </PageContent>
+      </ContentContainer>
     </>
   );
 }
