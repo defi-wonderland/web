@@ -49,7 +49,7 @@ export default function Posts({ path, blog }: InferGetStaticPropsType<typeof get
 
   return (
     <>
-      <CustomHead title={postData?.name} image={postData?.image} description={postData?.description} />
+      <CustomHead title={postData?.name} image={postData?.image} description={postData?.description} type='article' />
 
       <ContentContainer>
         <PageContent>
