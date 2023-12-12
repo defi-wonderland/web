@@ -1,12 +1,12 @@
 [
   {
     "id": "current-state-of-storage-proofs",
-    "public": false,
+    "public": true,
     "name": "The current state of storage proofs",
-    "description": "The current status of on-chain storage proofs",
+    "description": "The current state of on-chain storage proofs",
     "date": "12/05/23",
     "tags": ["Cryptography", "Verification", "Cross-chain"],
-    "image": "/img/blog-posts/liveness-2-and-beyond/cover.jpg"
+    "image": "/img/blog-posts/current-state-of-storage-proofs/cover.jpg"
   },
   {
     "id": "a-zero-day-exploit-in-geb",
@@ -16,15 +16,6 @@
     "date": "12/08/23",
     "tags": ["Security", "Whitehack"],
     "image": "/img/blog-posts/a-zero-day-exploit-in-geb/cover.jpg"
-  },
-  {
-    "id": "liveness-2-and-beyond",
-    "public": false,
-    "name": "Liveness 2 and beyond",
-    "description": "The current status of on-chain storage proofs",
-    "date": "11/17/23",
-    "tags": ["Cryptography", "Verification", "Cross-chain"],
-    "image": "/img/blog-posts/liveness-2-and-beyond/cover.jpg"
   },
   {
     "id": "a-mev-racing-story",
