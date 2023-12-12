@@ -31,7 +31,7 @@ export const getStaticProps = async (context: { params: { post: string } }) => {
   try {
     const data = await fetch(`https://defi.sucks/blog-posts/${path}.md`);
     const dataTextified = await data.text();
-    console.log(dataTextified.slice(0, 1), dataTextified);
+
     // check if the data is a markdown file or not
     dataText = dataTextified.slice(0, 1) === '<' ? '' : dataTextified;
   } catch (error) {
