@@ -1,3 +1,4 @@
+export * from './Variables';
 export * from './AnimatedTitle';
 export * from './AnimationIn';
 export * from './Ball';
@@ -11,4 +12,3 @@ export * from './Section';
 export * from './SectionArticle';
 export * from './StyledPageView';
 export * from './MainTitle';
-export * from './Variables';

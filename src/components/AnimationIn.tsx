@@ -16,7 +16,7 @@ export function AnimationIn({ children }: AnimationProps) {
 
   return (
     <CSSTransition in={inProp} classNames='fade' timeout={500} unmountOnExit>
-      <>{children}</>
+      {children}
     </CSSTransition>
   );
 }

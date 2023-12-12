@@ -4,12 +4,12 @@ import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 import rehypeRaw from 'rehype-raw';
 import ReactMarkdown from 'react-markdown';
-import { CSSTransition } from 'react-transition-group';
 import type { InferGetStaticPropsType } from 'next';
 
 import posts from '~/data/blog.json';
 import CustomHead from '~/components/CustomHead';
 import { ContentContainer, MOBILE_MAX_WIDTH, SectionBackground } from '~/components';
+import { PageContent } from '~/containers/PageContent';
 
 const paths = posts.map((post) => ({
   params: {
@@ -26,42 +26,45 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async (context: { params: { post: string } }) => {
   const path = context.params?.post;
-  return { props: { path } };
+  const data = await fetch(`https://defi.sucks/blog-posts/${path}.md`);
+  const dataText = await data.text();
+  return { props: { path, blog: dataText } };
 };
 
-export default function Posts({ path }: InferGetStaticPropsType<typeof getStaticProps>) {
-  const id = path;
+export default function Posts({ path, blog }: InferGetStaticPropsType<typeof getStaticProps>) {
   const postData = posts.filter((post) => post.id === path)[0];
 
-  const [blog, setBlog] = useState('');
+  const [blogText, setBlogText] = useState('');
+
+  const post = blog || blogText;
 
   useEffect(() => {
-    fetch(`/blog-posts/${id}.md`)
-      .then((response) => response.text())
-      .then((data) => {
-        setBlog(data);
-      });
-  }, [id]);
+    if (!blog) {
+      fetch(`/blog-posts/${path}.md`)
+        .then((response) => response.text())
+        .then((data) => {
+          setBlogText(data);
+        });
+    }
+  }, [blog, path]);
 
   return (
     <>
-      <CustomHead title={postData?.name} image={postData?.image} description={postData?.description} />
+      <CustomHead title={postData?.name} image={postData?.image} description={postData?.description} type='article' />
 
       <ContentContainer>
-        <CSSTransition in={!!blog} classNames='fade' timeout={200} appear unmountOnExit>
-          <>
-            <Title>{postData?.name}</Title>
-            <BackgroundImage type='3' align='center' />
-            <Background>
-              <Content>
-                <Date>{postData?.date}</Date>
-                <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex, rehypeRaw]}>
-                  {blog}
-                </ReactMarkdown>
-              </Content>
-            </Background>
-          </>
-        </CSSTransition>
+        <PageContent>
+          <Title>{postData?.name}</Title>
+          <BackgroundImage type='3' align='center' />
+          <Background>
+            <Content>
+              <Date>{postData?.date}</Date>
+              <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex, rehypeRaw]}>
+                {post}
+              </ReactMarkdown>
+            </Content>
+          </Background>
+        </PageContent>
       </ContentContainer>
     </>
   );

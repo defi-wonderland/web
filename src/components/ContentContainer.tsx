@@ -1,14 +1,15 @@
 import { useEffect, useState } from 'react';
+import StyledPageView from './StyledPageView';
 
 interface Props {
   children: React.ReactNode;
 }
 export const ContentContainer = ({ children }: Props) => {
-  const [showContent, setShowContent] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
-    setShowContent(true);
+    setIsMounted(true);
   }, []);
 
-  return <>{showContent && children}</>;
+  return <StyledPageView className={`fade-in ${!isMounted && 'content-hidden'}`}>{children}</StyledPageView>;
 };
