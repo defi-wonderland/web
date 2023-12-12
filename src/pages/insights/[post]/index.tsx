@@ -39,12 +39,13 @@ export default function Posts({ path, blog }: InferGetStaticPropsType<typeof get
   const post = blog || blogText;
 
   useEffect(() => {
-    if (!blog)
+    if (!blog) {
       fetch(`/blog-posts/${path}.md`)
         .then((response) => response.text())
         .then((data) => {
           setBlogText(data);
         });
+    }
   }, [blog, path]);
 
   return (
