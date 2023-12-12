@@ -26,8 +26,18 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async (context: { params: { post: string } }) => {
   const path = context.params?.post;
-  const data = await fetch(`https://defi.sucks/blog-posts/${path}.md`);
-  const dataText = await data.text();
+  let dataText: string;
+
+  try {
+    const data = await fetch(`https://defi.sucks/blog-posts/${path}.md`);
+    const dataTextified = await data.text();
+
+    // check if the data is a markdown file or not
+    dataText = dataTextified.slice(0, 1) === '<' ? '' : dataTextified;
+  } catch (error) {
+    dataText = '';
+  }
+
   return { props: { path, blog: dataText } };
 };
 

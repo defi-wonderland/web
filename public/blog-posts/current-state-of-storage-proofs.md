@@ -1,6 +1,6 @@
 Authors: [Parti](https://twitter.com/0xParticle), [Skeletor Spaceman](https://twitter.com/Skeletor_Space)
 
-![Create_an_epic_and_dark_illustration_featuring_Alice_from_Alice_in_Wonderland_actively_engaged_in_the_process_of_synchronizing_two_different_worlds._.png](../img/blog-posts/liveness-2-and-beyond/cover.jpg)
+![Create_an_epic_and_dark_illustration_featuring_Alice_from_Alice_in_Wonderland_actively_engaged_in_the_process_of_synchronizing_two_different_worlds._.png](../img/blog-posts/current-state-of-storage-proofs/cover.jpg)
 
 ## The EVM as the verifier
 
@@ -19,7 +19,7 @@ Storage proofs are a powerful tool to minimize trust, and Ethereum provides an e
 
 This report will analyze the current status of storage-proof solutions for increasing availability and costs.
 
-![DALL·E 2023-11-01 15.08.38 - Create a dark and epic illustration featuring Alice from Alice in Wonderland and Bob, depicted as a medieval knight. In this mystical forest setting, .png](../img/blog-posts/liveness-2-and-beyond/alice-knight.jpg)
+![DALL·E 2023-11-01 15.08.38 - Create a dark and epic illustration featuring Alice from Alice in Wonderland and Bob, depicted as a medieval knight. In this mystical forest setting, .png](../img/blog-posts/current-state-of-storage-proofs/alice-knight.jpg)
 
 ## State root availability
 
@@ -29,7 +29,7 @@ To execute the storage proof verification, it is necessary to have a reliable wa
 
 One basic method to prove the consensus of chain A in the execution layer of chain B is to run an on-chain Light Client of chain A inside chain B. This is, of course, extremely expensive to run. To gain some intuition on why, consider that Ethereum consensus uses BLS signatures on a BLS12-381 curve, which are not included as a precompile in EVMs. Even if the Light Client verified the signatures of the [sync committee](https://github.com/ethereum/annotated-spec/blob/master/altair/sync-protocol.md#introduction) only, it is still prohibitory costly. Here is where zk comes into play.
 
-![DALL·E 2023-11-01 16.07.00 - In a dark and grand ancient hall, Alice, a young woman with long blonde hair and a medieval dress, stands in the center, holding a glowing orb that re.png](../img/blog-posts/liveness-2-and-beyond/alice-cult.jpg)
+![DALL·E 2023-11-01 16.07.00 - In a dark and grand ancient hall, Alice, a young woman with long blonde hair and a medieval dress, stands in the center, holding a glowing orb that re.png](../img/blog-posts/current-state-of-storage-proofs/alice-cult.jpg)
 
 [Succint](https://www.succinct.xyz/) developed a [contract](https://etherscan.io/address/0xaa1383ee33c81ef2274419dd5e0ea5cce4baf6cc#code) that verifies a zk-proof of consensus, where anyone can post a zkSNARK attesting that the sync committee has signed a block header. Their design also requires keeping track of the current sync committee, which is also done via a zkSNARK. The protocol is deployed on Ethereum and other chains, but the light client updates is operating [frequently only in Goerli](https://explorer.telepathy.xyz/). Each update in Ethereum costs [300k in gas](https://etherscan.io/tx/0x6d608c89eb97b249f40fc1db4306fe0b5af4d0dec3e1db1b8872b3ddf8c5af75). They enable light client proofs of Ethereum and Gnosis to Ethereum, Gnosis, Arbitrum, Avalanche, Binance, Optimism and Polygon (look [here](https://docs.telepathy.xyz/resources/contract-addresses) for the addresses).
 
@@ -61,7 +61,7 @@ As we mentioned, our goal is to prove the value of a certain storage value from 
 
 During the last few years, we have seen enormous technical advances in optimizing verification processes. The field of zk proofs has gained a lot of traction, in a big part due to their brief verification step. These proofs outsource the heavy computation to the prover to make verification as simple as possible.
 
-![DALL·E 2023-11-01 15.13.15 - In a dark and epic illustration, capture the moment where Alice from Alice in Wonderland successfully opens the ancient, magical door with her special.png](../img/blog-posts/liveness-2-and-beyond/alice-door.jpg)
+![DALL·E 2023-11-01 15.13.15 - In a dark and epic illustration, capture the moment where Alice from Alice in Wonderland successfully opens the ancient, magical door with her special.png](../img/blog-posts/current-state-of-storage-proofs/alice-door.jpg)
 
 This *succinctness* is particularly appealing when dealing with the EVM, as computation requires gas. In what follows, we will describe some possible approaches to dealing with storage proofs in this context.
 
@@ -75,7 +75,7 @@ In [this blog post](https://vitalik.eth.limo/general/2023/06/20/deeperdive.html)
 
 Both zkSNARKs and KZG allow for proof aggregation, further reducing user costs.
 
-![Untitled](../img/blog-posts/liveness-2-and-beyond/graph-1.jpg)
+![Untitled](../img/blog-posts/current-state-of-storage-proofs/graph-1.jpg)
 
 In what follows, we will focus on the existing approaches to tackle this verification step. Even though storage proofs (with or without zk) are the most secure method, we will also consider other options in our analysis. For each, we will analyze the tradeoffs, possibilities, costs and state of development.
 
@@ -87,7 +87,7 @@ It’s easy to generate proofs for any storage slot using the RPC providers’ 
 
 From the existing protocols we mentioned, [Relic](https://docs.relicprotocol.com/overview/comparison) and [Herodotus](https://www.herodotus.dev/) use direct MPT proofs against the verified roots. You can check out [Relic’s optimized Solidity library](https://github.com/Relic-Protocol/relic-contracts/blob/main/contracts/lib/MPT.sol) and Herodotus [Fact Registry](https://docs.herodotus.dev/herodotus-docs/architecture-overview/facts-registry) in [Starknet](https://goerli.voyager.online/contract/0x07c88f02f0757b25547af4d946445f92dbe3416116d46d7b2bd88bcfad65a06f). I also found this repo in Noir for Ethereum MPT verification: https://github.com/aragonzkresearch/noir-trie-proofs/
 
-![DALL·E 2023-11-01 14.01.20 - Create a magical interpretation of a Merkle tree intertwined with a real tree, inspired by the style of Lord of the Rings. Use a dark and epic tone to.png](../img/blog-posts/liveness-2-and-beyond/alice-tree.jpg)
+![DALL·E 2023-11-01 14.01.20 - Create a magical interpretation of a Merkle tree intertwined with a real tree, inspired by the style of Lord of the Rings. Use a dark and epic tone to.png](../img/blog-posts/current-state-of-storage-proofs/alice-tree.jpg)
 
 ### General purpose zkProofs: zkSNARKs
 
@@ -110,7 +110,7 @@ At the time of writing, they have deployed their contracts on mainnet only. A po
 Also, note that the current implementation consumes above [500k gas per query answer](https://etherscan.io/address/0xd617ab7f787adf64c2b5b920c251ea10cd35a952), even more than the current MPT implementations. Axiom has, of course, a lot of additional benefits, such as allowing queries to go back in time.
 
 Gas comparison for different proofs. Image taken from [Relic’s documentation](https://docs.relicprotocol.com/overview/comparison):
-![Gas comparison for different proofs. Image taken from [Relic’s documentation](https://docs.relicprotocol.com/overview/comparison).](../img/blog-posts/liveness-2-and-beyond/table-1.jpg)
+![Gas comparison for different proofs. Image taken from [Relic’s documentation](https://docs.relicprotocol.com/overview/comparison).](../img/blog-posts/current-state-of-storage-proofs/table-1.jpg)
 
 [Brevis](https://brevis.network/) also does zk [storage proofs](https://docs.brevis.network/zk-implementation/slot-value-proof), but using Groth16 based circuits. It can also be used to prove claims using the [Receipts](https://docs.brevis.network/zk-implementation/receipt-proof) and [Transaction](https://docs.brevis.network/zk-implementation/transaction-proof) Tries. They have a [working demo](https://demo.brevis.network/) which allows to generate storage proofs for Ethereum and then submit the proof to BSC chain (check verifier contract [here](https://testnet.bscscan.com/address/0xc2307a0596a69f1f4c55d2f30df32eb9ef513980#code)).
 
@@ -153,7 +153,7 @@ Additionally, two KZG proofs can be merged into a single one, which would simpli
 
 Implementations of KZG in Solidity are still in the [experimental stage](https://github.com/topics/kzg-commitment). Most implementations focus on its application for [EIP-4844](https://www.eip4844.com/) rather than for storage proofs. Also, KZG is worth it if batching can be done, which will probably not happen for the PoC.
 
-![DALL·E 2023-11-01 15.48.30 - Illustration of Alice from Alice in Wonderland, partially obscured, studying cryptography in a dark and epic style. Alice, dressed in her iconic blue .png](../img/blog-posts/liveness-2-and-beyond/alice-paper.jpg)
+![DALL·E 2023-11-01 15.48.30 - Illustration of Alice from Alice in Wonderland, partially obscured, studying cryptography in a dark and epic style. Alice, dressed in her iconic blue .png](../img/blog-posts/current-state-of-storage-proofs/alice-paper.jpg)
 
 ### Verkle Proofs
 
@@ -228,4 +228,4 @@ For the PoC, we expect to work on sidechains only, meaning the total gas cost of
   - Shared sequencing or data availability layers can act as a way of sharing Home chain verification among several chains, reducing the cost for each even further.
   - If implemented, Verkle tree structures will completely change (for the better) the whole verification algorithm. The module, together with many other products using storage proofs, would require a major update.
 
-![DALL·E 2023-11-01 16.01.43 - Alice from Alice in Wonderland stands beside her incredible clock-like machine filled with cryptographic symbols, successfully synchronizing two diffe.png](../img/blog-posts/liveness-2-and-beyond/alice-conclusion.jpg)
+![DALL·E 2023-11-01 16.01.43 - Alice from Alice in Wonderland stands beside her incredible clock-like machine filled with cryptographic symbols, successfully synchronizing two diffe.png](../img/blog-posts/current-state-of-storage-proofs/alice-conclusion.jpg)
