@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 import {
   AnimatedTitle,
@@ -19,12 +19,6 @@ import { TitleContainer } from '../landing/HeroSection';
 import StarIcon from '~/public/img/footer/star-icon.svg';
 
 export default function Insights() {
-  const router = useRouter();
-
-  const handleOnClick = (id: string) => {
-    router.push(`/insights/${id}`);
-  };
-
   return (
     <>
       <CustomHead title='Insights' />
@@ -45,7 +39,7 @@ export default function Insights() {
             {posts.map((post) => (
               <React.Fragment key={post.id}>
                 {post.public && (
-                  <BlogPost onClick={() => handleOnClick(post.id)}>
+                  <BlogPost href={`/insights/${post.id}`}>
                     <Image src={post.image} alt='' />
 
                     <PostTitle>
@@ -146,7 +140,7 @@ const BlogsContainer = styled.div`
   justify-content: space-between;
   margin: 0 auto;
 
-  & div:nth-child(1) {
+  & a:nth-child(1) {
     width: 100%;
 
     & img {
@@ -164,7 +158,8 @@ const BlogsContainer = styled.div`
   }
 `;
 
-const BlogPost = styled.div`
+const BlogPost = styled(Link)`
+  color: inherit;
   width: calc(50% - 2rem);
   display: flex;
   flex-direction: column;

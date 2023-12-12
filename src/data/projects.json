@@ -1,8 +1,11 @@
 {
   "partnerProjects": [
     {
-      "name": "OpOO (with Optimism)",
-      "description": "Modular optimistic oracle solution, built alongside Optimism. OpOO enables secure, permissionless delivery of real-world data and attestations."
+      "name": "Prophet (with Optimism)",
+      "description": "Prophet presents a versatile and fully adaptable optimistic oracle solution, transcending the boundaries of conventional dispute resolution modules. With its emphasis on complete control and modularity across all aspects of the system, Prophet is an open-source public good for the Optimism community.",
+      "github": "https://github.com/defi-wonderland/prophet-core",
+      "docs": "https://docs.prophet.tech",
+      "web": "https://prophet.tech"
     },
     {
       "name": "HAI (with Reflexer)",

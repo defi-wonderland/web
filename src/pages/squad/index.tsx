@@ -11,6 +11,7 @@ import {
 } from '~/components';
 import CustomHead from '~/components/CustomHead';
 import SquadSection from './SquadSection';
+import { PageContent } from '~/containers/PageContent';
 
 const Squad = () => {
   return (
@@ -18,10 +19,12 @@ const Squad = () => {
       <CustomHead title='Squad' />
 
       <ContentContainer>
-        <BackgroundImg type='3' align='center' />
-        <Container>
-          <SquadSection />
-        </Container>
+        <PageContent>
+          <BackgroundImg type='3' align='center' />
+          <Container>
+            <SquadSection />
+          </Container>
+        </PageContent>
       </ContentContainer>
     </>
   );

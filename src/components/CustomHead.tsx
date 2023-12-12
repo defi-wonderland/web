@@ -4,14 +4,13 @@ interface MetadataProps {
   title: string;
   description?: string;
   image?: string;
+  type?: string;
 }
 
-const CustomHead = ({ title, description, image }: MetadataProps) => {
+const CustomHead = ({ title, description, image, type }: MetadataProps) => {
   const descriptionText = description
     ? description
     : 'Wonderland is the largest core development group in Web3. We partner up with the best protocols in the world, including, among others: Optimism, Connext, and Reflexer.';
-
-  const imageText = image ? image : 'share.jpg';
 
   return (
     <Head>
@@ -25,10 +24,10 @@ const CustomHead = ({ title, description, image }: MetadataProps) => {
       />
       <meta name='robots' content='index, follow' />
       <meta property='og:url' content='https://defi.sucks' />
-      <meta property='og:type' content='website' />
+      <meta property='og:type' content={type || 'website'} />
       <meta property='og:title' content={`${title} - Wonderland`} />
       <meta property='og:description' content={descriptionText} />
-      <meta property='og:image' content={imageText} />
+      <meta property='og:image' content={image || 'share.jpg'} />
     </Head>
   );
 };

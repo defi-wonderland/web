@@ -17,6 +17,7 @@ import { TitleContainer as TitleVideoBase } from '~/pages/landing/HeroSection';
 import { partnerProjects, publicGoods } from '~/data/projects.json';
 import VIDEO_CHROME from '~/assets/videos/creations.webm';
 import VIDEO_SAFARI from '~/assets/videos/creations.mp4';
+import { PageContent } from '~/containers/PageContent';
 
 export default function Creations() {
   return (
@@ -24,37 +25,39 @@ export default function Creations() {
       <CustomHead title='Creations' />
 
       <ContentContainer>
-        <Container>
-          <BackgroundContainer>
-            <BG_1 type='2' align='center' />
-            <BG_2 type='1' align='left' />
-            <BG_3 type='2' align='right' />
-          </BackgroundContainer>
-          <HeroDivider>
-            <TitleVideo>
-              <AnimatedTitle chromeSrc={VIDEO_CHROME} safariSrc={VIDEO_SAFARI} />
-            </TitleVideo>
-            <Ball_1 />
-            <Ball_2 />
-            <Ball_3 />
-          </HeroDivider>
+        <PageContent>
+          <Container>
+            <BackgroundContainer>
+              <BG_1 type='2' align='center' />
+              <BG_2 type='1' align='left' />
+              <BG_3 type='2' align='right' />
+            </BackgroundContainer>
+            <HeroDivider>
+              <TitleVideo>
+                <AnimatedTitle chromeSrc={VIDEO_CHROME} safariSrc={VIDEO_SAFARI} />
+              </TitleVideo>
+              <Ball_1 />
+              <Ball_2 />
+              <Ball_3 />
+            </HeroDivider>
 
-          <TitleContainer>
-            <ProjectTitle title='Partner projects' />
-          </TitleContainer>
-          <ProjectsContainer>
-            <Divider />
-            <ProjectsList projects={partnerProjects} />
-          </ProjectsContainer>
+            <TitleContainer>
+              <ProjectTitle title='Partner projects' />
+            </TitleContainer>
+            <ProjectsContainer>
+              <Divider />
+              <ProjectsList projects={partnerProjects} />
+            </ProjectsContainer>
 
-          <TitleContainer>
-            <ProjectTitle title='Public goods' />
-          </TitleContainer>
-          <ProjectsContainer>
-            <Divider />
-            <ProjectsList projects={publicGoods} />
-          </ProjectsContainer>
-        </Container>
+            <TitleContainer>
+              <ProjectTitle title='Public goods' />
+            </TitleContainer>
+            <ProjectsContainer>
+              <Divider />
+              <ProjectsList projects={publicGoods} />
+            </ProjectsContainer>
+          </Container>
+        </PageContent>
       </ContentContainer>
     </>
   );
