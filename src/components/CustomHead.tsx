@@ -27,14 +27,14 @@ const CustomHead = ({ title, description, image, type }: MetadataProps) => {
       <meta property='og:type' content={type || 'website'} />
       <meta property='og:title' content={`${title} - Wonderland`} />
       <meta property='og:description' content={descriptionText} />
-      <meta property='og:image' content={image || 'share.jpg'} />
+      <meta property='og:image' content={image || 'https://defi.sucks/share.jpg'} />
 
       <meta name='twitter:card' content='summary_large_image' />
       <meta name='twitter:site' content='@DeFi_Wonderland' />
       <meta name='twitter:creator' content='@DeFi_Wonderland' />
       <meta name='twitter:title' content={`${title} - Wonderland`} />
       <meta name='twitter:description' content={descriptionText} />
-      <meta name='twitter:image' content={image || 'share.jpg'} />
+      <meta name='twitter:image' content={image || 'https://defi.sucks/share.jpg'} />
     </Head>
   );
 };
