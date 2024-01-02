@@ -62,7 +62,6 @@ const Footer = () => {
             </SocialIcons>
 
             <span></span>
-            {/* <span>Privacy Policy</span> */}
           </FooterSocial>
         </StyledFooter>
       </Container>
@@ -171,7 +170,6 @@ const StyledFooter = styled.footer`
   padding: 0 2rem ${footerPadding} 2rem;
   color: var(--text-light);
   background: rgba(255, 255, 255, 0.05);
-  /* border: 1px solid ${footerColor}; */
   border-radius: 1rem;
   backdrop-filter: blur(8px);
   width: 134rem;
