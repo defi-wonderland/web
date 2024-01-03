@@ -1,20 +1,24 @@
+Author: [Parti](https://twitter.com/0xParticle)
+
+## Intro
+
 This article is divided into two.
 
 In the first part, we will present a quick refresher on how Uniswap works specifically tailored to the needs of computing manipulation costs. It'll explore how to move the spot price in an AMM to the desired target for Uniswap v2 and v3.
 
-The second part will show how we obtained the results from the ["Oracle Manipulation 101"](https://www.notion.so/Oracle-Manipulation-101-cbcea67b7796496995437907d3b1b4ba) article. To do so, we will present step-by-step an attack of a lending protocol in DeFi. This case can be later generalized to different types of markets.
+The second part will show how we obtained the results from the ["Oracle Manipulation 101"](https://defi.sucks/insights/oracle-manipulation-101) article. To do so, we will present step-by-step an attack of a lending protocol in DeFi. This case can be later generalized to different types of markets.
 
 You can follow along with the simulations provided in this [colab](https://colab.research.google.com/drive/1RwpF-lKq968mvsyL0jgyw9rO_cTqYxPl?usp=sharing).
 
-# Uniswap Math
+## Uniswap Math
 
 There are many great resources on the topic of Uniswap. We will show some definitions and then present new results for price manipulation in Uniswap v3.
 
-## Full Range and Uniswap v2
+### Full Range and Uniswap v2
 
 Let's begin by looking at Uniswap v2 AMMs, equivalent to a Full Range position in Uniswap v3. Note that we'll confirm this below.
 
-### Basic equations
+#### Basic equations
 
 Two different tokens' balance forms each "pool". Users can add balance to these pools and later remove it. Let's call $x$ the balance of token A and $y$ the balance of token B. The following equation gives the relationship among these balances:
 
@@ -250,17 +254,17 @@ You can gain more by playing around at [this link](https://colab.research.google
 >
 > Conversely, taking longer TWAPs means having a laggier query and a less accurate price. This tradeoff between security and precision is one of the main critiques of using Uniswap as an oracle. At PRICE, we have reduced this tradeoff to the bare minimum, eliminating another user headache.
 
-# Oracle Manipulation 101 Math
+## Oracle Manipulation 101 Math
 
-In the [Oracle Manipulation 101 article](https://www.notion.so/Oracle-Manipulation-101-cbcea67b7796496995437907d3b1b4ba), we have presented a study case for an oracle manipulation analysis. In particular, we have explained how an attack on a lending market can become profitable. This section will show how many of the results we have presented were derived.
+In the [Oracle Manipulation 101 article](https://defi.sucks/insights/oracle-manipulation-101), we have presented a study case for an oracle manipulation analysis. In particular, we have explained how an attack on a lending market can become profitable. This section will show how many of the results we have presented were derived.
 
 As a brief rundown, attacks will likely happen if the profit from manipulation exceeds the cost of manipulation. Understanding this is fundamental to setting the parameters that allow for capital efficiency without adding new risks.
 
-The Cost of Manipulation refers to the capital used ti borrow + capital used to move an AMM's price to the desired target. The latter is what we deduced in the Uniswap Math section above, both for Uniswap v2 and v3. As mentioned in [Oracle Manipulation 101](https://www.notion.so/Oracle-Manipulation-101-cbcea67b7796496995437907d3b1b4ba), we will consider Full Range positions for this analysis, which is consistent with our previous claims about concentrated positions.
+The Cost of Manipulation refers to the capital used ti borrow + capital used to move an AMM's price to the desired target. The latter is what we deduced in the Uniswap Math section above, both for Uniswap v2 and v3. As mentioned in [Oracle Manipulation 101](https://defi.sucks/insights/oracle-manipulation-101), we will consider Full Range positions for this analysis, which is consistent with our previous claims about concentrated positions.
 
 We will exclude trading fees for simplicity of reading, but you can trivially add them to the analysis.
 
-## Math for Attack Scheme pre PoS
+### Math for Attack Scheme pre PoS
 
 ![img/blog-posts/oracle-manipulation-101-math/6.png](../img/blog-posts/oracle-manipulation-101-math/6.png)
 
@@ -332,7 +336,7 @@ Both issues are typical for small projects. This is, for instance, what happened
 
 > ⚠️ These attacks are the most common for small projects. Attacks in these contexts are hard to distinguish from rug pulls. A lending market can protect itself by reverting the borrowing if the difference between $TWAP$ and spot price is large, but as time passes, the $TWAP$ will get close, and basic checks will pass. Both users and lending markets should be aware of these risks when using or listing low-liquidity tokens. PRICE will include additional methods to mitigate this risk.
 
-## Math for Attack Scheme post-PoS
+### Math for Attack Scheme post-PoS
 
 After the Merge, big stakers have a [high chance](https://alrevuelta.github.io/posts/ethereum-mev-multiblock) of proposing multiple blocks in a row, which makes manipulation back to the initial price possible and significantly lowers the attack cost. It also makes TWAPs cheaper to move, as the attacker can maintain the manipulated price for longer.
 
