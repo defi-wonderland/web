@@ -1,10 +1,14 @@
+Author: [Parti](https://twitter.com/0xParticle)
+
+## Intro
+
 In our [last post](https://mirror.xyz/price-oracle.eth/wf_eF-PLnaoXeHRbiZ3VJiTn0Y8hwUrvmKwCK0M4M_I), we talked about the risks of using systems with centralized incentives and the issues that structure poses. Today, we would like to discuss the dangers of using liquidity pools (Uniswap v3 in particular) as a price oracle for any DeFi system.
 
 Price manipulation is the primary concern with liquidity pool-based oracles such as Uniswap v3. With enough liquidity, anyone can manipulate any price in any market. But why would someone manipulate a market? How and when does that happen? If incentives are in place, manipulations WILL eventually occur. Despite the regulatory landscape, we even see this [behaviour](https://www.investopedia.com/terms/l/libor-scandal.asp) in Traditional Finance (TradFi).
 
 We will focus here on the most common attack type in DeFi, which is targeted at lending protocols. We will discuss this case step by step so that conducting a similar analysis for different markets (synthetics, prediction markets, etc.) becomes straightforward.
 
-For math-degens looking for a more rigorous analysis, check out the more math-focused article [here](https://www.notion.so/Oracle-Manipulation-101-Math-edition-e9ceba0198dc4cc384bb7de919806a9c).
+For math-degens looking for a more rigorous analysis, check out the more math-focused article [here](https://defi.sucks/insights/oracle-manipulation-101-math-edition).
 
 ## But why?
 
@@ -21,7 +25,7 @@ Assuming the market participants are rational and are not trying to give money a
 
 ## 1. Cost of Manipulation
 
-When evaluating Uniswap-based oracles, liquid Full Range positions are generally considered safer than concentrated positions. Moving the price over zero (or close to zero) liquidity regions is practically free, so manipulating becomes much more accessible. This claim is, of course, not always valid, but it is in most cases. For more information, see [here](https://uniswap.org/blog/uniswap-v3-oracles), [here](https://docs.euler.finance/euler-protocol/getting-started/methodology/oracle-rating), and the corresponding discussion in the [Math article](https://www.notion.so/Oracle-Manipulation-101-Math-edition-e9ceba0198dc4cc384bb7de919806a9c).
+When evaluating Uniswap-based oracles, liquid Full Range positions are generally considered safer than concentrated positions. Moving the price over zero (or close to zero) liquidity regions is practically free, so manipulating becomes much more accessible. This claim is, of course, not always valid, but it is in most cases. For more information, see [here](https://uniswap.org/blog/uniswap-v3-oracles), [here](https://docs.euler.finance/euler-protocol/getting-started/methodology/oracle-rating), and the corresponding discussion in the [Math article](https://defi.sucks/insights/oracle-manipulation-101-math-edition).
 
 However, not even liquid Full Range positions are risk-free. Remember that oracle users often differ from the protocols that provide liquidity for their token. Naturally, the interests between oracle users and the token holders providing liquidity can be misaligned. A lending market that accepts a specific token as collateral cannot know if the available Full Range position will be sticky. As a result, the lending market cannot confidently assign higher tiers/LTVs to them. This issue is one of the main points that [PRICE](https://oracles.rip/) solves.
 
@@ -30,7 +34,7 @@ In the analysis below, we will consider the Full Range positions due to the foll
 1. Consistency with liquidity visibility and security claims.
 2. Requirement for committed Full Range positions for the oracle to work. When adding concentrated positions on top, the manipulation cost will only increase; therefore, this analysis will serve as a "worst-case scenario".
 
-The [Math article](https://www.notion.so/Oracle-Manipulation-101-Math-edition-e9ceba0198dc4cc384bb7de919806a9c) shows the precise amounts required for manipulating the price in each direction. We have also discussed the $TWAP$, the average price the Uniswap v3 oracle library returns. The $TWAP$ replaced the spot price as a laggier but much safer way of using the oracle.
+The [Math article](https://defi.sucks/insights/oracle-manipulation-101-math-edition) shows the precise amounts required for manipulating the price in each direction. We have also discussed the $TWAP$, the average price the Uniswap v3 oracle library returns. The $TWAP$ replaced the spot price as a laggier but much safer way of using the oracle.
 
 The following is a reasonably good approximation to compute the final spot price $P_f$ at which an attacker should manipulate the pool for the $TWAP$ to achieve a target value (remember the $TWAP$ is what the attack target reads when calling the oracle):
 
@@ -91,7 +95,7 @@ Before PoS, for relevant enough markets, manipulating the price back to the init
 
 Let's assume that the attacker knows that arbitrage will happen and that the pool has a Full Range position with liquidity $L$. In this situation, the best plan is to borrow as much as possible (sell high) using the capital obtained from the manipulation. They could then swap the difference for a price close to $P_i$.
 
-> ✅ We showed in the [Math article](https://www.notion.so/Oracle-Manipulation-101-Math-edition-e9ceba0198dc4cc384bb7de919806a9c) that this attack could be profitable only if the attack length is close to the length of the $TWAP$. This can be easily taken into account by setting the correct parameters.
+> ✅ We showed in the [Math article](https://defi.sucks/insights/oracle-manipulation-101-math-edition) that this attack could be profitable only if the attack length is close to the length of the $TWAP$. This can be easily taken into account by setting the correct parameters.
 >
 > Attacking a pool with healthy liquidity was extremely hard to do pre-PoS.
 
@@ -139,7 +143,7 @@ How would an optimal attack scheme look post-PoS for a validator with $n$ consec
 
 An attacker could also manipulate the TWAP without getting arbitraged if they propose several non-consecutive batches of blocks where they must sacrifice the final block of each batch to close the manipulation.
 
-> ⚠️ The [Math article](https://www.notion.so/Oracle-Manipulation-101-Math-edition-e9ceba0198dc4cc384bb7de919806a9c) shows that this attack can easily reach profitability, even after considering the $TWAP$. Increasing the $TWAP$ parameters will require the attacker to have a more significant up-front capital (redeemable after the attack). The absence of arbitrage in this scenario makes everything smoother from the attacker's perspective.
+> ⚠️ The [Math article](https://defi.sucks/insights/oracle-manipulation-101-math-edition) shows that this attack can easily reach profitability, even after considering the $TWAP$. Increasing the $TWAP$ parameters will require the attacker to have a more significant up-front capital (redeemable after the attack). The absence of arbitrage in this scenario makes everything smoother from the attacker's perspective.
 
 ![img/blog-posts/oracle-manipulation-101/graph-2.jpg](../img/blog-posts/oracle-manipulation-101/graph-2.jpg)
 

@@ -25,14 +25,14 @@ We have first designed a functional PoC for the Liveness Module. You can find th
 
 ### **Shared Proofs**
 
-We want to update settings (a storage value) cross-chain. The trust-minimized approach involves on-chain cryptographic proofs. To prove some _settings_ of a wallet contract in a target chain are in sync with a [Home Chain](https://www.notion.so/732880952aea420dbeaa6b31bc68e490?pvs=21), a user must verify that:
+We want to update settings (a storage value) cross-chain. The trust-minimized approach involves on-chain cryptographic proofs. To prove some _settings_ of a wallet contract in a target chain are in sync with a Home Chain, a user must verify that:
 
 1. The Home Chain’s most recent state includes a storage root *R*.
 2. The _settings_ are included in _R_.
 
 The verification can be done using **Storage Proofs:**
 
-[Storage Proofs](https://www.notion.so/Storage-Proofs-8f5ad324afab4592b7f2882b8cf9a354?pvs=21)
+[Storage Proofs](https://defi-wonderland.notion.site/Storage-Proofs-62ca1bb47c404ac1a41e131e41429f66?pvs=4)
 
 ![DALL·E 2023-11-01 15.54.49 - In an epic, dark, and magical setting, Alice from Alice in Wonderland is depicted designing a complex machine. The young girl, with her long blonde ha.png](../img/blog-posts/liveness-2-and-beyond/alice-repair.jpg)
 
@@ -135,7 +135,7 @@ In what follows, we will focus on the existing approaches to tackle this verific
 
 ### **Merkle Proofs verification**
 
-[Storage Proofs](https://www.notion.so/Storage-Proofs-8f5ad324afab4592b7f2882b8cf9a354?pvs=21)
+[Storage Proofs](https://defi-wonderland.notion.site/Storage-Proofs-62ca1bb47c404ac1a41e131e41429f66?pvs=4)
 
 MPT verification refers to contracts that can compute the whole storage proof from the Ethereum Merkle Patricia Trie on-chain. There are several working implementations of MPT verifiers written in Solidity. We recommend checking the [Lido](https://github.com/lidofinance/curve-merkle-oracle/blob/main/contracts/MerklePatriciaProofVerifier.sol) and [polytope](https://github.com/polytope-labs/solidity-merkle-trees/blob/main/test/MerklePatricia.t.sol) implementations.
 

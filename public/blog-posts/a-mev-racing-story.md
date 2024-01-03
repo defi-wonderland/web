@@ -74,7 +74,7 @@ Although the recent patches have reduced the risk of attacks, it has not entirel
 
 ![](../img/blog-posts/a-mev-racing-story/meme.jpg)
 
-The chances of a malicious validator winning a race in the same block are “““low”””. However, multiblock attacks are a **very real and serious concern**. Validators from large validator pools, such as Coinbase, Binance, Lido, and Rocketpool, hold a significant portion of the validator power. There is a [high probability](https://alrevuelta.github.io/posts/ethereum-mev-multiblock) that stakers will propose multiple blocks in a row, and coordination among validators is also possible if the potential reward is significant. This was also one of the main reasons we built [PRICE](https://oracles.rip), an oracle that is able to detect and correct [TWAP multiblock manipulations](https://www.notion.so/Oracle-Manipulation-101-cbcea67b7796496995437907d3b1b4ba?pvs=21).
+The chances of a malicious validator winning a race in the same block are “““low”””. However, multiblock attacks are a **very real and serious concern**. Validators from large validator pools, such as Coinbase, Binance, Lido, and Rocketpool, hold a significant portion of the validator power. There is a [high probability](https://alrevuelta.github.io/posts/ethereum-mev-multiblock) that stakers will propose multiple blocks in a row, and coordination among validators is also possible if the potential reward is significant. This was also one of the main reasons we built [PRICE](https://oracles.rip), an oracle that is able to detect and correct [TWAP multiblock manipulations](https://defi.sucks/insights/oracle-manipulation-101).
 
 ## Attack breakdown
 
