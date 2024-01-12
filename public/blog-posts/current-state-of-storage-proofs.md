@@ -6,7 +6,7 @@ Authors: [Parti](https://twitter.com/0xParticle), [Skeletor Spaceman](https://tw
 
 An inclusion proof is a computational operation that ensures, with a high confidence level, that a certain claim value belongs to a certain dataset represented by a commitment. A **storage proof** is an inclusion proof for a storage slot in an EVM contract. For a more detailed explanation on how these works, we recommend checking the following link:
 
-[Storage Proofs](https://www.notion.so/Storage-Proofs-a1222fdca0024150917a4cdaab030af3?pvs=21)
+[Storage Proofs](https://defi-wonderland.notion.site/Storage-Proofs-62ca1bb47c404ac1a41e131e41429f66?pvs=4)
 
 Ethereum is a transparent and decentralized VM. As such, it is the ideal platform to act as a trustless verifier. If Ethereum is convinced, so should we. But what does it mean for Ethereum to be a verifier? Verification in a protocol is a series of deterministic steps conducted on a series of inputs. In particular, we can write a verification program in the bytecode of a Smart Contract.
 
@@ -81,7 +81,7 @@ In what follows, we will focus on the existing approaches to tackle this verific
 
 ### Direct Merkle Proofs
 
-MPT verification refers to contracts that can compute the whole storage proof from the Ethereum Merkle Patricia Trie on-chain. There are several working implementations of MPT verifiers written in Solidity. We recommend checking the [Lido](https://github.com/lidofinance/curve-merkle-oracle/blob/main/contracts/MerklePatriciaProofVerifier.sol) and [polytope](https://github.com/polytope-labs/solidity-merkle-trees/blob/main/test/MerklePatricia.t.sol) implementations. See [here](https://www.notion.so/Storage-Proofs-a1222fdca0024150917a4cdaab030af3?pvs=21) for more details.
+MPT verification refers to contracts that can compute the whole storage proof from the Ethereum Merkle Patricia Trie on-chain. There are several working implementations of MPT verifiers written in Solidity. We recommend checking the [Lido](https://github.com/lidofinance/curve-merkle-oracle/blob/main/contracts/MerklePatriciaProofVerifier.sol) and [polytope](https://github.com/polytope-labs/solidity-merkle-trees/blob/main/test/MerklePatricia.t.sol) implementations. See [here](https://defi-wonderland.notion.site/Storage-Proofs-62ca1bb47c404ac1a41e131e41429f66?pvs=4) for more details.
 
 It’s easy to generate proofs for any storage slot using the RPC providers’ [eth_getProof()](https://docs.infura.io/networks/ethereum/json-rpc-methods/eth_getproof) method. Storage-proof verification implementations require approximately 200k gas, which is considerable for Ethereum but not so much for L2s.
 

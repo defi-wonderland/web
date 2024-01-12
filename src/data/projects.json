@@ -28,9 +28,9 @@
       "github": "https://github.com/defi-wonderland/crosschain-widget"
     },
     {
-      "name": "xTokens (with Connext)",
+      "name": "xERC20 (with Connext)",
       "description": "xTokens is a standard for bridged tokens. A common interface to be used across different implementations of bridges to keep liquidity concentrated and improve user experience on-chain.",
-      "github": "https://github.com/defi-wonderland/xTokens"
+      "github": "https://github.com/defi-wonderland/xERC20"
     },
     {
       "name": "Amphora",

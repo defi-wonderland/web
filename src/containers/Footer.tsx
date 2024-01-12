@@ -15,53 +15,59 @@ import {
   ContentContainer,
 } from '~/components';
 
-const Footer = () => (
-  <ContentContainer>
-    <Container>
-      {/* Background */}
-      <BgContainer>
-        <BackgroundImage type='2' align='center' />
-      </BgContainer>
+const Footer = () => {
+  const currentYear = new Date().getFullYear();
 
-      {/* Card */}
-      <StyledFooter>
-        <FooterHeader>
-          <Star src={StarIcon.src} alt='' />
-          <WonderLogoText src={WonderLogoIcon.src} alt='Wonderland logo text' />
-          <Star src={StarIcon.src} alt='' />
-        </FooterHeader>
+  return (
+    <ContentContainer>
+      <Container>
+        {/* Background */}
+        <BgContainer>
+          <BackgroundImage type='2' align='center' />
+        </BgContainer>
 
-        <FooterActions>
-          <FooterTitle>We&apos;re all mad here</FooterTitle>
-          <ButtonsContainer>
-            <SLink to='https://docs.google.com/forms/d/1n70jsL4sFkOwPNBTdciPqlWF2RirgQwejjztpS4-2L8/viewform' external>
-              <Button>Join us</Button>
-            </SLink>
-          </ButtonsContainer>
-        </FooterActions>
+        {/* Card */}
+        <StyledFooter>
+          <FooterHeader>
+            <Star src={StarIcon.src} alt='' />
+            <WonderLogoText src={WonderLogoIcon.src} alt='Wonderland logo text' />
+            <Star src={StarIcon.src} alt='' />
+          </FooterHeader>
 
-        <FooterSocial>
-          <span>
-            <span>© 2023. Wonder LTD. </span>
-            <span>All Rights Reserved</span>
-          </span>
+          <FooterActions>
+            <FooterTitle>We&apos;re all mad here</FooterTitle>
+            <ButtonsContainer>
+              <SLink
+                to='https://docs.google.com/forms/d/1n70jsL4sFkOwPNBTdciPqlWF2RirgQwejjztpS4-2L8/viewform'
+                external
+              >
+                <Button>Join us</Button>
+              </SLink>
+            </ButtonsContainer>
+          </FooterActions>
 
-          <SocialIcons>
-            <SocialIcon to='https://twitter.com/defi_wonderland' external>
-              <img src={TwitterIcon.src} alt='Twitter icon' loading='lazy' />
-            </SocialIcon>
-            <SocialIcon to='https://github.com/defi-wonderland' external>
-              <img src={GithubIcon.src} alt='Github icon' loading='lazy' />
-            </SocialIcon>
-          </SocialIcons>
+          <FooterSocial>
+            <span>
+              <span>© {currentYear}. Wonder LTD. </span>
+              <span>All Rights Reserved</span>
+            </span>
 
-          <span></span>
-          {/* <span>Privacy Policy</span> */}
-        </FooterSocial>
-      </StyledFooter>
-    </Container>
-  </ContentContainer>
-);
+            <SocialIcons>
+              <SocialIcon to='https://twitter.com/defi_wonderland' external>
+                <img src={TwitterIcon.src} alt='Twitter icon' loading='lazy' />
+              </SocialIcon>
+              <SocialIcon to='https://github.com/defi-wonderland' external>
+                <img src={GithubIcon.src} alt='Github icon' loading='lazy' />
+              </SocialIcon>
+            </SocialIcons>
+
+            <span></span>
+          </FooterSocial>
+        </StyledFooter>
+      </Container>
+    </ContentContainer>
+  );
+};
 
 export default Footer;
 
@@ -164,7 +170,6 @@ const StyledFooter = styled.footer`
   padding: 0 2rem ${footerPadding} 2rem;
   color: var(--text-light);
   background: rgba(255, 255, 255, 0.05);
-  /* border: 1px solid ${footerColor}; */
   border-radius: 1rem;
   backdrop-filter: blur(8px);
   width: 134rem;
