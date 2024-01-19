@@ -9,6 +9,15 @@
     "image": "/img/blog-posts/current-state-of-storage-proofs/cover.jpg"
   },
   {
+    "id": "liveness-2-and-beyond",
+    "public": false,
+    "name": "Liveness 2 and beyond",
+    "description": "The current state of on-chain storage proofs",
+    "date": "12/05/23",
+    "tags": ["Cryptography", "Verification", "Cross-chain"],
+    "image": "/img/blog-posts/current-state-of-storage-proofs/cover.jpg"
+  },
+  {
     "id": "a-zero-day-exploit-in-geb",
     "public": true,
     "name": "Long live RAI",
