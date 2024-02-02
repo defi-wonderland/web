@@ -53,6 +53,12 @@
   ],
   "publicGoods": [
     {
+      "name": "Sponsored Transactions",
+      "description": "Automatically identify missing or incomplete natspec",
+      "github": "https://github.com/defi-wonderland/sponsored-txs-hardhat",
+      "website": "https://faucets.rip"
+    },
+    {
       "name": "Natspec Smells",
       "description": "Automatically identify missing or incomplete natspec",
       "github": "https://github.com/defi-wonderland/natspec-smells"
