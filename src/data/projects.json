@@ -67,6 +67,11 @@
       "docs": "https://smock.readthedocs.io/en/latest/"
     },
     {
+      "name": "Smock for Foundry",
+      "description": "Smock-style mocks for Foundry projects",
+      "github": "https://github.com/defi-wonderland/smock-foundry"
+    },
+    {
       "name": "Sidechain Oracle (with Keep3r Network)",
       "description": "This mechanism provides the price history of Uniswap V3 pools to chains where the pair may not be available or has insufficient liquidity. This is achieved by creating a virtual Uniswap V3 pool with bridged data from Mainnet. The team was responsible for the architecture design, off-chain scripts, and smart contract development. The mechanism has recently been launched and is already working on Optimism and Polygon.",
       "github": "https://github.com/defi-wonderland/sidechain-oracles"
