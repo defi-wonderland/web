@@ -23,7 +23,7 @@
       "web": "https://www.connext.network/"
     },
     {
-      "name": "Crosschain Governance (with Connext)",
+      "name": "Cross-chain Governance (with Connext)",
       "description": "A user-friendly library of React components that empowers users to set up and oversee their Avatar's Zodiac Connext Module. It simplifies the construction of transaction data necessary for implementing preferred actions via an xcall function within Connext.",
       "github": "https://github.com/defi-wonderland/crosschain-widget"
     },
