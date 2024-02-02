@@ -53,6 +53,11 @@
   ],
   "publicGoods": [
     {
+      "name": "Natspec Smells",
+      "description": "Automatically identify missing or incomplete natspec",
+      "github": "https://github.com/defi-wonderland/natspec-smells"
+    },
+    {
       "name": "Price Oracle",
       "description": "Price is a permissionless and reliable oracle solution that provides safe token price quotes by leveraging Uniswap V3 and automation. The team was responsible for the architecture and tokenomics design, UI, off-chain scripts, and smart contract development.",
       "website": "https://oracles.rip",
