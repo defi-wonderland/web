@@ -54,7 +54,7 @@
   "publicGoods": [
     {
       "name": "Sponsored Transactions",
-      "description": "Automatically identify missing or incomplete natspec",
+      "description": "A hardhat plugin allowing to send sponsored testnet transactions",
       "github": "https://github.com/defi-wonderland/sponsored-txs-hardhat",
       "website": "https://faucets.rip"
     },
