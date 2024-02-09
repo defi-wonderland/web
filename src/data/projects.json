@@ -23,7 +23,7 @@
       "web": "https://www.connext.network/"
     },
     {
-      "name": "Crosschain Governance (with Connext)",
+      "name": "Cross-chain Governance (with Connext)",
       "description": "A user-friendly library of React components that empowers users to set up and oversee their Avatar's Zodiac Connext Module. It simplifies the construction of transaction data necessary for implementing preferred actions via an xcall function within Connext.",
       "github": "https://github.com/defi-wonderland/crosschain-widget"
     },
@@ -53,6 +53,17 @@
   ],
   "publicGoods": [
     {
+      "name": "Sponsored Transactions",
+      "description": "A hardhat plugin allowing to send sponsored testnet transactions",
+      "github": "https://github.com/defi-wonderland/sponsored-txs-hardhat",
+      "website": "https://faucets.rip"
+    },
+    {
+      "name": "Natspec Smells",
+      "description": "Automatically identify missing or incomplete natspec",
+      "github": "https://github.com/defi-wonderland/natspec-smells"
+    },
+    {
       "name": "Price Oracle",
       "description": "Price is a permissionless and reliable oracle solution that provides safe token price quotes by leveraging Uniswap V3 and automation. The team was responsible for the architecture and tokenomics design, UI, off-chain scripts, and smart contract development.",
       "website": "https://oracles.rip",
@@ -65,6 +76,11 @@
       "description": "Smock is a Solidity mocking library and Hardhat plugin, used by approximately 800 repositories. It allows developers to form mock Solidity contracts using JavaScript or TypeScript, simplifying smart contract testing and negating the necessity for Solidity mock contracts. Influenced by sinon, sinon-chai, and Python's unittest.mock, Smock presently supports only Hardhat, with future plans to expand to other frameworks like Truffle.",
       "github": "https://github.com/defi-wonderland/smock",
       "docs": "https://smock.readthedocs.io/en/latest/"
+    },
+    {
+      "name": "Smock for Foundry",
+      "description": "Smock-style mocks for Foundry projects",
+      "github": "https://github.com/defi-wonderland/smock-foundry"
     },
     {
       "name": "Sidechain Oracle (with Keep3r Network)",
