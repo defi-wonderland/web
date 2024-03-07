@@ -1,5 +1,14 @@
 [
   {
+    "id": "lc-bridges",
+    "public": true,
+    "name": "Can we trust interoperability to Light Clients?",
+    "description": "A deep dive into Light Client based bridges",
+    "date": "03/06/24",
+    "tags": ["Consensus", "Verification", "Cross-chain"],
+    "image": "/img/blog-posts/lc-bridges/lc5.png"
+  },
+  {
     "id": "current-state-of-storage-proofs",
     "public": true,
     "name": "The current state of storage proofs",
