@@ -6,7 +6,7 @@
     "description": "A deep dive into Light Client based bridges",
     "date": "03/06/24",
     "tags": ["Consensus", "Verification", "Cross-chain"],
-    "image": "/img/blog-posts/lc-bridges/lc5.png"
+    "image": "/img/blog-posts/lc-bridges/lc5.jpg"
   },
   {
     "id": "current-state-of-storage-proofs",
