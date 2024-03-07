@@ -17,7 +17,7 @@ However, this is worthless if the network is congested and unusable. Scaling sol
 
 Bridges come as a patch to mitigate fragmentation. For rollups, trust assumptions overlap the chain itself because the sequencer handles message passing and inclusion. For separate chains, bridges often rely on multisig mechanisms ([and we](https://rekt.news/nomad-rekt/) [all](https://rekt.news/bnb-bridge-rekt/) [know](https://rekt.news/orbit-bridge-rekt/) [how](https://rekt.news/socket-rekt/) [it](https://rekt.news/wormhole-rekt/) [ends](https://rekt.news/ronin-rekt/)).
 
-![Intro image](../img/blog-posts/lc-bridges/lc1.png)
+![Intro image](../img/blog-posts/lc-bridges/lc1.jpg)
 
 No matter how secure the connection is, these solutions fall short of replicating the same-chain experience. There are ongoing discussions about implementing direct reading and calls in rollups, but the if and how remain uncertain.
 
@@ -48,7 +48,7 @@ This makes light clients a perfect fit for various use cases. For example, a wal
 
 As mentioned above, cross-chain infrastructure is one of the most promising use cases. To do so in a trustless way, it’s necessary to run a chain A light client inside chain B, and vice versa. However, it’s not as simple as it sounds. To understand why, let’s look at Light Clients in further detail.
 
-![Main image](../img/blog-posts/lc-bridges/lc2.png)
+![Main image](../img/blog-posts/lc-bridges/lc2.jpg)
 
 > 💡 How can light clients help here?
 
@@ -133,7 +133,7 @@ The Beacon chain uses the [BLS12-381](https://hackmd.io/@benjaminion/bls12-381) 
 
 If the light client receives invalid block roots and matching signatures from the committee, the verification algorithm will accept the root (and hence the Header) as valid.
 
-![crypto](../img/blog-posts/lc-bridges/lc4.png)
+![crypto](../img/blog-posts/lc-bridges/lc4.jpg)
 
 For more details, check the advanced explanation [here](https://defi-wonderland.notion.site/How-does-BLS-work-2acfd094544c4b8dbc6a1fd30cef1ccc?pvs=4)
 
@@ -159,7 +159,7 @@ Here is where ZK comes into play: we can create succinct arguments of knowledge 
 > A world so inviting, yet the leap feels so tall.
 > 🕳️🐇_
 
-![Rabbithole](../img/blog-posts/lc-bridges/lc5.png)
+![Rabbithole](../img/blog-posts/lc-bridges/lc5.jpg)
 
 Up to this point, onchain light clients seem to be a trust-minimized solution to the cross-chain problem, but we already know there’s no such thing as a free lunch. The security of a protocol is as strong as its weakest link, and the Ethereum Sync Committee design [has been criticized](https://prestwich.substack.com/p/altair) for its unconstrained behavior.
 
