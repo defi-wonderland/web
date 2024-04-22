@@ -48,7 +48,7 @@
     "description": "- Enrolled in IT infrastructure studies.\n- Defi research and scalability enthusiast.\n\nFun fact: Spends his spare time in DeFi as well."
   },
   {
-    "name": "enti",
+    "name": "Enti",
     "position": "Researcher",
     "image": "",
     "description": "- Electronics engineer who left electrons for the Ethereum transaction supply chain (kind of same thing innit?).\n- Enjoyoor of sound waves.\n\nFun fact: A group of hedgehogs is called an array."
@@ -144,12 +144,6 @@
     "description": "- Interested in blockchain and startups.\n- Loves watching and playing football. Boca Juniors fun\n\nFun fact: Recovering disco addict ... only on weekdays.."
   },
   {
-    "name": "Dristpunk",
-    "position": "Developer",
-    "image": "/img/pfp/Dristpunk.png",
-    "description": "- Escaped ML engineering.\n- Loves audits but hates doing them.\n\nFun fact: Does YouTube videos."
-  },
-  {
     "name": "Moebius",
     "position": "Developer",
     "image": "/img/pfp/Moebius.png",
@@ -160,6 +154,30 @@
     "position": "Developer",
     "image": "",
     "description": "- Almost engineer.\n- Crypto enthusiast (or addict).\n- Loves gaming and football.\n\nFun fact: Yearly scammed FIFA player."
+  },
+  {
+    "name": "Titi",
+    "position": "Developer",
+    "image": "",
+    "description": "Coming soon"
+  },
+  {
+    "name": "Hex",
+    "position": "Developer",
+    "image": "",
+    "description": "Coming soon"
+  },
+  {
+    "name": "Teddy",
+    "position": "Developer",
+    "image": "",
+    "description": "Coming soon"
+  },
+  {
+    "name": "Kenji",
+    "position": "Developer",
+    "image": "",
+    "description": "Coming soon"
   },
   {
     "name": "Rex (m-r-g-t)",
