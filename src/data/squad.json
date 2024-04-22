@@ -54,6 +54,12 @@
     "description": "- Electronics engineer who left electrons for the Ethereum transaction supply chain (kind of same thing innit?).\n- Enjoyoor of sound waves.\n\nFun fact: A group of hedgehogs is called an array."
   },
   {
+    "name": "Rex (m-r-g-t)",
+    "position": "Data Analyst",
+    "image": "/img/pfp/Rex.png",
+    "description": "- Background in economics.\n- Just your average abacus ASMR enjoyer.\n\nFun fact: Has a wall with about 136 obscure board games."
+  },
+  {
     "name": "Wei3er Hase",
     "position": "Developer",
     "image": "/img/pfp/Wei3er.png",
@@ -159,31 +165,25 @@
     "name": "Titi",
     "position": "Developer",
     "image": "",
-    "description": "Coming soon"
+    "description": "- Background in economics.\n- Traded bonds for nodes.\n- Bake it till you make it.\n\nFun fact: Could happily eat pasta every day for the rest of their life."
   },
   {
     "name": "Hex",
     "position": "Developer",
     "image": "",
-    "description": "Coming soon"
+    "description": "- Former QC Analyst.\n- Started in crypto mining Ravencoin.\n- Considers himself a multipotentialite.\n\nFun fact: Started playing pokemon tcg as an adult."
   },
   {
     "name": "Teddy",
     "position": "Developer",
     "image": "",
-    "description": "Coming soon"
+    "description": "- Solidity dev.\n- Likes lying to machines.\n- Cuddly and sleepy, but doesn't technically hibernate.\n\nFun fact: Clumsy welder."
   },
   {
     "name": "Kenji",
     "position": "Developer",
     "image": "",
     "description": "Coming soon"
-  },
-  {
-    "name": "Rex (m-r-g-t)",
-    "position": "Data Analyst",
-    "image": "/img/pfp/Rex.png",
-    "description": "- Background in economics.\n- Just your average abacus ASMR enjoyer.\n\nFun fact: Has a wall with about 136 obscure board games."
   },
   {
     "name": "Shade",
