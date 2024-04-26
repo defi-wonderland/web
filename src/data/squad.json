@@ -48,10 +48,16 @@
     "description": "- Enrolled in IT infrastructure studies.\n- Defi research and scalability enthusiast.\n\nFun fact: Spends his spare time in DeFi as well."
   },
   {
-    "name": "enti",
+    "name": "Enti",
     "position": "Researcher",
-    "image": "",
+    "image": "/img/pfp/Enti.png",
     "description": "- Electronics engineer who left electrons for the Ethereum transaction supply chain (kind of same thing innit?).\n- Enjoyoor of sound waves.\n\nFun fact: A group of hedgehogs is called an array."
+  },
+  {
+    "name": "Rex (m-r-g-t)",
+    "position": "Data Analyst",
+    "image": "/img/pfp/Rex.png",
+    "description": "- Background in economics.\n- Just your average abacus ASMR enjoyer.\n\nFun fact: Has a wall with about 136 obscure board games."
   },
   {
     "name": "Wei3er Hase",
@@ -144,12 +150,6 @@
     "description": "- Interested in blockchain and startups.\n- Loves watching and playing football. Boca Juniors fun\n\nFun fact: Recovering disco addict ... only on weekdays.."
   },
   {
-    "name": "Dristpunk",
-    "position": "Developer",
-    "image": "/img/pfp/Dristpunk.png",
-    "description": "- Escaped ML engineering.\n- Loves audits but hates doing them.\n\nFun fact: Does YouTube videos."
-  },
-  {
     "name": "Moebius",
     "position": "Developer",
     "image": "/img/pfp/Moebius.png",
@@ -158,14 +158,38 @@
   {
     "name": "Agusduha",
     "position": "Developer",
-    "image": "",
+    "image": "/img/pfp/Agus.png",
     "description": "- Almost engineer.\n- Crypto enthusiast (or addict).\n- Loves gaming and football.\n\nFun fact: Yearly scammed FIFA player."
   },
   {
-    "name": "Rex (m-r-g-t)",
-    "position": "Data Analyst",
-    "image": "/img/pfp/Rex.png",
-    "description": "- Background in economics.\n- Just your average abacus ASMR enjoyer.\n\nFun fact: Has a wall with about 136 obscure board games."
+    "name": "Titi",
+    "position": "Developer",
+    "image": "/img/pfp/Titi.png",
+    "description": "- Background in economics.\n- Traded bonds for nodes.\n- Bake it till you make it.\n\nFun fact: Could happily eat pasta every day for the rest of their life."
+  },
+  {
+    "name": "Hex",
+    "position": "Developer",
+    "image": "/img/pfp/Hex.png",
+    "description": "- Former QC Analyst.\n- Started in crypto mining Ravencoin.\n- Considers himself a multipotentialite.\n\nFun fact: Started playing pokemon tcg as an adult."
+  },
+  {
+    "name": "Teddy",
+    "position": "Developer",
+    "image": "/img/pfp/Teddy.png",
+    "description": "- Solidity dev.\n- Likes lying to machines.\n- Cuddly and sleepy, but doesn't technically hibernate.\n\nFun fact: Clumsy welder."
+  },
+  {
+    "name": "Kenji",
+    "position": "Developer",
+    "image": "/img/pfp/kenji.png",
+    "description": "- Dropped out of Civil Engineering to become a Software Developer.\n- Self-taught sushi itamae.\n- 1st member of the Off-chain department.\n\nFun fact: Has played the guitar daily for at least a while over the last 20 years."
+  },
+  {
+    "name": "Jojo",
+    "position": "Developer",
+    "image": "/img/pfp/Jojo.png",
+    "description": "- Another cs dropout.\n- Adrenaline junkie who hates getting bored, so he got into blockchain development.\n\nFun fact: hacked a stand up contest to win a rubber chicken prize."
   },
   {
     "name": "Shade",
