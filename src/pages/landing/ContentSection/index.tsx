@@ -38,7 +38,7 @@ export default function LandingContent() {
       <FirstBlockContainer>
         <TextContainer>
           <GradientText>Optimism</GradientText>
-          <GradientText>Connext</GradientText>
+          <GradientText>Everclear</GradientText>
           <GradientText>Reflexer</GradientText>
           <GradientText>Yearn</GradientText>
           <GradientText>& many more</GradientText>
