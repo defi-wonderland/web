@@ -8,15 +8,19 @@ interface Props {
 
 type remUnit = `${number}rem`;
 type vwUnit = `${number}vw`;
+
 type titleSizes = {
   lg: remUnit;
   md: remUnit;
   sm: remUnit;
   lgvw: vwUnit;
   mdvw: vwUnit;
+  smvw?: vwUnit;
 };
 
 export const SquigglyTitle = ({ text, sizes }: Props) => {
+  sizes.smvw ??= sizes.mdvw; // fallback to mdvw if smvw is not provided
+
   return (
     <StyledWrapper>
       <StyledTitle $sizes={sizes}>{text}</StyledTitle>
@@ -133,6 +137,7 @@ const StyledTitle = styled.h1<{ $sizes: titleSizes }>`
   }
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    font-size: ${({ $sizes }) => `clamp(${$sizes.sm}, ${$sizes.smvw}, ${$sizes.md})`};
     filter: url('#squiggly-filter-mobile');
   }
 `;

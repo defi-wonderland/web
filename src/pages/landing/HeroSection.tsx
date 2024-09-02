@@ -11,10 +11,11 @@ const HeroSection = ({ ...props }) => {
             text={`THE LARGEST CORE DEVELOPMENT\nGROUP IN WEB3`}
             sizes={{
               lg: '14rem',
-              md: '11.2rem',
-              sm: '4.5rem',
+              md: '11.1rem',
+              sm: '4rem',
               lgvw: '10vw',
-              mdvw: '13vw',
+              mdvw: '11vw',
+              smvw: '13vw',
             }}
           />
         </TitleContainer>
