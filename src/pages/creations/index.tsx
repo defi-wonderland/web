@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 import {
-  AnimatedTitle,
   Ball,
   CONTENT_INDEX,
   ContentContainer,
@@ -9,14 +8,12 @@ import {
   MOBILE_MAX_WIDTH,
   SectionBackground,
   SPACING_128,
+  SquigglyTitle,
   TABLET_MAX_WIDTH,
 } from '~/components';
 import ProjectsList from './ProjectsList';
 import CustomHead from '~/components/CustomHead';
-import { TitleContainer as TitleVideoBase } from '~/pages/landing/HeroSection';
 import { partnerProjects, publicGoods } from '~/data/projects.json';
-import VIDEO_CHROME from '~/assets/videos/creations.webm';
-import VIDEO_SAFARI from '~/assets/videos/creations.mp4';
 import { PageContent } from '~/containers/PageContent';
 
 export default function Creations() {
@@ -33,9 +30,16 @@ export default function Creations() {
               <BG_3 type='2' align='right' />
             </BackgroundContainer>
             <HeroDivider>
-              <TitleVideo>
-                <AnimatedTitle chromeSrc={VIDEO_CHROME} safariSrc={VIDEO_SAFARI} />
-              </TitleVideo>
+              <SquigglyTitle
+                text={`WHAT'S COOKING?`}
+                sizes={{
+                  lg: '20rem',
+                  md: '14rem',
+                  sm: '6rem',
+                  lgvw: '12vw',
+                  mdvw: '16vw',
+                }}
+              />
               <Ball_1 />
               <Ball_2 />
               <Ball_3 />
@@ -67,14 +71,6 @@ const Divider = styled.div`
   background: linear-gradient(to right, rgba(14, 21, 44, 0) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(14, 21, 44, 0) 100%);
   height: 2px;
   width: 100%;
-`;
-
-const TitleVideo = styled(TitleVideoBase)`
-  margin-top: -8rem;
-
-  & video {
-    max-width: 600px;
-  }
 `;
 
 const Container = styled.div`

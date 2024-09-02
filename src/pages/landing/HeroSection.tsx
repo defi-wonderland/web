@@ -1,15 +1,22 @@
 import styled from 'styled-components';
 
-import { Section, MOBILE_MAX_WIDTH, AnimatedTitle } from '~/components';
-import VIDEO_CHROME from '~/assets/videos/landing.webm';
-import VIDEO_SAFARI from '~/assets/videos/landing.mp4';
+import { Section, MOBILE_MAX_WIDTH, SquigglyTitle } from '~/components';
 
 const HeroSection = ({ ...props }) => {
   return (
     <>
       <StyledHeroSection full backgroundImage='/img/hero/hero-bg.jpg' {...props}>
         <TitleContainer>
-          <AnimatedTitle chromeSrc={VIDEO_CHROME} safariSrc={VIDEO_SAFARI} />
+          <SquigglyTitle
+            text={`THE LARGEST CORE DEVELOPMENT\nGROUP IN WEB3`}
+            sizes={{
+              lg: '14rem',
+              md: '11.2rem',
+              sm: '4.5rem',
+              lgvw: '10vw',
+              mdvw: '13vw',
+            }}
+          />
         </TitleContainer>
 
         <HeroDivider src='/img/hero/hero-bg-divider.png' />
@@ -30,22 +37,11 @@ const HeroDivider = styled.img`
 const StyledHeroSection = styled(Section)`
   margin-bottom: 2.8rem;
 
-  & div {
-    position: absolute;
-    width: 100%;
-    top: 7rem;
-    left: 0;
-  }
-
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     top: 0rem;
     min-height: unset;
     height: 50rem;
     background-image: url('/img/hero/hero_mobile.png');
-
-    & div {
-      top: 10rem;
-    }
   }
 `;
 
@@ -55,17 +51,13 @@ export const TitleContainer = styled.div`
   justify-content: center;
   margin-top: 8rem;
 
-  & video {
-    max-width: 890px;
-    width: 70%;
-    height: 100%;
-  }
+  position: absolute;
+  width: 100%;
+  top: 7rem;
+  left: 0;
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     margin-top: 4rem;
-
-    & video {
-      width: 85%;
-    }
+    top: 10rem;
   }
 `;
