@@ -30,16 +30,18 @@ export default function Creations() {
               <BG_3 type='2' align='right' />
             </BackgroundContainer>
             <HeroDivider>
-              <SquigglyTitle
-                text={`WHAT'S COOKING?`}
-                sizes={{
-                  lg: '20rem',
-                  md: '14rem',
-                  sm: '6rem',
-                  lgvw: '12vw',
-                  mdvw: '16vw',
-                }}
-              />
+              <CreationsTitleContainer>
+                <SquigglyTitle
+                  text={`WHAT'S COOKING?`}
+                  sizes={{
+                    lg: '20rem',
+                    md: '14rem',
+                    sm: '6rem',
+                    lgvw: '11.5vw',
+                    mdvw: '16vw',
+                  }}
+                />
+              </CreationsTitleContainer>
               <Ball_1 />
               <Ball_2 />
               <Ball_3 />
@@ -100,6 +102,10 @@ const HeroDivider = styled.div`
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     margin-top: 16rem;
   }
+`;
+
+const CreationsTitleContainer = styled.div`
+  margin-top: -6rem;
 `;
 
 const Ball_1 = styled(Ball)`

@@ -31,7 +31,7 @@ export default function Insights() {
                   lg: '20rem',
                   md: '14rem',
                   sm: '10rem',
-                  lgvw: '12vw',
+                  lgvw: '11.5vw',
                   mdvw: '16vw',
                 }}
               />
@@ -86,6 +86,8 @@ export default function Insights() {
 }
 
 const BlogTitleContainer = styled(TitleContainer)`
+  padding-top: 1rem;
+
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     padding-top: 3.8rem;
     position: relative;
