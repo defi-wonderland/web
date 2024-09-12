@@ -26,7 +26,7 @@ export default function Insights() {
           <Title>
             <BlogTitleContainer>
               <SquigglyTitle
-                text={`WHAT'S NEW?`}
+                text='WHAT’S NEW?'
                 sizes={{
                   lg: '20rem',
                   md: '14rem',

@@ -27,7 +27,7 @@ export default function Ethos() {
         <PageContent>
           <HeroDivider>
             <SquigglyTitle
-              text={`WE'RE ALL MAD HERE`}
+              text='WE’RE ALL MAD HERE'
               sizes={{
                 lg: '23rem',
                 md: '21rem',

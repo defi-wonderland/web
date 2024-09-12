@@ -32,13 +32,13 @@ export default function Creations() {
             <HeroDivider>
               <CreationsTitleContainer>
                 <SquigglyTitle
-                  text={`WHAT'S COOKING?`}
+                  text='WHAT’S COOKING?'
                   sizes={{
                     lg: '20rem',
-                    md: '14rem',
-                    sm: '6rem',
+                    md: '16rem',
+                    sm: '8.75rem',
                     lgvw: '11.5vw',
-                    mdvw: '16vw',
+                    mdvw: '17vw',
                   }}
                 />
               </CreationsTitleContainer>
