@@ -36,9 +36,10 @@ export default function Creations() {
                   sizes={{
                     lg: '20rem',
                     md: '16rem',
-                    sm: '8.75rem',
+                    sm: '6rem',
                     lgvw: '11.5vw',
                     mdvw: '17vw',
+                    smvw: '20vw',
                   }}
                 />
               </CreationsTitleContainer>
