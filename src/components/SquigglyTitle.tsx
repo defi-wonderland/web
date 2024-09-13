@@ -25,13 +25,20 @@ export const SquigglyTitle = ({ text, sizes }: Props) => {
     <StyledWrapper>
       <StyledTitle $sizes={sizes}>{text}</StyledTitle>
 
-      <StyledSVG xmlns='http://www.w3.org/2000/svg' version='1.1' width='102%' height='100%'>
+      <StyledSVG
+        xmlns='http://www.w3.org/2000/svg'
+        preserveAspectRatio='none'
+        viewBox='0 0 1920 1080'
+        version='1.1'
+        width='100%'
+        height='100%'
+      >
         <defs>
           {/* Squiggly filter desktop and tablet */}
           <filter
             id='squiggly-filter'
-            x='-20%'
-            y='-20%'
+            x='0'
+            y='0'
             width='140%'
             height='140%'
             filterUnits='objectBoundingBox'
@@ -129,6 +136,7 @@ const StyledTitle = styled.h1<{ $sizes: titleSizes }>`
   text-align: center;
   white-space: pre;
   z-index: 1;
+  padding: 0 0.1em;
 
   filter: url('#squiggly-filter');
 
@@ -139,6 +147,7 @@ const StyledTitle = styled.h1<{ $sizes: titleSizes }>`
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     font-size: ${({ $sizes }) => `clamp(${$sizes.sm}, ${$sizes.smvw}, ${$sizes.md})`};
     filter: url('#squiggly-filter-mobile');
+    padding: 0;
   }
 `;
 
