@@ -190,5 +190,83 @@
     "position": "Efficiency Evangelist",
     "image": "/img/pfp/Shade.png",
     "description": "- Amateur Organizational Theorist.\n- Prefers reading over any other activity.\n\nFun fact: Is an actual tree on the internet."
+  },
+  {
+    "name": "Lempire",
+    "position": "Developer",
+    "image": "/img/pfp/Lempire.png",
+    "description": "- Likes to play chess and practice Jiu Jitsu.\n\nFun fact: Likes to read books."
+  },
+  {
+    "name": "Laruku",
+    "position": "QA",
+    "image": "/img/pfp/Laruku.png",
+    "description": "- Background in International Relations.\n- World of Warcraft player for 11 years and counting.\n- (Really bad) Violinist.\n\nFun fact: Buys more stationery than they can use."
+  },
+  {
+    "name": "Funkornaut",
+    "position": "Developer",
+    "image": "/img/pfp/Funkornaut.png",
+    "description": "- Solidity developer.\n- Previously made beer for a living.\n- Big golf guy and yogi.\n\nFun fact: I can wiggle my ears without touching them."
+  },
+  {
+    "name": "Shishigami",
+    "position": "Developer",
+    "image": "/img/pfp/Shishigami.png",
+    "description": "- Designer turned Developer.\n- Obsessed with rendering crazy stuff on displays.\n\n- Fun fact: makes big decisions by talking to plants."
+  },
+  {
+    "name": "Nigiri",
+    "position": "Developer",
+    "image": "/img/pfp/Nigiri.png",
+    "description": "- Recently got Software Engineer degree but don't wanna go through it again.\n- Enjoy playing table tennis on free time.\n- Getting into the entrepeneur world.\n\nFun fact: Was a Taiko player/dancer twice (Japanese drums)."
+  },
+  {
+    "name": "Yaco",
+    "position": "Developer",
+    "image": "/img/pfp/Yaco.png",
+    "description": "- Backend/Data engineer.\n- Enjoy doing stuff that just works.\n\nFun fact: Dulce de batata enjoyer & sudoku puzzle enthusiast."
+  },
+  {
+    "name": "Ilpepepig",
+    "position": "Developer",
+    "image": "/img/pfp/Ilpepepig.png",
+    "description": "TBD"
+  },
+  {
+    "name": "Zorzal",
+    "position": "Developer",
+    "image": "/img/pfp/Zorzal.png",
+    "description": "- Mushroom grower.\n- RTS and 4X games addict in recovery.\n\nFun fact: Makes homemade pasta at least once a week."
+  },
+  {
+    "name": "Lumi",
+    "position": "Researcher & Tech Writer",
+    "image": "/img/pfp/Lumi.png",
+    "description": "- Swapped neurons for nodes after working in neuroscience.\n- Currently hacking her way through a BS in Digital Technology at UTDT.\n- Fluent in nerdy talk.\n\nFun fact: Alter ego spent a semester rocking out in music school."
+  },
+  {
+    "name": "Onizuka",
+    "position": "Developer",
+    "image": "/img/pfp/Onizuka.png",
+    "description": "- Electronic technician.\n- Anime addict.\n- MMORPG lover.\n\nFun fact: Impulsive buyer of unnecessary things (that’s what I work for)."
+  },
+  {
+    "name": "Ringo",
+    "position": "Financial Analyst",
+    "image": "/img/pfp/Ringo.png",
+    "description": "- Background in Economics.\n- He worked at Wonderland for over a year under the hood.\n- Loves lifting heavy shit, playing football, and golfing.\n\nFun Fact: Has been breaking cymbals, heads, and sticks since he was twelve."
+  },
+  {
+    "name": "Jahabeebs",
+    "position": "Developer",
+    "image": "/img/pfp/Jahabeebs.png",
+    "description": "- A macaw who specializes in Typescript by profession but also enjoys tennis and violin.\n- Migratory path between the U.S. and Colombia.\n\nFun Fact: Exceptional whistler."
+  },
+  {
+    "name": "Ikiryou",
+    "position": "Engineering Manager",
+    "image": "/img/pfp/Ikiryou.png",
+    "description": "- Jack of all trades.\n- Worked in Web2 for almost 2 decades for the hospitality industry.\n- Has too many hobbies raging from gaming to leathercrafting.\n\nFun fact: Perfectionist, but in a bad way."
   }
 ]
