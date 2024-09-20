@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { FONT_DISPLAY, MOBILE_MAX_WIDTH, TABLET_MAX_WIDTH } from '~/components';
+import { useIsSafari } from '~/hooks/useIsSafari';
 
 interface Props {
   text: string; // use '\n' to break lines in a template literal
@@ -19,101 +20,17 @@ type titleSizes = {
 };
 
 export const SquigglyTitle = ({ text, sizes }: Props) => {
+  const isSafari = useIsSafari();
+  const isFilterEnabled = !isSafari;
+
   sizes.smvw ??= sizes.mdvw; // fallback to mdvw if smvw is not provided
 
   return (
     <StyledWrapper>
-      <StyledTitle $sizes={sizes}>{text}</StyledTitle>
-
-      <StyledSVG
-        xmlns='http://www.w3.org/2000/svg'
-        preserveAspectRatio='none'
-        viewBox='0 0 1920 1080'
-        version='1.1'
-        width='100%'
-        height='100%'
-      >
-        <defs>
-          {/* Squiggly filter desktop and tablet */}
-          <filter
-            id='squiggly-filter'
-            x='0'
-            y='0'
-            width='140%'
-            height='140%'
-            filterUnits='objectBoundingBox'
-            primitiveUnits='userSpaceOnUse'
-            colorInterpolationFilters='linearRGB'
-          >
-            <feTurbulence
-              type='fractalNoise'
-              baseFrequency='0.02 0.0125'
-              numOctaves='3'
-              seed='2'
-              stitchTiles='stitch'
-              x='0%'
-              y='0%'
-              width='200%'
-              height='100%'
-              scale='1'
-              result='turbulence'
-            />
-            <feDisplacementMap
-              in='SourceGraphic'
-              in2='turbulence'
-              scale='5'
-              xChannelSelector='R'
-              yChannelSelector='B'
-              x='0%'
-              y='0%'
-              width='100%'
-              height='100%'
-              result='displacementMap'
-            >
-              <animate attributeName='scale' values='5;15;5;' dur='2' repeatCount='indefinite' begin='0' />
-            </feDisplacementMap>
-          </filter>
-          {/* Squiggly filter mobile */}
-          <filter
-            id='squiggly-filter-mobile'
-            x='-20%'
-            y='-20%'
-            width='140%'
-            height='140%'
-            filterUnits='objectBoundingBox'
-            primitiveUnits='userSpaceOnUse'
-            colorInterpolationFilters='linearRGB'
-          >
-            <feTurbulence
-              type='fractalNoise'
-              baseFrequency='0.02 0.0125'
-              numOctaves='3'
-              seed='0'
-              stitchTiles='stitch'
-              x='0%'
-              y='0%'
-              width='200%'
-              height='100%'
-              scale='1'
-              result='turbulence'
-            />
-            <feDisplacementMap
-              in='SourceGraphic'
-              in2='turbulence'
-              scale='2'
-              xChannelSelector='R'
-              yChannelSelector='B'
-              x='0%'
-              y='0%'
-              width='100%'
-              height='100%'
-              result='displacementMap'
-            >
-              <animate attributeName='scale' values='2;6;2;' dur='2' repeatCount='indefinite' begin='0' />
-            </feDisplacementMap>
-          </filter>
-        </defs>
-      </StyledSVG>
+      <StyledTitle $sizes={sizes} $filterEnabled={isFilterEnabled}>
+        {text}
+      </StyledTitle>
+      <SVGFilter />
     </StyledWrapper>
   );
 };
@@ -125,7 +42,7 @@ const StyledWrapper = styled.div`
   align-items: center;
 `;
 
-const StyledTitle = styled.h1<{ $sizes: titleSizes }>`
+const StyledTitle = styled.h1<{ $sizes: titleSizes; $filterEnabled: boolean }>`
   font-family: ${FONT_DISPLAY};
   font-weight: 300;
   font-style: italic;
@@ -138,7 +55,8 @@ const StyledTitle = styled.h1<{ $sizes: titleSizes }>`
   z-index: 1;
   padding: 0 0.1em;
 
-  filter: url('#squiggly-filter');
+  transform: translateZ(0);
+  filter: ${({ $filterEnabled }) => $filterEnabled && `url('#squiggly-filter')`};
 
   @media screen and (max-width: ${TABLET_MAX_WIDTH}) {
     font-size: ${({ $sizes }) => `clamp(${$sizes.sm}, ${$sizes.mdvw}, ${$sizes.md})`};
@@ -146,7 +64,7 @@ const StyledTitle = styled.h1<{ $sizes: titleSizes }>`
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     font-size: ${({ $sizes }) => `clamp(${$sizes.sm}, ${$sizes.smvw}, ${$sizes.md})`};
-    filter: url('#squiggly-filter-mobile');
+    filter: ${({ $filterEnabled }) => $filterEnabled && `url('#squiggly-filter-mobile')`};
     padding: 0;
   }
 `;
@@ -156,3 +74,95 @@ const StyledSVG = styled.svg`
   left: 0;
   top: 0;
 `;
+
+const SVGFilter = () => (
+  <StyledSVG
+    xmlns='http://www.w3.org/2000/svg'
+    preserveAspectRatio='none'
+    viewBox='0 0 1920 1080'
+    version='1.1'
+    width='100%'
+    height='100%'
+  >
+    <defs>
+      {/* Squiggly filter desktop and tablet */}
+      <filter
+        id='squiggly-filter'
+        x='0'
+        y='0'
+        width='140%'
+        height='140%'
+        filterUnits='objectBoundingBox'
+        primitiveUnits='userSpaceOnUse'
+        colorInterpolationFilters='linearRGB'
+      >
+        <feTurbulence
+          type='fractalNoise'
+          baseFrequency='0.02 0.0125'
+          numOctaves='3'
+          seed='2'
+          stitchTiles='stitch'
+          x='0%'
+          y='0%'
+          width='200%'
+          height='100%'
+          scale='1'
+          result='turbulence'
+        />
+        <feDisplacementMap
+          in='SourceGraphic'
+          in2='turbulence'
+          scale='5'
+          xChannelSelector='R'
+          yChannelSelector='B'
+          x='0%'
+          y='0%'
+          width='100%'
+          height='100%'
+          result='displacementMap'
+        >
+          <animate attributeName='scale' values='5;15;5;' dur='2' repeatCount='indefinite' begin='0' />
+        </feDisplacementMap>
+      </filter>
+      {/* Squiggly filter mobile */}
+      <filter
+        id='squiggly-filter-mobile'
+        x='-20%'
+        y='-20%'
+        width='140%'
+        height='140%'
+        filterUnits='objectBoundingBox'
+        primitiveUnits='userSpaceOnUse'
+        colorInterpolationFilters='linearRGB'
+      >
+        <feTurbulence
+          type='fractalNoise'
+          baseFrequency='0.02 0.0125'
+          numOctaves='3'
+          seed='0'
+          stitchTiles='stitch'
+          x='0%'
+          y='0%'
+          width='200%'
+          height='100%'
+          scale='1'
+          result='turbulence'
+        />
+        <feDisplacementMap
+          in='SourceGraphic'
+          in2='turbulence'
+          scale='2'
+          xChannelSelector='R'
+          yChannelSelector='B'
+          x='0%'
+          y='0%'
+          width='100%'
+          height='100%'
+          result='displacementMap'
+        >
+          <animate attributeName='scale' values='2;6;2;' dur='2' repeatCount='indefinite' begin='0' />
+        </feDisplacementMap>
+      </filter>
+    </defs>
+  </StyledSVG>
+);
