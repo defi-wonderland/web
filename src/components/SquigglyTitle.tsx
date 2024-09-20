@@ -27,10 +27,8 @@ export const SquigglyTitle = ({ text, sizes }: Props) => {
 
   return (
     <StyledWrapper>
-      <StyledTitle $sizes={sizes} $filterEnabled={isFilterEnabled}>
-        {text}
-      </StyledTitle>
-      <SVGFilter />
+      <StyledTitle $sizes={sizes}>{text}</StyledTitle>
+      {isFilterEnabled && <SVGFilter />}
     </StyledWrapper>
   );
 };
@@ -42,7 +40,7 @@ const StyledWrapper = styled.div`
   align-items: center;
 `;
 
-const StyledTitle = styled.h1<{ $sizes: titleSizes; $filterEnabled: boolean }>`
+const StyledTitle = styled.h1<{ $sizes: titleSizes }>`
   font-family: ${FONT_DISPLAY};
   font-weight: 300;
   font-style: italic;
@@ -56,7 +54,7 @@ const StyledTitle = styled.h1<{ $sizes: titleSizes; $filterEnabled: boolean }>`
   padding: 0 0.1em;
 
   transform: translateZ(0);
-  filter: ${({ $filterEnabled }) => $filterEnabled && `url('#squiggly-filter')`};
+  filter: url('#squiggly-filter');
 
   @media screen and (max-width: ${TABLET_MAX_WIDTH}) {
     font-size: ${({ $sizes }) => `clamp(${$sizes.sm}, ${$sizes.mdvw}, ${$sizes.md})`};
@@ -64,7 +62,7 @@ const StyledTitle = styled.h1<{ $sizes: titleSizes; $filterEnabled: boolean }>`
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     font-size: ${({ $sizes }) => `clamp(${$sizes.sm}, ${$sizes.smvw}, ${$sizes.md})`};
-    filter: ${({ $filterEnabled }) => $filterEnabled && `url('#squiggly-filter-mobile')`};
+    filter: url('#squiggly-filter-mobile');
     padding: 0;
   }
 `;
