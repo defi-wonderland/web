@@ -1,5 +1,5 @@
 export * from './Variables';
-export * from './AnimatedTitle';
+export * from './SquigglyTitle';
 export * from './AnimationIn';
 export * from './Ball';
 export * from './Button';

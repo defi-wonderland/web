@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 import {
-  AnimatedTitle,
   Ball,
   CONTENT_INDEX,
   ContentContainer,
@@ -9,14 +8,12 @@ import {
   MOBILE_MAX_WIDTH,
   SectionBackground,
   SPACING_128,
+  SquigglyTitle,
   TABLET_MAX_WIDTH,
 } from '~/components';
 import ProjectsList from './ProjectsList';
 import CustomHead from '~/components/CustomHead';
-import { TitleContainer as TitleVideoBase } from '~/pages/landing/HeroSection';
 import { partnerProjects, publicGoods } from '~/data/projects.json';
-import VIDEO_CHROME from '~/assets/videos/creations.webm';
-import VIDEO_SAFARI from '~/assets/videos/creations.mp4';
 import { PageContent } from '~/containers/PageContent';
 
 export default function Creations() {
@@ -33,9 +30,19 @@ export default function Creations() {
               <BG_3 type='2' align='right' />
             </BackgroundContainer>
             <HeroDivider>
-              <TitleVideo>
-                <AnimatedTitle chromeSrc={VIDEO_CHROME} safariSrc={VIDEO_SAFARI} />
-              </TitleVideo>
+              <CreationsTitleContainer>
+                <SquigglyTitle
+                  text='WHAT’S COOKING?'
+                  sizes={{
+                    lg: '20rem',
+                    md: '16rem',
+                    sm: '6rem',
+                    lgvw: '11.5vw',
+                    mdvw: '17vw',
+                    smvw: '20vw',
+                  }}
+                />
+              </CreationsTitleContainer>
               <Ball_1 />
               <Ball_2 />
               <Ball_3 />
@@ -69,14 +76,6 @@ const Divider = styled.div`
   width: 100%;
 `;
 
-const TitleVideo = styled(TitleVideoBase)`
-  margin-top: -8rem;
-
-  & video {
-    max-width: 600px;
-  }
-`;
-
 const Container = styled.div`
   width: 90%;
   display: flex;
@@ -104,6 +103,10 @@ const HeroDivider = styled.div`
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     margin-top: 16rem;
   }
+`;
+
+const CreationsTitleContainer = styled.div`
+  margin-top: -6rem;
 `;
 
 const Ball_1 = styled(Ball)`

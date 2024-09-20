@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 
 import {
-  AnimatedTitle,
   Ball,
   ContentContainer,
   MOBILE_MAX_WIDTH,
   SPACING_192,
   SPACING_512,
   SPACING_700,
+  SquigglyTitle,
 } from '~/components';
 import { PageContent } from '~/containers/PageContent';
 import CustomHead from '~/components/CustomHead';
@@ -17,9 +17,6 @@ import TextSection from './TextSection';
 import Cone from '~/assets/cone.png';
 import HoopTop from '~/assets/hoop-top.png';
 import HoopBottom from '~/assets/hoop-bottom.png';
-import VIDEO_CHROME from '~/assets/videos/ethos.webm';
-import VIDEO_SAFARI from '~/assets/videos/ethos.mp4';
-import { TitleContainer } from '../landing/HeroSection';
 
 export default function Ethos() {
   return (
@@ -29,9 +26,16 @@ export default function Ethos() {
       <ContentContainer>
         <PageContent>
           <HeroDivider>
-            <STitleContainer>
-              <AnimatedTitle chromeSrc={VIDEO_CHROME} safariSrc={VIDEO_SAFARI} />
-            </STitleContainer>
+            <SquigglyTitle
+              text='WE’RE ALL MAD HERE'
+              sizes={{
+                lg: '23rem',
+                md: '21rem',
+                sm: '4.5rem',
+                lgvw: '16vw',
+                mdvw: '20vw',
+              }}
+            />
           </HeroDivider>
 
           <BackgroundContainer>
@@ -103,11 +107,4 @@ const SCone = styled.img`
 
 const SHoop = styled(SCone)`
   z-index: 10;
-`;
-
-const STitleContainer = styled(TitleContainer)`
-  margin-top: 0rem;
-  & video {
-    width: 80%;
-  }
 `;
