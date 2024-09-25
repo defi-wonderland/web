@@ -1,14 +1,24 @@
 import styled from 'styled-components';
-import { Button, FONT_MEDIUM_L, SLink, MOBILE_MAX_WIDTH } from '~/components';
+import { Button, FONT_MEDIUM_L, SLink, MOBILE_MAX_WIDTH, TABLET_MAX_WIDTH } from '~/components';
 
 export const CardContainer = styled.div`
   width: 42rem;
   padding-top: 5rem;
 
+  @media screen and (max-width: ${TABLET_MAX_WIDTH}) {
+    width: 100%;
+  }
+
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     width: 100%;
-    padding-top: 40rem;
   }
+`;
+
+const CardWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 `;
 
 const PrimaryText = styled.p`
@@ -39,7 +49,7 @@ export const SButton = styled(Button)`
 
 export default function RightCard() {
   return (
-    <>
+    <CardWrapper>
       <CardContainer>
         <PrimaryText>Our approach</PrimaryText>
         <SecondaryText>
@@ -50,6 +60,6 @@ export default function RightCard() {
           <SButton>Learn more</SButton>
         </SLink>
       </CardContainer>
-    </>
+    </CardWrapper>
   );
 }

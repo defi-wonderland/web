@@ -14,10 +14,12 @@ import { SLink } from '~/components';
 import ProjectsList from '~/pages/creations/ProjectsList';
 import RightCard from './RightCard';
 import Squad from './SquadSection';
+import QuotesCarousel from './QuotesCarousel';
 
 import { partnerProjects } from '~/data/projects.json';
 import StarIcon from '~/public/img/footer/star-icon.svg';
-import ConeBackground from '~/assets/landing_bg.png';
+import ConeIllustration from '~/assets/landing_cone.png';
+import RingIllustration from '~/assets/landing_ring.png';
 import MobileStar from '~/assets/ethos-stars.svg';
 import Flower from '~/assets/flower.svg';
 
@@ -27,7 +29,6 @@ export default function LandingContent() {
     <LandingContainer>
       <BackgroundContainer>
         <BG_1 type='1' align='center' />
-        <Cone src={ConeBackground.src} />
       </BackgroundContainer>
       <Star src={StarIcon.src} />
       <FirstTitle>
@@ -36,15 +37,14 @@ export default function LandingContent() {
       </FirstTitle>
 
       <FirstBlockContainer>
-        <TextContainer>
-          <GradientText>Optimism</GradientText>
-          <GradientText>Everclear</GradientText>
-          <GradientText>Reflexer</GradientText>
-          <GradientText>Yearn</GradientText>
-          <GradientText>& many more</GradientText>
-        </TextContainer>
-
-        <RightCard />
+        <QuotesCarousel />
+        <HorizontalLayout>
+          <RightCard />
+          <IllustrationsContainer>
+            <Cone src={ConeIllustration.src} />
+            <Ring src={RingIllustration.src} />
+          </IllustrationsContainer>
+        </HorizontalLayout>
       </FirstBlockContainer>
 
       <Divider>
@@ -113,20 +113,17 @@ const BG_1 = styled(SectionBackground)`
 `;
 
 const Cone = styled.img.attrs({ loading: 'lazy', alt: '' })`
+  width: 80%;
+`;
+
+const Ring = styled.img.attrs({ loading: 'lazy', alt: '' })`
   position: absolute;
-  margin-left: 25%;
-  width: 90rem;
-  margin-top: -16rem;
+  top: -55%;
+  right: -105%;
+  width: 90%;
 
   @media screen and (max-width: ${TABLET_MAX_WIDTH}) {
-    margin-right: -10rem;
-    margin-top: 125rem;
-  }
-
-  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
-    width: 120%;
-    margin-right: unset;
-    margin-left: -3.5rem;
+    right: -85%;
   }
 `;
 
@@ -214,6 +211,7 @@ const Icon = styled.img.attrs({ loading: 'lazy', alt: '' })`
 `;
 
 const FirstBlockContainer = styled.div`
+  position: relative;
   width: 100%;
   height: 100%;
   border-left: 1px solid rgba(255, 255, 255, 0.5);
@@ -221,13 +219,46 @@ const FirstBlockContainer = styled.div`
 
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
+  gap: 8rem;
+  padding: 4rem 8rem 8rem;
 
   @media screen and (max-width: ${TABLET_MAX_WIDTH}) {
     flex-direction: column;
-    padding: 2.4rem 1.6rem;
     border-left: none;
+    gap: 6rem;
+    padding: 4rem 0 8rem;
   }
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    padding: 2.4rem 1.6rem;
+  }
+`;
+
+const HorizontalLayout = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+
+  & > * {
+    flex: 1;
+  }
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    flex-direction: column-reverse;
+    gap: 4rem;
+    padding: 0 2rem;
+  }
+`;
+
+const IllustrationsContainer = styled.div`
+  position: relative;
+  display: flex;
+  justify-content: center;
 `;
 
 const SecondBlockContainer = styled.div`
