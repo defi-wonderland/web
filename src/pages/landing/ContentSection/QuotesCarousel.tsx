@@ -85,8 +85,8 @@ const CarouselContainer = styled(Carousel)`
     }
 
     &.logo {
-      width: 10rem !important;
-      height: 10rem !important;
+      width: 10rem;
+      height: 10rem;
       border-radius: 50%;
       position: absolute;
       top: 0;
@@ -94,8 +94,8 @@ const CarouselContainer = styled(Carousel)`
       transform: translate(50%, -50%);
 
       @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
-        width: 10rem !important;
-        height: 10rem !important;
+        width: 10rem;
+        height: 10rem;
         left: 50%;
         transform: translate(-50%, -50%);
       }
@@ -152,10 +152,12 @@ const CarouselContainer = styled(Carousel)`
     left: 35%;
     transform: translateX(-100%);
     opacity: 1;
-    background-image: url('/img/arrow_left.svg') !important;
+    background-image: url('/img/arrow_left.svg');
 
     &:hover {
       opacity: 0.8;
+      background-color: unset;
+      background-image: url('/img/arrow_left.svg');
     }
   }
 
@@ -166,21 +168,18 @@ const CarouselContainer = styled(Carousel)`
     bottom: -8.2rem;
     left: 65%;
     opacity: 1;
-    background-image: url('/img/arrow.svg') !important;
+    background-image: url('/img/arrow.svg');
 
     &:hover {
       opacity: 0.8;
+      background-color: unset;
+      background-image: url('/img/arrow.svg');
     }
   }
 
   & .control-next::before,
   .control-prev::before {
     opacity: 0;
-  }
-
-  & .control-arrow.control-prev:hover,
-  .control-arrow.control-next:hover {
-    background-color: transparent;
   }
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
