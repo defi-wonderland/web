@@ -2,13 +2,10 @@ import { useState } from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import { styled } from 'styled-components';
 import { FONT_MEDIUM, MOBILE_MAX_WIDTH } from '~/components';
-import QUOTES_DATA from '~/data/quotes.json';
-
-// simulate circular carousel
-const QUOTES = [...QUOTES_DATA, ...QUOTES_DATA, ...QUOTES_DATA];
+import QUOTES from '~/data/quotes.json';
 
 export default function QuotesCarousel() {
-  const [selectedItem, setSelectedItem] = useState(Math.floor(QUOTES.length / 2));
+  const [selectedItem, setSelectedItem] = useState(1);
 
   return (
     <Container>
@@ -24,6 +21,7 @@ export default function QuotesCarousel() {
         onChange={(index: number) => {
           setSelectedItem(index);
         }}
+        infiniteLoop
       >
         {QUOTES.map((quote, i) => (
           <QuoteCard key={quote.author.name} data-previous={i === selectedItem - 1} data-next={i === selectedItem + 1}>
