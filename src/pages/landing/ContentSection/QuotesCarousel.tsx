@@ -13,7 +13,7 @@ export default function QuotesCarousel() {
   return (
     <Container>
       <CarouselContainer
-        showArrows={true}
+        showArrows
         showStatus={false}
         showThumbs={false}
         showIndicators={false}
@@ -30,7 +30,7 @@ export default function QuotesCarousel() {
             <Quote>{quote.text}</Quote>
             <Divider />
             <AuthorContainer href={quote.link} target='_blank'>
-              <Avatar src={quote.author.avatar} alt={`${quote.author.name} avatar`} />
+              <img className='avatar' src={quote.author.avatar} alt={`${quote.author.name} avatar`} />
               <TextContainer>
                 <Text>
                   {quote.author.name} / {quote.author.position}
@@ -38,7 +38,7 @@ export default function QuotesCarousel() {
                 <Text>{quote.author.company}</Text>
               </TextContainer>
             </AuthorContainer>
-            <Logo src={quote.logo} alt={`${quote.author.company} logo`} />
+            <img className='logo' src={quote.logo} alt={`${quote.author.company} logo`} />
           </QuoteCard>
         ))}
       </CarouselContainer>
@@ -78,6 +78,31 @@ const CarouselContainer = styled(Carousel)`
   align-items: center;
   width: 42rem;
   margin: 6rem auto;
+
+  & .carousel .slide img {
+    &.avatar {
+      width: 4.5rem;
+      height: 4.5rem;
+      border-radius: 50%;
+    }
+
+    &.logo {
+      width: 10rem !important;
+      height: 10rem !important;
+      border-radius: 50%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: translate(50%, -50%);
+
+      @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+        width: 10rem !important;
+        height: 10rem !important;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
 
   & .carousel.carousel-slider {
     overflow: unset;
@@ -210,13 +235,6 @@ const AuthorContainer = styled.a`
   text-decoration: none;
 `;
 
-const Avatar = styled.img`
-  // override the default slide image
-  width: 4.5rem !important;
-  height: 4.5rem !important;
-  border-radius: 50%;
-`;
-
 const TextContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -236,21 +254,4 @@ const textStyles = `
 
 const Text = styled.span`
   ${textStyles}
-`;
-
-const Logo = styled.img`
-  width: 10rem !important;
-  height: 10rem !important;
-  border-radius: 50%;
-  position: absolute;
-  top: 0;
-  right: 0;
-  transform: translate(50%, -50%);
-
-  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
-    width: 10rem !important;
-    height: 10rem !important;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
 `;
