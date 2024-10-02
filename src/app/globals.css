@@ -128,7 +128,8 @@ button {
 }
 
 .gradient,
-.gradient strong {
+.gradient strong,
+.gradient .gradient-text {
   width: fit-content;
   background: linear-gradient(to right, #625cbf, #c55fa3, #fccc50);
   background-clip: text;
