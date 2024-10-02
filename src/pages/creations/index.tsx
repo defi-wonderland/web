@@ -15,10 +15,25 @@ import ProjectsList from './ProjectsList';
 import CustomHead from '~/components/CustomHead';
 import { partners, projects, publicGoods } from '~/data/projects.json';
 import { PageContent } from '~/containers/PageContent';
+import { LogosCarousel } from '~/pages/creations/LogosCarousel';
+import { useMemo, useState } from 'react';
 
 const allProjects = [...partners, ...projects];
+const allCompanies = [...partners, ...projects].map((project) => project.company.name);
+const companies = [...new Set(allCompanies)]; // unique values
 
 export default function Creations() {
+  const [companySelected, setCompanySelected] = useState<string>('Optimism');
+
+  const changeCompany = (index: number) => {
+    setCompanySelected(companies[index]);
+  };
+
+  const filteredProjects = useMemo(
+    () => allProjects.filter((project) => project.company.name === companySelected),
+    [companySelected],
+  );
+
   return (
     <>
       <CustomHead title='Creations' />
@@ -57,9 +72,12 @@ export default function Creations() {
                 <strong>THE BEST</strong>
               </ProjectTitle>
             </TitleContainer>
+            <LogosCarouselContainer>
+              <LogosCarousel companies={companies} onChange={changeCompany} />
+            </LogosCarouselContainer>
             <ProjectsContainer>
               <Divider />
-              <ProjectsList projects={allProjects} />
+              <ProjectsList projects={filteredProjects} />
             </ProjectsContainer>
 
             <TitleContainer>
@@ -256,5 +274,19 @@ const ProjectsContainer = styled.div`
 
   @media screen and (max-width: ${TABLET_MAX_WIDTH}) {
     padding: 0;
+  }
+`;
+
+const LogosCarouselContainer = styled.div`
+  max-width: 90rem;
+  width: 100%;
+  margin: 5rem auto 0;
+
+  @media screen and (max-width: ${TABLET_MAX_WIDTH}) {
+    max-width: 60rem;
+  }
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    max-width: 32rem;
   }
 `;
