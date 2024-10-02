@@ -16,7 +16,7 @@ import RightCard from './RightCard';
 import Squad from './SquadSection';
 import QuotesCarousel from './QuotesCarousel';
 
-import { partnerProjects } from '~/data/projects.json';
+import { partners } from '~/data/projects.json';
 import StarIcon from '~/public/img/footer/star-icon.svg';
 import ConeIllustration from '~/assets/landing_cone.png';
 import RingIllustration from '~/assets/landing_ring.png';
@@ -24,7 +24,7 @@ import MobileStar from '~/assets/ethos-stars.svg';
 import Flower from '~/assets/flower.svg';
 
 export default function LandingContent() {
-  const projectList = partnerProjects ? partnerProjects.slice(0, 3) : [];
+  const projectList = partners ? partners.slice(0, 3) : [];
   return (
     <LandingContainer>
       <BackgroundContainer>

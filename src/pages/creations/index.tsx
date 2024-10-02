@@ -15,7 +15,7 @@ import ProjectsList from './ProjectsList';
 import CustomHead from '~/components/CustomHead';
 import { partners, projects, publicGoods } from '~/data/projects.json';
 import { PageContent } from '~/containers/PageContent';
-import { LogosCarousel } from '~/pages/creations/LogosCarousel';
+import LogosCarousel from './LogosCarousel';
 import { useMemo, useState } from 'react';
 
 const allProjects = [...partners, ...projects];

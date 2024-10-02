@@ -26,7 +26,7 @@ const carouselState = {
 
 const formatCompanyToFileName = (company: string) => company.toLowerCase().replace(/ /g, '-');
 
-export const LogosCarousel = ({ companies, onChange }: LogosCarouselProps) => {
+export default function LogosCarousel({ companies, onChange }: LogosCarouselProps) {
   const [loop, setLoop] = useState(carouselState.desktop.loop); // iterations of the logos
   const [visibleItems, setVisibleItems] = useState(carouselState.desktop.visibleItems); // number of logos visible
 
@@ -111,13 +111,13 @@ export const LogosCarousel = ({ companies, onChange }: LogosCarouselProps) => {
       >
         {items.map((company, i) => (
           <LogoContainer key={company} data-size={setSize(i, selectedItem) || 0} data-index={i}>
-            <Logo src={`/img/logos/${formatCompanyToFileName(company)}.png`} alt={`${company} logo`} />
+            <Logo src={`/img/logos/${formatCompanyToFileName(company || '')}.png`} alt={`${company} logo`} />
           </LogoContainer>
         ))}
       </CarouselContainer>
     </Container>
   );
-};
+}
 
 const Container = styled.div`
   position: relative;
