@@ -123,9 +123,82 @@ const Container = styled.div`
   position: relative;
 `;
 
-const LogoContainer = styled.div``;
+const LogoContainer = styled.div`
+  width: 8rem;
+  height: 8rem;
+  opacity: 1;
+  border-radius: 50%;
+  overflow: hidden;
+  will-change: width, height, opacity;
+  transition: width 0.3s, height 0.3s, opacity 0.3s ease-in;
+
+  &[data-size='4'] {
+    width: 7rem;
+    height: 7rem;
+    opacity: 0.9;
+  }
+
+  &[data-size='3'] {
+    width: 6rem;
+    height: 6rem;
+    opacity: 0.8;
+  }
+
+  &[data-size='2'] {
+    width: 5rem;
+    height: 5rem;
+    opacity: 0.7;
+  }
+
+  &[data-size='1'] {
+    width: 4rem;
+    height: 4rem;
+    opacity: 0.6;
+  }
+
+  &[data-size='0'] {
+    width: 3rem;
+    height: 3rem;
+    opacity: 0;
+    transition: width 0.3s, height 0.3s, opacity 0.2s;
+  }
+
+  @media screen and (max-width: ${TABLET_MAX_WIDTH}) {
+    &[data-size='3'] {
+      width: 8rem;
+      height: 8rem;
+      opacity: 1;
+    }
+    &[data-size='2'] {
+      width: 6rem;
+      height: 6rem;
+      opacity: 0.9;
+    }
+    &[data-size='1'] {
+      width: 4rem;
+      height: 4rem;
+      opacity: 0.8;
+    }
+  }
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    &[data-size='2'] {
+      width: 7rem;
+      height: 7rem;
+      opacity: 1;
+    }
+    &[data-size='1'] {
+      width: 5rem;
+      height: 5rem;
+      opacity: 0.9;
+    }
+  }
+`;
 
 const Logo = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   border-radius: 50%;
 `;
 
@@ -139,84 +212,6 @@ const CarouselContainer = styled(Carousel)`
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     padding: 0 5rem;
     width: 100%;
-  }
-
-  & ${LogoContainer} {
-    width: 8rem;
-    height: 8rem;
-    opacity: 1;
-    border-radius: 50%;
-    overflow: hidden;
-    will-change: width, height, opacity;
-    transition: width 0.3s, height 0.3s, opacity 0.3s ease-in;
-
-    &[data-size='4'] {
-      width: 7rem;
-      height: 7rem;
-      opacity: 0.9;
-    }
-
-    &[data-size='3'] {
-      width: 6rem;
-      height: 6rem;
-      opacity: 0.8;
-    }
-
-    &[data-size='2'] {
-      width: 5rem;
-      height: 5rem;
-      opacity: 0.7;
-    }
-
-    &[data-size='1'] {
-      width: 4rem;
-      height: 4rem;
-      opacity: 0.6;
-    }
-
-    &[data-size='0'] {
-      width: 3rem;
-      height: 3rem;
-      opacity: 0;
-      transition: width 0.3s, height 0.3s, opacity 0.2s;
-    }
-
-    @media screen and (max-width: ${TABLET_MAX_WIDTH}) {
-      &[data-size='3'] {
-        width: 8rem;
-        height: 8rem;
-        opacity: 1;
-      }
-      &[data-size='2'] {
-        width: 6rem;
-        height: 6rem;
-        opacity: 0.9;
-      }
-      &[data-size='1'] {
-        width: 4rem;
-        height: 4rem;
-        opacity: 0.8;
-      }
-    }
-
-    @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
-      &[data-size='2'] {
-        width: 7rem;
-        height: 7rem;
-        opacity: 1;
-      }
-      &[data-size='1'] {
-        width: 5rem;
-        height: 5rem;
-        opacity: 0.9;
-      }
-    }
-  }
-
-  & ${Logo} {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
   }
 
   & .carousel.carousel-slider {
