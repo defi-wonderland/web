@@ -1,5 +1,5 @@
+import { useMemo, useState } from 'react';
 import styled from 'styled-components';
-
 import {
   Ball,
   CONTENT_INDEX,
@@ -11,12 +11,11 @@ import {
   SquigglyTitle,
   TABLET_MAX_WIDTH,
 } from '~/components';
-import ProjectsList from './ProjectsList';
 import CustomHead from '~/components/CustomHead';
-import { partners, projects, publicGoods } from '~/data/projects.json';
 import { PageContent } from '~/containers/PageContent';
+import { partners, projects, publicGoods } from '~/data/projects.json';
+import ProjectsList from './ProjectsList';
 import LogosCarousel from './LogosCarousel';
-import { useMemo, useState } from 'react';
 
 const allProjects = [...partners, ...projects];
 const allCompanies = [...partners, ...projects].map((project) => project.company.name);

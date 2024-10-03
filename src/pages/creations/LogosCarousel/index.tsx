@@ -1,12 +1,12 @@
+import { useMemo, useState } from 'react';
 import { styled } from 'styled-components';
-import { MOBILE_MAX_WIDTH, TABLET_MAX_WIDTH } from '~/components';
 import { Carousel } from 'react-responsive-carousel';
-import { useCallback, useEffect, useMemo, useState } from 'react';
-import { isMobile, isTablet } from '~/utils';
+import { MOBILE_MAX_WIDTH, TABLET_MAX_WIDTH } from '~/components';
+import { useWindowSize } from '~/hooks/useWindowsSize';
 
 interface LogosCarouselProps {
   companies: string[];
-  onChange?: (index: number) => void;
+  onChange: (index: number) => void;
 }
 
 const carouselState = {
@@ -27,76 +27,63 @@ const carouselState = {
 const formatCompanyToFileName = (company: string) => company.toLowerCase().replace(/ /g, '-');
 
 export default function LogosCarousel({ companies, onChange }: LogosCarouselProps) {
-  const [loop, setLoop] = useState(carouselState.desktop.loop); // iterations of the logos
-  const [visibleItems, setVisibleItems] = useState(carouselState.desktop.visibleItems); // number of logos visible
+  const [loop, setLoop] = useState(carouselState.desktop.loop);
+  const [visibleItems, setVisibleItems] = useState(carouselState.desktop.visibleItems);
 
-  const maxSize = useMemo(() => Math.ceil(visibleItems / 2), [visibleItems]); // max size of the logos
-  const centerIndex = useMemo(() => Math.floor(visibleItems / 2), [visibleItems]); // index of the center logo
-  const initialIndex = useMemo(() => visibleItems * Math.floor(loop / 2), [visibleItems, loop]); // start in the middle of the list, from index 0
+  const itemMaxSize = useMemo(() => Math.ceil(visibleItems / 2), [visibleItems]);
+  const centerIndex = useMemo(() => Math.floor(visibleItems / 2), [visibleItems]);
+  const initialIndex = useMemo(() => visibleItems * Math.floor(loop / 2), [visibleItems, loop]);
 
-  const items = useMemo(() => Array(loop).fill(companies).flat(), [loop, companies]); // repeat the companies to fill the loop
+  const items = useMemo(() => Array(loop).fill(companies).flat(), [loop, companies]);
   const [selectedItem, setSelectedItem] = useState(initialIndex);
 
-  // setSize is used to determine the size of the logos
-  // if the index is the selected item, the size is the max size, Math.ceil(VISIBLE_ITEMS / 2)
-  // otherwise, if the index is bigger or smaller than the selected item, the size is the module of the difference between selected item and index
-  const setSize = (index: number, currIndex: number) => {
-    if (index === currIndex) {
-      return maxSize;
-    }
-
-    const diff = Math.abs(currIndex - index);
-    if (diff > maxSize) return 0;
-
-    return maxSize - diff;
-  };
-
-  const resetIndex = () => {
-    setSelectedItem(initialIndex);
-    if (onChange) onChange(0);
-  };
-
-  const handleChangeItem = (index: number) => {
-    if (index === selectedItem) return;
-
-    if (index === items.length - centerIndex) {
-      resetIndex();
-      return;
-    }
-
-    if (index === centerIndex - 1) {
-      resetIndex();
-      return;
-    }
-
-    setSelectedItem(index);
-    if (onChange) onChange(index % companies.length); // get the index of the company
-  };
+  const minIndex = useMemo(() => centerIndex - 1, [centerIndex]);
+  const maxIndex = useMemo(() => items.length - centerIndex, [items.length, centerIndex]);
 
   const setCarouselState = ({ loop, visibleItems }: { loop: number; visibleItems: number }) => {
     setLoop(loop);
     setVisibleItems(visibleItems);
   };
 
-  const resizeCarousel = useCallback(() => {
-    if (isTablet()) {
-      setCarouselState(carouselState.tablet);
-    } else if (isMobile()) {
-      setCarouselState(carouselState.mobile);
-    } else {
-      setCarouselState(carouselState.desktop);
+  const _ = useWindowSize({
+    onResize: ({ isMobile, isTablet }) => {
+      if (isTablet) {
+        setCarouselState(carouselState.tablet);
+      } else if (isMobile) {
+        setCarouselState(carouselState.mobile);
+      } else {
+        setCarouselState(carouselState.desktop);
+      }
+    },
+  });
+
+  const setItemSizeByIndex = (index: number, currIndex: number) => {
+    if (index === currIndex) {
+      return itemMaxSize;
     }
-  }, []);
 
-  useEffect(() => {
-    window && window.addEventListener('resize', resizeCarousel);
+    const diff = Math.abs(currIndex - index);
+    if (diff > itemMaxSize) return 0;
 
-    resizeCarousel();
+    return itemMaxSize - diff;
+  };
 
-    return () => {
-      window.removeEventListener('resize', resizeCarousel);
-    };
-  }, [resizeCarousel]);
+  const resetIndex = () => {
+    setSelectedItem(initialIndex);
+    onChange(0);
+  };
+
+  const handleChangeItem = (index: number) => {
+    if (index === selectedItem) return;
+
+    if (index === maxIndex || index === minIndex) {
+      resetIndex();
+      return;
+    }
+
+    setSelectedItem(index);
+    onChange(index % companies.length);
+  };
 
   return (
     <Container>
@@ -110,7 +97,7 @@ export default function LogosCarousel({ companies, onChange }: LogosCarouselProp
         onChange={handleChangeItem}
       >
         {items.map((company, i) => (
-          <LogoContainer key={company} data-size={setSize(i, selectedItem) || 0} data-index={i}>
+          <LogoContainer key={company} data-size={setItemSizeByIndex(i, selectedItem) || 0} data-index={i}>
             <Logo src={`/img/logos/${formatCompanyToFileName(company || '')}.png`} alt={`${company} logo`} />
           </LogoContainer>
         ))}
