@@ -11,7 +11,7 @@ import {
   TABLET_MAX_WIDTH,
 } from '~/components';
 import { SLink } from '~/components';
-import ProjectsList from '~/pages/creations/ProjectsList';
+import ProjectsList, { Project } from '~/pages/creations/ProjectsList';
 import RightCard from './RightCard';
 import Squad from './SquadSection';
 import QuotesCarousel from './QuotesCarousel';
@@ -23,8 +23,15 @@ import RingIllustration from '~/assets/landing_ring.png';
 import MobileStar from '~/assets/ethos-stars.svg';
 import Flower from '~/assets/flower.svg';
 
+const projectsHighlight = [
+  partners.find((p) => p.name === 'opUSDC'),
+  partners.find((p) => p.name === 'EBO'),
+  partners.find((p) => p.name === 'Allo v2.1'),
+  partners.find((p) => p.name === 'Everclear'),
+  partners.find((p) => p.name === 'Prophet'),
+] as Project[];
+
 export default function LandingContent() {
-  const projectList = partners ? partners.slice(0, 3) : [];
   return (
     <LandingContainer>
       <BackgroundContainer>
@@ -54,7 +61,7 @@ export default function LandingContent() {
       </Divider>
 
       <SecondBlockContainer>
-        <ProjectsList projects={projectList.slice(0, 3)} />
+        <ProjectsList projects={projectsHighlight} />
 
         <SLink to='/creations'>
           <SButton>creations</SButton>
