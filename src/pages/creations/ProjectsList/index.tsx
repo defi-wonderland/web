@@ -139,7 +139,6 @@ export default function ProjectsList({ projects = [] }: ProjectListProps) {
 const List = styled.div``;
 
 const ProjectContainer = styled.button`
-  cursor: pointer;
   min-height: 15rem;
   display: flex;
   flex-direction: column;
@@ -181,6 +180,7 @@ const ProjectHeader = styled.div`
   height: 15rem;
   padding: 2.4rem;
   position: relative;
+  cursor: pointer;
 
   &:hover ${ProjectName} {
     background: linear-gradient(to right, #625cbf, #c55fa3, #fccc50);
@@ -218,6 +218,9 @@ const Divider = styled.div`
 const ProjectDescription = styled.div`
   width: 100%;
   padding: 0 2.4rem 5rem;
+  cursor: default;
+  z-index: 1;
+  user-select: text;
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     padding: 0 1.6rem 1.6rem;

@@ -116,8 +116,13 @@ const LogoContainer = styled.div`
   opacity: 1;
   border-radius: 50%;
   overflow: hidden;
-  will-change: width, height, opacity;
-  transition: width 0.3s, height 0.3s, opacity 0.3s ease-in;
+  will-change: width, height, opacity, transform;
+  transition: width 0.3s, height 0.3s, opacity 0.3s ease-in, transform 0.2s ease-out;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 
   &[data-size='4'] {
     width: 7rem;
@@ -250,6 +255,7 @@ const CarouselContainer = styled(Carousel)`
     opacity: 1;
     flex-shrink: 0;
     z-index: 99;
+    cursor: pointer;
 
     @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
       height: 5rem;
