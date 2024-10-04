@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { CSSTransition } from 'react-transition-group';
 
 import styled from 'styled-components';
@@ -53,26 +53,21 @@ interface ProjectListProps {
 }
 
 export default function ProjectsList({ projects = [] }: ProjectListProps) {
-  const [projectMap, setProjectMap] = useState(Object.fromEntries(projects.map((project) => [project.name, false])));
+  const [selectedProject, selectProject] = useState('');
 
-  const handleClick = (project: Project, target: Element) => {
-    if (!projectMap[project.name]) {
-      target.parentElement?.classList.add('active');
-      target.parentElement?.classList.add('gradient');
-    } else {
-      target.parentElement?.classList.remove('active');
-      target.parentElement?.classList.remove('gradient');
-    }
-
-    projectMap[project.name] = !projectMap[project.name];
-    setProjectMap({ ...projectMap });
+  const handleClick = (projectName: string) => {
+    selectProject(projectName === selectedProject ? '' : projectName);
   };
+
+  useEffect(() => {
+    selectProject('');
+  }, [projects]);
 
   return (
     <List>
       {projects.map((project) => (
         <ProjectContainer key={project.name}>
-          <ProjectHeader onClick={(e: React.MouseEvent<Element, MouseEvent>) => handleClick(project, e.currentTarget)}>
+          <ProjectHeader onClick={() => handleClick(project.name)}>
             <ProjectName className='gradient-text'>
               <span>{project.name}</span>
               <span>/</span>
@@ -81,10 +76,10 @@ export default function ProjectsList({ projects = [] }: ProjectListProps) {
             </ProjectName>
             <Circle src={circle.src} alt='circle icon' />
             <HLine />
-            <VLine className={projectMap[project.name] ? 'hide' : ''} />
+            <VLine className={project.name === selectedProject ? 'hide' : ''} />
           </ProjectHeader>
 
-          <CSSTransition in={projectMap[project.name]} timeout={100} classNames='fade' unmountOnExit appear>
+          <CSSTransition in={project.name === selectedProject} timeout={100} classNames='fade' unmountOnExit appear>
             <ProjectDescription>
               <TagList>
                 {project.tags.map((tag) => (
