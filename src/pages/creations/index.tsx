@@ -36,7 +36,7 @@ export default function Creations() {
   const scrollToAnchor = () => {
     const projectsContainer = document.getElementById('scroll-anchor');
     projectsContainer?.scrollIntoView({ behavior: 'smooth' });
-  }
+  };
 
   return (
     <>

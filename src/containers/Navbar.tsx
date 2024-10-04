@@ -191,7 +191,7 @@ const NavLinkContainer = styled.div<{ order?: number }>`
   justify-content: center;
 `;
 
-const NavLink = styled(SLink) <{ disabled?: boolean }>`
+const NavLink = styled(SLink)<{ disabled?: boolean }>`
   text-transform: uppercase;
 
   &:hover {

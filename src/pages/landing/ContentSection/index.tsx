@@ -337,27 +337,6 @@ const DividerText = styled.p`
   }
 `;
 
-const GradientText = styled(DividerText)`
-  width: 50rem;
-  border: none;
-  text-align: left;
-
-  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
-    width: fit-content;
-    line-height: 1;
-    padding: 0;
-    padding-right: 1rem;
-  }
-`;
-
-const TextContainer = styled.div`
-  padding: 5rem 4rem;
-
-  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
-    padding: 0rem;
-  }
-`;
-
 const SButton = styled(Button)`
   margin: 4.5rem 8rem 5rem auto;
 
