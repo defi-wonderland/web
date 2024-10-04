@@ -100,18 +100,19 @@ const Navbar = ({ className, pathname }: NavbarProps) => {
           </MenuButton>
         </LogoContainer>
 
-        {navLink.map((link, i) => (
-          <NavLinkContainer order={i + 1} key={link.name + i}>
-            <NavLink
-              to={link.url}
-              key={link.name}
-              disabled={link.disabled && pathname?.includes('/insights/')}
-              className={link.disabled ? 'gradient' : ''}
-            >
-              <div id={showNavbar ? '' : 'hide'}>{link.name}</div>
-            </NavLink>
-          </NavLinkContainer>
-        ))}
+        {showNavbar &&
+          navLink.map((link, i) => (
+            <NavLinkContainer order={i + 1} key={link.name + i}>
+              <NavLink
+                to={link.url}
+                key={link.name}
+                disabled={link.disabled && pathname?.includes('/insights/')}
+                className={link.disabled ? 'gradient' : ''}
+              >
+                <div>{link.name}</div>
+              </NavLink>
+            </NavLinkContainer>
+          ))}
       </StyledNavbar>
     </ContentContainer>
   );
@@ -190,7 +191,7 @@ const NavLinkContainer = styled.div<{ order?: number }>`
   justify-content: center;
 `;
 
-const NavLink = styled(SLink)<{ disabled?: boolean }>`
+const NavLink = styled(SLink) <{ disabled?: boolean }>`
   text-transform: uppercase;
 
   &:hover {
