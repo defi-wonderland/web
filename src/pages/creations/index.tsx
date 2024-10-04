@@ -33,6 +33,11 @@ export default function Creations() {
     [companySelected],
   );
 
+  const scrollToAnchor = () => {
+    const projectsContainer = document.getElementById('scroll-anchor');
+    projectsContainer?.scrollIntoView({ behavior: 'smooth' });
+  }
+
   return (
     <>
       <CustomHead title='Creations' />
@@ -64,14 +69,9 @@ export default function Creations() {
               <Ball_3 />
             </HeroDivider>
 
-            <TitleContainer>
-              <ProjectTitle>
-                WE WORK WITH
-                <br />
-                <strong>THE BEST</strong>
-              </ProjectTitle>
-            </TitleContainer>
-            <LogosCarouselContainer>
+            <ScrollAnchor id='scroll-anchor' />
+
+            <LogosCarouselContainer onClick={scrollToAnchor}>
               <LogosCarousel companies={companies} onChange={changeCompany} />
             </LogosCarouselContainer>
             <ProjectsContainer>
@@ -280,7 +280,7 @@ const ProjectsContainer = styled.div`
 const LogosCarouselContainer = styled.div`
   max-width: 90rem;
   width: 100%;
-  margin: 5rem auto 0;
+  margin: 0 auto;
 
   @media screen and (max-width: ${TABLET_MAX_WIDTH}) {
     max-width: 60rem;
@@ -289,4 +289,14 @@ const LogosCarouselContainer = styled.div`
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     max-width: 32rem;
   }
+`;
+
+const ScrollAnchor = styled.div`
+  position: relative;
+  top: -12rem;
+  left: 0;
+  width: 0;
+  height: 0;
+  visibility: hidden;
+  overflow: hidden;
 `;
