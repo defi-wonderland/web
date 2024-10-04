@@ -50,7 +50,7 @@ export default function Creations() {
                 <SquigglyTitle
                   text='MADE IN WONDERLAND'
                   sizes={{
-                    lg: '20rem',
+                    lg: '17rem',
                     md: '16rem',
                     sm: '6rem',
                     lgvw: '11.5vw',
@@ -105,6 +105,7 @@ const Divider = styled.div`
 
 const Container = styled.div`
   width: 90%;
+  max-width: 134rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
