@@ -88,9 +88,9 @@ export default function ProjectsList({ projects = [] }: ProjectListProps) {
               </TagList>
 
               <DescriptionContainer>
-                <DescriptionTitle>{project.content.challenge.title}:</DescriptionTitle>
+                <DescriptionTitle>{project.content.challenge.title}</DescriptionTitle>
                 <DescriptionParagraph>{project.content.challenge.description}</DescriptionParagraph>
-                <DescriptionTitle>{project.content.solution.title}:</DescriptionTitle>
+                <DescriptionTitle>{project.content.solution.title}</DescriptionTitle>
                 <DescriptionParagraph>{project.content.solution.description}</DescriptionParagraph>
               </DescriptionContainer>
 

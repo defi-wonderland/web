@@ -51,8 +51,8 @@
     {
       "name": "Crosschain Governance",
       "company": {
-        "name": "Connext",
-        "logo": "connext.png"
+        "name": "Everclear",
+        "logo": "everclear.png"
       },
       "tags": ["Architecture Design", "Smart Contracts", "UI Development"],
       "content": {
@@ -62,7 +62,7 @@
         },
         "solution": {
           "title": "What is the solution?",
-          "description": "A user-friendly React library that allows users to manage their DAO's cross-chain operations via the Zodiac Connext Module. It simplifies the construction of transaction data for implementing actions with the xcall function in Connext."
+          "description": "A user-friendly React library that allows users to manage their DAO's cross-chain operations via the Zodiac Everclear Module. It simplifies the construction of transaction data for implementing actions with the xcall function in Everclear."
         }
       },
       "status": "Completed",
@@ -75,8 +75,8 @@
     {
       "name": "xERC20",
       "company": {
-        "name": "Connext",
-        "logo": "connext.png"
+        "name": "Everclear",
+        "logo": "everclear.png"
       },
       "tags": ["Architecture Design", "Smart Contracts"],
       "content": {
@@ -99,8 +99,8 @@
     {
       "name": "Everclear",
       "company": {
-        "name": "Connext",
-        "logo": "connext.png"
+        "name": "Everclear",
+        "logo": "everclear.png"
       },
       "tags": ["Architecture Design", "Idea Generation", "Research", "Smart Contracts"],
       "content": {
@@ -123,8 +123,8 @@
     {
       "name": "Optimistic Merkle Root Aggregator",
       "company": {
-        "name": "Connext",
-        "logo": "connext.png"
+        "name": "Everclear",
+        "logo": "everclear.png"
       },
       "tags": ["Idea Generation", "Off-Chain", "Smart Contracts"],
       "content": {
@@ -141,7 +141,7 @@
       "links": {
         "website": [],
         "twitter": [],
-        "github": ["https://github.com/connext/monorepo/pull/4951/"]
+        "github": ["https://github.com/everclear/monorepo/pull/4951/"]
       }
     },
     {
@@ -294,14 +294,14 @@
     {
       "name": "Spells",
       "company": {
-        "name": "MakerDAO",
-        "logo": "makerdao.png"
+        "name": "Sky",
+        "logo": "sky.png"
       },
       "tags": ["Reviewers"],
       "content": {
         "challenge": {
           "title": "What was the challenge?",
-          "description": "MakerDAO is one of the largest and oldest governance in the Crypto DeFi ecosystem and as such has on a daily basis a large number of votes that need to be executed on-chain. These votes which can be payments, parameter changes in the voult, or a contract update are known as spells."
+          "description": "Sky (formerly MakerDAO) is one of the largest and oldest governance systems in DeFi. Every day, it oversees a significant number of on-chain votes that need to be executed. These votes can include payments, parameter adjustments within vaults, or contract updates, collectively referred to as spells."
         },
         "solution": {
           "title": "What is the solution?",
