@@ -1,8 +1,8 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { styled } from 'styled-components';
 import { Carousel } from 'react-responsive-carousel';
 import { MOBILE_MAX_WIDTH, TABLET_MAX_WIDTH } from '~/components';
-import { useWindowSize } from '~/hooks/useWindowsSize';
+import { useBreakpoints } from '~/hooks/useBreakpoints';
 
 interface LogosCarouselProps {
   companies: string[];
@@ -45,17 +45,7 @@ export default function LogosCarousel({ companies, onChange }: LogosCarouselProp
     setVisibleItems(visibleItems);
   };
 
-  const _ = useWindowSize({
-    onResize: ({ isMobile, isTablet }) => {
-      if (isTablet) {
-        setCarouselState(carouselState.tablet);
-      } else if (isMobile) {
-        setCarouselState(carouselState.mobile);
-      } else {
-        setCarouselState(carouselState.desktop);
-      }
-    },
-  });
+  const { isMobile, isTablet } = useBreakpoints();
 
   const setItemSizeByIndex = (index: number, currIndex: number) => {
     if (index === currIndex) {
@@ -84,6 +74,16 @@ export default function LogosCarousel({ companies, onChange }: LogosCarouselProp
     setSelectedItem(index);
     onChange(index % companies.length);
   };
+
+  useEffect(() => {
+    if (isTablet) {
+      setCarouselState(carouselState.tablet);
+    } else if (isMobile) {
+      setCarouselState(carouselState.mobile);
+    } else {
+      setCarouselState(carouselState.desktop);
+    }
+  }, [isMobile, isTablet]);
 
   return (
     <Container>
