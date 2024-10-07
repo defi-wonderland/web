@@ -11,20 +11,27 @@ import {
   TABLET_MAX_WIDTH,
 } from '~/components';
 import { SLink } from '~/components';
-import ProjectsList from '~/pages/creations/ProjectsList';
+import ProjectsList, { Project } from '~/pages/creations/ProjectsList';
 import RightCard from './RightCard';
 import Squad from './SquadSection';
 import QuotesCarousel from './QuotesCarousel';
 
-import { partnerProjects } from '~/data/projects.json';
+import { partners } from '~/data/projects.json';
 import StarIcon from '~/public/img/footer/star-icon.svg';
 import ConeIllustration from '~/assets/landing_cone.png';
 import RingIllustration from '~/assets/landing_ring.png';
 import MobileStar from '~/assets/ethos-stars.svg';
 import Flower from '~/assets/flower.svg';
 
+const projectsHighlight = [
+  partners.find((p) => p.name === 'opUSDC'),
+  partners.find((p) => p.name === 'EBO'),
+  partners.find((p) => p.name === 'Allo v2.1'),
+  partners.find((p) => p.name === 'Everclear'),
+  partners.find((p) => p.name === 'Prophet'),
+] as Project[];
+
 export default function LandingContent() {
-  const projectList = partnerProjects ? partnerProjects.slice(0, 3) : [];
   return (
     <LandingContainer>
       <BackgroundContainer>
@@ -54,7 +61,7 @@ export default function LandingContent() {
       </Divider>
 
       <SecondBlockContainer>
-        <ProjectsList projects={projectList.slice(0, 3)} />
+        <ProjectsList projects={projectsHighlight} />
 
         <SLink to='/creations'>
           <SButton>creations</SButton>
@@ -327,27 +334,6 @@ const DividerText = styled.p`
     text-align: start;
     font-size: 6.4rem;
     padding: 2.4rem 3rem;
-  }
-`;
-
-const GradientText = styled(DividerText)`
-  width: 50rem;
-  border: none;
-  text-align: left;
-
-  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
-    width: fit-content;
-    line-height: 1;
-    padding: 0;
-    padding-right: 1rem;
-  }
-`;
-
-const TextContainer = styled.div`
-  padding: 5rem 4rem;
-
-  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
-    padding: 0rem;
   }
 `;
 
