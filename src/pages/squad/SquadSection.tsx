@@ -263,6 +263,7 @@ const CardFront = styled.div`
   cursor: pointer;
   -webkit-backface-visibility: hidden; /* Safari */
   backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
 
   &:hover {
     background-image: radial-gradient(circle at 100% 0%, rgba(14, 21, 44, 0) 0%, rgba(14, 21, 44, 1) 85%),
