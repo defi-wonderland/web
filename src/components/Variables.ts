@@ -98,9 +98,11 @@ export const COLOR_SUCCESS = '#28a745';
 export const BREAKPOINTS = {
   mobile: 600,
   tablet: 1024,
+  desktop: 1440,
 };
 export const MOBILE_MAX_WIDTH = BREAKPOINTS.mobile + 'px';
 export const TABLET_MAX_WIDTH = BREAKPOINTS.tablet + 'px';
+export const DESKTOP_MAX_WIDTH = BREAKPOINTS.desktop + 'px';
 
 /*----------  FONT FAMILY  ----------*/
 
