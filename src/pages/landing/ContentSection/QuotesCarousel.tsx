@@ -5,7 +5,7 @@ import { FONT_MEDIUM, MOBILE_MAX_WIDTH } from '~/components';
 import QUOTES from '~/data/quotes.json';
 
 const quotes = Array(9).fill(QUOTES).flat();
-const initialIndex = QUOTES.length * Math.floor(9 / 2) - 1;
+const initialIndex = QUOTES.length * Math.floor(9 / 2);
 
 export default function QuotesCarousel() {
   const [selectedItem, setSelectedItem] = useState(initialIndex);
