@@ -4,6 +4,7 @@ import {
   Ball,
   CONTENT_INDEX,
   ContentContainer,
+  DESKTOP_MAX_WIDTH,
   FONT_DISPLAY,
   MOBILE_MAX_WIDTH,
   SectionBackground,
@@ -212,6 +213,10 @@ const BG_3 = styled(SectionBackground)`
   margin-left: auto;
   width: 38%;
   right: 0%;
+
+  @media screen and (min-width: ${DESKTOP_MAX_WIDTH}) {
+    display: none;
+  }
 `;
 
 const TitleContainer = styled.div`
