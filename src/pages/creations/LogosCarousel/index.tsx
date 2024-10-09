@@ -30,15 +30,15 @@ export default function LogosCarousel({ companies, onChange }: LogosCarouselProp
   const [loop, setLoop] = useState(carouselState.desktop.loop);
   const [visibleItems, setVisibleItems] = useState(carouselState.desktop.visibleItems);
 
-  const itemMaxSize = useMemo(() => Math.ceil(visibleItems / 2), [visibleItems]);
-  const centerIndex = useMemo(() => Math.floor(visibleItems / 2), [visibleItems]);
-  const initialIndex = useMemo(() => visibleItems * Math.floor(loop / 2), [visibleItems, loop]);
+  const itemMaxSize = Math.ceil(visibleItems / 2);
+  const centerIndex = Math.floor(visibleItems / 2);
+  const initialIndex = visibleItems * Math.floor(loop / 2);
 
   const items = useMemo(() => Array(loop).fill(companies).flat(), [loop, companies]);
   const [selectedItem, setSelectedItem] = useState(initialIndex);
 
-  const minIndex = useMemo(() => centerIndex - 1, [centerIndex]);
-  const maxIndex = useMemo(() => items.length - centerIndex, [items.length, centerIndex]);
+  const minIndex = centerIndex - 1;
+  const maxIndex = items.length - centerIndex;
 
   const setCarouselState = ({ loop, visibleItems }: { loop: number; visibleItems: number }) => {
     setLoop(loop);
