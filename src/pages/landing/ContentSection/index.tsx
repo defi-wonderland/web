@@ -11,7 +11,7 @@ import {
   TABLET_MAX_WIDTH,
 } from '~/components';
 import { SLink } from '~/components';
-import ProjectsList, { Project } from '~/pages/creations/ProjectsList';
+import ProjectsList from '~/pages/creations/ProjectsList';
 import RightCard from './RightCard';
 import Squad from './SquadSection';
 import QuotesCarousel from './QuotesCarousel';
@@ -23,13 +23,8 @@ import RingIllustration from '~/assets/landing_ring.png';
 import MobileStar from '~/assets/ethos-stars.svg';
 import Flower from '~/assets/flower.svg';
 
-const projectsHighlight = [
-  partners.find((p) => p.name === 'opUSDC'),
-  partners.find((p) => p.name === 'EBO'),
-  partners.find((p) => p.name === 'Allo v2.1'),
-  partners.find((p) => p.name === 'Everclear'),
-  partners.find((p) => p.name === 'Prophet'),
-] as Project[];
+const highlights = ['opUSDC', 'EBO', 'Allo v2.1', 'Everclear', 'Prophet'];
+const projectHighlights = partners.filter((partner) => highlights.includes(partner.name));
 
 export default function LandingContent() {
   return (
@@ -61,7 +56,7 @@ export default function LandingContent() {
       </Divider>
 
       <SecondBlockContainer>
-        <ProjectsList projects={projectsHighlight} />
+        <ProjectsList projects={projectHighlights} />
 
         <SLink to='/creations'>
           <SButton>creations</SButton>
