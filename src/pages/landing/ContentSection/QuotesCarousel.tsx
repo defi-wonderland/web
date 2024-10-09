@@ -4,8 +4,11 @@ import { styled } from 'styled-components';
 import { FONT_MEDIUM, MOBILE_MAX_WIDTH } from '~/components';
 import QUOTES from '~/data/quotes.json';
 
+const quotes = Array(9).fill(QUOTES).flat();
+const initialIndex = QUOTES.length * Math.floor(9 / 2);
+
 export default function QuotesCarousel() {
-  const [selectedItem, setSelectedItem] = useState(1);
+  const [selectedItem, setSelectedItem] = useState(initialIndex);
 
   return (
     <Container>
@@ -23,7 +26,7 @@ export default function QuotesCarousel() {
         }}
         infiniteLoop
       >
-        {QUOTES.map((quote, i) => (
+        {quotes.map((quote, i) => (
           <QuoteCard key={quote.author.name} data-previous={i === selectedItem - 1} data-next={i === selectedItem + 1}>
             <Quote>{quote.text}</Quote>
             <Divider />
@@ -141,6 +144,7 @@ const CarouselContainer = styled(Carousel)`
     &:has([data-next='true']) {
       opacity: 0.75;
       transform: scale(0.75) translate3d(0, 0, 0); // translate3d fix blur cropped on Safari
+      cursor: pointer;
     }
   }
 
