@@ -73,54 +73,6 @@
       }
     },
     {
-      "name": "Keep3r Network V2",
-      "company": {
-        "name": "Keep3r",
-        "logo": "keep3r.png"
-      },
-      "tags": ["Refactoring", "Architecture Design", "Development", "Research"],
-      "content": {
-        "challenge": {
-          "title": "What was the challenge?",
-          "description": "The original Keep3r Network faced limitations with cross-chain automation and lacked the ability to operate seamlessly across multiple blockchains. This led to difficulties for job providers and keepers in managing decentralized tasks, particularly those involving cross-chain data and liquidity."
-        },
-        "solution": {
-          "title": "What is the solution?",
-          "description": "We rebuilt the protocol from scratch with a multichain system that uses Connext Network’s data bridging for cross-chain automation. The new reward mechanism incentivizes keepers by covering costs and ensuring profitability, while updated scripts make job creation more accessible for both keepers and job providers."
-        }
-      },
-      "status": "Completed",
-      "links": {
-        "website": [],
-        "twitter": [],
-        "github": ["https://github.com/keep3r-network/keep3r-network-v2"]
-      }
-    },
-    {
-      "name": "Sidechain Oracles",
-      "company": {
-        "name": "Keep3r",
-        "logo": "keep3r.png"
-      },
-      "tags": ["Off-Chain", "Architecture Design", "Smart Contracts"],
-      "content": {
-        "challenge": {
-          "title": "What was the challenge?",
-          "description": "The main challenge was to provide reliable and consistent price data for Uniswap V3 pools on sidechains or chains where the liquidity pairs either do not exist or lack sufficient liquidity to offer accurate pricing. This situation made it difficult for developers and applications to access historical price data across different chains."
-        },
-        "solution": {
-          "title": "What is the solution?",
-          "description": "The Sidechain Oracles system solves this by broadcasting price data from the mainnet Uniswap V3 pools to sidechains. It periodically updates the oracle information based on time-weighted average price (TWAP) calculations, triggered either by time intervals or significant changes in price. The system ensures data consistency by storing and updating price history on sidechains, allowing any contract to access this data as if querying a Uniswap pool directly. It also incentivizes permissionless participation by rewarding those who trigger data updates or broadcasts across chains."
-        }
-      },
-      "status": "Completed",
-      "links": {
-        "website": [],
-        "twitter": [],
-        "github": ["https://github.com/defi-wonderland/sidechain-oracles"]
-      }
-    },
-    {
       "name": "xERC20",
       "company": {
         "name": "Everclear",
@@ -273,7 +225,7 @@
         "name": "Gitcoin",
         "logo": "gitcoin.png"
       },
-      "tags": ["Research", "Smart Contracts"],
+      "tags": ["Research", "Smart Contracts", ""],
       "content": {
         "challenge": {
           "title": "What was the challenge?",
@@ -462,6 +414,54 @@
         "website": [],
         "twitter": [],
         "github": ["https://github.com/defi-wonderland/world-id-governor-core"]
+      }
+    },
+    {
+      "name": "Keep3r Network V2",
+      "company": {
+        "name": "Keep3r",
+        "logo": "keep3r.png"
+      },
+      "tags": ["Refactoring", "Architecture Design", "Development", "Research"],
+      "content": {
+        "challenge": {
+          "title": "What was the challenge?",
+          "description": "The original Keep3r Network faced limitations with cross-chain automation and lacked the ability to operate seamlessly across multiple blockchains. This led to difficulties for job providers and keepers in managing decentralized tasks, particularly those involving cross-chain data and liquidity."
+        },
+        "solution": {
+          "title": "What is the solution?",
+          "description": "We rebuilt the protocol from scratch with a multichain system that uses Connext Network’s data bridging for cross-chain automation. The new reward mechanism incentivizes keepers by covering costs and ensuring profitability, while updated scripts make job creation more accessible for both keepers and job providers."
+        }
+      },
+      "status": "Completed",
+      "links": {
+        "website": [],
+        "twitter": [],
+        "github": ["https://github.com/keep3r-network/keep3r-network-v2"]
+      }
+    },
+    {
+      "name": "Sidechain Oracles",
+      "company": {
+        "name": "Keep3r",
+        "logo": "keep3r.png"
+      },
+      "tags": ["Off-Chain", "Architecture Design", "Smart Contracts"],
+      "content": {
+        "challenge": {
+          "title": "What was the challenge?",
+          "description": "The main challenge was to provide reliable and consistent price data for Uniswap V3 pools on sidechains or chains where the liquidity pairs either do not exist or lack sufficient liquidity to offer accurate pricing. This situation made it difficult for developers and applications to access historical price data across different chains."
+        },
+        "solution": {
+          "title": "What is the solution?",
+          "description": "The Sidechain Oracles system solves this by broadcasting price data from the mainnet Uniswap V3 pools to sidechains. It periodically updates the oracle information based on time-weighted average price (TWAP) calculations, triggered either by time intervals or significant changes in price. The system ensures data consistency by storing and updating price history on sidechains, allowing any contract to access this data as if querying a Uniswap pool directly. It also incentivizes permissionless participation by rewarding those who trigger data updates or broadcasts across chains."
+        }
+      },
+      "status": "Completed",
+      "links": {
+        "website": [],
+        "twitter": [],
+        "github": ["https://github.com/defi-wonderland/sidechain-oracles"]
       }
     }
   ],
