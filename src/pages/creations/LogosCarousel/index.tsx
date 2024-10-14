@@ -26,7 +26,7 @@ const carouselState = {
 
 const formatCompanyToFileName = (company: string) => company.toLowerCase().replace(/ /g, '-');
 
-export default function LogosCarousel({ companies, onChange }: LogosCarouselProps) {
+export default function LogosCarousel({ companies = [], onChange }: LogosCarouselProps) {
   const [loop, setLoop] = useState(carouselState.desktop.loop);
   const [visibleItems, setVisibleItems] = useState(carouselState.desktop.visibleItems);
 
