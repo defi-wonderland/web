@@ -26,13 +26,13 @@ const carouselState = {
 
 const formatCompanyToFileName = (company: string) => company.toLowerCase().replace(/ /g, '-');
 
-export default function LogosCarousel({ companies, onChange }: LogosCarouselProps) {
+export default function LogosCarousel({ companies = [], onChange }: LogosCarouselProps) {
   const [loop, setLoop] = useState(carouselState.desktop.loop);
   const [visibleItems, setVisibleItems] = useState(carouselState.desktop.visibleItems);
 
   const itemMaxSize = Math.ceil(visibleItems / 2);
   const centerIndex = Math.floor(visibleItems / 2);
-  const initialIndex = visibleItems * Math.floor(loop / 2);
+  const initialIndex = companies.length * Math.floor(loop / 2) + 1;
 
   const items = useMemo(() => Array(loop).fill(companies).flat(), [loop, companies]);
   const [selectedItem, setSelectedItem] = useState(initialIndex);

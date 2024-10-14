@@ -25,6 +25,81 @@
       }
     },
     {
+      "name": "opUSDC",
+      "company": {
+        "name": "Optimism",
+        "logo": "optimism.png"
+      },
+      "tags": ["Architecture Design", "Research", "Smart Contracts"],
+      "content": {
+        "challenge": {
+          "title": "What was the challenge?",
+          "description": "The fragmentation of USDC across chains due to multiple bridged versions leads to inefficiencies when performing a migration path to native USDC issued by Circle."
+        },
+        "solution": {
+          "title": "What is the solution?",
+          "description": "We developed the architecture for the standard bridged USDC on OP Stack chains, utilizing a Factory on Ethereum to trigger cross-chain deployment of the necessary contracts. Deposits and withdrawals are performed as usual. opUSDC also facilitates migration to Circle by transferring contract ownership, ensuring seamless upgrades without disruptions."
+        }
+      },
+      "status": "In progress",
+      "links": {
+        "website": [],
+        "twitter": [],
+        "github": ["https://github.com/defi-wonderland/opUSDC?tab=readme-ov-file"]
+      }
+    },
+    {
+      "name": "Prophet",
+      "company": {
+        "name": "Optimism",
+        "logo": "optimism.png"
+      },
+      "tags": ["Architecture Design", "Idea Generation", "Smart Contracts", "UI Development"],
+      "content": {
+        "challenge": {
+          "title": "What was the challenge?",
+          "description": "We need blockchains to interact with the external world, and oracles are considered the most critical structural components for achieving this. While various oracles are available, none are able to combine decentralization with sustainability."
+        },
+        "solution": {
+          "title": "What is the solution?",
+          "description": "We built Prophet, an optimistic oracle with a modular resolution system. Instead of relying on a one-size-fits-all resolution scheme, it offers customizable modules tailored to the specific needs of each developer. This allows anyone to create their own modules, aligning the interests of oracle users and the resolution committee. It now includes features such as ERC20 custom majority, Optimistic Committee, Arbitrator, Multisig/DAOs, NFT voting eligibility, and more."
+        }
+      },
+      "status": "In progress",
+      "links": {
+        "website": [],
+        "twitter": [],
+        "github": ["https://github.com/defi-wonderland/prophet-core"]
+      }
+    },
+    {
+      "name": "SuperchainERC20",
+      "company": {
+        "name": "Optimism",
+        "logo": "optimism.png"
+      },
+      "tags": ["Architecture Design", "Research", "Smart Contracts"],
+      "content": {
+        "challenge": {
+          "title": "What was the challenge?",
+          "description": "With the introduction of Interop, addressing liquidity across the Superchain is essential for future tokens to fully leverage the unified ecosystem of hundreds of chains."
+        },
+        "solution": {
+          "title": "What is the solution?",
+          "description": "We introduced the SuperchainERC20 standard, designed to align with the Superchain architecture and improve interoperability by ensuring that tokens share the same contract address across chains. The project involves migrating liquidity and developing tools to facilitate the smooth adoption of the standard."
+        }
+      },
+      "status": "In progress",
+      "links": {
+        "website": [],
+        "twitter": [],
+        "github": [],
+        "docs": [
+          "https://github.com/ethereum-optimism/design-docs/blob/main/protocol/superchain-erc20/superchain-erc20-factory.md"
+        ]
+      }
+    },
+    {
       "name": "HAI",
       "company": {
         "name": "Reflexer",
@@ -141,82 +216,7 @@
       "links": {
         "website": [],
         "twitter": [],
-        "github": ["https://github.com/everclear/monorepo/pull/4951/"]
-      }
-    },
-    {
-      "name": "opUSDC",
-      "company": {
-        "name": "Optimism",
-        "logo": "optimism.png"
-      },
-      "tags": ["Architecture Design", "Research", "Smart Contracts"],
-      "content": {
-        "challenge": {
-          "title": "What was the challenge?",
-          "description": "The fragmentation of USDC across chains due to multiple bridged versions leads to inefficiencies when performing a migration path to native USDC issued by Circle."
-        },
-        "solution": {
-          "title": "What is the solution?",
-          "description": "We developed the architecture for the standard bridged USDC on OP Stack chains, utilizing a Factory on Ethereum to trigger cross-chain deployment of the necessary contracts. Deposits and withdrawals are performed as usual. opUSDC also facilitates migration to Circle by transferring contract ownership, ensuring seamless upgrades without disruptions."
-        }
-      },
-      "status": "In progress",
-      "links": {
-        "website": [],
-        "twitter": [],
-        "github": ["https://github.com/defi-wonderland/opUSDC?tab=readme-ov-file"]
-      }
-    },
-    {
-      "name": "Prophet",
-      "company": {
-        "name": "Optimism",
-        "logo": "optimism.png"
-      },
-      "tags": ["Architecture Design", "Idea Generation", "Smart Contracts", "UI Development"],
-      "content": {
-        "challenge": {
-          "title": "What was the challenge?",
-          "description": "We need blockchains to interact with the external world, and oracles are considered the most critical structural components for achieving this. While various oracles are available, none are able to combine decentralization with sustainability."
-        },
-        "solution": {
-          "title": "What is the solution?",
-          "description": "We built Prophet, an optimistic oracle with a modular resolution system. Instead of relying on a one-size-fits-all resolution scheme, it offers customizable modules tailored to the specific needs of each developer. This allows anyone to create their own modules, aligning the interests of oracle users and the resolution committee. It now includes features such as ERC20 custom majority, Optimistic Committee, Arbitrator, Multisig/DAOs, NFT voting eligibility, and more."
-        }
-      },
-      "status": "In progress",
-      "links": {
-        "website": [],
-        "twitter": [],
-        "github": ["https://github.com/defi-wonderland/prophet-core"]
-      }
-    },
-    {
-      "name": "SuperchainERC20",
-      "company": {
-        "name": "Optimism",
-        "logo": "optimism.png"
-      },
-      "tags": ["Architecture Design", "Research", "Smart Contracts"],
-      "content": {
-        "challenge": {
-          "title": "What was the challenge?",
-          "description": "With the introduction of Interop, addressing liquidity across the Superchain is essential for future tokens to fully leverage the unified ecosystem of hundreds of chains."
-        },
-        "solution": {
-          "title": "What is the solution?",
-          "description": "We introduced the SuperchainERC20 standard, designed to align with the Superchain architecture and improve interoperability by ensuring that tokens share the same contract address across chains. The project involves migrating liquidity and developing tools to facilitate the smooth adoption of the standard."
-        }
-      },
-      "status": "In progress",
-      "links": {
-        "website": [],
-        "twitter": [],
-        "github": [],
-        "docs": [
-          "https://github.com/ethereum-optimism/design-docs/blob/main/protocol/superchainerc20/SuperchainERC20-factory.md.md"
-        ]
+        "github": ["https://github.com/connext/monorepo/pull/4951"]
       }
     },
     {
@@ -225,7 +225,7 @@
         "name": "Gitcoin",
         "logo": "gitcoin.png"
       },
-      "tags": ["Research"],
+      "tags": ["Research", "Smart Contracts"],
       "content": {
         "challenge": {
           "title": "What was the challenge?",
@@ -414,6 +414,54 @@
         "website": [],
         "twitter": [],
         "github": ["https://github.com/defi-wonderland/world-id-governor-core"]
+      }
+    },
+    {
+      "name": "Keep3r Network V2",
+      "company": {
+        "name": "Keep3r",
+        "logo": "keep3r.png"
+      },
+      "tags": ["Refactoring", "Architecture Design", "Development", "Research"],
+      "content": {
+        "challenge": {
+          "title": "What was the challenge?",
+          "description": "The original Keep3r Network faced limitations with cross-chain automation and lacked the ability to operate seamlessly across multiple blockchains. This led to difficulties for job providers and keepers in managing decentralized tasks, particularly those involving cross-chain data and liquidity."
+        },
+        "solution": {
+          "title": "What is the solution?",
+          "description": "We rebuilt the protocol from scratch with a multichain system that uses Connext Network’s data bridging for cross-chain automation. The new reward mechanism incentivizes keepers by covering costs and ensuring profitability, while updated scripts make job creation more accessible for both keepers and job providers."
+        }
+      },
+      "status": "Completed",
+      "links": {
+        "website": [],
+        "twitter": [],
+        "github": ["https://github.com/keep3r-network/keep3r-network-v2"]
+      }
+    },
+    {
+      "name": "Sidechain Oracles",
+      "company": {
+        "name": "Keep3r",
+        "logo": "keep3r.png"
+      },
+      "tags": ["Off-Chain", "Architecture Design", "Smart Contracts"],
+      "content": {
+        "challenge": {
+          "title": "What was the challenge?",
+          "description": "The main challenge was to provide reliable and consistent price data for Uniswap V3 pools on sidechains or chains where the liquidity pairs either do not exist or lack sufficient liquidity to offer accurate pricing. This situation made it difficult for developers and applications to access historical price data across different chains."
+        },
+        "solution": {
+          "title": "What is the solution?",
+          "description": "The Sidechain Oracles system solves this by broadcasting price data from the mainnet Uniswap V3 pools to sidechains. It periodically updates the oracle information based on time-weighted average price (TWAP) calculations, triggered either by time intervals or significant changes in price. The system ensures data consistency by storing and updating price history on sidechains, allowing any contract to access this data as if querying a Uniswap pool directly. It also incentivizes permissionless participation by rewarding those who trigger data updates or broadcasts across chains."
+        }
+      },
+      "status": "Completed",
+      "links": {
+        "website": [],
+        "twitter": [],
+        "github": ["https://github.com/defi-wonderland/sidechain-oracles"]
       }
     }
   ],
