@@ -1,11 +1,5 @@
 [
   {
-    "name": "Pepo",
-    "position": "Co-founder & Strategist",
-    "image": "/img/pfp/Pepo.png",
-    "description": "- Your hot-takes friend from DeFi summer."
-  },
-  {
     "name": "Matias Nisenson",
     "position": "Co-founder & CEO",
     "image": "/img/pfp/Mati.png",
@@ -16,6 +10,12 @@
     "position": "Co-founder & Architect",
     "image": "/img/pfp/Skele.png",
     "description": "- First contract deployed on 25/07/2017.\n- Enjoys breaking things.\n\nFun fact: Has never been to space."
+  },
+  {
+    "name": "Pepo",
+    "position": "Co-founder & Strategist",
+    "image": "/img/pfp/Pepo.png",
+    "description": "- Your hot-takes friend from DeFi summer."
   },
   {
     "name": "0xGorilla",
@@ -54,8 +54,8 @@
     "description": "- Watched over 1000 movies, vaguely remembers 4 of them.\n- A big nap2earn proponent.\n\nFun fact: Jail dropout."
   },
   {
-    "name": "DrGorilla",
-    "position": "CTO",
+    "name": "Simon Something",
+    "position": "Chief Testing Officer",
     "image": "/img/pfp/Doc.png",
     "description": "- Random diploma collector.\n- Assembly fanatic (Huff is cheating).\n\nFun fact: Has 99 issues and a bitshift ain't one."
   },
