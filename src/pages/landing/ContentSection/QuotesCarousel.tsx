@@ -34,7 +34,10 @@ export default function QuotesCarousel() {
               <img className='avatar' src={quote.author.avatar} alt={`${quote.author.name} avatar`} />
               <TextContainer>
                 <Text>
-                  {quote.author.name} / {quote.author.position}
+                  {quote.author.name}
+                  {` / `}
+                  <wbr />
+                  {quote.author.position}
                 </Text>
                 <Text>{quote.author.company}</Text>
               </TextContainer>
@@ -243,7 +246,7 @@ const TextContainer = styled.div`
   flex: 1;
 `;
 
-const textStyles = `
+const Text = styled.span`
   font-family: ${FONT_MEDIUM};
   font-size: 1.5rem;
   font-weight: 300;
@@ -251,8 +254,5 @@ const textStyles = `
   font-style: italic;
   letter-spacing: 0.1rem;
   color: #fff;
-`;
-
-const Text = styled.span`
-  ${textStyles}
+  text-align: left;
 `;
