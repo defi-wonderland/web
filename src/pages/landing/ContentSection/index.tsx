@@ -59,7 +59,7 @@ export default function LandingContent() {
         <ProjectsList projects={projectHighlights} />
 
         <SLink to='/creations'>
-          <SButton>creations</SButton>
+          <SButton>Learn More</SButton>
         </SLink>
 
         <Squad />
