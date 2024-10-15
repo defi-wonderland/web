@@ -13,7 +13,7 @@
   {
     "text": "Wonderland was wonderful to work with. They aren’t cheap but they do excellent work. They went above and beyond their assignment and even found & fixed a bug in a related system, following our communication guidelines for risk mitigation at every step. 10/10 would recommend.",
     "author": {
-      "position": "Founder",
+      "position": "Co-Founder",
       "company": "Reflexer",
       "name": "Ameen",
       "avatar": "/img/quotes/reflexer-pfp.jpg"
@@ -24,18 +24,18 @@
   {
     "text": "Wonderland is an incredibly talented technical team that takes a radically different approach to how they work with protocols. They are a close partner & core contributor to the Connext ecosystem, taking a proactive leadership role in not only building, but also helping determine what the future of the network will look like. I strongly recommend them to anyone looking for a high integrity, high quality partner.",
     "author": {
-      "position": "Founder",
-      "company": "Connext",
+      "position": "Co-Founder",
+      "company": "Everclear",
       "name": "Arjun",
       "avatar": "/img/quotes/connext-pfp.jpg"
     },
     "logo": "/img/quotes/connext-logo.jpg",
-    "link": "https://www.connext.network/"
+    "link": "https://www.everclear.org/"
   },
   {
     "text": "Wonderland has been an exceptional partner, consistently showing rigor, flexibility, and professionalism. Their attention to detail ensures every project is handled with precision, while their adaptability allows them to meet evolving needs. Above all, their alignment with our values makes them a trusted collaborator, always striving for excellence and impact.",
     "author": {
-      "position": "Founder",
+      "position": "Co-Founder",
       "company": "Gitcoin",
       "name": "Kevin Owocki",
       "avatar": "/img/quotes/gitcoin-pfp.jpg"
@@ -57,7 +57,7 @@
   {
     "text": "The Wonderland team has been instrumental in helping us push the design space for Aztec and think better about the types of contracts that can be built on Aztec. They are knowledgeable, motivated, and efficient in their work.",
     "author": {
-      "position": "Founder",
+      "position": "Co-Founder",
       "company": "Aztec",
       "name": "Joe",
       "avatar": "/img/quotes/aztec-pfp.jpg"
