@@ -1,25 +1,44 @@
+import { useMemo, useState } from 'react';
 import styled from 'styled-components';
-
 import {
-  AnimatedTitle,
   Ball,
   CONTENT_INDEX,
   ContentContainer,
-  GradientTitle,
+  DESKTOP_MAX_WIDTH,
+  FONT_DISPLAY,
   MOBILE_MAX_WIDTH,
   SectionBackground,
   SPACING_128,
+  SquigglyTitle,
   TABLET_MAX_WIDTH,
 } from '~/components';
-import ProjectsList from './ProjectsList';
 import CustomHead from '~/components/CustomHead';
-import { TitleContainer as TitleVideoBase } from '~/pages/landing/HeroSection';
-import { partnerProjects, publicGoods } from '~/data/projects.json';
-import VIDEO_CHROME from '~/assets/videos/creations.webm';
-import VIDEO_SAFARI from '~/assets/videos/creations.mp4';
 import { PageContent } from '~/containers/PageContent';
+import { partners, projects, publicGoods } from '~/data/projects.json';
+import ProjectsList from './ProjectsList';
+import LogosCarousel from './LogosCarousel';
+
+const allProjects = [...partners, ...projects];
+const allCompanies = [...partners, ...projects].map((project) => project.company.name);
+const companies = [...new Set(allCompanies)]; // unique values
 
 export default function Creations() {
+  const [companySelected, setCompanySelected] = useState<string>('Optimism');
+
+  const changeCompany = (index: number) => {
+    setCompanySelected(companies[index]);
+  };
+
+  const filteredProjects = useMemo(
+    () => allProjects.filter((project) => project.company.name === companySelected),
+    [companySelected],
+  );
+
+  const scrollToAnchor = () => {
+    const projectsContainer = document.getElementById('scroll-anchor');
+    projectsContainer?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <>
       <CustomHead title='Creations' />
@@ -33,24 +52,40 @@ export default function Creations() {
               <BG_3 type='2' align='right' />
             </BackgroundContainer>
             <HeroDivider>
-              <TitleVideo>
-                <AnimatedTitle chromeSrc={VIDEO_CHROME} safariSrc={VIDEO_SAFARI} />
-              </TitleVideo>
+              <CreationsTitleContainer>
+                <SquigglyTitle
+                  text='MADE IN WONDERLAND'
+                  sizes={{
+                    lg: '17rem',
+                    md: '16rem',
+                    sm: '6rem',
+                    lgvw: '11.5vw',
+                    mdvw: '17vw',
+                    smvw: '20vw',
+                  }}
+                />
+              </CreationsTitleContainer>
               <Ball_1 />
               <Ball_2 />
               <Ball_3 />
             </HeroDivider>
 
-            <TitleContainer>
-              <ProjectTitle title='Partner projects' />
-            </TitleContainer>
+            <ScrollAnchor id='scroll-anchor' />
+
+            <LogosCarouselContainer onClick={scrollToAnchor}>
+              <LogosCarousel companies={companies} onChange={changeCompany} />
+            </LogosCarouselContainer>
             <ProjectsContainer>
               <Divider />
-              <ProjectsList projects={partnerProjects} />
+              <ProjectsList projects={filteredProjects} />
             </ProjectsContainer>
 
             <TitleContainer>
-              <ProjectTitle title='Public goods' />
+              <ProjectTitle>
+                THE POWER OF
+                <br />
+                <strong>PUBLIC GOODS</strong>
+              </ProjectTitle>
             </TitleContainer>
             <ProjectsContainer>
               <Divider />
@@ -69,16 +104,9 @@ const Divider = styled.div`
   width: 100%;
 `;
 
-const TitleVideo = styled(TitleVideoBase)`
-  margin-top: -8rem;
-
-  & video {
-    max-width: 600px;
-  }
-`;
-
 const Container = styled.div`
   width: 90%;
+  max-width: 134rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -104,6 +132,10 @@ const HeroDivider = styled.div`
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     margin-top: 16rem;
   }
+`;
+
+const CreationsTitleContainer = styled.div`
+  margin-top: -6rem;
 `;
 
 const Ball_1 = styled(Ball)`
@@ -181,12 +213,15 @@ const BG_3 = styled(SectionBackground)`
   margin-left: auto;
   width: 38%;
   right: 0%;
+
+  @media screen and (min-width: ${DESKTOP_MAX_WIDTH}) {
+    display: none;
+  }
 `;
 
 const TitleContainer = styled.div`
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
 
   @media screen and (max-width: ${TABLET_MAX_WIDTH}) {
@@ -195,13 +230,47 @@ const TitleContainer = styled.div`
   }
 `;
 
-const ProjectTitle = styled(GradientTitle)`
-  word-wrap: unset;
-  width: 40rem;
+const ProjectTitle = styled.h2`
+  font-family: ${FONT_DISPLAY};
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.25;
+  letter-spacing: 0.1rem;
+  font-size: 9rem;
+  letter-spacing: 0.4rem;
+  line-height: 1;
+  text-align: center;
+  background: linear-gradient(to right, #625cbf, #c55fa3, #fccc50);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  strong {
+    font-size: 12rem;
+    display: block;
+    width: max-content;
+    margin: 0 auto;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 0.5rem;
+      background: linear-gradient(to right, #625cbf, #c55fa3, #fccc50);
+      margin-top: -1rem;
+    }
+  }
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    font-size: 6rem;
+
+    strong {
+      font-size: 8rem;
+    }
+  }
 `;
 
 const ProjectsContainer = styled.div`
-  margin: 10rem 0 10rem;
+  margin: 5rem 0 10rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -211,4 +280,28 @@ const ProjectsContainer = styled.div`
   @media screen and (max-width: ${TABLET_MAX_WIDTH}) {
     padding: 0;
   }
+`;
+
+const LogosCarouselContainer = styled.div`
+  max-width: 90rem;
+  width: 100%;
+  margin: 0 auto;
+
+  @media screen and (max-width: ${TABLET_MAX_WIDTH}) {
+    max-width: 60rem;
+  }
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    max-width: 32rem;
+  }
+`;
+
+const ScrollAnchor = styled.div`
+  position: relative;
+  top: -12rem;
+  left: 0;
+  width: 0;
+  height: 0;
+  visibility: hidden;
+  overflow: hidden;
 `;

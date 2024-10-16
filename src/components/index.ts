@@ -1,5 +1,5 @@
 export * from './Variables';
-export * from './AnimatedTitle';
+export * from './SquigglyTitle';
 export * from './AnimationIn';
 export * from './Ball';
 export * from './Button';
@@ -12,3 +12,4 @@ export * from './Section';
 export * from './SectionArticle';
 export * from './StyledPageView';
 export * from './MainTitle';
+export * from './CustomHead';

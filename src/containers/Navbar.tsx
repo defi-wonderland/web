@@ -101,14 +101,14 @@ const Navbar = ({ className, pathname }: NavbarProps) => {
         </LogoContainer>
 
         {navLink.map((link, i) => (
-          <NavLinkContainer order={i + 1} key={link.name + i}>
+          <NavLinkContainer order={i + 1} key={link.name + i} className={showNavbar ? '' : 'hide-on-mobile'}>
             <NavLink
               to={link.url}
               key={link.name}
               disabled={link.disabled && pathname?.includes('/insights/')}
               className={link.disabled ? 'gradient' : ''}
             >
-              <div id={showNavbar ? '' : 'hide'}>{link.name}</div>
+              <div>{link.name}</div>
             </NavLink>
           </NavLinkContainer>
         ))}
@@ -188,6 +188,12 @@ const NavLinkContainer = styled.div<{ order?: number }>`
   order: ${({ order }) => order ?? 'initial'};
   display: flex;
   justify-content: center;
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    &.hide-on-mobile {
+      display: none;
+    }
+  }
 `;
 
 const NavLink = styled(SLink)<{ disabled?: boolean }>`

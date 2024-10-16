@@ -3,18 +3,16 @@ import styled from 'styled-components';
 import Link from 'next/link';
 
 import {
-  AnimatedTitle,
   ContentContainer,
   FONT_MEDIUM,
   FONT_MEDIUM_L,
   MOBILE_MAX_WIDTH,
   SectionBackground,
+  SquigglyTitle,
 } from '~/components';
 import CustomHead from '~/components/CustomHead';
 
 import posts from '~/data/blog.json';
-import VIDEO_CHROME from '~/assets/videos/insights.webm';
-import VIDEO_SAFARI from '~/assets/videos/insights.mp4';
 import { TitleContainer } from '../landing/HeroSection';
 import StarIcon from '~/public/img/footer/star-icon.svg';
 
@@ -27,7 +25,16 @@ export default function Insights() {
         <PageContainer>
           <Title>
             <BlogTitleContainer>
-              <AnimatedTitle chromeSrc={VIDEO_CHROME} safariSrc={VIDEO_SAFARI} />
+              <SquigglyTitle
+                text='WHAT’S NEW?'
+                sizes={{
+                  lg: '20rem',
+                  md: '14rem',
+                  sm: '10rem',
+                  lgvw: '11.5vw',
+                  mdvw: '16vw',
+                }}
+              />
             </BlogTitleContainer>
           </Title>
 
@@ -79,15 +86,12 @@ export default function Insights() {
 }
 
 const BlogTitleContainer = styled(TitleContainer)`
-  & video {
-    max-width: 450px;
-  }
+  padding-top: 1rem;
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
-    padding-top: 5rem;
-    & video {
-      max-width: 300px;
-    }
+    padding-top: 3.8rem;
+    position: relative;
+    top: 0;
   }
 `;
 
