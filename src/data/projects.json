@@ -188,7 +188,7 @@
           "description": "Everclear automates cross-chain liquidity settlement, reducing costs and complexity by netting flows across chains. It leverages Chain Abstraction, allowing seamless rebalancing without manual intervention. The system also uses a Dutch auction to efficiently clear invoices and introduces the vbNEXT token model to direct liquidity to underutilized chains, aligning incentives for all participants."
         }
       },
-      "status": "In progress",
+      "status": "Completed",
       "links": {
         "website": [],
         "twitter": [],
