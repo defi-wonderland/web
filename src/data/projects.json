@@ -41,7 +41,7 @@
           "description": "We developed the architecture for the standard bridged USDC on OP Stack chains, utilizing a Factory on Ethereum to trigger cross-chain deployment of the necessary contracts. Deposits and withdrawals are performed as usual. opUSDC also facilitates migration to Circle by transferring contract ownership, ensuring seamless upgrades without disruptions."
         }
       },
-      "status": "In progress",
+      "status": "Completed",
       "links": {
         "website": [],
         "twitter": [],
@@ -65,7 +65,7 @@
           "description": "We built Prophet, an optimistic oracle with a modular resolution system. Instead of relying on a one-size-fits-all resolution scheme, it offers customizable modules tailored to the specific needs of each developer. This allows anyone to create their own modules, aligning the interests of oracle users and the resolution committee. It now includes features such as ERC20 custom majority, Optimistic Committee, Arbitrator, Multisig/DAOs, NFT voting eligibility, and more."
         }
       },
-      "status": "In progress",
+      "status": "Completed",
       "links": {
         "website": [],
         "twitter": [],
@@ -188,7 +188,7 @@
           "description": "Everclear automates cross-chain liquidity settlement, reducing costs and complexity by netting flows across chains. It leverages Chain Abstraction, allowing seamless rebalancing without manual intervention. The system also uses a Dutch auction to efficiently clear invoices and introduces the vbNEXT token model to direct liquidity to underutilized chains, aligning incentives for all participants."
         }
       },
-      "status": "In progress",
+      "status": "Completed",
       "links": {
         "website": [],
         "twitter": [],
