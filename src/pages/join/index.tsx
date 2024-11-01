@@ -12,7 +12,6 @@ const Join = () => {
 export default Join;
 
 const JoinContainer = styled.div`
-  overflow: hidden;
   width: 100%;
   height: 100vh;
   display: flex;
@@ -21,6 +20,6 @@ const JoinContainer = styled.div`
   align-items: center;
 
   .background-container {
-    display: none;
+    overflow: visible;
   }
 `;
