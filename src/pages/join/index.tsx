@@ -13,7 +13,7 @@ export default Join;
 
 const JoinContainer = styled.div`
   width: 100%;
-  height: 100%;
+  height: 100vh;
   display: flex;
   margin-top: -6rem;
   justify-content: center;
