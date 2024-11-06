@@ -22,7 +22,7 @@ const Footer = () => {
     <ContentContainer>
       <Container>
         {/* Background */}
-        <BgContainer>
+        <BgContainer className='background-container'>
           <BackgroundImage type='2' align='center' />
         </BgContainer>
 
@@ -30,7 +30,9 @@ const Footer = () => {
         <StyledFooter>
           <FooterHeader>
             <Star src={StarIcon.src} alt='' />
-            <WonderLogoText src={WonderLogoIcon.src} alt='Wonderland logo text' />
+            <SLink to='/'>
+              <WonderLogoText src={WonderLogoIcon.src} alt='Wonderland logo text' />
+            </SLink>
             <Star src={StarIcon.src} alt='' />
           </FooterHeader>
 

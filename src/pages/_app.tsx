@@ -12,15 +12,16 @@ import { useRouter } from 'next/router';
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   const router = useRouter();
+  const noLayoutPages = ['/join'];
 
   return (
     <StyledPageView>
       <StarsBackground />
-      <Navbar pathname={router.pathname} />
+      {!noLayoutPages.includes(router.pathname) && <Navbar pathname={router.pathname} />}
       <StyledPageContent>
         <Component {...pageProps}></Component>
       </StyledPageContent>
-      <Footer />
+      {!noLayoutPages.includes(router.pathname) && <Footer />}
     </StyledPageView>
   );
 };
