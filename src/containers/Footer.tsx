@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import WonderLogoIcon from '~/assets/Logo.png';
 import StarIcon from '~/public/img/footer/star-icon.svg';
-import TwitterIcon from '~/public/img/footer/twitter-icon.svg';
+import TwitterIcon from '~/public/img/footer/x.svg';
 import GithubIcon from '~/public/img/footer/github-icon.svg';
 import {
   Button,
@@ -153,6 +153,11 @@ const FooterSocial = styled.div`
 const SocialIcon = styled(SLink)`
   display: flex;
   align-items: center;
+
+  img {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
 `;
 
 const SocialIcons = styled.div`
@@ -161,7 +166,6 @@ const SocialIcons = styled.div`
   justify-content: center;
   grid-gap: 4rem;
   z-index: 20;
-  margin-top: 2rem;
 `;
 
 const StyledFooter = styled.footer`

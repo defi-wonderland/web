@@ -13,9 +13,9 @@ export default Join;
 
 const JoinContainer = styled.div`
   width: 100%;
-  height: 100vh;
+  height: 100%;
   display: flex;
-  margin-top: -5rem;
+  margin-top: -6rem;
   justify-content: center;
   align-items: center;
 
