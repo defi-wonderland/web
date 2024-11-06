@@ -15,7 +15,7 @@ const JoinContainer = styled.div`
   width: 100%;
   height: 100vh;
   display: flex;
-  margin-top: -5rem;
+  margin-top: -6rem;
   justify-content: center;
   align-items: center;
 
