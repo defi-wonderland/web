@@ -2,6 +2,8 @@ import '~/app/globals.css';
 
 import { AppProps } from 'next/app';
 import styled from 'styled-components';
+import { SpeedInsights } from '@vercel/speed-insights/next';
+import { Analytics } from '@vercel/analytics/react';
 
 import StarsBackground from '~/containers/StarsBackground';
 import Navbar from '~/containers/Navbar';
@@ -20,6 +22,8 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
       {!noLayoutPages.includes(router.pathname) && <Navbar pathname={router.pathname} />}
       <StyledPageContent>
         <Component {...pageProps}></Component>
+        <SpeedInsights />
+        <Analytics />
       </StyledPageContent>
       {!noLayoutPages.includes(router.pathname) && <Footer />}
     </StyledPageView>
