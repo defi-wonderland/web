@@ -51,7 +51,7 @@ const Footer = () => {
           <FooterSocial>
             <span>
               <span>© {currentYear}. Wonder LTD. </span>
-              <span>All Rights Reserved</span>
+              <span>All Rights Reserved.</span>
             </span>
 
             <SocialIcons>
