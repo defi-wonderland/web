@@ -144,7 +144,7 @@ function TextSection() {
             </SecondaryText>
 
             <SecondaryText>Long term, long term, long term…</SecondaryText>
-            <SLink to='https://docs.google.com/forms/d/1n70jsL4sFkOwPNBTdciPqlWF2RirgQwejjztpS4-2L8/viewform' external>
+            <SLink to='https://apply.defi.sucks/' external>
               <Button>Join us</Button>
             </SLink>
           </div>
