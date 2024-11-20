@@ -58,10 +58,7 @@ export default function SquadSection() {
             </FlipCard>
           </MemberContainer>
         ))}
-        <JoinContainer
-          to='https://docs.google.com/forms/d/1n70jsL4sFkOwPNBTdciPqlWF2RirgQwejjztpS4-2L8/viewform'
-          external
-        >
+        <JoinContainer to='https://apply.defi.sucks/' external>
           <Name className='gradient'>JOIN US</Name>
           <KeyImage />
         </JoinContainer>

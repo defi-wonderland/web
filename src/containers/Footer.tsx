@@ -39,10 +39,7 @@ const Footer = () => {
           <FooterActions>
             <FooterTitle>We&apos;re all mad here</FooterTitle>
             <ButtonsContainer>
-              <SLink
-                to='https://docs.google.com/forms/d/1n70jsL4sFkOwPNBTdciPqlWF2RirgQwejjztpS4-2L8/viewform'
-                external
-              >
+              <SLink to='https://apply.defi.sucks/' external>
                 <Button>Join us</Button>
               </SLink>
             </ButtonsContainer>
