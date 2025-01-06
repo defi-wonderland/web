@@ -262,5 +262,11 @@
     "position": "Researcher & Tech Writer",
     "image": "/img/pfp/Lumi.png",
     "description": "- Swapped neurons for nodes after working in neuroscience.\n- Currently hacking her way through a BS in Digital Technology at UTDT.\n- Fluent in nerdy talk.\n\nFun fact: Alter ego spent a semester rocking out in music school."
+  },
+    {
+    "name": "Chin",
+    "position": "Developer",
+    "image": "/img/pfp/Chin.png",
+    "description": "- Hackathons enjoyooor\n- Has 15+ (symbolic) penguins in his house\n- Likes to learn random stuff\n\nFun fact: Likes to jump and spin"
   }
 ]
