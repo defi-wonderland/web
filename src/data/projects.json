@@ -14,7 +14,7 @@
         },
         "solution": {
           "title": "What is the solution?",
-          "description": "We developed an optimistic version of EBO that utilizes Prophet, an optimistic oracle, to map blocks from various chains to epochs on Arbitrum One. This introduces an escalating bond mechanism to resolve disputes, reducing reliance on the single Arbitrator operator, improving security, and enabling decentralized operations with lower initial stakes."
+          "description": "We developed an optimistic version of EBO that maps blocks from various chains to epochs on Arbitrum One. This introduces an escalating bond mechanism to resolve disputes, reducing reliance on the single Arbitrator operator, improving security, and enabling decentralized operations with lower initial stakes."
         }
       },
       "status": "In progress",
