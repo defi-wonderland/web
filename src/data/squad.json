@@ -267,6 +267,31 @@
     "name": "Chin",
     "position": "Developer",
     "image": "/img/pfp/Chin.png",
-    "description": "- Hackathons enjoyooor\n- Has 15+ (symbolic) penguins in his house\n- Likes to learn random stuff\n\nFun fact: Likes to jump and spin"
-  }
+    "description": "- Hackathons enjoyooor.\n- Has 15+ (symbolic) penguins in his house.\n- Likes to learn random stuff.\n\nFun fact: Likes to jump and spin."
+  },
+  {
+    "name": "Ace",
+    "position": "Developer",
+    "image": "/img/pfp/Ace.png",
+    "description": "- Software Engineer decentralization fan.\n- Coffe enthusiast.\n\nFun Fact: I made really deep investigation on every bought I made."
+  },
+  {
+    "name": "Daopunk",
+    "position": "Developer",
+    "image": "/img/pfp/Daopunk.png",
+    "description": "- Planning to outlive capitalism.\n- Nomadic.\n\nFun fact: enjoys clandestine dance parties."
+  },
+  {
+    "name": "Jagger",
+    "position": "Developer",
+    "image": "/img/pfp/Jagger.png",
+    "description": "- Enthusiast runner.\n- Coffee, mate, or tea for bootstrapping the day.\n- Replaced spreadsheets with code editors.\n\nFun Fact: Had a +300-day streak playing FIFA."
+    },
+    {
+      "name": "Luke",
+      "position": "Developer",
+      "image": "/img/pfp/Luke.png",
+      "description": "- A never-quit lion.\n- Jedi wannabe.\n- Mantra: Discipline over talent.\n\nFun fact: He is ambidextrous with scissors."
+    }
+
 ]
