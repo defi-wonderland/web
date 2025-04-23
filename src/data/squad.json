@@ -286,6 +286,41 @@
       "position": "Developer",
       "image": "/img/pfp/Luke.png",
       "description": "- A never-quit lion.\n- Jedi wannabe.\n- Mantra: Discipline over talent.\n\nFun fact: He is ambidextrous with scissors."
+    },
+    {
+      "name": "Cooki",
+      "position": "Developer",
+      "image": "/img/pfp/Cooki.png",
+      "description": "- Former academic (ethics, evolution, philosophy)\n- Loves hiking in nature and pokemon\n\nFun Fact: my “big toe” isn’t my biggest toe"
+    },
+    {
+      "name": "GhostLee",
+      "position": "Developer",
+      "image": "/img/pfp/Ghost.png",
+      "description": "- Optimize everything"
+    },
+    {
+      "name": "Paperclip Minimizer",
+      "position": "Researcher",
+      "image": "/img/pfp/Paperclip.png",
+      "description": "- Rogue physicist\n- Study subject in at least 3 undergrad theses\n- Mostly harmless\n\nFun fact: might bite"
+    },
+    {
+      "name": "Niha",
+      "position": "Developer",
+      "image": "/img/pfp/Niha.png",
+      "description": "- Computer Engineer wannabe.\n- Can turn anything into a competition.\n- Loves sports, philosophy and shouting “estudió” on the weekends.\n\nFun fact: records suggest he has lifted a shovel exactly once in his lifetime."
+    },
+    {
+      "name": "Akoi Dehoibe",
+      "position": "Architect",
+      "image": "/img/pfp/Akoi.png",
+      "description": "- PhD in Theoretical Physics.\n- Worked several years in mathematical modelling applied to several topics (among them, Causal AI). \n- Love sports, languages and cultures.\n\nFun Fact: once he gave 20 kg of frozen fish (pejerrey) to Particle as a present"
+    },
+    {
+      "name": "Zeriph",
+      "position": "Researcher",
+      "image": "/img/pfp/Zeriph.png",
+      "description": "- Background in Economics with a specialization in Finance\n- I previously worked in asset management\n- I love surfing, anime and sitcoms.\n\nFun fact: 3 dogs, 0 cats"
     }
-
 ]
