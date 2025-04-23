@@ -18,7 +18,7 @@
     "description": "- Your hot-takes friend from DeFi summer."
   },
   {
-    "name": "0xGorilla",
+    "name": "Roman",
     "position": "CTO",
     "image": "/img/pfp/Gorilla.png",
     "description": "- 10+ years in Software Development.\n- Addicted to scalability and conventions.\n\nFun fact: His OCD compels him to arrange the dishwasher like a Tetris game!"
@@ -226,12 +226,6 @@
     "position": "Developer",
     "image": "/img/pfp/Flux.png",
     "description": "- Caffeine addicted dromedary.\n- Loves to code, read and lift heavy stuff.\n\nFun fact: Can power-nap pretty much anywhere."
-  },
-  {
-    "name": "Ikiryou",
-    "position": "Engineering Manager",
-    "image": "/img/pfp/Ikiryou.png",
-    "description": "- Jack of all trades.\n- Nearly 20 years in Web2, working in the hospitality industry.\n- Has too many hobbies, from gaming to leathercrafting.\n\nFun fact: Had watched Stargate and Star Trek universes over 3 times each."
   },
   {
     "name": "Jahabeebs",
