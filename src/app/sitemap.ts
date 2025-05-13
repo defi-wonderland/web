@@ -32,11 +32,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.8,
     },
-    {
-      url: 'https://defi.sucks/insights',
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 1,
-    },
   ];
 }

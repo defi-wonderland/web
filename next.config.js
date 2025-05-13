@@ -12,6 +12,11 @@ const nextConfig = {
         destination: 'https://apply.defi.sucks/',
         permanent: true,
       },
+      {
+        source: '/insights/:path*',
+        destination: 'https://mirror.xyz/0xD28D1D7A6FDebEF46330210E65a1EF11bAfea11a',
+        permanent: true,
+      },
     ];
   },
 };
