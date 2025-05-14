@@ -21,6 +21,7 @@ interface NavLink {
   name: string;
   url: string;
   disabled?: boolean;
+  external?: boolean;
 }
 
 const navLinks: NavLink[] = [
@@ -43,6 +44,7 @@ const navLinks: NavLink[] = [
     name: 'insights',
     url: '/insights',
     disabled: false,
+    external: true,
   },
 ];
 
@@ -60,6 +62,7 @@ const Navbar = ({ className, pathname }: NavbarProps) => {
     const newNavLink = navLink.map((link) => ({
       name: link.name,
       url: link.url,
+      external: link.external,
       disabled: false,
     }));
 
@@ -106,6 +109,7 @@ const Navbar = ({ className, pathname }: NavbarProps) => {
               to={link.url}
               key={link.name}
               disabled={link.disabled && pathname?.includes('/insights/')}
+              external={link.external}
               className={link.disabled ? 'gradient' : ''}
             >
               <div>{link.name}</div>

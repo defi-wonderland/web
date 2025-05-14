@@ -45,4 +45,4 @@ The app should be live at [http://localhost:4173/](http://localhost:4173/)
 
 ## Blog Management
 
-If you want to add a blog post, see [this guide](./public/blog-posts/how-to-add-a-blog-post.md).
+The blog has been moved to [Mirror](https://mirror.xyz/0xD28D1D7A6FDebEF46330210E65a1EF11bAfea11a)
