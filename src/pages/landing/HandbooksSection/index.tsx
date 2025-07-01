@@ -2,10 +2,12 @@ import styled from 'styled-components';
 import { Button, SLink, CONTENT_INDEX, MOBILE_MAX_WIDTH } from '~/components';
 import StarIcon from '~/public/img/footer/star-icon.svg';
 import Handbooks from './Handbooks';
+import TriangleBackground from '../../../components/TriangleBackground';
 
 export default function HandbooksSection() {
   return (
     <HandbooksContainer>
+      <TriangleBackground />
       <Divider>
         <DividerLine />
       </Divider>
@@ -27,7 +29,7 @@ export default function HandbooksSection() {
 
 const HandbooksContainer = styled.section`
   width: 100%;
-  padding: 5rem 7.5rem 10rem 2.5rem;
+  padding: 5rem 7.5rem 17rem 2.5rem;
   position: relative;
   display: grid;
   grid-template-areas:
