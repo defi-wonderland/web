@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { FONT_DISPLAY, FONT_MEDIUM, MOBILE_MAX_WIDTH, TABLET_MAX_WIDTH } from '~/components';
 
-export default function HandbooksSection() {
+export default function Handbooks() {
   const handbooks = [
     {
       title: 'Wonderland handbook',
@@ -16,28 +16,23 @@ export default function HandbooksSection() {
       href: 'https://optimism.handbook.defi.sucks', //Todo: update when domain is changed
     },
   ];
+
   return (
     <HandbooksContainer>
-      <TeamTitle>HANDBOOKS</TeamTitle>
+      <Title>HANDBOOKS</Title>
+
       <Subtitle>
         At Wonderland, we believe that the ecosystem thrives on collaboration and shared knowledge. This handbook is our
         living repository: a curated guide to our best practices, processes, and technical insights.
       </Subtitle>
-      <CardContainer>
-        {handbooks.map((handbook, index) => {
-          return (
-            <Card
-              key={handbook.title}
-              href={handbook.href}
-              target='_blank'
-              rel='noreferrer'
-              background={handbook.background}
-            >
-              <CardIcon src={handbook.image} alt={`${handbook.title} ICON`} isFirstCard={index === 0} />
-            </Card>
-          );
-        })}
-      </CardContainer>
+
+      <CardsContainer>
+        {handbooks.map(({ title, image, background, href }, index) => (
+          <Card target='_blank' rel='noreferrer' key={index} href={href} background={background}>
+            <CardIcon src={image} alt={`${title} ICON`} isWonderlandHandbook={index === 0} />
+          </Card>
+        ))}
+      </CardsContainer>
     </HandbooksContainer>
   );
 }
@@ -56,7 +51,7 @@ const HandbooksContainer = styled.div`
   }
 `;
 
-const TeamTitle = styled.h1`
+const Title = styled.h1`
   font-family: ${FONT_DISPLAY};
   font-weight: 300;
   font-style: italic;
@@ -83,14 +78,16 @@ const Subtitle = styled.p`
   font-size: 2rem;
   text-align: center;
   align-self: center;
-  max-width: 95rem;
+  max-width: 81rem;
+  line-height: 150%;
+  font-weight: 400;
+  letter-spacing: -0.02em;
 `;
 
-const CardContainer = styled.div`
+const CardsContainer = styled.div`
   width: 100%;
   display: flex;
   flex-direction: row;
-  align-items: space-between;
   justify-content: center;
   gap: 2.4rem;
   padding-top: 5.6rem;
@@ -126,10 +123,8 @@ const Card = styled.a.withConfig({
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(7px);
   -webkit-backdrop-filter: blur(7px);
-  z-index: 100;
   transition: all 0.3s ease;
   text-decoration: none !important;
-  position: relative;
   overflow: hidden;
   max-width: 52rem;
   &:hover {
@@ -141,19 +136,17 @@ const Card = styled.a.withConfig({
 `;
 
 const CardIcon = styled.img.withConfig({
-  shouldForwardProp: (prop) => prop !== 'isFirstCard',
-})<{ isFirstCard?: boolean }>`
+  shouldForwardProp: (prop) => prop !== 'isWonderlandHandbook',
+})<{ isWonderlandHandbook?: boolean }>`
   width: auto;
   height: auto;
   max-width: 80%;
   max-height: 80%;
   object-fit: contain;
-  z-index: 1;
-  position: relative;
-  ${({ isFirstCard }) =>
-    isFirstCard &&
+  ${({ isWonderlandHandbook }) =>
+    isWonderlandHandbook &&
     `
       transform: translateY(-20px);
-      margin-top: 14px;
+      margin-top: 15px;
     `}
 `;

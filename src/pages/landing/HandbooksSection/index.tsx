@@ -1,6 +1,5 @@
 import styled from 'styled-components';
-import { Button, CONTENT_INDEX, FONT_MEDIUM_L, MOBILE_MAX_WIDTH } from '~/components';
-import { SLink } from '~/components';
+import { Button, SLink, CONTENT_INDEX, MOBILE_MAX_WIDTH } from '~/components';
 import StarIcon from '~/public/img/footer/star-icon.svg';
 import Handbooks from './Handbooks';
 
@@ -11,15 +10,13 @@ export default function HandbooksSection() {
         <DividerLine />
       </Divider>
 
-      <SecondBlockContainer>
+      <HandbookBlockContainer>
         <Handbooks />
-      </SecondBlockContainer>
+      </HandbookBlockContainer>
 
       <Icon src={StarIcon.src} />
+
       <HandbooksSectionBottom>
-        <div>
-          <Icon src={StarIcon.src} />
-        </div>
         <SLink to='https://handbook.wonderland.xyz/docs/intro/welcome' external>
           <HandbooksButton>Enter the rabbit hole</HandbooksButton>
         </SLink>
@@ -35,7 +32,7 @@ const HandbooksContainer = styled.section`
   display: grid;
   grid-template-areas:
     'empty handbooksDivider'
-    'empty secondBlock'
+    'empty handbookBlock'
     'icon handbooksSectionBottom';
   grid-template-columns: 5rem auto;
 
@@ -44,20 +41,6 @@ const HandbooksContainer = styled.section`
     display: flex;
     flex-direction: column;
     margin-top: 6rem;
-  }
-`;
-
-const Title = styled.strong`
-  font-family: ${FONT_MEDIUM_L};
-  font-size: 2.4rem;
-  text-transform: uppercase;
-  display: flex;
-  align-items: center;
-  height: 100%;
-  padding: 1.6rem 0 1.6rem 4.4rem;
-
-  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
-    font-size: 2.2rem;
   }
 `;
 
@@ -73,11 +56,11 @@ const Icon = styled.img.attrs({ loading: 'lazy', alt: '' })`
   }
 `;
 
-const SecondBlockContainer = styled.div`
+const HandbookBlockContainer = styled.div`
   width: 100%;
   height: 100%;
   border-left: 1px solid rgba(255, 255, 255, 0.5);
-  grid-area: secondBlock;
+  grid-area: handbookBlock;
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     border-left: none;
@@ -119,14 +102,14 @@ const DividerLine = styled.div`
   width: 100%;
 `;
 
-const HandbooksSectionBottom = styled(Title)`
+const HandbooksSectionBottom = styled.div`
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 1.6rem 0 1.6rem 4.4rem;
   grid-area: handbooksSectionBottom;
   border-left: 1px solid rgba(255, 255, 255, 0.5);
   border-top: 1px solid rgba(255, 255, 255, 0.5);
-
-  & img {
-    display: none;
-  }
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     display: flex;
@@ -134,28 +117,6 @@ const HandbooksSectionBottom = styled(Title)`
     padding: 0;
     border-left: none;
     border: none;
-
-    & div {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      width: 100%;
-      justify-content: start;
-    }
-
-    & img {
-      border-top: none;
-      display: block;
-      border-right: 1px solid rgba(255, 255, 255, 0.5);
-      height: 6.4rem;
-      width: 6.4rem;
-      padding: 2.2rem;
-      margin-right: 2rem;
-    }
-
-    & div img {
-      display: none;
-    }
   }
 `;
 
