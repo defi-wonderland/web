@@ -8,8 +8,8 @@ export default function Handbooks() {
       <Title>HANDBOOKS</Title>
 
       <Subtitle>
-        At Wonderland, we believe that the ecosystem thrives on collaboration and shared knowledge. This handbook is our
-        living repository: a curated guide to our best practices, processes, and technical insights.
+        At Wonderland, we believe that the ecosystem thrives on collaboration and shared knowledge. These handbooks are
+        our living repositories: curated guides to our best practices, processes, and technical insights.
       </Subtitle>
 
       <CardsContainer>
