@@ -13,3 +13,4 @@ export * from './SectionArticle';
 export * from './StyledPageView';
 export * from './MainTitle';
 export * from './CustomHead';
+export * from './TriangleBackground';
