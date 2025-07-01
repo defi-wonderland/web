@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { MOBILE_MAX_WIDTH, TABLET_MAX_WIDTH } from './Variables';
 
-const TriangleBackground = () => {
+export const TriangleBackground = () => {
   return (
     <TriangleBackgroundContainer>
       <TriangleClipper>
@@ -34,8 +34,6 @@ const TriangleBackground = () => {
     </TriangleBackgroundContainer>
   );
 };
-
-export default TriangleBackground;
 
 const TriangleBackgroundContainer = styled.div`
   position: absolute;

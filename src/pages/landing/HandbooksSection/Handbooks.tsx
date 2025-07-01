@@ -1,22 +1,8 @@
 import styled from 'styled-components';
 import { FONT_DISPLAY, FONT_MEDIUM, MOBILE_MAX_WIDTH, TABLET_MAX_WIDTH } from '~/components';
+import handbooks from '~/data/handbooks.json';
 
 export default function Handbooks() {
-  const handbooks = [
-    {
-      title: 'Wonderland handbook',
-      image: '/img/handbook/general-handbook.svg',
-      background: '/img/handbook/wl-bg-card.png',
-      href: 'https://handbook.wonderland.xyz',
-    },
-    {
-      title: 'Optimism handbook',
-      image: '/img/handbook/optimism-handbook.svg',
-      background: '/img/handbook/op-bg-card.png',
-      href: 'https://optimism.handbook.defi.sucks', //Todo: update when domain is changed
-    },
-  ];
-
   return (
     <HandbooksContainer>
       <Title>HANDBOOKS</Title>

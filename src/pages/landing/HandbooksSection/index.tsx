@@ -1,8 +1,7 @@
 import styled from 'styled-components';
-import { Button, SLink, CONTENT_INDEX, MOBILE_MAX_WIDTH } from '~/components';
+import { Button, SLink, TriangleBackground, CONTENT_INDEX, MOBILE_MAX_WIDTH } from '~/components';
 import StarIcon from '~/public/img/footer/star-icon.svg';
 import Handbooks from './Handbooks';
-import TriangleBackground from '../../../components/TriangleBackground';
 
 export default function HandbooksSection() {
   return (
