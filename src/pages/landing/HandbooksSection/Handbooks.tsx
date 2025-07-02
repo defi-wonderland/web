@@ -9,7 +9,8 @@ export default function Handbooks() {
 
       <Subtitle>
         At Wonderland, we believe that the ecosystem thrives on collaboration and shared knowledge. These handbooks are
-        our living repositories: curated guides to our best practices, processes, and technical insights.
+        our living repository: a curated guide to our best practices and onboarding processes for our long-term
+        partners.
       </Subtitle>
 
       <CardsContainer>
