@@ -213,10 +213,11 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   height: 60rem;
-  margin-top: 10rem;
+  margin-top: 3rem;
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     height: 50rem;
+    margin-top: 10rem;
   }
 `;
 

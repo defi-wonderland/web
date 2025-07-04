@@ -334,5 +334,17 @@
     "position": "Developer",
     "image": "/img/pfp/Thor.png",
     "description": "- Goat smashing bugs and decentralizing the web.\n- Keyboard shortcut evangelist.\n\nFun fact: Can differentiate ketchup brands only by taste."
+  },
+  {
+    "name": "Euler",
+    "position": "Researcher",
+    "image": "/img/pfp/Euler.png",
+    "description": "- Informatics engineer & data enthusiast.\n- Data kills denial, which prevents disaster.\n\nFun fact: My dog basically lives in a Michelin starred kennel while I survive on instant noodles."
+  },
+  {
+    "name": "Tano",
+    "position": "Developer",
+    "image": "/img/pfp/Tano.png",
+    "description": "- Software engineer with a healthy dose of obsession.\n- Boca Juniors fan, willing to talk fútbol at any hour.\n\nFun fact: Uses Brooklyn99 to fall asleep and has rewatched it over 10 times."
   }
 ]
