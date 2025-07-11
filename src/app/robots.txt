@@ -2,4 +2,4 @@ User-Agent: *
 Allow: /
 Disallow: /private/
 
-Sitemap: https://defi.sucks/sitemap.xml
+Sitemap: https://wonderland.xyz/sitemap.xml

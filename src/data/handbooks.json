@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Wonderland handbook",
+    "image": "/img/handbook/general-handbook.svg",
+    "background": "/img/handbook/wl-bg-card.png",
+    "href": "https://handbook.wonderland.xyz"
+  },
+  {
+    "title": "Optimism handbook",
+    "image": "/img/handbook/optimism-handbook.svg",
+    "background": "/img/handbook/op-bg-card.png",
+    "href": "https://optimism.handbook.wonderland.xyz"
+  }
+]

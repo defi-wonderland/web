@@ -1,12 +1,12 @@
 <p align="center">
-  <a href="https://defi.sucks" display='flex' place-items='center'>
+  <a href="https://wonderland.xyz/" display='flex' place-items='center'>
   <img src="./public/intro.png">
   </a>
 </p>
 
 <div align="center">
 
-**[Website](https://defi.sucks) •
+**[Website](https://wonderland.xyz/) •
 [Twitter](https://twitter.com/DeFi_Wonderland) •
 [Github](https://github.com/defi-wonderland)**
 
@@ -16,7 +16,7 @@
 
 Wonderland is a team of top Web3 researchers, developers, and operators who believe that the future needs to be open-source, permissionless, and decentralized.
 
-[DeFi sucks](https://defi.sucks/), but we are here to make it better.
+DeFi sucks, but we are here to make it better.
 
 ## Setup
 

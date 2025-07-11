@@ -23,18 +23,18 @@ const CustomHead = ({ title, description, image, type }: MetadataProps) => {
         content='Wonderland, Defi, decentralized finance, activist fund, ethereum, solidity, devs'
       />
       <meta name='robots' content='index, follow' />
-      <meta property='og:url' content='https://defi.sucks' />
+      <meta property='og:url' content='https://wonderland.xyz/' />
       <meta property='og:type' content={type || 'website'} />
       <meta property='og:title' content={`${title} - Wonderland`} />
       <meta property='og:description' content={descriptionText} />
-      <meta property='og:image' content={image || 'https://defi.sucks/share.jpg'} />
+      <meta property='og:image' content={image || 'https://wonderland.xyz/share.jpg'} />
 
       <meta name='twitter:card' content='summary_large_image' />
       <meta name='twitter:site' content='@DeFi_Wonderland' />
       <meta name='twitter:creator' content='@DeFi_Wonderland' />
       <meta name='twitter:title' content={`${title} - Wonderland`} />
       <meta name='twitter:description' content={descriptionText} />
-      <meta name='twitter:image' content={image || 'https://defi.sucks/share.jpg'} />
+      <meta name='twitter:image' content={image || 'https://wonderland.xyz/share.jpg'} />
     </Head>
   );
 };
