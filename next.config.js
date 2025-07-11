@@ -9,7 +9,7 @@ const nextConfig = {
     return [
       {
         source: '/join',
-        destination: 'https://apply.defi.sucks/',
+        destination: 'https://apply.wonderland.xyz/',
         permanent: true,
       },
       {

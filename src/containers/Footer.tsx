@@ -39,7 +39,7 @@ const Footer = () => {
           <FooterActions>
             <FooterTitle>We&apos;re all mad here</FooterTitle>
             <ButtonsContainer>
-              <SLink to='https://apply.defi.sucks/' external>
+              <SLink to='https://apply.wonderland.xyz/' external>
                 <Button>Join us</Button>
               </SLink>
             </ButtonsContainer>
