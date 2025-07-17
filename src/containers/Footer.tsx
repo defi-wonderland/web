@@ -39,7 +39,7 @@ const Footer = () => {
           <FooterActions>
             <FooterTitle>We&apos;re all mad here</FooterTitle>
             <ButtonsContainer>
-              <SLink to='https://apply.defi.sucks/' external>
+              <SLink to='https://apply.wonderland.xyz/' external>
                 <Button>Join us</Button>
               </SLink>
             </ButtonsContainer>
@@ -213,10 +213,11 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   height: 60rem;
-  margin-top: 10rem;
+  margin-top: 3rem;
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     height: 50rem;
+    margin-top: 10rem;
   }
 `;
 
