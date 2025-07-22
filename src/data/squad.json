@@ -13,12 +13,12 @@
   },
   {
     "name": "Pepo",
-    "position": "Co-founder & Strategist",
+    "position": "Co-founder",
     "image": "/img/pfp/Pepo.png",
     "description": "- Your hot-takes friend from DeFi summer."
   },
   {
-    "name": "Roman",
+    "name": "Gorilla",
     "position": "CTO",
     "image": "/img/pfp/Gorilla.png",
     "description": "- 10+ years in Software Development.\n- Addicted to scalability and conventions.\n\nFun fact: His OCD compels him to arrange the dishwasher like a Tetris game!"
@@ -346,5 +346,17 @@
     "position": "Developer",
     "image": "/img/pfp/Tano.png",
     "description": "- Software engineer with a healthy dose of obsession.\n- Boca Juniors fan, willing to talk fútbol at any hour.\n\nFun fact: Uses Brooklyn99 to fall asleep and has rewatched it over 10 times."
+  },
+  {
+    "name": "Itadaki",
+    "position": "Developer",
+    "image": "/img/pfp/Itadaki.png",
+    "description": "- Vegan\n- Anime fan\n- Scared of the ocean, still learning to surf\n- Trying to create pull requests using the Force\n\nFun fact: I played in a punk rock band when I was 16"
+  },
+  {
+    "name": "Frov",
+    "position": "Developer",
+    "image": "/img/pfp/Frov.png",
+    "description": "- Software engineer deep into defi and privacy\n- Bass player learning drums\n- Loves football and asados\n\nFun fact: ambidextrous playing football"
   }
 ]

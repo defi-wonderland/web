@@ -8,7 +8,7 @@ const HeroSection = ({ ...props }) => {
       <StyledHeroSection full backgroundImage='/img/hero/hero-bg.jpg' {...props}>
         <TitleContainer>
           <SquigglyTitle
-            text={`THE LARGEST CORE DEVELOPMENT\nGROUP IN WEB3`}
+            text={`THE LEADING CORE DEVELOPMENT\nGROUP IN WEB3`}
             sizes={{
               lg: '14rem',
               md: '11.1rem',

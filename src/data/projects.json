@@ -301,7 +301,7 @@
       "content": {
         "challenge": {
           "title": "What was the challenge?",
-          "description": "Sky (formerly MakerDAO) is one of the largest and oldest governance systems in DeFi. It oversees a significant number of on-chain votes that need to be executed daily. These votes can include payments, parameter adjustments within vaults, or contract updates, collectively referred to as spells."
+          "description": "Sky (formerly MakerDAO) is one of the leading and oldest governance systems in DeFi. It oversees a significant number of on-chain votes that need to be executed daily. These votes can include payments, parameter adjustments within vaults, or contract updates, collectively referred to as spells."
         },
         "solution": {
           "title": "What is the solution?",
