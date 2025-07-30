@@ -41,8 +41,8 @@ const navLinks: NavLink[] = [
     disabled: false,
   },
   {
-    name: 'insights',
-    url: '/insights',
+    name: 'handbook',
+    url: '/handbook',
     disabled: false,
     external: true,
   },
@@ -108,7 +108,7 @@ const Navbar = ({ className, pathname }: NavbarProps) => {
             <NavLink
               to={link.url}
               key={link.name}
-              disabled={link.disabled && pathname?.includes('/insights/')}
+              disabled={link.disabled}
               external={link.external}
               className={link.disabled ? 'gradient' : ''}
             >

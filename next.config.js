@@ -13,8 +13,8 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: '/insights/:path*',
-        destination: 'https://mirror.xyz/0xD28D1D7A6FDebEF46330210E65a1EF11bAfea11a',
+        source: '/handbook',
+        destination: 'https://handbook.wonderland.xyz/',
         permanent: true,
       },
     ];
