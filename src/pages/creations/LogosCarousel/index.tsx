@@ -7,6 +7,7 @@ import { useBreakpoints } from '~/hooks/useBreakpoints';
 interface LogosCarouselProps {
   companies: string[];
   onChange: (index: number) => void;
+  companySelected: string;
 }
 
 const carouselState = {
@@ -26,13 +27,15 @@ const carouselState = {
 
 const formatCompanyToFileName = (company: string) => company.toLowerCase().replace(/ /g, '-');
 
-export default function LogosCarousel({ companies = [], onChange }: LogosCarouselProps) {
+export default function LogosCarousel({ companies = [], onChange, companySelected }: LogosCarouselProps) {
   const [loop, setLoop] = useState(carouselState.desktop.loop);
   const [visibleItems, setVisibleItems] = useState(carouselState.desktop.visibleItems);
 
   const itemMaxSize = Math.ceil(visibleItems / 2);
   const centerIndex = Math.floor(visibleItems / 2);
-  const initialIndex = companies.length * Math.floor(loop / 2) + 1;
+  // Use the default company + an offset to center the carousel
+  const initialIndex =
+    companies.findIndex((company) => company === companySelected) + companies.length * Math.floor(loop / 2);
 
   const items = useMemo(() => Array(loop).fill(companies).flat(), [loop, companies]);
   const [selectedItem, setSelectedItem] = useState(initialIndex);

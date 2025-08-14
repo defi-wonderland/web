@@ -73,7 +73,7 @@ export default function Creations() {
             <ScrollAnchor id='scroll-anchor' />
 
             <LogosCarouselContainer onClick={scrollToAnchor}>
-              <LogosCarousel companies={companies} onChange={changeCompany} />
+              <LogosCarousel companies={companies} onChange={changeCompany} companySelected={companySelected} />
             </LogosCarouselContainer>
             <ProjectsContainer>
               <Divider />
