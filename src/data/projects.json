@@ -25,6 +25,88 @@
       }
     },
     {
+      "name": "Knowledge Graph",
+      "company": {
+        "name": "The Graph",
+        "logo": "the-graph.png"
+      },
+      "tags": ["Architecture Design", "Development", "Idea Generation", "Off-Chain", "Research", "Smart Contracts"],
+      "content": {
+        "challenge": {
+          "title": "What was the challenge?",
+          "description": "The Knowledge Graph evolves Web3 indexing by adding a semantic and relational data model beyond subgraphs. Challenges include designing suitable storage, defining a clear incentive layer, adapting off-chain infrastructure, and handling ranking, pluralism, and assertion aggregation."
+        },
+        "solution": {
+          "title": "What is the solution?",
+          "description": "We participate in The Graph working groups, contributing research, design, and development. We proposed a veSystem-inspired incentive layer and defined user actions as a primitive for ranking, data aggregation, and pluralism. We are also working on storage and off-chain components."
+        }
+      },
+      "status": "In progress",
+      "links": {
+        "website": [],
+        "twitter": [],
+        "github": [
+          "https://github.com/graphprotocol/graph-improvement-proposals/blob/main/grcs/0020-knowledge-graph.md"
+        ]
+      }
+    },
+    {
+      "name": "xKeep3r",
+      "company": {
+        "name": "Keep3r",
+        "logo": "keep3r.png"
+      },
+      "tags": ["Research", "Smart Contracts", "UI Development"],
+      "content": {
+        "challenge": {
+          "title": "What was the challenge?",
+          "description": "Building a seamless, fee-less, and permissionless framework for on-chain automation that supports multiple keeper networks (e.g., Gelato, Keep3r) while simplifying job creation for developers."
+        },
+        "solution": {
+          "title": "What is the solution?",
+          "description": "Keep3r Frameworks provides boilerplate contracts and tooling to easily create jobs managed by Gelato, Autonolas, or any keeper. It aims to be a public good for on-chain automation."
+        }
+      },
+      "status": "Completed",
+      "links": {
+        "website": ["https://xkeeper.network"],
+        "twitter": [],
+        "github": ["https://github.com/defi-wonderland/xkeeper-core"]
+      }
+    },
+    {
+      "name": "Interop",
+      "company": {
+        "name": "Ethereum",
+        "logo": "ethereum.png"
+      },
+      "tags": [
+        "Architecture Design",
+        "Development",
+        "Idea Generation",
+        "Research",
+        "Smart Contracts",
+        "UI Development"
+      ],
+      "content": {
+        "challenge": {
+          "title": "What was the challenge?",
+          "description": "Ethereum's rollup-centric roadmap improves scalability but fragments liquidity, UX, and tooling across chains. Seamless cross-chain experiences require shared standards."
+        },
+        "solution": {
+          "title": "What is the solution?",
+          "description": "We joined forces with the Interop Working Group, led by Ethereum Foundation to advance interoperability through standards and system design. We authored ERC-7930 and CAIP-350 for chain-specific addresses and are contributing to ERC-7828, ERC-7683, and more. We also contribute to The Open Intents Framework and are building a wallet prototype supporting chain-specific addresses, cross-chain transfers, and Privacy Pools."
+        }
+      },
+      "status": "In progress",
+      "links": {
+        "website": [],
+        "twitter": [],
+        "github": ["https://github.com/ethereum/L2-interop"],
+        "docs": ["https://ethereum-magicians.org/t/erc-7930-interoperable-addresses/23365"]
+      }
+    },
+    {
       "name": "opUSDC",
       "company": {
         "name": "Optimism",

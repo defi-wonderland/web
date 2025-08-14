@@ -31,13 +31,13 @@
   },
   {
     "name": "Wei3er Hase",
-    "position": "Engineering Manager",
+    "position": "Architect",
     "image": "/img/pfp/Wei3er.png",
     "description": "- Just a bun from Görli 🥕.\n\nFun fact: Afraid of bugs and owls."
   },
   {
     "name": "NG",
-    "position": "Architect",
+    "position": "Security Lead",
     "image": "/img/pfp/NG.png",
     "description": "- Derives joy from finding bugs.\n- Reached Top 4 in Curta during the first eight puzzles.\n\nFun fact: Can recite words backwards fast."
   },
@@ -67,13 +67,13 @@
   },
   {
     "name": "Shaito",
-    "position": "Engineering Manager",
+    "position": "Partner Lead",
     "image": "/img/pfp/Shaito.png",
     "description": "- Flying bison addicted to crypto and building stuff.\n- Normie dev turned Solidity enjoyer.\n\nFun fact: Has been rewatching Avatar: The Last Airbender for the past 7 years."
   },
   {
     "name": "Gotzen",
-    "position": "Engineering Manager",
+    "position": "Partner Lead",
     "image": "/img/pfp/Gotzen.png",
     "description": "- Compulsive optimizer.\n- Another University deserter.\n\nFun fact: Really good at voice impressions."
   },
@@ -103,7 +103,7 @@
   },
   {
     "name": "Parti",
-    "position": "Architect",
+    "position": "Cryptography Lead",
     "image": "/img/pfp/Parti.png",
     "description": "- Managed to earn a PhD in Physics.\n- Switched particles for nodes: \"Pls Parti, stop asking about the Beacon Chain's entropy.\"\n- Chaos enjoyer.\n\nFun fact: Die-hard Boca Juniors fan."
   },
@@ -127,7 +127,7 @@
   },
   {
     "name": "Rex",
-    "position": "Data Analyst",
+    "position": "Data Analyst & Researcher",
     "image": "/img/pfp/Rex.png",
     "description": "- Background in economics.\n- Just your average abacus ASMR enjoyer.\n\nFun fact: Has a wall with about 136 obscure board games."
   },
@@ -144,14 +144,8 @@
     "description": "- Decentralization and privacy maximalist.\n- In love with the mountains.\n\nFun fact: Former card magician."
   },
   {
-    "name": "Enti",
-    "position": "Researcher",
-    "image": "/img/pfp/Enti.png",
-    "description": "- Electronics engineer who left electrons for the Ethereum transaction supply chain (kind of same thing innit?).\n- Enjoyer of sound waves.\n\nFun fact: A group of hedgehogs is called an array."
-  },
-  {
     "name": "Agusduha",
-    "position": "Developer",
+    "position": "Partner Lead",
     "image": "/img/pfp/Agus.png",
     "description": "- Computer Engineer.\n- Crypto enthusiast (or addict).\n- Loves gaming and football.\n\nFun fact: Yearly scammed FIFA player."
   },
@@ -163,7 +157,7 @@
   },
   {
     "name": "Titi",
-    "position": "Developer",
+    "position": "Partner Lead",
     "image": "/img/pfp/Titi.png",
     "description": "- Background in economics.\n- Traded bonds for nodes.\n- Bake it till you make it.\n\nFun fact: Could happily eat pasta every day for the rest of their life."
   },
@@ -181,7 +175,7 @@
   },
   {
     "name": "Kenji",
-    "position": "Developer",
+    "position": "Architect",
     "image": "/img/pfp/kenji.png",
     "description": "- Dropped out of Civil Engineering to become a Software Developer.\n- Self-taught sushi itamae.\n- 1st member of the Off-chain department.\n\nFun fact: Hasn’t missed a day of guitar playing in 20 years"
   },
@@ -307,7 +301,7 @@
   },
   {
     "name": "Akoi Dehoibe",
-    "position": "Architect",
+    "position": "Cryptographer",
     "image": "/img/pfp/Akoi.png",
     "description": "- PhD in Theoretical Physics.\n- Worked several years in mathematical modelling applied to several topics (among them, Causal AI). \n- Love sports, languages and cultures.\n\nFun Fact: once he gave 20 kg of frozen fish (pejerrey) to Particle as a present"
   },
@@ -352,5 +346,17 @@
     "position": "Developer",
     "image": "/img/pfp/Frov.png",
     "description": "- Software engineer deep into defi and privacy\n- Bass player learning drums\n- Loves football and asados\n\nFun fact: ambidextrous playing football"
+  },
+  {
+    "name": "Edna",
+    "position": "Office Manager",
+    "image": "/img/pfp/Edna.png",
+    "description": "- Colombian–Argentine with a degree in International Relations and Political Science.\n- New to the industry; learns at warp speed.\n- Need a favor or a fix? Consider it handled.\n- More humorous than she lets on.\n\nFun fact: Sounds even sharper in Spanish."
+  },
+  {
+    "name": "Kubo",
+    "position": "Recruiter",
+    "image": "/img/pfp/Kubo.png",
+    "description": "- Optics\n- Likes to ask questions\n- Got into crypto because of a tweet\n\nFun fact: Gets way too competitive when playing board games."
   }
 ]
