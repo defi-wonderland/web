@@ -75,38 +75,6 @@
       }
     },
     {
-      "name": "Interop",
-      "company": {
-        "name": "Ethereum",
-        "logo": "ethereum.png"
-      },
-      "tags": [
-        "Architecture Design",
-        "Development",
-        "Idea Generation",
-        "Research",
-        "Smart Contracts",
-        "UI Development"
-      ],
-      "content": {
-        "challenge": {
-          "title": "What was the challenge?",
-          "description": "Ethereum's rollup-centric roadmap improves scalability but fragments liquidity, UX, and tooling across chains. Seamless cross-chain experiences require shared standards."
-        },
-        "solution": {
-          "title": "What is the solution?",
-          "description": "We joined forces with the Interop Working Group, led by Ethereum Foundation to advance interoperability through standards and system design. We authored ERC-7930 and CAIP-350 for chain-specific addresses and are contributing to ERC-7828, ERC-7683, and more. We also contribute to The Open Intents Framework and are building a wallet prototype supporting chain-specific addresses, cross-chain transfers, and Privacy Pools."
-        }
-      },
-      "status": "In progress",
-      "links": {
-        "website": [],
-        "twitter": [],
-        "github": ["https://github.com/ethereum/L2-interop"],
-        "docs": ["https://ethereum-magicians.org/t/erc-7930-interoperable-addresses/23365"]
-      }
-    },
-    {
       "name": "opUSDC",
       "company": {
         "name": "Optimism",
