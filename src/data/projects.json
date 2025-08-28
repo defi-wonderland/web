@@ -150,6 +150,30 @@
       }
     },
     {
+      "name": "Interop",
+      "company": {
+        "name": "Ethereum Foundation",
+        "logo": "ethereum.png"
+      },
+      "tags": ["Architecture Design", "Development", "Smart Contracts", "UI Development", "Idea Generation", "Research"],
+      "content": {
+        "challenge": {
+          "title": "What was the challenge?",
+          "description": "Ethereum’s rollup-centric roadmap has unlocked scalability, but at the cost of fragmentation. Liquidity, UX, and developer tooling are now fractured across chains. To enable seamless cross-chain experiences, shared standards are essential."
+        },
+        "solution": {
+          "title": "What is the solution?",
+          "description": "We are joining forces with the Interop Working Group, led by the Ethereum Foundation, to accelerate interoperability through standardization and system design, guided by a spirit of collaboration. We have authored ERC-7930 and CAIP-350 to establish a global format for chain-specific addresses. In parallel, we are actively contributing to ERC-7828, ERC-7683, and other cross-chain standards. We are also contributing to The Open Intents Framework, a dedicated working group focused on developing tools to democratize access to intent-based products."
+        }
+      },
+      "status": "In progress",
+      "links": {
+        "website": ["https://ethereum-magicians.org/t/erc-7930-interoperable-addresses/23365"],
+        "twitter": [],
+        "github": ["https://github.com/ethereum/L2-interop"]
+      }
+    },
+    {
       "name": "HAI",
       "company": {
         "name": "Reflexer",
