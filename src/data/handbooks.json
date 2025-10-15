@@ -10,5 +10,12 @@
     "image": "/img/handbook/optimism-handbook.svg",
     "background": "/img/handbook/op-bg-card.png",
     "href": "https://optimism.handbook.wonderland.xyz"
+  },
+  {
+    "title": "Aztec handbook",
+    "image": "/img/handbook/aztec-handbook.svg",
+    "background": "/img/handbook/op-bg-card.png",
+    "backgroundOverlay": "#625CBFD1",
+    "href": "https://aztec.handbook.wonderland.xyz"
   }
 ]
