@@ -31,37 +31,37 @@
   },
   {
     "name": "Wei3er Hase",
-    "position": "Architect",
+    "position": "Onchain - Architect",
     "image": "/img/pfp/Wei3er.png",
     "description": "- Just a bun from Görli 🥕.\n\nFun fact: Afraid of bugs and owls."
   },
   {
     "name": "NG",
-    "position": "Security Lead",
+    "position": "Onchain Security - Department Lead",
     "image": "/img/pfp/NG.png",
     "description": "- Derives joy from finding bugs.\n- Reached Top 4 in Curta during the first eight puzzles.\n\nFun fact: Can recite words backwards fast."
   },
   {
     "name": "Ashitaka",
-    "position": "Developer",
+    "position": "Onchain -Developer",
     "image": "/img/pfp/Ashi.png",
     "description": "- Solidity dev\n- Studied Telecommunications engineering and philosophy.\n\nFun fact: Pro player of Magic: The Gathering."
   },
   {
     "name": "Gas1cent",
-    "position": "Engineering Manager",
+    "position": "Operations - Engineering Manager",
     "image": "/img/pfp/Gas.png",
     "description": "- Watched over 1000 movies, vaguely remembers 4 of them.\n- A big nap2earn proponent.\n\nFun fact: Jail dropout."
   },
   {
     "name": "Simon Something",
-    "position": "Chief Testing Officer",
+    "position": "Operations - Department Lead",
     "image": "/img/pfp/Doc.png",
     "description": "- Random diploma collector.\n- Assembly fanatic (Huff is cheating).\n\nFun fact: Has 99 issues and a bitshift ain't one."
   },
   {
     "name": "0xJabberwock",
-    "position": "Developer",
+    "position": "Onchain - Developer",
     "image": "/img/pfp/Jabber.png",
     "description": "- Recruited by Wonderland.\n- Codes even his life.\n\nFun fact: Lifts a dumbbell every day."
   },
@@ -79,67 +79,67 @@
   },
   {
     "name": "Turtlemoji",
-    "position": "Chief Security Officer",
+    "position": "Operations - Internal Security",
     "image": "/img/pfp/Turtle.png",
     "description": "- Co-created and helped in multiple onchain and normie products/companies.\n- Loves swimming, video games, anime, science and debating anything.\n\nFun fact: Addicted to Coke (the drink)."
   },
   {
     "name": "0xRaccoon",
-    "position": "Developer",
+    "position": "Onchain -Developer",
     "image": "/img/pfp/Raccoon.png",
     "description": "- UTN Systems engineer.\n- Believes adaptability is an important feature.\n\nFun fact: Likes to travel and do outdoor activities."
   },
   {
     "name": "0xAustrian",
-    "position": "Developer",
+    "position": "Onchain - Developer",
     "image": "/img/pfp/Austrian.png",
     "description": "- Software Developer.\n- Learned Solidity because he was bored at work.\n\nFun fact: 90's horror movies fan."
   },
   {
     "name": "OneTony",
-    "position": "Developer",
+    "position": "Onchain - Developer",
     "image": "/img/pfp/Tony.png",
     "description": "- Studied Electrical & Computer Engineering.\n- Previously, open source contributor and independent consultant focused on the Ethereum blockchain.\n\nFun fact: Searching for the One Piece 🙂."
   },
   {
     "name": "Parti",
-    "position": "Cryptography Lead",
+    "position": "Cryptography - Department Lead",
     "image": "/img/pfp/Parti.png",
     "description": "- Managed to earn a PhD in Physics.\n- Switched particles for nodes: \"Pls Parti, stop asking about the Beacon Chain's entropy.\"\n- Chaos enjoyer.\n\nFun fact: Die-hard Boca Juniors fan."
   },
   {
     "name": "0xMono",
-    "position": "Researcher",
+    "position": "Research - Department Lead",
     "image": "/img/pfp/Mono.png",
     "description": "- Enrolled in IT infrastructure studies.\n- Defi research and scalability enthusiast.\n\nFun fact: Spends his spare time in DeFi as well."
   },
   {
     "name": "Joxes",
-    "position": "Lead Researcher",
+    "position": "Onchain - Architect",
     "image": "/img/pfp/Joxes.png",
     "description": "- Background in Engineering and Thermal Analysis.\n- Incubated four communities to spread Ethereum's technologies and ethos.\n\nFun fact: My mental model refers to ΔG = ΔH − TΔS to predict the success of our next project."
   },
   {
     "name": "Ardy",
-    "position": "Lead UI",
+    "position": "UI - Developer",
     "image": "/img/pfp/Ardy.png",
     "description": "- Background in Engineering.\n- Passionate about mathematics and philosophy.\n\nFun fact: Bonsaist apprentice 🌳."
   },
   {
     "name": "Rex",
-    "position": "Data Analyst & Researcher",
+    "position": "Research - Researcher",
     "image": "/img/pfp/Rex.png",
     "description": "- Background in economics.\n- Just your average abacus ASMR enjoyer.\n\nFun fact: Has a wall with about 136 obscure board games."
   },
   {
     "name": "Discotech",
-    "position": "Developer",
+    "position": "Onchain - Developer",
     "image": "/img/pfp/Discotech.png",
     "description": "- Interested in blockchain and startups.\n- Loves watching and playing football. Boca Juniors fan.\n\nFun fact: Once won a pair of pants in a FIFA tournament."
   },
   {
     "name": "Moebius",
-    "position": "Developer",
+    "position": "Onchain - Architect",
     "image": "/img/pfp/Moebius.png",
     "description": "- Decentralization and privacy maximalist.\n- In love with the mountains.\n\nFun fact: Former card magician."
   },
@@ -151,7 +151,7 @@
   },
   {
     "name": "Lempire",
-    "position": "Developer",
+    "position": "Onchain -Developer",
     "image": "/img/pfp/Lempire.png",
     "description": "- Likes to play chess and practice Jiu Jitsu.\n\nFun fact: Likes to read books."
   },
@@ -163,37 +163,37 @@
   },
   {
     "name": "Hex",
-    "position": "Developer",
+    "position": "Onchain - Developer",
     "image": "/img/pfp/Hex.png",
     "description": "- Former QC Analyst.\n- Started in crypto mining Ravencoin.\n- Considers himself a multipotentialite.\n\nFun fact: Started playing pokemon tcg as an adult."
   },
   {
     "name": "Ringo",
-    "position": "Financial Analyst",
+    "position": "CFO",
     "image": "/img/pfp/Ringo.png",
     "description": "- Background in Economics.\n- He worked at Wonderland for over a year under the hood.\n- Loves lifting heavy shit, playing football, and golfing.\n\nFun Fact: Has been breaking cymbals, heads, and sticks since he was twelve."
   },
   {
     "name": "Kenji",
-    "position": "Architect",
+    "position": "Offchain -Architect",
     "image": "/img/pfp/kenji.png",
     "description": "- Dropped out of Civil Engineering to become a Software Developer.\n- Self-taught sushi itamae.\n- 1st member of the Off-chain department.\n\nFun fact: Hasn’t missed a day of guitar playing in 20 years"
   },
   {
     "name": "Teddy",
-    "position": "Developer",
+    "position": "Onchain -Developer",
     "image": "/img/pfp/Teddy.png",
     "description": "- Solidity dev.\n- Likes lying to machines.\n- Cuddly and sleepy, but technically doesn't hibernate.\n\nFun fact: Clumsy welder."
   },
   {
     "name": "Ilpepepig",
-    "position": "Developer",
+    "position": "Onchain - Developer",
     "image": "/img/pfp/ilpepepig.png",
     "description": "- Still wondering what a degree in bioengineering is for.\n\nFun fact: Always obsessed with something."
   },
   {
     "name": "Yaco",
-    "position": "Developer",
+    "position": "Partner Lead",
     "image": "/img/pfp/Yaco.png",
     "description": "- Backend/Data engineer.\n- Enjoys doing stuff that just works.\n\nFun fact: Dulce de batata enjoyer & sudoku puzzle enthusiast."
   },
@@ -205,146 +205,189 @@
   },
   {
     "name": "Zorzal",
-    "position": "Developer",
+    "position": "Onchain - Developer",
     "image": "/img/pfp/Zorzal.png",
     "description": "- Mushroom grower.\n- RTS and 4X games addict in recovery.\n- Makes homemade pasta at least once a week. \n\nFun fact: Argentum Online connoisseur."
   },
   {
     "name": "Flux",
-    "position": "Developer",
+    "position": "Onchain - Developer",
     "image": "/img/pfp/Flux.png",
     "description": "- Caffeine addicted dromedary.\n- Loves to code, read and lift heavy stuff.\n\nFun fact: Can power-nap pretty much anywhere."
   },
   {
     "name": "Beebs",
-    "position": "Developer",
+    "position": "Offchain - Developer",
     "image": "/img/pfp/Beebs.png",
     "description": "- A macaw who specializes in Typescript by profession but also enjoys tennis and violin.\n- Migratory path between the U.S. and Colombia.\n\nFun fact: Exceptional whistler."
   },
   {
     "name": "Shishigami",
-    "position": "Developer",
+    "position": "UI - Developer",
     "image": "/img/pfp/Shishigami.png",
     "description": "- Designer turned Developer.\n- Obsessed with rendering crazy stuff on displays.\n\nFun fact: Makes big decisions by talking to plants."
   },
   {
     "name": "Onizuka",
-    "position": "Developer",
+    "position": "UI - Developer",
     "image": "/img/pfp/Onizuka.png",
     "description": "- Electronic technician.\n- Anime addict.\n- MMORPG lover.\n\nFun fact: Impulsive buyer of unnecessary things (that’s what they work for)."
   },
   {
     "name": "Funkornaut",
-    "position": "Developer",
+    "position": "Onchain -Developer",
     "image": "/img/pfp/Funkornaut.png",
     "description": "- Solidity developer.\n- Previously made beer for a living.\n- Big golf guy and yogi.\n\nFun fact: Can wiggle ears without touching them."
   },
   {
     "name": "Lumi",
-    "position": "Researcher & Tech Writer",
+    "position": "Research - Researcher",
     "image": "/img/pfp/Lumi.png",
     "description": "- Swapped neurons for nodes after working in neuroscience.\n- Currently hacking her way through a BS in Digital Technology at UTDT.\n- Fluent in nerdy talk.\n\nFun fact: Alter ego spent a semester rocking out in music school."
   },
   {
     "name": "Chin",
-    "position": "Developer",
+    "position": "Onchain - Developer",
     "image": "/img/pfp/Chin.png",
     "description": "- Hackathons enjoyooor.\n- Has 15+ (symbolic) penguins in his house.\n- Likes to learn random stuff.\n\nFun fact: Likes to jump and spin."
   },
   {
     "name": "Ace",
-    "position": "Developer",
+    "position": "Offchain - Developer",
     "image": "/img/pfp/Ace.png",
     "description": "- Software Engineer decentralization fan.\n- Coffee enthusiast.\n\nFun Fact: He conducts really deep investigation on every bought he makes."
   },
   {
     "name": "Jagger",
-    "position": "Developer",
+    "position": "Offchain -Developer",
     "image": "/img/pfp/Jagger.png",
     "description": "- Enthusiast runner.\n- Coffee, mate, or tea for bootstrapping the day.\n- Replaced spreadsheets with code editors.\n\nFun Fact: Had a +300-day streak playing FIFA."
   },
   {
     "name": "Luke",
-    "position": "Developer",
+    "position": "Partner Lead",
     "image": "/img/pfp/Luke.png",
     "description": "- A never-quit lion.\n- Jedi wannabe.\n- Mantra: Discipline over talent.\n\nFun fact: He is ambidextrous with scissors."
   },
   {
     "name": "Cooki",
-    "position": "Developer",
+    "position": "Onchain -Developer",
     "image": "/img/pfp/Cooki.png",
     "description": "- Former academic (ethics, evolution, philosophy)\n- Loves hiking in nature and pokemon\n\nFun Fact: my “big toe” isn’t my biggest toe"
   },
   {
     "name": "GhostLee",
-    "position": "Developer",
+    "position": "Onchain - Developer",
     "image": "/img/pfp/Ghost.png",
     "description": "- Optimize everything"
   },
   {
     "name": "Paperclip Minimizer",
-    "position": "Researcher",
+    "position": "Research -Researcher",
     "image": "/img/pfp/Paperclip.png",
     "description": "- Rogue physicist\n- Study subject in at least 3 undergrad theses\n- Mostly harmless\n\nFun fact: might bite"
   },
   {
     "name": "Niha",
-    "position": "Developer",
+    "position": "Onchain - Developer",
     "image": "/img/pfp/Niha.png",
     "description": "- Computer Engineer wannabe.\n- Can turn anything into a competition.\n- Loves sports, philosophy and shouting “estudió” on the weekends.\n\nFun fact: records suggest he has lifted a shovel exactly once in his lifetime."
   },
   {
     "name": "Akoi Dehoibe",
-    "position": "Cryptographer",
+    "position": "Cryptography - Researcher",
     "image": "/img/pfp/Akoi.png",
     "description": "- PhD in Theoretical Physics.\n- Worked several years in mathematical modelling applied to several topics (among them, Causal AI). \n- Love sports, languages and cultures.\n\nFun Fact: once he gave 20 kg of frozen fish (pejerrey) to Particle as a present"
   },
   {
     "name": "Zeriph",
-    "position": "Researcher",
+    "position": "Research -Researcher",
     "image": "/img/pfp/Zeriph.png",
     "description": "- Background in Economics with a specialization in Finance\n- I previously worked in asset management\n- I love surfing, anime and sitcoms.\n\nFun fact: 3 dogs, 0 cats"
   },
   {
     "name": "Leopoldo",
-    "position": "Developer",
+    "position": "Onchain - Developer",
     "image": "/img/pfp/Leopoldo.png",
     "description": "- I like building things and being part of the process.\n- I could watch totally random movies for hours (I really like art in general).\n- Football lover.\n\nFun fact: I can't start the day without coffee."
   },
   {
     "name": "Th0r",
-    "position": "Developer",
+    "position": "UI - Developer",
     "image": "/img/pfp/Thor.png",
     "description": "- Goat smashing bugs and decentralizing the web.\n- Keyboard shortcut evangelist.\n\nFun fact: Can differentiate ketchup brands only by taste."
   },
   {
     "name": "Euler",
-    "position": "Researcher",
+    "position": "Research -Researcher",
     "image": "/img/pfp/Euler.png",
     "description": "- Informatics engineer & data enthusiast.\n- Data kills denial, which prevents disaster.\n\nFun fact: My dog basically lives in a Michelin starred kennel while I survive on instant noodles."
   },
   {
     "name": "Tano",
-    "position": "Developer",
+    "position": "Offchain - Developer",
     "image": "/img/pfp/Tano.png",
     "description": "- Software engineer with a healthy dose of obsession.\n- Boca Juniors fan, willing to talk fútbol at any hour.\n\nFun fact: Uses Brooklyn99 to fall asleep and has rewatched it over 10 times."
   },
   {
     "name": "Itadaki",
-    "position": "Developer",
+    "position": "Onchain -Developer",
     "image": "/img/pfp/Itadaki.png",
     "description": "- Vegan\n- Anime fan\n- Scared of the ocean, still learning to surf\n- Trying to create pull requests using the Force\n\nFun fact: I played in a punk rock band when I was 16"
   },
   {
     "name": "Frov",
-    "position": "Developer",
+    "position": "Offchain - Developer",
     "image": "/img/pfp/Frov.png",
     "description": "- Software engineer deep into defi and privacy\n- Bass player learning drums\n- Loves football and asados\n\nFun fact: ambidextrous playing football"
   },
   {
     "name": "Edna",
-    "position": "Office Manager",
+    "position": "Operations -Office Manager",
     "image": "/img/pfp/Edna.png",
     "description": "- Colombian–Argentine with a degree in International Relations and Political Science.\n- New to the industry; learns at warp speed.\n- Need a favor or a fix? Consider it handled.\n- More humorous than she lets on.\n\nFun fact: Sounds even sharper in Spanish."
-  }
+  },
+  {
+    "name": "Meldsun",
+    "position": "Offchain - Developer",
+    "image": "/img/pfp/Meldsun.png",
+    "description": "- Backend Developer\n- Blockchain curious\n- Padel & ping-pong player\n\nFun fact: Failed vegetarian"
+  },
+  {
+    "name": "Fiboape",
+    "position": "Partner Lead",
+    "image": "/img/pfp/Fibo.png",
+    "description": "Product passionate and FrontEnd enthusiast\n\nFun Fact: Can recite the Targaryen Family tree dynasty by heart"
+  },
+  {
+    "name": "Orca",
+    "position": "Partner Lead",
+    "image": "/img/pfp/Orca.png",
+    "description": "A friendly killer whale.\nEnjoys cold water, building momentum and product thinking."
+  },
+  {
+    "name": "Tori",
+    "position": "Offchain - Developer",
+    "image": "/img/pfp/Tori.png",
+    "description": "- Developer for more than 10 years\n- Can’t stop learning new things, usually very unnecessary things\n\nFun fact: Has been studying Japanese for 6 years but still unable to read children books"
+  },
+  {
+    "name": "Barba",
+    "position": "Onchain - Developer",
+    "image": "/img/pfp/Barba.png",
+    "description": "- Problem Solver\n- Security focused\n\nSi vis pacem para bellum."
+  },
+  {
+    "name": "Mapache",
+    "position": "UI - Developer",
+    "image": "/img/pfp/Mapache.png",
+    "description": "Dev and pineapple pizza evangelist"
+  },
+{
+    "name": "Rufus",
+    "position": "Research - Researcher",
+    "image": "/img/pfp/Rufus.png",
+    "description": "Dev and pineapple pizza evangelist"
+  } 
+
 ]
