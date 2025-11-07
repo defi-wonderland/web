@@ -16,7 +16,7 @@ import RightCard from './RightCard';
 import Squad from './SquadSection';
 import QuotesCarousel from './QuotesCarousel';
 
-import { partners } from '~/data/projects.json';
+import projectsData from '~/data/projects.json';
 import StarIcon from '~/public/img/footer/star-icon.svg';
 import ConeIllustration from '~/assets/landing_cone.png';
 import RingIllustration from '~/assets/landing_ring.png';
@@ -24,7 +24,7 @@ import MobileStar from '~/assets/ethos-stars.svg';
 import Flower from '~/assets/flower.svg';
 
 const highlights = ['opUSDC', 'EBO', 'Allo v2.1', 'Everclear', 'Prophet'];
-const projectHighlights = partners.filter((partner) => highlights.includes(partner.name));
+const projectHighlights = projectsData.partners.filter((partner) => highlights.includes(partner.name));
 
 export default function LandingContent() {
   return (

@@ -14,10 +14,11 @@ import {
 } from '~/components';
 import CustomHead from '~/components/CustomHead';
 import { PageContent } from '~/containers/PageContent';
-import { partners, projects, publicGoods } from '~/data/projects.json';
+import projectsData from '~/data/projects.json';
 import ProjectsList from './ProjectsList';
 import LogosCarousel from './LogosCarousel';
 
+const { partners, projects, publicGoods } = projectsData;
 const allProjects = [...partners, ...projects];
 const allCompanies = [...partners, ...projects].map((project) => project.company.name);
 const companies = [...new Set(allCompanies)]; // unique values
