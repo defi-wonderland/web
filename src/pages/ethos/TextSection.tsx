@@ -6,6 +6,7 @@ import {
   FONT_SIZE_18,
   MOBILE_MAX_WIDTH,
   PAGE_MAX_WIDTH,
+  TABLET_MAX_WIDTH,
   Ring,
   Section as BaseSection,
   SectionArticle,
@@ -17,8 +18,12 @@ const LoreSectionArticle = styled(SectionArticle)``;
 const Section = styled(BaseSection)`
   min-height: 70vh;
 
+  @media screen and (max-width: ${TABLET_MAX_WIDTH}) {
+    min-height: 65vh;
+  }
+
   @media screen and (max-width: 665px) {
-    min-height: 80vh;
+    min-height: 60vh;
   }
 `;
 
@@ -45,6 +50,10 @@ const LoreSection = styled(Section)`
 const sectionMediaStyles = css`
   @media screen and (max-width: 1200px) {
     justify-content: center;
+  }
+
+  @media screen and (max-width: ${TABLET_MAX_WIDTH}) {
+    padding: 0 1.6rem;
   }
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
@@ -84,6 +93,9 @@ export const SecondaryText = styled.span`
 
 export const FirstLoreSectionArticle = styled(LoreSectionArticle)`
   margin-top: 24rem;
+  @media screen and (max-width: ${TABLET_MAX_WIDTH}) {
+    margin-top: 8rem;
+  }
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     margin-top: 0rem;
   }
