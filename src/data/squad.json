@@ -49,7 +49,7 @@
   },
   {
     "name": "Ashitaka",
-    "position": "Onchain -Developer",
+    "position": "Onchain - Developer",
     "image": "/img/pfp/Ashi.png",
     "description": "- Solidity dev\n- Studied Telecommunications engineering and philosophy.\n\nFun fact: Pro player of Magic: The Gathering."
   },
@@ -91,7 +91,7 @@
   },
   {
     "name": "0xRaccoon",
-    "position": "Onchain -Developer",
+    "position": "Onchain - Developer",
     "image": "/img/pfp/Raccoon.png",
     "description": "- UTN Systems engineer.\n- Believes adaptability is an important feature.\n\nFun fact: Likes to travel and do outdoor activities."
   },
@@ -157,7 +157,7 @@
   },
   {
     "name": "Lempire",
-    "position": "Onchain -Developer",
+    "position": "Onchain - Developer",
     "image": "/img/pfp/Lempire.png",
     "description": "- Likes to play chess and practice Jiu Jitsu.\n\nFun fact: Likes to read books."
   },
@@ -181,7 +181,7 @@
   },
   {
     "name": "Teddy",
-    "position": "Onchain -Developer",
+    "position": "Onchain - Developer",
     "image": "/img/pfp/Teddy.png",
     "description": "- Solidity dev.\n- Likes lying to machines.\n- Cuddly and sleepy, but technically doesn't hibernate.\n\nFun fact: Clumsy welder."
   },
@@ -235,7 +235,7 @@
   },
   {
     "name": "Funkornaut",
-    "position": "Onchain -Developer",
+    "position": "Onchain - Developer",
     "image": "/img/pfp/Funkornaut.png",
     "description": "- Solidity developer.\n- Previously made beer for a living.\n- Big golf guy and yogi.\n\nFun fact: Can wiggle ears without touching them."
   },
@@ -259,7 +259,7 @@
   },
   {
     "name": "Jagger",
-    "position": "Offchain -Developer",
+    "position": "Offchain - Developer",
     "image": "/img/pfp/Jagger.png",
     "description": "- Enthusiast runner.\n- Coffee, mate, or tea for bootstrapping the day.\n- Replaced spreadsheets with code editors.\n\nFun Fact: Had a +300-day streak playing FIFA."
   },
@@ -271,7 +271,7 @@
   },
   {
     "name": "Cooki",
-    "position": "Onchain -Developer",
+    "position": "Onchain - Developer",
     "image": "/img/pfp/Cooki.png",
     "description": "- Former academic (ethics, evolution, philosophy)\n- Loves hiking in nature and pokemon\n\nFun Fact: my “big toe” isn’t my biggest toe"
   },
@@ -331,7 +331,7 @@
   },
   {
     "name": "Itadaki",
-    "position": "Onchain -Developer",
+    "position": "Onchain - Developer",
     "image": "/img/pfp/Itadaki.png",
     "description": "- Vegan\n- Anime fan\n- Scared of the ocean, still learning to surf\n- Trying to create pull requests using the Force\n\nFun fact: I played in a punk rock band when I was 16"
   },
@@ -381,12 +381,12 @@
     "name": "Mapache",
     "position": "UI - Developer",
     "image": "/img/pfp/Mapache.png",
-    "description": "Dev and pineapple pizza evangelist"
+    "description": "- Dev and pineapple pizza evangelist"
   },
   {
     "name": "Rufus",
     "position": "Research - Researcher",
     "image": "/img/pfp/Rufus.png",
-    "description": "Dev and pineapple pizza evangelist"
+    "description": "- I can say it backwards"
   }
 ]
