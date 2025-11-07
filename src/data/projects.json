@@ -155,7 +155,14 @@
         "name": "Ethereum Foundation",
         "logo": "ethereum-foundation.png"
       },
-      "tags": ["Architecture Design", "Development", "Smart Contracts", "UI Development", "Idea Generation", "Research"],
+      "tags": [
+        "Architecture Design",
+        "Development",
+        "Smart Contracts",
+        "UI Development",
+        "Idea Generation",
+        "Research"
+      ],
       "content": {
         "challenge": {
           "title": "What was the challenge?",

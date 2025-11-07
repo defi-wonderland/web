@@ -30,6 +30,12 @@
     "description": "- Addicted to meetings and context switching.\n\nFun fact: Loves scaring buns. Have you seen any around?"
   },
   {
+    "name": "Ringo",
+    "position": "CFO",
+    "image": "/img/pfp/Ringo.png",
+    "description": "- Background in Economics.\n- He worked at Wonderland for over a year under the hood.\n- Loves lifting heavy shit, playing football, and golfing.\n\nFun Fact: Has been breaking cymbals, heads, and sticks since he was twelve."
+  },
+  {
     "name": "Wei3er Hase",
     "position": "Onchain - Architect",
     "image": "/img/pfp/Wei3er.png",
@@ -166,12 +172,6 @@
     "position": "Onchain - Developer",
     "image": "/img/pfp/Hex.png",
     "description": "- Former QC Analyst.\n- Started in crypto mining Ravencoin.\n- Considers himself a multipotentialite.\n\nFun fact: Started playing pokemon tcg as an adult."
-  },
-  {
-    "name": "Ringo",
-    "position": "CFO",
-    "image": "/img/pfp/Ringo.png",
-    "description": "- Background in Economics.\n- He worked at Wonderland for over a year under the hood.\n- Loves lifting heavy shit, playing football, and golfing.\n\nFun Fact: Has been breaking cymbals, heads, and sticks since he was twelve."
   },
   {
     "name": "Kenji",
@@ -383,11 +383,10 @@
     "image": "/img/pfp/Mapache.png",
     "description": "Dev and pineapple pizza evangelist"
   },
-{
+  {
     "name": "Rufus",
     "position": "Research - Researcher",
     "image": "/img/pfp/Rufus.png",
     "description": "Dev and pineapple pizza evangelist"
-  } 
-
+  }
 ]
