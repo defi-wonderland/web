@@ -548,6 +548,30 @@
   ],
   "publicGoods": [
     {
+      "name": "Canon Guard",
+      "company": {
+        "name": "Public Good",
+        "logo": "public-good.png"
+      },
+      "tags": ["Architecture Design", "Development", "Idea Generation", "Smart Contracts"],
+      "content": {
+        "challenge": {
+          "title": "What was the challenge?",
+          "description": "Safe proposals and signatures happen off-chain, which creates blind spots: payloads can drift or be misrepresented, signers may see different views, and stale signatures can linger. There’s no single on-chain source of truth, approvals aren’t auditable end-to-end, and fast paths increase signer fatigue and operational risk for high‑stakes transactions."
+        },
+        "solution": {
+          "title": "What is the solution?",
+          "description": "Canon Guard moves intent on-chain. Transactions are encoded as immutable on-chain Actions, queued with explicit delays (short for pre‑approved flows; long for new ones), and approved on-chain via the exact Safe tx hash. A Safe guard (OnlyCanonGuard) enforces execution through Canon Guard, while an emergency mode restricts execution authority under duress. The result is transparent, simulatable, and auditable operations that reduce signer fatigue and spoofing risk."
+        }
+      },
+      "status": "In progress",
+      "links": {
+        "website": [],
+        "twitter": [],
+        "github": ["https://github.com/defi-wonderland/canon-guard", "https://github.com/defi-wonderland/canon-guard-docs"]
+      }
+    },
+    {
       "name": "Natspec Smells",
       "company": {
         "name": "Public Good",
