@@ -22,7 +22,7 @@
           "description": "We developed an optimistic version of EBO that uses Prophet, an optimistic oracle, to map blocks from various chains to epochs on Arbitrum One, introducing an escalating bond mechanism to resolve disputes. This reduces reliance on the Arbitrator single operator, improves security, and allows for decentralized operations with lower initial stakes."
         }
       },
-      "status": "In progress",
+      "status": "Completed",
       "links": {
         "website": [],
         "twitter": [],
@@ -39,11 +39,11 @@
         "logo": "geo.png"
       },
       "tags": [
+        "Idea Generation",
+        "Research",
         "Architecture Design",
         "Development",
-        "Idea Generation",
         "Off-Chain",
-        "Research",
         "Smart Contracts"
       ],
       "content": {
@@ -200,7 +200,7 @@
         },
         "solution": {
           "title": "What is the solution?",
-          "description": "Aztec Standards provides a complete suite of reusable, standardized contracts designed specifically for the Aztec Network. These standards establish reliable token primitives and utilities that power both private and public operations, giving developers the confidence and flexibility to build advanced, privacy-first applications. By setting a clear foundation, Aztec Standards makes it easier than ever to create secure and interoperable private smart contract."
+          "description": "Aztec Standards provides a complete suite of reusable, standardized contracts designed specifically for the Aztec Network. These standards establish reliable token primitives and utilities that power both private and public operations, giving developers the confidence and flexibility to build advanced, privacy-first applications. By setting a clear foundation, Aztec Standards makes it easier than ever to create secure and interoperable private smart contracts."
         }
       },
       "status": "Completed",
@@ -213,6 +213,130 @@
         "docs": []
       }
     },
+    {
+      "name": "ETHLockbox",
+      "company": {
+        "name": "Optimism",
+        "logo": "optimism.png"
+      },
+      "tags": [
+        "Architecture Design",
+        "Research",
+        "Smart Contracts"
+      ],
+      "content": {
+        "challenge": {
+          "title": "What was the challenge?",
+          "description": "ETH withdrawals can fail if a chain\u2019s OptimismPortal doesn\u2019t have enough ETH, forcing users to withdraw only from the chain where they originally deposited. This fragments liquidity, complicates UX, and breaks the seamless cross-chain experience the Superchain aims to provide."
+        },
+        "solution": {
+          "title": "What is the solution?",
+          "description": "The SharedLockbox unifies ETH liquidity across all OP chains in a single L1 contract. Each OptimismPortal locks and unlocks ETH through this shared pool, allowing withdrawals from any chain. Managed by SuperchainConfig, which authorizes portals and tracks dependencies, and supported by a LiquidityMigrator for existing balances, this design simplifies liquidity management and ensures smooth, interoperable ETH withdrawals."
+        }
+      },
+      "status": "In progress",
+      "links": {
+        "website": [],
+        "twitter": [],
+        "github": [
+          "https://github.com/ethereum-optimism/design-docs/blob/main/protocol/eth-shared-lockbox.md"
+        ],
+        "docs": []
+      }
+    },
+    {
+      "name": "Revenue Sharing. Fee Splitter",
+      "company": {
+        "name": "Optimism",
+        "logo": "optimism.png"
+      },
+      "tags": [
+        "Architecture Design",
+        "Research",
+        "Smart Contracts"
+      ],
+      "content": {
+        "challenge": {
+          "title": "What was the challenge?",
+          "description": "Current fee sharing on OP Stack chains is rigid and manual, fixed splits don’t support custom revenue policies, multiple destinations, or flexible logic per chain. Chains need a safe, configurable way to automate revenue sharing while keeping compatibility with existing FeeVaults."
+        },
+        "solution": {
+          "title": "What is the solution?",
+          "description": "Introduce a FeeSplitter predeploy that aggregates fees from all vaults, calls a configurable SharesCalculator to determine recipients and amounts, and disburses funds automatically. Anyone can call disburseFees() once conditions are met. Each chain can define its own revenue-sharing logic (e.g. the SuperchainRevShareCalculator splits fees 2.5% of gross or 15% of net to the revenue-share recipient). Validates vault configs, calculator outputs, and recipient payments; reverts on misconfigurations or failed transfers."
+        }
+      },
+      "status": "In progress",
+      "links": {
+        "website": [],
+        "twitter": [],
+        "github": [
+          "https://github.com/ethereum-optimism/design-docs/blob/main/protocol/fee-splitter.md"
+        ],
+        "docs": []
+      }
+    },
+    {
+      "name": "Permissionless Proposals",
+      "company": {
+        "name": "Optimism",
+        "logo": "optimism.png"
+      },
+      "tags": [
+        "Architecture Design",
+        "Research",
+        "Smart Contracts"
+      ],
+      "content": {
+        "challenge": {
+          "title": "What was the challenge?",
+          "description": "Optimism’s proposal process is still manual and off-chain, requiring forum coordination and a manager to submit proposals. This centralization slows governance and limits participation."
+        },
+        "solution": {
+          "title": "What is the solution?",
+          "description": "Add a ProposalValidator contract that automates proposal validation and forwarding to the Governor. It enforces delegate approvals, submission windows, and proposal-type rules on-chain, allowing any eligible or permissionless proposer to submit without manual gatekeeping — while keeping veto and safety checks intact."
+        }
+      },
+      "status": "In progress",
+      "links": {
+        "website": [],
+        "twitter": [],
+        "github": [
+          "https://github.com/ethereum-optimism/design-docs/pull/260"
+        ],
+        "docs": []
+      }
+    },
+    {
+      "name": "Remote Tokens",
+      "company": {
+        "name": "Optimism",
+        "logo": "optimism.png"
+      },
+      "tags": [
+        "Architecture Design",
+        "Research",
+        "Smart Contracts"
+      ],
+      "content": {
+        "challenge": {
+          "title": "What was the challenge?",
+          "description": "Actions like Uniswap swaps can’t natively execute across OP chains, and liquidity becomes siloed per chain. There’s no standard mechanism for minting and routing remote tokens or ensuring atomic execution between message-passing, token transfers, and protocol calls."
+        },
+        "solution": {
+          "title": "What is the solution?",
+          "description": "The system introduces RefTokens and a unified RefTokenBridge to enable atomic, message-based execution across OP chains. Each RefToken is a deterministic, mint-on-arrival representation of a canonical ERC20 scoped by (origin chainId, origin token). The RefTokenBridge locks canonical tokens on the source chain, sends crosschain messages, and mints corresponding RefTokens on the destination chain, routing them to protocol executors like UniSuperExecutor."
+        }
+      },
+      "status": "In progress",
+      "links": {
+        "website": [],
+        "twitter": [],
+        "github": [
+          "https://github.com/defi-wonderland/op-ref-tokens"
+        ],
+        "docs": []
+      }
+    },    
     {
       "name": "Custom Gas Token",
       "company": {
@@ -227,7 +351,7 @@
       "content": {
         "challenge": {
           "title": "What was the challenge?",
-          "description": "The previous Custom Gas Token design was restrictive and tightly coupled to an L1 ERC-20. This made it difficult to launch chains with native assets not yet deployed as ERC20s, integrate with tokens that don\u2019t live on L1, or experiment with novel supply and bridging mechanisms."
+          "description": "The previous Custom Gas Token design was restrictive and tightly coupled to an L1 ERC-20. This made it difficult to launch chains with native assets not yet deployed as ERC20s, integrate with tokens that don't live on L1, or experiment with novel supply and bridging mechanisms."
         },
         "solution": {
           "title": "What is the solution?",
@@ -238,9 +362,7 @@
       "links": {
         "website": [],
         "twitter": [],
-        "github": [
-          "https://github.com/ethereum-optimism/design-docs/blob/main/protocol/custom-gas-token.md?plain=1\nhttps://github.com/ethereum-optimism/optimism/pull/17412"
-        ],
+        "github": ["https://github.com/ethereum-optimism/design-docs/blob/main/protocol/custom-gas-token.md?plain=1", "https://github.com/ethereum-optimism/optimism/pull/17412"],
         "docs": []
       }
     },
@@ -354,11 +476,11 @@
       "content": {
         "challenge": {
           "title": "What was the challenge?",
-          "description": "A public-by-default system is misaligned with how people expect to manage their finances. No one would willingly make every bank payment visible to the world, yet this remains the norm on Ethereum today. For broader adoption, privacy must be a built-in feature, not an optional layer. However, integrating privacy is still complex: developers face fragmented tools, advanced cryptography requirements, and disjointed user experiences. This complexity slows innovation and limits user trust. The technology exists to change this but wallets must evolve to make privacy seamless and native to the onchain experience."
+          "description": "A public-by-default system is misaligned with how people expect to manage their finances. No one would willingly make every bank payment visible to the world, yet this remains the norm on Ethereum today. For broader adoption, privacy must be a built-in feature, not an optional layer. However, integrating privacy is still complex: developers face fragmented tools, advanced cryptography requirements, and disjointed user experiences. This complexity slows innovation and limits user trust. The technology exists to change this but wallets must evolve to make privacy seamless and native to the on-chain experience."
         },
         "solution": {
           "title": "What is the solution?",
-          "description": "We work with the ethereum foundation to bridge that gap. By providing a set of primitives that bring privacy and security directly into wallets. Through its SDK, Kohaku enables the integration of privacy-preserving features such as private send, private receive, and social recovery. All while maintaining modularity and a familiar user experience. The Kohaku Wallet serves as a reference implementation, demonstrating these capabilities in practice. Wonderland is leading the way by integrating Privacy Pools as the first supported protocol, setting the foundation for a privacy-first wallet ecosystem."
+          "description": "We work with the Ethereum Foundation to bridge that gap by providing a set of primitives that bring privacy and security directly into wallets. Through its SDK, Kohaku enables the integration of privacy-preserving features such as private send, private receive, and social recovery. All while maintaining modularity and a familiar user experience. The Kohaku Wallet serves as a reference implementation, demonstrating these capabilities in practice. Wonderland is leading the way by integrating Privacy Pools as the first supported protocol, setting the foundation for a privacy-first wallet ecosystem."
         }
       },
       "status": "In progress",
