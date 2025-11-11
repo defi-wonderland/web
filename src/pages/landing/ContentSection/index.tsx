@@ -23,10 +23,16 @@ import RingIllustration from '~/assets/landing_ring.png';
 import MobileStar from '~/assets/ethos-stars.svg';
 import Flower from '~/assets/flower.svg';
 
-const highlights = ['Custom Gas Token', 'Interop', 'Aztec Standards', 'Distributor', 'xKeep3r'];
+const highlights = ['Custom Gas Token', 'Interop', 'Aztec Standards', 'Distributor', 'Canon Guard'];
+
+const allProjects = [
+  ...(projectsData.partners || []),
+  ...(projectsData.publicGoods || []),
+];
+
 const projectHighlights = highlights
-  .map((name) => projectsData.partners.find((partner) => partner.name === name))
-  .filter(Boolean) as typeof projectsData.partners;
+  .map((name) => allProjects.find((project: any) => project.name === name))
+  .filter(Boolean) as typeof allProjects;
 
 export default function LandingContent() {
   return (
