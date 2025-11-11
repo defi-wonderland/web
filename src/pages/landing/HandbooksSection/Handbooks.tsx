@@ -21,7 +21,7 @@ export default function Handbooks() {
             key={index}
             href={href}
             background={background}
-            backgroundOverlay={backgroundOverlay}
+            backgroundOverlay={backgroundOverlay || undefined}
           >
             <CardIcon src={image} alt={`${title} ICON`} isWonderlandHandbook={index === 0} scale={imageScale} />
           </Card>

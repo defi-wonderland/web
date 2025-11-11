@@ -323,12 +323,13 @@ const JoinUsLink = styled(SLink)`
     inset: -6px -8px;
     pointer-events: none;
     opacity: 0;
-    background:
-      radial-gradient(2px 2px at 20% 30%, rgba(255,255,255,0.8), rgba(255,255,255,0) 60%),
-      radial-gradient(1.5px 1.5px at 65% 55%, rgba(255,255,255,0.7), rgba(255,255,255,0) 60%),
-      radial-gradient(1.2px 1.2px at 40% 70%, rgba(255,255,255,0.7), rgba(255,255,255,0) 60%);
+    background: radial-gradient(2px 2px at 20% 30%, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0) 60%),
+      radial-gradient(1.5px 1.5px at 65% 55%, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0) 60%),
+      radial-gradient(1.2px 1.2px at 40% 70%, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0) 60%);
     animation: ${twinkle} 1.8s ease-in-out infinite;
     transition: opacity 160ms ease;
   }
-  &:hover::after { opacity: 1; }
+  &:hover::after {
+    opacity: 1;
+  }
 `;
