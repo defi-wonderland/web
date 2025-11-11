@@ -14,7 +14,7 @@ export default function Handbooks() {
       </Subtitle>
 
       <CardsContainer>
-        {handbooks.map(({ title, image, background, backgroundOverlay, href }, index) => (
+        {handbooks.map(({ title, image, background, backgroundOverlay, href, imageScale }, index) => (
           <Card
             target='_blank'
             rel='noreferrer'
@@ -23,7 +23,7 @@ export default function Handbooks() {
             background={background}
             backgroundOverlay={backgroundOverlay}
           >
-            <CardIcon src={image} alt={`${title} ICON`} isWonderlandHandbook={index === 0} />
+            <CardIcon src={image} alt={`${title} ICON`} isWonderlandHandbook={index === 0} scale={imageScale} />
           </Card>
         ))}
       </CardsContainer>
@@ -148,17 +148,18 @@ const Card = styled.a.withConfig({
 `;
 
 const CardIcon = styled.img.withConfig({
-  shouldForwardProp: (prop) => prop !== 'isWonderlandHandbook',
-})<{ isWonderlandHandbook?: boolean }>`
+  shouldForwardProp: (prop) => prop !== 'isWonderlandHandbook' && prop !== 'scale',
+})<{ isWonderlandHandbook?: boolean; scale?: number }>`
   width: auto;
   height: auto;
   max-width: 80%;
   max-height: 80%;
   object-fit: contain;
-  ${({ isWonderlandHandbook }) =>
-    isWonderlandHandbook &&
-    `
-      transform: translateY(-20px);
-      margin-top: 15px;
-    `}
+  transform: ${({ isWonderlandHandbook, scale }) => {
+    const transforms: string[] = [];
+    if (scale && scale !== 1) transforms.push(`scale(${scale})`);
+    if (isWonderlandHandbook) transforms.push('translateY(-20px)');
+    return transforms.join(' ');
+  }};
+  margin-top: ${({ isWonderlandHandbook }) => (isWonderlandHandbook ? '15px' : '0')};
 `;

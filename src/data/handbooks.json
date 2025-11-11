@@ -14,8 +14,9 @@
   {
     "title": "Aztec handbook",
     "image": "/img/handbook/aztec-handbook.svg",
-    "background": "/img/handbook/op-bg-card.png",
-    "backgroundOverlay": "#625CBFD1",
+    "background": "/img/handbook/aztec-bg-card.png",
+    "backgroundOverlay": null,
+    "imageScale": 0.58,
     "href": "https://aztec.handbook.wonderland.xyz"
   }
 ]
