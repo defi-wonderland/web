@@ -23,8 +23,10 @@ import RingIllustration from '~/assets/landing_ring.png';
 import MobileStar from '~/assets/ethos-stars.svg';
 import Flower from '~/assets/flower.svg';
 
-const highlights = ['opUSDC', 'EBO', 'Allo v2.1', 'Everclear', 'Prophet'];
-const projectHighlights = projectsData.partners.filter((partner) => highlights.includes(partner.name));
+const highlights = ['Custom Gas Token', 'Interop', 'Aztec Standards', 'Distributor', 'xKeep3r'];
+const projectHighlights = highlights
+  .map((name) => projectsData.partners.find((partner) => partner.name === name))
+  .filter(Boolean) as typeof projectsData.partners;
 
 export default function LandingContent() {
   return (
