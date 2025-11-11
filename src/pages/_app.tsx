@@ -15,7 +15,7 @@ import { useRouter } from 'next/router';
 const MyApp = ({ Component, pageProps }: AppProps) => {
   const router = useRouter();
   const noLayoutPages = ['/join'];
-  
+
   return (
     <StyledPageView>
       <StarsBackground />
