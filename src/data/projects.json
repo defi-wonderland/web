@@ -480,7 +480,7 @@
         },
         "solution": {
           "title": "What is the solution?",
-          "description": "We work with the Ethereum Foundation to bridge that gap by providing a set of primitives that bring privacy and security directly into wallets. Through its SDK, Kohaku enables the integration of privacy-preserving features such as private send, private receive, and social recovery. All while maintaining modularity and a familiar user experience. The Kohaku Wallet serves as a reference implementation, demonstrating these capabilities in practice. Wonderland is leading the way by integrating Privacy Pools as the first supported protocol, setting the foundation for a privacy-first wallet ecosystem."
+          "description": "We work with the Ethereum Foundation to bridge that gap by providing a set of primitives that bring privacy and security directly into wallets. Through its SDK, Kohaku enables the integration of privacy-preserving features such as private send, private receive, and social recovery. All while maintaining modularity and a familiar user experience. The Kohaku Wallet serves as a reference implementation, demonstrating these capabilities in practice. Wonderland is leading the way by integrating Privacy Pools, setting the foundation for a privacy-first wallet ecosystem."
         }
       },
       "status": "In progress",
