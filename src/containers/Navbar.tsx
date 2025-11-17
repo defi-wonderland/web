@@ -226,6 +226,8 @@ const NavLinkContainer = styled.div<{ order?: number }>`
   justify-content: center;
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    width: 100%;
+
     &.hide-on-mobile {
       display: none;
     }
@@ -279,6 +281,13 @@ const LinksGroupLeft = styled.div`
   @media screen and (max-width: ${TABLET_MAX_WIDTH}) {
     gap: 1.6rem;
   }
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    flex-direction: column;
+    width: 100%;
+    order: 2;
+    gap: 0;
+  }
 `;
 
 const LinksGroupRight = styled.div`
@@ -291,6 +300,13 @@ const LinksGroupRight = styled.div`
   @media screen and (max-width: ${TABLET_MAX_WIDTH}) {
     gap: 1.6rem;
   }
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    flex-direction: column;
+    width: 100%;
+    order: 3;
+    gap: 0;
+  }
 `;
 
 const twinkle = keyframes`
@@ -302,6 +318,7 @@ const twinkle = keyframes`
 const JoinUsLink = styled(SLink)`
   text-transform: uppercase;
   letter-spacing: 0.24rem;
+  margin: 0 auto;
   background: linear-gradient(90deg, #625cbf, #c55fa3, #fccc50);
   background-clip: text;
   -webkit-background-clip: text;
@@ -331,5 +348,10 @@ const JoinUsLink = styled(SLink)`
   }
   &:hover::after {
     opacity: 1;
+  }
+
+  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
+    font-size: ${FONT_SIZE_20};
+    padding: 1rem 0;
   }
 `;
