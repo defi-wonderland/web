@@ -4,7 +4,7 @@
       "name": "EBO",
       "company": {
         "name": "The Graph",
-        "logo": "the-graph.png"
+        "logo": "the-graph.jpg"
       },
       "tags": [
         "Architecture Design",
@@ -36,7 +36,7 @@
       "name": "Knowledge Graph",
       "company": {
         "name": "GEO",
-        "logo": "geo.png"
+        "logo": "geo.jpg"
       },
       "tags": [
         "Idea Generation",
@@ -70,7 +70,7 @@
       "name": "xKeep3r",
       "company": {
         "name": "Keep3r",
-        "logo": "keep3r.png"
+        "logo": "keep3r.jpg"
       },
       "tags": ["Research", "Smart Contracts", "UI Development"],
       "content": {
@@ -94,7 +94,7 @@
       "name": "ILLA",
       "company": {
         "name": "Layer3",
-        "logo": "layer3.png"
+        "logo": "layer3.jpg"
       },
       "tags": [
         "Architecture Design",
@@ -126,7 +126,7 @@
       "name": "$L3",
       "company": {
         "name": "Layer3",
-        "logo": "layer3.png"
+        "logo": "layer3.jpg"
       },
       "tags": [
         "Architecture Design",
@@ -156,7 +156,7 @@
       "name": "Aztec Boilerplate",
       "company": {
         "name": "Aztec",
-        "logo": "aztec.png"
+        "logo": "aztec.jpg"
       },
       "tags": [
         "Architecture Design",
@@ -186,7 +186,7 @@
       "name": "Aztec Standards",
       "company": {
         "name": "Aztec",
-        "logo": "aztec.png"
+        "logo": "aztec.jpg"
       },
       "tags": [
         "Architecture Design",
@@ -217,7 +217,7 @@
       "name": "ETHLockbox",
       "company": {
         "name": "Optimism",
-        "logo": "optimism.png"
+        "logo": "optimism.jpg"
       },
       "tags": [
         "Architecture Design",
@@ -248,7 +248,7 @@
       "name": "Revenue Sharing. Fee Splitter",
       "company": {
         "name": "Optimism",
-        "logo": "optimism.png"
+        "logo": "optimism.jpg"
       },
       "tags": [
         "Architecture Design",
@@ -279,7 +279,7 @@
       "name": "Permissionless Proposals",
       "company": {
         "name": "Optimism",
-        "logo": "optimism.png"
+        "logo": "optimism.jpg"
       },
       "tags": [
         "Architecture Design",
@@ -310,7 +310,7 @@
       "name": "Remote Tokens",
       "company": {
         "name": "Optimism",
-        "logo": "optimism.png"
+        "logo": "optimism.jpg"
       },
       "tags": [
         "Architecture Design",
@@ -341,7 +341,7 @@
       "name": "Custom Gas Token",
       "company": {
         "name": "Optimism",
-        "logo": "optimism.png"
+        "logo": "optimism.jpg"
       },
       "tags": [
         "Architecture Design",
@@ -370,7 +370,7 @@
       "name": "opUSDC",
       "company": {
         "name": "Optimism",
-        "logo": "optimism.png"
+        "logo": "optimism.jpg"
       },
       "tags": [
         "Architecture Design",
@@ -401,7 +401,7 @@
       "name": "Prophet",
       "company": {
         "name": "Optimism",
-        "logo": "optimism.png"
+        "logo": "optimism.jpg"
       },
       "tags": [
         "Architecture Design",
@@ -433,7 +433,7 @@
       "name": "SuperchainERC20",
       "company": {
         "name": "Optimism",
-        "logo": "optimism.png"
+        "logo": "optimism.jpg"
       },
       "tags": [
         "Architecture Design",
@@ -464,7 +464,7 @@
       "name": "Kohaku",
       "company": {
         "name": "Ethereum",
-        "logo": "ethereum.png"
+        "logo": "ethereum.jpg"
       },
       "tags": [
         "Architecture Design",
@@ -495,7 +495,7 @@
       "name": "Interoperable Addresses",
       "company": {
         "name": "Ethereum",
-        "logo": "ethereum.png"
+        "logo": "ethereum.jpg"
       },
       "tags": [
         "Off-Chain",
@@ -523,7 +523,7 @@
       "name": "Interop",
       "company": {
         "name": "Ethereum",
-        "logo": "ethereum.png"
+        "logo": "ethereum.jpg"
       },
       "tags": [
         "Architecture Design",
@@ -557,7 +557,7 @@
       "name": "Privacy Pools",
       "company": {
         "name": "0xBow",
-        "logo": "0xbow.png"
+        "logo": "0xbow.jpg"
       },
       "tags": [
         "Architecture Design",
@@ -590,7 +590,7 @@
       "name": "Crosschain Governance",
       "company": {
         "name": "Everclear (ex Connext)",
-        "logo": "everclear-(ex-connext).png"
+        "logo": "everclear-(ex-connext).jpg"
       },
       "tags": [
         "Architecture Design",
@@ -621,7 +621,7 @@
       "name": "xERC20",
       "company": {
         "name": "Everclear (ex Connext)",
-        "logo": "everclear-(ex-connext).png"
+        "logo": "everclear-(ex-connext).jpg"
       },
       "tags": [
         "Architecture Design",
@@ -651,7 +651,7 @@
       "name": "Everclear",
       "company": {
         "name": "Everclear (ex Connext)",
-        "logo": "everclear-(ex-connext).png"
+        "logo": "everclear-(ex-connext).jpg"
       },
       "tags": [
         "Architecture Design",
@@ -681,7 +681,7 @@
       "name": "Optimistic Merkle Root Aggregator",
       "company": {
         "name": "Everclear (ex Connext)",
-        "logo": "everclear-(ex-connext).png"
+        "logo": "everclear-(ex-connext).jpg"
       },
       "tags": [
         "Idea Generation",
@@ -712,7 +712,7 @@
       "name": "HAI",
       "company": {
         "name": "Reflexer",
-        "logo": "reflexer.png"
+        "logo": "reflexer.jpg"
       },
       "tags": [
         "Refactoring",
@@ -743,7 +743,7 @@
       "name": "Distributor",
       "company": {
         "name": "EigenLayer",
-        "logo": "eigenlayer.png"
+        "logo": "eigenlayer.jpg"
       },
       "tags": ["Architecture Design", "Off-Chain", "Smart Contracts"],
       "content": {
@@ -767,7 +767,7 @@
       "name": "Allo v2.1",
       "company": {
         "name": "Gitcoin",
-        "logo": "gitcoin.png"
+        "logo": "gitcoin.jpg"
       },
       "tags": [
         "Research", "Smart Contracts"
@@ -794,7 +794,7 @@
       "name": "Safe Liveness",
       "company": {
         "name": "Safe",
-        "logo": "safe.png"
+        "logo": "safe.jpg"
       },
       "tags": [
         "Architecture Design",
@@ -824,7 +824,7 @@
       "name": "Spells",
       "company": {
         "name": "Sky",
-        "logo": "sky.png"
+        "logo": "sky.jpg"
       },
       "tags": ["Reviewers"],
       "content": {
@@ -848,7 +848,7 @@
       "name": "Extensible Minting",
       "company": {
         "name": "Corn",
-        "logo": "corn.png"
+        "logo": "corn.jpg"
       },
       "tags": [
         "Research", "Smart Contracts", "Development"
@@ -875,7 +875,7 @@
       "name": "Morpho Module",
       "company": {
         "name": "Corn",
-        "logo": "corn.png"
+        "logo": "corn.jpg"
       },
       "tags": [
         "Architecture Design",
@@ -906,7 +906,7 @@
       "name": "ZkChainHub",
       "company": {
         "name": "ZKSync",
-        "logo": "zksync.png"
+        "logo": "zksync.jpg"
       },
       "tags": ["Architecture Design", "Off-Chain", "UI Development"],
       "content": {
@@ -933,7 +933,7 @@
       "name": "Private Oracle",
       "company": {
         "name": "Aztec",
-        "logo": "aztec.png"
+        "logo": "aztec.jpg"
       },
       "tags": ["Architecture Design", "Development"],
       "content": {
@@ -957,7 +957,7 @@
       "name": "World ID Governor",
       "company": {
         "name": "Worldcoin",
-        "logo": "worldcoin.png"
+        "logo": "worldcoin.jpg"
       },
       "tags": ["Architecture Design", "Idea Generation", "Smart Contracts"],
       "content": {
@@ -981,7 +981,7 @@
       "name": "Keep3r Network V2",
       "company": {
         "name": "Keep3r",
-        "logo": "keep3r.png"
+        "logo": "keep3r.jpg"
       },
       "tags": ["Refactoring", "Architecture Design", "Development", "Research"],
       "content": {
@@ -1005,7 +1005,7 @@
       "name": "Sidechain Oracles",
       "company": {
         "name": "Keep3r",
-        "logo": "keep3r.png"
+        "logo": "keep3r.jpg"
       },
       "tags": ["Off-Chain", "Architecture Design", "Smart Contracts"],
       "content": {
@@ -1031,7 +1031,7 @@
       "name": "Canon Guard",
       "company": {
         "name": "Public Good",
-        "logo": "public-good.png"
+        "logo": "public-good.jpg"
       },
       "tags": ["Architecture Design", "Development", "Idea Generation", "Smart Contracts"],
       "content": {
@@ -1055,7 +1055,7 @@
       "name": "Natspec Smells",
       "company": {
         "name": "Public Good",
-        "logo": "public-good.png"
+        "logo": "public-good.jpg"
       },
       "tags": ["Architecture Design", "Development", "Idea Generation"],
       "content": {
@@ -1079,7 +1079,7 @@
       "name": "Sponsored Transactions",
       "company": {
         "name": "Public Good",
-        "logo": "public-good.png"
+        "logo": "public-good.jpg"
       },
       "tags": ["Architecture Design", "Development", "Idea Generation"],
       "content": {
@@ -1103,7 +1103,7 @@
       "name": "Governor sucks",
       "company": {
         "name": "Public Good",
-        "logo": "public-good.png"
+        "logo": "public-good.jpg"
       },
       "tags": ["Architecture Design", "Development", "Idea Generation"],
       "content": {
@@ -1127,7 +1127,7 @@
       "name": "Smock",
       "company": {
         "name": "Public Good",
-        "logo": "public-good.png"
+        "logo": "public-good.jpg"
       },
       "tags": ["Architecture Design", "Development", "Idea Generation"],
       "content": {
@@ -1152,7 +1152,7 @@
       "name": "Price Oracle",
       "company": {
         "name": "Public Good",
-        "logo": "public-good.png"
+        "logo": "public-good.jpg"
       },
       "tags": ["Architecture Design", "Idea Generation", "Off-Chain", "Smart Contracts", "UI Development"],
       "content": {
