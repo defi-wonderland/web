@@ -25,10 +25,7 @@ import Flower from '~/assets/flower.svg';
 
 const highlights = ['Custom Gas Token', 'Interop', 'Aztec Standards', 'Distributor', 'Canon Guard'];
 
-const allProjects = [
-  ...(projectsData.partners || []),
-  ...(projectsData.publicGoods || []),
-];
+const allProjects = [...(projectsData.partners || []), ...(projectsData.publicGoods || [])];
 
 const projectHighlights = highlights
   .map((name) => allProjects.find((project: any) => project.name === name))
