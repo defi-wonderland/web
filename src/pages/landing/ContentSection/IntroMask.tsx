@@ -232,15 +232,15 @@ export default function Intro({ showBackground, setShowBackground, ...props }: I
   return (
     <IntroContainer ref={containerRef} className={showBackground ? 'hide-intro' : ''} {...props}>
       <StyledNavbar>
-        <Logo src={LogoImage.src} alt='Wonderland logo' progress={progress} />
+        <Logo src={LogoImage.src} alt='Wonderland logo' $progress={progress} />
       </StyledNavbar>
 
       <KeyContainer>
-        <Mask progress={progress} />
-        <Keyhole progress={progress} />
-        <Mask2 progress={progress} />
+        <Mask $progress={progress} />
+        <Keyhole $progress={progress} />
+        <Mask2 $progress={progress} />
 
-        <DottedLine progress={progress} src={VLINE.src} alt='dotted line' />
+        <DottedLine $progress={progress} src={VLINE.src} alt='dotted line' />
 
         <Draggable
           axis='y'
@@ -250,19 +250,19 @@ export default function Intro({ showBackground, setShowBackground, ...props }: I
           onStop={handleOnStop}
           onDrag={handleOnDrag}
         >
-          <KeyBox ref={nodeRef} progress={progress}>
+          <KeyBox ref={nodeRef} $progress={progress}>
             <Key src={INTROKEY.src} alt='Key icon' />
           </KeyBox>
         </Draggable>
 
-        <Text progress={progress}>Slide the key & step into Wonderland</Text>
+        <Text $progress={progress}>Slide the key & step into Wonderland</Text>
       </KeyContainer>
     </IntroContainer>
   );
 }
 
 interface StyledContainerProps {
-  progress: number;
+  $progress: number;
 }
 
 const IntroContainer = styled.div`
@@ -286,7 +286,7 @@ const IntroContainer = styled.div`
 
 const Logo = styled.img<StyledContainerProps>`
   pointer-events: none;
-  opacity: ${(props) => 1 - props.progress * 3};
+  opacity: ${(props) => 1 - props.$progress * 3};
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     width: 26rem;
@@ -298,14 +298,14 @@ const Keyhole = styled.img.attrs({
 })<StyledContainerProps>`
   pointer-events: none;
   position: absolute;
-  top: ${(props) => `${typeof window !== 'undefined' && -props.progress * window?.innerHeight * 22}px`};
-  height: ${(props) => `${100 + props.progress * 4000}%`};
-  opacity: ${(props) => 1 - props.progress};
+  top: ${(props) => `${typeof window !== 'undefined' && -props.$progress * window?.innerHeight * 22}px`};
+  height: ${(props) => `${100 + props.$progress * 4000}%`};
+  opacity: ${(props) => 1 - props.$progress};
   background-color: rgba(255, 255, 255, 0.1);
   z-index: -1;
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
-    top: ${(props) => typeof window !== 'undefined' && -props.progress * window?.innerHeight * 22}px;
+    top: ${(props) => typeof window !== 'undefined' && -props.$progress * window?.innerHeight * 22}px;
   }
 `;
 
@@ -313,7 +313,7 @@ const DottedLine = styled.img<StyledContainerProps>`
   pointer-events: none;
   height: 19.5%;
 
-  opacity: ${(props) => 1 - props.progress * 10};
+  opacity: ${(props) => 1 - props.$progress * 10};
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     height: 21%;
   }
@@ -341,7 +341,7 @@ const Text = styled.span<StyledContainerProps>`
   font-size: 2.2rem;
   margin-top: 0.4rem;
   user-select: none;
-  opacity: ${(props) => 1 - props.progress * 3};
+  opacity: ${(props) => 1 - props.$progress * 3};
   z-index: 100;
   text-align: center;
 
@@ -370,7 +370,7 @@ const StyledNavbar = styled.nav`
 
 const KeyBox = styled.div<StyledContainerProps>`
   cursor: pointer;
-  opacity: ${(props) => 1 - props.progress * 3};
+  opacity: ${(props) => 1 - props.$progress * 3};
 `;
 
 const Key = styled.img`
@@ -387,8 +387,8 @@ const Mask = styled.div<StyledContainerProps>`
   width: 20%;
   top: 0;
   left: 0;
-  display: ${(props) => (props.progress > 0.01 ? 'none' : 'block')};
-  opacity: ${(props) => 1 - props.progress};
+  display: ${(props) => (props.$progress > 0.01 ? 'none' : 'block')};
+  opacity: ${(props) => 1 - props.$progress};
 `;
 
 const Mask2 = styled(Mask)<StyledContainerProps>`

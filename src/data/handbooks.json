@@ -14,8 +14,18 @@
   {
     "title": "Aztec handbook",
     "image": "/img/handbook/aztec-handbook.svg",
-    "background": "/img/handbook/op-bg-card.png",
-    "backgroundOverlay": "#625CBFD1",
+    "background": "/img/handbook/aztec-bg-card.jpg",
+    "backgroundOverlay": null,
+    "imageScale": 0.58,
     "href": "https://aztec.handbook.wonderland.xyz"
+  },
+  {
+    "title": "EF handbook",
+    "image": "/img/handbook/ef-handbook.svg",
+    "background": "/img/handbook/ef-bg-card.jpg",
+    "backgroundOverlay": null,
+    "imageScale": 0.58,
+    "href": "https://ef.handbook.wonderland.xyz"
   }
+
 ]

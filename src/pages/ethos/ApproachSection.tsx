@@ -1,11 +1,17 @@
 import { FC } from 'react';
 import styled from 'styled-components';
 
-import { DisplayText, MOBILE_MAX_WIDTH, Section, SectionArticle, SectionBackground } from '~/components';
+import {
+  DisplayText,
+  MOBILE_MAX_WIDTH,
+  TABLET_MAX_WIDTH,
+  Section,
+  SectionArticle,
+  SectionBackground,
+} from '~/components';
 
 const StepNumber = styled(DisplayText)`
   position: relative;
-  font-size: 6rem;
   font-size: 8rem;
   top: -2rem;
 `;
@@ -36,9 +42,12 @@ const ApproachSteps = styled.article`
   grid-gap: 6rem;
   margin-top: 6.5rem;
 
+  @media screen and (max-width: ${TABLET_MAX_WIDTH}) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
-    display: flex;
-    flex-direction: column;
+    grid-template-columns: 1fr;
     padding: 0 1.2rem;
   }
 `;

@@ -22,21 +22,21 @@ const handleBackgroundType = (type: backgroundType) => {
 };
 
 const StyledSectionBackground = styled.div<{
-  type: backgroundType;
-  align: backgroundAlignType;
+  $type: backgroundType;
+  $align: backgroundAlignType;
 }>`
   position: absolute;
   width: ${SPACING_530};
   z-index: 0;
 
-  ${({ align }) =>
-    align === 'left' &&
+  ${({ $align }) =>
+    $align === 'left' &&
     `
     left: -10%;
     left: max(calc((100vw - 100%) * -1), -29vw);
   `};
-  ${({ align }) =>
-    align === 'right' &&
+  ${({ $align }) =>
+    $align === 'right' &&
     `
     right: -10%;
     right: max(calc((100vw - 100%) * -1), -29vw);
@@ -50,7 +50,7 @@ const StyledSectionBackground = styled.div<{
     background-image: radial-gradient(
       circle at 50% 50%,
       rgba(14, 21, 44, 0.16),
-      var(--background-surface-primary) ${({ type }) => handleBackgroundType(type)}
+      var(--background-surface-primary) ${({ $type }) => handleBackgroundType($type)}
     );
   }
 
@@ -72,15 +72,15 @@ export interface SectionBackgroundProps {
 
 export const SectionBackground: FC<SectionBackgroundProps> = ({ type, align, ...props }) => {
   return (
-    <StyledSectionBackground type={type} align={align} {...props}>
+    <StyledSectionBackground $type={type} $align={align} {...props}>
       <Image src={`/img/ethos/00${type}_grad.jpg`} width={500} height={500} alt='' loading='lazy' />
     </StyledSectionBackground>
   );
 };
 
 const StyledSection = styled.section<{
-  backgroundImage?: string;
-  full?: boolean;
+  $backgroundImage?: string;
+  $full?: boolean;
 }>`
   display: flex;
   align-items: center;
@@ -90,10 +90,10 @@ const StyledSection = styled.section<{
   min-height: 100vh;
   position: relative;
 
-  ${({ backgroundImage }) =>
-    backgroundImage &&
+  ${({ $backgroundImage }) =>
+    $backgroundImage &&
     `
-    background-image: url('${backgroundImage}');
+    background-image: url('${$backgroundImage}');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -112,7 +112,7 @@ export interface SectionProps {
 
 export const Section: FC<SectionProps> = ({ backgroundImage, full, children, ...props }) => {
   return (
-    <StyledSection backgroundImage={backgroundImage} full={full} {...props}>
+    <StyledSection $backgroundImage={backgroundImage} $full={full} {...props}>
       {children}
     </StyledSection>
   );
