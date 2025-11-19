@@ -4,6 +4,7 @@ import {
   Ball,
   ContentContainer,
   MOBILE_MAX_WIDTH,
+  TABLET_MAX_WIDTH,
   SPACING_192,
   SPACING_512,
   SPACING_700,
@@ -55,7 +56,7 @@ export default function Ethos() {
 }
 
 const StyledApproachSection = styled(ApproachSection)`
-  padding: '3rem 0';
+  padding: 3rem 0;
 `;
 
 const HeroDivider = styled.div`
@@ -68,6 +69,10 @@ const HeroDivider = styled.div`
   align-items: center;
   top: ${SPACING_192};
 
+  @media screen and (max-width: ${TABLET_MAX_WIDTH}) {
+    top: 18rem;
+  }
+
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     top: 22rem;
   }
@@ -75,6 +80,11 @@ const HeroDivider = styled.div`
 
 const SBall = styled(Ball)`
   top: 21rem;
+
+  @media screen and (max-width: ${TABLET_MAX_WIDTH}) {
+    top: 18rem;
+    width: 8rem;
+  }
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     top: 14rem;
@@ -88,6 +98,13 @@ const BackgroundContainer = styled.div`
   height: ${SPACING_700};
   right: 12rem;
   top: 20rem;
+
+  @media screen and (max-width: ${TABLET_MAX_WIDTH}) {
+    width: 40rem;
+    height: 55rem;
+    right: 10rem;
+    top: 16rem;
+  }
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     width: 25.6rem;

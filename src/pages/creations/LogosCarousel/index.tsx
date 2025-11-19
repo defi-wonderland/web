@@ -101,7 +101,7 @@ export default function LogosCarousel({ companies = [], onChange, companySelecte
       >
         {items.map((company, i) => (
           <LogoContainer key={company} data-size={setItemSizeByIndex(i, selectedItem) || 0} data-index={i}>
-            <Logo src={`/img/logos/${formatCompanyToFileName(company || '')}.png`} alt={`${company} logo`} />
+            <Logo src={`/img/logos/${formatCompanyToFileName(company || '')}.jpg`} alt={`${company} logo`} />
           </LogoContainer>
         ))}
       </CarouselContainer>

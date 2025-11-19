@@ -14,9 +14,16 @@ export default function Handbooks() {
       </Subtitle>
 
       <CardsContainer>
-        {handbooks.map(({ title, image, background, href }, index) => (
-          <Card target='_blank' rel='noreferrer' key={index} href={href} background={background}>
-            <CardIcon src={image} alt={`${title} ICON`} isWonderlandHandbook={index === 0} />
+        {handbooks.map(({ title, image, background, backgroundOverlay, href, imageScale }, index) => (
+          <Card
+            target='_blank'
+            rel='noreferrer'
+            key={index}
+            href={href}
+            background={background}
+            backgroundOverlay={backgroundOverlay || undefined}
+          >
+            <CardIcon src={image} alt={`${title} ICON`} isWonderlandHandbook={index === 0} scale={imageScale} />
           </Card>
         ))}
       </CardsContainer>
@@ -74,7 +81,7 @@ const Subtitle = styled.p`
 const CardsContainer = styled.div`
   width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 2.4rem;
   padding-top: 5.6rem;
@@ -91,8 +98,8 @@ const CardsContainer = styled.div`
 `;
 
 const Card = styled.a.withConfig({
-  shouldForwardProp: (prop) => prop !== 'background',
-})<{ background: string }>`
+  shouldForwardProp: (prop) => prop !== 'background' && prop !== 'backgroundOverlay',
+})<{ background?: string; backgroundOverlay?: string }>`
   width: 100%;
   min-height: 260px;
   background: rgba(255, 255, 255, 0.08);
@@ -107,13 +114,31 @@ const Card = styled.a.withConfig({
   gap: 0.5rem;
   border: 1px solid #ffffff4d;
   border-radius: 11.61px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(7px);
   -webkit-backdrop-filter: blur(7px);
   transition: all 0.3s ease;
   text-decoration: none !important;
   overflow: hidden;
   max-width: 52rem;
+
+  ${({ backgroundOverlay }) =>
+    backgroundOverlay &&
+    `
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: ${backgroundOverlay};
+      mix-blend-mode: hue;
+      pointer-events: none;
+      z-index: 0;
+    }
+  `}
+
   &:hover {
     cursor: pointer;
     transform: translateY(-4px) scale(1.02);
@@ -123,17 +148,18 @@ const Card = styled.a.withConfig({
 `;
 
 const CardIcon = styled.img.withConfig({
-  shouldForwardProp: (prop) => prop !== 'isWonderlandHandbook',
-})<{ isWonderlandHandbook?: boolean }>`
+  shouldForwardProp: (prop) => prop !== 'isWonderlandHandbook' && prop !== 'scale',
+})<{ isWonderlandHandbook?: boolean; scale?: number }>`
   width: auto;
   height: auto;
   max-width: 80%;
   max-height: 80%;
   object-fit: contain;
-  ${({ isWonderlandHandbook }) =>
-    isWonderlandHandbook &&
-    `
-      transform: translateY(-20px);
-      margin-top: 15px;
-    `}
+  transform: ${({ isWonderlandHandbook, scale }) => {
+    const transforms: string[] = [];
+    if (scale && scale !== 1) transforms.push(`scale(${scale})`);
+    if (isWonderlandHandbook) transforms.push('translateY(-20px)');
+    return transforms.join(' ');
+  }};
+  margin-top: ${({ isWonderlandHandbook }) => (isWonderlandHandbook ? '15px' : '0')};
 `;

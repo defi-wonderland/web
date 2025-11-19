@@ -4,41 +4,56 @@
       "name": "EBO",
       "company": {
         "name": "The Graph",
-        "logo": "the-graph.png"
+        "logo": "the-graph.jpg"
       },
-      "tags": ["Architecture Design", "Idea Generation", "Off-Chain", "Smart Contracts"],
+      "tags": [
+        "Architecture Design",
+        "Idea Generation",
+        "Off-Chain",
+        "Smart Contracts"
+      ],
       "content": {
         "challenge": {
           "title": "What was the challenge?",
-          "description": "The Graph incentive system utilizes the Epoch Block Oracle to identify the first block of each epoch, which indexers must use to build their Proof of Indexing and receive rewards on Arbitrum One. The challenge lay in accurately identifying and validating the block timestamp at the start of each epoch on other chains to ensure the distribution of rewards and decentralize the current EBO processes."
+          "description": "The Graph incentive system uses the Epoch Block Oracle to determine the first block of each epoch, which indexers must use to build their Proof of Indexing and receive rewards on Arbitrum One. The challenge lied in accurately identifying and validating the block timestamp to the start of each epoch in other chain to ensure the distribution of rewards and decentralize the current EBO processes."
         },
         "solution": {
           "title": "What is the solution?",
-          "description": "We developed an optimistic version of EBO that maps blocks from various chains to epochs on Arbitrum One. This introduces an escalating bond mechanism to resolve disputes, reducing reliance on the single Arbitrator operator, improving security, and enabling decentralized operations with lower initial stakes."
+          "description":  "We developed an optimistic version of EBO that maps blocks from various chains to epochs on Arbitrum One. This introduces an escalating bond mechanism to resolve disputes, reducing reliance on the single Arbitrator operator, improving security, and enabling decentralized operations with lower initial stakes."
         }
       },
-      "status": "In progress",
+      "status": "Completed",
       "links": {
         "website": [],
         "twitter": [],
-        "github": ["https://github.com/defi-wonderland/EBO-core", "https://github.com/defi-wonderland/EBO-agent"]
+        "github": [
+          "https://github.com/defi-wonderland/EBO-core", "https://github.com/defi-wonderland/EBO-agent"
+        ],
+        "docs": []
       }
     },
     {
       "name": "Knowledge Graph",
       "company": {
-        "name": "The Graph",
-        "logo": "the-graph.png"
+        "name": "GEO",
+        "logo": "geo.jpg"
       },
-      "tags": ["Architecture Design", "Development", "Idea Generation", "Off-Chain", "Research", "Smart Contracts"],
+      "tags": [
+        "Idea Generation",
+        "Research",
+        "Architecture Design",
+        "Development",
+        "Off-Chain",
+        "Smart Contracts"
+      ],
       "content": {
         "challenge": {
           "title": "What was the challenge?",
-          "description": "The Knowledge Graph evolves Web3 indexing by adding a semantic and relational data model beyond subgraphs. Challenges include designing suitable storage, defining a clear incentive layer, adapting off-chain infrastructure, and handling ranking, pluralism, and assertion aggregation."
+          "description": "The Knowledge Graph is an evolution of the data indexing and querying model in Web3, extending the capabilities of subgraphs by introducing a semantic and relational representation of data.\nHowever, it still faces important challenges, such as defining suitable storage infrastructure, establishing a clear incentive layer, adapting off-chain infrastructure, and addressing issues like ranking, pluralism, and assertion aggregation, key components of the protocol\u2019s design."
         },
         "solution": {
           "title": "What is the solution?",
-          "description": "We participate in The Graph working groups, contributing research, design, and development. We proposed a veSystem-inspired incentive layer and defined user actions as a primitive for ranking, data aggregation, and pluralism. We are also working on storage and off-chain components."
+          "description": "We are participating in The Graph working groups to contribute to the development of the Knowledge Graph through research, design, and development.\nWe proposed an incentive layer based on the veSystem model to help align protocol participants. We also defined user actions as a basic unit that can be used to build features such as ranking, data aggregation, and pluralism handling.\nAdditionally, we are working on other parts of the system, including storage layer and off-chain components. The project is currently under development."
         }
       },
       "status": "In progress",
@@ -47,14 +62,15 @@
         "twitter": [],
         "github": [
           "https://github.com/graphprotocol/graph-improvement-proposals/blob/main/grcs/0020-knowledge-graph.md"
-        ]
+        ],
+        "docs": []
       }
     },
     {
       "name": "xKeep3r",
       "company": {
         "name": "Keep3r",
-        "logo": "keep3r.png"
+        "logo": "keep3r.jpg"
       },
       "tags": ["Research", "Smart Contracts", "UI Development"],
       "content": {
@@ -75,91 +91,452 @@
       }
     },
     {
-      "name": "opUSDC",
+      "name": "ILLA",
       "company": {
-        "name": "Optimism",
-        "logo": "optimism.png"
+        "name": "Layer3",
+        "logo": "layer3.jpg"
       },
-      "tags": ["Architecture Design", "Research", "Smart Contracts"],
+      "tags": [
+        "Architecture Design",
+        "Development",
+        "Off-Chain",
+        "Smart Contracts"
+      ],
       "content": {
         "challenge": {
           "title": "What was the challenge?",
-          "description": "The fragmentation of USDC across chains due to multiple bridged versions leads to inefficiencies when performing a migration path to native USDC issued by Circle."
+          "description": "Conversational interfaces surged and money became programmable, but there was no reliable layer to turn natural-language intent into executed transactions. LLMs could parse \u201cSend USD 100 to mom,\u201d and rails could move value, yet teams kept rebuilding the middle-planning, routing, transaction construction, simulation/safety, and approvals-resulting in brittle, one\u2011off systems that couldn\u2019t meet cross\u2011rail, compliance, or reliability needs."
         },
         "solution": {
           "title": "What is the solution?",
-          "description": "We developed the architecture for the standard bridged USDC on OP Stack chains, utilizing a Factory on Ethereum to trigger cross-chain deployment of the necessary contracts. Deposits and withdrawals are performed as usual. opUSDC also facilitates migration to Circle by transferring contract ownership, ensuring seamless upgrades without disruptions."
+          "description": "Illa is the conversation-to-execution infrastructure for finance. With our MCP Tools, SDK, and Widget, apps and agents turn plain English into executable transaction packages. Intent \u2192 Orchestration \u2192 Execution. The core engine integrates model abstraction, intent recognition, dynamic planning, protocol\u2011aware routing, a universal transaction compiler, and predictive safety. It\u2019s rail and wallet\u2011agnostic, configurable via the Developer Console and Agent Studio (limits, confirmations, protocol preferences, analytics). In short, Illa makes \u201cSend 100 to mom\u201d or \u201cInvest 250 in the S&P 500\u201d safe, consistent, and scalable."
+        }
+      },
+      "status": "In progress",
+      "links": {
+        "website": [
+          "https://illalabs.io"
+        ],
+        "twitter": [],
+        "github": [],
+        "docs": []
+      }
+    },
+    {
+      "name": "$L3",
+      "company": {
+        "name": "Layer3",
+        "logo": "layer3.jpg"
+      },
+      "tags": [
+        "Architecture Design",
+        "Development",
+        "Smart Contracts",
+        "UI Development"
+      ],
+      "content": {
+        "challenge": {
+          "title": "What was the challenge?",
+          "description": "Over time, the L3 token has had a North Star: ensuring that token rewards have a positive impact on the growth of the platform. This included finding scalable solutions to improve eligibility and distribute airdrops to up to 400k users, minimizing risks, and supporting staking rewards. Most recently, it involved finding a convenient method to bridge the token to Solana to expand its ecosystem."
+        },
+        "solution": {
+          "title": "What is the solution?",
+          "description": "We contributed to the tokenomics and staking mechanisms to better reward meaningful contributions. A contract was developed using Safe and delegatecall, streamlining Quest actions into a single transaction.\n\nA React app was built to manage the airdrop, incorporating security features such as wallet screening, VPN detection, Merkle tree generation, and CAPTCHA verification.\n\nWe also took charge of launching L3 on Solana, utilizing Wormhole architecture and implementing the first staking contracts."
         }
       },
       "status": "Completed",
       "links": {
         "website": [],
         "twitter": [],
-        "github": ["https://github.com/defi-wonderland/opUSDC?tab=readme-ov-file"]
+        "github": [],
+        "docs": []
       }
     },
     {
-      "name": "Prophet",
+      "name": "Aztec Boilerplate",
       "company": {
-        "name": "Optimism",
-        "logo": "optimism.png"
+        "name": "Aztec",
+        "logo": "aztec.jpg"
       },
-      "tags": ["Architecture Design", "Idea Generation", "Smart Contracts", "UI Development"],
+      "tags": [
+        "Architecture Design",
+        "Smart Contracts"
+      ],
       "content": {
         "challenge": {
           "title": "What was the challenge?",
-          "description": "We need blockchains to interact with the external world, and oracles are considered the most critical structural components for achieving this. While various oracles are available, none are able to combine decentralization with sustainability."
+          "description": "Building on Aztec should be simple, but developers were missing a unified toolkit that takes care of setup, structure, and best practices. Instead of wasting time researching the latest tools and figuring out standards, they should be focusing on what really matters: building powerful, private smart contracts."
         },
         "solution": {
           "title": "What is the solution?",
-          "description": "We built Prophet, an optimistic oracle with a modular resolution system. Instead of relying on a one-size-fits-all resolution scheme, it offers customizable modules tailored to the specific needs of each developer. This allows anyone to create their own modules, aligning the interests of oracle users and the resolution committee. It now includes features such as ERC20 custom majority, Optimistic Committee, Arbitrator, Multisig/DAOs, NFT voting eligibility, and more."
+          "description": "The Aztec Boilerplate delivers a modern, preconfigured foundation for developing private smart contracts on Aztec. It includes a clean repository structure, integrated unit and end-to-end testing, and automated GitHub workflows, all designed to get developers building fast. With the built-in Aztec Benchmark Tool for comparing gas and gate usage across code versions, the boilerplate ensures every project starts with optimal efficiency and performance from day one."
         }
       },
       "status": "Completed",
       "links": {
         "website": [],
         "twitter": [],
-        "github": ["https://github.com/defi-wonderland/prophet-core"]
+        "github": [
+          "https://github.com/defi-wonderland/aztec-boilerplate"
+        ],
+        "docs": []
       }
     },
     {
-      "name": "SuperchainERC20",
+      "name": "Aztec Standards",
       "company": {
-        "name": "Optimism",
-        "logo": "optimism.png"
+        "name": "Aztec",
+        "logo": "aztec.jpg"
       },
-      "tags": ["Architecture Design", "Research", "Smart Contracts"],
+      "tags": [
+        "Architecture Design",
+        "Research",
+        "Smart Contracts"
+      ],
       "content": {
         "challenge": {
           "title": "What was the challenge?",
-          "description": "With the introduction of Interop, addressing liquidity across the Superchain is essential for future tokens to fully leverage the unified ecosystem of hundreds of chains."
+          "description": "As the Aztec developer community grows, the need for shared foundations becomes critical to prevent fragmentation and ensure interoperability. Developers require consistent, secure, and composable building blocks that let them focus on innovation rather than reinventing core components. Standardized, reusable contracts are key to maintaining a unified ecosystem of privacy-preserving applications built on familiar patterns."
         },
         "solution": {
           "title": "What is the solution?",
-          "description": "We introduced the SuperchainERC20 standard, designed to align with the Superchain architecture and improve interoperability by ensuring that tokens share the same contract address across chains. The project involves migrating liquidity and developing tools to facilitate the smooth adoption of the standard."
+          "description": "Aztec Standards provides a complete suite of reusable, standardized contracts designed specifically for the Aztec Network. These standards establish reliable token primitives and utilities that power both private and public operations, giving developers the confidence and flexibility to build advanced, privacy-first applications. By setting a clear foundation, Aztec Standards makes it easier than ever to create secure and interoperable private smart contracts."
+        }
+      },
+      "status": "Completed",
+      "links": {
+        "website": [],
+        "twitter": [],
+        "github": [
+          "https://github.com/defi-wonderland/aztec-standards"
+        ],
+        "docs": []
+      }
+    },
+    {
+      "name": "ETHLockbox",
+      "company": {
+        "name": "Optimism",
+        "logo": "optimism.jpg"
+      },
+      "tags": [
+        "Architecture Design",
+        "Research",
+        "Smart Contracts"
+      ],
+      "content": {
+        "challenge": {
+          "title": "What was the challenge?",
+          "description": "ETH withdrawals can fail if a chain\u2019s OptimismPortal doesn\u2019t have enough ETH, forcing users to withdraw only from the chain where they originally deposited. This fragments liquidity, complicates UX, and breaks the seamless cross-chain experience the Superchain aims to provide."
+        },
+        "solution": {
+          "title": "What is the solution?",
+          "description": "The SharedLockbox unifies ETH liquidity across all OP chains in a single L1 contract. Each OptimismPortal locks and unlocks ETH through this shared pool, allowing withdrawals from any chain. Managed by SuperchainConfig, which authorizes portals and tracks dependencies, and supported by a LiquidityMigrator for existing balances, this design simplifies liquidity management and ensures smooth, interoperable ETH withdrawals."
         }
       },
       "status": "In progress",
       "links": {
         "website": [],
         "twitter": [],
-        "github": [],
-        "docs": [
+        "github": [
+          "https://github.com/ethereum-optimism/design-docs/blob/main/protocol/eth-shared-lockbox.md"
+        ],
+        "docs": []
+      }
+    },
+    {
+      "name": "Revenue Sharing. Fee Splitter",
+      "company": {
+        "name": "Optimism",
+        "logo": "optimism.jpg"
+      },
+      "tags": [
+        "Architecture Design",
+        "Research",
+        "Smart Contracts"
+      ],
+      "content": {
+        "challenge": {
+          "title": "What was the challenge?",
+          "description": "Current fee sharing on OP Stack chains is rigid and manual, fixed splits don’t support custom revenue policies, multiple destinations, or flexible logic per chain. Chains need a safe, configurable way to automate revenue sharing while keeping compatibility with existing FeeVaults."
+        },
+        "solution": {
+          "title": "What is the solution?",
+          "description": "Introduce a FeeSplitter predeploy that aggregates fees from all vaults, calls a configurable SharesCalculator to determine recipients and amounts, and disburses funds automatically. Anyone can call disburseFees() once conditions are met. Each chain can define its own revenue-sharing logic (e.g. the SuperchainRevShareCalculator splits fees 2.5% of gross or 15% of net to the revenue-share recipient). Validates vault configs, calculator outputs, and recipient payments; reverts on misconfigurations or failed transfers."
+        }
+      },
+      "status": "In progress",
+      "links": {
+        "website": [],
+        "twitter": [],
+        "github": [
+          "https://github.com/ethereum-optimism/design-docs/blob/main/protocol/fee-splitter.md"
+        ],
+        "docs": []
+      }
+    },
+    {
+      "name": "Permissionless Proposals",
+      "company": {
+        "name": "Optimism",
+        "logo": "optimism.jpg"
+      },
+      "tags": [
+        "Architecture Design",
+        "Research",
+        "Smart Contracts"
+      ],
+      "content": {
+        "challenge": {
+          "title": "What was the challenge?",
+          "description": "Optimism’s proposal process is still manual and off-chain, requiring forum coordination and a manager to submit proposals. This centralization slows governance and limits participation."
+        },
+        "solution": {
+          "title": "What is the solution?",
+          "description": "Add a ProposalValidator contract that automates proposal validation and forwarding to the Governor. It enforces delegate approvals, submission windows, and proposal-type rules on-chain, allowing any eligible or permissionless proposer to submit without manual gatekeeping — while keeping veto and safety checks intact."
+        }
+      },
+      "status": "In progress",
+      "links": {
+        "website": [],
+        "twitter": [],
+        "github": [
+          "https://github.com/ethereum-optimism/design-docs/pull/260"
+        ],
+        "docs": []
+      }
+    },
+    {
+      "name": "Remote Tokens",
+      "company": {
+        "name": "Optimism",
+        "logo": "optimism.jpg"
+      },
+      "tags": [
+        "Architecture Design",
+        "Research",
+        "Smart Contracts"
+      ],
+      "content": {
+        "challenge": {
+          "title": "What was the challenge?",
+          "description": "Actions like Uniswap swaps can’t natively execute across OP chains, and liquidity becomes siloed per chain. There’s no standard mechanism for minting and routing remote tokens or ensuring atomic execution between message-passing, token transfers, and protocol calls."
+        },
+        "solution": {
+          "title": "What is the solution?",
+          "description": "The system introduces RefTokens and a unified RefTokenBridge to enable atomic, message-based execution across OP chains. Each RefToken is a deterministic, mint-on-arrival representation of a canonical ERC20 scoped by (origin chainId, origin token). The RefTokenBridge locks canonical tokens on the source chain, sends crosschain messages, and mints corresponding RefTokens on the destination chain, routing them to protocol executors like UniSuperExecutor."
+        }
+      },
+      "status": "In progress",
+      "links": {
+        "website": [],
+        "twitter": [],
+        "github": [
+          "https://github.com/defi-wonderland/op-ref-tokens"
+        ],
+        "docs": []
+      }
+    },    
+    {
+      "name": "Custom Gas Token",
+      "company": {
+        "name": "Optimism",
+        "logo": "optimism.jpg"
+      },
+      "tags": [
+        "Architecture Design",
+        "Research",
+        "Smart Contracts"
+      ],
+      "content": {
+        "challenge": {
+          "title": "What was the challenge?",
+          "description": "The previous Custom Gas Token design was restrictive and tightly coupled to an L1 ERC-20. This made it difficult to launch chains with native assets not yet deployed as ERC20s, integrate with tokens that don't live on L1, or experiment with novel supply and bridging mechanisms."
+        },
+        "solution": {
+          "title": "What is the solution?",
+          "description": "The new CGT architecture introduces a minimal, token-agnostic design that decouples gas token logic from the OP Stack core. A single isCustomGasToken() flag disables ETH flows in bridging functions, while two lightweight predeploys, NativeAssetLiquidity and LiquidityController manage native asset issuance flexibly."
+        }
+      },
+      "status": "In progress",
+      "links": {
+        "website": [],
+        "twitter": [],
+        "github": ["https://github.com/ethereum-optimism/design-docs/blob/main/protocol/custom-gas-token.md?plain=1", "https://github.com/ethereum-optimism/optimism/pull/17412"],
+        "docs": []
+      }
+    },
+    {
+      "name": "opUSDC",
+      "company": {
+        "name": "Optimism",
+        "logo": "optimism.jpg"
+      },
+      "tags": [
+        "Architecture Design",
+        "Research",
+        "Smart Contracts"
+      ],
+      "content": {
+        "challenge": {
+          "title": "What was the challenge?",
+          "description": "Fragmentation of USDC across chains due to multiple bridged versions, leading to inefficiencies when it comes to perform a migration path to native USDC issued by Circle."
+        },
+        "solution": {
+          "title": "What is the solution?",
+          "description": "We developed the architecture for the standard bridged USDC on OP Stack chains, using a Factory on Ethereum to trigger cross-chain deployment of the necessary contracts. Deposits and withdrawals are performed as usual. opUSDC also enables migration to Circle by transferring contract ownership, ensuring seamless upgrades without disruptions."
+        }
+      },
+      "status": "Completed",
+      "links": {
+        "website": [],
+        "twitter": [],
+        "github": [
+          "https://github.com/defi-wonderland/opUSDC?tab=readme-ov-file"
+        ],
+        "docs": []
+      }
+    },
+    {
+      "name": "Prophet",
+      "company": {
+        "name": "Optimism",
+        "logo": "optimism.jpg"
+      },
+      "tags": [
+        "Architecture Design",
+        "Idea Generation",
+        "Smart Contracts",
+        "UI Development"
+      ],
+      "content": {
+        "challenge": {
+          "title": "What was the challenge?",
+          "description": "We need blockchains to interact with the external world. Oracles are considered the most critical structural components for doing that. While there are various oracles available, non is able to combine decentralization with sustainability."
+        },
+        "solution": {
+          "title": "What is the solution?",
+          "description": "We built Prophet, an optimistic oracle with a modular resolution system. Instead of relying on a one-size-fits-all resolution scheme, it offers customizable modules that can be tailored to the specific needs of each developer. So, anyone can create their modules, aligning the interests of oracle users and the resolution committee. Now you have: ERC20 custom majority, Optimistic Committee, Arbitrator, Multisig/DAOs, NFTs voting elegibility and more."
+        }
+      },
+      "status": "Completed",
+      "links": {
+        "website": [],
+        "twitter": [],
+        "github": [
+          "https://github.com/defi-wonderland/prophet-core"
+        ],
+        "docs": []
+      }
+    },
+    {
+      "name": "SuperchainERC20",
+      "company": {
+        "name": "Optimism",
+        "logo": "optimism.jpg"
+      },
+      "tags": [
+        "Architecture Design",
+        "Research",
+        "Smart Contracts"
+      ],
+      "content": {
+        "challenge": {
+          "title": "What was the challenge?",
+          "description": "With the introduction of Interop, liquidity across the Superchain needs to be addressed for future tokens to fully leverage the unified ecosystem of hundreds of chains."
+        },
+        "solution": {
+          "title": "What is the solution?",
+          "description": "We introduced the SuperchainERC20 standard, designed to align with the Superchain architecture and improve interoperability by ensuring tokens share the same contract address across chains. The project involves migrating liquidity and developing tools to facilitate smooth adoption of the standard."
+        }
+      },
+      "status": "In progress",
+      "links": {
+        "website": [],
+        "twitter": [],
+        "github": [
           "https://github.com/ethereum-optimism/design-docs/blob/main/protocol/superchain-erc20/superchain-erc20-factory.md"
-        ]
+        ],
+        "docs": []
+      }
+    },
+    {
+      "name": "Kohaku",
+      "company": {
+        "name": "Ethereum",
+        "logo": "ethereum.jpg"
+      },
+      "tags": [
+        "Architecture Design",
+        "Development",
+        "Research",
+        "Smart Contracts",
+        "UI Development"
+      ],
+      "content": {
+        "challenge": {
+          "title": "What was the challenge?",
+          "description": "A public-by-default system is misaligned with how people expect to manage their finances. No one would willingly make every bank payment visible to the world, yet this remains the norm on Ethereum today. For broader adoption, privacy must be a built-in feature, not an optional layer. However, integrating privacy is still complex: developers face fragmented tools, advanced cryptography requirements, and disjointed user experiences. This complexity slows innovation and limits user trust. The technology exists to change this but wallets must evolve to make privacy seamless and native to the on-chain experience."
+        },
+        "solution": {
+          "title": "What is the solution?",
+          "description": "We work with the Ethereum Foundation to bridge that gap by providing a set of primitives that bring privacy and security directly into wallets. Through its SDK, Kohaku enables the integration of privacy-preserving features such as private send, private receive, and social recovery. All while maintaining modularity and a familiar user experience. The Kohaku Wallet serves as a reference implementation, demonstrating these capabilities in practice. Wonderland is leading the way by integrating Privacy Pools, setting the foundation for a privacy-first wallet ecosystem."
+        }
+      },
+      "status": "In progress",
+      "links": {
+        "website": [],
+        "twitter": ["https://x.com/DeFi_Wonderland/status/1976723675492814863?s=20"],
+        "github": [],
+        "docs": []
+      }
+    },
+    {
+      "name": "Interoperable Addresses",
+      "company": {
+        "name": "Ethereum",
+        "logo": "ethereum.jpg"
+      },
+      "tags": [
+        "Off-Chain",
+        "Research"
+      ],
+      "content": {
+        "challenge": {
+          "title": "What was the challenge?",
+          "description": "As the number of rollups and chains grows, interoperability has become a central concern for Ethereum\u2019s usability. Ethereum addresses (ERC-55) lack chain specificity, which can lead to loss of funds in case of errors, and inconsistency as different protocols built their own custom ways to define the chain for a given address."
+        },
+        "solution": {
+          "title": "What is the solution?",
+          "description": "We wrote ERC-7930, defining an extensible binary format to refer to an address specific to one chain, and co-authored ERC-7828, to make those interoperable addresses human-readable via ENS. We collaborated with the Ethereum Foundation, as well as stakeholders and teams across the Ethereum ecosystem to establish this as the ecosystem\u2019s preferred approach for interoperable addresses. It is a foundational part of the https://www.openintents.xyz/, and we built an SDK for ease of use by wallet and app developers."
+        }
+      },
+      "status": "In progress",
+      "links": {
+        "website": ["https://www.openintents.xyz/"],
+        "twitter": [],
+        "github": ["https://github.com/ethereum/L2-interop"],
+        "docs": ["https://docs.openintents.xyz/"]
       }
     },
     {
       "name": "Interop",
       "company": {
-        "name": "Ethereum Foundation",
-        "logo": "ethereum-foundation.png"
+        "name": "Ethereum",
+        "logo": "ethereum.jpg"
       },
-      "tags": ["Architecture Design", "Development", "Smart Contracts", "UI Development", "Idea Generation", "Research"],
+      "tags": [
+        "Architecture Design",
+        "Development",
+        "Idea Generation",
+        "Research",
+        "Smart Contracts",
+        "UI Development"
+      ],
       "content": {
         "challenge": {
           "title": "What was the challenge?",
-          "description": "Ethereum’s rollup-centric roadmap has unlocked scalability, but at the cost of fragmentation. Liquidity, UX, and developer tooling are now fractured across chains. To enable seamless cross-chain experiences, shared standards are essential."
+          "description": "Ethereum\u2019s rollup-centric roadmap has unlocked scalability, but at the cost of fragmentation. Liquidity, UX, and developer tooling are now fractured across chains. To enable seamless cross-chain experiences, shared standards are essential."
         },
         "solution": {
           "title": "What is the solution?",
@@ -168,208 +545,286 @@
       },
       "status": "In progress",
       "links": {
-        "website": ["https://ethereum-magicians.org/t/erc-7930-interoperable-addresses/23365"],
+        "website": [],
         "twitter": [],
-        "github": ["https://github.com/ethereum/L2-interop"]
+        "github": [
+          "https://ethereum-magicians.org/t/erc-7930-interoperable-addresses/23365", "https://github.com/ethereum/L2-interop"
+        ],
+        "docs": []
+      }
+    },
+    {
+      "name": "Privacy Pools",
+      "company": {
+        "name": "0xBow",
+        "logo": "0xbow.jpg"
+      },
+      "tags": [
+        "Architecture Design",
+        "Development",
+        "Research",
+        "Smart Contracts",
+        "UI Development"
+      ],
+      "content": {
+        "challenge": {
+          "title": "What was the challenge?",
+          "description": "On public blockchains like Ethereum, every transaction is permanently visible to everyone. This means that balances, counterparties, and entire transaction histories are exposed, creating serious privacy and personal safety risks for users. While some privacy tools have attempted to solve this, they often introduced compliance complexity leading to regulatory pushback. The challenge was clear: how to provide strong on-chain privacy and security without sacrificing compliance and usability."
+        },
+        "solution": {
+          "title": "What is the solution?",
+          "description": "We developed software for\u00a00xbow, the team behind the first implementation of the concept introduced\u00a0in the Privacy Pools whitepaper, written by Vitalik Butterin, Ameen Soleimani, and Jacob Illum (Chainalysis): a protocol for private withdrawals with compliance built-in, using zk proofs and commitment schemes. An Association Set Provider (ASP) maintains approved deposit sets, ensuring policy compliance while safeguarding privacy."
+        }
+      },
+      "status": "In progress",
+      "links": {
+        "website": [
+          "https://privacypools.com/"
+        ],
+        "twitter": [],
+        "github": [],
+        "docs": []
+      }
+    },
+    {
+      "name": "Crosschain Governance",
+      "company": {
+        "name": "Everclear (ex Connext)",
+        "logo": "everclear-(ex-connext).jpg"
+      },
+      "tags": [
+        "Architecture Design",
+        "Smart Contracts",
+        "UI Development"
+      ],
+      "content": {
+        "challenge": {
+          "title": "What was the challenge?",
+          "description": "DAOs, due to their complex nature and the economic and social value they manage, require security and accessibility to function effectively. As DAOs evolve, the ability to safely expand across chains becomes critical for enabling features like token bridging, cross-chain voting, treasury and protocol management."
+        },
+        "solution": {
+          "title": "What is the solution?",
+          "description": "A user-friendly React library that allows users to manage their DAO's cross-chain operations via the Zodiac Connext Module. It simplifies the construction of transaction data for implementing actions with the xcall function in Connext."
+        }
+      },
+      "status": "Completed",
+      "links": {
+        "website": [],
+        "twitter": [],
+        "github": [
+          "https://github.com/defi-wonderland/crosschain-widget"
+        ],
+        "docs": []
+      }
+    },
+    {
+      "name": "xERC20",
+      "company": {
+        "name": "Everclear (ex Connext)",
+        "logo": "everclear-(ex-connext).jpg"
+      },
+      "tags": [
+        "Architecture Design",
+        "Smart Contracts"
+      ],
+      "content": {
+        "challenge": {
+          "title": "What was the challenge?",
+          "description": "The current issue with token bridges is fragmented liquidity, as each bridge creates its own token version, making cross-chain transfers complex and inefficient."
+        },
+        "solution": {
+          "title": "What is the solution?",
+          "description": "xERC20 is a standard for sovereign bridged tokens, offering a unified interface across bridge implementations. It removes liquidity constraints while allowing token issuers to regain full ownership and improve the on-chain user experience."
+        }
+      },
+      "status": "Completed",
+      "links": {
+        "website": [],
+        "twitter": [],
+        "github": [
+          "https://github.com/defi-wonderland/xERC20"
+        ],
+        "docs": ["https://www.xerc20.com/"]
+      }
+    },
+    {
+      "name": "Everclear",
+      "company": {
+        "name": "Everclear (ex Connext)",
+        "logo": "everclear-(ex-connext).jpg"
+      },
+      "tags": [
+        "Architecture Design",
+        "Idea Generation",
+        "Research",
+        "Smart Contracts"
+      ],
+      "content": {
+        "challenge": {
+          "title": "What was the challenge?",
+          "description": "Liquidity management across multiple chains has been highly inefficient and costly for solvers, market makers, and centralized exchanges. Fragmentation of liquidity has made it difficult to scale operations and optimize cross-chain rebalancing, especially with the increasing number of chains and assets. Traditional manual processes and centralized solutions have been resource-intensive, limiting the scalability of liquidity rebalancing across decentralized networks."
+        },
+        "solution": {
+          "title": "What is the solution?",
+          "description": "Everclear automates cross-chain liquidity settlement, reducing costs and complexity by netting flows across chains. It leverages Chain Abstraction, allowing seamless rebalancing without manual intervention. The system also uses a Dutch auction to clear invoices efficiently and introduces the vbNEXT token model to direct liquidity to underutilized chains, aligning incentives for all participants."
+        }
+      },
+      "status": "Completed",
+      "links": {
+        "website": ["https://www.everclear.org/"],
+        "twitter": [],
+        "github": [],
+        "docs": ["https://docs.everclear.org/"]
+      }
+    },
+    {
+      "name": "Optimistic Merkle Root Aggregator",
+      "company": {
+        "name": "Everclear (ex Connext)",
+        "logo": "everclear-(ex-connext).jpg"
+      },
+      "tags": [
+        "Idea Generation",
+        "Off-Chain",
+        "Smart Contracts"
+      ],
+      "content": {
+        "challenge": {
+          "title": "What was the challenge?",
+          "description": "Canonical bridge implementations, while functional, are often costly and inefficient due to their dependency on Arbitrary Message Bridges (AMBs) and the need for on-chain root calculations. These processes increase the operational overhead and introduce potential bottlenecks, making cross-chain transfers slower and more expensive for users."
+        },
+        "solution": {
+          "title": "What is the solution?",
+          "description": "This project significantly reduces costs and increase transfer speeds by implementing an Optimistic approach with cross-chain Merkle root aggregations."
+        }
+      },
+      "status": "Completed",
+      "links": {
+        "website": [],
+        "twitter": [],
+        "github": [
+          "https://github.com/connext/monorepo/pull/4951/"
+        ],
+        "docs": []
       }
     },
     {
       "name": "HAI",
       "company": {
         "name": "Reflexer",
-        "logo": "reflexer.png"
+        "logo": "reflexer.jpg"
       },
-      "tags": ["Refactoring", "Research", "Smart Contracts"],
+      "tags": [
+        "Refactoring",
+        "Research",
+        "Smart Contracts"
+      ],
       "content": {
         "challenge": {
           "title": "What was the challenge?",
-          "description": "While RAI addresses fiat-pegged volatility with an on-chain controlled peg mechanism, it still faces adoption challenges in a multichain DeFi environment. Relying solely on ETH as collateral limits its appeal, as users miss out on staking rewards from other assets. Moreover, cross-chain liquidity is increasingly necessary for managing collateral and liquidity across ecosystems, given the fragmented nature of these assets."
+          "description": "While RAI addresses fiat-pegged volatility with an on-chain controlled peg mechanism, it still faces adoption challenges in a multichain DeFi environment. Relying solely on ETH as collateral limits its appeal, as users miss out on staking rewards from other assets. Additionally, cross-chain liquidity is increasingly necessary for managing collateral and liquidity across ecosystems, given the fragmented nature of these assets."
         },
         "solution": {
           "title": "What is the solution?",
-          "description": "We developed HAI, a decentralized stablecoin deployed on Optimism, which simplifies liquidity management across multiple tokens. HAI supports a diverse range of collateral types, including ETH, OP, LSDs, and RAI, making it more flexible and attractive to users. This consolidated approach improves liquidity stability and facilitates broader DeFi adoption."
-        }
-      },
-      "status": "Completed",
-      "links": {
-        "website": ["https://www.letsgethai.com/#/safes"],
-        "twitter": [],
-        "github": ["https://github.com/hai-on-op/core"]
-      }
-    },
-    {
-      "name": "Crosschain Governance",
-      "company": {
-        "name": "Everclear",
-        "logo": "everclear.png"
-      },
-      "tags": ["Architecture Design", "Smart Contracts", "UI Development"],
-      "content": {
-        "challenge": {
-          "title": "What was the challenge?",
-          "description": "Due to their complex nature and the economic and social value they manage, DAOs require security and accessibility to function effectively. As DAOs evolve, the ability to safely expand across chains becomes critical for enabling features such as token bridging, cross-chain voting, treasury management, and protocol management."
-        },
-        "solution": {
-          "title": "What is the solution?",
-          "description": "A user-friendly React library that enables users to manage their DAO's cross-chain operations through the Zodiac Everclear Module. It simplifies the construction of transaction data for implementing actions with the xcall function in Everclear."
+          "description": "We developed HAI, a decentralized stablecoin deployed on Optimism that simplifies liquidity management across multiple tokens. HAI supports a diverse range of collateral types, including ETH, OP, LSDs, and RAI, making it more flexible and attractive to users. This consolidated approach enhances liquidity stability and facilitates broader DeFi adoption."
         }
       },
       "status": "Completed",
       "links": {
         "website": [],
         "twitter": [],
-        "github": ["https://github.com/defi-wonderland/crosschain-widget"]
+        "github": [
+          "https://www.letsgethai.com/#/safes", "https://github.com/hai-on-op/core"
+        ],
+        "docs": []
       }
     },
     {
-      "name": "xERC20",
+      "name": "Distributor",
       "company": {
-        "name": "Everclear",
-        "logo": "everclear.png"
+        "name": "EigenLayer",
+        "logo": "eigenlayer.jpg"
       },
-      "tags": ["Architecture Design", "Smart Contracts"],
+      "tags": ["Architecture Design", "Off-Chain", "Smart Contracts"],
       "content": {
         "challenge": {
           "title": "What was the challenge?",
-          "description": "The current issue with token bridges is fragmented liquidity. Each bridge creates its own token version, making cross-chain transfers complex and inefficient."
+          "description": "Ensure that sufficient verifiable information is collected from participants to meet regulatory requirements and execute the airdrop fairly. The process must remain compliant while also being user-friendly, secure, and scalable."
         },
         "solution": {
           "title": "What is the solution?",
-          "description": "xERC20 is a standard for sovereign bridged tokens, offering a unified interface across bridge implementations. This standard removes liquidity constraints, allowing token issuers to regain full ownership and improve the on-chain user experience."
+          "description": "We developed the SignedDistributor contract to streamline the airdrop process. This contract uses off-chain signatures to verify claims, ensuring that only eligible participants from approved regions—excluding those in prohibited or sanctioned areas—can claim tokens. The process involved creating scripts to process the eligibility data CSV provided by Eigenlayer, preparing it for backend integration."
         }
       },
       "status": "Completed",
       "links": {
-        "website": ["https://www.xerc20.com/"],
-        "twitter": [],
-        "github": ["https://github.com/defi-wonderland/xERC20"]
-      }
-    },
-    {
-      "name": "Everclear",
-      "company": {
-        "name": "Everclear",
-        "logo": "everclear.png"
-      },
-      "tags": ["Architecture Design", "Idea Generation", "Research", "Smart Contracts"],
-      "content": {
-        "challenge": {
-          "title": "What was the challenge?",
-          "description": "The management of liquidity across multiple chains has been highly inefficient and costly for solvers, market makers, and centralized exchanges. The fragmentation of liquidity has made it difficult to scale operations and optimize cross-chain rebalancing, especially with the increasing number of chains and assets. Traditional manual processes and centralized solutions have been resource-intensive, limiting the scalability of liquidity rebalancing across decentralized networks."
-        },
-        "solution": {
-          "title": "What is the solution?",
-          "description": "Everclear automates cross-chain liquidity settlement, reducing costs and complexity by netting flows across chains. It leverages Chain Abstraction, allowing seamless rebalancing without manual intervention. The system also uses a Dutch auction to efficiently clear invoices and introduces the vbNEXT token model to direct liquidity to underutilized chains, aligning incentives for all participants."
-        }
-      },
-      "status": "Completed",
-      "links": {
-        "website": [],
+        "website": ["https://etherscan.io/address/0x035bdAeaB85E47710C27EdA7FD754bA80aD4ad02#code"],
         "twitter": [],
         "github": []
-      }
-    },
-    {
-      "name": "Optimistic Merkle Root Aggregator",
-      "company": {
-        "name": "Everclear",
-        "logo": "everclear.png"
-      },
-      "tags": ["Idea Generation", "Off-Chain", "Smart Contracts"],
-      "content": {
-        "challenge": {
-          "title": "What was the challenge?",
-          "description": "Canonical bridge implementations, although functional, are often costly and inefficient due to their reliance on Arbitrary Message Bridges (AMBs) and the requirement for on-chain root calculations. These processes augment the operational overhead and introduce potential bottlenecks, rendering cross-chain transfers slower and more costly for users."
-        },
-        "solution": {
-          "title": "What is the solution?",
-          "description": "This project significantly reduces costs and increases transfer speeds by implementing an Optimistic approach with cross-chain Merkle root aggregations."
-        }
-      },
-      "status": "Completed",
-      "links": {
-        "website": [],
-        "twitter": [],
-        "github": ["https://github.com/connext/monorepo/pull/4951"]
       }
     },
     {
       "name": "Allo v2.1",
       "company": {
         "name": "Gitcoin",
-        "logo": "gitcoin.png"
+        "logo": "gitcoin.jpg"
       },
-      "tags": ["Research", "Smart Contracts"],
+      "tags": [
+        "Research", "Smart Contracts"
+      ],
       "content": {
         "challenge": {
           "title": "What was the challenge?",
-          "description": "Allo offers various mechanisms for allocating and distributing funds, referred to as strategies. These strategies often share similar actions or custom logic, which makes the development process cumbersome due to unclear workflows and repetitive code. The challenge was to simplify this by making strategies more modular and flexible."
+          "description": "Allo offers various mechanisms for allocating and distributing funds, referred to as strategies. These strategies often share similar actions or custom logic, making the development experience cumbersome due to unclear processes and repetitive code. The challenge was to simplify this by making strategies more modular and flexible."
         },
         "solution": {
           "title": "What is the solution?",
-          "description": "In Allo v2.1, we adopted a modular design similar to OpenZeppelin's approach, introducing tools like the BaseStrategy contract, which serves as a foundation for defining strategies. Additionally, we provided extension contracts and libraries that developers can easily inherit to create custom strategies, streamlining the development process."
+          "description": "In Allo v2.1, we adopted a modular design similar to OpenZeppelin\u2019s approach, introducing tools like the BaseStrategy contract, which serves as a foundation for defining strategies. Alongside this, we provided extension contracts and libraries that developers can easily inherit to create custom strategies, streamlining the process."
         }
       },
-      "status": "In progress",
+      "status": "Completed",
       "links": {
-        "website": [],
+        "website": ["https://www.allo.capital/"],
         "twitter": [],
-        "github": []
-      }
-    },
-    {
-      "name": "$L3",
-      "company": {
-        "name": "Layer3",
-        "logo": "layer3.png"
-      },
-      "tags": ["Architecture Design", "Development", "Smart Contracts", "UI Development"],
-      "content": {
-        "challenge": {
-          "title": "What was the challenge?",
-          "description": "Over time, the L3 token has maintained a clear North Star: ensuring that token rewards positively impact the platform's growth. This has involved finding scalable solutions to improve eligibility and distribute airdrops to up to 400k users, minimizing risks, and supporting staking rewards. Most recently, it included identifying a convenient method to bridge the token to Solana to expand its ecosystem."
-        },
-        "solution": {
-          "title": "What is the solution?",
-          "description": "We contributed to the tokenomics and staking mechanisms to better reward meaningful contributions. A contract was developed using Safe and delegatecall, streamlining Quest actions into a single transaction. Additionally, a React app was built to manage the airdrop, incorporating security features such as wallet screening, VPN detection, Merkle tree generation, and CAPTCHA verification. We also led the launch of L3 on Solana, utilizing Wormhole architecture and implementing the first staking contracts."
-        }
-      },
-      "status": "In progress",
-      "links": {
-        "website": [],
-        "twitter": [],
-        "github": []
+        "github": ["https://github.com/allo-protocol"],
+        "docs": ["https://handbook.wonderland.xyz/blog/allo-explained"]
       }
     },
     {
       "name": "Safe Liveness",
       "company": {
         "name": "Safe",
-        "logo": "safe.png"
+        "logo": "safe.jpg"
       },
-      "tags": ["Architecture Design", "Development"],
+      "tags": [
+        "Architecture Design",
+        "Development"
+      ],
       "content": {
         "challenge": {
           "title": "What was the challenge?",
-          "description": "Safe smart wallets on different chains were deployed as separate contracts despite having the same configuration. This leads to synchronization issues when changes, such as owner modifications, are made on one chain but not reflected on others, resulting in inconsistent security settings across chains. The challenge is to ensure these configurations are synchronized across chains in a trust-minimized way, particularly during security changes."
+          "description": "Safe smart wallets on different chains were deployed as separate contracts despite having the same configuration. This causes synchronization issues when changes, such as owner modifications, are made on one chain but not reflected on others, leading to inconsistent security settings across chains. The challenge is to ensure that these configurations are synchronized across chains in a trust-minimized way, especially during security changes."
         },
         "solution": {
           "title": "What is the solution?",
-          "description": "We developed the Safe Liveness module, which uses shared cryptographic proofs to verify Safe settings across chains. This module allows users to batch verify and broadcast changes, ensuring that any updates made on one chain are propagated to all others. A master Safe will be established, which other deployments will listen to. The Liveness module verifies Safe ownership based on storage proofs, keeping everything synchronized across chains."
+          "description": "We developed this Safe Liveness module that uses shared cryptographic proofs to verify Safe settings across chains. This module would allow users to batch verify and broadcast changes, ensuring that any updates made on one chain are propagated to all others. So, we will have a master safe, which other deployments will be listening to.\n\nThe Liveness module can verify Safe ownership based on storage proof and keep everything cross-chain synced."
         }
       },
       "status": "Completed",
       "links": {
         "website": [],
         "twitter": [],
-        "github": ["https://github.com/defi-wonderland/safe-liveness"]
+        "github": [
+          "https://github.com/defi-wonderland/safe-liveness"
+        ],
+        "docs": []
       }
     },
     {
       "name": "Spells",
       "company": {
         "name": "Sky",
-        "logo": "sky.png"
+        "logo": "sky.jpg"
       },
       "tags": ["Reviewers"],
       "content": {
@@ -388,6 +843,62 @@
         "twitter": [],
         "github": []
       }
+    },
+    {
+      "name": "Extensible Minting",
+      "company": {
+        "name": "Corn",
+        "logo": "corn.jpg"
+      },
+      "tags": [
+        "Research", "Smart Contracts", "Development"
+      ],
+      "content": {
+        "challenge": {
+          "title": "What was the challenge?",
+          "description": "On Ethereum, BTCN can be minted and burned under governance control, but on Corn (an Arbitrum Orbit chain) those actions are restricted. This prevents governance-approved actors from creating or withdrawing BTCN supply directly, limiting functionality for lending, arbitrage, and custodial minting. Without a workaround, Corn cannot fully support key financial primitives such as flash loans, lending markets, or stablecoin issuance backed by BTC collateral."
+        },
+        "solution": {
+          "title": "What is the solution?",
+          "description": "Instead of minting and burning, governance-approved addresses can borrow BTCN from a pre-minted supply stored in the BTCN OFT contract. This mechanism enables flash loans to improve arbitrage opportunities, lending markets (with Morpho as the first integration), and permissioned minting for custodians to issue stablecoins like USDT0 against BTC collateral. We implemented the necessary contract upgrades (borrow/repay logic, limits), build a flash loan module, clean up unused ERC20 functionality, address feedback on governance contracts, and prepare off-chain tooling."
+        }
+      },
+      "status": "Completed",
+      "links": {
+        "website": [],
+        "twitter": [],
+        "github": [],
+        "docs": []
+      }
+    },
+    {
+      "name": "Morpho Module",
+      "company": {
+        "name": "Corn",
+        "logo": "corn.jpg"
+      },
+      "tags": [
+        "Architecture Design",
+        "Development"
+      ],
+      "content": {
+        "challenge": {
+          "title": "What was the challenge?",
+          "description": "Corn introduces a unique Arbitrum Orbit Layer 2 environment where BTCN acts as the native gas token, pre-minted and managed through the BitcornOFTAdapter contract. While this system unlocks powerful liquidity capabilities, it also created a challenge: efficiently deploying the pre-minted wBTCN liquidity into real yield-generating ecosystems like Morpho without requiring additional collateralization or bridging from Ethereum L1. Corn governance needed a secure, onchain mechanism to deepen liquidity in Morpho while maintaining strict control over borrowed assets and preserving the integrity of the BTCN supply."
+        },
+        "solution": {
+          "title": "What is the solution?",
+          "description": "To solve this, the Corn team developed the Morpho Module \u2014 a dedicated contract that acts as a bridge between Corn\u2019s pre-minted wBTCN liquidity and Morpho\u2019s MetaMorpho vaults. The module allows permissioned actors to borrow wBTCN from the BitcornOFTAdapter and deposit it directly into Morpho vaults, automatically managing deposits, withdrawals, and yield collection. Through precise access control and built-in safeguards, Corn governance can safely supply liquidity, capture yield, and strengthen the ecosystem \u2014 all without modifying existing BTCN positions or requiring external collateralization."
+        }
+      },
+      "status": "Completed",
+      "links": {
+        "website": [],
+        "twitter": [],
+        "github": [
+        ],
+        "docs": []
+      }
     }
   ],
   "projects": [
@@ -395,7 +906,7 @@
       "name": "ZkChainHub",
       "company": {
         "name": "ZKSync",
-        "logo": "zksync.png"
+        "logo": "zksync.jpg"
       },
       "tags": ["Architecture Design", "Off-Chain", "UI Development"],
       "content": {
@@ -419,34 +930,10 @@
       }
     },
     {
-      "name": "Distributor",
-      "company": {
-        "name": "EigenLayer",
-        "logo": "eigenlayer.png"
-      },
-      "tags": ["Architecture Design", "Off-Chain", "Smart Contracts"],
-      "content": {
-        "challenge": {
-          "title": "What was the challenge?",
-          "description": "Ensure that sufficient verifiable information is collected from participants to meet regulatory requirements and execute the airdrop fairly. The process must remain compliant while also being user-friendly, secure, and scalable."
-        },
-        "solution": {
-          "title": "What is the solution?",
-          "description": "We developed the SignedDistributor contract to streamline the airdrop process. This contract uses off-chain signatures to verify claims, ensuring that only eligible participants from approved regions—excluding those in prohibited or sanctioned areas—can claim tokens. The process involved creating scripts to process the eligibility data CSV provided by Eigenlayer, preparing it for backend integration."
-        }
-      },
-      "status": "Completed",
-      "links": {
-        "website": ["https://etherscan.io/address/0x035bdAeaB85E47710C27EdA7FD754bA80aD4ad02#code"],
-        "twitter": [],
-        "github": []
-      }
-    },
-    {
       "name": "Private Oracle",
       "company": {
         "name": "Aztec",
-        "logo": "aztec.png"
+        "logo": "aztec.jpg"
       },
       "tags": ["Architecture Design", "Development"],
       "content": {
@@ -470,7 +957,7 @@
       "name": "World ID Governor",
       "company": {
         "name": "Worldcoin",
-        "logo": "worldcoin.png"
+        "logo": "worldcoin.jpg"
       },
       "tags": ["Architecture Design", "Idea Generation", "Smart Contracts"],
       "content": {
@@ -494,7 +981,7 @@
       "name": "Keep3r Network V2",
       "company": {
         "name": "Keep3r",
-        "logo": "keep3r.png"
+        "logo": "keep3r.jpg"
       },
       "tags": ["Refactoring", "Architecture Design", "Development", "Research"],
       "content": {
@@ -518,7 +1005,7 @@
       "name": "Sidechain Oracles",
       "company": {
         "name": "Keep3r",
-        "logo": "keep3r.png"
+        "logo": "keep3r.jpg"
       },
       "tags": ["Off-Chain", "Architecture Design", "Smart Contracts"],
       "content": {
@@ -541,10 +1028,34 @@
   ],
   "publicGoods": [
     {
+      "name": "Canon Guard",
+      "company": {
+        "name": "Public Good",
+        "logo": "public-good.jpg"
+      },
+      "tags": ["Architecture Design", "Development", "Idea Generation", "Smart Contracts"],
+      "content": {
+        "challenge": {
+          "title": "What was the challenge?",
+          "description": "Safe proposals and signatures happen off-chain, which creates blind spots: payloads can drift or be misrepresented, signers may see different views, and stale signatures can linger. There’s no single on-chain source of truth, approvals aren’t auditable end-to-end, and fast paths increase signer fatigue and operational risk for high‑stakes transactions."
+        },
+        "solution": {
+          "title": "What is the solution?",
+          "description": "Canon Guard moves intent on-chain. Transactions are encoded as immutable on-chain Actions, queued with explicit delays (short for pre‑approved flows; long for new ones), and approved on-chain via the exact Safe tx hash. A Safe guard (OnlyCanonGuard) enforces execution through Canon Guard, while an emergency mode restricts execution authority under duress. The result is transparent, simulatable, and auditable operations that reduce signer fatigue and spoofing risk."
+        }
+      },
+      "status": "In progress",
+      "links": {
+        "website": [],
+        "twitter": [],
+        "github": ["https://github.com/defi-wonderland/canon-guard", "https://github.com/defi-wonderland/canon-guard-docs"]
+      }
+    },
+    {
       "name": "Natspec Smells",
       "company": {
         "name": "Public Good",
-        "logo": "public-good.png"
+        "logo": "public-good.jpg"
       },
       "tags": ["Architecture Design", "Development", "Idea Generation"],
       "content": {
@@ -568,7 +1079,7 @@
       "name": "Sponsored Transactions",
       "company": {
         "name": "Public Good",
-        "logo": "public-good.png"
+        "logo": "public-good.jpg"
       },
       "tags": ["Architecture Design", "Development", "Idea Generation"],
       "content": {
@@ -592,7 +1103,7 @@
       "name": "Governor sucks",
       "company": {
         "name": "Public Good",
-        "logo": "public-good.png"
+        "logo": "public-good.jpg"
       },
       "tags": ["Architecture Design", "Development", "Idea Generation"],
       "content": {
@@ -616,7 +1127,7 @@
       "name": "Smock",
       "company": {
         "name": "Public Good",
-        "logo": "public-good.png"
+        "logo": "public-good.jpg"
       },
       "tags": ["Architecture Design", "Development", "Idea Generation"],
       "content": {
@@ -641,7 +1152,7 @@
       "name": "Price Oracle",
       "company": {
         "name": "Public Good",
-        "logo": "public-good.png"
+        "logo": "public-good.jpg"
       },
       "tags": ["Architecture Design", "Idea Generation", "Off-Chain", "Smart Contracts", "UI Development"],
       "content": {
