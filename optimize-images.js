@@ -23,18 +23,71 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 // Configuration
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 const CONFIG = {
   // Minimum file size to optimize (in bytes). Images smaller than this are skipped.
+  // Default: 500KB - Only process large images that benefit most from optimization
   minSize: 500 * 1024, // 500KB
 
-  // Quality settings for optimization (0-100, higher = better quality but larger file)
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  // Quality setting (0-100)
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  // Higher = better quality but larger file size
+  // Lower = more compression but potential quality loss
+  //
+  // Recommended settings by use case:
+  //
+  // quality: 95  ← Maximum quality (for portfolios, hero images)
+  //              • Best visual quality
+  //              • Minimal compression artifacts
+  //              • Larger file sizes (~70-80% of original)
+  //
+  // quality: 90  ← Recommended default (current setting)
+  //              • Excellent quality
+  //              • Good balance between size and quality
+  //              • Typical reduction: 60-70%
+  //              • Imperceptible quality loss for most viewers
+  //
+  // quality: 85  ← Aggressive optimization
+  //              • Very good quality
+  //              • Better compression
+  //              • Typical reduction: 70-80%
+  //              • Slight quality loss in high-detail images
+  //
+  // quality: 80  ← Maximum compression (for high-traffic sites)
+  //              • Good quality
+  //              • Maximum size reduction
+  //              • Typical reduction: 75-85%
+  //              • Noticeable on close inspection
+  //
   quality: 90,
 
-  // PNG compression level (0-9, higher = smaller file but slower)
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  // PNG compression level (0-9)
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  // Higher = smaller file but slower processing (lossless - no quality loss)
+  //
+  // pngCompressionLevel: 9  ← Recommended (current setting)
+  //                         • Maximum compression (slowest)
+  //                         • Best file size reduction
+  //                         • No quality loss (lossless)
+  //
+  // pngCompressionLevel: 7  ← Faster alternative
+  //                         • Good compression (faster)
+  //                         • Slightly larger files than 9
+  //                         • No quality loss (lossless)
+  //
+  // pngCompressionLevel: 6  ← Fast processing
+  //                         • Moderate compression (fastest)
+  //                         • Balanced speed vs size
+  //                         • No quality loss (lossless)
+  //
   pngCompressionLevel: 9,
 
   // Default directory to optimize (can be overridden via command line)
+  // Usage: node optimize-images.js ./path/to/images
   defaultDir: './public/img',
 };
 
