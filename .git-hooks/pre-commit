@@ -1,0 +1,34 @@
+#!/bin/sh
+
+# Pre-commit hook: Optimize images before committing
+echo "🎨 Optimizing images before commit..."
+echo ""
+
+# Run the image optimization script
+npm run optimize-images
+
+# Get the exit code
+optimization_exit=$?
+
+# If optimization succeeded
+if [ $optimization_exit -eq 0 ]; then
+  echo ""
+  echo "✅ Image optimization complete!"
+
+  # Check if there are any changes in public/img/
+  if ! git diff --quiet public/img/; then
+    echo ""
+    echo "📝 Images were optimized. Adding to current commit..."
+    git add public/img/
+    echo "✅ Optimized images added to commit!"
+  else
+    echo "✅ No images needed optimization!"
+  fi
+
+  echo ""
+  exit 0
+else
+  echo ""
+  echo "❌ Image optimization failed. Commit cancelled."
+  exit 1
+fi

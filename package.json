@@ -12,7 +12,9 @@
     "prettier": "npx prettier src --check",
     "prettier:fix": "npm run prettier -- --write",
     "format": "npm run prettier:fix && npm run lint:fix",
-    "optimize-images": "node optimize-images.js"
+    "optimize-images": "node optimize-images.js",
+    "install-hooks": ".git-hooks/install.sh",
+    "postinstall": ".git-hooks/install.sh"
   },
   "dependencies": {
     "@vercel/analytics": "1.3.2",
