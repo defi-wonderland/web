@@ -6,12 +6,7 @@
         "name": "The Graph",
         "logo": "the-graph.jpg"
       },
-      "tags": [
-        "Architecture Design",
-        "Idea Generation",
-        "Off-Chain",
-        "Smart Contracts"
-      ],
+      "tags": ["Architecture Design", "Idea Generation", "Off-Chain", "Smart Contracts"],
       "content": {
         "challenge": {
           "title": "What was the challenge?",
@@ -19,16 +14,14 @@
         },
         "solution": {
           "title": "What is the solution?",
-          "description":  "We developed an optimistic version of EBO that maps blocks from various chains to epochs on Arbitrum One. This introduces an escalating bond mechanism to resolve disputes, reducing reliance on the single Arbitrator operator, improving security, and enabling decentralized operations with lower initial stakes."
+          "description": "We developed an optimistic version of EBO that maps blocks from various chains to epochs on Arbitrum One. This introduces an escalating bond mechanism to resolve disputes, reducing reliance on the single Arbitrator operator, improving security, and enabling decentralized operations with lower initial stakes."
         }
       },
       "status": "Completed",
       "links": {
         "website": [],
         "twitter": [],
-        "github": [
-          "https://github.com/defi-wonderland/EBO-core", "https://github.com/defi-wonderland/EBO-agent"
-        ],
+        "github": ["https://github.com/defi-wonderland/EBO-core", "https://github.com/defi-wonderland/EBO-agent"],
         "docs": []
       }
     },
@@ -38,14 +31,7 @@
         "name": "GEO",
         "logo": "geo.jpg"
       },
-      "tags": [
-        "Idea Generation",
-        "Research",
-        "Architecture Design",
-        "Development",
-        "Off-Chain",
-        "Smart Contracts"
-      ],
+      "tags": ["Idea Generation", "Research", "Architecture Design", "Development", "Off-Chain", "Smart Contracts"],
       "content": {
         "challenge": {
           "title": "What was the challenge?",
@@ -96,12 +82,7 @@
         "name": "Layer3",
         "logo": "layer3.jpg"
       },
-      "tags": [
-        "Architecture Design",
-        "Development",
-        "Off-Chain",
-        "Smart Contracts"
-      ],
+      "tags": ["Architecture Design", "Development", "Off-Chain", "Smart Contracts"],
       "content": {
         "challenge": {
           "title": "What was the challenge?",
@@ -114,9 +95,7 @@
       },
       "status": "In progress",
       "links": {
-        "website": [
-          "https://illalabs.io"
-        ],
+        "website": ["https://illalabs.io"],
         "twitter": [],
         "github": [],
         "docs": []
@@ -128,12 +107,7 @@
         "name": "Layer3",
         "logo": "layer3.jpg"
       },
-      "tags": [
-        "Architecture Design",
-        "Development",
-        "Smart Contracts",
-        "UI Development"
-      ],
+      "tags": ["Architecture Design", "Development", "Smart Contracts", "UI Development"],
       "content": {
         "challenge": {
           "title": "What was the challenge?",
@@ -158,10 +132,7 @@
         "name": "Aztec",
         "logo": "aztec.jpg"
       },
-      "tags": [
-        "Architecture Design",
-        "Smart Contracts"
-      ],
+      "tags": ["Architecture Design", "Smart Contracts"],
       "content": {
         "challenge": {
           "title": "What was the challenge?",
@@ -176,9 +147,7 @@
       "links": {
         "website": [],
         "twitter": [],
-        "github": [
-          "https://github.com/defi-wonderland/aztec-boilerplate"
-        ],
+        "github": ["https://github.com/defi-wonderland/aztec-boilerplate"],
         "docs": []
       }
     },
@@ -188,11 +157,7 @@
         "name": "Aztec",
         "logo": "aztec.jpg"
       },
-      "tags": [
-        "Architecture Design",
-        "Research",
-        "Smart Contracts"
-      ],
+      "tags": ["Architecture Design", "Research", "Smart Contracts"],
       "content": {
         "challenge": {
           "title": "What was the challenge?",
@@ -207,9 +172,7 @@
       "links": {
         "website": [],
         "twitter": [],
-        "github": [
-          "https://github.com/defi-wonderland/aztec-standards"
-        ],
+        "github": ["https://github.com/defi-wonderland/aztec-standards"],
         "docs": []
       }
     },
@@ -219,11 +182,7 @@
         "name": "Optimism",
         "logo": "optimism.jpg"
       },
-      "tags": [
-        "Architecture Design",
-        "Research",
-        "Smart Contracts"
-      ],
+      "tags": ["Architecture Design", "Research", "Smart Contracts"],
       "content": {
         "challenge": {
           "title": "What was the challenge?",
@@ -238,9 +197,7 @@
       "links": {
         "website": [],
         "twitter": [],
-        "github": [
-          "https://github.com/ethereum-optimism/design-docs/blob/main/protocol/eth-shared-lockbox.md"
-        ],
+        "github": ["https://github.com/ethereum-optimism/design-docs/blob/main/protocol/eth-shared-lockbox.md"],
         "docs": []
       }
     },
@@ -250,11 +207,7 @@
         "name": "Optimism",
         "logo": "optimism.jpg"
       },
-      "tags": [
-        "Architecture Design",
-        "Research",
-        "Smart Contracts"
-      ],
+      "tags": ["Architecture Design", "Research", "Smart Contracts"],
       "content": {
         "challenge": {
           "title": "What was the challenge?",
@@ -269,9 +222,7 @@
       "links": {
         "website": [],
         "twitter": [],
-        "github": [
-          "https://github.com/ethereum-optimism/design-docs/blob/main/protocol/fee-splitter.md"
-        ],
+        "github": ["https://github.com/ethereum-optimism/design-docs/blob/main/protocol/fee-splitter.md"],
         "docs": []
       }
     },
@@ -281,11 +232,7 @@
         "name": "Optimism",
         "logo": "optimism.jpg"
       },
-      "tags": [
-        "Architecture Design",
-        "Research",
-        "Smart Contracts"
-      ],
+      "tags": ["Architecture Design", "Research", "Smart Contracts"],
       "content": {
         "challenge": {
           "title": "What was the challenge?",
@@ -300,9 +247,7 @@
       "links": {
         "website": [],
         "twitter": [],
-        "github": [
-          "https://github.com/ethereum-optimism/design-docs/pull/260"
-        ],
+        "github": ["https://github.com/ethereum-optimism/design-docs/pull/260"],
         "docs": []
       }
     },
@@ -312,11 +257,7 @@
         "name": "Optimism",
         "logo": "optimism.jpg"
       },
-      "tags": [
-        "Architecture Design",
-        "Research",
-        "Smart Contracts"
-      ],
+      "tags": ["Architecture Design", "Research", "Smart Contracts"],
       "content": {
         "challenge": {
           "title": "What was the challenge?",
@@ -331,23 +272,17 @@
       "links": {
         "website": [],
         "twitter": [],
-        "github": [
-          "https://github.com/defi-wonderland/op-ref-tokens"
-        ],
+        "github": ["https://github.com/defi-wonderland/op-ref-tokens"],
         "docs": []
       }
-    },    
+    },
     {
       "name": "Custom Gas Token",
       "company": {
         "name": "Optimism",
         "logo": "optimism.jpg"
       },
-      "tags": [
-        "Architecture Design",
-        "Research",
-        "Smart Contracts"
-      ],
+      "tags": ["Architecture Design", "Research", "Smart Contracts"],
       "content": {
         "challenge": {
           "title": "What was the challenge?",
@@ -362,7 +297,10 @@
       "links": {
         "website": [],
         "twitter": [],
-        "github": ["https://github.com/ethereum-optimism/design-docs/blob/main/protocol/custom-gas-token.md?plain=1", "https://github.com/ethereum-optimism/optimism/pull/17412"],
+        "github": [
+          "https://github.com/ethereum-optimism/design-docs/blob/main/protocol/custom-gas-token.md?plain=1",
+          "https://github.com/ethereum-optimism/optimism/pull/17412"
+        ],
         "docs": []
       }
     },
@@ -372,11 +310,7 @@
         "name": "Optimism",
         "logo": "optimism.jpg"
       },
-      "tags": [
-        "Architecture Design",
-        "Research",
-        "Smart Contracts"
-      ],
+      "tags": ["Architecture Design", "Research", "Smart Contracts"],
       "content": {
         "challenge": {
           "title": "What was the challenge?",
@@ -391,9 +325,7 @@
       "links": {
         "website": [],
         "twitter": [],
-        "github": [
-          "https://github.com/defi-wonderland/opUSDC?tab=readme-ov-file"
-        ],
+        "github": ["https://github.com/defi-wonderland/opUSDC?tab=readme-ov-file"],
         "docs": []
       }
     },
@@ -403,12 +335,7 @@
         "name": "Optimism",
         "logo": "optimism.jpg"
       },
-      "tags": [
-        "Architecture Design",
-        "Idea Generation",
-        "Smart Contracts",
-        "UI Development"
-      ],
+      "tags": ["Architecture Design", "Idea Generation", "Smart Contracts", "UI Development"],
       "content": {
         "challenge": {
           "title": "What was the challenge?",
@@ -423,9 +350,7 @@
       "links": {
         "website": [],
         "twitter": [],
-        "github": [
-          "https://github.com/defi-wonderland/prophet-core"
-        ],
+        "github": ["https://github.com/defi-wonderland/prophet-core"],
         "docs": []
       }
     },
@@ -435,11 +360,7 @@
         "name": "Optimism",
         "logo": "optimism.jpg"
       },
-      "tags": [
-        "Architecture Design",
-        "Research",
-        "Smart Contracts"
-      ],
+      "tags": ["Architecture Design", "Research", "Smart Contracts"],
       "content": {
         "challenge": {
           "title": "What was the challenge?",
@@ -466,13 +387,7 @@
         "name": "Ethereum",
         "logo": "ethereum.jpg"
       },
-      "tags": [
-        "Architecture Design",
-        "Development",
-        "Research",
-        "Smart Contracts",
-        "UI Development"
-      ],
+      "tags": ["Architecture Design", "Development", "Research", "Smart Contracts", "UI Development"],
       "content": {
         "challenge": {
           "title": "What was the challenge?",
@@ -497,10 +412,7 @@
         "name": "Ethereum",
         "logo": "ethereum.jpg"
       },
-      "tags": [
-        "Off-Chain",
-        "Research"
-      ],
+      "tags": ["Off-Chain", "Research"],
       "content": {
         "challenge": {
           "title": "What was the challenge?",
@@ -548,7 +460,8 @@
         "website": [],
         "twitter": [],
         "github": [
-          "https://ethereum-magicians.org/t/erc-7930-interoperable-addresses/23365", "https://github.com/ethereum/L2-interop"
+          "https://ethereum-magicians.org/t/erc-7930-interoperable-addresses/23365",
+          "https://github.com/ethereum/L2-interop"
         ],
         "docs": []
       }
@@ -559,13 +472,7 @@
         "name": "0xBow",
         "logo": "0xbow.jpg"
       },
-      "tags": [
-        "Architecture Design",
-        "Development",
-        "Research",
-        "Smart Contracts",
-        "UI Development"
-      ],
+      "tags": ["Architecture Design", "Development", "Research", "Smart Contracts", "UI Development"],
       "content": {
         "challenge": {
           "title": "What was the challenge?",
@@ -578,9 +485,7 @@
       },
       "status": "In progress",
       "links": {
-        "website": [
-          "https://privacypools.com/"
-        ],
+        "website": ["https://privacypools.com/"],
         "twitter": [],
         "github": [],
         "docs": []
@@ -592,11 +497,7 @@
         "name": "Everclear (ex Connext)",
         "logo": "everclear-(ex-connext).jpg"
       },
-      "tags": [
-        "Architecture Design",
-        "Smart Contracts",
-        "UI Development"
-      ],
+      "tags": ["Architecture Design", "Smart Contracts", "UI Development"],
       "content": {
         "challenge": {
           "title": "What was the challenge?",
@@ -611,9 +512,7 @@
       "links": {
         "website": [],
         "twitter": [],
-        "github": [
-          "https://github.com/defi-wonderland/crosschain-widget"
-        ],
+        "github": ["https://github.com/defi-wonderland/crosschain-widget"],
         "docs": []
       }
     },
@@ -623,10 +522,7 @@
         "name": "Everclear (ex Connext)",
         "logo": "everclear-(ex-connext).jpg"
       },
-      "tags": [
-        "Architecture Design",
-        "Smart Contracts"
-      ],
+      "tags": ["Architecture Design", "Smart Contracts"],
       "content": {
         "challenge": {
           "title": "What was the challenge?",
@@ -641,9 +537,7 @@
       "links": {
         "website": [],
         "twitter": [],
-        "github": [
-          "https://github.com/defi-wonderland/xERC20"
-        ],
+        "github": ["https://github.com/defi-wonderland/xERC20"],
         "docs": ["https://www.xerc20.com/"]
       }
     },
@@ -653,12 +547,7 @@
         "name": "Everclear (ex Connext)",
         "logo": "everclear-(ex-connext).jpg"
       },
-      "tags": [
-        "Architecture Design",
-        "Idea Generation",
-        "Research",
-        "Smart Contracts"
-      ],
+      "tags": ["Architecture Design", "Idea Generation", "Research", "Smart Contracts"],
       "content": {
         "challenge": {
           "title": "What was the challenge?",
@@ -683,11 +572,7 @@
         "name": "Everclear (ex Connext)",
         "logo": "everclear-(ex-connext).jpg"
       },
-      "tags": [
-        "Idea Generation",
-        "Off-Chain",
-        "Smart Contracts"
-      ],
+      "tags": ["Idea Generation", "Off-Chain", "Smart Contracts"],
       "content": {
         "challenge": {
           "title": "What was the challenge?",
@@ -702,9 +587,7 @@
       "links": {
         "website": [],
         "twitter": [],
-        "github": [
-          "https://github.com/connext/monorepo/pull/4951/"
-        ],
+        "github": ["https://github.com/connext/monorepo/pull/4951/"],
         "docs": []
       }
     },
@@ -714,11 +597,7 @@
         "name": "Reflexer",
         "logo": "reflexer.jpg"
       },
-      "tags": [
-        "Refactoring",
-        "Research",
-        "Smart Contracts"
-      ],
+      "tags": ["Refactoring", "Research", "Smart Contracts"],
       "content": {
         "challenge": {
           "title": "What was the challenge?",
@@ -733,9 +612,7 @@
       "links": {
         "website": [],
         "twitter": [],
-        "github": [
-          "https://www.letsgethai.com/#/safes", "https://github.com/hai-on-op/core"
-        ],
+        "github": ["https://www.letsgethai.com/#/safes", "https://github.com/hai-on-op/core"],
         "docs": []
       }
     },
@@ -769,9 +646,7 @@
         "name": "Gitcoin",
         "logo": "gitcoin.jpg"
       },
-      "tags": [
-        "Research", "Smart Contracts"
-      ],
+      "tags": ["Research", "Smart Contracts"],
       "content": {
         "challenge": {
           "title": "What was the challenge?",
@@ -796,10 +671,7 @@
         "name": "Safe",
         "logo": "safe.jpg"
       },
-      "tags": [
-        "Architecture Design",
-        "Development"
-      ],
+      "tags": ["Architecture Design", "Development"],
       "content": {
         "challenge": {
           "title": "What was the challenge?",
@@ -814,9 +686,7 @@
       "links": {
         "website": [],
         "twitter": [],
-        "github": [
-          "https://github.com/defi-wonderland/safe-liveness"
-        ],
+        "github": ["https://github.com/defi-wonderland/safe-liveness"],
         "docs": []
       }
     },
@@ -850,9 +720,7 @@
         "name": "Corn",
         "logo": "corn.jpg"
       },
-      "tags": [
-        "Research", "Smart Contracts", "Development"
-      ],
+      "tags": ["Research", "Smart Contracts", "Development"],
       "content": {
         "challenge": {
           "title": "What was the challenge?",
@@ -877,10 +745,7 @@
         "name": "Corn",
         "logo": "corn.jpg"
       },
-      "tags": [
-        "Architecture Design",
-        "Development"
-      ],
+      "tags": ["Architecture Design", "Development"],
       "content": {
         "challenge": {
           "title": "What was the challenge?",
@@ -895,8 +760,7 @@
       "links": {
         "website": [],
         "twitter": [],
-        "github": [
-        ],
+        "github": [],
         "docs": []
       }
     }
@@ -1048,7 +912,10 @@
       "links": {
         "website": [],
         "twitter": [],
-        "github": ["https://github.com/defi-wonderland/canon-guard", "https://github.com/defi-wonderland/canon-guard-docs"]
+        "github": [
+          "https://github.com/defi-wonderland/canon-guard",
+          "https://github.com/defi-wonderland/canon-guard-docs"
+        ]
       }
     },
     {
