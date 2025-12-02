@@ -25,7 +25,7 @@ const __dirname = path.dirname(__filename);
 
 // Configuration
 const CONFIG = {
-  minSize: 500 * 1024, // Only optimize images larger than 500KB
+  minSize: 50 * 1024, // Only optimize images larger than 500KB
   quality: 90, // Quality setting (0-100). See OPTIMIZE_IMAGES.md for recommendations
   pngCompressionLevel: 9, // PNG compression (0-9, higher = smaller file)
   defaultDir: './public/img', // Default directory to optimize
