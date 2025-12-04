@@ -5,7 +5,7 @@ import ConsoleArt from './ConsoleArt';
 export const metadata: Metadata = {
   title: 'Wonderland',
   description:
-    'Wonderland is the leading core development group in Web3. We partner up with the best protocols in the world, including, among others: Optimism, Everclear, and Reflexer.',
+    'Wonderland is the leading core development group in Web3. We partner up with the best protocols in the world, including, among others: Optimism, Aztec, and Aerodrome.',
   keywords: 'Wonderland, Defi, decentralized finance, activist fund, ethereum, solidity, devs',
   robots: 'index, follow',
   openGraph: {
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     type: 'website',
     title: 'Wonderland',
     description:
-      'Wonderland is the leading core development group in Web3. We partner up with the best protocols in the world, including, among others: Optimism, Everclear, and Reflexer.',
+      'Wonderland is the leading core development group in Web3. We partner up with the best protocols in the world, including, among others: Optimism, Aztec, and Aerodrome.',
   },
 };
 
