@@ -10,7 +10,7 @@ interface MetadataProps {
 const CustomHead = ({ title, description, image, type }: MetadataProps) => {
   const descriptionText = description
     ? description
-    : 'Wonderland is the leading core development group in Web3. We partner up with the best protocols in the world, including, among others: Optimism, Everclear, and Reflexer.';
+    : 'Wonderland is the leading core development group in Web3. We partner up with the best protocols in the world, including, among others: Optimism, Aztec, and Aerodrome.';
 
   return (
     <Head>
