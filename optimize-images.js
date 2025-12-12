@@ -7,8 +7,8 @@
  * It uses the 'sharp' library to compress images while maintaining quality.
  *
  * Features:
- * - Optimizes images larger than 500KB
- * - Maintains high quality (90% quality setting)
+ * - Optimizes images larger than a configurable threshold
+ * - Maintains high quality (configurable quality setting)
  * - Creates backups automatically (removed after successful optimization)
  * - Provides detailed progress and summary statistics
  * - Recursively processes all subdirectories
@@ -25,7 +25,7 @@ const __dirname = path.dirname(__filename);
 
 // Configuration
 const CONFIG = {
-  minSize: 50 * 1024, // Only optimize images larger than 500KB
+  minSize: 50 * 1024, // Threshold in bytes (1024 bytes = 1 KB) - currently set to 50KB
   quality: 90, // Quality setting (0-100). See OPTIMIZE_IMAGES.md for recommendations
   pngCompressionLevel: 9, // PNG compression (0-9, higher = smaller file)
   defaultDir: './public/img', // Default directory to optimize
