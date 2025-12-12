@@ -1,0 +1,52 @@
+#!/bin/sh
+
+# Pre-commit hook: Optimize staged images before committing
+
+# Get list of staged image files in public/img/
+STAGED_IMAGES=$(git diff --cached --name-only --diff-filter=ACM | grep -E '^public/img/.*\.(png|jpe?g|webp|gif|bmp|tiff?)$' || true)
+
+# If no images are staged, skip
+if [ -z "$STAGED_IMAGES" ]; then
+  exit 0
+fi
+
+echo "🎨 Optimizing staged images..."
+echo ""
+
+# Create a temporary directory to store only staged images
+TEMP_DIR=$(mktemp -d)
+trap "rm -rf $TEMP_DIR" EXIT
+
+# Copy staged images to temp directory maintaining structure
+echo "$STAGED_IMAGES" | while read -r file; do
+  if [ -f "$file" ]; then
+    mkdir -p "$TEMP_DIR/$(dirname "$file")"
+    cp "$file" "$TEMP_DIR/$file"
+  fi
+done
+
+# Run optimization on the temp directory
+node optimize-images.js "$TEMP_DIR/public/img"
+
+# Get the exit code
+optimization_exit=$?
+
+if [ $optimization_exit -eq 0 ]; then
+  echo ""
+
+  # Copy optimized images back and re-stage them
+  echo "$STAGED_IMAGES" | while read -r file; do
+    if [ -f "$TEMP_DIR/$file" ]; then
+      cp "$TEMP_DIR/$file" "$file"
+      git add "$file"
+    fi
+  done
+
+  echo "✅ Staged images optimized and re-added to commit!"
+  echo ""
+  exit 0
+else
+  echo ""
+  echo "❌ Image optimization failed. Commit cancelled."
+  exit 1
+fi

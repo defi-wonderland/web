@@ -30,7 +30,7 @@ export default function QuotesCarousel() {
           <QuoteCard key={quote.author.name} data-previous={i === selectedItem - 1} data-next={i === selectedItem + 1}>
             <Quote>{quote.text}</Quote>
             <Divider />
-            <AuthorContainer href={quote.link} target='_blank'>
+            <AuthorContainer href={quote.link} target='_blank' $disabled={i !== selectedItem}>
               <img className='avatar' src={quote.author.avatar} alt={`${quote.author.name} avatar`} />
               <TextContainer>
                 <Text>
@@ -88,6 +88,7 @@ const CarouselContainer = styled(Carousel)`
       width: 4.5rem;
       height: 4.5rem;
       border-radius: 50%;
+      object-fit: cover;
     }
 
     &.logo {
@@ -230,13 +231,14 @@ const Divider = styled.div`
   margin: 3rem 0 2rem;
 `;
 
-const AuthorContainer = styled.a`
+const AuthorContainer = styled.a<{ $disabled: boolean }>`
   width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 2rem;
   text-decoration: none;
+  pointer-events: ${({ $disabled }) => ($disabled ? 'none' : 'auto')};
 `;
 
 const TextContainer = styled.div`
