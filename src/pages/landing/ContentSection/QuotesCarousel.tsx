@@ -88,6 +88,7 @@ const CarouselContainer = styled(Carousel)`
       width: 4.5rem;
       height: 4.5rem;
       border-radius: 50%;
+      object-fit: cover;
     }
 
     &.logo {
