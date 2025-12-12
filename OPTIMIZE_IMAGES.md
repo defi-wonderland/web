@@ -18,15 +18,17 @@ node optimize-images.js ./public/img/pfp
 **That's it!** The script automatically:
 
 - 🔍 Finds all PNG and JPG images
-- 📏 Identifies those larger than 500KB
-- 🗜️ Compresses them maintaining 90% quality
+- 📏 Identifies those larger than the configured threshold
+- 🗜️ Compresses them maintaining high quality
+- 🛡️ Only keeps optimized versions if they're smaller than the original
 - 💾 Shows you how much space you saved
 
 ## ✨ Features
 
 - ✅ Automatically optimizes PNG and JPG images
-- ✅ Only processes images larger than 500KB
-- ✅ Maintains high quality (90%)
+- ✅ Only processes images larger than the configured threshold
+- ✅ Maintains high quality (configurable)
+- ✅ Smart optimization: only replaces images if optimized version is smaller
 - ✅ Creates automatic backups during the process
 - ✅ Recursively processes all subfolders
 - ✅ Shows detailed space saving statistics
@@ -149,7 +151,8 @@ The script is safe to use:
 
 - ✅ Creates backups before modifying each image
 - ✅ Automatically restores if there are errors
-- ✅ Doesn't modify files smaller than 500KB
+- ✅ Doesn't modify files smaller than the configured threshold
+- ✅ Only keeps optimized versions if they result in smaller file size
 - ✅ Only processes PNG and JPG
 
 ## 💡 Tips
@@ -222,7 +225,7 @@ Increase the `quality` value in the configuration (e.g., 95)
 
 - The script preserves folder structure
 - `.svg` files are not processed (they're already optimal)
-- Already optimized images (<500KB) are automatically skipped
+- Already optimized images (below threshold) are automatically skipped
 - Processing times depend on size and quantity of images
 
 ---

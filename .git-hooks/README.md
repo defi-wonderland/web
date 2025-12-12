@@ -45,4 +45,4 @@ git commit --no-verify
 - These hooks are stored in `.git-hooks/` (version controlled)
 - They need to be installed to `.git/hooks/` to work (not version controlled)
 - Team members get hooks automatically installed after `npm install` or `yarn install`
-- The hook only processes images larger than 500KB
+- The hook only processes images larger than a configurable threshold (see `optimize-images.js`)
