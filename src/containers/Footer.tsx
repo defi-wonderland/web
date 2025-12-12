@@ -52,7 +52,7 @@ const Footer = () => {
             </span>
 
             <SocialIcons>
-              <SocialIcon to='https://twitter.com/defi_wonderland' external>
+              <SocialIcon to='https://twitter.com/Wonderland' external>
                 <img src={TwitterIcon.src} alt='Twitter icon' loading='lazy' />
               </SocialIcon>
               <SocialIcon to='https://github.com/defi-wonderland' external>
