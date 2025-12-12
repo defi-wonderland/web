@@ -7,7 +7,7 @@
 <div align="center">
 
 **[Website](https://wonderland.xyz/) •
-[Twitter](https://twitter.com/DeFi_Wonderland) •
+[Twitter](https://twitter.com/Wonderland) •
 [Github](https://github.com/defi-wonderland)**
 
 </div>
