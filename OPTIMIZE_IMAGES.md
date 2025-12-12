@@ -18,15 +18,15 @@ node optimize-images.js ./public/img/pfp
 **That's it!** The script automatically:
 
 - 🔍 Finds all PNG and JPG images
-- 📏 Identifies those larger than the configured threshold
-- 🗜️ Compresses them maintaining high quality
+- 📏 Identifies those larger than 500KB
+- 🗜️ Compresses them maintaining 90% quality
 - 💾 Shows you how much space you saved
 
 ## ✨ Features
 
 - ✅ Automatically optimizes PNG and JPG images
-- ✅ Only processes images larger than the configured threshold
-- ✅ Maintains high quality (configurable)
+- ✅ Only processes images larger than 500KB
+- ✅ Maintains high quality (90%)
 - ✅ Creates automatic backups during the process
 - ✅ Recursively processes all subfolders
 - ✅ Shows detailed space saving statistics
@@ -77,7 +77,7 @@ You can adjust the configuration by editing the constants in `optimize-images.js
 
 ```javascript
 const CONFIG = {
-  minSize: 50 * 1024, // Threshold in bytes (1024 bytes = 1 KB)
+  minSize: 500 * 1024, // Minimum size (500KB default)
   quality: 90, // Quality 0-100 (90 default)
   pngCompressionLevel: 9, // PNG compression 0-9 (9 default)
   defaultDir: './public/img', // Default folder
@@ -115,12 +115,12 @@ The script shows detailed information during execution:
 🖼️  Image Optimization Script
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 📁 Target directory: /Users/.../public/img
-📏 Min file size: 50KB
+📏 Min file size: 500KB
 🎨 Quality setting: 90%
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 🔍 Found 198 images
-🎯 Optimizing images larger than 50KB...
+🎯 Optimizing images larger than 500KB...
 
 🔄 Processing pfp/Cooki.png (1.69MB)...
 ✅ pfp/Cooki.png: 1.69MB → 481KB (72.3% reduction)
@@ -131,7 +131,7 @@ The script shows detailed information during execution:
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
    📂 Total images scanned: 198
    ✅ Images optimized: 11
-   ⏭️ Images skipped (below threshold): 187
+   ⏭️ Images skipped (<500KB): 187
    💾 Total space saved: 8.45MB
    📉 Average reduction: 68.7%
 
@@ -149,7 +149,7 @@ The script is safe to use:
 
 - ✅ Creates backups before modifying each image
 - ✅ Automatically restores if there are errors
-- ✅ Doesn't modify files smaller than the configured threshold
+- ✅ Doesn't modify files smaller than 500KB
 - ✅ Only processes PNG and JPG
 
 ## 💡 Tips
@@ -175,7 +175,7 @@ npm run optimize-images
 
 ### Optimize newly added images
 
-If you added new heavy images, simply run the script again. It will only process those larger than the configured threshold.
+If you added new heavy images, simply run the script again. It will only process those larger than 500KB.
 
 ```bash
 npm run optimize-images
@@ -222,7 +222,7 @@ Increase the `quality` value in the configuration (e.g., 95)
 
 - The script preserves folder structure
 - `.svg` files are not processed (they're already optimal)
-- Already optimized images (below threshold) are automatically skipped
+- Already optimized images (<500KB) are automatically skipped
 - Processing times depend on size and quantity of images
 
 ---
