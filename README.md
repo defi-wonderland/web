@@ -23,25 +23,25 @@ DeFi sucks, but we are here to make it better.
 ```sh
 git clone git@github.com:defi-wonderland/web.git
 cd web
-yarn
+pnpm i
 ```
 
 ## Development:
 
 ```bash
-yarn dev
+pnpm dev
 ```
 
-The app should be live at [http://localhost:5173/](http://localhost:5173/)
+The app should be live at [http://localhost:3000/](http://localhost:3000/)
 
 ## Production
 
 ```
-yarn build
-yarn start
+pnpm build
+pnpm start
 ```
 
-The app should be live at [http://localhost:4173/](http://localhost:4173/)
+The app should be live at [http://localhost:3000/](http://localhost:3000/)
 
 ## Blog Management
 
