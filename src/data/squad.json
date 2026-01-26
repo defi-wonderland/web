@@ -342,16 +342,10 @@
     "description": "- Software engineer deep into defi and privacy\n- Bass player learning drums\n- Loves football and asados\n\nFun fact: ambidextrous playing football"
   },
   {
-    "name": "Edna",
-    "position": "Operations - Office Manager",
-    "image": "/img/pfp/Edna.png",
-    "description": "- Colombian–Argentine with a degree in International Relations and Political Science.\n- New to the industry; learns at warp speed.\n- Need a favor or a fix? Consider it handled.\n- More humorous than she lets on.\n\nFun fact: Sounds even sharper in Spanish."
-  },
-  {
-    "name": "Meldsun",
+    "name": "Neo",
     "position": "Offchain - Developer",
-    "image": "/img/pfp/Meldsun.png",
-    "description": "- Backend Developer\n- Blockchain curious\n- Padel & ping-pong player\n\nFun fact: Failed vegetarian"
+    "image": "/img/pfp/Neo.png",
+    "description": "- Love sports and competitions\n- Grew up in Ohio *insert ohio memes*\n- Newly trained Rustacean\n\nFun fact: I just discovered Turrón"
   },
   {
     "name": "Fiboape",
