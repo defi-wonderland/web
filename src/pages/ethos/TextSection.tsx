@@ -76,6 +76,12 @@ const RightSection = styled(LoreSection)`
 const PrimaryText = styled.p`
   font-size: 2rem;
   text-transform: uppercase;
+  margin-top: 2.4rem;
+  margin-bottom: 0.8rem;
+
+  &:first-child {
+    margin-top: 0;
+  }
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     font-size: ${FONT_SIZE_18};
@@ -84,7 +90,6 @@ const PrimaryText = styled.p`
 
 export const SecondaryText = styled.span`
   font-size: 2.2rem;
-  padding-top: 1rem;
 
   & b {
     font-weight: bold;
@@ -147,15 +152,31 @@ function TextSection() {
       <LeftSection>
         <LoreSectionArticle title='Our values'>
           <div>
-            <PrimaryText>Building together</PrimaryText>
-
+            <PrimaryText>Curiosity without ceiling</PrimaryText>
             <SecondaryText>
-              We champion public good creation and believe in the invincibility of protocols backed by the right talent
-              and incentives. We deeply believe in fostering a supportive community, where collaboration trumps
-              competition, and building together is the norm, not the exception.
+              We go deeper than anyone else is willing to go. The more unknown the territory, the more interested we
+              are.
             </SecondaryText>
 
-            <SecondaryText>Long term, long term, long term…</SecondaryText>
+            <PrimaryText>Rigor meets wonder</PrimaryText>
+            <SecondaryText>
+              We hold two things at once: the discipline of engineering and the instinct to ask what if. Neither cancels
+              the other out.
+            </SecondaryText>
+
+            <PrimaryText>Earned confidence</PrimaryText>
+            <SecondaryText>
+              We say what we know, know what we don&apos;t, and never pretend otherwise. Our credibility is the work.
+            </SecondaryText>
+
+            <PrimaryText>Own the outcome, build to last</PrimaryText>
+            <SecondaryText>
+              We are accountable for what we build. We stay involved and build systems meant to last.
+            </SecondaryText>
+
+            <PrimaryText>Work hard, stay human</PrimaryText>
+            <SecondaryText>We communicate directly, understand context, and take care of each other.</SecondaryText>
+
             <SLink to='https://apply.wonderland.xyz/' external>
               <Button>Join us</Button>
             </SLink>
