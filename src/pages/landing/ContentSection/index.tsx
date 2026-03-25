@@ -45,7 +45,6 @@ export default function LandingContent() {
       </FirstTitle>
 
       <FirstBlockContainer>
-        <QuotesCarousel />
         <HorizontalLayout>
           <RightCard />
           <IllustrationsContainer>
@@ -53,6 +52,7 @@ export default function LandingContent() {
             <Ring src={RingIllustration.src} />
           </IllustrationsContainer>
         </HorizontalLayout>
+        <QuotesCarousel />
       </FirstBlockContainer>
 
       <Divider>
