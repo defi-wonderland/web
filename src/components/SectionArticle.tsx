@@ -194,11 +194,13 @@ const StyledSectionArticle = styled.div<{ center?: boolean }>`
     }
 
     &:last-child {
-      text-align: right;
+      text-align: justify;
+      text-align-last: right;
       padding-right: 3rem;
 
       ${ArticleTitle} {
         align-self: flex-end;
+        text-align: right;
 
         &:after {
           right: -3rem;

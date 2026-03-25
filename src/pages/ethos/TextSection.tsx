@@ -137,9 +137,9 @@ function TextSection() {
         <LoreSectionArticle title='Our mission'>
           <div>
             <SecondaryText>
-              Our mission is to discover, partner, and empower innovators in the creation of open, permissionless, and
-              decentralized financial solutions.{' '}
-              <b>Our pledge is to stand by our partners, supporting them in every way we can.</b>
+              Our mission is to make sure the most ambitious ideas in the world are not limited by technology. Ideas are
+              abundant. What&apos;s scarce is the ability to build what has never been built before. That&apos;s what
+              Wonderland brings to the table.
             </SecondaryText>
 
             <SLink to='/creations'>
