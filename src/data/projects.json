@@ -77,6 +77,31 @@
       }
     },
     {
+      "name": "Jolt Verifier Transpilation",
+      "company": {
+        "name": "a16z",
+        "logo": "a16z.jpg"
+      },
+      "tags": ["Applied Cryptography", "Architecture Design", "Development", "Research"],
+      "content": {
+        "challenge": {
+          "title": "What was the challenge?",
+          "description": "zkVM proofs are too large for cost-effective on-chain verification. And porting a verifier to a different language or proof system has always been a manual, error-prone process - teams must hand-write and maintain duplicate implementations that easily fall out of sync with the original, redoing the work from scratch for each new target."
+        },
+        "solution": {
+          "title": "What is the solution?",
+          "description": "We built a generic transpilation pipeline that automatically converts Rust verifiers into any target language or system. The pipeline uses symbolic execution to record every verifier operation into a target-agnostic intermediate representation, which different code generation backends can consume to produce output in their respective languages. The first application targets Jolt's zkVM verifier: the pipeline transpiles all seven sumcheck stages into a gnark Groth16 circuit, compressing proofs from kilobytes down to 164 bytes suitable for on-chain verification."
+        }
+      },
+      "status": "In progress",
+      "links": {
+        "website": ["https://jolt.a16zcrypto.com/"],
+        "twitter": ["https://x.com/a16zcrypto"],
+        "github": ["https://github.com/a16z/jolt/pull/1322"],
+        "docs": []
+      }
+    },
+    {
       "name": "ILLA",
       "company": {
         "name": "Layer3",
