@@ -37,20 +37,20 @@ export default function LandingContent() {
         <BG_1 type='1' align='center' />
       </BackgroundContainer>
       <Star src={StarIcon.src} />
+      <HorizontalLayout>
+        <RightCard />
+        <IllustrationsContainer>
+          <Cone src={ConeIllustration.src} />
+          <Ring src={RingIllustration.src} />
+        </IllustrationsContainer>
+      </HorizontalLayout>
       <FirstTitle>
         <Star src={MobileStar.src} />
-        We choose who we build with <br />
-        Then we go all the way
+        We choose who we build with. <br />
+        Then we go all the way.
       </FirstTitle>
 
       <FirstBlockContainer>
-        <HorizontalLayout>
-          <RightCard />
-          <IllustrationsContainer>
-            <Cone src={ConeIllustration.src} />
-            <Ring src={RingIllustration.src} />
-          </IllustrationsContainer>
-        </HorizontalLayout>
         <QuotesCarousel />
       </FirstBlockContainer>
 
@@ -134,6 +134,7 @@ const LandingContainer = styled.section`
   position: relative;
   display: grid;
   grid-template-areas:
+    'approach approach'
     'star title'
     'empty firstBlock'
     'empty landingDivider'
@@ -217,18 +218,10 @@ const FirstBlockContainer = styled.div`
   height: 100%;
   border-left: 1px solid rgba(255, 255, 255, 0.5);
   grid-area: firstBlock;
-
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 8rem;
   padding: 4rem 8rem 8rem;
 
   @media screen and (max-width: ${TABLET_MAX_WIDTH}) {
-    flex-direction: column;
     border-left: none;
-    gap: 6rem;
     padding: 4rem 0 8rem;
   }
 
@@ -238,21 +231,28 @@ const FirstBlockContainer = styled.div`
 `;
 
 const HorizontalLayout = styled.div`
+  grid-area: approach;
   width: 100%;
   display: flex;
   flex-direction: row;
   gap: 2rem;
   align-items: center;
   justify-content: space-between;
+  padding: 4rem 8rem;
+  margin-bottom: 4rem;
 
   & > * {
     flex: 1;
   }
 
+  @media screen and (max-width: ${TABLET_MAX_WIDTH}) {
+    padding: 4rem 0;
+  }
+
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
-    flex-direction: column-reverse;
+    flex-direction: column;
     gap: 4rem;
-    padding: 0 2rem;
+    padding: 2.4rem 2rem;
   }
 `;
 
