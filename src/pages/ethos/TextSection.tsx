@@ -109,14 +109,17 @@ export const FirstLoreSectionArticle = styled(LoreSectionArticle)`
 function TextSection() {
   return (
     <>
-      <LeftSection>
+      <RightSection>
+        <SectionBackground type='4' align='left' />
+
+        <Ring type='2' />
+
         <FirstLoreSectionArticle title='Who we are'>
           <div>
-            <PrimaryText>&quot;&apos;Who in the world am I?&apos; Ah, that&apos;s the great puzzle!&quot;</PrimaryText>
-
             <SecondaryText>
-              We&apos;re a group of developers, researchers, data scientists, investors, and executive leaders. We have
-              something in common though, we all love building cool sh*t.
+              We&apos;re a team of engineers, researchers, data scientists, investors and leaders who go deeper than
+              most are willing to go. Different backgrounds, one thing in common: an obsession with building the
+              impossible, right.
             </SecondaryText>
 
             <SLink to='/squad'>
@@ -124,13 +127,35 @@ function TextSection() {
             </SLink>
           </div>
         </FirstLoreSectionArticle>
+      </RightSection>
+
+      <LeftSection>
+        <LoreSectionArticle title='What we do'>
+          <div>
+            <SecondaryText>
+              Wonderland focuses on foundational engineering for frontier technologies, with deep expertise in applied
+              cryptography. We work on the hardest technical problems alongside teams we believe in and stay involved
+              for the long term.
+            </SecondaryText>
+
+            <SecondaryText>
+              We&apos;ve worked across privacy, DeFi, bridges, L2s, payments, AI, and stablecoins. We go where new
+              primitives need to be defined.
+            </SecondaryText>
+
+            <SLink to='/creations'>
+              <Button>Creations</Button>
+            </SLink>
+          </div>
+        </LoreSectionArticle>
+
         <Ring type='1' />
 
-        <SectionBackground type='4' align='right' />
+        <SectionBackground type='1' align='right' />
       </LeftSection>
 
       <RightSection>
-        <SectionBackground type='1' align='left' />
+        <SectionBackground type='3' align='left' />
 
         <Ring type='2' />
 
