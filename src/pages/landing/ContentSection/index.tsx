@@ -40,7 +40,8 @@ export default function LandingContent() {
       <Star src={StarIcon.src} />
       <FirstTitle>
         <Star src={MobileStar.src} />
-        It’s all about our partners…
+        We choose who we build with <br />
+        Then we go all the way
       </FirstTitle>
 
       <FirstBlockContainer>
