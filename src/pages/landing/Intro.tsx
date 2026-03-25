@@ -10,7 +10,9 @@ import Navbar from '~/containers/Navbar';
 import Intro from './ContentSection/IntroMask';
 import StyledPageView from '~/components/StyledPageView';
 
-const LandingContainer = styled.div``;
+const LandingContainer = styled.div`
+  overflow-x: hidden;
+`;
 
 export default function IntroductionPage() {
   const [isIntroLoaded, setIsIntroLoaded] = useState(false);
