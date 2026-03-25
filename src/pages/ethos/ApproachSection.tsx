@@ -77,6 +77,12 @@ const StyledApproachSection = styled(Section)`
   }
 `;
 
+const PillarTitle = styled.strong`
+  display: block;
+  font-size: 2.2rem;
+  margin-bottom: 0.8rem;
+`;
+
 export const SecondaryText = styled.span`
   font-size: 2.2rem;
 `;
@@ -86,16 +92,17 @@ const ApproachSection: FC = ({ ...props }) => {
     <StyledApproachSection {...props}>
       <SectionBackground type='2' align='center' />
 
-      <ApproachArticle title='OUR APPROACH' center>
-        <ApproachTitle>The three pillars we build on:</ApproachTitle>
+      <ApproachArticle title='HOW WE WORK' center>
+        <ApproachTitle>The Three Pillars we Build On:</ApproachTitle>
 
         <ApproachSteps>
           <Step>
             <StepNumber>1</StepNumber>
             <p>
+              <PillarTitle>Excellence is the floor, not the ceiling</PillarTitle>
               <SecondaryText>
-                Open-Source: We believe in transparency, accessibility, and collaboration, and this is best embodied by
-                an open-source approach.
+                We don&apos;t ship to spec. We ship to a standard, one we set for ourselves. Good enough is not good
+                enough.
               </SecondaryText>
             </p>
           </Step>
@@ -103,9 +110,9 @@ const ApproachSection: FC = ({ ...props }) => {
           <Step>
             <StepNumber>2</StepNumber>
             <p>
+              <PillarTitle>Efficiency without shortcuts</PillarTitle>
               <SecondaryText>
-                Decentralization: We champion a system where no single entity has control, leading to a more secure and
-                fair environment.
+                Speed matters. So does not having to redo the work in six months. We move fast by being precise.
               </SecondaryText>
             </p>
           </Step>
@@ -113,9 +120,11 @@ const ApproachSection: FC = ({ ...props }) => {
           <Step>
             <StepNumber>3</StepNumber>
             <p>
+              <PillarTitle>Security as a first principle</PillarTitle>
               <SecondaryText>
-                Permissionless: We advocate for a world where anyone, anywhere can participate without the need for an
-                intermediary or permission from an authority.
+                Security is not a final review or a box to check. It is the lens through which we design everything.
+                When we build systems that carry real stakes, we treat every assumption as a potential vulnerability
+                until proven otherwise.
               </SecondaryText>
             </p>
           </Step>
