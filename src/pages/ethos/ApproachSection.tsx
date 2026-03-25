@@ -123,8 +123,6 @@ const ApproachSection: FC = ({ ...props }) => {
               <PillarTitle>Security as a first principle</PillarTitle>
               <SecondaryText>
                 Security is not a final review or a box to check. It is the lens through which we design everything.
-                When we build systems that carry real stakes, we treat every assumption as a potential vulnerability
-                until proven otherwise.
               </SecondaryText>
             </p>
           </Step>
