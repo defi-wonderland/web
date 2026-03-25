@@ -139,7 +139,7 @@ function TextSection() {
             </SecondaryText>
 
             <SecondaryText>
-              We&apos;ve worked across privacy, DeFi, bridges, L2s, payments, AI, and stablecoins. We go where new
+              We&apos;ve worked across privacy, DeFi, bridges, L2s, payments, AI, and stablecoins. We go wherever new
               primitives need to be defined.
             </SecondaryText>
 
