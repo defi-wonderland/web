@@ -13,7 +13,6 @@ import {
 import { SLink } from '~/components';
 import ProjectsList from '~/pages/creations/ProjectsList';
 import RightCard from './RightCard';
-import Squad from './SquadSection';
 import QuotesCarousel from './QuotesCarousel';
 
 import projectsData from '~/data/projects.json';
@@ -63,12 +62,6 @@ export default function LandingContent() {
 
       <SecondBlockContainer>
         <ProjectsList projects={projectHighlights} />
-
-        <SLink to='/creations'>
-          <SButton>Learn More</SButton>
-        </SLink>
-
-        <Squad />
       </SecondBlockContainer>
 
       <Icon src={Flower.src} />
@@ -76,8 +69,8 @@ export default function LandingContent() {
         <div>
           <Icon src={Flower.src} />
         </div>
-        <SLink to='/squad'>
-          <CommunityButton>Meet the squad</CommunityButton>
+        <SLink to='/creations'>
+          <CommunityButton>Learn More</CommunityButton>
         </SLink>
       </SecondTitle>
     </LandingContainer>
@@ -335,14 +328,6 @@ const DividerText = styled.p`
     text-align: start;
     font-size: 6.4rem;
     padding: 2.4rem 3rem;
-  }
-`;
-
-const SButton = styled(Button)`
-  margin: 4.5rem 8rem 5rem auto;
-
-  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
-    margin: 6rem auto;
   }
 `;
 

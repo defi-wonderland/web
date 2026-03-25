@@ -153,6 +153,7 @@ button {
 
 .intro-not-loaded {
   height: 98dvh;
+  overflow: hidden;
 }
 
 @media screen and (max-width: 600px) {
@@ -192,17 +193,13 @@ img {
 .hide-intro {
   opacity: 0;
   transition: opacity 800ms;
-  display: none;
+  pointer-events: none;
 }
 
 @media screen and (max-width: 600px) {
   #show {
     background-image: linear-gradient(to bottom, rgba(14, 21, 44, 0.85) 90%, rgba(14, 21, 44, 0) 100%);
     padding-bottom: 4rem;
-  }
-
-  .hide-intro {
-    transition-delay: 800ms;
   }
 }
 
