@@ -23,7 +23,7 @@ import RingIllustration from '~/assets/landing_ring.png';
 import MobileStar from '~/assets/ethos-stars.svg';
 import Flower from '~/assets/flower.svg';
 
-const highlights = ['Custom Gas Token', 'Interop', 'Aztec Standards', 'Distributor', 'Canon Guard'];
+const highlights = ['Custom Gas Token', 'Interop Standards & Working Groups', 'Aztec Standards', 'Distributor', 'Canon Guard'];
 
 const allProjects = [...(projectsData.partners || []), ...(projectsData.publicGoods || [])];
 
