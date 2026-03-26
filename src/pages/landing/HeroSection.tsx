@@ -1,17 +1,23 @@
 import styled from 'styled-components';
 
-import { Section, MOBILE_MAX_WIDTH, FONT_MEDIUM_L } from '~/components';
+import { Section, MOBILE_MAX_WIDTH, SquigglyTitle } from '~/components';
 
 const HeroSection = ({ ...props }) => {
   return (
     <>
       <StyledHeroSection full backgroundImage='/img/hero/hero-bg.jpg' {...props}>
         <TitleContainer>
-          <HeroLogo src='/img/wonder-logo-text.svg' alt='Wonderland' />
-          <HeroSubtitle>
-            Foundational engineering
-            <MobileBr /> for frontier technologies
-          </HeroSubtitle>
+          <SquigglyTitle
+            text={`Foundational engineering\nfor frontier tech`}
+            sizes={{
+              lg: '14rem',
+              md: '11.1rem',
+              sm: '4rem',
+              lgvw: '10vw',
+              mdvw: '11vw',
+              smvw: '13vw',
+            }}
+          />
         </TitleContainer>
 
         <HeroDivider src='/img/hero/hero-bg-divider.png' />
@@ -43,10 +49,8 @@ const StyledHeroSection = styled(Section)`
 export const TitleContainer = styled.div`
   width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  margin-top: 10rem;
+  margin-top: 8rem;
 
   position: absolute;
   width: 100%;
@@ -56,38 +60,5 @@ export const TitleContainer = styled.div`
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     margin-top: 4rem;
     top: 10rem;
-  }
-`;
-
-const HeroLogo = styled.img`
-  width: 70rem;
-  max-width: 80%;
-  height: auto;
-
-  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
-    width: 30rem;
-  }
-`;
-
-const MobileBr = styled.br`
-  display: none;
-
-  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
-    display: block;
-  }
-`;
-
-const HeroSubtitle = styled.p`
-  font-family: ${FONT_MEDIUM_L};
-  font-size: 2.4rem;
-  color: white;
-  margin-top: 3rem;
-  text-align: center;
-  letter-spacing: 0.05em;
-
-  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
-    font-size: 1.6rem;
-    margin-top: 2rem;
-    padding: 0 2rem;
   }
 `;
