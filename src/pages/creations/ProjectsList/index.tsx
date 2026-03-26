@@ -35,8 +35,8 @@ export interface Project {
       description: string;
     };
     solution: {
-      title: string;
-      description: string;
+      title?: string;
+      description?: string;
     };
   };
   status: string;
@@ -90,8 +90,13 @@ export default function ProjectsList({ projects = [] }: ProjectListProps) {
               <DescriptionContainer>
                 <DescriptionTitle>{project.content.challenge.title}</DescriptionTitle>
                 <DescriptionParagraph>{project.content.challenge.description}</DescriptionParagraph>
-                <DescriptionTitle>{project.content.solution.title}</DescriptionTitle>
-                <DescriptionParagraph>{project.content.solution.description}</DescriptionParagraph>
+
+                {project.content.solution.title && (
+                  <>
+                    <DescriptionTitle>{project.content.solution.title}</DescriptionTitle>
+                    <DescriptionParagraph>{project.content.solution.description}</DescriptionParagraph>
+                  </>
+                )}
               </DescriptionContainer>
 
               <StatusTag>{project.status}</StatusTag>
