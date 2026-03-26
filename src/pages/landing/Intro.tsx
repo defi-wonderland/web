@@ -11,7 +11,7 @@ import Intro from './ContentSection/IntroMask';
 import StyledPageView from '~/components/StyledPageView';
 
 const LandingContainer = styled.div`
-  overflow-x: hidden;
+  overflow: hidden;
 `;
 
 export default function IntroductionPage() {
