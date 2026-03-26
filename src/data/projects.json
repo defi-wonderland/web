@@ -44,8 +44,8 @@
       },
       "status": "In progress",
       "links": {
-        "website": [],
-        "twitter": [],
+        "website": ["https://www.geobrowser.io/"],
+        "twitter": ["https://x.com/geoprotocol"],
         "github": [
           "https://github.com/graphprotocol/graph-improvement-proposals/blob/main/grcs/0020-knowledge-graph.md"
         ],
