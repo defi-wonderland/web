@@ -445,50 +445,65 @@
         },
         "solution": {
           "title": "What is the solution?",
-          "description": "We wrote ERC-7930, defining an extensible binary format to refer to an address specific to one chain, and co-authored ERC-7828, to make those interoperable addresses human-readable via ENS. We collaborated with the Ethereum Foundation, as well as stakeholders and teams across the Ethereum ecosystem to establish this as the ecosystem\u2019s preferred approach for interoperable addresses. It is a foundational part of the https://www.openintents.xyz/, and we built an SDK for ease of use by wallet and app developers."
+          "description": "We wrote ERC-7930, defining an extensible binary format to refer to an address specific to one chain, and co-authored ERC-7828, to make those interoperable addresses human-readable via ENS, as well as participating in the design of an onchain registry of chain metadata, leveraging a custom ENS resolver and a \"first of its kind\" two-letter ENS name (on.eth). We collaborated with the Ethereum Foundation, as well as stakeholders and teams across the Ethereum ecosystem to establish this as the ecosystem\u2019s preferred approach for interoperable addresses."
         }
       },
       "status": "In progress",
       "links": {
-        "website": ["https://www.openintents.xyz/"],
+        "website": ["https://www.interopaddress.com"],
         "twitter": [],
-        "github": ["https://github.com/ethereum/L2-interop"],
-        "docs": ["https://docs.openintents.xyz/"]
+        "github": [],
+        "docs": []
       }
     },
     {
-      "name": "Interop",
+      "name": "Interop Standards & Working Groups",
       "company": {
         "name": "Ethereum",
         "logo": "ethereum.jpg"
       },
-      "tags": [
-        "Architecture Design",
-        "Development",
-        "Idea Generation",
-        "Research",
-        "Smart Contracts",
-        "UI Development"
-      ],
+      "tags": ["Idea Generation", "Research"],
       "content": {
         "challenge": {
           "title": "What was the challenge?",
-          "description": "Ethereum\u2019s rollup-centric roadmap has unlocked scalability, but at the cost of fragmentation. Liquidity, UX, and developer tooling are now fractured across chains. To enable seamless cross-chain experiences, shared standards are essential."
+          "description": "Ethereum\u2019s rollup-centric roadmap has unlocked scalability, but at the cost of fragmentation. Liquidity, UX, and developer tooling are now fractured across chains. To enable seamless cross-chain experiences, open standards and tooling is essential."
         },
         "solution": {
           "title": "What is the solution?",
-          "description": "We are joining forces with the Interop Working Group, led by the Ethereum Foundation, to accelerate interoperability through standardization and system design, guided by a spirit of collaboration. We have authored ERC-7930 and CAIP-350 to establish a global format for chain-specific addresses. In parallel, we are actively contributing to ERC-7828, ERC-7683, and other cross-chain standards. We are also contributing to The Open Intents Framework, a dedicated working group focused on developing tools to democratize access to intent-based products."
+          "description": "We joined the Interop Working Group, led by the Ethereum Foundation, to accelerate interoperability through standardization and system design. As well as our work on Interoperable Addresses, we are actively contributing to ERC-7683 and contributing to The Open Intents Framework, a dedicated working group focused on developing specifications and tools to democratize access to intents on Ethereum."
+        }
+      },
+      "status": "In progress",
+      "links": {
+        "website": ["https://openintents.xyz"],
+        "twitter": [],
+        "github": [],
+        "docs": []
+      }
+    },
+    {
+      "name": "Interop SDK",
+      "company": {
+        "name": "Ethereum",
+        "logo": "ethereum.jpg"
+      },
+      "tags": ["Architecture Design", "Development", "Smart Contracts", "UI Development"],
+      "content": {
+        "challenge": {
+          "title": "What was the challenge?",
+          "description": "Even with interoperability standards taking shape, developers still lack unified tooling to build cross-chain experiences. Integrating multiple intent providers and address formats remains complex and fragmented, slowing adoption of the standards themselves."
+        },
+        "solution": {
+          "title": "What is the solution?",
+          "description": "We are developing the Interop SDK, with dedicated packages for interoperable addresses and cross-chain actions, aggregating and standardising access to intent providers. The SDK provides a practical, developer-friendly interface that brings together the standards developed in the Interop Working Group into a cohesive toolkit."
         }
       },
       "status": "In progress",
       "links": {
         "website": [],
         "twitter": [],
-        "github": [
-          "https://ethereum-magicians.org/t/erc-7930-interoperable-addresses/23365",
-          "https://github.com/ethereum/L2-interop"
-        ],
-        "docs": []
+        "github": ["https://github.com/defi-wonderland/interop-sdk"],
+        "docs": ["https://docs.interop.wonderland.xyz"]
       }
     },
     {
