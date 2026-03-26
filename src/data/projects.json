@@ -26,26 +26,26 @@
       }
     },
     {
-      "name": "Knowledge Graph",
+      "name": "Geo",
       "company": {
-        "name": "GEO",
+        "name": "Geo",
         "logo": "geo.jpg"
       },
       "tags": ["Idea Generation", "Research", "Architecture Design", "Development", "Off-Chain", "Smart Contracts"],
       "content": {
         "challenge": {
           "title": "What was the challenge?",
-          "description": "The Knowledge Graph is an evolution of the data indexing and querying model in Web3, extending the capabilities of subgraphs by introducing a semantic and relational representation of data.\nHowever, it still faces important challenges, such as defining suitable storage infrastructure, establishing a clear incentive layer, adapting off-chain infrastructure, and addressing issues like ranking, pluralism, and assertion aggregation, key components of the protocol\u2019s design."
+          "description": "Geo is a network for organizing knowledge that we can collectively govern and trust.\nIt faces significant challenges, such as defining suitable storage infrastructure, establishing clear governance and incentive layers, and building a robust indexing infrastructure. Furthermore, it must address issues like content discoverability and pluralism. These are key components of the protocol\u2019s design."
         },
         "solution": {
           "title": "What is the solution?",
-          "description": "We are participating in The Graph working groups to contribute to the development of the Knowledge Graph through research, design, and development.\nWe proposed an incentive layer based on the veSystem model to help align protocol participants. We also defined user actions as a basic unit that can be used to build features such as ranking, data aggregation, and pluralism handling.\nAdditionally, we are working on other parts of the system, including storage layer and off-chain components. The project is currently under development."
+          "description": "We participated in The Graph working groups and keep closely collaborating with the Geo core team to drive development through research, design, and implementation. Our team proposed and executed a revamp of the core governance architecture and built support for user actions as the fundamental unit powering features like ranking, data aggregation, and mechanisms for pluralism. Additionally, we are developing off-chain components, including a search service and a scoring mechanism to enhance content discoverability. The project remains in active development."
         }
       },
       "status": "In progress",
       "links": {
-        "website": [],
-        "twitter": [],
+        "website": ["https://www.geobrowser.io/"],
+        "twitter": ["https://x.com/geoprotocol"],
         "github": [
           "https://github.com/graphprotocol/graph-improvement-proposals/blob/main/grcs/0020-knowledge-graph.md"
         ],
