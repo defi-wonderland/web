@@ -763,6 +763,28 @@
         "github": [],
         "docs": []
       }
+    },
+    {
+      "name": "Aerodrome v3",
+      "company": {
+        "name": "Aerodrome",
+        "logo": "aerodrome.jpg"
+      },
+      "tags": [],
+      "content": {
+        "challenge": {
+          "title": "",
+          "description": "Core contributors to Aerodrome v3. Details coming soon."
+        },
+        "solution": {}
+      },
+      "status": "In Progress",
+      "links": {
+        "website": ["https://dromos.xyz/"],
+        "twitter": [],
+        "github": [],
+        "docs": ["https://blog.dromos.xyz/"]
+      }
     }
   ],
   "projects": [
