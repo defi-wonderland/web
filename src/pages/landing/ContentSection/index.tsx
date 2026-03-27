@@ -13,7 +13,6 @@ import {
 import { SLink } from '~/components';
 import ProjectsList from '~/pages/creations/ProjectsList';
 import RightCard from './RightCard';
-import Squad from './SquadSection';
 import QuotesCarousel from './QuotesCarousel';
 
 import projectsData from '~/data/projects.json';
@@ -23,7 +22,13 @@ import RingIllustration from '~/assets/landing_ring.png';
 import MobileStar from '~/assets/ethos-stars.svg';
 import Flower from '~/assets/flower.svg';
 
-const highlights = ['Custom Gas Token', 'Interop', 'Aztec Standards', 'Distributor', 'Canon Guard'];
+const highlights = [
+  'Custom Gas Token',
+  'Interop Standards & Working Groups',
+  'Aztec Standards',
+  'Aerodrome v3',
+  'Jolt Verifier Transpilation',
+];
 
 const allProjects = [...(projectsData.partners || []), ...(projectsData.publicGoods || [])];
 
@@ -38,20 +43,21 @@ export default function LandingContent() {
         <BG_1 type='1' align='center' />
       </BackgroundContainer>
       <Star src={StarIcon.src} />
+      <HorizontalLayout>
+        <RightCard />
+        <IllustrationsContainer>
+          <Cone src={ConeIllustration.src} />
+          <Ring src={RingIllustration.src} />
+        </IllustrationsContainer>
+      </HorizontalLayout>
       <FirstTitle>
         <Star src={MobileStar.src} />
-        It’s all about our partners…
+        We choose who we build with. <br />
+        Then we go all the way.
       </FirstTitle>
 
       <FirstBlockContainer>
         <QuotesCarousel />
-        <HorizontalLayout>
-          <RightCard />
-          <IllustrationsContainer>
-            <Cone src={ConeIllustration.src} />
-            <Ring src={RingIllustration.src} />
-          </IllustrationsContainer>
-        </HorizontalLayout>
       </FirstBlockContainer>
 
       <Divider>
@@ -62,12 +68,6 @@ export default function LandingContent() {
 
       <SecondBlockContainer>
         <ProjectsList projects={projectHighlights} />
-
-        <SLink to='/creations'>
-          <SButton>Learn More</SButton>
-        </SLink>
-
-        <Squad />
       </SecondBlockContainer>
 
       <Icon src={Flower.src} />
@@ -75,8 +75,8 @@ export default function LandingContent() {
         <div>
           <Icon src={Flower.src} />
         </div>
-        <SLink to='/squad'>
-          <CommunityButton>Meet the squad</CommunityButton>
+        <SLink to='/creations'>
+          <CommunityButton>Learn More</CommunityButton>
         </SLink>
       </SecondTitle>
     </LandingContainer>
@@ -140,6 +140,7 @@ const LandingContainer = styled.section`
   position: relative;
   display: grid;
   grid-template-areas:
+    'approach approach'
     'star title'
     'empty firstBlock'
     'empty landingDivider'
@@ -223,18 +224,10 @@ const FirstBlockContainer = styled.div`
   height: 100%;
   border-left: 1px solid rgba(255, 255, 255, 0.5);
   grid-area: firstBlock;
-
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 8rem;
   padding: 4rem 8rem 8rem;
 
   @media screen and (max-width: ${TABLET_MAX_WIDTH}) {
-    flex-direction: column;
     border-left: none;
-    gap: 6rem;
     padding: 4rem 0 8rem;
   }
 
@@ -244,21 +237,28 @@ const FirstBlockContainer = styled.div`
 `;
 
 const HorizontalLayout = styled.div`
+  grid-area: approach;
   width: 100%;
   display: flex;
   flex-direction: row;
   gap: 2rem;
   align-items: center;
   justify-content: space-between;
+  padding: 4rem 8rem;
+  margin-bottom: 4rem;
 
   & > * {
     flex: 1;
   }
 
+  @media screen and (max-width: ${TABLET_MAX_WIDTH}) {
+    padding: 4rem 0;
+  }
+
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
-    flex-direction: column-reverse;
+    flex-direction: column;
     gap: 4rem;
-    padding: 0 2rem;
+    padding: 2.4rem 2rem;
   }
 `;
 
@@ -334,14 +334,6 @@ const DividerText = styled.p`
     text-align: start;
     font-size: 6.4rem;
     padding: 2.4rem 3rem;
-  }
-`;
-
-const SButton = styled(Button)`
-  margin: 4.5rem 8rem 5rem auto;
-
-  @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
-    margin: 6rem auto;
   }
 `;
 

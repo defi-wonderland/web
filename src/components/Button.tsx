@@ -16,6 +16,7 @@ const StyledButton = styled.button`
   font-weight: 500;
   line-height: ${SPACING_16};
   letter-spacing: 0.2rem;
+  white-space: nowrap;
   cursor: pointer;
 
   color: var(--text-light);

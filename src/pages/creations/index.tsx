@@ -24,7 +24,7 @@ const allCompanies = [...partners, ...projects].map((project) => project.company
 const companies = [...new Set(allCompanies)]; // unique values
 
 export default function Creations() {
-  const [companySelected, setCompanySelected] = useState<string>('Optimism');
+  const [companySelected, setCompanySelected] = useState<string>('Aztec');
 
   const changeCompany = (index: number) => {
     setCompanySelected(companies[index]);
@@ -55,7 +55,7 @@ export default function Creations() {
             <HeroDivider>
               <CreationsTitleContainer>
                 <SquigglyTitle
-                  text='MADE IN WONDERLAND'
+                  text='BUILT IN WONDERLAND'
                   sizes={{
                     lg: '17rem',
                     md: '16rem',

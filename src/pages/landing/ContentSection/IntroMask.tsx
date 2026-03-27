@@ -107,18 +107,8 @@ export default function Intro({ showBackground, setShowBackground, ...props }: I
     if (progress >= ANIMATION_CONFIG.COMPLETION_THRESHOLD && !hasCompletedRef.current) {
       hasCompletedRef.current = true;
 
-      // Block scroll to prevent momentum issues
-      document.body.style.overflow = 'hidden';
-      document.documentElement.style.overflow = 'hidden';
-
       sessionStorage.setItem('introLoaded', 'true');
       setShowBackground(true);
-
-      // Re-enable scroll after momentum dissipates
-      setTimeout(() => {
-        document.body.style.overflow = '';
-        document.documentElement.style.overflow = '';
-      }, 1000);
     }
   }, [progress, setShowBackground]);
 
