@@ -22,7 +22,13 @@ import RingIllustration from '~/assets/landing_ring.png';
 import MobileStar from '~/assets/ethos-stars.svg';
 import Flower from '~/assets/flower.svg';
 
-const highlights = ['Custom Gas Token', 'Interop', 'Aztec Standards', 'Aerodrome v3', 'Jolt Verifier Transpilation'];
+const highlights = [
+  'Custom Gas Token',
+  'Interop Standards & Working Groups',
+  'Aztec Standards',
+  'Aerodrome v3',
+  'Jolt Verifier Transpilation',
+];
 
 const allProjects = [...(projectsData.partners || []), ...(projectsData.publicGoods || [])];
 
