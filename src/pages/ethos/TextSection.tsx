@@ -76,6 +76,12 @@ const RightSection = styled(LoreSection)`
 const PrimaryText = styled.p`
   font-size: 2rem;
   text-transform: uppercase;
+  margin-top: 2.4rem;
+  margin-bottom: 0.8rem;
+
+  &:first-child {
+    margin-top: 0;
+  }
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     font-size: ${FONT_SIZE_18};
@@ -84,7 +90,6 @@ const PrimaryText = styled.p`
 
 export const SecondaryText = styled.span`
   font-size: 2.2rem;
-  padding-top: 1rem;
 
   & b {
     font-weight: bold;
@@ -104,14 +109,17 @@ export const FirstLoreSectionArticle = styled(LoreSectionArticle)`
 function TextSection() {
   return (
     <>
-      <LeftSection>
+      <RightSection>
+        <SectionBackground type='4' align='left' />
+
+        <Ring type='2' />
+
         <FirstLoreSectionArticle title='Who we are'>
           <div>
-            <PrimaryText>&quot;&apos;Who in the world am I?&apos; Ah, that&apos;s the great puzzle!&quot;</PrimaryText>
-
             <SecondaryText>
-              We&apos;re a group of developers, researchers, data scientists, investors, and executive leaders. We have
-              something in common though, we all love building cool sh*t.
+              We&apos;re a team of engineers, researchers, data scientists, investors and leaders who go deeper than
+              most are willing to go. Different backgrounds, one thing in common: an obsession with building the
+              impossible, right.
             </SecondaryText>
 
             <SLink to='/squad'>
@@ -119,22 +127,44 @@ function TextSection() {
             </SLink>
           </div>
         </FirstLoreSectionArticle>
+      </RightSection>
+
+      <LeftSection>
+        <LoreSectionArticle title='What we do'>
+          <div>
+            <SecondaryText>
+              Wonderland focuses on foundational engineering for frontier technologies, with deep expertise in applied
+              cryptography. We work on the hardest technical problems alongside teams we believe in and stay involved
+              for the long term.
+            </SecondaryText>
+
+            <SecondaryText>
+              We&apos;ve worked across privacy, DeFi, bridges, L2s, payments, AI, and stablecoins. We go wherever new
+              primitives need to be defined.
+            </SecondaryText>
+
+            <SLink to='/creations'>
+              <Button>Creations</Button>
+            </SLink>
+          </div>
+        </LoreSectionArticle>
+
         <Ring type='1' />
 
-        <SectionBackground type='4' align='right' />
+        <SectionBackground type='1' align='right' />
       </LeftSection>
 
       <RightSection>
-        <SectionBackground type='1' align='left' />
+        <SectionBackground type='3' align='left' />
 
         <Ring type='2' />
 
         <LoreSectionArticle title='Our mission'>
           <div>
             <SecondaryText>
-              Our mission is to discover, partner, and empower innovators in the creation of open, permissionless, and
-              decentralized financial solutions.{' '}
-              <b>Our pledge is to stand by our partners, supporting them in every way we can.</b>
+              Our mission is to make sure the most ambitious ideas in the world are not limited by technology. Ideas are
+              abundant. What&apos;s scarce is the ability to build what has never been built before. That&apos;s what
+              Wonderland brings to the table.
             </SecondaryText>
 
             <SLink to='/creations'>
@@ -147,15 +177,31 @@ function TextSection() {
       <LeftSection>
         <LoreSectionArticle title='Our values'>
           <div>
-            <PrimaryText>Building together</PrimaryText>
-
+            <PrimaryText>Curiosity without ceiling</PrimaryText>
             <SecondaryText>
-              We champion public good creation and believe in the invincibility of protocols backed by the right talent
-              and incentives. We deeply believe in fostering a supportive community, where collaboration trumps
-              competition, and building together is the norm, not the exception.
+              We go deeper than anyone else is willing to go. The more unknown the territory, the more interested we
+              are.
             </SecondaryText>
 
-            <SecondaryText>Long term, long term, long term…</SecondaryText>
+            <PrimaryText>Rigor meets wonder</PrimaryText>
+            <SecondaryText>
+              We hold two things at once: the discipline of engineering and the instinct to ask what if. Neither cancels
+              the other out.
+            </SecondaryText>
+
+            <PrimaryText>Earned confidence</PrimaryText>
+            <SecondaryText>
+              We say what we know, know what we don&apos;t, and never pretend otherwise. Our credibility is the work.
+            </SecondaryText>
+
+            <PrimaryText>Own the outcome, build to last</PrimaryText>
+            <SecondaryText>
+              We are accountable for what we build. We stay involved and build systems meant to last.
+            </SecondaryText>
+
+            <PrimaryText>Work hard, stay human</PrimaryText>
+            <SecondaryText>We communicate directly, understand context, and take care of each other.</SecondaryText>
+
             <SLink to='https://apply.wonderland.xyz/' external>
               <Button>Join us</Button>
             </SLink>

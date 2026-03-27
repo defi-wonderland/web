@@ -55,7 +55,7 @@ export default function Creations() {
             <HeroDivider>
               <CreationsTitleContainer>
                 <SquigglyTitle
-                  text='MADE IN WONDERLAND'
+                  text='BUILT IN WONDERLAND'
                   sizes={{
                     lg: '17rem',
                     md: '16rem',
