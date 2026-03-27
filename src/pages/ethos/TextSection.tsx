@@ -167,8 +167,8 @@ function TextSection() {
               Wonderland brings to the table.
             </SecondaryText>
 
-            <SLink to='/creations'>
-              <Button>Creations</Button>
+            <SLink to='https://handbook.wonderland.xyz/'>
+              <Button>Handbooks</Button>
             </SLink>
           </div>
         </LoreSectionArticle>
