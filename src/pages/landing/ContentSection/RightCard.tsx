@@ -53,8 +53,8 @@ export default function RightCard() {
       <CardContainer>
         <PrimaryText>Our approach</PrimaryText>
         <SecondaryText>
-          Our commitment is to a financial future that&apos;s open, decentralized, and accessible to all. To turn this
-          vision into reality, we partner with the best teams in the world and support them in any way we can.
+          We envision a world where the systems that matter are secure, verifiable, and reliable by default. Our
+          approach is simple: We work on problems that matter, with teams we believe in, and own the outcomes.
         </SecondaryText>
         <SLink to='/ethos'>
           <SButton>Learn more</SButton>

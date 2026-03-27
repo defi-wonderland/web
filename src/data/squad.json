@@ -36,6 +36,12 @@
     "description": "- Background in Economics.\n- He worked at Wonderland for over a year under the hood.\n- Loves lifting heavy shit, playing football, and golfing.\n\nFun Fact: Has been breaking cymbals, heads, and sticks since he was twelve."
   },
   {
+    "name": "Lera",
+    "position": "CMO",
+    "image": "/img/pfp/Lera.png",
+    "description": "- Background in Linguistics & History.\n- Mountain fanatic.\n\nFun fact: Likes to play medieval sports."
+  },
+  {
     "name": "Wei3er Hase",
     "position": "Onchain - Architect",
     "image": "/img/pfp/Wei3er.png",
@@ -111,7 +117,7 @@
     "name": "Parti",
     "position": "Cryptography - Department Lead",
     "image": "/img/pfp/Parti.png",
-    "description": "- Managed to earn a PhD in Physics.\n- Switched particles for nodes: \"Pls Parti, stop asking about the Beacon Chain's entropy.\"\n- Chaos enjoyer.\n\nFun fact: Die-hard Boca Juniors fan."
+    "description": "- Recovering quantum physicist turned cryptographer.\n- Finds peace hiking and fishing in Patagonia, loses it watching Boca Juniors.\n\nFun fact: Reads Dostoevsky to maintain a healthy baseline of existential dread."
   },
   {
     "name": "0xMono",
@@ -172,12 +178,6 @@
     "position": "Onchain - Developer",
     "image": "/img/pfp/Hex.png",
     "description": "- Former QC Analyst.\n- Started in crypto mining Ravencoin.\n- Considers himself a multipotentialite.\n\nFun fact: Started playing pokemon tcg as an adult."
-  },
-  {
-    "name": "Kenji",
-    "position": "Offchain -Architect",
-    "image": "/img/pfp/kenji.png",
-    "description": "- Dropped out of Civil Engineering to become a Software Developer.\n- Self-taught sushi itamae.\n- 1st member of the Off-chain department.\n\nFun fact: Hasn’t missed a day of guitar playing in 20 years"
   },
   {
     "name": "Teddy",
@@ -274,12 +274,6 @@
     "position": "Onchain - Developer",
     "image": "/img/pfp/Cooki.png",
     "description": "- Former academic (ethics, evolution, philosophy)\n- Loves hiking in nature and pokemon\n\nFun Fact: my “big toe” isn’t my biggest toe"
-  },
-  {
-    "name": "GhostLee",
-    "position": "Onchain - Developer",
-    "image": "/img/pfp/Ghost.png",
-    "description": "- Optimize everything"
   },
   {
     "name": "Paperclip Minimizer",
