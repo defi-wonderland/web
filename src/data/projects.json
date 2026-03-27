@@ -432,26 +432,26 @@
     {
       "name": "ILLA",
       "company": {
-        "name": "Layer3",
+        "name": "ILLA",
         "logo": "layer3.jpg"
       },
-      "tags": ["Architecture Design", "Development", "Off-Chain", "Smart Contracts"],
+      "tags": ["Architecture Design", "Development", "Off-Chain", "Smart Contracts", "Agentic Finance", "AI"],
       "content": {
         "challenge": {
           "title": "What was the challenge?",
-          "description": "Conversational interfaces surged and money became programmable, but there was no reliable layer to turn natural-language intent into executed transactions. LLMs could parse \u201cSend USD 100 to mom,\u201d and rails could move value, yet teams kept rebuilding the middle-planning, routing, transaction construction, simulation/safety, and approvals-resulting in brittle, one\u2011off systems that couldn\u2019t meet cross\u2011rail, compliance, or reliability needs."
+          "description": "AI agents can reason about money — describe a trade, recommend a strategy, explain a rebalance. But they can’t reliably execute any of it. The gap between understanding financial intent and safely moving real money requires specialised infrastructure: intent resolution, planning, simulation, safety enforcement, and multi-protocol orchestration. Teams building agentic financial products keep rebuilding this middle layer from scratch, producing brittle one-off systems that can’t meet the safety, reliability, or compliance bar that real money demands. AI runs on probabilistic reasoning. Financial rails are deterministic and unforgiving. An agent only has to get it wrong with your money once."
         },
         "solution": {
           "title": "What is the solution?",
-          "description": "Illa is the conversation-to-execution infrastructure for finance. With our MCP Tools, SDK, and Widget, apps and agents turn plain English into executable transaction packages. Intent \u2192 Orchestration \u2192 Execution. The core engine integrates model abstraction, intent recognition, dynamic planning, protocol\u2011aware routing, a universal transaction compiler, and predictive safety. It\u2019s rail and wallet\u2011agnostic, configurable via the Developer Console and Agent Studio (limits, confirmations, protocol preferences, analytics). In short, Illa makes \u201cSend 100 to mom\u201d or \u201cInvest 250 in the S&P 500\u201d safe, consistent, and scalable."
+          "description": "ILLA is purpose-built execution infrastructure for agentic finance. One integration for the full stack between intent and executed transaction. Every request flows through three core layers: Intelligence resolves ambiguous natural language into precise, deterministic execution plans. Safety architecturally separates probabilistic reasoning from deterministic execution — simulating outcomes and verifying they match intent before anything moves. Engine handles protocol-aware orchestration, turning approved plans into coordinated transaction sequences across chains, protocols, and asset types. ILLA is rail and wallet-agnostic, never holds keys or custodies assets, and exposes the stack via SDK, API, and MCP Server. Capabilities span payments, trading, lending, prediction markets, and portfolio management — aggregated into a single surface with the full safety stack, so “Send 100 to mom” or \"Invest 250 in the S&P 500\" executes safely, correctly, every time."
         }
       },
       "status": "In progress",
       "links": {
         "website": ["https://illalabs.io"],
-        "twitter": [],
+        "twitter": ["https://x.com/illa_labs"],
         "github": [],
-        "docs": []
+        "docs": ["https://docs.illa.io"]
       }
     },
     {
