@@ -24,7 +24,7 @@ const allCompanies = [...partners, ...projects].map((project) => project.company
 const companies = [...new Set(allCompanies)]; // unique values
 
 export default function Creations() {
-  const [companySelected, setCompanySelected] = useState<string>('Optimism');
+  const [companySelected, setCompanySelected] = useState<string>('Aztec');
 
   const changeCompany = (index: number) => {
     setCompanySelected(companies[index]);
