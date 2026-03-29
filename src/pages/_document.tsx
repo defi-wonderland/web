@@ -1,6 +1,13 @@
 import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
 
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'Wonderland',
+  url: 'https://wonderland.xyz',
+};
+
 const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
@@ -43,6 +50,7 @@ export default class MyDocument extends Document {
       <Html lang='en'>
         <Head>
           <meta name='theme-color' content='#0e152c' />
+          <script type='application/ld+json' dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
           <script type='application/ld+json' dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
         </Head>
         <body>

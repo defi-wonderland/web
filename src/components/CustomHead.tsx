@@ -18,10 +18,25 @@ const CustomHead = ({ title, description, image, type, url }: MetadataProps) => 
   const pageImage = image || `${BASE_URL}/share.jpg`;
   const pageTitle = `${title} - Wonderland`;
 
+  const isHomepage = pageUrl === `${BASE_URL}/`;
+  const breadcrumbSchema = !isHomepage
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: BASE_URL },
+          { '@type': 'ListItem', position: 2, name: title, item: pageUrl },
+        ],
+      }
+    : null;
+
   return (
     <Head>
       <title>{pageTitle}</title>
       <link rel='canonical' href={pageUrl} />
+      {breadcrumbSchema && (
+        <script type='application/ld+json' dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      )}
       <link rel='icon' href='/favicon.svg' type='image/svg+xml' />
       <link rel='icon' href='/favicon.ico' sizes='any' />
       <meta name='description' content={descriptionText} />
