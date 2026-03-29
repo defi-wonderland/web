@@ -119,7 +119,7 @@ const Navbar = ({ className, pathname }: NavbarProps) => {
             setNavLink(resetValues());
           }}
         >
-          <WonderLogo to='/landing'>
+          <WonderLogo to='/'>
             <Image src={wonderLogo.src} alt='Wonderland logo' width='64' height='64' />
           </WonderLogo>
           <MenuButton onClick={() => setShowNavbar(!showNavbar)}>
