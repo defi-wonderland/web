@@ -1,6 +1,7 @@
 import '~/app/globals.css';
 
 import { AppProps } from 'next/app';
+import Script from 'next/script';
 import styled from 'styled-components';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Analytics } from '@vercel/analytics/react';
@@ -20,6 +21,15 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
     <ErrorBoundary resetKey={router.asPath}>
       <StyledPageView>
+        <Script src='https://www.googletagmanager.com/gtag/js?id=AW-18050101287' strategy='afterInteractive' />
+        <Script id='google-tag' strategy='afterInteractive'>
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-18050101287');
+          `}
+        </Script>
         <SkipLink href='#main-content'>Skip to main content</SkipLink>
         <StarsBackground />
         {!noLayoutPages.includes(router.pathname) && <Navbar pathname={router.pathname} />}
