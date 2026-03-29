@@ -10,6 +10,7 @@ import Navbar from '~/containers/Navbar';
 import Footer from '~/containers/Footer';
 import { MOBILE_MAX_WIDTH } from '~/components';
 import StyledPageView from '~/components/StyledPageView';
+import { ErrorBoundary } from '~/components/ErrorBoundary';
 import { useRouter } from 'next/router';
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
@@ -17,20 +18,41 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
   const noLayoutPages = ['/join'];
 
   return (
-    <StyledPageView>
-      <StarsBackground />
-      {!noLayoutPages.includes(router.pathname) && <Navbar pathname={router.pathname} />}
-      <StyledPageContent>
-        <Component {...pageProps}></Component>
-        <SpeedInsights />
-        <Analytics />
-      </StyledPageContent>
-      {!noLayoutPages.includes(router.pathname) && <Footer />}
-    </StyledPageView>
+    <ErrorBoundary resetKey={router.asPath}>
+      <StyledPageView>
+        <SkipLink href='#main-content'>Skip to main content</SkipLink>
+        <StarsBackground />
+        {!noLayoutPages.includes(router.pathname) && <Navbar pathname={router.pathname} />}
+        <StyledPageContent id='main-content'>
+          <Component {...pageProps}></Component>
+          <SpeedInsights />
+          <Analytics />
+        </StyledPageContent>
+        {!noLayoutPages.includes(router.pathname) && <Footer />}
+      </StyledPageView>
+    </ErrorBoundary>
   );
 };
 
 export default MyApp;
+
+const SkipLink = styled.a`
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  z-index: 9999;
+  padding: 0.8rem 1.6rem;
+  background: var(--background-surface-primary);
+  color: var(--text-light);
+  font-size: 1.4rem;
+  border: 1px solid var(--brand-golden-500);
+  border-radius: 0.4rem;
+  text-decoration: none;
+
+  &:focus {
+    top: 1rem;
+  }
+`;
 
 const StyledPageContent = styled.section`
   display: flex;
