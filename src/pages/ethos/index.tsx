@@ -22,7 +22,11 @@ import HoopBottom from '~/assets/hoop-bottom.png';
 export default function Ethos() {
   return (
     <>
-      <CustomHead title='Ethos' />
+      <CustomHead
+        title='Ethos'
+        url='https://wonderland.xyz/ethos'
+        description='Wonderland focuses on foundational engineering for frontier Web3 technologies, with deep expertise in applied cryptography.'
+      />
 
       <ContentContainer>
         <PageContent>

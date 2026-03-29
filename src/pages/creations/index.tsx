@@ -42,7 +42,11 @@ export default function Creations() {
 
   return (
     <>
-      <CustomHead title='Creations' />
+      <CustomHead
+        title='Creations'
+        url='https://wonderland.xyz/creations'
+        description='Wonderland focuses on foundational engineering for frontier Web3 technologies, with deep expertise in applied cryptography.'
+      />
 
       <ContentContainer>
         <PageContent>
