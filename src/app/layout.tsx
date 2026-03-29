@@ -1,5 +1,6 @@
 import './globals.css';
 import type { Metadata } from 'next';
+import Script from 'next/script';
 import ConsoleArt from './ConsoleArt';
 
 export const metadata: Metadata = {
@@ -26,6 +27,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel='icon' href='/favicon.ico' sizes='64x64' />
       </head>
       <body>
+        <Script src='https://www.googletagmanager.com/gtag/js?id=AW-18050101287' strategy='afterInteractive' />
+        <Script id='google-tag' strategy='afterInteractive'>
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-18050101287');
+          `}
+        </Script>
         <ConsoleArt />
         {children}
       </body>
