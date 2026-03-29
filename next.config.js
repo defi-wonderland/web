@@ -7,6 +7,11 @@ const nextConfig = {
   async redirects() {
     return [
       {
+        source: '/landing',
+        destination: '/',
+        permanent: true,
+      },
+      {
         source: '/join',
         destination: 'https://apply.wonderland.xyz/',
         permanent: true,

@@ -112,21 +112,6 @@ button {
   border: none;
 }
 
-.fade-enter {
-  opacity: 0;
-}
-.fade-enter-active {
-  opacity: 1;
-  transition: opacity 400ms;
-}
-.fade-exit {
-  opacity: 1;
-}
-.fade-exit-active {
-  opacity: 0;
-  transition: opacity 400ms;
-}
-
 .gradient,
 .gradient strong,
 .gradient .gradient-text {
@@ -145,21 +130,6 @@ button {
 .active {
   background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.08) 50%);
   border-radius: 1.6rem;
-}
-
-.intro-loaded {
-  height: 100%;
-}
-
-.intro-not-loaded {
-  height: 98dvh;
-  overflow: hidden;
-}
-
-@media screen and (max-width: 600px) {
-  .intro-not-loaded {
-    height: 60dvh;
-  }
 }
 
 .active img,
@@ -188,12 +158,6 @@ body::-webkit-scrollbar-thumb:active {
 
 img {
   user-select: none;
-}
-
-.hide-intro {
-  opacity: 0;
-  transition: opacity 800ms;
-  pointer-events: none;
 }
 
 @media screen and (max-width: 600px) {
@@ -247,30 +211,4 @@ img {
   font-family: Inter;
   src: local(Inter), url(../assets/themes/dark/fonts/Inter.ttf) format('opentype');
   font-stretch: normal;
-}
-
-.content-hidden {
-  opacity: 0;
-}
-
-.content-visible {
-  opacity: 1;
-}
-
-/* fade in animation */
-.fade-in {
-  animation: fadeIn ease 500ms;
-  -webkit-animation: fadeIn ease 500ms;
-  -moz-animation: fadeIn ease 500ms;
-  -o-animation: fadeIn ease 500ms;
-  -ms-animation: fadeIn ease 500ms;
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }
