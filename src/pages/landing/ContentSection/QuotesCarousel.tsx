@@ -13,7 +13,7 @@ export default function QuotesCarousel() {
   const [selectedItem, setSelectedItem] = useState(initialIndex);
 
   return (
-    <Container>
+    <Container role='region' aria-label='Testimonials'>
       <CarouselContainer
         showArrows
         showStatus={false}
@@ -27,6 +27,7 @@ export default function QuotesCarousel() {
           setSelectedItem(index);
         }}
         infiniteLoop
+        aria-live='polite'
       >
         {quotes.map((quote, i) => (
           <QuoteCard key={quote.author.name} data-previous={i === selectedItem - 1} data-next={i === selectedItem + 1}>

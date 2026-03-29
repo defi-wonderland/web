@@ -16,7 +16,11 @@ import { PageContent } from '~/containers/PageContent';
 const Squad = () => {
   return (
     <>
-      <CustomHead title='Squad' />
+      <CustomHead
+        title='Squad'
+        url='https://wonderland.xyz/squad'
+        description='Wonderland focuses on foundational engineering for frontier Web3 technologies, with deep expertise in applied cryptography.'
+      />
 
       <ContentContainer>
         <PageContent>
