@@ -13,6 +13,12 @@ const ExternalLink = styled.a`
   &:hover {
     opacity: 87%;
   }
+
+  &:focus-visible {
+    outline: 2px solid var(--brand-golden-500);
+    outline-offset: 4px;
+    border-radius: 2px;
+  }
 `;
 
 const StyledRouterLink = styled(Link)`
@@ -20,6 +26,12 @@ const StyledRouterLink = styled(Link)`
 
   &:hover {
     opacity: 87%;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--brand-golden-500);
+    outline-offset: 4px;
+    border-radius: 2px;
   }
 `;
 

@@ -95,7 +95,7 @@ const Navbar = ({ className, pathname }: NavbarProps) => {
 
   return (
     <ContentContainer>
-      <StyledNavbar id={showNavbar ? 'show' : ''} className={className}>
+      <StyledNavbar id={showNavbar ? 'show' : ''} className={className} aria-label='Main navigation'>
         {/* Left side links */}
         <LinksGroupLeft>
           {navLink.slice(0, 3).map((link, i) => (
@@ -122,8 +122,12 @@ const Navbar = ({ className, pathname }: NavbarProps) => {
           <WonderLogo to='/'>
             <Image src={wonderLogo.src} alt='Wonderland logo' width='64' height='64' />
           </WonderLogo>
-          <MenuButton onClick={() => setShowNavbar(!showNavbar)}>
-            <Image src={menuIcon.src} alt='menu icon' id='menu-icon' width='32' height='32' />
+          <MenuButton
+            onClick={() => setShowNavbar(!showNavbar)}
+            aria-label='Toggle navigation menu'
+            aria-expanded={showNavbar}
+          >
+            <Image src={menuIcon.src} alt='' id='menu-icon' width='32' height='32' />
           </MenuButton>
         </LogoContainer>
 

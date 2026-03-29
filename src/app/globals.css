@@ -112,6 +112,12 @@ button {
   border: none;
 }
 
+button:focus-visible {
+  outline: 2px solid var(--brand-golden-500);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
 .gradient,
 .gradient strong,
 .gradient .gradient-text {
@@ -173,6 +179,7 @@ img {
   font-weight: 600;
   font-style: normal;
   font-stretch: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -182,6 +189,7 @@ img {
   font-weight: 300;
   font-style: normal;
   font-stretch: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -190,6 +198,7 @@ img {
   font-weight: 500;
   font-style: normal;
   font-stretch: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -198,6 +207,7 @@ img {
   font-weight: 500;
   font-style: normal;
   font-stretch: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -205,10 +215,12 @@ img {
   src: local(Inter-Italic), url(../assets/themes/dark/fonts/Inter-Italic.woff2) format('opentype');
   font-weight: 500;
   font-stretch: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: Inter;
   src: local(Inter), url(../assets/themes/dark/fonts/Inter.ttf) format('opentype');
   font-stretch: normal;
+  font-display: swap;
 }

@@ -5,7 +5,7 @@ import ConsoleArt from './ConsoleArt';
 export const metadata: Metadata = {
   title: 'Wonderland',
   description:
-    'Wonderland is the leading core development group in Web3. We partner up with the best protocols in the world, including, among others: Optimism, Aztec, and Aerodrome.',
+    'Wonderland focuses on foundational engineering for frontier Web3 technologies, with deep expertise in applied cryptography.',
   keywords: 'Wonderland, Defi, decentralized finance, activist fund, ethereum, solidity, devs',
   robots: 'index, follow',
   openGraph: {
@@ -14,17 +14,13 @@ export const metadata: Metadata = {
     type: 'website',
     title: 'Wonderland',
     description:
-      'Wonderland is the leading core development group in Web3. We partner up with the best protocols in the world, including, among others: Optimism, Aztec, and Aerodrome.',
+      'Wonderland focuses on foundational engineering for frontier Web3 technologies, with deep expertise in applied cryptography.',
   },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang='en'>
-      <head>
-        <link rel='icon' href='/favicon.svg' type='image/svg+xml' sizes='any' />
-        <link rel='icon' href='/favicon.ico' sizes='64x64' />
-      </head>
       <body>
         <ConsoleArt />
         {children}
