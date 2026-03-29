@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import styled from 'styled-components';
 
 import { Section, MOBILE_MAX_WIDTH, SquigglyTitle } from '~/components';
@@ -5,6 +6,9 @@ import { Section, MOBILE_MAX_WIDTH, SquigglyTitle } from '~/components';
 const HeroSection = ({ ...props }) => {
   return (
     <>
+      <Head>
+        <link rel='preload' as='image' href='/img/hero/hero-bg.jpg' />
+      </Head>
       <StyledHeroSection full backgroundImage='/img/hero/hero-bg.jpg' {...props}>
         <TitleContainer>
           <SquigglyTitle
@@ -20,7 +24,7 @@ const HeroSection = ({ ...props }) => {
           />
         </TitleContainer>
 
-        <HeroDivider src='/img/hero/hero-bg-divider.png' />
+        <HeroDivider src='/img/hero/hero-bg-divider.png' fetchpriority='high' />
       </StyledHeroSection>
     </>
   );

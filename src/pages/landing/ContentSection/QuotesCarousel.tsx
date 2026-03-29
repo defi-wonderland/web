@@ -13,7 +13,7 @@ export default function QuotesCarousel() {
   const [selectedItem, setSelectedItem] = useState(initialIndex);
 
   return (
-    <Container>
+    <Container role='region' aria-label='Testimonials'>
       <CarouselContainer
         showArrows
         showStatus={false}
@@ -27,6 +27,7 @@ export default function QuotesCarousel() {
           setSelectedItem(index);
         }}
         infiniteLoop
+        aria-live='polite'
       >
         {quotes.map((quote, i) => (
           <QuoteCard key={quote.author.name} data-previous={i === selectedItem - 1} data-next={i === selectedItem + 1}>
@@ -69,7 +70,9 @@ const QuoteCard = styled.div`
   background: rgba(255, 255, 255, 0);
   border-radius: 1rem;
   border: 1px solid rgba(255, 255, 255, 0.3);
-  transition: background 0.5s ease-in, backdrop-filter 0.5s ease-in;
+  transition:
+    background 0.5s ease-in,
+    backdrop-filter 0.5s ease-in;
 
   @media screen and (max-width: ${MOBILE_MAX_WIDTH}) {
     min-width: 100%;
@@ -143,7 +146,9 @@ const CarouselContainer = styled(Carousel)`
   & .slide {
     opacity: 0;
     transform: scale(0.3) translate3d(0, 0, 0); // translate3d fix blur cropped on Safari
-    transition: opacity 0.3s, transform 0.3s;
+    transition:
+      opacity 0.3s,
+      transform 0.3s;
     filter: blur(7px);
 
     &:has([data-previous='true']),

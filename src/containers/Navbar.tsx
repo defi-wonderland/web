@@ -95,7 +95,7 @@ const Navbar = ({ className, pathname }: NavbarProps) => {
 
   return (
     <ContentContainer>
-      <StyledNavbar id={showNavbar ? 'show' : ''} className={className}>
+      <StyledNavbar id={showNavbar ? 'show' : ''} className={className} aria-label='Main navigation'>
         {/* Left side links */}
         <LinksGroupLeft>
           {navLink.slice(0, 3).map((link, i) => (
@@ -122,8 +122,12 @@ const Navbar = ({ className, pathname }: NavbarProps) => {
           <WonderLogo to='/'>
             <Image src={wonderLogo.src} alt='Wonderland logo' width='64' height='64' />
           </WonderLogo>
-          <MenuButton onClick={() => setShowNavbar(!showNavbar)}>
-            <Image src={menuIcon.src} alt='menu icon' id='menu-icon' width='32' height='32' />
+          <MenuButton
+            onClick={() => setShowNavbar(!showNavbar)}
+            aria-label='Toggle navigation menu'
+            aria-expanded={showNavbar}
+          >
+            <Image src={menuIcon.src} alt='' id='menu-icon' width='32' height='32' />
           </MenuButton>
         </LogoContainer>
 
@@ -324,12 +328,19 @@ const JoinUsLink = styled(SLink)`
   -webkit-background-clip: text;
   color: transparent;
   -webkit-text-fill-color: transparent;
-  text-shadow: 0 0 10px rgba(98, 92, 191, 0.25), 0 0 6px rgba(197, 95, 163, 0.15);
-  transition: transform 160ms ease, text-shadow 160ms ease;
+  text-shadow:
+    0 0 10px rgba(98, 92, 191, 0.25),
+    0 0 6px rgba(197, 95, 163, 0.15);
+  transition:
+    transform 160ms ease,
+    text-shadow 160ms ease;
 
   &:hover {
     transform: translateY(-1px);
-    text-shadow: 0 0 14px rgba(98, 92, 191, 0.45), 0 0 10px rgba(197, 95, 163, 0.35), 0 0 6px rgba(252, 204, 80, 0.35);
+    text-shadow:
+      0 0 14px rgba(98, 92, 191, 0.45),
+      0 0 10px rgba(197, 95, 163, 0.35),
+      0 0 6px rgba(252, 204, 80, 0.35);
   }
 
   /* subtle sparkles on hover only */
@@ -340,7 +351,8 @@ const JoinUsLink = styled(SLink)`
     inset: -6px -8px;
     pointer-events: none;
     opacity: 0;
-    background: radial-gradient(2px 2px at 20% 30%, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0) 60%),
+    background:
+      radial-gradient(2px 2px at 20% 30%, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0) 60%),
       radial-gradient(1.5px 1.5px at 65% 55%, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0) 60%),
       radial-gradient(1.2px 1.2px at 40% 70%, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0) 60%);
     animation: ${twinkle} 1.8s ease-in-out infinite;
