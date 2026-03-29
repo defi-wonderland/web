@@ -9,12 +9,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
-      url: 'https://wonderland.xyz/landing',
-      lastModified: new Date(),
-      changeFrequency: 'yearly',
-      priority: 0.8,
-    },
-    {
       url: 'https://wonderland.xyz/squad',
       lastModified: new Date(),
       changeFrequency: 'monthly',

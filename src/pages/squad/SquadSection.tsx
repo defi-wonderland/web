@@ -36,7 +36,7 @@ export default function SquadSection() {
         {members.map((member, index) => (
           <MemberContainer key={member.name}>
             {showDesc[index] && <Mask onClick={() => setShowDesc(hideDescriptions)} />}
-            <FlipCard onClick={() => handleClick(index)} flipped={showDesc[index]} index={index}>
+            <FlipCard onClick={() => handleClick(index)} $flipped={showDesc[index]} $index={index}>
               <FlipCardInner className={`flip-card-inner flip-card-inner-${index}`}>
                 <CardFront className={`member member-${index} flip-card-front`}>
                   <NameContainer>
@@ -228,7 +228,7 @@ const SquadGrid = styled.div`
   }
 `;
 
-const FlipCard = styled.button<{ flipped: boolean; index: number }>`
+const FlipCard = styled.button<{ $flipped: boolean; $index: number }>`
   background-color: transparent;
   position: relative;
   text-align: start;
@@ -236,9 +236,9 @@ const FlipCard = styled.button<{ flipped: boolean; index: number }>`
   padding: unset;
   width: 100%;
 
-  ${({ flipped, index }) => `
-    .flip-card-inner-${index} {
-    transform:  ${flipped ? 'rotateX(-180deg)' : 'unset'};
+  ${({ $flipped, $index }) => `
+    .flip-card-inner-${$index} {
+    transform:  ${$flipped ? 'rotateX(-180deg)' : 'unset'};
   }`}
 `;
 
