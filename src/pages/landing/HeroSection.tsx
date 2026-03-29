@@ -24,7 +24,7 @@ const HeroSection = ({ ...props }) => {
           />
         </TitleContainer>
 
-        <HeroDivider src='/img/hero/hero-bg-divider.png' fetchPriority='high' />
+        <HeroDivider src='/img/hero/hero-bg-divider.png' fetchPriority='high' alt='' />
       </StyledHeroSection>
     </>
   );

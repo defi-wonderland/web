@@ -18,7 +18,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
   const noLayoutPages = ['/join'];
 
   return (
-    <ErrorBoundary>
+    <ErrorBoundary resetKey={router.asPath}>
       <StyledPageView>
         <SkipLink href='#main-content'>Skip to main content</SkipLink>
         <StarsBackground />
